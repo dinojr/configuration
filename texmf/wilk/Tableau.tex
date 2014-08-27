@@ -1,0 +1,51 @@
+\documentclass[a4paper]{article}
+
+\usepackage[width=17cm]{geometry}
+\pagestyle{empty}
+\newcommand{\avancement}{\boldmath{$x$}}
+
+\renewcommand{\arraystretch}{2}
+
+\begin{document}
+
+\begin{tabular}{|l|c|c|c|c|c|}
+  \hline
+  \multicolumn{2}{|c@{\protect\makebox[0cm]{:}}}{\textbf{\'Equation de la r\'eaction}} &
+%
+    \multicolumn{1}{c@{\protect\makebox[0cm]{$\mathrm{+}$}}}{%
+      $\mathrm{2C_4H_{10}(g)}$}                   &
+    \multicolumn{1}{c@{\protect\makebox[0cm]{$\longrightarrow$}}}{%
+      $\mathrm{13O_2(g)}$}                        &
+    \multicolumn{1}{c@{\protect\makebox[0cm]{$\mathrm{+}$}}}{%
+      $\mathrm{8CO_2(g)}$}                        &
+    \multicolumn{1}{c|}{%
+      $\mathrm{10H_2O(\mathit{l})}$}              \\ \hline
+%
+  \textbf{\'Etat du syst\`eme} &
+    \textbf{avancement} & n($\rm C_4H_{10}$)(mol) &
+    n($\rm H_2O$)(mol)  & n($\rm CO_2$)(mol)      &
+    n($\rm H_2O$)(mol)                            \\ \hline
+%
+  \textbf{\'Etat initial} &
+    0                   & 3                       &
+    6,5                 & 0                       &
+    0                                             \\ \hline
+%
+  \begingroup
+    \setlength{\tabcolsep}{0mm}%
+    \renewcommand{\arraystretch}{1}%
+    \begin{tabular}{l}
+      \textbf{Au cours de la}\\\textbf{transformation}
+    \end{tabular}
+  \endgroup             &
+    \avancement         & 3,0-2\avancement        &
+    6,5-13\avancement   & 8\avancement            &
+    10\avancement                                 \\ \hline
+%
+  \textbf{\'Etat final} &
+    0,5                 & 2                       &
+    0                   & 4                       &
+    5                                             \\ \hline
+\end{tabular}
+
+\end{document}

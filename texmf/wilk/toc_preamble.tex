@@ -1,0 +1,53 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[dvips]{color}
+\usepackage[dvips]{graphicx}
+
+\usepackage{latexsym}
+\usepackage{skull}
+\usepackage{pstricks}
+\usepackage[cyr]{aeguill}
+\usepackage[psamsfonts]{amsfonts}
+\usepackage{ae,aecompl}
+
+%customization des toc ...
+\usepackage{tocloft}
+
+%pouvoir magouiller les tableaux un peu mieux
+\usepackage{array,booktabs}
+
+%\usepackage[dvipdf,a4paper]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{xspace}
+
+\usepackage{xspace,multicol}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate,psfrag,wrapfig}
+\usepackage[inline,nomargin]{fixme}
+
+\usepackage{framed}
+\usepackage[framed,hyperref,amsthm]{ntheorem}
+
+%------------------Raccourcis usuels
+\input{shortcut}
+\usepackage[collision]{chemsym}
+\input{molecules} % à introduire après chemsym
+\input{chimie}
+
+\pagestyle{empty}
+
+
+\usepackage{geometry}
+\geometry{left=1cm,right=1cm,top=1cm,paperheight=29cm,paperwidth=21cm}
+\special{papersize=21cm,29cm}
+\parindent=0in
+
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\alph{subsubsection}}
+
+\begin{document}
+\LARGE
+%

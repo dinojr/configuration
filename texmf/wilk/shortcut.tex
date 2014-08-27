@@ -1,0 +1,446 @@
+%Fichier contenant les raccourcis % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\renewcommand{\phi}{\ensuremath{\varphi}}
+
+%\renewcommand{\min}{\ensuremath{\mathrm{min}}}
+%\newcommand{\max}{\ensuremath{\mathrm{max}}}
+
+\newcommand{\bs}{\boldsymbol} 
+\newcommand{\mbf}[1]{\ensuremath{\mathbf{#1}}}
+
+\newcommand{\vect}[1]{\ensuremath{\vv{#1}}\xspace}
+\newcommand{\vecti}[2]{\ensuremath{\vv*{#1}{#2}}\xspace}
+
+\newcommand{\mcal}{\ensuremath{\mathcal}}
+
+\newcommand{\R}{\ensuremath{\mcal{R}}\xspace}
+\newcommand{\Rg}{\ensuremath{\mcal{R}_\text{g}}\xspace}
+\newcommand{\RG}{\ensuremath{\mcal{R}_\text{G}}\xspace}
+\newcommand{\Rt}{\ensuremath{\mcal{R}_\text{T}}\xspace}
+\newcommand{\aT}{\vecti{a}{\Rt}}
+\newcommand{\vR}{\vecti{v}{\R}}
+\newcommand{\pR}{\vecti{p}{\R}}
+\newcommand{\vit}{\vect{v}}
+\newcommand{\qdm}{\vect{p}}
+\newcommand{\qdmg}{\vecti{p}{\Rg}}
+\newcommand{\ag}{\vecti{a}{\Rg}}
+\newcommand{\aR}{\vecti{a}{\R}}
+
+%\renewcommand{\d}{\ensuremath{\mrm{d}}}
+\renewcommand{\d}{\D}
+
+
+
+\newcommand{\cyc}{\ensuremath{\circlearrowleft}}
+
+\newcommand{\mrm}{\ensuremath{\mathrm}}
+
+\newcommand{\bv}[1]{\ensuremath{{\bf #1}}}
+
+\newcommand{\e}[1]{\ensuremath{\vv*{e}{#1}}\xspace}
+\newcommand{\ex}{\e{x}}
+\newcommand{\ey}{\e{y}}
+\newcommand{\ez}{\e{z}}
+\newcommand{\ei}{\e{i}}
+\newcommand{\ej}{\e{j}}
+
+\newcommand{\er}{\e{r}}
+\newcommand{\et}{\e{\theta}}
+\newcommand{\ep}{\e{\phi}}
+
+
+\newcommand{\eq}{\ensuremath{\mrm{eq}}}
+
+\newcommand{\dt}[1]{\ensuremath{\mathop{\diff{#1}{t}}\nolimits\xspace}}
+\newcommand{\dtheta}[1]{\ensuremath{\diff{#1}{\theta}}\xspace}
+\newcommand{\dx}[2]{\ensuremath{\diff{#1}{#2}}\xspace}
+\newcommand{\ddx}[2]{\ensuremath{\diff[2]{#1}{{#2}}}\xspace}
+\newcommand{\dnx}[3]{\ensuremath{\diff[#3]{#1}{#2}}\xspace}
+\newcommand{\ddt}[1]{\ensuremath{\diff[2]{#1}{t}}\xspace}
+\newcommand{\ddtheta}[1]{\ensuremath{\diff{#1}{\theta^2}}\space}
+
+% On ne peut pas utiliser \diffp, il y a un conflit avec mpsi.cls
+\newcommand{\drondx}[3][1]{\ensuremath{\paren{\frac{\partial #2}{\partial #3}}_{#1}}\xspace}
+\newcommand{\ddrondx}[3][1]{\ensuremath{\paren{\frac{\partial^2 #2}{\partial {#3}^2}}_{#1}}\xspace}
+\newcommand{\ddrondxy}[4][1]{\ensuremath{\paren{\frac{\partial^2
+        #2}{\partial #3 \partial #4}}_{#1}}\xspace}
+
+\newcommand{\uR}{\ensuremath{u_\mrm{R}}}
+\newcommand{\uC}{\ensuremath{u_\mrm{C}}}
+\newcommand{\uL}{\ensuremath{u_\mrm{L}}}
+\newcommand{\UR}{\ensuremath{U_\mrm{R}}}
+\newcommand{\UC}{\ensuremath{U_\mrm{C}}}
+\newcommand{\UL}{\ensuremath{U_\mrm{L}}}
+\newcommand{\half}{\ensuremath{\frac{1}{2}}}
+\newcommand{\inv}[1]{\ensuremath{\frac{1}{#1}}}
+\newcommand{\diffx}{\mrm{d}x}
+\newcommand{\diffy}{\mrm{d}y}
+\newcommand{\diffz}{\mrm{d}z}
+\newcommand{\bra}{\langle}
+\newcommand{\ket}{\rangle}
+
+
+\newcommand{\legende}[1]{\small\textsf{#1}} % légendes hors des flottants
+
+\newcommand{\li}{$^7$Li} 
+\newcommand{\lix}{$^6$Li}
+\newcommand{\lixd}{$^6$Li$_2$}
+\newcommand{\kb}{\ensuremath{k_\mrm{B}}} 
+\newcommand{\Na}{\ensuremath{\mcal{N}_\mrm{A}}}
+\newcommand{\ldb}{\lambda_\mrm{dB}}
+\newcommand{\mub}{\mu_\mathrm{B}} 
+\newcommand{\fket}[2]{$\vert F=#1,m_F=#2\rangle$} 
+\newcommand{\Ket}[1]{$\vert{#1}\rangle$}
+\newcommand{\textKet}[1]{\vert{#1}\rangle}
+\newcommand{\Bra}[1]{$\langle{#1}\vert$}
+\newcommand{\textBra}[1]{\langle{#1}\vert}
+\newcommand{\textBraKet}[2]{\langle{#1}\vert{#2}\rangle}
+\newcommand{\omegarad}{\omega_{\perp}}
+\newcommand{\sigmarad}{\sigma_{\perp}}
+\newcommand{\omegapar}{\omega_{\vert\vert}}
+\newcommand{\sigmapar}{\sigma_{\vert\vert}}
+\newcommand{\omegabar}{\bar{\omega}}
+\newcommand{\sigmabar}{\bar{\sigma}} 
+\newcommand{\ef}{E_{\mathrm F}}
+\newcommand{\kf}{k_{\mathrm F}} 
+\newcommand{\tf}{T_{\mathrm F}}
+\newcommand{\alphas}{\alpha_\mathrm{S}} 
+\newcommand{\somm}{_\mathrm{S}}
+\newcommand{\mean}[1]{\langle#1\rangle}
+\newcommand{\commut}[2]{\left[#1,#2\right]}
+\newcommand{\paren}[1]{\left(#1\right)}
+\newcommand{\eint}{\protect{\ensuremath{\mcal{E}_\mrm{int}}}\xspace} 
+\newcommand{\epint}{\protect{\ensuremath{\mcal{E}_\mrm{p,int}}}\xspace}
+\newcommand{\epext}{\protect{\ensuremath{\mcal{E}_\mrm{p,ext}}}\xspace}
+\newcommand{\emec}{\protect{\ensuremath{\mcal{E}_\text{m}}}\xspace} 
+\newcommand{\ekin}{\protect{\ensuremath{\mcal{E}_\text{cin}}}\xspace}
+\newcommand{\epot}{\protect{\ensuremath{\mcal{E}_\mrm{pot}}}\xspace}
+\newcommand{\eeff}{\protect{\ensuremath{\mcal{E}_\mrm{eff}}}\xspace}
+\newcommand{\erel}{\mcal{E}_\mrm{lib}}
+\newcommand{\etot}{\mcal{E}_\mrm{tot}} 
+\newcommand{\tc}{T_\mrm{C}}
+\newcommand{\tbec}{T_\mrm{CBE}}
+\newcommand{\pinch}{\og pinch \fg}
+
+\newcommand{\cfbox}[1]{\begin{center}\fbox{#1}\end{center}}
+\newcommand{\boite}[1]{\fbox{$\displaystyle #1$}}
+\newcommand{\whiteboite}[1]{\fbox{$\displaystyle\textcolor{white}{\LARGE
+      #1}$}}
+\newcommand{\ie}{{\it ie}\xspace}
+\newcommand{\opt}[1]{\frac{1}{\overline{#1}}}
+%\newcommand{\vect}{\overrightarrow}
+\newcommand{\ul}[1]{\underline{#1}}
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\defi}{\equiv}
+
+
+\protected\def\Epot{\@ifnextchar[{\Epot@ii}{\Epot@i}}
+\def\Epot@i{\Energie_{\text{pot}}}
+\def\Epot@ii[#1]{\Energie_{\text{pot},#1}}
+
+\newcommand{\Ggrav}{\mathcal{G}}
+
+\protected\def\DerivRef{%
+  \@ifnextchar*{\DerivRef@i}{\DerivRef@ii}}
+\def\DerivRef@i*#1#2#3{%
+  \Deriv*{#1}{#2}{\Referentiel{#3}}}
+\def\DerivRef@ii#1#2{%
+  \Deriv*{#1}{t}{\Referentiel{#2}}}
+
+% \protected\def\DerivRefDeux{%
+%   \@ifnextchar*{\DerivRefDeux@i}{\DerivRefDeux@ii}}
+% \def\DerivRefDeux@i*#1#2#3{%
+%   \Deriv*[2]{#1}{{#2}{\Referentiel{#3}}}}
+% \def\DerivRefDeux@ii#1#2{%
+%   \Deriv*[2]{#1}{t}{\Referentiel{#2}}}
+
+% \let\Delem\Diff
+
+% \protected\def\Puiss{%
+%   \@ifnextchar*{\Puiss@i}{\Puiss@ii}}
+% \def\Puiss@i*#1#2{%
+%   \mathcal{P}_{#2}\left(#1\right)}
+% \def\Puiss@ii#1{%
+%   \mathcal{P}\left(#1\right)}
+% \protected\def\Trajet#1#2#3{
+%   #1 \xrightarrow[#3]{}#2}
+
+% \protected\def\Trav{%
+%   \@ifnextchar*{\Trav@i}{\Trav@ii}}
+% \def\Trav@ii{\@ifnextchar[{\Trav@j}{\Trav@jj}}
+% \def\Trav@j[#1]#2{W_#1\left(#2\right)}
+% \def\Trav@jj#1{W\left(#1\right)}
+% \def\Trav@i*{\@ifnextchar[{\Trav@k}{\Trav@kk}}
+% \def\Trav@k[#1]#2#3{\underset{#3}{W_#1}\left(#2\right)}
+% \def\Trav@kk#1#2{\underset{#2}{W}\left(#1\right)}
+
+
+\def\MesureAlgebrique#1{\overline{#1}}
+
+% %% Tikz
+
+% Le code suivant buggue dans beamer (peut être les environnements columns)
+% Pour rendre inactifs les caractères : et autres
+% \AtBeginDocument{%
+%   \@ifpackageloaded{babel}{%
+%     \let\xCJtikz@tikzpicture\tikzpicture
+%     \def\tikzpicture{%
+%       \iflanguage{french}{%
+%         \shorthandoff{:;?!}}{}%
+%       \xCJtikz@tikzpicture}%
+%     \let\xCJtikz@tikzexternal@tikzpicture@replacement%
+%         \tikzexternal@tikzpicture@replacement
+%     \def\tikzexternal@tikzpicture@replacement{%
+%       \iflanguage{french}{%
+%         \shorthandoff{:;?!}}{}%
+%       \xCJtikz@tikzexternal@tikzpicture@replacement}}{}}
+
+\tikzset{>=latex}
+\tikzset{coordonnees/.style={dashed,color=gray!80,text=black,thick}}
+\tikzset{base/.style={very thick,->}}
+\tikzset{style courant/.style={very thick,text=black}}
+\tikzset{force/.style={->,very thick}}
+\tikzset{vitesse/.style={->,very thick}}
+\tikzset{point/.style={radius=1pt}}
+\pgfkeys{/pgf/number format/.cd, set decimal separator={,}, 1000 sep={ }}
+
+\pgfmathsetmacro\PiNum{3.14159}
+
+\pgfdeclarelayer{background}
+\pgfdeclarelayer{foreground}
+\pgfdeclarelayer{points}
+\pgfsetlayers{background,main,foreground,points}
+
+\pgfplotsset{%
+  % Thanks to @Jake
+  SchoolPlot/.style = {%
+    axis lines = middle,
+    enlargelimits = true,
+    %% La suite bug dans l'environnement mpsi_standalone
+    % before end axis/.code = {
+    %   % \addplot [draw=none, forget plot] coordinates {(0,0)};
+    %   % \node at (axis cs:0,0) [anchor=north east] {0};
+    % },
+    xlabel style = {
+      anchor = 130
+    },
+    ylabel style = {
+      anchor = east
+    },
+  },
+  SchoolPlot/.default = north east,
+}
+
+\pgfplotsset{%
+  petit graphe/.style = {%
+    width = 7cm},
+  tres petit graphe/.style = {%
+    width = 6cm},
+}    
+
+\pgfplotsset{%
+  every axis legend/.append style ={fill = none}
+}
+
+\pgfplotsset{%
+  compat = newest,
+  cycle list name = exotic,
+  scaled ticks = false,
+  points de mesure/.style = {%
+    every axis plot post/.append style = {%
+      mark = +,
+      only marks,
+    }
+  },
+  gnuplot writes logscale = false,
+  every axis plot/.append style = {thick},
+  % every axis plot post/.append style = {mark = none},
+  every axis/.append style = {%
+    thick,
+    enlargelimits = true,
+    % minor tick num = 4,
+  },
+  every tick/.style = {very thick},
+  every minor tick/.style = {%
+    thick,
+    gray},
+  every colorbar/.append style = {%
+    yticklabel pos = right,
+    axis lines = box,
+    every inner x axis line/.append style = {-},
+    every inner y axis line/.append style = {-},
+    every outer x axis line/.append style = {-},
+    every outer y axis line/.append style = {-}},
+}
+
+\input{tikz-markangle}
+
+\tikzset{%
+  Axis/.style={->,very thick},
+  AxisPlot/.style={->,thick},
+  Point/.style = {%
+    fill = DarkDuotone,
+    circle,
+    minimum width=2mm,
+    inner sep=0pt},
+  3D/.style = {%
+    x = {(-.5cm,-.5cm)},
+    y = {(1cm,0cm)},
+    z = {(0cm,1cm)}},
+}
+
+%% Tikz fin
+
+%---- Ensembles : entiers, reels, complexes... ----
+\newcommand{\Nn}{\mathbb{N}}
+\newcommand{\Zz}{\mathbb{Z}}
+\newcommand{\Qq}{\mathbb{Q}}
+\newcommand{\Rr}{\mathbb{R}}
+\newcommand{\Cc}{\mathbb{C}}
+\newcommand{\Kk}{\mathbb{K}}
+\newcommand{\Hh}{\mathbb{H}}
+
+
+%---- Modifications de symboles -----
+\renewcommand {\epsilon}{\varepsilon}
+\renewcommand {\le}{\leqslant}
+\renewcommand {\ge}{\geqslant}
+\renewcommand {\leq}{\leqslant}
+\renewcommand {\geq}{\geqslant}
+
+\newcommand{\re}[1]{\mathop{\mathrm{Re}\left(#1\right)}\nolimits}
+\newcommand{\im}[1]{\mathop{\mathrm{Im}\left(#1\right)}\nolimits}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\ssi}{\Leftrightarrow}
+\newcommand{\implique}{\Rightarrow}
+\newcommand{\vers}{\rightarrow}
+\newcommand{\donne}{\mapsto}
+\newcommand{\Card}{\text{Card\,}}
+\def \m {^{-1}}
+\def \Sup  {{\mathrm{Sup}}\: }
+\newcommand{\ens}[1]{\left\{ {#1} \right\}}
+
+\newcommand{\Par}[1]{\left({#1}\right)}
+\newcommand{\pgcd}{\text{pgcd}}
+\newcommand{\ppcm}{\text{ppcm}}
+%\newcommand{\val}{\text{val}}
+\newcommand{\id}{\text{id}}
+\newcommand{\tr}{\text{tr}}
+
+\newcommand{\ch}{\mathop{\mathrm{ch}}\nolimits}
+\newcommand{\sh}{\mathop{\mathrm{sh}}\nolimits}
+\renewcommand{\tanh}{\mathop{\mathrm{th}}\nolimits}
+\renewcommand{\arcsin}{\mathop{\mathrm{arcsin}}\nolimits}
+\renewcommand{\arccos}{\mathop{\mathrm{arccos}}\nolimits}
+\renewcommand{\arctan}{\mathop{\mathrm{arctan}}\nolimits}
+\newcommand{\argsh}{\mathop{\mathrm{argsh}}\nolimits}
+\newcommand{\argch}{\mathop{\mathrm{argch}}\nolimits}
+\newcommand{\argth}{\mathop{\mathrm{argth}}\nolimits}
+
+\newcommand{\Ker}{\mathop{\mathrm{Ker}}\nolimits}
+\newcommand{\rg}{\mathop{\mathrm{rg}}\nolimits}
+\newcommand{\Com}{\mathop{\mathrm{Com}}\nolimits}
+%\newcommand{\Fr}{\mathop{\mathrm{Fr}}\nolimits}
+\newcommand{\diam}{\mathop{\mathrm{diam}}\nolimits}
+\newcommand{\absolue}[1]{\left| #1 \right|}
+\newcommand{\fonc}[5]{#1 : \begin{cases}#2 \rightarrow #3 \\ #4 \mapsto #5
+ \end{cases}}
+\newcommand{\transp}[1]{\sideset{^{t}}{}{\mathop{#1}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thermo
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\dpartial}[3]{\ensuremath{\left(\frac{\partial #1}{\partial
+        #2}\right)_#3}}
+\newcommand{\dpartials}[2]{\ensuremath{\frac{\partial #1}{\partial
+        #2}}}
+\newcommand{\ddpartial}[3]{\ensuremath{\left(\frac{\partial^2
+        #1}{\partial #2^2}\right)_#3}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Électrostat
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newcommand{\grad}{\ensuremath{\mathbf{grad}}}
+
+
+\newcommand{\ud}{\ensuremath{\mrm{d}}}
+
+
+%\mathindent=2\parindent
+
+\def\d{\mathrm{d}}
+%\def\exp{\mathrm{e}}
+
+\let\epsilon\varepsilon
+\let\phi\varphi
+
+% \let\Frac\frac
+% \def\frac#1#2{\displaystyle\Frac{#1}{#2}}
+
+% \let\Sum\sum
+% \def\sum{\displaystyle\Sum}
+
+% \let\Prod\prod
+% \def\prod{\displaystyle\Prod}
+
+
+% \let\Int\int
+% \def\int{\displaystyle\Int}
+
+%\def\dbar{\not d}
+\let\dbar\delta
+
+\DeclareMathOperator{\grad}{\vect{\mathrm{grad}}}
+\DeclareMathOperator{\rot}{\vect{\mathrm{rot}}}
+\def\div{\mathop{\operator@font div}\nolimits}
+
+\def\ch{\mathop{\operator@font ch}\nolimits}
+\def\sh{\mathop{\operator@font sh}\nolimits}
+\def\th{\mathop{\operator@font th}\nolimits}
+
+\def\Re{\mathop{\operator@font Re}\nolimits}
+\def\Im{\mathop{\operator@font Im}\nolimits}
+
+\def\Arg{\mathop{\operator@font arg}\nolimits}
+
+
+\def\oiint{\begingroup\displaystyle\unitlength 1pt\int\mkern-4.5mu
+\begin{picture}(0,3)\put(0,3){\oval(10,8)} \end{picture}\mkern-4.5mu
+\int\endgroup}
+
+\def\SIm{\@ifstar{}{\,}\mathrm{m}}
+\def\SIkm{\@ifstar{}{\,}\mathrm{km}}
+\def\SImm{\@ifstar{}{\,}\mathrm{mm}}
+\def\SIcm{\@ifstar{}{\,}\mathrm{cm}}
+\def\SImicrom{\@ifstar{}{\,}\mu\mathrm{m}}
+\def\SInm{\@ifstar{}{\,}\mathrm{nm}}
+\def\SIpm{\@ifstar{}{\,}\mathrm{pm}}
+
+\def\SIL{\@ifstar{}{\,}\mathrm{L}}
+\def\SImL{\@ifstar{}{\,}\mathrm{mL}}
+\def\SIcL{\@ifstar{}{\,}\mathrm{cL}}
+
+\def\SIg{\@ifstar{}{\,}\mathrm{g}}
+\def\SIkg{\@ifstar{}{\,}\mathrm{kg}}
+\def\SImg{\@ifstar{}{\,}\mathrm{mg}}
+\def\SIcg{\@ifstar{}{\,}\mathrm{cg}}
+
+\def\SImolL{\@ifstar{}{\,}\mathrm{mol\cdot L^{-1}}}
+
+\def\SImol{\@ifstar{}{\,}\mathrm{mol}}
+
+\def\SIkgL{\@ifstar{}{\,}\mathrm{kg\cdot L^{-1}}}
+\def\SIgL{\@ifstar{}{\,}\mathrm{g\cdot L^{-1}}}
+\def\SIkgmcube{\@ifstar{}{\,}\mathrm{kg\cdot m^{-3}}}
+
+\def\SIC{\@ifstar{}{\,}{}^\circ\mathrm C}
+
+\def\SIgmol{\@ifstar{}{\,}\mathrm{g\cdot mol^{-1}}}
+
+\def\SIms{\@ifstar{}{\,}\mathrm{m\cdot s^{-1}}}
+
+\def\SIs{\@ifstar{}{\,}\mathrm{s}}
+
+\def\SIN{\@ifstar{}{\,}\mathrm{N}}

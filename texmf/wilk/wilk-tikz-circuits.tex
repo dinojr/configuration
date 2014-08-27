@@ -1,0 +1,70 @@
+\makeatletter
+\usetikzlibrary{circuits.ee.IEC}
+\def\tikzDipoleWidth{2cm}
+
+\tikzset{%
+  circuit declare symbol=dummy dipole,
+  set dummy dipole graphic={%
+    draw,
+    shape=cloud,
+    minimum width=1cm,
+    minimum height=.5cm,
+    transform shape}}
+\pgfdeclareshape{ground IEC}
+{
+  \inheritsavedanchors[from=rectangle ee]
+  \inheritanchor[from=rectangle ee]{center}
+  \inheritanchor[from=rectangle ee]{north}
+  \inheritanchor[from=rectangle ee]{south}
+  \inheritanchor[from=rectangle ee]{east}
+  \inheritanchor[from=rectangle ee]{west}
+  \inheritanchor[from=rectangle ee]{north east}
+  \inheritanchor[from=rectangle ee]{north west}
+  \inheritanchor[from=rectangle ee]{south east}
+  \inheritanchor[from=rectangle ee]{south west}
+  \inheritanchor[from=rectangle ee]{input}
+  \inheritanchor[from=rectangle ee]{output}
+  \inheritanchorborder[from=rectangle ee]
+
+  \backgroundpath{%
+    \pgf@process{%
+      \pgfpointadd{\southwest}{%
+        \pgfpoint{\pgfkeysvalueof{/pgf/outer xsep}}%
+        {\pgfkeysvalueof{/pgf/outer ysep}}}}
+    \pgf@xa=\pgf@x
+    \pgf@ya=\pgf@y
+    \pgf@process{%
+      \pgfpointadd{\northeast}{%
+        \pgfpointscale{-1}{%
+          \pgfpoint{\pgfkeysvalueof{/pgf/outer xsep}}%
+          {\pgfkeysvalueof{/pgf/outer ysep}}}}}
+    \pgf@xb=\pgf@x
+    \pgf@yb=\pgf@y
+    % On s'abaisse un peu
+    \pgf@xc=.5\pgf@xb
+    \pgf@yc=\pgf@ya
+    \advance\pgf@yc\pgf@yb
+    \pgfpathmoveto{\pgfqpoint{\pgf@xa}{\pgf@yc}}
+    \pgfpathlineto{\pgfqpoint{\pgf@xc}{\pgf@yc}}
+    % First line, simple
+    \pgfpathmoveto{\pgfqpoint{\pgf@xc}{\pgf@ya}}
+    \pgfpathlineto{\pgfqpoint{\pgf@xc}{\pgf@yb}}
+    % Hachure
+    \pgfmathsetlength\pgfutil@tempdima{(\pgf@yb-\pgf@ya)*.1}
+    % \pgf@xa reste constant
+    % \pgf@xb reste constant et égal à \pgf@xa + longueur du trait
+    \pgfmathsetlength\pgf@xb{\pgf@xc+.1cm}
+    \pgfmathloop\ifnum\pgfmathcounter<12\relax
+      \pgfmathsetlength\pgf@yb{\pgf@ya+.5\pgfutil@tempdima}
+      \pgfpathmoveto{\pgfqpoint{\pgf@xc}{\pgf@ya}}
+      \pgfpathlineto{\pgfqpoint{\pgf@xb}{\pgf@yb}}
+      \pgfmathsetlength\pgf@ya{\pgf@ya+\pgfutil@tempdima}
+    \repeatpgfmathloop
+  }
+}
+\makeatother
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

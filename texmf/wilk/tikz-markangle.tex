@@ -1,0 +1,54 @@
+% Author: Christophe Jorssen
+% Public domain
+\pgfkeysdef{/tikz/mark angle/start angle}{\tikzset{start angle=#1}}
+\pgfkeysdef{/tikz/mark angle/end angle}{\tikzset{end angle=#1}}
+\pgfkeysdef{/tikz/mark angle/angle radius}{\tikzset{radius=#1}}
+\pgfkeyssetvalue{/tikz/mark angle/label radius}{1cm}
+\pgfkeyssetvalue{/tikz/mark angle/label pos}{.5}
+\pgfkeyssetvalue{/tikz/mark angle/node options}{}
+\pgfkeyssetvalue{/tikz/mark angle/path options}{}
+\def\tikzMarkAngle{%
+  \pgfutil@ifnextchar[{\tikzMarkAngle@i}{\tikzMarkAngle@i[]}}
+\def\tikzMarkAngle@i[#1](#2)(#3)(#4)#5{%
+  % #1 optional parameters
+  % #2 coordinate of the center
+  % #3 coordinate giving the start direction
+  % #4 coordinate giving the end direction
+  % #5 label
+  \bgroup
+    \coordinate (xCJtikz@AngleCenter) at (#2);
+    \coordinate (xCJtikz@AngleStart) at (#3);
+    \coordinate (xCJtikz@AngleEnd) at (#4);
+    \pgfmathanglebetweenpoints{%
+      \pgfpointanchor{xCJtikz@AngleCenter}{center}}{%
+      \pgfpointanchor{xCJtikz@AngleStart}{center}}
+    \edef\AngleStart{\pgfmathresult}%
+    \pgfmathanglebetweenpoints{%
+      \pgfpointanchor{xCJtikz@AngleCenter}{center}}{%
+      \pgfpointanchor{xCJtikz@AngleEnd}{center}}
+    \edef\AngleEnd{\pgfmathresult}%
+    \ifdim\AngleEnd pt<\AngleStart pt\relax
+      \pgfmathsetmacro\AngleEnd{\AngleEnd+360}
+    \fi
+    \pgfkeys{%
+      /tikz/mark angle/.cd,
+      angle radius=1cm,
+      label radius=1.2cm,
+      label pos=.5,
+      start angle=\AngleStart,
+      end angle=\AngleEnd,
+      #1}
+      \edef\xCJ@temp{%
+        \noexpand\draw[\pgfkeysvalueof{/tikz/mark angle/path options}]
+        (\noexpand$(xCJtikz@AngleCenter)!\pgfkeysvalueof{/tikz/x
+          radius}!(xCJtikz@AngleStart)\noexpand$) arc;
+        \noexpand\node[\pgfkeysvalueof{/tikz/mark angle/node options}] at
+        (\noexpand$(xCJtikz@AngleCenter)+(\AngleStart+\pgfkeysvalueof{/tikz/mark
+          angle/label pos}*\AngleEnd-\pgfkeysvalueof{/tikz/mark
+          angle/label pos}*\AngleStart:\pgfkeysvalueof{/tikz/mark angle/label radius})\noexpand$)}%
+    \xCJ@temp{#5};%
+  \egroup
+  \ignorespaces}
+% Local Variables:
+% coding: utf-8
+% End:

@@ -1,0 +1,81 @@
+\ProvidesPackageRCS $Header: /cvsroot/latex-beamer/latex-beamer/themes/theme/beamerthemempsi.sty,v 1.0 5/08/2012 19:51:05 G.FALLOURD-M.LEBRETON Exp $
+%% http://titilog.free.fr/
+\mode<presentation>
+\definecolor{sectionColor}{RGB}{51,0,51}
+\definecolor{subsectionColor}{RGB}{51,51,51}
+\definecolor{sectionTextColor}{RGB}{255,255,255}
+\definecolor{subsectionTextColor}{RGB}{255,255,255}
+\definecolor{leftFootlineColor}{RGB}{0,102,255}
+\definecolor{middleFootlineColor}{RGB}{51,153,255}
+\definecolor{rightFootlineColor}{RGB}{102,204,255}
+\definecolor{authorColor}{RGB}{0,0,0}
+\definecolor{footlineTitleColor}{RGB}{0,0,0}
+\definecolor{instituteColor}{RGB}{0,0,0}
+\definecolor{dateColor}{RGB}{0,0,0}
+\definecolor{pageColor}{RGB}{0,0,0}
+\definecolor{titleColor}{RGB}{102,51,102}
+\definecolor{titleTextColor}{RGB}{255,255,255}
+%\definecolor{bodyColor}{RGB}{153,153,153}
+\definecolor{bodyColor}{RGB}{255,255,255}
+\definecolor{normalTextColor}{RGB}{0,0,0}
+\definecolor{exampleTextColor}{RGB}{51,102,0}
+\definecolor{alertTextColor}{RGB}{153,0,0}
+\definecolor{chipColor}{RGB}{0,0,102}
+\definecolor{chipTextColor}{RGB}{255,255,255}
+% \definecolor{normalBlockColor}{RGB}{0,153,153}
+\definecolor{normalBlockColor}{RGB}{0,180,180}
+\definecolor{normalTitleBlockColor}{RGB}{0,102,153}
+% \definecolor{normalBlockTextColor}{RGB}{255,255,255}
+\definecolor{normalBlockTextColor}{RGB}{0,0,0}
+\definecolor{normalBlockTitleTextColor}{RGB}{255,255,255}
+\definecolor{exampleBlockColor}{RGB}{51,153,51}
+\definecolor{exampleTitleBlockColor}{RGB}{0,102,0}
+%\definecolor{exampleBlockTextColor}{RGB}{255,255,255}
+\definecolor{exampleBlockTextColor}{RGB}{0,0,0}
+\definecolor{exampleBlockTitleTextColor}{RGB}{255,255,255}
+\definecolor{alertBlockColor}{RGB}{255,102,102}
+\definecolor{alertTitleBlockColor}{RGB}{204,51,51}
+%\definecolor{alertBlockTextColor}{RGB}{255,255,255}
+\definecolor{alertBlockTextColor}{RGB}{0,0,0}
+\definecolor{alertBlockTitleTextColor}{RGB}{255,255,255}
+%\definecolor{emphColor}{RGB}{255,255,255}
+\setbeamercolor{section in head/foot}{bg=sectionColor, fg=sectionTextColor}
+\setbeamercolor{subsection in head/foot}{bg=subsectionColor, fg=subsectionTextColor}
+\setbeamercolor*{block title}{fg=normalBlockTitleTextColor,bg=normalTitleBlockColor}
+\setbeamercolor*{block body}{fg=normalBlockTextColor,bg=normalBlockColor}
+\setbeamercolor*{block title alerted}{fg=alertBlockTitleTextColor,bg=alertTitleBlockColor}
+\setbeamercolor*{block body alerted}{fg=alertBlockTextColor,bg=alertBlockColor}
+\setbeamercolor*{block title example}{fg=exampleBlockTitleTextColor,bg=exampleTitleBlockColor}
+\setbeamercolor*{block body example}{fg=exampleBlockTextColor,bg=exampleBlockColor}
+\setbeamerfont{block title}{size={}}
+\setbeamercolor{titlelike}{fg=titleTextColor,bg=titleColor}
+\setbeamercolor*{normal text}{fg=normalTextColor,bg=bodyColor}
+\setbeamercolor*{example text}{fg=exampleTextColor}
+\setbeamercolor*{alerted text}{fg=alertTextColor}
+%\useinnertheme[shadow=true]{rounded}
+\useinnertheme{default}
+\setbeamercolor{item projected}{bg=chipColor,fg=chipTextColor}
+\usesectionheadtemplate
+{\hfill\insertsectionhead}
+{\hfill\color{fg!50!bg}\insertsectionhead}
+\defbeamertemplate*{headline}{split theme}
+{%
+\leavevmode%
+\@tempdimb=2.4375ex%
+\ifnum\beamer@subsectionmax<\beamer@sectionmax%
+\multiply\@tempdimb by\beamer@sectionmax%
+\else%
+\multiply\@tempdimb by\beamer@subsectionmax%
+\fi%
+\ifdim\@tempdimb>0pt%
+\advance\@tempdimb by 1.125ex%
+\begin{beamercolorbox}[wd=.5\paperwidth,ht=\@tempdimb]{section in head/foot}%
+\vbox to\@tempdimb{\vfil\insertsectionnavigation{.5\paperwidth}\vfil}%
+\end{beamercolorbox}%
+\begin{beamercolorbox}[wd=.5\paperwidth,ht=\@tempdimb]{subsection in head/foot}%
+\vbox to\@tempdimb{\vfil\insertsubsectionnavigation{.5\paperwidth}\vfil}%
+\end{beamercolorbox}%
+\fi%
+}
+\mode
+<all>
