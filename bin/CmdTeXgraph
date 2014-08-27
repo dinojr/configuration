@@ -1,0 +1,4 @@
+#!/bin/sh
+export TeXgraphDir="/home/wilk/info/TeXgraph"
+export PATH="/home/wilk/info/TeXgraph:$PATH"
+"$TeXgraphDir"/TeXgraphCmd $1 $2 "$3" > "$3.log"

@@ -1,0 +1,1 @@
+convert -modulate 120 -type grayscale -density 300 $1 ${1/.png/-cmyk.jpg}

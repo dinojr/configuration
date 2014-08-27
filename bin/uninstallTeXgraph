@@ -1,0 +1,18 @@
+#!/bin/sh
+# destruction du fichier texgraph.sty
+echo "destruction du package texgraph.sty..."
+test -d "/home/wilk/texmf/tex/latex/TeXgraph" && rm -rf "/home/wilk/texmf/tex/latex/TeXgraph"
+test -d "/home/wilk/texmf/doc/TeXgraph" && rm -rf "/home/wilk/texmf/doc/TeXgraph"
+texhash
+# destruction des executables et cie
+echo "destruction des executables et Cie..."
+test -d "/home/wilk/info/TeXgraph" && rm -rf "/home/wilk/info/TeXgraph"
+# destruction des 3 scripts
+echo "destruction des scripts startTeXgraph, CmdTeXgraph et uninstallTeXgraph..."
+rm -f "/home/wilk/bin"/startTeXgraph
+rm -f "/home/wilk/bin"/CmdTeXgraph
+rm -f "/home/wilk/bin"/uninstallTeXgraph
+rm -f "/home/wilk/Bureau"/TeXgraph.desktop
+rm -f "/home/wilk/.icons"/TeXgraphIco.png
+rm -f "/home/wilk/Bureau"/TeXgraph.desktop
+echo "Done"

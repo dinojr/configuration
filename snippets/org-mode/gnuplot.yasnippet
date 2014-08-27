@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: gnuplot
+# key: gnuplot
+# --
+#+BEGIN_SRC gnuplot :file ${7:courbe}.png :exports results
+  set style fill transparent solid 0.5
+  set terminal png truecolor size 540,360
+  set xrange [${1:-5}:${2:5}]
+  set yrange [${3:-5}:${4:5}]
+  set title "${5:Titre}"
+  plot $6
+#+END_SRC

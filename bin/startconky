@@ -1,0 +1,20 @@
+#!/bin/bash
+conky -c $HOME/.Conky/secondconkyrc -d;
+conky -c $HOME/.Conky/conkyrc -d;
+
+
+# La suite ne marchera pas tant que le plugin dbus de compiz ne marchera pas
+# https://bugs.launchpad.net/ubuntu/+source/compiz/+bug/749084 [ "$done" = "true" ]
+# do
+#     if [ $(dbus-send --print-reply --type=method_call --dest=org.freedesktop.compiz /org/freedesktop/compiz/dbus/screen0 org.freedesktop.compiz.list | wc -l) != 0 ]
+#     then
+# 	DISPLAY=:0.0 conky -c ~/conky/conkyrc >/dev/null 2>&1 &
+# 	DISPLAY=:0.0 conky -c ~/conky/secondconkyrc >/dev/null 2>&1 &
+# 	done="true";
+#     else
+# 	echo "CONKY IS WAITING"
+# 	done="false"
+# 	sleep 5;
+#     fi
+# done
+# exit 0

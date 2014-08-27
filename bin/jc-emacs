@@ -1,0 +1,4 @@
+#!/bin/bash
+export WM_NAME="emacsclient"
+export GDK_NATIVE_WINDOWS=1
+exec emacsclient --alternate-editor="" -c "$@" -e '(wg-load "~/.emacs.d/workgroups.el")'

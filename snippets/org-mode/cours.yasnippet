@@ -1,0 +1,126 @@
+# -*- mode: snippet -*-
+# name: Squelette cours
+# key: cours
+# --
+#+TITLE: $1
+#+AUTHOR: Julien Cubizolles
+#+DATE: $2 2014
+#+LINK: pic file:/home/wilk/enseignement/doc_cours/$3/%s
+#+LINK: schema file:/home/wilk/enseignement/schemas/$3/%s
+# LINK: fig file:/home/wilk/enseignement/2013-2014/physique/$3/cours/figures/%s
+#+OPTIONS: H:3
+#+OPTIONS: tags:nil
+#+OPTIONS: toc:nil
+# STARTUP: entitiespretty
+# STARTUP: inlineimages
+#+STARTUP: beamer
+#+LANGUAGE: fr
+
+#+begin_src emacs-lisp :tangle yes :exports none
+  (setq org-publish-project-alist
+        '(("TeX"
+           :base-directory "./"
+           :publishing-directory "./"
+           :publishing-function org-beamer-publish-to-latex
+           :exclude ".*"
+           :latex-class "mpsi_beamer"
+           :include ("$4"))
+          ("beamer"
+           :base-directory "./"
+           :publishing-directory "./"
+           :publishing-function org-beamer-publish-to-pdf
+           :exclude ".*"
+           :latex-class "mpsi_beamer"
+           :include ("$4")
+           :completion-function jc-org-publish-rename-beamer-pdf)
+          ("notes"
+           :base-directory "./"
+           :publishing-directory "./"
+           :publishing-function org-beamer-publish-to-pdf
+           :exclude ".*"
+           :latex-class "mpsi_beamer"
+           :include ("$4")
+           :latex-class-options "[NotesCours]"
+           :completion-function jc-org-publish-rename-notes-pdf
+           )
+          ("cours" :components ("beamer" "notes"))))
+#+end_src
+
+#+LATEX_HEADER_EXTRA: \RequirePackage{multimedia}
+#+LATEX_HEADER_EXTRA: \institute{Lycée Louis le Grand}
+
+#+LATEX_HEADER_EXTRA: \graphicspath{{/home/wilk/enseignement/doc_cours/thermodynamique/}{/home/wilk/enseignement/schemas/$3/}}
+# LATEX_HEADER_EXTRA: \usepackage{pstricks,pstricks-add,auto-pst-pdf}
+# TAGS: eleves
+
+#+LATEX_HEADER:\input{vuibert-compatibilite}
+#+LATEX_HEADER:\input{commandes-auteur-figures}
+#+LATEX_HEADER:\input{commandes-auteur-pgfplots-base.tex}
+#+LATEX_HEADER:\input{commandes-auteur-pgfplots-color}
+#+LATEX_HEADER:\RequirePackage{esvect}
+
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col) %8BEAMER_OPT(Opt)
+
+* À faire                                                           :B_frame:
+:PROPERTIES:
+:BEAMER_env: frame
+:BEAMER_ACT: article
+:END:
++ 
+* Manips                                                            :B_frame:
+:PROPERTIES:
+:BEAMER_ACT: article
+:BEAMER_env: frame
+:END:
+#+ATTR_LATEX: :width 300px
++ 
++ 
+* Ressources                                                        :B_frame:
+:PROPERTIES:
+:BEAMER_ACT: article
+:BEAMER_env: frame
+:END:
+
+* Idées                                                         :B_fullframe:
+:PROPERTIES:
+:BEAMER_ACT: article
+:BEAMER_env: fullframe
+:END:
+** Idées questions
+:PROPERTIES:
+:END:
+
+** Idées exos
+
+** Variations
+
+* Introduction                                                      :B_frame:
+:PROPERTIES:
+:BEAMER_env: fullframe
+:BEAMER_ACT: <second|article>
+:END:
+
+** Idées
+:PROPERTIES:
+:BEAMER_ACT: article
+:END:
+
+
+* Attention                                                         :B_frame:
+:PROPERTIES:
+:BEAMER_env: frame
+:BEAMER_ACT: article
+:END:
+
+* Introduction                                                  :B_fullframe:
+:PROPERTIES:
+:BEAMER_env: fullframe
+:END:
+#+ATTR_BEAMER: :overlay +-
++ 
+$0
+
+* Indispensable                                                     :B_frame:
+:PROPERTIES:
+:BEAMER_env: frame
+:END:

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+$HOME/bin/asy -f jpg -noV -noprc -glOptions=-indirect $1 -o ${1%asy}jpg
+convert -trim -density 300x300 ${1%asy}jpg -alpha on -transparent white ${1/.asy/-cmyk-cyan.jpg}
+rm ${1%asy}jpg

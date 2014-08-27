@@ -1,0 +1,7 @@
+#!/bin/bash
+for i in $(find -name "*.asy")
+  do echo ${i%asy}
+     $HOME/bin/asy -f pdf -noV -noprc -glOptions=-indirect $i -o ${i%asy}pdf
+#     asy -f pdf -noV -noprc -glOptions=-indirect $i -o ${i%asy}pdf
+     mv ${i%asy}pdf ../../
+done

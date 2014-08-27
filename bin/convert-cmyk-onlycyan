@@ -1,0 +1,2 @@
+#!/bin/bash
+convert -density 300 -colorspace cmyk $1 -channel Y -evaluate set 0 -channel M -evaluate set 0 ${1/.*/-onlycyan.jpg}

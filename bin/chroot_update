@@ -1,0 +1,6 @@
+#!/bin/bash
+
+mount -o bind /dev /mnt/other/dev
+mount -o bind /sys /mnt/other/sys
+mount -o bind /proc /mnt/other/proc
+chroot /mnt/other apt-get update && apt-get dist-upgrade

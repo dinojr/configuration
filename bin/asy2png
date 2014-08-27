@@ -1,0 +1,5 @@
+#!/bin/bash
+
+$HOME/bin/asy -vvv -f pdf -noV -noprc -glOptions=-indirect $1 -o ${1%asy}pdf
+convert -trim -density 500x500 ${1%asy}pdf -alpha on -transparent white ${1%asy}png
+rm ${1%asy}pdf

@@ -1,0 +1,131 @@
+#!/bin/bash
+# xplanet-bg shell script v0.3 (pour Ubuntu 9.10 (karmic) & versions
+# suivantes)
+# Montre la Terre sur le bureau Gnome avec les conditions courantes
+# d'éclairage (le jour et la nuit)
+# avec la vue centrée sur votre ville, ou bien centrée à la verticale du
+# Soleil (pour plus de dépaysement).
+ 
+# Répertoire racine de xplanet, qui doit contenir le fichier xplanet.xml, et
+# un dossier contenant
+# les images earth.jpg et night.jpg qui seront copiées de
+# /usr/share/xplanet/images
+PREFIX=~/.xplanet/
+ 
+# Non du fichier images créer
+OUTPUT=xplanet.png
+ 
+# ORIGINE et LOOK_AT ne peuvent être les mêmes :
+# modifier ORIGINE pour indiquer la planète d'où vous regardez ;
+# modifier LOOK_AT pour indiquer la planète que vous regardez.
+ORIGIN=earth
+LOOK_AT=earth
+ 
+# Géométrie de l'image à régler suivant la résolution du bureau
+GEOMETRY=1280x1024
+
+ 
+# Si vous utilisez un dock pour votre portable (et avez donc plusieurs
+# résolutions
+# d'écran suivant si vous êtes en vadrouille ou au bureau), commentez la
+# ligne
+# précédente et décommentez les trois suivantes
+#XXX=`xdpyinfo|awk '$0~"dimensions"{print
+# substr($0,match($0,/[[:digit:]]/),match($0,"x")-match($0,/[[:digit:]]/))}'`
+#YYY=`xdpyinfo|awk '$0~"dimensions"{print
+# substr($0,match($0,"x")+1,match($0,"pixel")-match($0,"x")-1)}'`
+#GEOMETRY=${XXX}x${YYY}
+ 
+# Position depuis où vous voulez regarder.
+# Pour trouver la valeurs regarder dans les liens en fin de la page
+# http://doc.ubuntu-fr.org/xplanet#Voir_aussi
+# ou bien cherchez dans WikiPedia (par exemple) le nom de votre ville
+# ou encore utilisez un GPS (Guide pour Paumé Solitaire :)
+# Nice  L = 43.700°    43° 42'N; H = 7.266274°    7° 15′E
+#   Pernes-les-Fontaines :
+# Latitude : 		43° 	59′ 	55″ 	N 		43.998611°
+# Longitude : 		5° 	3′ 	35″ 	E 		5.059722°
+# 
+LONGITUDE=2
+LATITUDE=0
+
+NORTH=orbit
+ 
+# Par rapport au Soleil, la Terre fait une rotation complète (360°) en 24
+# heures, soit 1° toutes les 4 minutes.
+# Calculons quelle longitude est face au Soleil (LONGITUDE2)
+declare -i HEURES=`date -u "+%X" | awk -F ":" '{print $1}' | sed s/"^0"/""/`
+declare -i MINUTES=`date -u "+%X" | awk -F ":" '{print $2}' | sed s/"^0"/""/`
+declare -i SECONDES=`date -u "+%X" | awk -F ":" '{print $3}' | sed s/"^0"/""/`
+declare -i SEC=$((${HEURES}*3600+${MINUTES}*60+${SECONDES}))
+
+if [ $(date +%H) -gt 12 ];
+  then OFFSET=60
+  else OFFSET=-60
+fi 
+
+#declare -i LONGITUDE2=$(((43200-${SEC})*360/86400+$LONGITUDE+$OFFSET))
+declare -i LONGITUDE2=$(((43200-${SEC})*360/86400+${LONGITUDE}+$OFFSET)) 
+
+# Par defaut il n'y a pas de projection. Rendre un globe avec la projection
+# rectangulaire en fait une carte à plat. vous pouvez aussi essayer :
+# ancient, azimuthal,  mercator,..
+#PROJECTION=rectangular  
+
+
+APPEND=2
+CONFIG=$HOME/.xplanet/config
+
+POV=$HOME/.xplanet/pov
+echo "20112004.161100 20000 0 $LONGITUDE2 "> $POV
+RADIUS=30
+ 
+# ***** Devenu obsolète à partir de karmic : *****
+# Renome l'image de fond ainsi Gnome réalise que l'image as changé - thx to
+# dmbasso
+#if [ -e "$PREFIX$OUTPUT" ]; then
+#   rm -f "$PREFIX$OUTPUT"
+#   OUTPUT="$APPEND$OUTPUT"
+#else
+#   rm -f "$PREFIX$APPEND$OUTPUT"
+#fi
+# ************************************************
+ 
+# Dans les lignes comprises entre "if" et "fi" ci-après, vous pouvez
+# modifier le paramètre -longitude :
+# mettez ${LONGITUDE} si vous désirez avoir une vue de la Terre centrée chez
+# vous ;
+# mettez ${LONGITUDE2} si vous désirez avoir une vue de la Terre centrée sur
+# la longitude du zénith (Soleil), et votre latitude.
+#if [ -z $PROJECTION ]; then 
+#	xplanet -num_times 1 -output "$PREFIX$OUTPUT" -geometry $GEOMETRY
+#-origin $ORIGINE -body $LOOK_AT -longitude ${LONGITUDE2} -latitude $LATITUDE
+#else
+#
+#-origin $ORIGINE -body $LOOK_AT -longitude ${LONGITUDE2} -latitude $LATITUDE
+#-projection $PROJECTION
+#fi
+
+#xplanet -num_times 1 -output "$PREFIX$OUTPUT" -geometry $GEOMETRY -north $NORTH -config $CONFIG -radius $RADIUS -body earth -dynamic_origin $POV -origin $ORIGIN
+
+
+#xplanet -num_times 1 -output "$PREFIX$OUTPUT" -geometry $GEOMETRY -origin $ORIGIN -body $LOOK_AT -longitude ${LONGITUDE2} -latitude $LATITUDE -north $NORTH -dynamic_origin $POV -config $CONFIG -radius $RADIUS
+
+xplanet -num_times 1 -output "$PREFIX$OUTPUT" -geometry $GEOMETRY -origin $ORIGIN -body $LOOK_AT  -north $NORTH -dynamic_origin $POV -config $CONFIG -radius $RADIUS
+ 
+
+
+# ***** Nécessaire pour une bonne transition, à partir de karmic : ***** 
+cp ${PREFIX}${OUTPUT} ${PREFIX}${APPEND}${OUTPUT}
+# **********************************************************************
+ 
+ 
+# ***** Devenu obsolète à partir de karmic : *****
+# met à jour le fond d'écran de Gnome
+#gconftool -t str -s /desktop/gnome/background/picture_filename
+# "$PREFIX$OUTPUT"
+# délai de mise à jour en minutes
+#DELAY=10m
+#sleep $DELAY
+#exec $0
+# ************************************************

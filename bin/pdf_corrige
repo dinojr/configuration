@@ -1,0 +1,2 @@
+#!/bin/bash
+pdfjam --landscape -o ${1/.pdf}-corrige.pdf $1 $2-

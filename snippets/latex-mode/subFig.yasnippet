@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: subFigs
+# key: subfig
+# --
+\begin{SousFigures}[metacaption={$1}, metalabel={fig:$2}]
+\begin{Figure}[caption={$3},label={fig:$4}]
+\includestandalone{$5}
+\end{Figure}
+\end{SousFigures}
+$0

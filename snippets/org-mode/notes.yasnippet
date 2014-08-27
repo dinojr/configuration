@@ -1,0 +1,28 @@
+# -*- mode: snippet -*-
+# name:Squelette notes
+# key: notes
+# --
+#+STARTUP: beamer
+#+LANGUAGE: fr
+
+# ######################### 
+# Config pour export LaTeX beamerarticle
+# LATEX_CLASS: mpsi
+# LATEX_CLASS_OPTIONS: [cours,colonne,8pt,noVersion,beamerarticle]
+# Ligne suivante pas utile avec beamerarticle
+# EXCLUDE_TAGS: beamer_only
+# Ligne suivante pour l'exemplaire élèves
+# SELECT_TAGS: eleves
+# #########################
+
+# ######################### 
+# Config pour export Beamerhandout
+#+LATEX_CLASS: mpsi_beamer
+#+LATEX_CLASS_OPTIONS: [NotesCours]
+# Ligne suivante pas utile avec beamerarticle
+# EXCLUDE_TAGS: beamer_only
+# Ligne suivante pour l'exemplaire élèves
+# SELECT_TAGS: eleves
+# #########################
+
+#+INCLUDE: "$1./"$0

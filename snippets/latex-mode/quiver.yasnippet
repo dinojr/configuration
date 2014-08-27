@@ -1,0 +1,61 @@
+# -*- mode: snippet -*-
+# name: quiver
+# key: quiver
+# --
+\begin{tikzpicture}[style courant]
+  \pgfmathsetmacro\xmin{$1}
+  \pgfmathsetmacro\xmax{$2}
+  \pgfmathsetmacro\ymin{$3}
+  \pgfmathsetmacro\ymax{$4}
+  \begin{axis}[
+    axis lines = box,
+    view={0}{90},
+    xlabel = $$5$,
+    ylabel = $$6$,
+    xtick = {$7},
+    ytick = {$8},
+    extra x ticks = $9,
+    extra x tick labels = {$10},
+    extra y ticks = $11,
+    extra y tick labels = {$12}
+    xmin = \xmin,
+    ymin = \ymin,
+    xmax = \xmax,
+    ymax = \ymax,
+    domain = \xmin:\xmax,
+    y domain  = \ymin:\ymax,
+    ]
+    \addplot3[gray,thin,quiver={
+        u=$13,v=$14,
+        scale arrows=0.1},
+      -stealth,samples=12] {0};
+    \begin{scope}[DarkDuotone]
+      \foreach \i in {$15}{
+        \addplot [->] table {$0};
+      }
+    \end{scope}
+  \end{axis}
+\end{tikzpicture}
+
+
+\begin{axis}[
+                 SchoolPlot,
+                 xlabel = $$1$,
+                 ylabel = $$2$,
+                 xtick = {none$3},
+                 ytick = {none$4},
+                 extra x ticks = $5,
+                 extra x tick labels = $6,
+                 extra y ticks = $7,
+                 extra y tick labels = $8,
+		 xmin = $9,
+		 ymin = $10,
+		 xmax = $11,
+		 ymax = $12
+                 ]
+      \addplot gnuplot[samples = $13, domain = $14] {%
+        $15};
+      %
+      \draw[coordonnees] (axis cs:$16) -- (axis cs:$17);
+      %
+    \end{axis}

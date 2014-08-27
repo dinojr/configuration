@@ -1,0 +1,12 @@
+#!/bin/bash
+
+$HOME/bin/asy -f pdf -noV -noprc -glOptions=-indirect $1 -o ${1%asy}pdf
+convert -density 500x500 ${1%asy}pdf -colorspace cmyk temp.png
+convert -trim temp.png -fill 'cmyk(1,0,0,0.4)'  -opaque  white ${1/.asy/-darkduotone.png}
+# convert -trim -density 500x500 ${1%asy}pdf -fill red  -opaque  white ${1/.asy/-darkduotone.png}
+# rm ${1%asy}
+rm temp.png
+
+# Apparemment il faudrait convertir en jpeg avant mais ça ne marche pas non plus
+# convert cartesien-definition-synthese-cmyk.jpg -fuzz 5% -fill 'cmyk(1,0,0,0.4)' -opaque white cartesien-definition-synthese-cmyk-darkduotone.jpg
+# convert cartesien-definition-synthese-cmyk.jpg -fuzz 5% -fill 'cmyk(1,0,0,0.4)' -opaque 'cmyk(1,1,1,1)' cartesien-definition-synthese-cmyk-darkduotone.jpg

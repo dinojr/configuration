@@ -1,0 +1,4 @@
+#!/bin/sh
+export UBUNTU_MENUPROXY=0 #pour avoir la menubar
+unset XMODIFIERS #pour avoir Compose
+exec emacs-snapshot

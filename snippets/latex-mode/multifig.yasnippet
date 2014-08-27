@@ -1,0 +1,34 @@
+# -*- mode: snippet -*-
+# name: MultiFig
+# key: multifig
+# --
+\begin{figure}[p]
+  \ffigbox{%
+    \begin{subfloatrow}[2]%
+      \ffigbox{%
+        \importstandalone{$0}}{%
+        \caption{$3}%
+        \label{$4}%
+        }%
+      \ffigbox{%
+        \importstandalone{}}{%
+        \caption{}%
+        \label{}%
+        }%
+    \end{subfloatrow}
+    \begin{subfloatrow}[2]%
+      \ffigbox{%
+        \importstandalone{}}{%
+        \caption{}%
+        \label{}%
+        }%
+      \ffigbox{%
+        \importstandalone{}}{%
+        \caption{}%
+        \label{}%
+        }%
+    \end{subfloatrow}}
+    {%
+    \caption{$1}
+    \label{$2}}
+\end{figure}

@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: LegendeAnglePlot
+# key: legangleplot
+# --
+\pgfmathsetmacro{\AngleDebut$5}{$1}
+\pgfmathsetmacro{\AngleFin$5}{$2}
+\pgfmathsetmacro{\RayonArc$5}{$3}
+\pgfmathsetmacro{\AngleMilieu$5}{0.5*(\AngleDebut$5+\AngleFin$5)}
+\pgfmathsetmacro{\AngleAnchorDeg$5}{\AngleMilieu$5+180}
+\begin{pgfonlayer}{background}
+  \addplot [samples = 200, domain=\AngleDebut$5:\AngleFin$5,coordonnees,->,data cs=polar]
+      ({x},{\RayonArc$5}) node [pos=0.5] (PositionLabel$5) {};
+  \path [coordonnees] (PositionLabel$5) node  [shape=circle,anchor=\AngleAnchorDeg$5] {$4};
+\end{pgfonlayer}
+$0

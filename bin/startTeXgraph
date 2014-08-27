@@ -1,0 +1,5 @@
+#!/bin/sh
+export TeXgraphDir="/home/wilk/info/TeXgraph"
+export TeXgraphDocDir="/home/wilk/info/TeXgraph/doc"
+export PATH="/home/wilk/info/TeXgraph:$PATH"
+"$TeXgraphDir"/TeXgraph "$1"

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#$HOME/bin/asy -render 5 -glOptions=-indirect -cmyk -noprc $1 -o ${1%asy}eps
+#$HOME/bin/asy -render 5 -cmyk -glOptions=-indirect --noprc $1 -o ${1%asy}eps
+$HOME/bin/asy -render 5 -V -cmyk $1 -o ${1%asy}eps
+convert -colorspace cmyk -channel c -fx "c-y" -channel k -fx "k+m" -channel y -fx "0" -channel m -fx "0" -density 300 -geometry 50%x eps:${1%asy}eps jpg:${1%asy}jpg
+rm ${1%asy}eps
+eog  ${1%asy}jpg
+if zenity --question --text "ok pour copier ?" 
+	then mv ${1%asy}jpg ../../
+	else rm ${1%asy}jpg
+fi

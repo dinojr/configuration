@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: overlay
+# key: over
+# --
+#+ATTR_BEAMER: :overlay +-$0

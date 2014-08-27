@@ -1,0 +1,41 @@
+# ~/.profile: executed by the command interpreter for login shells.
+# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
+# exists.
+# see /usr/share/doc/bash/examples/startup-files for examples.
+# the files are located in the bash-doc package.
+
+# the default umask is set in /etc/profile; for setting the umask
+# for ssh logins, install and configure the libpam-umask package.
+#umask 022
+
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+	. "$HOME/.bashrc"
+    fi
+fi
+
+PATH="/usr/local/texlive/2012/bin/x86_64-linux:/home/wilk/info/telephone/android-sdk-linux_x86/tools:$PATH"
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+
+
+MANPATH=/usr/local/texlive/2012/texmf/doc/man
+INFOPATH=/usr/local/texlive/2012/texmf/doc/info
+  
+
+alias file-roller='nice -n 15 file-roller'
+alias par2='nice -n 15 par2'
+alias unrar='nice -n 15 unrar'
+alias advi='nice -n 10 /usr/bin/advi'
+#alias emacs='emacs-snapshot-gtk --fullheight'
+
+LS_COLORS='no=00:fi=00:di=36;01:ln=36:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:ex=01;32:*.cmd=01;32:*.exe=01;32:*.com=01;32:*.btm=01;32:*.bat=01;32:'
+
+export LS_COLORS
+

@@ -1,0 +1,8 @@
+#!/bin/bash
+NAME=${1%.tex}
+NAMETEX="$NAME.tex"
+NAMEPS="$NAME.ps"
+NAMEPNG="$NAME.png"
+rubber --ps $NAMETEX
+convert -trim $NAMEPS $NAMEPNG
+rubber --ps --pdf --clean $NAMETEX

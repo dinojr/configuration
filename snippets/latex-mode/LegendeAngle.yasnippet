@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: LegendeAngle
+# key: legangle
+# --
+\pgfmathsetmacro{\AngleDebut}{$1}
+\pgfmathsetmacro{\AngleFin}{$2}
+\pgfmathsetmacro{\RayonArc}{$3}
+\pgfmathsetmacro{\RayonArcBase}{1.2*\RayonArc}
+\pgfmathsetmacro{\AngleLabel}{(\AngleDebut+\AngleFin)/2}
+\pgfmathsetmacro{\AngleAnchor}{\AngleLabel+180}
+\begin{pgfonlayer}{background}
+  \begin{scope}[shift={($4)},coordonnees]
+    \draw (0,0) -- (\AngleDebut:\RayonArcBase);
+    \draw (\AngleDebut:\RayonArc) arc [radius = \RayonArc, start angle=\AngleDebut,end angle=\AngleFin];
+    \node [shape=circle,anchor=\AngleAnchor]  at (\AngleLabel:\RayonArc) {$5};
+  \end{scope}
+\end{pgfonlayer}

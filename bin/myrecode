@@ -1,0 +1,7 @@
+#!/bin/bash
+DIR=/home/wilk/bouquin_pearson/src
+DIR_RECODE=/home/wilk/bouquin_pearson/src_recode
+
+for i in $(find $DIR -name '*.tex')
+  do recode -d latin9..tex < "$i" > $DIR_RECODE/$(basename "$i")
+done

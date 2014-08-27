@@ -1,0 +1,8 @@
+#!/bin/bash
+for i in $(find -name "*.asy")
+  do  $HOME/bin/asy -render 5 -cmyk  -glOptions=-indirect -noV -noprc $i -o ${i%asy}eps
+      convert -colorspace cmyk -channel c -fx 'c-y' -channel k -fx 'k+m' -channel y -fx '0' -channel m -fx '0' -density 300 -geometry 50%x eps:"${i%asy}eps" jpg:"${i%asy}jpg"
+      rm ${i%asy}eps
+      mv ${i%asy}jpg ~/vuibert/vuibert-sup/physique-partie-02/physique-partie-02-chapitre-01/figures/
+      echo ${i%asy}jpg >> ~/vuibert/vuibert-sup/physique-partie-02/physique-partie-02-chapitre-01/images_asy_recompilees
+done

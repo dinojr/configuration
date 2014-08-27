@@ -1,0 +1,2 @@
+#!/bin/bash
+convert "$1" -colorspace Gray "${1/\.[a-zA-Z]*}-nb.png"

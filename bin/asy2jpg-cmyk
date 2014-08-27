@@ -1,0 +1,4 @@
+#!/bin/bash
+
+$HOME/bin/asy -f jpg -noV -noprc -glOptions=-indirect -cmyk $1 -o ${1/.asy/-cmyk.jpg}
+convert -density 300 ${1/.asy/-cmyk.jpg} ${1/.asy/-cmyk-300dpi.jpg}

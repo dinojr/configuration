@@ -1,0 +1,101 @@
+# ~/.unison/common_JoseyWales
+#Directories
+path = wilk/enseignement
+path = wilk/texmf
+path = wilk/Mail
+path = wilk/News
+path = wilk/bin
+path = wilk/org
+path = wilk/.emacs.d
+path = wilk/.bogofilter
+path = wilk/.local/share/applications
+path = wilk/Documents/girodet
+path = wilk/Documents/brissac
+path = wilk/Finances
+#path = wilk/info/emacs
+path = wilk/.Conky
+#path = usr/local/texlive/2012
+path = wilk/vuibert
+path = wilk/Links
+
+path = wilk/.local/share/gnome-shell/extensions/
+#path = wilk/.config
+
+#Files
+path = wilk/.unison/common_JoseyWales
+path = wilk/.emacs
+path = wilk/.emacs.bmk
+path = wilk/.gnus.el
+path = wilk/.newsrc.eld
+path = wilk/.gnus.registry.eioio
+path = wilk/.gnus.registry.eld
+path = wilk/.newsrc-dribble
+path = wilk/.config/terminator/config
+path = wilk/pim/passwds.revelation
+path = wilk/.bbdb
+path = wilk/.asynk
+path = wilk/diary
+#path = usr/local/texlive/2011/texmf.cnf
+#path = usr/local/texlive/2011/texmf/web2c/texmf.cnf
+
+## Data not to be synchronized
+# Directories
+ignore = Name {Library physics mathematics}
+ignore = Path wilk/enseignement/2004-2005
+ignore = Path wilk/enseignement/2005-2006
+ignore = Path wilk/enseignement/2006-2007
+ignore = Path wilk/enseignement/2007-2008
+ignore = Path wilk/enseignement/2008-2009
+ignore = Path wilk/enseignement/2009-2010
+ignore = Path wilk/enseignement/2010-2011
+ignore = Path wilk/enseignement/homepage
+ignore = Path wilk/enseignement/logiciels/maple
+ignore = Path wilk/enseignement/UPS2006
+ignore = Path wilk/enseignement/DVDUPS
+ignore = Path wilk/.emacs.d/url
+ignore = Path wilk/info/emacs/asymptote
+ignore = Name {.git}
+ignorenot = Path wilk/vuibert/vuibert-sup/.git
+ignore = Path wilk/News/namazu
+
+# Files
+ignore = Path wilk/.unison/default.prf
+ignore = Path wilk/bin/asy
+ignore = Name {rubber.cache}
+ignore = Name {,.}*{.tex~}
+ignore = Name {DEADJOE}
+ignore = Name {,.}*{.nav}
+ignore = Name {,.}*{.snm}
+ignore = Name {_region_}*
+ignore = Name {auto}
+ignore = Name {,.}*{.log}
+ignore = Name {,.}*{.ps}
+ignore = Name {,.}*{.aux}
+ignore = Name {,.}*{.dvi}
+ignore = Name {,.}*{.out}
+ignore = Name {,.}*{.thm}
+ignore = Name {,.}*{.toc}
+
+ignore = Name {mycor}{,.}*
+ignore = Name {.saves}{,.}*
+ignore = Name {session}{,.}*
+## Miscellaneous options
+
+auto =true
+confirmbigdeletes = true
+perms = -1
+owner = true
+group = true
+times = false
+#force = newer
+sortbysize = true
+sortnewfirst = true
+maxthreads = 50
+
+#merge ou merge2 je sais plus = Name {,.}* -> emacs -q --eval '(ediff-merge-files-with-ancestor  "CURRENT1" "CURRENT2" "OLD" nil "NEW")'
+#merge = Name {,.}* -> emacsclient -c -l '~/.emacs.d/emacs_noninteractive.el' --eval '(ediff-merge-files "CURRENT1" "CURRENT2" nil "NEW")'
+#merge = Name {,.}* -> emacsclient -f wilk --eval '(ediff-merge-files "CURRENT1" "CURRENT2" nil "NEW")'
+merge = Name {,.}* -> emacs --eval '(ediff-merge-files "CURRENT1" "CURRENT2" nil "NEW")'
+#merge = Name {,.}* -> emacsclient -c --eval '(ediff-merge-files "CURRENT1" "CURRENT2" nil "NEW")'
+#merge = Name *.tex -> xxdiff CURRENT1 CURRENT2 --merge --merged-filename NEW --show-merged-pane --exit-with-merge-status --decision
+

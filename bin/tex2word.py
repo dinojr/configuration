@@ -1,0 +1,1 @@
+/home/wilk/info/tex2word/tex2word.py
