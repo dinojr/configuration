@@ -33,7 +33,7 @@
            :latex-class "mpsi_beamer"
            :include ("$4")
            :completion-function jc-org-publish-rename-beamer-pdf)
-          ("notes"
+          ("notes-legacy"
            :base-directory "./"
            :publishing-directory "./"
            :publishing-function org-beamer-publish-to-pdf
@@ -43,7 +43,40 @@
            :latex-class-options "[NotesCours]"
            :completion-function jc-org-publish-rename-notes-pdf
            )
-          ("cours" :components ("beamer" "notes"))))
+          ("notes"
+           :base-directory "./"
+           :publishing-directory "./"
+           :preparation-function jc-org-latex-notes-preparation
+           :publishing-function org-beamer-publish-to-latex
+           :exclude ".*"
+           :latex-class "mpsi-beamerarticle"
+           :include ("$4")
+           :completion-function jc-org-publish-rename-notes-pdf
+           )
+          ("eleves-legacy"
+           :base-directory "./"
+           :publishing-directory "./"
+           :preparation-function jc-org-latex-notes-preparation
+           :publishing-function org-latex-publish-to-pdf
+           :exclude ".*"
+           :latex-class "mpsi-eleves"
+           :include ("$4")
+           :select-tags ("eleves")
+           :headline-levels 5
+           :completion-function jc-org-publish-rename-eleves-pdf
+           )
+          ("eleves"
+           :base-directory "./"
+           :publishing-directory "./"
+           :preparation-function jc-org-latex-notes-preparation
+           :publishing-function org-beamer-publish-to-latex
+           :exclude ".*"
+           :latex-class "mpsi-beamerarticle-eleves"
+           :include ("$4")
+           :select-tags ("eleves")
+           :completion-function jc-org-publish-rename-eleves-pdf
+           )	   
+          ("cours" :components ("beamer" "notes" "eleves"))))
 #+end_src
 
 #+LATEX_HEADER_EXTRA: \RequirePackage{multimedia}

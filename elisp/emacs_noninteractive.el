@@ -3,9 +3,9 @@
 ;; Custom paths
 ;;--------------------
 ;; dans melpa désormais
-;; (add-to-list 'load-path "~/info/emacs/org-mode/lisp")
-;; (add-to-list 'load-path "~/info/emacs/org-mode/contrib/lisp")
-;; (add-to-list 'load-path "~/info/emacs/org-caldav")
+(add-to-list 'load-path "~/info/emacs/org-mode/lisp")
+(add-to-list 'load-path "~/info/emacs/org-mode/contrib/lisp")
+(add-to-list 'load-path "~/info/emacs/org-caldav")
 
 ;; Pour choisir la version de gnus indépendamment de celle d'Emacs
 (setq load-path (cons (expand-file-name "/home/wilk/info/emacs/gnus/lisp") load-path))
@@ -78,12 +78,17 @@
 			 ;; ("\\subparagraph{%s}" . "\\subparagraph*{%s}")
 			 ))
 	  (add-to-list 'org-latex-classes
-		       '("mpsi" "\\documentclass[cours,Version,colonne]{mpsi}\n [NO-DEFAULT-PACKAGES]"
+		       '("mpsi" "\\documentclass[cours,colonne]{mpsi}\n [NO-DEFAULT-PACKAGES]"
 			 ("\\section{%s}" . "\\section*{%s}")
 			 ("\\subsection{%s}" . "\\subsection*{%s}")
 			 ))
 	  (add-to-list 'org-latex-classes
-		       '("mpsi-eleves" "\\documentclass[cours,Version,colonne,eleves]{mpsi}\n [NO-DEFAULT-PACKAGES]"
+		       '("mpsi-beamerarticle" "\\documentclass{mpsi-beamerarticle}\n [NO-DEFAULT-PACKAGES]"
+			 ("\\section{%s}" . "\\section*{%s}")
+			 ("\\subsection{%s}" . "\\subsection*{%s}")
+			 ))
+	  (add-to-list 'org-latex-classes
+		       '("mpsi-beamerarticle-eleves" "\\documentclass[noVersion,eleves]{mpsi-beamerarticle}\n [NO-DEFAULT-PACKAGES]"
 			 ("\\section{%s}" . "\\section*{%s}")
 			 ("\\subsection{%s}" . "\\subsection*{%s}")
 			 ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
@@ -93,7 +98,7 @@
 	 ))
 
 
-(customize-set-variable 'org-beamer-environments-extra '(("only" "O" "\\begin{onlyenv}%a" "\\end{onlyenv}")))
+;; (customize-set-variable 'org-beamer-environments-extra '(("only" "O" "\\begin{onlyenv}%a" "\\end{onlyenv}")))
 
 (setq org-capture-templates (quote (("t" "todo" entry (file+headline "~/org/orgfiles/refile.org" "Tâches") 
   "* TODO  %? %^G     
@@ -490,19 +495,33 @@ DEADLINE:%^t" :clock-resume t)
     )
   )
 
+(defun jc-org-publish-rename (suffix version)
+    "Rename file.suffix to file-version.suffix when buffer is visiting file.org"
+    (let*   ((file-base-name (remove-org-suffix (buffer-file-name)))
+	     (file-suffix-name (concat file-base-name "." suffix))
+	     (file-version-suffix-name (concat file-base-name "-" version  "." suffix)))
+    (if (file-exists-p file-suffix-name)
+	(rename-file file-suffix-name file-version-suffix-name 1))
+    )
+    )
+
+
 (defun jc-org-publish-rename-notes-pdf ()
   "Rename file.pdf to file-notes.pdf when buffer is visiting file.org"
   (jc-org-publish-rename-pdf '"notes"))
 
 (defun jc-org-publish-rename-eleves-pdf ()
   "Rename file.pdf to file-figures-exos.pdf when buffer is visiting file.org"
-  (jc-org-publish-rename-pdf '"eleves"))
+  ;; (jc-org-publish-rename-pdf '"eleves")
+  (jc-org-publish-rename '"pdf" '"eleves")
+  (jc-org-publish-rename '"tex" '"eleves")
+  )
 
 (defun jc-org-publish-rename-beamer-pdf ()
   "Rename file.pdf to file-beamer.pdf when buffer is visiting file.org"
   (jc-org-publish-rename-pdf '"beamer"))
 
-(defun jc-org-latex-eleves-preparation ()
+(defun jc-org-latex-notes-preparation ()
   "Preparation functions to be run before actually pubishing"
   ;; (progn (setq org-latex-title-command "")
   ;;   (org-latex-publish-to-pdf))
@@ -510,6 +529,75 @@ DEADLINE:%^t" :clock-resume t)
   )
 
 (setq org-export-in-background nil)
+
+
+(defun jc-org-publish-project-options (backend)
+  (setq org-publish-project-alist
+        `(("TeX"
+           :base-directory "./"
+           :publishing-directory "./"
+           :publishing-function org-beamer-publish-to-latex
+           :exclude ".*"
+           :latex-class "mpsi_beamer"
+           :include , (list (file-name-nondirectory buffer-file-name))
+           )
+          ("beamer"
+           :base-directory "./"
+           :publishing-directory "./"
+           :publishing-function org-beamer-publish-to-pdf
+           :exclude ".*"
+           :latex-class "mpsi_beamer"
+	   :include , (list (file-name-nondirectory buffer-file-name))
+           :completion-function jc-org-publish-rename-beamer-pdf)
+          ("notes-legacy"
+           :base-directory "./"
+           :publishing-directory "./"
+           :publishing-function org-beamer-publish-to-pdf
+           :exclude ".*"
+           :latex-class "mpsi_beamer"
+	   :include , (list (file-name-nondirectory buffer-file-name))
+           :latex-class-options "[NotesCours]"
+           :completion-function jc-org-publish-rename-notes-pdf
+           )
+          ("notes"
+           :base-directory "./"
+           :publishing-directory "./"
+           :preparation-function jc-org-latex-notes-preparation
+           :publishing-function org-beamer-publish-to-pdf
+           :exclude ".*"
+           :latex-class "mpsi-beamerarticle"
+	   :include , (list (file-name-nondirectory buffer-file-name))
+           :completion-function jc-org-publish-rename-notes-pdf
+           )
+          ("eleves-legacy"
+           :base-directory "./"
+           :publishing-directory "./"
+           :preparation-function jc-org-latex-notes-preparation
+           :publishing-function org-latex-publish-to-pdf
+           :exclude ".*"
+           :latex-class "mpsi-eleves"
+	   :include , (list (file-name-nondirectory buffer-file-name))	   
+           :select-tags ("eleves")
+           :headline-levels 5
+           :completion-function jc-org-publish-rename-eleves-pdf
+           )
+          ("eleves"
+           :base-directory "./"
+           :publishing-directory "./"
+           :preparation-function jc-org-latex-notes-preparation
+           :publishing-function org-beamer-publish-to-pdf
+           :exclude ".*"
+           :latex-class "mpsi-beamerarticle-eleves"
+	   :include , (list (file-name-nondirectory buffer-file-name))
+           :select-tags ("eleves")
+           :completion-function jc-org-publish-rename-eleves-pdf
+           )
+          ("cours" :components ("beamer" "notes"))))
+  )
+
+;; (add-hook 'org-mode-hook 'jc-org-publish-project-options)
+;; (add-hook 'org-export-before-processing-hook 'jc-org-publish-project-options)
+
 ;;--------------------
 ;; Org end
 ;;--------------------
@@ -537,11 +625,11 @@ DEADLINE:%^t" :clock-resume t)
 ;; (add-hook 'message-mode-hook 'bbdb-mail-aliases)
 ;; (mail-abbrevs-setup)
 (add-hook 'message-mode-hook
-            (lambda ()
-              (define-key message-mode-map [C-tab] 'bbdb-complete-mail)
-	      (define-key message-mode-map "\C-c\C-f\C-g" 'message-goto-gcc)
-              )
+	  (lambda ()
+	    (define-key message-mode-map [C-tab] 'bbdb-complete-mail)
+	    (define-key message-mode-map "\C-c\C-f\C-g" 'message-goto-gcc)
 	    )
+	  )
 
 (defun message-goto-gcc ()
   "Move point to the Gcc header."
@@ -576,11 +664,11 @@ DEADLINE:%^t" :clock-resume t)
 ;; (setq gnus-namazu-make-index-command "mknmz")
 (setq gnus-namazu-make-index-arguments
       '("--all" "--mailnews" "--deny=^.*[^0-9].*$" "--exclude=(Junk)")) 
-; on cherche avec C-c C-n
+; on cherche avec C-c C-n		;
 ;; (defun wilk-gnus-update-namazu-index ()
 ;;   (run-at-time "6:00am" nil 'wilk-gnus-namazu-update-all-indices))
 
-;(setq gnus-namazu-index-update-interval nil)
+;(setq gnus-namazu-index-update-interval nil) ;
 ;; call explicitely M-x gnus-namazu-update-all-indices
 
 ;; (defun wilk-gnus-namazu-update-all-indices ()
@@ -595,7 +683,7 @@ DEADLINE:%^t" :clock-resume t)
 ;; Bbdb
 ;;--------------------
 ;; file where things will be saved
-; (setq bbdb-file "~/.emacs.d/bbdb")
+; (setq bbdb-file "~/.emacs.d/bbdb")	;
 
 ;; What do we do when invoking bbdb interactively
 (setq bbdb-mua-update-interactive-p '(query . create))
@@ -609,9 +697,9 @@ DEADLINE:%^t" :clock-resume t)
  'gnus-summary-mode-hook
  (lambda ()
    (define-key gnus-summary-mode-map (kbd ";") 'bbdb-mua-display-records)
-   ))
+   )
 
-(require 'bbdb-anniv)
+ (require 'bbdb-anniv))
 ;; (add-hook 'list-diary-entries-hook #'bbdb-include-anniversaries)
 (setq bbdb-read-name t)
 (setq bbdb-name-format 'last-first)

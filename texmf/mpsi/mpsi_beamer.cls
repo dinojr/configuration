@@ -110,6 +110,15 @@
   \definecolor{titleTextColor}{RGB}{0,0,0}
 \fi
 
+
+% Environnements à redéfinir éventuellement plus tard, avec
+% \newtheorem et en recopiant/adaptant les styles utilisés dans Beamer
+\newenvironment{DefiniTion}{\begin{definition}}{\end{definition}}
+% \Definition est déjà défini ailleurs, donc CamelCase
+\newenvironment{Consequence}[1][]{\begin{block}{#1}}{\end{block}}
+\newenvironment{Theoreme}{\begin{theorem}}{\end{theorem}}
+\newenvironment{Exemple}{\begin{example}}{\end{example}}
+
 \author{Julien Cubizolles}
 \date{\today}
 \title{Titre}
@@ -189,11 +198,5 @@
 
 \input{shortcut}
 \input{chimie}
-
-
-
-\newenvironment{consequence}[1][]{}{}
-
-
 
 \endinput

@@ -991,8 +991,14 @@
 ;; (setq org-image-actual-width '(300))
 
 
-(customize-set-variable 'org-beamer-environments-extra '(("action" "k" "\\begin{actionenv}%a" "\\end{actionenv}")))
-
+;; (customize-set-variable 'org-beamer-environments-extra '(("action" "k" "\\begin{actionenv}%a" "\\end{actionenv}")))
+(setq org-beamer-environments-extra
+      '(("action" "k" "\\begin{actionenv}%a" "\\end{actionenv}") 
+	("only" "O" "\\begin{onlyenv}%a" "\\end{onlyenv}")
+	("Definition" "D" "\\begin{DefiniTion}%a%U" "\\end{DefiniTion}")
+	("Consequence" "S" "\\begin{Consequence}%a%U" "\\end{Consequence}")
+	("Theoreme" "T" "\\begin{Theoreme}%a%U" "\\end{Theoreme}")
+	("Exemple" "X" "\\begin{Exemple}%a" "\\end{Exemple}")))
 (require 'notify)
 (require 'filenotify)
 (require 'org-mobile-sync)
