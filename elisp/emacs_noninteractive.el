@@ -3,9 +3,9 @@
 ;; Custom paths
 ;;--------------------
 ;; dans melpa désormais
-(add-to-list 'load-path "~/info/emacs/org-mode/lisp")
-(add-to-list 'load-path "~/info/emacs/org-mode/contrib/lisp")
-(add-to-list 'load-path "~/info/emacs/org-caldav")
+;; (add-to-list 'load-path "~/info/emacs/org-mode/lisp")
+;; (add-to-list 'load-path "~/info/emacs/org-mode/contrib/lisp")
+;; (add-to-list 'load-path "~/info/emacs/org-caldav")
 
 ;; Pour choisir la version de gnus indépendamment de celle d'Emacs
 (setq load-path (cons (expand-file-name "/home/wilk/info/emacs/gnus/lisp") load-path))

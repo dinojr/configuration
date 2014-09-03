@@ -999,10 +999,10 @@
 	("Consequence" "S" "\\begin{Consequence}%a%U" "\\end{Consequence}")
 	("Theoreme" "T" "\\begin{Theoreme}%a%U" "\\end{Theoreme}")
 	("Exemple" "X" "\\begin{Exemple}%a" "\\end{Exemple}")))
-(require 'notify)
-(require 'filenotify)
-(require 'org-mobile-sync)
-(org-mobile-sync-mode 1)
+;; (require 'notify)
+;; (require 'filenotify)
+;; (require 'org-mobile-sync)
+;; (org-mobile-sync-mode 1)
 
 ;;--------------------
 ;; Org interactif end

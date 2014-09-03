@@ -18,17 +18,13 @@
 (setq inhibit-startup-screen t)
 (global-font-lock-mode)
 
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(font-latex-math-face ((((class color) (background dark)) (:foreground "#ad7fa8"))))
- '(org-headline-done ((((class color) (min-colors 16) (background dark)) (:foreground "LightSalmon" :strike-through t)))))
-
-(set-face-attribute 'default nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant 'normal :weight 'normal :height 100 :width 'normal :foundry "unknown" :family "DejaVu Sans Mono")
-
-
+;; (custom-set-faces
+;;  ;; custom-set-faces was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(font-latex-math-face ((((class color) (background dark)) (:foreground "#ad7fa8"))))
+;;  '(org-headline-done ((((class color) (min-colors 16) (background dark)) (:foreground "LightSalmon" :strike-through t)))))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -102,94 +98,45 @@
 		 ("begin" "$1" "$" "$$" "\\(" "\\["))))
  '(reftex-toc-include-labels t)
  '(reftex-toc-split-windows-horizontally t)
- '(safe-local-variable-values
-   (quote
-    ((eval setenv "TEXINPUTS"
-	   (concat
-	    (getenv "TEXINPUTS")
-	    ":physique-partie-02/physique-partie-02-chapitre-06//"))
-     (eval setenv "TEXINPUTS"
-	   (concat
-	    (getenv "TEXINPUTS")
-	    ":physique-partie-02/physique-partie-02-chapitre-05//"))
-     (eval setenv "TEXINPUTS"
-	   (concat
-	    (getenv "TEXINPUTS")
-	    ":physique-partie-02/physique-partie-02-chapitre-04//"))
-     (eval setenv "TEXINPUTS"
-	   (concat
-	    (getenv "TEXINPUTS")
-	    "/home/wilk/Bureau/:"))
-     (eval setenv "TEXINPUTS"
-	   (concat
-	    (getenv "TEXINPUTS")
-	    ":physique-partie-02/physique-partie-02-chapitre-03//"))
-     (eval setenv "TEXINPUTS"
-	   (concat
-	    (getenv "TEXINPUTS")
-	    ":physique-partie-02/physique-partie-02-chapitre-02//"))
-     (eval setenv "TEXINPUTS"
-	   (concat
-	    (getenv "TEXINPUTS")
-	    ":physique-partie-02/physique-partie-02-chapitre-01//"))
-     (eval setenv "TEXINPUTS"
-	   (concat
-	    (getenv "TEXINPUTS")
-	    ":physique-partie-02/physique-partie-02-chapitre-02/figures//" "physique-partie-02/physique-partie-02-chapitre-02/python//"))
-     (TeX-aster . "../../physique-fichier-maitre.tex")
-     (eval setenv "TEXINPUTS"
-	   (concat
-	    (getenv "TEXINPUTS")
-	    ":physique-partie-02/physique-partie-02-chapitre-02/figures//"))
-     (eval setenv "TEXINPUTS"
-	   (concat
-	    (getenv "TEXINPUTS")
-	    ":physique-partie-04/physique-partie-04-chapitre-02//"))
-     (eval setenv "TEXINPUTS"
-	   (concat
-	    (getenv "TEXINPUTS")
-	    ":physique-partie-04/physique-partie-04-chapitre-05//"))
-     (eval setenv "TEXINPUTS"
-	   (concat
-	    (getenv "TEXINPUTS")
-	    ":physique-partie-04/physique-partie-04-chapitre-04//"))
-     (eval setenv "TEXINPUTS"
-	   (concat
-	    (getenv "TEXINPUTS")
-	    ":physique-partie-04/physique-partie-04-chapitre-03//"))
-     (eval setenv "TEXINPUTS"
-	   (concat
-	    (getenv "TEXINPUTS")
-	    ":physique-partie-04/physique-partie-04-chapitre-03/figures//"))
-     (eval setenv "TEXINPUTS"
-	   (concat
-	    (getenv "TEXINPUTS")
-	    ":physique-partie-02/physique-partie-02-chapitre-01/figures//"))
-     (eval setenv "TEXINPUTS"
-	   (concat
-	    (getenv "TEXINPUTS")
-	    ":physique-partie-02/physique-partie-02-chapitre-01/figures/"))
-     (eval setenv "TEXINPUTS"
-	   (concat
-	    (getenv "TEXINPUTS")
-	    ":/home/wilk/vuibert/vuibert-sup/physique-partie-02/physique-partie-02-chapitre-01/figures/"))
-     (eval setenv "TEXINPUTS"
-	   (concat
-	    (getenv "TEXINPUTS")
-	    "/home/wilk/vuibert/vuibert-sup/physique-partie-02/physique-partie-02-chapitre-01/figures/"))
-     (TeX-master . "../../physique-fichier-maitre.tex"))))
- '(show-paren-mode t)
- '(sp-autoinsert-if-followed-by-same 0))
+ 
+ ;; '(show-paren-mode t)
+ ;; 
+ )
 
 ;;--------------------
 ;; Customize end
 ;;--------------------
+(add-to-list 'load-path "~/configuration/elisp/")
+
+(load "general_stuff.el")
+;; (load "JCnavigation.el")
+;; (load "JCparenthesis.el")
+;; (load "JCwindows.el")
+;; (load "JCspellcheck.el")
+;; (load "JCtramp.el")
+;; (load "JCido.el")
+;; (load "JCdired.el")
+(load "JCyasnippet.el")
+;; (load "JCorg.el")
+;; (load "JCorg-google.el")
+;; (load "JCcalfw.el")
+(load "JClatex.el")
+;; (load "JCgit.el")
+;; (load "JCmingus.el")
+;; (load "JCbitlbee.el")
+;; (load "JCbbdb.el")
+;; (load "JCgnus.el")
+;; (load "JCwingroup.el")
+;; (load "JCwww.el")
+;; (load "JCregexps.el")
+
+
 ;;(load "~/.emacs.d/emacs_server.el")
-(when (daemonp)
-  (require 'session-manager)
-  (session-manager-init (daemonp)))
-(load "~/.emacs.d/emacs_noninteractive.el")
-(load "~/.emacs.d/emacs_interactive.el")
+;; (when (daemonp)
+;;   (require 'session-manager)
+;;   (session-manager-init (daemonp)))
+;; (load "~/.emacs.d/emacs_noninteractive.el")
+;; (load "~/.emacs.d/emacs_interactive.el")
 
 
 ;;--------------------
