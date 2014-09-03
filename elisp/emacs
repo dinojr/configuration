@@ -1,3 +1,4 @@
+;; -*- mode: lisp-*-
 ;;~/.emacs
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Packages ;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -109,24 +110,25 @@
 (add-to-list 'load-path "~/configuration/elisp/")
 
 (load "general_stuff.el")
-;; (load "JCnavigation.el")
-;; (load "JCparenthesis.el")
-;; (load "JCwindows.el")
-;; (load "JCspellcheck.el")
-;; (load "JCtramp.el")
-;; (load "JCido.el")
-;; (load "JCdired.el")
+(load "JCnavigation.el")
+(load "JCparenthesis.el")
+(load "JCwindows.el")
+(load "JCspellcheck.el")
+(load "JCtramp.el")
+(load "JCido.el")
+(load "JCdired.el")
 (load "JCyasnippet.el")
 ;; (load "JCorg.el")
 ;; (load "JCorg-google.el")
 ;; (load "JCcalfw.el")
 (load "JClatex.el")
-;; (load "JCgit.el")
+(load "JCgit.el")
 ;; (load "JCmingus.el")
 ;; (load "JCbitlbee.el")
+(load "JCgnus.el")
 ;; (load "JCbbdb.el")
-;; (load "JCgnus.el")
-;; (load "JCwingroup.el")
+;; (load "JCnamazu.el")
+;; (load "JCworkgroup.el")
 ;; (load "JCwww.el")
 ;; (load "JCregexps.el")
 
