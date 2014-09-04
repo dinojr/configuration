@@ -113,11 +113,11 @@
 
 % Environnements à redéfinir éventuellement plus tard, avec
 % \newtheorem et en recopiant/adaptant les styles utilisés dans Beamer
-\newenvironment{DefiniTion}{\begin{definition}}{\end{definition}}
+\newenvironment<>{DefiniTion}[1][]{\begin{definition}[#1]#2}{\end{definition}}
 % \Definition est déjà défini ailleurs, donc CamelCase
-\newenvironment{Consequence}[1][]{\begin{block}{#1}}{\end{block}}
-\newenvironment{Theoreme}{\begin{theorem}}{\end{theorem}}
-\newenvironment{Exemple}{\begin{example}}{\end{example}}
+\newenvironment<>{Consequence}[1][]{\begin{block}#2{#1}}{\end{block}}
+\newenvironment<>{Theoreme}[1][]{\begin{theorem}[#1]#2}{\end{theorem}}
+\newenvironment<>{Exemple}[1][]{\begin{example}[#1]#2}{\end{example}}
 
 \author{Julien Cubizolles}
 \date{\today}
