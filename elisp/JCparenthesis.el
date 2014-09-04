@@ -1,10 +1,12 @@
-;; ~/.emacs.d/JCparenthesis.el
+;; ~/.emacs.d/JCparenthesis.el -*- mode: lisp-*-
+
+(show-paren-mode)
 
 ;; Rainbow-delimiters
 (require 'rainbow-delimiters)
 (add-hook 'LaTeX-mode-hook 'rainbow-delimiters-mode)
-(add-hook 'LaTeX-mode-hook 'TeX-global-PDF-mode)
 (add-hook 'emacs-lisp-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'lisp-mode-hook 'rainbow-delimiters-mode)
 
 (require 'smartparens)
 ;; do not autoinsert ' pair if the point is preceeded by word.  This

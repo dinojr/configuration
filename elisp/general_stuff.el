@@ -1,4 +1,4 @@
-;; ~/.emacs.d/general_stuff.el
+;; ~/.emacs.d/general_stuff.el -*- mode: lisp-*-
 
 ;; Default font
 (set-face-attribute 'default nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant 'normal :weight 'normal :height 100 :width 'normal :foundry "unknown" :family "DejaVu Sans Mono")
@@ -21,11 +21,9 @@
     (add-to-list 'Info-directory-list "~/info/emacs/bbdb/doc/")
     (add-to-list 'Info-directory-list "~/info/emacs/gnus/texi/")
     (add-to-list 'Info-directory-list "/usr/local/share/info/")
+    (add-to-list 'Info-directory-list "~/info/emacs/org-mode/doc/")
     )
   )
-
-;; Ediff
-(setq ediff-merge-split-window-function 'split-window-vertically)
 
 ;; boxquote
 (require 'boxquote)
@@ -51,3 +49,6 @@
  'tabbar-separator nil :height 0.7
 )
 (setq tabbar-use-images nil) 
+
+;; Raccourcis
+(global-set-key [f2] 'calendar)

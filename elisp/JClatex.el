@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JClatex.el
+;; ~/.emacs.d/JClatex.el -*- mode: lisp-*-
 
 (add-to-list 'load-path "~/info/emacs/auctex")
 (setq TeX-data-directory "~/info/emacs/auctex/")
@@ -71,9 +71,6 @@
   (TeX-command "rubber" 'TeX-master-file 0)
   )
 
-;; LaTeX end ;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 ;;--------------------
 ;; RefTex
 ;;--------------------
@@ -114,6 +111,7 @@
 ;; avec elpa
 (require 'tex)
 
+(add-to-list 'auto-mode-alist '( "\\.tikz\\'" . tex-mode))
 (setq TeX-fold-env-spec-list '(("[comment]" ("comment"))
 			       ("[tikzpicture]" ("tikzpicture"))
 			       ("[exercice]" ("exercice"))
@@ -128,6 +126,7 @@
 (add-hook 'LaTeX-mode-hook
      	  (lambda () (set (make-variable-buffer-local 'TeX-electric-math)
      			  (cons "\\(" "\\)"))))
+(add-hook 'LaTeX-mode-hook 'TeX-global-PDF-mode)
 
 ;; Raccourcis
 (define-key key-translation-map (kbd "²") (kbd "\\"))

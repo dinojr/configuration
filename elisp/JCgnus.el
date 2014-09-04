@@ -1,4 +1,5 @@
-;; ~/.emacs.d/JCgnus.el
+;; ~/.emacs.d/JCgnus.el -*- mode: lisp-*-
+
 (setq load-path (cons (expand-file-name "/home/wilk/info/emacs/gnus/lisp") load-path))
 ;; (add-to-list 'load-path "~/info/emacs/gnus/lisp")
 (add-to-list 'load-path "~/.emacs.d/gnus-bogofilter")

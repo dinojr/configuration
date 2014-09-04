@@ -1,5 +1,4 @@
-;; -*- mode: lisp-*-
-;;~/.emacs
+;;~/.emacs -*- mode: lisp-*-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Packages ;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'package)
@@ -118,11 +117,13 @@
 (load "JCido.el")
 (load "JCdired.el")
 (load "JCyasnippet.el")
-;; (load "JCorg.el")
+;; (load "JCdiary.el")
+(load "JCorg.el")
 ;; (load "JCorg-google.el")
 ;; (load "JCcalfw.el")
 (load "JClatex.el")
 (load "JCgit.el")
+;; (load "JCediff.el")
 ;; (load "JCmingus.el")
 ;; (load "JCbitlbee.el")
 (load "JCgnus.el")
@@ -131,6 +132,9 @@
 ;; (load "JCworkgroup.el")
 ;; (load "JCwww.el")
 ;; (load "JCregexps.el")
+;; (load "JCcalc.el")
+;; (load "JCasymptote.el")
+
 
 
 ;;(load "~/.emacs.d/emacs_server.el")

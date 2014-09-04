@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCnavigation.el
+;; ~/.emacs.d/JCnavigation.el -*- mode: lisp-*-
 
 ;; la commande suivante permet de revenir à la marque sans activer la région
 (defun exchange-point-and-mark-no-activate ()

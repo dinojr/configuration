@@ -312,7 +312,7 @@
 (require 'rainbow-delimiters)
 (add-hook 'LaTeX-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'LaTeX-mode-hook 'TeX-global-PDF-mode)
-(add-hook 'emacs-lisp-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'lisp-mode-hook 'rainbow-delimiters-mode)
 
 
 ; Pour ne pas rajouter d'espaces avec les parenthèses et autres en TeX

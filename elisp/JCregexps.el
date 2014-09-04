@@ -1,4 +1,5 @@
-;; ~/.emacs.d/JCregexps.el
+;; ~/.emacs.d/JCregexps.el -*- mode: lisp-*-
+
 (defun jc-alert-or-emph-to-stars ()
   "Replace \\alert{toto} or \\emph{toto} by *toto*"
   (interactive)
