@@ -116,6 +116,7 @@
 \newenvironment<>{DefiniTion}[1][]{\begin{definition}[#1]#2}{\end{definition}}
 % \Definition est déjà défini ailleurs, donc CamelCase
 \newenvironment<>{Consequence}[1][]{\begin{block}#2{#1}}{\end{block}}
+\newenvironment<>{Block}{\begin{block}#1{}}{\end{block}}
 \newenvironment<>{Theoreme}[1][]{\begin{theorem}[#1]#2}{\end{theorem}}
 \newenvironment<>{Exemple}[1][]{\begin{example}[#1]#2}{\end{example}}
 

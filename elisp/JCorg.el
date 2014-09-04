@@ -330,6 +330,7 @@
 	("only" "O" "\\begin{onlyenv}%a" "\\end{onlyenv}")
 	("Definition" "D" "\\begin{DefiniTion}%a%U" "\\end{DefiniTion}")
 	("Consequence" "S" "\\begin{Consequence}%a%U" "\\end{Consequence}")
+	("Block" "B" "\\begin{Block}%a" "\\end{Block}")
 	("Theoreme" "T" "\\begin{Theoreme}%a%U" "\\end{Theoreme}")
 	("Exemple" "X" "\\begin{Exemple}%a" "\\end{Exemple}")))
 
