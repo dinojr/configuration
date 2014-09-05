@@ -178,7 +178,7 @@
 \AtBeginDocument{%
   \abovedisplayskip=6pt plus 1.5pt minus 3.5pt
   \belowdisplayskip=\abovedisplayskip
-  \flushleft
+  % \flushleft
 }
 
 \renewcommand{\footrulewidth}{0.4pt}
@@ -336,6 +336,7 @@
            % \newline = linebreak
   {\thmname{#1}}%         Thm head spec (can be left empty, meaning `normal')
 \theoremstyle{breaknonamenotitle}
+
 \newtheorem*{Exemple}{Exemple}
 \surroundwithmdframed[style=mpsilightframe]{Exemple}
 
