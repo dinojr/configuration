@@ -332,7 +332,7 @@
 	("Consequence" "S" "\\begin{Consequence}%a%U" "\\end{Consequence}")
 	("Block" "B" "\\begin{Block}%a" "\\end{Block}")
 	("Theoreme" "T" "\\begin{Theoreme}%a%U" "\\end{Theoreme}")
-	("Exemple" "X" "\\begin{Exemple}%a" "\\end{Exemple}")))
+	("Exemple" "X" "\\begin{Exemple}%a%U" "\\end{Exemple}")))
 
 (eval-after-load 'ox-latex
   '(progn (add-to-list 'org-latex-classes
