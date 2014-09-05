@@ -305,10 +305,9 @@
 %%%% Environnements
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage[framemethod=TikZ,xcolor]{mdframed}
+\mdfdefinestyle{mpsilightframe}{roundcorner=5pt,skipabove=\baselineskip,skipbelow=\baselineskip,outerlinewidth=1pt}
+
 \mdfdefinestyle{mpsiframe}{roundcorner=5pt,backgroundcolor=gray!30,skipabove=\baselineskip,skipbelow=\baselineskip,outerlinewidth=2pt}
-
-\mdfdefinestyle{mpsilightframe}{roundcorner=5pt,skipabove=\baselineskip,skipbelow=\baselineskip,outerlinewidth=pt}
-
 
 \newtheoremstyle{breaknoname}% name
   {3pt}%      Space above
@@ -334,7 +333,7 @@
   {}%        Punctuation after thm head
   {\newline}%     Space after thm head: " " = normal interword space;
            % \newline = linebreak
-  {\thmname{#1}}%         Thm head spec (can be left empty, meaning `normal')
+  {\thmname{#1}: \thmname{#3}}%         Thm head spec (can be left empty, meaning `normal')
 \theoremstyle{breaknonamenotitle}
 
 \newtheorem*{Exemple}{Exemple}
