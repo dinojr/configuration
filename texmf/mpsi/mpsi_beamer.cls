@@ -80,8 +80,8 @@
 \setbeamertemplate{footline}{sous licence
    \tiny\url{http://creativecommons.org/licenses/by-nc-nd/2.0/fr/}\hfill \insertframenumber/\inserttotalframenumber}
 
-% \setbeamertemplate{sections/subsections in toc}[sections numbered,subsections numbered] 
-\setbeamertemplate{section in toc}[sections numbered,circles]
+
+\setbeamertemplate{section in toc}[sections numbered]
 \setbeamertemplate{subsection in toc}[subsections numbered]
 \setbeamertemplate{enumerate item}{\insertenumlabel}
 \setbeamertemplate{enumerate subitem}{\alph{enumii}}
@@ -124,7 +124,7 @@
 \date{\today}
 \title{Titre}
 \institute{Lycée Louis le Grand}
-
+\setbeamertemplate{section in toc}[sections numbered]
 \AtBeginSection[]{
   \begin{frame}{}
   \tableofcontents[currentsection,subsectionstyle=hide/hide/hide,subsubsectionstyle=hide/hide/hide]
