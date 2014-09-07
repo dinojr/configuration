@@ -5,6 +5,8 @@
 (add-to-list 'load-path "~/info/emacs/auctex/")
 (add-to-list 'load-path "~/info/emacs/auctex/preview/")
 
+(require 'tex)
+
 (setq TeX-clean-confirm nil)
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
@@ -32,26 +34,106 @@
 
 (setq TeX-view-format "pdf")
 
+(setq TeX-command-list
+      (quote
+       (("TeX" "%(PDF)%(tex) %`%S%(PDFout)%(mode)%' %t" TeX-run-TeX nil
+	 (plain-tex-mode texinfo-mode ams-tex-mode)
+	 :help "Run plain TeX")
+	("LaTeX" "%`%l%(mode)%' %t" TeX-run-TeX nil
+	 (latex-mode doctex-mode)
+	 :help "Run LaTeX")
+	("Makeinfo" "makeinfo %t" TeX-run-compile nil
+	 (texinfo-mode)
+	 :help "Run Makeinfo with Info output")
+	("Makeinfo HTML" "makeinfo --html %t" TeX-run-compile nil
+	 (texinfo-mode)
+	 :help "Run Makeinfo with HTML output")
+	("AmSTeX" "%(PDF)amstex %`%S%(PDFout)%(mode)%' %t" TeX-run-TeX nil
+	 (ams-tex-mode)
+	 :help "Run AMSTeX")
+	("ConTeXt" "texexec --once --texutil %(execopts)%t" TeX-run-TeX nil
+	 (context-mode)
+	 :help "Run ConTeXt once")
+	("ConTeXt Full" "texexec %(execopts)%t" TeX-run-TeX nil
+	 (context-mode)
+	 :help "Run ConTeXt until completion")
+	("BibTeX" "bibtex %s" TeX-run-BibTeX nil t :help "Run BibTeX")
+	("View" "%V" TeX-run-discard t t :help "Run Viewer")
+	("Print" "%p" TeX-run-command t t :help "Print the file")
+	("Queue" "%q" TeX-run-background nil t :help "View the printer queue" :visible TeX-queue-command)
+	("File" "%(o?)dvips %d -o %f " TeX-run-command t t :help "Generate PostScript file")
+	("Index" "makeindex %s" TeX-run-command nil t :help "Create index file")
+	("Check" "lacheck %s" TeX-run-compile nil
+	 (latex-mode)
+	 :help "Check LaTeX file for correctness")
+	("Spell" "(TeX-ispell-document \"\")" TeX-run-function nil t :help "Spell-check the document")
+	("Clean" "TeX-clean" TeX-run-function nil t :help "Delete generated intermediate files")
+	("Clean All" "(TeX-clean t)" TeX-run-function nil t :help "Delete generated intermediate and output files")
+	("rubber" "rubber --cache --inplace --maxerr -1 --short --force --warn all --pdf %t" TeX-run-command nil t :help "Run rubber with pdflatex directly")
+	("rubberps" "rubber --cache --inplace --maxerr -1 --short --force --warn all --ps --pdf %t" TeX-run-command nil t :help "Run rubber with latex->dvips->ps2pdf")
+	("pdflatex-vuibert" "pdflatex -fmt ../../../vuistand-fmt.fmt %t" TeX-run-command nil t :help "Run pdflatex with custom format file"))))
+
 ;;rubber comme compilateur
 (add-hook 'LaTeX-mode-hook (lambda()
   (setq TeX-command-default "rubber")
-  (add-to-list 'LaTeX-indent-environment-list '("code") )
-  (add-to-list 'LaTeX-indent-environment-list '("tikzpicture"))
-  (add-to-list 'LaTeX-indent-environment-list '("pspicture"))
-  (add-to-list 'LaTeX-indent-environment-list '("equation*"))
-  (add-to-list 'LaTeX-indent-environment-list '("equation") )
-  (add-to-list 'LaTeX-indent-environment-list '("align") )
-  (add-to-list 'LaTeX-indent-environment-list '("align*") )
-  (add-to-list 'LaTeX-indent-environment-list '("table") )
-  (add-to-list 'LaTeX-indent-environment-list '("tabular") )
-  (add-to-list 'LaTeX-indent-environment-list '("pspicture") )
-  (add-to-list 'LaTeX-indent-environment-list '("tikzpicture") )
-  (add-to-list 'LaTeX-indent-environment-list '("axis") )
-  (add-to-list 'LaTeX-indent-environment-list '("psgraph") )
-  (add-to-list 'LaTeX-indent-environment-list '("maple") )
-  (add-to-list 'LaTeX-indent-environment-list '("figure") )
-  (add-to-list 'LaTeX-indent-environment-list '("scope") )
-))
+  ;; (add-to-list 'LaTeX-indent-environment-list '("code") )
+;;   (add-to-list 'LaTeX-indent-environment-list '("tikzpicture"))
+;;   (add-to-list 'LaTeX-indent-environment-list '("pspicture"))
+;;   (add-to-list 'LaTeX-indent-environment-list '("equation*"))
+;;   (add-to-list 'LaTeX-indent-environment-list '("equation") )
+;;   (add-to-list 'LaTeX-indent-environment-list '("align") )
+;;   (add-to-list 'LaTeX-indent-environment-list '("align*") )
+;;   (add-to-list 'LaTeX-indent-environment-list '("table") )
+;;   (add-to-list 'LaTeX-indent-environment-list '("tabular") )
+;;   (add-to-list 'LaTeX-indent-environment-list '("pspicture") )
+;;   (add-to-list 'LaTeX-indent-environment-list '("tikzpicture") )
+;;   (add-to-list 'LaTeX-indent-environment-list '("axis") )
+;;   (add-to-list 'LaTeX-indent-environment-list '("psgraph") )
+;;   (add-to-list 'LaTeX-indent-environment-list '("maple") )
+;;   (add-to-list 'LaTeX-indent-environment-list '("figure") )
+;;   (add-to-list 'LaTeX-indent-environment-list '("scope") )
+  ;;
+  ))
+(setq LaTeX-clean-intermediate-suffixes
+      (quote
+       ("\\.aux" "\\.bbl" "\\.blg" "\\.brf" "\\.fot" "\\.glo" "\\.gls" "\\.idx" "\\.ilg" "\\.ind" "\\.lof" "\\.log" "\\.lot" "\\.out" "\\.toc" "\\.url" "\\.thm" "\\.ps" "\\.dvi" "\\.tex~" "\\.nav" "\\.snm" "\\-autopp.log")))
+
+(setq LateX-indent-environment-list
+      (quote
+       (("verbatim" current-indentation)
+	("verbatim*" current-indentation)
+	("array")
+	("displaymath")
+	("eqnarray")
+	("eqnarray*")
+	("equation")
+	("equation*")
+	("picture")
+	("tabbing")
+	("table")
+	("table*")
+	("tabular")
+	("tabular*")
+	("code")    
+	("tikzpicture")
+	("pspicture") 
+	("equation*") 
+	("equation") 
+	("align")   
+	("align*")
+	("table")    
+	("tabular")
+	("pspicture")
+	("tikzpicture")
+	("axis")
+	("psgraph")
+	("maple")
+	("figure")
+	("scope")
+	)
+       ))
+      
+
 
 (eval-after-load "latex"
   '(progn
@@ -64,6 +146,8 @@
     (add-hook 'org-mode-hook 'LaTeX-math-mode)
     (setq TeX-insert-braces nil)
     ))
+
+
 
 (defun jc-revert-and-rubber ()
   (interactive)
@@ -104,12 +188,6 @@
 ;; RefTex end
 ;;--------------------
 
-;;--------------------
-;; AucTeX
-;;--------------------
-
-;; avec elpa
-(require 'tex)
 
 (add-to-list 'auto-mode-alist '( "\\.tikz\\'" . tex-mode))
 (setq TeX-fold-env-spec-list '(("[comment]" ("comment"))
