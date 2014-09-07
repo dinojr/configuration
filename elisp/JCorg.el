@@ -1,8 +1,13 @@
 ;; ~/emacs.d/JCorg.el -*- mode: lisp-*-
 
+;; dans melpa désormais
+(add-to-list 'load-path "~/info/emacs/org-mode/lisp")
+(add-to-list 'load-path "~/info/emacs/org-mode/contrib/lisp")
+
 (require 'cl)
-(setq org-export-backends '(ascii html icalendar latex beamer odt))
 (require 'org)
+
+(setq org-export-backends '(ascii html icalendar latex beamer odt))
 
 (set-face-attribute 'org-level-1 nil :height 1.0)
 (set-face-attribute 'org-level-2 nil :height 1.0)
