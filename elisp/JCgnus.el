@@ -67,7 +67,7 @@ the variable `gnus-move-split-methods' for finding a default target."
   )
 
 (defun jc-gnus-summary-move-and-mark-read-article (&optional n to-newsgroup select-method)
-  "Copy the current article to some other group and mark it as expirable.
+  "Move the current article to some other group and mark it as read.
 If TO-NEWSGROUP is string, do not prompt for a newsgroup to copy to.
 When called interactively, if TO-NEWSGROUP is nil, use the value of
 the variable `gnus-move-split-methods' for finding a default target."
@@ -112,6 +112,7 @@ the variable `gnus-move-split-methods' for finding a default target."
     (define-key gnus-summary-mode-map (kbd "B M") 'jc-gnus-summary-move-and-mark-read-article)
     )
   )
+
 (add-hook 'message-mode-hook
 	  (lambda ()
 	    (define-key message-mode-map [C-tab] 'bbdb-complete-mail)
