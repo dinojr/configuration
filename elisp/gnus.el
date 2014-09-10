@@ -220,7 +220,7 @@
 (setq gnus-sorted-header-list '( "^Date:" "^From:" "^To:" "^Followup-To:" "^Cc:" "Bcc:" "^Newsgroups:" "Fcc:" "^Subject:" ))
 
 ;; Check des nouveaux articles toutes les 10 minutes pour les groupes de niveau inférieur à 3 (le Topic Loisirs est à 5 par exemple)
-(gnus-demon-add-handler 'gnus-group-get-new-news 10 3)
+;; (gnus-demon-add-handler 'gnus-group-get-new-news 10 3)
 
 (add-to-list 'load-path "~/.emacs.d/Aadis-Emacs-Setup")
 

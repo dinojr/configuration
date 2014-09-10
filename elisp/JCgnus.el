@@ -106,7 +106,7 @@ the variable `gnus-move-split-methods' for finding a default target."
 ;; Raccourcis
 (global-set-key "\C-cm" 'gnus-group-mail)
 
-(eval-after-load 'gnus
+(eval-after-load 'gnus-load
   (lambda ()
     (define-key gnus-summary-mode-map (kbd "B a") 'jc-gnus-summary-copy-and-expire-article)
     (define-key gnus-summary-mode-map (kbd "B M") 'jc-gnus-summary-move-and-mark-read-article)

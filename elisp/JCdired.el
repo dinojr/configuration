@@ -50,7 +50,7 @@
     )
   )
 
-(add-hook 'dired-mode-hook 'jc-ido-dired-mode-hook)
+;; (add-hook 'dired-mode-hook 'jc-ido-dired-mode-hook)
 
 (defun jc-dired-open-file ()
   "In dired, open the file named on this line."
@@ -70,7 +70,7 @@
   '(define-key dired-mode-map (kbd "<f1> o") 'jc-dired-find-file-latex))
 (define-key dired-mode-map (kbd "C-c C-s") 'dired-toggle-sudo)
 
-(defun jc-ido-dired-mode-hook ()
-  (define-key dired-mode-map "$" 'jc-ido-bookmark-jump)
-  (define-key dired-mode-map "," 'dired-hide-subdir)
-  (define-key dired-mode-map "\M-," 'dired-hide-all))
+;; (defun jc-ido-dired-mode-hook ()
+;;   (define-key dired-mode-map "$" 'jc-ido-bookmark-jump)
+;;   (define-key dired-mode-map "," 'dired-hide-subdir)
+;;   (define-key dired-mode-map "\M-," 'dired-hide-all))
