@@ -4,6 +4,7 @@
 ;; (add-to-list 'load-path "~/info/emacs/gnus/lisp")
 (add-to-list 'load-path "~/.emacs.d/gnus-bogofilter")
 
+(require 'gnus)
 (require 'gnus-load)
 (setq user-full-name "Julien Cubizolles")
 (setq user-mail-address "j.cubizolles@free.fr")
