@@ -373,6 +373,7 @@ de Christophe Jorssen,par Julien Cubizolles]
 \newframedtheorem{postulat}{Postulat}
 \newtheorem{protocole}{Protocole}
 \newtheorem{exploitation}{Exploitation}
+\newtheorem{interpretation}{Interprétation}
 \newtheorem{manip}{Manipulations}
 \newtheorem{materiel}{Matériel}
 \newtheorem{question}{Questions}
