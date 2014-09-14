@@ -110,7 +110,7 @@
 
 (load "general_stuff.el")
 (load "JCnavigation.el")
-;; (load "JCparenthesis.el")
+(load "JCparenthesis.el")
 (load "JCwindows.el")
 (load "JCspellcheck.el")
 (load "JCtramp.el")
