@@ -307,7 +307,7 @@
 \RequirePackage[framemethod=TikZ,xcolor]{mdframed}
 \mdfdefinestyle{mpsilightframe}{roundcorner=5pt,skipabove=\baselineskip,skipbelow=\baselineskip,outerlinewidth=1pt}
 
-\mdfdefinestyle{mpsiframe}{roundcorner=5pt,backgroundcolor=gray!30,skipabove=\baselineskip,skipbelow=\baselineskip,outerlinewidth=2pt}
+\mdfdefinestyle{mpsiframe}{roundcorner=5pt,backgroundcolor=gray!30,skipabove=\baselineskip,skipbelow=\baselineskip,outerlinewidth=2pt,backgroundcolor=gray!10}
 
 \newtheoremstyle{breaknoname}% name
   {3pt}%      Space above
