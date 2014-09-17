@@ -4,9 +4,10 @@
 (set-face-attribute 'default nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant 'normal :weight 'normal :height 100 :width 'normal :foundry "unknown" :family "DejaVu Sans Mono")
 
 
-;; Theme
-(add-to-list 'load-path "/home/wilk/.emacs.d/naquadah-theme")
+;; Theme, dans melpa maintenant
+;; (add-to-list 'load-path "/home/wilk/.emacs.d/naquadah-theme")
 (require 'naquadah-theme)
+
 
 ;; Transient-mark-mode
 (setq transient-mark-mode t)
