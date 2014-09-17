@@ -16,7 +16,7 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-PATH="/usr/local/texlive/2012/bin/x86_64-linux:/home/wilk/info/telephone/android-sdk-linux_x86/tools:$PATH"
+PATH="/usr/local/texlive/2014/bin/x86_64-linux:/home/wilk/info/telephone/android-sdk-linux_x86/tools:$PATH"
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
@@ -25,8 +25,8 @@ fi
 
 
 
-MANPATH=/usr/local/texlive/2012/texmf/doc/man
-INFOPATH=/usr/local/texlive/2012/texmf/doc/info
+MANPATH="/usr/local/texlive/2014/texmf/doc/man:$MANPATH"
+INFOPATH="/usr/local/texlive/2012/texmf/doc/info:$INFOPATH"
   
 
 alias file-roller='nice -n 15 file-roller'
