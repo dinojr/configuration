@@ -32,8 +32,9 @@
 
 ;; ;; À voir à l'usage
 ;; (setq sp-autoinsert-if-followed-by-same 0)
-
+(require 'smartparens)
 (require 'smartparens-config)
+
 
 (sp-with-modes '(
                  tex-mode
@@ -50,10 +51,10 @@
   (sp-local-pair "\\left[" "\\right]")
   (sp-local-pair "\\]" "\\[")
   ;; (sp-local-tag "\\b" "\\begin{_}" "\\end{_}")
-  (sp-local-tag "$" "\\(" "\\)")
+  (sp-local-tag "$" "\\(" "\\)") ;; ne marche pas
   )
 
-;; (require smartparens-latex)
+;; Vérifier que latex-mode est bien dans sp-navigate-consider-stringlike-sexp
 
 (sp-use-paredit-bindings)
 (smartparens-global-mode)
