@@ -26,7 +26,7 @@ fi
 
 
 MANPATH="/usr/local/texlive/2014/texmf/doc/man:$MANPATH"
-INFOPATH="/usr/local/texlive/2012/texmf/doc/info:$INFOPATH"
+INFOPATH="/usr/local/texlive/2014/texmf/doc/info:$INFOPATH"
   
 
 alias file-roller='nice -n 15 file-roller'
