@@ -42,6 +42,7 @@
 \usetikzlibrary{decorations.markings}
 \usetikzlibrary{decorations.pathreplacing}
 \usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta}
 \usetikzlibrary{positioning}
 
 \pgfplotsset{compat=newest}
