@@ -6,6 +6,7 @@
 (setq gnus-agent t)
 (setq gnus-agent-expire-all nil)
 (setq gnus-agent-expire-days 30)
+(setq gnus-plugged nil)
 
 ;(add-hook 'gnus-exit-gnus-hook 'gnus-agent-expire)
 
