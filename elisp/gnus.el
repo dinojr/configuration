@@ -1,12 +1,13 @@
 ;; ~/.gnus.el
+(require 'gnus)
 (setq auth-source-debug t)
 (setq debug-on-error t)
 (setq imap-log t)
 
-(setq gnus-agent t)
+(eval-after-load 'gnus '(if gnus-batch-mode (setq gnus-plugged t))) ;; pour ramasser le courrier en batch
+(if gnus-batch-mode (setq gnus-plugged t)) ;; pour ramasser le courrier en batch
 (setq gnus-agent-expire-all nil)
 (setq gnus-agent-expire-days 30)
-(setq gnus-plugged nil)
 
 ;(add-hook 'gnus-exit-gnus-hook 'gnus-agent-expire)
 
