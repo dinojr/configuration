@@ -34,6 +34,11 @@
 
 (setq org-fontify-done-headline t)
 
+;; Images
+(setq org-startup-with-inline-images t)
+(setq org-image-actual-width '(300))
+;; overrided by #+ATTR.*: width=200
+
 ;; Agenda
 (setq org-agenda-dim-blocked-tasks t)
 (setq org-agenda-menu-show-match nil
@@ -92,6 +97,7 @@
 ;; Fichiers
 (setq org-directory "~/org/orgfiles/")
 (setq org-agenda-files (quote ("~/org/orgfiles/" "~/vuibert/")))
+
 
 
 ;; todo
@@ -559,6 +565,7 @@ DEADLINE:%^t" :clock-resume t)
 (add-hook 'org-mode-hook 'flyspell-mode)
 
 (setq org-use-speed-commands t)
+
 ;; Raccourcis
 (global-set-key (kbd "C-c C-g") (lambda () (interactive) (org-clock-in '(4))))
 (global-set-key (kbd "C-c C-h") 'org-clock-out)
