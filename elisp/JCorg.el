@@ -8,6 +8,7 @@
 (require 'org)
 
 (setq org-export-backends '(ascii html icalendar latex beamer odt))
+(setq org-export-in-background t)
 
 (set-face-attribute 'org-level-1 nil :height 1.0)
 (set-face-attribute 'org-level-2 nil :height 1.0)
