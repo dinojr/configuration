@@ -131,7 +131,7 @@
 (load "JCgnus.el")
 (load "JCbbdb.el")
 (load "JCnamazu.el")
-;; (load "JCworkgroup.el")
+(load "JCworkgroup.el")
 ;; (load "JCwww.el")
 ;; (load "JCregexps.el")
 ;; (load "JCcalc.el")
