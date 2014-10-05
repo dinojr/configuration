@@ -30,11 +30,7 @@
 
 % À changer pour passer à luatex
 \RequirePackage[T1]{fontenc}
-
-\RequirePackage{floatrow} % nécessaire de le charger ici, sinon 
-                          % no room for a new \count quand on charge commandes-auteur-figures
                           
-
 %% Attention, des conflits entre standalone et pstricks: standalone
 %% doit être chargé avant pstricks
 %% \item (LaTeX Error: Command \clipbox already defined.
