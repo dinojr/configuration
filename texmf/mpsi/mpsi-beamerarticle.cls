@@ -363,6 +363,15 @@
 \surroundwithmdframed[style=mpsiframe]{definition}
 
 
+\newenvironment{indispensable}{%
+   \begin{center}
+     \begin{minipage}{.6\linewidth}
+       \centering
+       \textsf{\textbf{\Large Indispensable}}\\
+     }
+     {\end{minipage}\end{center}}
+
+\surroundwithmdframed[style=mpsilightframe]{indispensable}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Environnement - fin
