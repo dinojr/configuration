@@ -386,8 +386,8 @@
 (defun oxy-unicode-threads-heavy () 
   (interactive)
   (setq ;; gnus-summary-line-format "%8{%8d│%}%8{%4k│%}%O%9{%U%R%z%}%8{│%}%*%(%-23,23f%)%7{║%} %6{%B%} %s\n"
-        gnus-summary-line-format "%8{%12&user-date;│%}%8{%4k│%}%O%9{%U%R%z%}%8{│%}%*%(%-23,23f%)%7{║%} %6{%B%} %s\n"
-	gnus-summary-dummy-line-format "        %8{│%}    %8{│%}%O   %(%8{│%}                       %7{║%}%) %6{┏○%}  %S\n"
+        gnus-summary-line-format "%8{%11&user-date;│%}%8{%4k│%}%O%9{%U%R%z%}%8{│%}%*%(%-23,23f%)%7{║%} %6{%B%} %s\n"
+	gnus-summary-dummy-line-format "        %8{│%}       %8{│%}%O   %(%8{│%}                       %7{║%}%) %6{┏○%}  %S\n"
 	gnus-sum-thread-tree-indent " "
 	gnus-sum-thread-tree-root "┏● " 
 	gnus-sum-thread-tree-false-root " ○ "
@@ -397,6 +397,20 @@
 	gnus-sum-thread-tree-single-leaf "┗━━❯ "))
 
 (oxy-unicode-threads-heavy)
+
+(setq gnus-user-date-format-alist
+      '(((gnus-seconds-today)
+	. "%H:%M")
+       ((+ 86400
+	   (gnus-seconds-today))
+	. "Hier, %H:%M")
+       (604800 . "%a %H:%M")
+       ((gnus-seconds-month)
+	. "%a %d")
+       ((gnus-seconds-year)
+	. "%b %d")
+       (t . "%b %d %y")))
+
 ;; (oxy-unicode-threads)
 
 ;(setq gnus-ignored-from-addresses (quote ("Julien Cubizolles" "j.cubizolles@free.fr")))
