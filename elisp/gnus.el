@@ -30,16 +30,16 @@
 (add-hook 'dired-mode-hook 'turn-on-gnus-dired-mode)
 
 ; À mettre dans cet ordre pour éviter un message d'erreur
-(setq gnus-registry-install t)
-(require 'gnus-registry)
+;; (setq gnus-registry-install t)
+;; (require 'gnus-registry)
 
-(setq-default
- spam-log-to-registry t
- gnus-registry-max-entries 10000
- gnus-registry-track-extra nil
- gnus-refer-article-method '(current (nnregistry)))
+;; (setq-default
+;;  spam-log-to-registry t
+;;  gnus-registry-max-entries 10000
+;;  gnus-registry-track-extra nil
+;;  gnus-refer-article-method '(current (nnregistry)))
 
-(gnus-registry-initialize)
+;; (gnus-registry-initialize)
 
 (require 'nnir)
 
@@ -170,7 +170,7 @@
 (setq nnmail-split-methods 'nnmail-split-fancy)
 (setq nnmail-split-fancy 
       `(|
-	(: gnus-registry-split-fancy-with-parent)
+	;; (: gnus-registry-split-fancy-with-parent)
 	("from" "louislegrand\\|LLG\\|\\(m\\|M\\)ansuy" "LLG")
 	("subject" "physique2013" "physique2013")
 	("subject" "structures2013" "structures2013")
@@ -198,7 +198,7 @@
 
 (setq nnimap-split-fancy
       `(|
-	(: gnus-registry-split-fancy-with-parent)
+	;; (: gnus-registry-split-fancy-with-parent)
 	("from" "louislegrand\\|LLG\\|\\(m\\|M\\)ansuy" "LLG")
 	("subject" "physique2013" "physique2013")
 	("subject" "structures2013" "structures2013")
