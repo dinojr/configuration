@@ -339,6 +339,9 @@
 \newtheorem*{Exemple}{Exemple}
 \surroundwithmdframed[style=mpsilightframe]{Exemple}
 
+\newtheorem*{Demonstration}{Démonstration}
+\surroundwithmdframed[style=mpsilightframe]{Demonstration}
+
 \newtheoremstyle{break}% name
   {3pt}%      Space above
   {3pt}%      Space below
@@ -356,11 +359,17 @@
 % for backward-compatibility
 \surroundwithmdframed[style=mpsiframe]{theorem}
 
+\newtheorem*{Loi}{Loi}
+\surroundwithmdframed[style=mpsiframe]{Theoreme}
+% for backward-compatibility
+\surroundwithmdframed[style=mpsiframe]{loi}
+
 \newtheorem*{DefiniTion}{Définition}
 
 \surroundwithmdframed[style=mpsiframe]{DefiniTion}
 % for backward-compatibility
 \surroundwithmdframed[style=mpsiframe]{definition}
+
 
 
 \newenvironment{indispensable}{%
@@ -384,5 +393,19 @@
 \renewenvironment{column}[1]{\begin{minipage}{#1}}{\end{minipage}}
 
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Vestiges
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\newcommand{\rem}{\textbf{Remarques :\xspace}}
+\newcommand{\parking}[2]{
+  \begin{minipage}[t]{.5\columnwidth}
+    \flushleft \large \textit{\color {red} Schéma de #1\xspace}
+  \end{minipage}\hfill\vspace{#2\baselineskip}
+}
+\newcommand{\oral}[1]{%
+  \begin{center}
+      \color{red} \begin{minipage}{.8\columnwidth} \textsf{\large \bfseries #1}\end{minipage}
+  \end{center}
+  \color{black}
+}
 \endinput
