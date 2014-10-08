@@ -393,6 +393,7 @@
 \renewenvironment{column}[1]{\begin{minipage}{#1}}{\end{minipage}}
 
 
+\AtBeginDocument{\renewcommand{\labelitemi} {$\bullet$}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Vestiges
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
