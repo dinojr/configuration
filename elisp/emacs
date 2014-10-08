@@ -120,6 +120,7 @@
 (load "JCyasnippet.el")
 ;; (load "JCdiary.el")
 (load "JCorg.el")
+(load "JCregexps.el")
 (setq org-export-async-init-file "/home/wilk/configuration/elisp/org-export-async-init.el")
 ;; (load "JCorg-google.el")
 ;; (load "JCcalfw.el")
