@@ -174,6 +174,7 @@
                             ("@province" . ?o)
                             (:endgroup)
                             ("classe" . ?s)
+			    ("eleves" . ?e)
                             ("labo" . ?b)
                             ("TEL" . ?T)
                             ("EMAIL" . ?E)
