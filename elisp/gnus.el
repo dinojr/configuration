@@ -387,7 +387,7 @@
   (interactive)
   (setq ;; gnus-summary-line-format "%8{%8d│%}%8{%4k│%}%O%9{%U%R%z%}%8{│%}%*%(%-23,23f%)%7{║%} %6{%B%} %s\n"
         gnus-summary-line-format "%8{%11&user-date;│%}%8{%4k│%}%O%9{%U%R%z%}%8{│%}%*%(%-23,23f%)%7{║%} %6{%B%} %s\n"
-	gnus-summary-dummy-line-format "        %8{│%}       %8{│%}%O   %(%8{│%}                       %7{║%}%) %6{┏○%}  %S\n"
+	gnus-summary-dummy-line-format "           %8{│%}    %8{│%}%O   %(%8{│%}                       %7{║%}%) %6{┏○%}  %S\n"
 	gnus-sum-thread-tree-indent " "
 	gnus-sum-thread-tree-root "┏● " 
 	gnus-sum-thread-tree-false-root " ○ "
