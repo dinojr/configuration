@@ -26,11 +26,11 @@
 %\psset{algebraic=true}
 
 % \RequirePackage{gensymb} % pour \micro, \mu
-% \RequirePackage[greek,frenchb]{babel}
+\RequirePackage[greek,frenchb]{babel}
 
 
-\RequirePackage[narrowiints,partialup]{kpfonts}
-% \RequirePackage[frenchstyle,narrowiints,partialup]{kpfonts}
+% \RequirePackage[narrowiints,partialup]{kpfonts}
+\RequirePackage[frenchstyle,narrowiints,partialup]{kpfonts}
 
 \RequirePackage{mathtools}
 % pour DeclarePairedDelimiter et co.
@@ -46,6 +46,20 @@
 \usetikzlibrary{positioning}
 
 \pgfplotsset{compat=newest}
+
+\AtBeginDocument{%
+  \@ifpackageloaded{babel}{%
+    \let\xCJtikz@tikzpicture\tikzpicture
+    \def\tikzpicture{%
+      \iflanguage{french}{%
+        \shorthandoff{:;?!}}{}%
+      \xCJtikz@tikzpicture}%
+    \let\xCJtikz@tikzexternal@tikzpicture@replacement%
+        \tikzexternal@tikzpicture@replacement
+    \def\tikzexternal@tikzpicture@replacement{%
+      \iflanguage{french}{%
+        \shorthandoff{:;?!}}{}%
+      \xCJtikz@tikzexternal@tikzpicture@replacement}}{}}
 
 \RequirePackage{animate}
 

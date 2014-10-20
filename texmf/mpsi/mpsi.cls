@@ -1040,8 +1040,27 @@ de Christophe Jorssen,par Julien Cubizolles]
 \usetikzlibrary{arrows}
 \usetikzlibrary{positioning}
 
+\AtBeginDocument{%
+  \@ifpackageloaded{babel}{%
+    \let\xCJtikz@tikzpicture\tikzpicture
+    \def\tikzpicture{%
+      \iflanguage{french}{%
+        \shorthandoff{:;?!}}{}%
+      \xCJtikz@tikzpicture}%
+    \let\xCJtikz@tikzexternal@tikzpicture@replacement%
+        \tikzexternal@tikzpicture@replacement
+    \def\tikzexternal@tikzpicture@replacement{%
+      \iflanguage{french}{%
+        \shorthandoff{:;?!}}{}%
+      \xCJtikz@tikzexternal@tikzpicture@replacement}}{}}
+
+\pgfplotsset{compat=newest}
+
+
+
 \ifbeamerarticle
 \RequirePackage[frenchstyle,narrowiints,partialup,noamsmath]{kpfonts}
+% \RequirePackage[narrowiints,partialup,noamsmath]{kpfonts}
 \RequirePackage[noamsthm]{beamerarticle}
 \else
 \RequirePackage[frenchstyle,narrowiints,partialup]{kpfonts}
