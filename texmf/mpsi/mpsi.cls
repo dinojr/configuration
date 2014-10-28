@@ -416,6 +416,7 @@ de Christophe Jorssen,par Julien Cubizolles]
 \RequirePackage{psfrag}
 %\RequirePackage[\Cls@mpsi@driver]{graphicx}
 \RequirePackage{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.gif}
 
 \def\schema{\@ifnextchar [{\@ischema}{\@ischema[.45\columnwidth]}}
 

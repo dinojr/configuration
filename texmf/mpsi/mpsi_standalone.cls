@@ -32,6 +32,10 @@
 % \RequirePackage[narrowiints,partialup]{kpfonts}
 \RequirePackage[frenchstyle,narrowiints,partialup]{kpfonts}
 
+
+\RequirePackage{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.gif}
+
 \RequirePackage{mathtools}
 % pour DeclarePairedDelimiter et co.
 

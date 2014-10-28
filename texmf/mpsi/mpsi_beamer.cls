@@ -38,6 +38,9 @@
 \RequirePackage{standalone}
 \RequirePackage{animate}
 
+\RequirePackage{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.gif}
+
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %%%% Pstricks
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
