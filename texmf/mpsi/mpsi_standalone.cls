@@ -3,21 +3,23 @@
 
 \RequirePackage{xkeyval}
 
-\newif\ifpstricks
-\DeclareOptionX{pstricks}[false]{\pstrickstrue}
+\newif\ifPstricks
+\DeclareOptionX{Pstricks}[false]{\Pstrickstrue}
 
-\newif\iftikz
-\DeclareOptionX{tikz}[true]{\tikztrue}
+\newif\ifTikz
+\DeclareOptionX{Tikz}[false]{\Tikztrue}
 
-\ifpstricks
+\ifPstricks
    \PassOptionsToClass{pspicture=true}{standalone}
-   \else \tikztrue
+   \Tikzfalse
+   \else \PassOptionsToClass{Tikz=true}{standalone}
+         \Tikztrue
 \fi
-\iftikz
-   \PassOptionsToClass{tikz=true}{standalone}
-\fi
+% \iftikz
+   
+% \fi
 
-\DeclareOptionX*{\PassOptionsToClass{\CurrentOption}{\Cls@mpsi@class}}
+\DeclareOptionX*{\PassOptionsToClass{\CurrentOption}{standalone}}
 
 \ProcessOptionsX
 
@@ -49,7 +51,7 @@
 \RequirePackage{mathtools}
 % pour DeclarePairedDelimiter et co.
 
-\iftikz
+\ifTikz
   \RequirePackage{tikz,pgfplots}
   \usetikzlibrary{calc}
   \usetikzlibrary{patterns}
@@ -63,7 +65,7 @@
   \pgfplotsset{compat=newest}
 \fi
 
-\ifpstricks
+\ifPstricks
   \RequirePackage{pstricks,pstricks-add,pst-coil}
 \fi
 
@@ -102,7 +104,7 @@
 
 \input{chimie}
 
-\iftikz
+\ifTikz
   \input{shortcut}
   \input{wilk-tikz-circuits}
 \fi
