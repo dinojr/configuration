@@ -1,17 +1,17 @@
 \NeedsTeXFormat{LaTeX2e} 
-\ProvidesClass{mpsi_standalone-pstricks}[2013/09/03 Classe perso mpsi pour fichiers pstricks standalone]
+\ProvidesClass{mpsi_standalone}[2013/09/03 Classe perso mpsi pour fichiers standalone]
 
 \RequirePackage{xkeyval}
 
 \newif\ifpstricks
 \DeclareOptionX{pstricks}[false]{\pstrickstrue}
 
-
 \newif\iftikz
 \DeclareOptionX{tikz}[true]{\tikztrue}
 
 \ifpstricks
    \PassOptionsToClass{pspicture=true}{standalone}
+   \else \tikztrue
 \fi
 \iftikz
    \PassOptionsToClass{tikz=true}{standalone}
