@@ -1,15 +1,28 @@
 \NeedsTeXFormat{LaTeX2e} 
-\ProvidesClass{mpsi_standalone}[2013/09/03 Classe perso mpsi pour standalone]
+\ProvidesClass{mpsi_standalone-pstricks}[2013/09/03 Classe perso mpsi pour fichiers pstricks standalone]
 
-% pour un passage à LuaTeX, il faudra revoir les options concernan
-% l'encodage et le choix des polices
+\RequirePackage{xkeyval}
 
-% rajouter xcolor=pst dans les options de LoadClass pour faire du
-% pstricks ainsi que dvips (pour passer l'option à hyperref)
+\newif\ifpstricks
+\DeclareOptionX{pstricks}[false]{\pstrickstrue}
 
-\LoadClass[tikz,crop=true]{standalone}
-% Les options suivantes font planter animate
-% \LoadClass[tikz,crop=true]{standalone}
+
+\newif\iftikz
+\DeclareOptionX{tikz}[true]{\tikztrue}
+
+\ifpstricks
+   \PassOptionsToClass{pspicture=true}{standalone}
+\fi
+\iftikz
+   \PassOptionsToClass{tikz=true}{standalone}
+\fi
+
+\DeclareOptionX*{\PassOptionsToClass{\CurrentOption}{\Cls@mpsi@class}}
+
+\ProcessOptionsX
+
+\LoadClass[crop=true]{standalone}
+
 
 \RequirePackage[utf8]{inputenc}
 % utf8x plutôt que utf8 pour pouvoir taper du grec directement
@@ -18,9 +31,6 @@
 \RequirePackage[T1]{fontenc}
 
 \RequirePackage{etex}
-
-% \RequirePackage{pstricks}
-% \RequirePackage{pstricks,pstricks-add,pst-coil}
 
 % Option dangereuse, trop de code tapé sans algebraic
 %\psset{algebraic=true}
@@ -39,17 +49,23 @@
 \RequirePackage{mathtools}
 % pour DeclarePairedDelimiter et co.
 
-\RequirePackage{tikz,pgfplots}
-\usetikzlibrary{calc}
-\usetikzlibrary{patterns}
-\usetikzlibrary{intersections}
-\usetikzlibrary{decorations.markings}
-\usetikzlibrary{decorations.pathreplacing}
-\usetikzlibrary{arrows}
-\usetikzlibrary{arrows.meta}
-\usetikzlibrary{positioning}
+\iftikz
+  \RequirePackage{tikz,pgfplots}
+  \usetikzlibrary{calc}
+  \usetikzlibrary{patterns}
+  \usetikzlibrary{intersections}
+  \usetikzlibrary{decorations.markings}
+  \usetikzlibrary{decorations.pathreplacing}
+  \usetikzlibrary{arrows}
+  \usetikzlibrary{arrows.meta}
+  \usetikzlibrary{positioning}
+  
+  \pgfplotsset{compat=newest}
+\fi
 
-\pgfplotsset{compat=newest}
+\ifpstricks
+  \RequirePackage{pstricks,pstricks-add,pst-coil}
+\fi
 
 \AtBeginDocument{%
   \@ifpackageloaded{babel}{%
@@ -84,7 +100,10 @@
 
 \RequirePackage{esvect,esdiff}
 
-\input{shortcut}
 \input{chimie}
-\input{wilk-tikz-circuits}
+
+\iftikz
+  \input{shortcut}
+  \input{wilk-tikz-circuits}
+\fi
 \endinput
