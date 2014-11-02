@@ -1,8 +1,8 @@
 ;; ~/emacs.d/JCorg.el -*- mode: lisp-*-
 
-;; dans melpa désormais
-;; (add-to-list 'load-path "~/info/emacs/org-mode/lisp")
-;; (add-to-list 'load-path "~/info/emacs/org-mode/contrib/lisp")
+
+(add-to-list 'load-path "~/info/emacs/org-mode/lisp")
+(add-to-list 'load-path "~/info/emacs/org-mode/contrib/lisp")
 
 (require 'cl)
 (require 'org)
