@@ -30,8 +30,8 @@
 (add-hook 'dired-mode-hook 'turn-on-gnus-dired-mode)
 
 ; À mettre dans cet ordre pour éviter un message d'erreur
-;; (setq gnus-registry-install t)
-;; (require 'gnus-registry)
+(setq gnus-registry-install t)
+(require 'gnus-registry)
 
 ;; (setq-default
 ;;  spam-log-to-registry t
@@ -86,6 +86,7 @@
 (setq gnus-group-line-format "%M%S%p%P%5y:%B%(%G%)%O\n")
 
 (setq nnimap-authinfo-file "~/.authinfo")
+
 (setq gnus-select-method 
 	'(nnml "local"))
 
