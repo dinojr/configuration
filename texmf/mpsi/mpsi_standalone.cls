@@ -12,7 +12,7 @@
 \ifPstricks
    \PassOptionsToClass{pspicture=true}{standalone}
    \Tikzfalse
-   \else \PassOptionsToClass{Tikz=true}{standalone}
+   \else \PassOptionsToClass{tikz=true}{standalone}
          \Tikztrue
 \fi
 % \iftikz
