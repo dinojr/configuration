@@ -69,7 +69,7 @@
            :base-directory "./"
            :publishing-directory "./"
            :preparation-function jc-org-latex-notes-preparation
-           :publishing-function org-beamer-publish-to-latex
+           :publishing-function org-beamer-publish-to-pdf
            :exclude ".*"
            :latex-class "mpsi-beamerarticle-eleves"
            :include ("$4")
@@ -82,7 +82,7 @@
 #+LATEX_HEADER_EXTRA: \RequirePackage{multimedia}
 #+LATEX_HEADER_EXTRA: \institute{Lycée Louis le Grand}
 
-#+LATEX_HEADER_EXTRA: \graphicspath{{/home/wilk/enseignement/doc_cours/thermodynamique/}{/home/wilk/enseignement/schemas/$3/}}
+#+LATEX_HEADER_EXTRA: \graphicspath{{/home/wilk/enseignement/doc_cours/$3/}{/home/wilk/enseignement/schemas/$3/}}
 # LATEX_HEADER_EXTRA: \usepackage{pstricks,pstricks-add,auto-pst-pdf}
 # TAGS: eleves
 
