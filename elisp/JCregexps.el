@@ -20,6 +20,19 @@
   (jc-replace-regexp-in-region Begin End "\\\\\\(alert\\|emph\\){\\(.+?\\)}" "*\\2*")
   )
 
+(defun jc-unit-to-si (Begin End)
+  "Replace \\unit[1234]{unite} by \\SI{1234}{\\unite}"
+  (interactive "r")
+  (jc-replace-regexp-in-region Begin End "\\\\unit\\[\\([[:ascii:]]+?\\)\\]{\\([[:ascii:]]+?\\)}" "\\\\SI{\\1}{\\\\\\2\\?}")
+  )
+
+
+(defun jc-alert-or-emph-to-stars (Begin End)
+  "Replace \\alert{toto} or \\emph{toto} by *toto*"
+  (interactive "r")
+  (jc-replace-regexp-in-region Begin End "\\\\\\(alert\\|emph\\){\\(.+?\\)}" "*\\2*")
+  )
+
 (defun jc-item-to-plus (Begin End)
   "Replace \\item by +"
   (interactive "r")
@@ -64,3 +77,4 @@
 (define-key jc-regexps (kbd "b") 'jc-block-to-heading)
 (define-key jc-regexps (kbd "o") 'jc-only-to-heading)
 (define-key jc-regexps (kbd "i") 'jc-item-to-plus)
+(define-key jc-regexps (kbd "s") 'jc-unit-to-si)
