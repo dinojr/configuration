@@ -78,3 +78,31 @@
 (define-key jc-regexps (kbd "o") 'jc-only-to-heading)
 (define-key jc-regexps (kbd "i") 'jc-item-to-plus)
 (define-key jc-regexps (kbd "s") 'jc-unit-to-si)
+
+
+;; Replacement without prompt
+;; (defun test_gen (begin end from to)
+;;   (save-excursion
+;;     (save-restriction
+;;       (let (deactivate-mark)
+;; 	(narrow-to-region begin end)
+;; 	(goto-char (point-min))
+;; 	(while  (re-search-forward from end t)
+;; 	  (replace-match to)))
+;;       )))
+
+;; Replacement with prompt but the excursion is messed up
+;; (defun test_gen (begin end from to)
+;;   (save-excursion
+;;     (save-restriction
+;;       (let (deactivate-mark)
+;; 	(narrow-to-region begin end)
+;; 	(goto-char (point-min))
+;; 	(while  (re-search-forward from end t)
+;; 	  (replace-match-maybe-edit to t nil nil (match-data) nil)))
+;;       )))
+
+;; (defun test_alert (begin end)
+;;   (interactive "r")
+;;   (test_gen begin end "\\\\\\(alert\\|emph\\){\\(.+?\\)}" "*\\2*")
+;;   )
