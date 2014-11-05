@@ -1,44 +1,66 @@
 ;; ~/.emacs.d/JCregexps.el -*- mode: lisp-*-
 
-(defun jc-alert-or-emph-to-stars ()
+(defun jc-replace-regexp-in-region (Begin End from to)
+  "Replace from by to in the selected region"
+  ;; (interactive "r")
+  (save-excursion
+    (let (deactivate-mark)
+      (query-replace-regexp from to nil Begin End)))
+  )
+
+(defun jc-dollar-to-paren (Begin End)
+  "Replace $toto$ by \\(toto\\) in selected region"
+  (interactive "r")
+  (jc-replace-regexp-in-region Begin End "\\$\\([\n\t [:nonascii:] [:ascii:]]+?\\)\\$" "\\\\\(\\1\\\\\)")
+  )
+
+(defun jc-alert-or-emph-to-stars (Begin End)
   "Replace \\alert{toto} or \\emph{toto} by *toto*"
-  (interactive)
-  (query-replace-regexp "\\\\\\(alert\\|emph\\){\\(.+?\\)}" "*\\2*")
+  (interactive "r")
+  (jc-replace-regexp-in-region Begin End "\\\\\\(alert\\|emph\\){\\(.+?\\)}" "*\\2*")
   )
 
-(defun jc-item-to-plus ()
+(defun jc-unit-to-si (Begin End)
+  "Replace \\unit[1234]{unite} by \\SI{1234}{\\unite}"
+  (interactive "r")
+  (jc-replace-regexp-in-region Begin End "\\\\unit\\[\\([[:ascii:]]+?\\)\\]{\\([[:ascii:]]+?\\)}" "\\\\SI{\\1}{\\\\\\2\\?}")
+  )
+
+
+(defun jc-alert-or-emph-to-stars (Begin End)
+  "Replace \\alert{toto} or \\emph{toto} by *toto*"
+  (interactive "r")
+  (jc-replace-regexp-in-region Begin End "\\\\\\(alert\\|emph\\){\\(.+?\\)}" "*\\2*")
+  )
+
+(defun jc-item-to-plus (Begin End)
   "Replace \\item by +"
-  (interactive)
-  (query-replace-regexp "\\\\item" "+")
+  (interactive "r")
+  (jc-replace-regexp-in-region Begin End "\\\\item\\(\\[\\([[:ascii:]]*\\)\\]\\)?" "+")
+  ;; (jc-replace-regexp-in-region Begin End "\\\\item\\(\\[\\([[:ascii:]]*\\)\\]\\)?" (if (equal \2 nil) "+" (concat "+ " \2 " ::")))
   )
 
-(defun jc-block-to-heading ()
+(defun jc-block-to-heading (Begin End)
   "Replace \\begin{block}toto\\end{block} by toto"
-  (interactive)
+  (interactive "r")
   (query-replace-regexp "\\\\begin{block}{\\(.*?\\)}\\([\\ \n\t [:nonascii:] [:ascii:]]*?\\)\\\\end{block}" "* \\1\n\\2")
   )
 
-(defun jc-block-to-consequence ()
-  "Replace \\begin{block}<something>{Titre}toto\\end{block} by \\begin{consequence}[Titre]toto\\end{consequence}"
-  (interactive)
-  (query-replace-regexp "\\\\begin{block}\\(<.*?>\\)?{\\(.*?\\)}\\([\\ \n\t [:nonascii:] [:ascii:]]*?\\)\\\\end{block}" "\\\\begin{consequence}\[\\2\]\\3\n\\\\end{consequence}")
+(defun jc-block-to-consequence (Begin End)
+  "Replace \\begin{block}<something>{Titre}toto\\end{block} by \\begin{Consequence}[Titre]toto\\end{Consequence}"
+  (interactive "r")
+  (jc-replace-regexp-in-region Begin End "\\\\begin{block}\\(<.*?>\\)?{\\(.*?\\)}\\([\\ \n\t [:nonascii:] [:ascii:]]*?\\)\\\\end{block}" "\\\\begin{consequence}\[\\2\]\\3\n\\\\end{consequence}")
   )
 
-(defun jc-dollar-to-paren ()
-  "Replace $toto$ by \\(toto\\)"
-  (interactive)
-  (query-replace-regexp "\\$\\([\n\t [:nonascii:] [:ascii:]]+?\\)\\$" "\\\\\(\\1\\\\\)")
-  )
-
-(defun jc-only-to-heading ()
+(defun jc-only-to-heading (Begin End)
   "Replace \\only<act>{toto} by 
      * Titre
        :PROPERTIES:
        :BEAMER_env: action
        :BEAMER_ACT: only@act
        :END:"
-  (interactive)
-  (query-replace-regexp "\\\\only<\\(.*?\\)>{\\([ \n \t [:ascii:] [:nonascii:]]*\\)}" "* \?\n\t:PROPERTIES:\n\t:BEAMER_env: action\n\t:BEAMER_ACT: only@\\1\n\t:END:\n\n\t\\2")
+  (interactive "r")
+  (jc-replace-regexp-in-region Begin End "\\\\only<\\(.*?\\)>{\\([ \n \t [:ascii:] [:nonascii:]]*\\)}" "* \?\n\t:PROPERTIES:\n\t:BEAMER_env: action\n\t:BEAMER_ACT: only@\\1\n\t:END:\n\n\t\\2")
   )
 
 (defun jc-do-all-regexps ()
@@ -55,3 +77,32 @@
 (define-key jc-regexps (kbd "b") 'jc-block-to-heading)
 (define-key jc-regexps (kbd "o") 'jc-only-to-heading)
 (define-key jc-regexps (kbd "i") 'jc-item-to-plus)
+(define-key jc-regexps (kbd "s") 'jc-unit-to-si)
+
+
+;; Replacement without prompt
+;; (defun test_gen (begin end from to)
+;;   (save-excursion
+;;     (save-restriction
+;;       (let (deactivate-mark)
+;; 	(narrow-to-region begin end)
+;; 	(goto-char (point-min))
+;; 	(while  (re-search-forward from end t)
+;; 	  (replace-match to)))
+;;       )))
+
+;; Replacement with prompt but the excursion is messed up
+;; (defun test_gen (begin end from to)
+;;   (save-excursion
+;;     (save-restriction
+;;       (let (deactivate-mark)
+;; 	(narrow-to-region begin end)
+;; 	(goto-char (point-min))
+;; 	(while  (re-search-forward from end t)
+;; 	  (replace-match-maybe-edit to t nil nil (match-data) nil)))
+;;       )))
+
+;; (defun test_alert (begin end)
+;;   (interactive "r")
+;;   (test_gen begin end "\\\\\\(alert\\|emph\\){\\(.+?\\)}" "*\\2*")
+;;   )
