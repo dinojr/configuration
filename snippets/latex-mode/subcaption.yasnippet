@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: subcaption
+# key: subcap
+# --
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{.45\columnwidth}
+    \includegraphics[width=\linewidth]{$1}
+    \subcaption{$2\label{subfig:$3}}
+  \end{subfigure}
+  \caption{$4.\label{fig:$5}}
+\end{figure}
+$0
