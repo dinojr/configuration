@@ -7,17 +7,18 @@
 \DeclareOptionX{Pstricks}[false]{\Pstrickstrue}
 
 \newif\ifTikz
-\DeclareOptionX{Tikz}[false]{\Tikztrue}
+\DeclareOptionX{Tikz}[true]{\Tikztrue}
 
 \ifPstricks
    \PassOptionsToClass{pspicture=true}{standalone}
    \Tikzfalse
-   \else \PassOptionsToClass{tikz=true}{standalone}
-         \Tikztrue
 \fi
-% \iftikz
-   
-% \fi
+
+\ifTikz
+   \PassOptionsToClass{tikz=true}{standalone}
+\fi
+
+
 
 \DeclareOptionX*{\PassOptionsToClass{\CurrentOption}{standalone}}
 
