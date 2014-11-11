@@ -360,7 +360,7 @@
 \surroundwithmdframed[style=mpsiframe]{theorem}
 
 \newtheorem*{Loi}{Loi}
-\surroundwithmdframed[style=mpsiframe]{Theoreme}
+\surroundwithmdframed[style=mpsiframe]{Loi}
 % for backward-compatibility
 \surroundwithmdframed[style=mpsiframe]{loi}
 
