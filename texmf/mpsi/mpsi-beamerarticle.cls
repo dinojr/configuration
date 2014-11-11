@@ -300,7 +300,7 @@
 % \RequirePackage[frenchstyle,narrowiints,partialup,noamsmath]{kpfonts}
 
 \RequirePackage[]{beamerarticle}
-
+\RequirePackage{beamerthemempsi}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Environnements
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
