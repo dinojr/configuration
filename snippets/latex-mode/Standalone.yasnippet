@@ -2,11 +2,18 @@
 # name: Standalone
 # key: standalone
 # --
-\documentclass{standalone}
+\documentclass${1:[$2]}{mpsi_standalone}
+${5:
+\input{vuibert-compatibilite}
+\input{commandes-auteur-figures}
+\input{commandes-auteur-pgfplots-base.tex}
+\input{commandes-auteur-pgfplots-color}
+\input{commandes-auteur-tikz-circuits}
+}
 \begin{document}
-\begin{tikzpicture}[style courant]
+\begin{$3}${4:[style courant]}
 $0
-\end{tikzpicture}
+\end{$3}
 \end{document}
 % Local Variables:
 % coding: utf-8
