@@ -292,17 +292,19 @@
 
 ;; Posting charsets, 
 
-(setq mm-coding-system-priorities '(utf8))
+;; (setq message-default-charset 'iso-8859-1) ;; Not sure if this is used
+(setq mm-coding-system-priorities '(utf-8 iso-8859-1))
 
 (add-to-list 'gnus-newsgroup-variables 'mm-coding-system-priorities)
 (setq gnus-parameters
       (nconc
        ;; Some charsets are just examples!
        '(("^proxad\\." ;; Free n'accepte pas l'utf-8
-          (mm-coding-system-priorities '(iso-8859-1 utf-8)))
+          (mm-coding-system-priorities '(iso-8859-1)))
 	 ;; (".*" (mm-coding-system-priorities '(utf-8)))
 	 )
        gnus-parameters))
+
 ;; mm
 ; Default 
 (setq mm-text-html-renderer 'shr)
