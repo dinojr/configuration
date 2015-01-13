@@ -433,7 +433,7 @@
 ;; (setq spam-autodetect-recheck-messages t)
 
 (setq spam-split-group "Junk") ;unqualified group name
-(setq spam-junk-mailgroups (quote ("nnml+local:junk" "nnimap+free:Junk")))
+(setq spam-junk-mailgroups (quote ("nnml+local:junk" "nnimap+free:Junk" "nnimap+gmail:[Gmail]/Spam")))
 
 (setq  nnmail-split-lowercase-expanded t)
 
