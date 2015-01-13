@@ -122,7 +122,7 @@
 		;;   ("gnus-warning" "duplicat\\(e\\|ion\\) of message" "duplicate")
 		;;   ))
 		)
-	;; (nntp "news.free.fr")
+	(nntp "news.free.fr")
 	(nntp "news.gwene.org"
 	      (nnir-search-engine gmane))
 	(nntp "news.gmane.org"
@@ -291,15 +291,19 @@
 
 
 ;; Posting charsets, 
+
+;; (setq message-default-charset 'iso-8859-1) ;; Not sure if this is used
+(setq mm-coding-system-priorities '(utf-8 iso-8859-1))
+
 (add-to-list 'gnus-newsgroup-variables 'mm-coding-system-priorities)
 (setq gnus-parameters
       (nconc
        ;; Some charsets are just examples!
        '(("^proxad\\." ;; Free n'accepte pas l'utf-8
-          (mm-coding-system-priorities '(iso-8859-1 utf-8)))
-	 (".*" (mm-coding-system-priorities '(utf-8))))
+          (mm-coding-system-priorities '(iso-8859-1)))
+	 ;; (".*" (mm-coding-system-priorities '(utf-8)))
+	 )
        gnus-parameters))
-
 
 ;; mm
 ; Default 
@@ -429,7 +433,7 @@
 ;; (setq spam-autodetect-recheck-messages t)
 
 (setq spam-split-group "Junk") ;unqualified group name
-(setq spam-junk-mailgroups (quote ("nnml+local:junk" "nnimap+free:Junk")))
+(setq spam-junk-mailgroups (quote ("nnml+local:junk" "nnimap+free:Junk" "nnimap+gmail:[Gmail]/Spam")))
 
 (setq  nnmail-split-lowercase-expanded t)
 

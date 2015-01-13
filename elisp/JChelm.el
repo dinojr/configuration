@@ -1,5 +1,4 @@
 ;;~/.emacs.d/JChelm.el -*- mode: lisp-*-
-(require 'helm)
 
 ;; must set before helm-config,  otherwise helm use default
 ;; prefix "C-x c", which is inconvenient because you can

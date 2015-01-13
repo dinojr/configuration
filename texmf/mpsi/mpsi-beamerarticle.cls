@@ -316,10 +316,10 @@
   {\rmfamily}%         Body font
   {}%         Indent amount (empty = no indent, \parindent = para indent)
   {\sffamily\upshape\bfseries}% Thm head font
-  {:}%        Punctuation after thm head
-  {\newline}%     Space after thm head: " " = normal interword space;
+  {}%        Punctuation after thm head
+  { }%     Space after thm head: " " = normal interword space;
            % \newline = linebreak
-  {\thmname{#3}}%         Thm head spec (can be left empty, meaning `normal')
+  {\rlap{\vbox{\hbox{\thmname{#3}}\hbox{\strut}}}}%         Thm head spec (can be left empty, meaning `normal')
 \theoremstyle{breaknoname}
 \newtheorem*{Consequence}{\empty}
 \surroundwithmdframed[style=mpsiframe]{Consequence}
@@ -332,9 +332,9 @@
   {}%         Indent amount (empty = no indent, \parindent = para indent)
   {\sffamily\upshape\bfseries}% Thm head font
   {}%        Punctuation after thm head
-  {\newline}%     Space after thm head: " " = normal interword space;
+  { }%     Space after thm head: " " = normal interword space;
            % \newline = linebreak
-  {\thmname{#1}: \thmname{#3}}%         Thm head spec (can be left empty, meaning `normal')
+  {\rlap{\vbox{\hbox{\thmname{#1}: \thmname{#3}}\hbox{\strut}}}}%         Thm head spec (can be left empty, meaning `normal')
 \theoremstyle{breaknonamenotitle}
 
 \newtheorem*{Exemple}{Exemple}
@@ -350,9 +350,9 @@
   {}%         Indent amount (empty = no indent, \parindent = para indent)
   {\sffamily\upshape\bfseries}% Thm head font
   {}%        Punctuation after thm head
-  {\newline}%     Space after thm head: " " = normal interword space;
+  { }%     Space after thm head: " " = normal interword space;
         %       \newline = linebreak
-  {\thmname{#1} : \itshape #3}%         Thm head spec (can be left empty, meaning `normal')
+  {\rlap{\vbox{\hbox{\thmname{#1} : \itshape #3}\hbox{\strut}}}}%         Thm head spec (can be left empty, meaning `normal')
 \theoremstyle{break}
 
 \newtheorem*{Theoreme}{Théorème}
