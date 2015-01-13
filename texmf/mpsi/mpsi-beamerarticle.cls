@@ -318,7 +318,7 @@
   {}%        Punctuation after thm head
   { }%     Space after thm head: " " = normal interword space;
            % \newline = linebreak
-  {\rlap{\vbox{\hbox{\thmname{#3}:}\hbox{\strut}}}}%         Thm head spec (can be left empty, meaning `normal')
+  {\rlap{\vbox{\hbox{\thmname{#3}}\hbox{\strut}}}}%         Thm head spec (can be left empty, meaning `normal')
 \theoremstyle{breaknoname}
 \newtheorem*{Consequence}{\empty}
 \surroundwithmdframed[style=mpsiframe]{Consequence}
