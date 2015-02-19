@@ -41,7 +41,8 @@
     (:foreground default :background default :scale 2.0 :html-foreground "Black" :html-background "Transparent" :html-scale 1.0 :matchers
 		 ("begin" "$1" "$" "$$" "\\(" "\\["))))
  '(reftex-toc-include-labels t)
- '(reftex-toc-split-windows-horizontally t))
+ '(reftex-toc-split-windows-horizontally t)
+ )
 
 ;;--------------------
 ;; Customize end
@@ -67,7 +68,6 @@
 (load "JClatex.el")
 (load "JCgit.el")
 ;; (load "JCediff.el")
-;; (load "JCmingus.el")
 ;; (load "JCbitlbee.el")
 (load "JCgnus.el")
 (load "JCbbdb.el")
@@ -76,7 +76,7 @@
 ;; (load "JCworkgroup.el")
 (load "JCworkgroups2.el")
 ;; (load "JCwww.el")
-;; (load "JCregexps.el")
+(load "JCregexps.el")
 ;; (load "JCcalc.el")
 ;; (load "JCasymptote.el")
 

@@ -201,9 +201,9 @@
 
 (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
 
-(add-hook 'LaTeX-mode-hook
-     	  (lambda () (set (make-variable-buffer-local 'TeX-electric-math)
-     			  (cons "\\(" "\\)"))))
+;; (add-hook 'LaTeX-mode-hook
+;;      	  (lambda () (set (make-variable-buffer-local 'TeX-electric-math)
+;;      			  (cons "\\(" "\\)"))))
 (add-hook 'LaTeX-mode-hook 'TeX-global-PDF-mode)
 
 ;; Raccourcis
