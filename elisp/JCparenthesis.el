@@ -32,7 +32,7 @@
 
 ;; ;; À voir à l'usage
 ;; (setq sp-autoinsert-if-followed-by-same 0)
-(require 'smartparens)
+;; (require 'smartparens)
 (require 'smartparens-config)
 
 
@@ -45,11 +45,11 @@
   ;; math modes, yay.  The :actions are provided automatically if
   ;; these pairs do not have global definition.
   ;; (sp-local-pair "$" "$")
-  (sp-local-pair "\\[" "\\]")
-  (sp-local-pair "\\left(" "\\right)")
-  (sp-local-pair "\\left{" "\\right}")
-  (sp-local-pair "\\left[" "\\right]")
-  (sp-local-pair "\\]" "\\[")
+  ;; (sp-local-pair "\\[" "\\]")
+  ;; (sp-local-pair "\\left(" "\\right)")
+  ;; (sp-local-pair "\\left{" "\\right}")
+  ;; (sp-local-pair "\\left[" "\\right]")
+  ;; (sp-local-pair "\\]" "\\[")
   ;; (sp-local-tag "\\b" "\\begin{_}" "\\end{_}")
   (sp-local-tag "$" "\\(" "\\)") ;; ne marche pas
   )
