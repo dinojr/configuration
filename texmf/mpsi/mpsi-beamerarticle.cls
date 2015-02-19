@@ -390,6 +390,7 @@
 \RequirePackage[frenchstyle,narrowiints,partialup]{kpfonts}
 \RequirePackage{skull}
 \input{shortcut}
+\input{chimie}
 \renewenvironment{columns}{\relax}{\relax}
 \renewenvironment{column}[1]{\begin{minipage}{#1}}{\end{minipage}}
 
