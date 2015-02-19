@@ -49,7 +49,7 @@
 (defun jc-block-to-consequence (Begin End)
   "Replace \\begin{block}<something>{Titre}toto\\end{block} by \\begin{Consequence}[Titre]toto\\end{Consequence}"
   (interactive "r")
-  (jc-replace-regexp-in-region Begin End "\\\\begin{block}\\(<.*?>\\)?{\\(.*?\\)}\\([\\ \n\t [:nonascii:] [:ascii:]]*?\\)\\\\end{block}" "\\\\begin{consequence}\[\\2\]\\3\n\\\\end{consequence}")
+  (jc-replace-regexp-in-region Begin End "\\\\begin{block}\\(<.*?>\\)?{\\(.*?\\)}\\([\\ \n\t [:nonascii:] [:ascii:]]*?\\)\\\\end{block}" "\\\\begin{Consequence}\[\\2\]\\3\n\\\\end{Consequence}")
   )
 
 (defun jc-only-to-heading (Begin End)
@@ -75,6 +75,7 @@
 (define-key jc-regexps (kbd "a") 'jc-alert-or-emph-to-stars)
 (define-key jc-regexps (kbd "d") 'jc-dollar-to-paren)
 (define-key jc-regexps (kbd "b") 'jc-block-to-heading)
+(define-key jc-regexps (kbd "k") 'jc-block-to-consequence)
 (define-key jc-regexps (kbd "o") 'jc-only-to-heading)
 (define-key jc-regexps (kbd "i") 'jc-item-to-plus)
 (define-key jc-regexps (kbd "s") 'jc-unit-to-si)
