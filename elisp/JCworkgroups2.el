@@ -4,6 +4,8 @@
 
 (setq wg-morph-on nil)
 
+(setq wg-emacs-exit-save-behavior 'ask)
+
 ;; (setq wg-morph-vsteps 3)
 ;; (setq wg-morph-hsteps 3)
 
