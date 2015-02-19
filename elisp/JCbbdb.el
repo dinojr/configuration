@@ -20,3 +20,35 @@
 (setq bbdb-mua-update-interactive-p '(query . create))
 
 ;; Raccourcis
+
+(define-key bbdb-mode-map "r" 'bbdb-merge-records)
+
+
+;; (defun remove-field-value (field value)
+;;   "From every record in the active bbdb database, remove the notes field whose
+;;   name is in passed in variable"
+;;   (message "Field: %s; Value: %s" field value)
+;;   (mapcar
+;;    (lambda (rec)
+;;      (let ((val (bbdb-record-note rec field)))
+;;        (if (string= value val)
+;; 	   (progn
+;; 	     (bbdb-record-set-note rec field nil)
+;; 	     (bbdb-change-record rec)
+;; 	     (bbdb-redisplay-record rec)))))
+;;    (bbdb-records)))
+
+;; (defun remove-field (field)
+;;   "From every record in the active bbdb database, remove the notes field whose
+;;   name is in passed in variable"
+;;   (message "Field: %s" field)
+;;   (mapcar
+;;    (lambda (rec)
+;;      (let ((val (bbdb-record-note rec field)))
+;; 	   (progn
+;; 	     (bbdb-record-set-note rec field nil)
+;; 	     (bbdb-change-record rec)
+;; 	     (bbdb-redisplay-record rec))))
+;;    (bbdb-records)))
+
+;(remove-field-value 'folder "default")
