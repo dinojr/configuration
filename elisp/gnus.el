@@ -28,6 +28,7 @@
 
 ;Dired
 (add-hook 'dired-mode-hook 'turn-on-gnus-dired-mode)
+(add-hook 'message-mode-hook 'turn-on-gnus-dired-mode)
 
 ; À mettre dans cet ordre pour éviter un message d'erreur
 (setq gnus-registry-install t)
@@ -122,7 +123,7 @@
 		;;   ("gnus-warning" "duplicat\\(e\\|ion\\) of message" "duplicate")
 		;;   ))
 		)
-	(nntp "news.free.fr")
+	;;(nntp "news.free.fr")
 	(nntp "news.gwene.org"
 	      (nnir-search-engine gmane))
 	(nntp "news.gmane.org"
