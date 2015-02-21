@@ -14,22 +14,37 @@
   (let ((fill-column (point-max)))
     (fill-paragraph nil)))
 
-(defun jc-indent-and-insert-tab ()
-  (interactive)
-  (beginning-of-line-text)
-  (delete-horizontal-space)
-  (indent-according-to-mode)
-  (insert-tab)
+;; (defun jc-indent-and-insert-tab ()
+;;   (interactive)
+;;   (beginning-of-line-text)
+;;   (delete-horizontal-space)
+;;   (indent-according-to-mode)
+;;   (insert-tab)
+;;   )
+
+(defun jc-math-mode-indent ()
+  "Force indentation in math mode. "
+  (interactive "p")
+  (cond
+   ((equal current-prefix-arg nil)
+    (indent-relative))
+   )
+  ;; (delete-horizontal-space)
+  ;; (beginning-of-line-text)
+  ;; (indent-relative)
   )
 
+
+
 (defun jc-newline-and-indent (&optional arg)
-  (interactive "*P")
+  (interactive "P")
   (delete-horizontal-space)
   (newline)
-  (indent-according-to-mode)
+  (indent-relative)
   (if arg
-      (insert-tab) ()
-      ))
+      (indent-relative) ()
+      )
+  )
 
 (setq search-invisible t)
 
