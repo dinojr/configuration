@@ -35,6 +35,7 @@ path = wilk/pim/passwds.revelation
 path = wilk/.bbdb
 path = wilk/.asynk
 path = wilk/diary
+path = wilk/.emacs_workgroups
 #path = usr/local/texlive/2011/texmf.cnf
 #path = usr/local/texlive/2011/texmf/web2c/texmf.cnf
 
