@@ -114,9 +114,12 @@
 (add-to-list 'load-path "/home/wilk/info/emacs/expand-region.el")
 (require 'expand-region)
 
+(require 'align)
+
 ;; Raccourcis
 (global-set-key "\C-a" 'My-smart-home)
 (global-set-key "\C-e" 'My-smart-end)
 (define-key global-map "\M-Q" 'unfill-paragraph)
 (define-key global-map (kbd "C-c j") 'ace-jump-mode)
 (global-set-key (kbd "C-=") 'er/expand-region)
+(global-set-key (kbd "C-&") 'align-current)
