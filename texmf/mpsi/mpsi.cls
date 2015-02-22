@@ -331,7 +331,7 @@ de Christophe Jorssen,par Julien Cubizolles]
   \vskip 1.5em
 }
 
-\renewcommand{\labelitemi}{$\bullet$}
+
 \renewcommand{\emph}{\textbf}
 \newcommand{\AN}{\textit{Application numérique :}\xspace}
 
@@ -985,7 +985,7 @@ de Christophe Jorssen,par Julien Cubizolles]
 
 
 \RequirePackage{enumerate,enumitem,psfrag}
-
+\setitemize{label=$\bullet$}
 
 \RequirePackage[version=3]{mhchem}
 

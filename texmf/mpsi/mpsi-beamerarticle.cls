@@ -149,7 +149,6 @@
   \vskip 1.5em
 }
 
-\renewcommand{\labelitemi}{$\bullet$}
 \renewcommand{\emph}{\textbf}
 
 
@@ -248,7 +247,7 @@
 % \RequirePackage{enumerate,enumitem,psfrag}
 % Conflit entre beamerarticle, enumitem et les environments description
 \RequirePackage{enumerate,psfrag}
-
+\setitemize{label=$\bullet$}
 
 \RequirePackage[version=3]{mhchem}
 
