@@ -247,7 +247,7 @@
 % \RequirePackage{enumerate,enumitem,psfrag}
 % Conflit entre beamerarticle, enumitem et les environments description
 \RequirePackage{enumerate,psfrag}
-\setitemize{label=$\bullet$}
+% \setitemize{label=$\bullet$}
 
 \RequirePackage[version=3]{mhchem}
 
