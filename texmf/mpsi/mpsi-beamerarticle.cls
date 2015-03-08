@@ -236,6 +236,7 @@
 \RequirePackage{array,booktabs,tabularx,multicol,multirow}
 
 \RequirePackage[frenchb]{babel}
+\AtBeginDocument{\renewcommand{\labelitemi}{$\bullet$}}
 %\frenchbsetup{AutoSpacePunctuation=true}
 \RequirePackage{numprint}
 \RequirePackage{xspace} %%% pour gérer correctement les espaces
@@ -244,10 +245,11 @@
 
 
 
-% \RequirePackage{enumerate,enumitem,psfrag}
+% \RequirePackage{enumerate,enumitem}
 % Conflit entre beamerarticle, enumitem et les environments description
 \RequirePackage{enumerate,psfrag}
-% \setitemize{label=$\bullet$}
+% \setitemize{label=$\bullet$} il faut enumitem
+
 
 \RequirePackage[version=3]{mhchem}
 
@@ -394,7 +396,6 @@
 \renewenvironment{column}[1]{\begin{minipage}{#1}}{\end{minipage}}
 
 
-\AtBeginDocument{\renewcommand{\labelitemi} {$\bullet$}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Vestiges
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
