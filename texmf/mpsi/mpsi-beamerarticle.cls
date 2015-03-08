@@ -235,7 +235,7 @@
 
 \RequirePackage{array,booktabs,tabularx,multicol,multirow}
 
-\RequirePackage[frenchb]{babel}
+\RequirePackage[greek,frenchb]{babel}
 \AtBeginDocument{\renewcommand{\labelitemi}{$\bullet$}}
 %\frenchbsetup{AutoSpacePunctuation=true}
 \RequirePackage{numprint}
