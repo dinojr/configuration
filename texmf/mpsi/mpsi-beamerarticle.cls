@@ -277,7 +277,7 @@
 %%% Tikz
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\PassOptionsToPackage{override}{xcolor} % pour le chargement de xcolor par beamerarticle
+\PassOptionsToPackage{override,dvipsnames}{xcolor} % pour le chargement de xcolor par beamerarticle
 \RequirePackage{tikz,pgfplots}
 \usetikzlibrary{calc}
 \usetikzlibrary{patterns}
@@ -306,7 +306,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Environnements
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\RequirePackage[framemethod=TikZ,xcolor]{mdframed}
+% \PassOptionsToPackage{override}{xcolor}
+\RequirePackage{xcolor}
+\RequirePackage[framemethod=TikZ]{mdframed}
 \mdfdefinestyle{mpsilightframe}{nobreak,roundcorner=5pt,skipabove=\baselineskip,skipbelow=\baselineskip,outerlinewidth=1pt}
 
 \mdfdefinestyle{mpsiframe}{nobreak,roundcorner=5pt,backgroundcolor=gray!30,skipabove=\baselineskip,skipbelow=\baselineskip,outerlinewidth=2pt,backgroundcolor=gray!10}
