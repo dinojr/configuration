@@ -301,88 +301,96 @@
 
 % \RequirePackage[frenchstyle,narrowiints,partialup,noamsmath]{kpfonts}
 
-\RequirePackage[]{beamerarticle}
+\RequirePackage[noamsthm]{beamerarticle}
 \RequirePackage{beamerthemempsi}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Environnements
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \PassOptionsToPackage{override}{xcolor}
+\RequirePackage{ntheorem}
 \RequirePackage{xcolor}
 \RequirePackage[framemethod=TikZ]{mdframed}
 \mdfdefinestyle{mpsilightframe}{nobreak,roundcorner=5pt,skipabove=\baselineskip,skipbelow=\baselineskip,outerlinewidth=1pt}
 
 \mdfdefinestyle{mpsiframe}{nobreak,roundcorner=5pt,backgroundcolor=gray!30,skipabove=\baselineskip,skipbelow=\baselineskip,outerlinewidth=2pt,backgroundcolor=gray!10}
 
-\newtheoremstyle{breaknoname}% name
-  {3pt}%      Space above
-  {3pt}%      Space below
-  {\rmfamily}%         Body font
-  {}%         Indent amount (empty = no indent, \parindent = para indent)
-  {\sffamily\upshape\bfseries}% Thm head font
-  {}%        Punctuation after thm head
-  { }%     Space after thm head: " " = normal interword space;
-           % \newline = linebreak
-  {\rlap{\vbox{\hbox{\thmname{#3}}\hbox{\strut}}}}%         Thm head spec (can be left empty, meaning `normal')
-\theoremstyle{breaknoname}
-\newtheorem*{Consequence}{\empty}
+\newtheoremstyle{nonumbernonamebreak}%
+ {\item[\rlap{\vbox{\hbox{\hskip\labelsep \theorem@headerfont}\hbox{\strut}}}]}%
+ {\item[\rlap{\vbox{\hbox{\hskip\labelsep \theorem@headerfont ##3}\hbox{\strut}}}]}%
+
+\theoremstyle{nonumbernonamebreak}
+\theoremheaderfont{\sffamily\upshape\bfseries}
+\theorembodyfont{\rmfamily}
+
+\newtheorem{Consequence}{\empty}
 \surroundwithmdframed[style=mpsiframe]{Consequence}
 
+\renewenvironment<>{Consequence}
+{\begin{actionenv}#1\begin{originalConsequence}}
+{\end{originalConsequence}\end{actionenv}}
 
-\newtheoremstyle{breaknonamenotitle}% name
-  {3pt}%      Space above
-  {3pt}%      Space below
-  {\rmfamily}%         Body font
-  {}%         Indent amount (empty = no indent, \parindent = para indent)
-  {\sffamily\upshape\bfseries}% Thm head font
-  {}%        Punctuation after thm head
-  { }%     Space after thm head: " " = normal interword space;
-           % \newline = linebreak
-  {\rlap{\vbox{\hbox{\thmname{#1}: \thmname{#3}}\hbox{\strut}}}}%         Thm head spec (can be left empty, meaning `normal')
-\theoremstyle{breaknonamenotitle}
+\theoremstyle{nonumberbreak}
+\theoremheaderfont{\sffamily\upshape\bfseries}
+\theorembodyfont{\rmfamily}
 
-\newtheorem*{Exemple}{Exemple}
+\newtheorem{Exemple}{Exemple}
 \surroundwithmdframed[style=mpsilightframe]{Exemple}
+\renewenvironment<>{Exemple}
+{\begin{actionenv}#1\begin{originalExemple}}
+{\end{originalExemple}\end{actionenv}}
 
-\newtheorem*{Demonstration}{Démonstration}
+\newtheorem{Demonstration}{Démonstration}
 \surroundwithmdframed[style=mpsilightframe]{Demonstration}
+\renewenvironment<>{Demonstration}
+{\begin{actionenv}#1\begin{originalDemonstration}}
+{\end{originalDemonstration}\end{actionenv}}
 
-\newtheoremstyle{break}% name
-  {3pt}%      Space above
-  {3pt}%      Space below
-  {\rmfamily}%         Body font
-  {}%         Indent amount (empty = no indent, \parindent = para indent)
-  {\sffamily\upshape\bfseries}% Thm head font
-  {}%        Punctuation after thm head
-  { }%     Space after thm head: " " = normal interword space;
-        %       \newline = linebreak
-  {\rlap{\vbox{\hbox{\thmname{#1} : \itshape #3}\hbox{\strut}}}}%         Thm head spec (can be left empty, meaning `normal')
-\theoremstyle{break}
-
-\newtheorem*{Theoreme}{Théorème}
-\surroundwithmdframed[style=mpsiframe]{Theoreme}
-% for backward-compatibility
-\surroundwithmdframed[style=mpsiframe]{theorem}
-
-\newtheorem*{Loi}{Loi}
-\surroundwithmdframed[style=mpsiframe]{Loi}
-% for backward-compatibility
-\surroundwithmdframed[style=mpsiframe]{loi}
-
-\newtheorem*{DefiniTion}{Définition}
-
+\newtheorem{DefiniTion}{Définition}
 \surroundwithmdframed[style=mpsiframe]{DefiniTion}
 % for backward-compatibility
 \surroundwithmdframed[style=mpsiframe]{definition}
+\renewenvironment<>{DefiniTion}
+{\begin{actionenv}#1\begin{originalDefiniTion}}
+{\end{originalDefiniTion}\end{actionenv}}
+\renewenvironment<>{definition}
+{\begin{actionenv}#1\begin{originaldefinition}}
+{\end{originaldefinition}\end{actionenv}}
+
+
+\theoremheaderfont{\sffamily\itshape\bfseries}
+
+
+\newtheorem{Theoreme}{Théorème}
+\surroundwithmdframed[style=mpsiframe]{Theoreme}
+% for backward-compatibility
+\surroundwithmdframed[style=mpsiframe]{theorem}
+\renewenvironment<>{Theoreme}
+{\begin{actionenv}#1\begin{originalTheoreme}}
+{\end{originalTheoreme}\end{actionenv}}
+
+\newtheorem{Loi}{Loi}
+\surroundwithmdframed[style=mpsiframe]{Loi}
+\renewenvironment<>{Loi}
+{\begin{actionenv}#1\begin{originalLoi}}
+{\end{originalLoi}\end{actionenv}}
+
+% for backward-compatibility
+\surroundwithmdframed[style=mpsiframe]{loi}
+\renewenvironment<>{loi}
+{\begin{actionenv}#1\begin{originalloi}}
+{\end{originalloi}\end{actionenv}}
 
 
 
-\newenvironment{indispensable}{%
+\newenvironment<>{indispensable}{%
+  \begin{actionenv}#1%
    \begin{center}
      \begin{minipage}{.6\linewidth}
        \centering
        \textsf{\textbf{\Large Indispensable}}\\
      }
-     {\end{minipage}\end{center}}
+     {\end{minipage}\end{center}
+  \end{actionenv}}
 
 \surroundwithmdframed[style=mpsilightframe]{indispensable}
 
