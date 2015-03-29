@@ -344,6 +344,7 @@
       '(("action" "k" "\\begin{actionenv}%a" "\\end{actionenv}") 
 	("only" "O" "\\begin{onlyenv}%a" "\\end{onlyenv}")
 	("Definition" "D" "\\begin{DefiniTion}%a%U" "\\end{DefiniTion}")
+	("Indispensable" "I" "\\begin{indispensable}%a" "\\end{indispensable}")
 	("Consequence" "S" "\\begin{Consequence}%a%U" "\\end{Consequence}")
 	("Block" "B" "\\begin{Block}%a" "\\end{Block}")
 	("Theoreme" "T" "\\begin{Theoreme}%a%U" "\\end{Theoreme}")
