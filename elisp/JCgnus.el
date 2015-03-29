@@ -18,6 +18,13 @@
     )
   )
 
+;; Pour ne pas indenter les Topics par mégarde
+(eval-after-load "gnus-topic"
+   '(progn
+      (define-key gnus-topic-mode-map [tab] nil)
+      (define-key gnus-topic-mode-map "\C-i" nil)))
+
+
 (defun jc-jump-to-gnus ()
   (interactive)
   ;; (if (not (string= (wg-name (wg-current-workgroup 1)) "gnus")) 
