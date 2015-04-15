@@ -385,14 +385,13 @@
 \newenvironment<>{indispensable}{%
   \begin{actionenv}#1%
    \begin{center}
-     \begin{minipage}{.6\linewidth}
+     \begin{minipage}{.8\linewidth}
        \centering
        \textsf{\textbf{\Large Indispensable}}\\
-     }
-     {\end{minipage}\end{center}
-  \end{actionenv}}
+     \end{minipage}\end{center}}
+     {\end{actionenv}}
 
-\surroundwithmdframed[style=mpsilightframe]{indispensable}
+\surroundwithmdframed[style=mpsiframe]{indispensable}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Environnement - fin
