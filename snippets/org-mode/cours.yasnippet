@@ -4,7 +4,7 @@
 # --
 #+TITLE: $1
 #+AUTHOR: Julien Cubizolles
-#+DATE: $2 2014
+#+DATE: $2 2015
 #+LINK: pic file:/home/wilk/enseignement/doc_cours/$3/%s
 #+LINK: schema file:/home/wilk/enseignement/schemas/$3/%s
 # LINK: fig file:/home/wilk/enseignement/2013-2014/physique/$3/cours/figures/%s
@@ -24,25 +24,17 @@
            :publishing-function org-beamer-publish-to-latex
            :exclude ".*"
            :latex-class "mpsi_beamer"
-           :include ("$4"))
+           :include ,(list (file-name-nondirectory buffer-file-name))
+	   )
           ("beamer"
            :base-directory "./"
            :publishing-directory "./"
            :publishing-function org-beamer-publish-to-pdf
            :exclude ".*"
            :latex-class "mpsi_beamer"
-           :include ("$4")
-           :completion-function jc-org-publish-rename-beamer-pdf)
-          ("notes-legacy"
-           :base-directory "./"
-           :publishing-directory "./"
-           :publishing-function org-beamer-publish-to-pdf
-           :exclude ".*"
-           :latex-class "mpsi_beamer"
-           :include ("$4")
-           :latex-class-options "[NotesCours]"
-           :completion-function jc-org-publish-rename-notes-pdf
-           )
+           :include ,(list (file-name-nondirectory buffer-file-name))
+           :completion-function jc-org-publish-rename-beamer-pdf
+	   )
           ("notes"
            :base-directory "./"
            :publishing-directory "./"
@@ -50,20 +42,8 @@
            :publishing-function org-beamer-publish-to-latex
            :exclude ".*"
            :latex-class "mpsi-beamerarticle"
-           :include ("$4")
+           :include ,(list (file-name-nondirectory buffer-file-name))
            :completion-function jc-org-publish-rename-notes-pdf
-           )
-          ("eleves-legacy"
-           :base-directory "./"
-           :publishing-directory "./"
-           :preparation-function jc-org-latex-notes-preparation
-           :publishing-function org-latex-publish-to-pdf
-           :exclude ".*"
-           :latex-class "mpsi-eleves"
-           :include ("$4")
-           :select-tags ("eleves")
-           :headline-levels 5
-           :completion-function jc-org-publish-rename-eleves-pdf
            )
           ("eleves"
            :base-directory "./"
@@ -72,7 +52,7 @@
            :publishing-function org-beamer-publish-to-pdf
            :exclude ".*"
            :latex-class "mpsi-beamerarticle-eleves"
-           :include ("$4")
+           :include ,(list (file-name-nondirectory buffer-file-name))
            :select-tags ("eleves")
            :completion-function jc-org-publish-rename-eleves-pdf
            )	   
@@ -92,7 +72,7 @@
 #+LATEX_HEADER:\input{commandes-auteur-pgfplots-color}
 #+LATEX_HEADER:\RequirePackage{esvect}
 
-#+COLUMNS: %45ITEM %10BEAMER_env(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col) %8BEAMER_OPT(Opt)
+#+COLUMNS: %45ITEM %10BEAMER_env(Env) %25TAGS(Tags) %10BEAMER_ACT(Act) %4BEAMER_COL(Col)
 
 * À faire                                                           :B_frame:
 :PROPERTIES:
