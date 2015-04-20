@@ -100,6 +100,26 @@ the variable `gnus-move-split-methods' for finding a default target."
   (push-mark)
   (message-position-on-field "Gcc" "Bcc" "Cc" "To"))
 
+(require 'gnus-msg)
+
+(defun jc-gnus-article-header-value (header) 
+  "Get the value of HEADER for the current article." 
+  (with-current-buffer gnus-original-article-buffer 
+    (gnus-fetch-field header) ))
+
+
+(defun jc-process-sender (sender)
+  (gnus-kill "From" sender '(gnus-summary-mark-as-processable 1) t) )
+
+(defun jc-process-sender-at-point ()
+  (interactive)
+  (save-window-excursion          ; better way 
+    (gnus-summary-select-article) ; to do this?
+    (let ((sender (gnus-article-header-value "From")))
+      (process-sender sender) )))
+
+
+
 ;; Cleanup all Gnus buffers on exit
 
 (defun exit-gnus-on-exit ()
