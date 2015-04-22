@@ -1,5 +1,7 @@
 ;; ~/.gnus.el
 (require 'gnus)
+(require 'gnuslog)
+
 (setq auth-source-debug t)
 (setq debug-on-error t)
 (setq imap-log t)
@@ -112,16 +114,9 @@
 		(nnir-search-engine imap)
 		(nnimap-split-methods 'nnimap-split-fancy)
 ;		(nnimap-split-methods default)
-		;; (nnimap-nov-is-evil nil)
+
 		(nnimap-inbox "INBOX")
-		;; (nnimap-split-methods 
-		;;  (| 
-		;;   (: gnus-registry-split-fancy-with-parent)
-		;;   (: spam-split 'spam-use-bogofilter)
-		;;   (any "\\b\\(\\w+\\)@.*bretagne.*" "ml.ups.\\1")
-		;;   (any ".*ups-\\b\\(\\w+\\)@listes\\.prepas\\.org" "ml.ups.\\1")
-		;;   ("gnus-warning" "duplicat\\(e\\|ion\\) of message" "duplicate")
-		;;   ))
+
 		)
 	;;(nntp "news.free.fr")
 	(nntp "news.gwene.org"
@@ -170,48 +165,35 @@
 
 ;; Splitting
 (setq nnmail-split-methods 'nnmail-split-fancy)
-(setq nnmail-split-fancy 
-      `(|
-	;; (: gnus-registry-split-fancy-with-parent)
-	("from" "louislegrand\\|LLG\\|\\(m\\|M\\)ansuy" "LLG")
-	("subject" "physique2013" "physique2013")
-	("subject" "structures2013" "structures2013")
-	("from" "\\(b\\|B\\)lotin\\|\\(c\\|C\\)ellier\\|\\(d\\|D\\)umax" "famille")
-	(: spam-split 'spam-use-bogofilter)
-	;; (any "\\b\\(\\w+\\)@.*bretagne.*" "ml.ups.\\1")
-	;; (any ".*ups-\\b\\(\\w+\\)@listes\\.prepas\\.org" "ml.ups.\\1")
-	("gnus-warning" "duplicat\\(e\\|ion\\) of message" "duplicate")
-	;; all the rest
-	;; "Default"
-	"General"
-	))
+;; (setq nnmail-split-fancy 
+;;       `(|
+;; 	;; (: gnus-registry-split-fancy-with-parent)
+;; 	("from" "louislegrand\\|LLG\\|\\(m\\|M\\)ansuy" "LLG")
+;; 	("subject" "physique2013" "physique2013")
+;; 	("subject" "structures2013" "structures2013")
+;; 	("from" "\\(b\\|B\\)lotin\\|\\(c\\|C\\)ellier\\|\\(d\\|D\\)umax" "famille")
+;; 	(: spam-split 'spam-use-bogofilter)
+;; 	;; (any "\\b\\(\\w+\\)@.*bretagne.*" "ml.ups.\\1")
+;; 	;; (any ".*ups-\\b\\(\\w+\\)@listes\\.prepas\\.org" "ml.ups.\\1")
+;; 	("gnus-warning" "duplicat\\(e\\|ion\\) of message" "duplicate")
+;; 	;; all the rest
+;; 	;; "Default"
+;; 	"General"
+;; 	))
 
+(setq jc-gnus-catchall-group "General")
 
-
-(setq newsletter-filter (concat "\\(m\\|\\M\\)armiton\\|" 
-			 "\\(g\\|\\G\\)rand\\(a\\|\\A\\)ction\\|"
-			 "\\(f\\|\\F\\)nac\\|"
-			 "\\(i\\|\\I\\)nstructables\\|"
-			 "\\(a\\|A\\)udiofanzine\\|"
-			 "\\(a\\|A\\)mazon\\|"
-			 "\\(p\\|P\\)rice\\(m\\|M\\)inister\\|"
-			 "\\(l\\|\\L\\)dlc"
-			 ))
+(setq bbdb/gnus-split-nomatch-function jc-gnus-catchall-group)
 
 (setq nnimap-split-fancy
       `(|
-	;; (: gnus-registry-split-fancy-with-parent)
-	("from" "louislegrand\\|LLG\\|\\(m\\|M\\)ansuy" "LLG")
-	("subject" "physique2013" "physique2013")
-	("subject" "structures2013" "structures2013")
-	("from" "\\(b\\|B\\)lotin\\|\\(c\\|C\\)ellier\\|\\(d\\|D\\)umax" "famille")
-	("from" ,newsletter-filter "newsletter")
-	(: spam-split 'spam-use-bogofilter)
-	;; (any "\\b\\(\\w+\\)@.*bretagne.*" "ml.ups.\\1")
-	;; (any ".*ups-\\b\\(\\w+\\)@listes\\.prepas\\.org" "ml.ups.\\1")
-;	("gnus-warning" "duplicat\\(e\\|ion\\) of message" "duplicate")
+	("from" ,gnus-ignored-from-addresses "sent-mail")
+	(: (lambda ()
+		(car (bbdb/gnus-split-method))))
+	("gnus-warning" "duplicat\\(e\\|ion\\) of message" "duplicate")
 	;; all the rest
-	"General"
+	,jc-gnus-catchall-group
+	;; "General"
 	))
 
 ;; Pour ne pas écrire 20 lignes de From:
@@ -419,7 +401,7 @@
 
 ;; (oxy-unicode-threads)
 
-;(setq gnus-ignored-from-addresses (quote ("Julien Cubizolles" "j.cubizolles@free.fr")))
+;(setq gnus-ignoredfrom-addresses (quote ("Julien Cubizolles" "j.cubizolles@free.fr")))
 (setq gnus-ignored-from-addresses "j.cubizolles@free.fr")
 
 ;; SPAM
