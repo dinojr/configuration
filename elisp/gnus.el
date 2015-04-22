@@ -97,6 +97,27 @@
 ;(setq nnimap-fetch-partial-articles "text/")
 (setq nnimap-fetch-partial-articles nil)
 
+(setq gnus-ignored-from-addresses (regexp-opt '("j.cubizolles@free.fr" "j.cubizolles@gmail.com")))
+
+;; (setq bbdb/gnus-split-nomatch-function nil
+;;       bbdb/gnus-split-default-group nil
+;;       bbdb/gnus-split-myaddr-regexp gnus-ignored-from-addresses
+;;       )
+
+;; Splitting
+(setq nnmail-split-methods 'nnmail-split-fancy)
+
+(setq nnmail-split-fancy
+      `(|
+	("from" ,gnus-ignored-from-addresses "sent-mail")
+	(: (lambda ()
+		(car (bbdb/gnus-split-method))))
+	("gnus-warning" "duplicat\\(e\\|ion\\) of message" "duplicate")
+	;; all the rest
+	;; ,jc-gnus-catchall-group
+	"General"
+	))
+
 (setq gnus-secondary-select-methods
       '(
 	(nnimap "gmail"
@@ -112,9 +133,8 @@
 ;		(nnimap-authinfo-file "~/.authinfo")
 ;		(nnimap-unsplittable-articles (%Deleted %Seen))
 		(nnir-search-engine imap)
-		(nnimap-split-methods 'nnimap-split-fancy)
-;		(nnimap-split-methods default)
-
+		;; (nnimap-split-methods 'nnimap-split-fancy)
+		(nnimap-split-methods default)
 		(nnimap-inbox "INBOX")
 
 		)
@@ -163,8 +183,8 @@
 (setq gnus-suppress-duplicates t)
 (setq gnus-save-duplicate-list t)
 
-;; Splitting
-(setq nnmail-split-methods 'nnmail-split-fancy)
+
+
 ;; (setq nnmail-split-fancy 
 ;;       `(|
 ;; 	;; (: gnus-registry-split-fancy-with-parent)
@@ -180,21 +200,6 @@
 ;; 	;; "Default"
 ;; 	"General"
 ;; 	))
-
-(setq jc-gnus-catchall-group "General")
-
-(setq bbdb/gnus-split-nomatch-function jc-gnus-catchall-group)
-
-(setq nnimap-split-fancy
-      `(|
-	("from" ,gnus-ignored-from-addresses "sent-mail")
-	(: (lambda ()
-		(car (bbdb/gnus-split-method))))
-	("gnus-warning" "duplicat\\(e\\|ion\\) of message" "duplicate")
-	;; all the rest
-	,jc-gnus-catchall-group
-	;; "General"
-	))
 
 ;; Pour ne pas écrire 20 lignes de From:
 (setq gnus-treat-hide-boring-headers (quote head))
@@ -402,7 +407,7 @@
 ;; (oxy-unicode-threads)
 
 ;(setq gnus-ignoredfrom-addresses (quote ("Julien Cubizolles" "j.cubizolles@free.fr")))
-(setq gnus-ignored-from-addresses "j.cubizolles@free.fr")
+
 
 ;; SPAM
 (setq spam-use-bogofilter t)
