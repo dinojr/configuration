@@ -42,7 +42,7 @@
 		 ("begin" "$1" "$" "$$" "\\(" "\\["))))
  '(package-selected-packages
    (quote
-    (wiki-summary yasnippet workgroups2 workgroups window-number win-switch w3m twittering-mode tabbar switch-window smartparens session-manager rainbow-delimiters paredit oauth2 notify naquadah-theme memory-usage magit-filenotify helm gnuplot-mode gnuplot gh flyspell-lazy expand-region emms calfw-gcal calfw boxquote bitlbee bbdb2erc bbdb-vcard bbdb-ext bbdb- autopair auto-dictionary auctex ace-flyspell)))
+    (helm-company company-auctex company-math wiki-summary yasnippet workgroups2 workgroups window-number win-switch w3m twittering-mode tabbar switch-window smartparens session-manager rainbow-delimiters paredit oauth2 notify naquadah-theme memory-usage magit-filenotify helm gnuplot-mode gnuplot gh flyspell-lazy expand-region emms calfw-gcal calfw boxquote bitlbee bbdb2erc bbdb-vcard bbdb-ext bbdb- autopair auto-dictionary auctex ace-flyspell)))
  '(reftex-toc-include-labels t)
  '(reftex-toc-split-windows-horizontally t))
 
@@ -59,6 +59,7 @@
 (load "JCspellcheck.el")
 (load "JCtramp.el")
 ;; (load "JCido.el")
+(load "JCcompany.el")
 (load "JCorg.el")
 (load "JChelm.el")
 (load "JCdired.el")
