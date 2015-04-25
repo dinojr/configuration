@@ -99,10 +99,10 @@
 
 (setq gnus-ignored-from-addresses (regexp-opt '("j.cubizolles@free.fr" "j.cubizolles@gmail.com")))
 
-;; (setq bbdb/gnus-split-nomatch-function nil
-;;       bbdb/gnus-split-default-group nil
-;;       bbdb/gnus-split-myaddr-regexp gnus-ignored-from-addresses
-;;       )
+(setq bbdb/gnus-split-nomatch-function nil
+      bbdb/gnus-split-default-group nil
+      bbdb/gnus-split-myaddr-regexp gnus-ignored-from-addresses
+      )
 
 ;; Splitting
 (setq nnmail-split-methods 'nnmail-split-fancy)
