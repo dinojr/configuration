@@ -1,6 +1,6 @@
 ;; ~/.gnus.el
 (require 'gnus)
-(require 'gnuslog)
+;; (require 'gnuslog)
 
 (setq auth-source-debug t)
 (setq debug-on-error t)
