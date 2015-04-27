@@ -102,6 +102,8 @@ the variable `gnus-move-split-methods' for finding a default target."
 
 (require 'gnus-msg)
 
+
+
 (defun jc-gnus-article-header-value (header) 
   "Get the value of HEADER for the current article." 
   (with-current-buffer gnus-original-article-buffer 
@@ -115,8 +117,8 @@ the variable `gnus-move-split-methods' for finding a default target."
   (interactive)
   (save-window-excursion          ; better way 
     (gnus-summary-select-article) ; to do this?
-    (let ((sender (gnus-article-header-value "From")))
-      (process-sender sender) )))
+    (let ((sender (jc-gnus-article-header-value "From")))
+      (jc-process-sender sender) )))
 
 
 
@@ -138,6 +140,7 @@ the variable `gnus-move-split-methods' for finding a default target."
   (lambda ()
     (define-key gnus-summary-mode-map (kbd "B a") 'jc-gnus-summary-copy-and-expire-article)
     (define-key gnus-summary-mode-map (kbd "B M") 'jc-gnus-summary-move-and-mark-read-article)
+    (define-key gnus-summary-mode-map (kbd "M P A") 'jc-process-sender-at-point)
     )
   )
 
