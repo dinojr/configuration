@@ -34,7 +34,11 @@
  '(canlock-password "5052bb55e61c64dae5204c0ccac4d417b05d8cf8")
  '(font-latex-fontify-sectioning (quote color))
  '(font-latex-quotes (quote french))
- '(helm-external-programs-associations (quote (("pdf" . "evince") ("ods" . "libreoffice"))))
+ '(helm-external-programs-associations
+   (quote
+    (("zip" . "file-roller")
+     ("pdf" . "evince")
+     ("ods" . "libreoffice"))))
  '(org-archive-save-context-info (quote (itags ltags)))
  '(org-format-latex-options
    (quote
@@ -42,8 +46,8 @@
 		 ("begin" "$1" "$" "$$" "\\(" "\\["))))
  '(package-selected-packages
    (quote
-    (helm-company company-auctex company-math wiki-summary yasnippet workgroups2 workgroups window-number win-switch w3m twittering-mode tabbar switch-window smartparens session-manager rainbow-delimiters paredit oauth2 notify naquadah-theme memory-usage magit-filenotify helm gnuplot-mode gnuplot gh flyspell-lazy expand-region emms calfw-gcal calfw boxquote bitlbee bbdb2erc bbdb-vcard bbdb-ext bbdb- autopair auto-dictionary auctex ace-flyspell)))
- '(reftex-toc-include-labels t)
+    (magit helm-company company-auctex company-math wiki-summary yasnippet workgroups2 workgroups window-number win-switch w3m twittering-mode tabbar switch-window smartparens session-manager rainbow-delimiters paredit oauth2 notify naquadah-theme memory-usage magit-filenotify helm gnuplot-mode gnuplot gh flyspell-lazy expand-region emms calfw-gcal calfw boxquote bitlbee bbdb2erc bbdb-vcard bbdb-ext bbdb- autopair auto-dictionary auctex ace-flyspell)))
+ '(reftex-toc-include-labels t t)
  '(reftex-toc-split-windows-horizontally t))
 
 ;;--------------------
