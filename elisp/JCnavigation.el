@@ -93,7 +93,7 @@
 (require 'saveplace)
 (setq-default save-place t)
 (setq save-place-file "~/.emacs.d/saved-places")
-;; (setq server-visit-hook (quote (save-place-find-file-hook)))
+(setq server-visit-hook (quote (save-place-find-file-hook)))
 
 ;(add-hook 'text-mode-hook 'turn-on-auto-fill)
 
