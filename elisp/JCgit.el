@@ -2,6 +2,8 @@
 
 ;; La ligne suivante corrige un bug de déclaration
 (setq magit-log-edit-confirm-cancellation t)
+
+(setq magit-last-seen-setup-instructions "1.4.0")
 (require 'magit)
 
 ;; (require 'magithub)

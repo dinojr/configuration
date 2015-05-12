@@ -83,6 +83,7 @@
 (load "JCmingus.el")
 ;; (load "JCworkgroup.el")
 ;; (load "JCworkgroups2.el")
+(load "JCdesktop")
 ;; (load "JCwww.el")
 (load "JCregexps.el")
 ;; (load "JCcalc.el")
