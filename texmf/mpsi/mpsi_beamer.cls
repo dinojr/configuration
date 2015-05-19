@@ -118,6 +118,7 @@
 \newenvironment<>{Block}{\begin{block}#1{}}{\end{block}}
 \newenvironment<>{Theoreme}[1][]{\begin{theorem}[#1]#2}{\end{theorem}}
 \newenvironment<>{Exemple}[1][]{\begin{example}[#1]#2}{\end{example}}
+\newenvironment<>{indispensable}[1][]{\relax}{\relax}
 
 \author{Julien Cubizolles}
 \date{\today}
