@@ -21,14 +21,17 @@
                  ))
        (cadr ispell-tex-skip-alists)))
 
-(defun jc-flyspell-check-next-highlighted-word ()
-  "Custom function to spell check next highlighted word"
-  (interactive)
-  (flyspell-goto-next-error)
-  (ispell-word)
-  )
+;; (defun jc-flyspell-check-next-highlighted-word ()
+;;   "Custom function to spell check next highlighted word"
+;;   (interactive)
+;;   (flyspell-goto-next-error)
+;;   (ispell-bord)
+;;   )
 
+
+(ace-flyspell-setup) ; binds C-. to ace-flyspell-dwim
 
 ;; Raccourcis
 (global-set-key "\C-cd" 'ispell-change-dictionary)
-(global-set-key (kbd "M-<f8>") 'jc-flyspell-check-next-highlighted-word)
+;; (global-set-key (kbd "M-<f8>") 'jc-flyspell-check-next-highlighted-word)
+
