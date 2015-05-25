@@ -3,8 +3,10 @@
 (add-to-list 'load-path "/home/wilk/.emacs.d/dired-toggle-sudo/")
 
 (require 'dired)
-(when (require 'dired-aux)
- (require 'dired-async))
+(require 'dired-aux)
+
+(autoload 'dired-async-mode "dired-async.el" nil t)
+(dired-async-mode 1)
 
 (eval-after-load "dired"
   '(define-key dired-mode-map "z" 'jc-dired-zip-files))
