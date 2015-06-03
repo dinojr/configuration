@@ -11,6 +11,7 @@ path = wilk/.bogofilter
 path = wilk/.local/share/applications
 path = wilk/Documents/girodet
 path = wilk/Documents/brissac
+path = wilk/Documents/mobillico
 path = wilk/Finances
 #path = wilk/info/emacs
 path = wilk/.Conky
