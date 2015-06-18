@@ -10,4 +10,4 @@
 
 (setq lpr-command "lpr")
 
-(setq lpr-switches '("-o landscape -o sides=two-sided-short-edge -o page-ranges=1-"))
+(setq lpr-switches '("-#1 -o landscape -o sides=two-sided-short-edge -o page-ranges=1-"))
