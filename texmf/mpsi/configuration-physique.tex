@@ -1,0 +1,202 @@
+% Author: Julien Cubizolles
+% Public domain
+
+\makeatletter
+
+\protected\def\Referentiel#1{\mathcal #1}
+\protected\def\ReferentielBar{\Referentiel{R}^*}
+
+\protected\def\Energie{\mathcal{E}}
+\protected\def\EnergieCinetique#1#2{\mathcal{E}_{c,\Referentiel{#2}}(#1)}
+\protected\def\EnergieCinetiqueSys#1#2{\mathcal{E}_{c,\Referentiel{#2}}(\mathcal
+  #1)}
+\protected\def\EnergiePotentielle{\mathcal{E}_p}
+\protected\def\EnergiePotentielleEff{\mathcal{E}_{p,\mathrm{eff}}}
+\protected\def\EnergieMecanique#1#2{\mathcal{E}_{m,\Referentiel{#2}}(#1)}
+\protected\def\EnergieMecaniqueSys#1#2{\mathcal{E}_{m,\Referentiel{#2}}(\mathcal
+  #1)}
+
+\def\EpotEffective{\mathcal{E}_\text{eff}}
+
+\protected\def\Epot{\@ifnextchar[{\Epot@ii}{\Epot@i}}
+\protected\def\Epot@i{\Energie_{\text{pot}}}
+\protected\def\Epot@ii[#1]{\Energie_{\text{pot},#1}}
+
+\protected\def\Vitesse{%
+\@ifnextchar*{\Vitesse@i}{\Vitesse@ii}}
+\def\Vitesse@ii#1#2{%
+  \vv{v_{\Referentiel{#2}}}(#1)}
+\def\Vitesse@i*#1{%
+  \vv{v}(#1)}
+\protected\def\QteMvtSys#1#2{%
+  \vv{p_{\Referentiel{#2}}}(\mathcal S)}
+\protected\def\QteMvt{%
+  \@ifnextchar*{\QteMvt@i}{\QteMvt@ii}}
+\def\QteMvt@ii#1#2{%
+  \vv{p_{\Referentiel{#2}}}(#1)}
+\def\QteMvt@i*#1{%
+  \vv{p}(#1)}
+\protected\def\Acceleration{%
+  \@ifnextchar*{\Acceleration@i}{\Acceleration@ii}}
+\def\Acceleration@ii#1#2{%
+  \vv{a_{\Referentiel{#2}}}(#1)}
+\def\Acceleration@i*#1{%
+  \vv{a}(#1)}
+\protected\def\AccelerationEnt#1#2#3{%
+  \vv{a_{\mathrm{e},\Referentiel{#2}/\Referentiel{#3}}}(#1)}
+\protected\def\AccelerationCoriolis#1#2#3{%
+  \vv{a_{\mathrm{c},\Referentiel{#2}/\Referentiel{#3}}}(#1)}
+
+\protected\def\MomentCinetique#1#2#3{%
+  \vv{\sigma_{\Referentiel{#3}/#2}}(#1)}
+\protected\def\MomentCinetiqueAxe#1#2#3{%
+  \sigma_{\Referentiel{#3}/#2}(#1)}
+\protected\def\MomentCinetiqueSys#1#2#3{%
+  \vv{\sigma_{\Referentiel{#3}/#2}}(\mathcal #1)}
+\protected\def\MomentCinetiqueSysAxe#1#2#3{%
+  \sigma_{\Referentiel{#3}/#2}(\mathcal #1)}
+
+\protected\def\Force#1{\vv{#1}}
+\protected\def\ForceEnt{\Force{f_{\mathrm{i,e}}}}
+\protected\def\ForceCoriolis{\Force{f_{\mathrm{i,c}}}}
+
+\protected\def\Moment{%
+  \@ifnextchar*{\Moment@i}{\Moment@ii}}
+\def\Moment@i*#1#2{%
+  \vv{\mathcal{M}_{/#1}(#2)}}
+\def\Moment@ii#1#2{%
+  \vv{\mathcal{M}_{/#1}}(\Force{#2})}
+\protected\def\MomentAxe{%
+  \@ifnextchar*{\MomentAxe@i}{\MomentAxe@ii}}
+\def\MomentAxe@i*#1#2{%
+  \mathcal{M}_{/#1}(#2)}
+\def\MomentAxe@ii#1#2{%
+  \mathcal{M}_{/#1}(\Force{#2})}
+
+\RequirePackage[locale = FR]{siunitx}
+\sisetup{%
+  inter-unit-separator = \ensuremath{{} \cdot {}},
+  output-decimal-marker = {,},
+  exponent-product = \ensuremath{{} \cdot {}},
+  group-four-digits = false,
+  per-mode = reciprocal,
+  separate-uncertainty = false,
+  multi-part-units = single}
+\DeclareSIUnit[number-unit-product = {}]\dioptrie{\ensuremath{\deltaup}}
+\DeclareSIUnit[number-unit-product = {}]\decade{\ensuremath{\mathrm{d\acute{e}cade}}}
+\DeclareSIUnit[number-unit-product = {}]\torr{Torr}
+\DeclareSIUnit\gauss{G}
+
+\newcommand{\Base}{\mathcal{B}}
+\newcommand{\Solide}{\mathcal{S}}
+\newcommand{\Courbe}{\mathcal{C}}
+\newcommand{\syst}{\mathcal{S}}
+\newcommand{\VitAng}{\omega}
+\newcommand{\Axe}{\Delta}
+\newcommand{\Defemph}[1]{\emph{#1}}
+\newcommand{\Textemph}[1]{\emph{#1}}
+\usepackage{xspace}
+\newcommand{\cad}{c'est-à-dire\xspace}
+\newcommand{\RefR}{\Referentiel{R}}
+\newcommand{\rond}{\circ}
+
+\newcommand{\Ecin}{{\Energie_{\text{c}}}}
+\newcommand{\EcinM}{{\Energie_{\text{cM}}}}
+\newcommand{\Emec}{{\Energie_{\text{m}}}}
+\newcommand{\EmecM}{{\Energie_{\text{mM}}}}
+\newcommand{\Uint}{{U}}
+
+\newcommand{\Circuit}{\mathcal{C}}
+\newcommand{\Bobine}{\mathcal{B}}
+
+\def\ForceLorentz{\Force{F_\mathcal {L}}}
+\def\Potentiel{V}
+\protected\def\Laplace{%
+  \@ifnextchar*{\Laplace@i}{\Laplace@ii}}
+\def\Laplace@i*{%
+   F_{\mathcal{L}a}}
+\def\Laplace@ii{%
+   \Force{F_{\mathcal{L}a}}
+}
+
+\protected\def\Lo{%
+   \@ifnextchar*{\Lo@i}{\Lo@ii}}
+\def\Lo@i*#1#2{\MomentCinetique{#1}{#2}{\empty}}
+\def\Lo@ii#1#2#3{\MomentCinetique{#1}{#2}{#3}}
+
+\protected\def\LD{%
+   \@ifnextchar*{\LD@i}{\LD@ii}}
+\def\LD@i*#1#2{\MomentCinetiqueAxe{#1}{#2}{\empty}}
+\def\LD@ii#1#2#3{\MomentCinetiqueAxe{#1}{#2}{#3}}
+
+\protected\def\MDext#1#2{%
+    \mathcal{M}_{\text{ext}/#1}(#2)
+}
+
+\protected\def\MR#1{\vv{\mathcal{M}_{/#1}}}
+\protected\def\MRext#1{\vv{\mathcal{M}_{\text{ext}/#1}}}
+\protected\def\MRAxe#1{\mathcal{M}_{/#1}}
+\protected\def\MRextAxe#1{\mathcal{M}_{\text{ext}/#1}}
+
+\protected\def\Couple{%
+   \@ifnextchar*{\Couple@i}{\Couple@ii}}
+\def\Couple@i*{\vv{\mathcal{C}}}
+\def\Couple@ii#1{\mathcal{C}_{/#1}}
+
+\protected\def\MomentInertie#1{J_{#1}}
+
+\def\Champ#1{\vv{#1}}
+
+\def\Lc{\sigma_c}
+
+\RequirePackage{esdiff}
+\let\Deriv\diff
+\let\Derivp\diffp
+\protected\def\DiffOp{\mathrm{d}}
+\protected\def\Diff#1{\mathop{}\!\DiffOp #1}
+
+\protected\def\DerivRef{%
+  \@ifnextchar*{\DerivRef@i}{\DerivRef@ii}}
+\def\DerivRef@i*#1#2#3{%
+  \Deriv*{#1}{#2}{\Referentiel{#3}}}
+\def\DerivRef@ii#1#2{%
+  \Deriv*{#1}{t}{\Referentiel{#2}}}
+
+\protected\def\DerivRefDeux{%
+  \@ifnextchar*{\DerivRefDeux@i}{\DerivRefDeux@ii}}
+\def\DerivRefDeux@i*#1#2#3{%
+  \Deriv*[2]{#1}{{#2}{\Referentiel{#3}}}}
+\def\DerivRefDeux@ii#1#2{%
+  \Deriv*[2]{#1}{t}{\Referentiel{#2}}}
+
+
+\let\Delem\Diff
+
+\protected\def\Puiss{%
+  \@ifnextchar*{\Puiss@i}{\Puiss@ii}}
+\def\Puiss@i*#1#2{%
+  \mathcal{P}_{#2}(#1)}
+\def\Puiss@ii#1{%
+  \mathcal{P}(#1)}
+\protected\def\Trajet#1#2#3{
+  #1 \xrightarrow[#3]{}#2}
+
+% \protected\def\Trav{%
+%   \@ifnextchar*{\Trav@i}{\Trav@ii}}
+% \def\Trav@ii{\@ifnextchar[{\Trav@j}{\Trav@jj}}
+% \def\Trav@j[#1]#2{W_#1\left(#2\right)}
+% \def\Trav@jj#1{W\left(#1\right)}
+% \def\Trav@i*{\@ifnextchar[{\Trav@k}{\Trav@kk}}
+% \def\Trav@k[#1]#2#3{\underset{#3}{W_#1}\left(#2\right)}
+% \def\Trav@kk#1#2{\underset{#2}{W}\left(#1\right)}
+
+\protected\def\Trav{%
+  \@ifnextchar*{\Trav@i}{\Trav@ii}}
+\def\Trav@ii{\@ifnextchar[{\Trav@j}{\Trav@jj}}
+\def\Trav@j[#1]#2{W_#1(#2)}
+\def\Trav@jj#1{W(#1)}
+\def\Trav@i*{\@ifnextchar[{\Trav@k}{\Trav@kk}}
+\def\Trav@k[#1]#2#3{\underset{#3}{W_#1}(#2)}
+\def\Trav@kk#1#2{\underset{#2}{W}(#1)}
+
+\makeatother

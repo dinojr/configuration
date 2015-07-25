@@ -278,6 +278,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \PassOptionsToPackage{override,dvipsnames}{xcolor} % pour le chargement de xcolor par beamerarticle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% à virer (dans tikz-base.tex)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage{tikz,pgfplots}
 \usetikzlibrary{calc}
 \usetikzlibrary{patterns}
@@ -285,8 +289,12 @@
 \usetikzlibrary{decorations.markings}
 \usetikzlibrary{arrows}
 \usetikzlibrary{positioning}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% à virer, dans (configuration-physique.tex)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage[locale = FR]{siunitx}
 \sisetup{%
   inter-unit-separator = \ensuremath{{} \cdot {}},
@@ -296,6 +304,7 @@
   per-mode = reciprocal,
   separate-uncertainty = true,
   multi-part-units = single}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % \RequirePackage{icomma}
 
