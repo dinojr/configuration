@@ -1,8 +1,11 @@
 \NeedsTeXFormat{LaTeX2e} 
 \ProvidesClass{mpsi_beamer}[2012/08/03 Classe perso mpsi pour beamer]
-\RequirePackage{etex}
 
-\RequirePackage{xkeyval}
+\input{configuration-base.tex}
+
+% \RequirePackage{etex}
+
+% \RequirePackage{xkeyval}
 \newif\ifNotesCours
 \DeclareOptionX{NotesCours}[true]{\NotesCourstrue}
 
@@ -27,7 +30,7 @@
 % utf8x plutôt que utf8 pour pouvoir taper du grec directement
 
 % À changer pour passer à luatex
-\RequirePackage[T1]{fontenc}
+% \RequirePackage[T1]{fontenc}
                           
 %% Attention, des conflits entre standalone et pstricks: standalone
 %% doit être chargé avant pstricks
@@ -38,7 +41,7 @@
 
 \RequirePackage{beamerthemempsi}
 
-\RequirePackage[frenchstyle,narrowiints,partialup]{kpfonts}
+% \RequirePackage[frenchstyle,narrowiints,partialup]{kpfonts}
 
 \setbeamertemplate{blocks}[rounded][shadow=true]
 
@@ -111,15 +114,9 @@
 
 \AtBeginDocument{
   \maketitle
-
 }
-
-\input{configuration-base.tex}
 
 \uselanguage{French}
 \languagepath{French}
-
-\input{shortcut}
-\input{chimie}
 
 \endinput
