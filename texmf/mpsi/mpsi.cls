@@ -1,5 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{mpsi}[Julien Cubizolles]
+\ProvidesClass{mpsi}[2012/09/03 Classe perso mpsi, adapté de lycee.cls
+de Christophe Jorssen,par Julien Cubizolles]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % à faire : 
