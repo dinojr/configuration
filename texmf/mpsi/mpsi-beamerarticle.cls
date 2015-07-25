@@ -5,8 +5,6 @@
 %%%%%%% Options de classe
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{configuration-base.tex}
-
 \newif\ifCls@mpsi@noVersion
 \DeclareOptionX{noVersion}[true]{\@nameuse{Cls@mpsi@noVersion#1}}
 
@@ -304,7 +302,7 @@
 \renewenvironment{columns}{\relax}{\relax}
 \renewenvironment{column}[1]{\begin{minipage}{#1}}{\end{minipage}}
 
-
+\input{configuration-base.tex}
 
 \makeatother
 \endinput

@@ -549,7 +549,6 @@
 %\RequirePackage{manfnt,mathrsfs} % des fontes
 
 \input{configuration-base.tex}
-\input{configuration-nonbeamer.tex}
 \input{shortcut}
 \input{chimie}
 
