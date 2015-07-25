@@ -73,7 +73,7 @@
 \def\MomentAxe@ii#1#2{%
   \mathcal{M}_{/#1}(\Force{#2})}
 
-% \RequirePackage[locale = FR]{siunitx}
+\RequirePackage[locale = FR]{siunitx}
 \sisetup{%
   inter-unit-separator = \ensuremath{{} \cdot {}},
   output-decimal-marker = {,},
@@ -86,6 +86,8 @@
 \DeclareSIUnit[number-unit-product = {}]\decade{\ensuremath{\mathrm{d\acute{e}cade}}}
 \DeclareSIUnit[number-unit-product = {}]\torr{Torr}
 \DeclareSIUnit\gauss{G}
+
+\RequirePackage{esvect,esdiff}
 
 \newcommand{\Base}{\mathcal{B}}
 \newcommand{\Solide}{\mathcal{S}}

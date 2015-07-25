@@ -3,6 +3,31 @@
 
 \makeatletter
 
+\RequirePackage{tikz}
+
+\AtBeginDocument{%
+  \@ifpackageloaded{babel}{%
+    \let\xCJtikz@tikzpicture\tikzpicture
+    \def\tikzpicture{%
+      \iflanguage{french}{%
+        \shorthandoff{:;?!}}{}%
+      \xCJtikz@tikzpicture}%
+    \let\xCJtikz@tikzexternal@tikzpicture@replacement%
+        \tikzexternal@tikzpicture@replacement
+    \def\tikzexternal@tikzpicture@replacement{%
+      \iflanguage{french}{%
+        \shorthandoff{:;?!}}{}%
+      \xCJtikz@tikzexternal@tikzpicture@replacement}}{}}
+
+\pgfplotsset{compat=newest}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{patterns}
+\usetikzlibrary{intersections}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+\usetikzlibrary{positioning}
+
 \usetikzlibrary{arrows.meta}
 \tikzset{>={Latex[round]}}
 \tikzset{coordonnees/.style={dashed,VeryDarkGray,text=black,thick}}

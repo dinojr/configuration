@@ -23,8 +23,6 @@
   \PassOptionsToClass{handout}{beamer}
 \fi
 
-
-
 \LoadClass[utf8x,smaller,mathserif]{beamer}
 % utf8x plutôt que utf8 pour pouvoir taper du grec directement
 
@@ -37,38 +35,6 @@
 % Or name \end... illegal, see p.192 of the manual.)
 \RequirePackage{standalone}
 \RequirePackage{animate}
-
-\RequirePackage{graphicx}
-\DeclareGraphicsExtensions{.pdf,.png,.jpg,.gif}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%% Pstricks
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \ifPstricks
-% \RequirePackage{pstricks}
-% \RequirePackage{pstricks-add}
-% \RequirePackage{pst-plot,pst-grad,pst-node,multido,pst-coil,pst-eucl,pst-math}
-% \RequirePackage{auto-pst-pdf} % pour compiler avec pdflatex du code
-%                               % pstricks
-
-% % Workaround pour une incompatibilité entre psgraph et auto-pst-pdf
-% \RequirePackage{ifpdf}
-% \ifpdf
-%   \let\psgraph=\postscript
-%   \let\endpsgraph=\endpostscript
-% % \else
-% %   \PreviewEnvironment{psgraph}
-% \fi
-% \fi
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \RequirePackage{gensymb} % pour \micro, \mu
-\RequirePackage[greek,frenchb]{babel}
-
-
-
-\uselanguage{French}
-\languagepath{French}
 
 \RequirePackage{beamerthemempsi}
 
@@ -145,57 +111,13 @@
 
 \AtBeginDocument{
   \maketitle
-  
-  % \begin{frame}{}
-  %   \tableofcontents[pausesections,subsectionstyle=show/shaded/hide,subsubsectionstyle=hide/hide/hide]
-  % \end{frame}
+
 }
 
-\RequirePackage{fp} % pour des calculs
+\input{configuration-base.tex}
 
-%%%%%%%%%%%%%%%%%%%%
-%% Symboles%%%%%%%%%
-\RequirePackage{skull}
-\RequirePackage{marvosym}
-%%%%%%%%%%%%%%%%%%%%
-
-\RequirePackage{tikz,pgfplots}
-
-\usetikzlibrary{calc}
-\usetikzlibrary{patterns}
-\usetikzlibrary{intersections}
-\usetikzlibrary{decorations.markings}
-\usetikzlibrary{arrows}
-\pgfplotsset{compat=newest}
-
-\RequirePackage[tight]{units}
-\RequirePackage[locale = FR]{siunitx}
-\sisetup{%
-  inter-unit-separator = \ensuremath{{} \cdot {}},
-  output-decimal-marker = {,},
-  exponent-product = \ensuremath{{} \cdot {}},
-  group-four-digits = false,
-  per-mode = reciprocal,
-  separate-uncertainty = true,
-  multi-part-units = single}
-
-
-\RequirePackage{numprint}
-\RequirePackage{icomma}
-\RequirePackage[version=3]{mhchem}
-
-\RequirePackage{xspace}
-
-\RequirePackage{booktabs}
-\RequirePackage{multirow}
-\RequirePackage{enumerate}
-
-\RequirePackage{esvect,esdiff}
-
-\RequirePackage{bookmark}
-
-\RequirePackage{mathtools}
-% pour DeclarePairedDelimiter et co.
+\uselanguage{French}
+\languagepath{French}
 
 \input{shortcut}
 \input{chimie}

@@ -1,8 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{mpsi-beamerarticle}[]
-
-
-
+\makeatletter
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%% Options de classe
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -22,14 +20,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%% Options de classe - fin
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\RequirePackage[pdftex]{hyperref}
-
-\RequirePackage{graphicx}
-
-% \RequirePackage[frenchstyle,narrowiints,partialup]{kpfonts}
-% \RequirePackage[noamsthm]{beamerarticle}
-
 
 %% Attention, des conflits entre standalone et pstricks: standalone
 %% doit être chargé avant pstricks
@@ -160,10 +150,6 @@
 %%%%  Variables, fonctions  - fin
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%  Géométrie
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -218,101 +204,15 @@
 %%%%%%%  Géométrie - fin
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Packages nécessaires
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\RequirePackage{etex}
-% Pour ne jamais manquer de compteurs
-\reserveinserts{28}
-%et pour en avoir davantage
-
-\RequirePackage{ae,aecompl}
-
-\RequirePackage{array,booktabs,tabularx,multicol,multirow}
-
-\RequirePackage[greek,frenchb]{babel}
-\AtBeginDocument{\renewcommand{\labelitemi}{$\bullet$}}
-%\frenchbsetup{AutoSpacePunctuation=true}
-\RequirePackage{numprint}
-\RequirePackage{xspace} %%% pour gérer correctement les espaces
-                        %%% avant/après les macros
-\RequirePackage{setspace} %pour avoir double/simple espacement
-
-
-
-% \RequirePackage{enumerate,enumitem}
-% Conflit entre beamerarticle, enumitem et les environments description
-\RequirePackage{enumerate,psfrag}
-% \setitemize{label=$\bullet$} il faut enumitem
-
-
-\RequirePackage[version=3]{mhchem}
-
-\RequirePackage[cyr]{aeguill}
-
-
-%\RequirePackage{frcursive}
-\RequirePackage[T1]{fontenc}
-% \RequirePackage{lmodern}
-\RequirePackage{esvect,esdiff}
-
-
-%\RequirePackage{wrapfig}   %%%%%%% figures
-
-%\RequirePackage{manfnt,mathrsfs} % des fontes
-
-\RequirePackage{fp}
-
-\RequirePackage{mathtools}
-% pour DeclarePairedDelimiter et co.
-
-
-\RequirePackage{marvosym}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Tikz
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \PassOptionsToPackage{override,dvipsnames}{xcolor} % pour le chargement de xcolor par beamerarticle
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% à virer (dans tikz-base.tex)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\RequirePackage{tikz,pgfplots}
-\usetikzlibrary{calc}
-\usetikzlibrary{patterns}
-\usetikzlibrary{intersections}
-\usetikzlibrary{decorations.markings}
-\usetikzlibrary{arrows}
-\usetikzlibrary{positioning}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% à virer, dans (configuration-physique.tex)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\RequirePackage[locale = FR]{siunitx}
-\sisetup{%
-  inter-unit-separator = \ensuremath{{} \cdot {}},
-  output-decimal-marker = {,},
-  exponent-product = \ensuremath{{} \cdot {}},
-  group-four-digits = false,
-  per-mode = reciprocal,
-  separate-uncertainty = true,
-  multi-part-units = single}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \RequirePackage{icomma}
-
-% \RequirePackage[frenchstyle,narrowiints,partialup,noamsmath]{kpfonts}
 
 \RequirePackage[noamsthm]{beamerarticle}
 \RequirePackage{beamerthemempsi}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Environnements
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \PassOptionsToPackage{override}{xcolor}
+
 \RequirePackage{ntheorem}
 \RequirePackage{xcolor}
 \RequirePackage[framemethod=TikZ]{mdframed}
@@ -386,8 +286,6 @@
 {\begin{actionenv}#1\begin{originalloi}}
 {\end{originalloi}\end{actionenv}}
 
-
-
 \newenvironment<>{indispensable}{%
   \begin{actionenv}#1%
    \begin{center}
@@ -403,27 +301,9 @@
 %%%% Environnement - fin
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-\RequirePackage[frenchstyle,narrowiints,partialup]{kpfonts}
-\RequirePackage{skull}
-\input{shortcut}
-\input{chimie}
 \renewenvironment{columns}{\relax}{\relax}
 \renewenvironment{column}[1]{\begin{minipage}{#1}}{\end{minipage}}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Vestiges
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-\newcommand{\rem}{\textbf{Remarques :\xspace}}
-\newcommand{\parking}[2]{
-  \begin{minipage}[t]{.5\columnwidth}
-    \flushleft \large \textit{\color {red} Schéma de #1\xspace}
-  \end{minipage}\hfill\vspace{#2\baselineskip}
-}
-\newcommand{\oral}[1]{%
-  \begin{center}
-      \color{red} \begin{minipage}{.8\columnwidth} \textsf{\large \bfseries #1}\end{minipage}
-  \end{center}
-  \color{black}
-}
+\input{configuration-base.tex}
+\makeatother
 \endinput

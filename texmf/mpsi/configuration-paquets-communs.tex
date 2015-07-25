@@ -8,5 +8,38 @@
 \RequirePackage[utf8]{inputenc}
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
+\RequirePackage{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.gif}
+\RequirePackage{calc}
+
+\RequirePackage{etex}
+% Pour ne jamais manquer de compteurs
+
+\RequirePackage{array,booktabs,tabularx,multicol,multirow}
+\RequirePackage[frenchb]{babel}
+
+\RequirePackage{xspace} %%% pour gérer correctement les espaces
+                        %%% avant/après les macros
+\RequirePackage{setspace} %pour avoir double/simple espacement
+
+\RequirePackage{enumerate,enumitem}
+
+\RequirePackage[version=3]{mhchem}
+
+\RequirePackage[T1]{fontenc}
+
+\RequirePackage[pdftex]{hyperref}
+
+\RequirePackage[frenchstyle,narrowiints,partialup]{kpfonts}
+
+\RequirePackage{skull}
+
+\RequirePackage{marvosym}
+
+\RequirePackage{fp}
+
+% Lequel faut-il?
+\setitemize{label=$\bullet$}
+\AtBeginDocument{\renewcommand{\labelitemi}{$\bullet$}}
 
 \makeatother
