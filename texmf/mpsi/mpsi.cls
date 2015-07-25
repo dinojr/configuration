@@ -77,13 +77,6 @@
 \RequirePackage[framemethod=TikZ,xcolor]{mdframed}
 \newmdenv[roundcorner=5pt,backgroundcolor=gray!30,skipabove=5pt]{important}
 
-% \definecolor{gris}{gray}{0.9}
-% \shadecolor{gris}
-% \theoremstyle{empty}
-% %\theoremindent
-% \newshadedtheorem{impthm}{}
-% %\quoteindent=20pt
-
 \fi
 
 \ifDS
@@ -420,9 +413,6 @@
   \end{center}
 }
 \fi % fin du paramétrage des feuilles d'exos
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%  Géométrie
