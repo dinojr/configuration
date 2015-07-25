@@ -1,10 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{mpsi-beamerarticle}[]
 
-%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Indispensable pour pouvoir taper des accents dans ce fichier
-\RequirePackage[utf8]{inputenc}
-%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%% Options de classe
