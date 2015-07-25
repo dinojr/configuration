@@ -1,11 +1,9 @@
 \NeedsTeXFormat{LaTeX2e} 
 \ProvidesClass{mpsi_beamer}[2012/08/03 Classe perso mpsi pour beamer]
 
-\input{configuration-base.tex}
+\RequirePackage{etex}
 
-% \RequirePackage{etex}
-
-% \RequirePackage{xkeyval}
+\RequirePackage{xkeyval}
 \newif\ifNotesCours
 \DeclareOptionX{NotesCours}[true]{\NotesCourstrue}
 
@@ -16,7 +14,7 @@
 % pour un passage à LuaTeX, il faudra revoir les options concernant
 % l'encodage et le choix des polices
 
-% \DeclareOptionX*{\PassOptionsToClass{\CurrentOption}{beamer}}
+\DeclareOptionX*{\PassOptionsToClass{\CurrentOption}{beamer}}
 
 
 % rajouter xcolor=pst dans les options de LoadClass pour faire du
@@ -41,7 +39,7 @@
 
 \RequirePackage{beamerthemempsi}
 
-% \RequirePackage[frenchstyle,narrowiints,partialup]{kpfonts}
+\RequirePackage[frenchstyle,narrowiints,partialup]{kpfonts}
 
 \setbeamertemplate{blocks}[rounded][shadow=true]
 
@@ -118,5 +116,20 @@
 
 \uselanguage{French}
 \languagepath{French}
+
+\input{configuration-math.tex}
+% 
+\input{configuration-physique.tex}
+
+\input{configuration-couleurs.tex}
+
+\input{configutation-tikz-base.tex}
+\input{configuration-tikz-pgfplots.tex}
+
+\input{shortcut}
+\input{chimie}
+
+\makeatother
+
 
 \endinput
