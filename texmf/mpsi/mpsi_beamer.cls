@@ -113,9 +113,10 @@
   \maketitle
 }
 
+\RequirePackage[greek,frenchb]{babel}
 \uselanguage{French}
 \languagepath{French}
-
+\RequirePackage{skull}
 \input{configuration-math.tex}
 % 
 \input{configuration-physique.tex}
