@@ -1082,6 +1082,8 @@ de Christophe Jorssen,par Julien Cubizolles]
 %\RequirePackage[Omega]{gensymb_wilk}
 \RequirePackage[Omega]{gensymb}
 \RequirePackage[loose]{units}
+
+% À virer (dans configuration-physique.tex)
 \RequirePackage[locale = FR]{siunitx}
 \sisetup{%
   inter-unit-separator = \ensuremath{{} \cdot {}},
@@ -1092,6 +1094,8 @@ de Christophe Jorssen,par Julien Cubizolles]
   separate-uncertainty = true,
   multi-part-units = single}
 %\RequirePackage{textcomp,icomma,fixmath}
+
+
 \RequirePackage{icomma}
 %\RequirePackage{upgreek}
 \newcommand{\valeur}[2][]{\unit[\nombre{#1}]{#2}}
