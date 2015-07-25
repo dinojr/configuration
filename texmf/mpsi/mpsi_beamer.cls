@@ -13,8 +13,7 @@
 
 % pour un passage à LuaTeX, il faudra revoir les options concernant
 % l'encodage et le choix des polices
-
-\DeclareOptionX*{\PassOptionsToClass{\CurrentOption}{beamer}}
+% \DeclareOptionX*{\PassOptionsToClass{\CurrentOption}{beamer}}
 
 
 % rajouter xcolor=pst dans les options de LoadClass pour faire du
@@ -123,7 +122,7 @@
 
 \input{configuration-couleurs.tex}
 
-\input{configutation-tikz-base.tex}
+\input{configuration-tikz-base.tex}
 \input{configuration-tikz-pgfplots.tex}
 
 \input{shortcut}
