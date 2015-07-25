@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{mpsi}[Julien Cubizolles]
+\ProvidesClass{mpsi}[2015/07/26 par Julien Cubizolles]
 \makeatletter
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%% Options de classe
@@ -40,6 +40,8 @@
 \fi
 
 \LoadClass[a4paper]{\Cls@mpsi@class}
+
+\input{configuration-base.tex}
 
 %% Attention, des conflits entre standalone et pstricks: standalone
 %% doit être chargé avant pstricks
@@ -134,7 +136,7 @@
 \RequirePackage{url}
 \newcommand\@licence{sous licence \tiny\url{http://creativecommons.org/licenses/by-nc-nd/2.0/fr/}.}
 \newcommand\licence[1]{\renewcommand\@licence{#1}}
-\newcommand\@anneesco{2014-20150}
+\newcommand\@anneesco{2014-2015}
 \newcommand\anneesco[1]{\renewcommand\@anneesco{#1}}
 
 \RequirePackage{calc}
@@ -250,6 +252,7 @@
     \end{minipage}
   \end{center}
   } 
+\fi
 
 \newtheorem{exercice}{Exercice}
 
@@ -294,10 +297,10 @@
 \newcounter{bogusexo}
 
 \renewcommand{\solproblabel}[1]{\textbf{\large \textsf{Correction du
-         problème \emph{#1}}}}
+         problème \textbf{#1}}}}
 
 \renewcommand{\solexolabel}[1]{\textbf{\large \textsf{Correction de
-      l'exercice  \emph{#1}}}}
+      l'exercice  \textbf{#1}}}}
 
 \renewcommand{\corprob}{\refstepcounter{bogusprob}\oldcorprob}
 \renewcommand{\corexo}{\refstepcounter{bogusexo}\oldcorexo}
@@ -442,25 +445,12 @@
   \fi
   \else \large\textbf{\textsf{\@title}}
   \fi
-  % 
-  % \ifx\@title\@empty
-  % \else
-  % \ifnum\thepage=1
-  % \else 
-  % \fi
-  % \fi
 }
 
 \rhead{%
-    % \ifx \mpsi@doc exos
-    % \makesemaine
-    % \else
-    % \jour
-    % \fi
     \ifexos \makesemaine  \fi
     \ifDS   \@jour   \fi
     \ifDM \makepourle \fi
-    \ifcours \@jour \fi
     \ifTP \@jour \fi
   }
   
@@ -468,7 +458,7 @@
      %%%%%%%%%%%%%%%%%%
      % Si on demande le twocolumn
      %%%%%%%%%%%%%%%%%%
-    \RequirePackage[a4paper,margin=1.5cm,includeheadfoot,landscape,\Cls@mpsi@driver,headsep=18pt]{geometry}
+    \RequirePackage[a4paper,margin=1.5cm,includeheadfoot,landscape,headsep=18pt]{geometry}
     \columnseprule=.8pt
     \pagestyle{fancy}
     %%%%%%%%%%%%%%%%%%
@@ -495,9 +485,8 @@
   %%%%%%%%%%%%%%%%%%%%%%
   % Si on ne demande pas le twocolumn
   %%%%%%%%%%%%%%%%%%%%%%
-  \RequirePackage[a4paper,margin=1cm,includeheadfoot,\Cls@mpsi@driver,headsep=15pt]{geometry}
+  \RequirePackage[a4paper,margin=1cm,includeheadfoot,headsep=15pt]{geometry}
   \pagestyle{fancy}
-%  \def\headrulewidth{0cm}
   \lfoot{%
     \ifCls@mpsi@noVersion
     \else
@@ -548,9 +537,9 @@
 
 %\RequirePackage{manfnt,mathrsfs} % des fontes
 
-\input{configuration-base.tex}
-\input{shortcut}
-\input{chimie}
+
+% \input{shortcut}
+% \input{chimie}
 
 \makeatother
 \endinput

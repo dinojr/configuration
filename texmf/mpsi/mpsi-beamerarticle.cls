@@ -1,9 +1,16 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{mpsi-beamerarticle}[]
 \makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Indispensable pour pouvoir taper des accents dans ce fichier
+\RequirePackage[utf8]{inputenc}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%% Options de classe
 %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{xkeyval}
 
 \newif\ifCls@mpsi@noVersion
 \DeclareOptionX{noVersion}[true]{\@nameuse{Cls@mpsi@noVersion#1}}

@@ -1,8 +1,6 @@
 % Author: Julien Cubizolles
 % Public domain
 
-\makeatletter
-
 \protected\def\Referentiel#1{\mathcal #1}
 \protected\def\ReferentielBar{\Referentiel{R}^*}
 
@@ -200,5 +198,3 @@
 \def\Trav@i*{\@ifnextchar[{\Trav@k}{\Trav@kk}}
 \def\Trav@k[#1]#2#3{\underset{#3}{W_#1}(#2)}
 \def\Trav@kk#1#2{\underset{#2}{W}(#1)}
-
-\makeatother
