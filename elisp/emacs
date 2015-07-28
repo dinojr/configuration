@@ -46,8 +46,8 @@
 		 ("begin" "$1" "$" "$$" "\\(" "\\["))))
  '(package-selected-packages
    (quote
-    (magit helm-company company-auctex company-math wiki-summary yasnippet workgroups2 workgroups window-number win-switch w3m twittering-mode tabbar switch-window smartparens session-manager rainbow-delimiters paredit oauth2 notify naquadah-theme memory-usage magit-filenotify helm gnuplot-mode gnuplot gh flyspell-lazy expand-region emms calfw-gcal calfw boxquote bitlbee bbdb2erc bbdb-vcard bbdb-ext bbdb- autopair auto-dictionary auctex ace-flyspell)))
- '(reftex-toc-include-labels t t)
+    (sx magit helm-company company-auctex company-math wiki-summary yasnippet workgroups2 workgroups window-number win-switch w3m twittering-mode tabbar switch-window smartparens session-manager rainbow-delimiters paredit oauth2 notify naquadah-theme memory-usage magit-filenotify helm gnuplot-mode gnuplot gh flyspell-lazy expand-region emms calfw-gcal calfw boxquote bitlbee bbdb2erc bbdb-vcard bbdb-ext bbdb- autopair auto-dictionary auctex ace-flyspell)))
+ '(reftex-toc-include-labels t)
  '(reftex-toc-split-windows-horizontally t))
 
 ;;--------------------
