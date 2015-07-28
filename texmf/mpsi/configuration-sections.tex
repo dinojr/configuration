@@ -1,0 +1,18 @@
+\RequirePackage{titlesec}
+
+% \titleformat*{\section}{\normalfont\Large\bfseries\sffamily}
+% \titleformat*{\subsection}{\normalfont\large\bfseries\sffamily}
+% \titleformat*{\subsubsection}{\normalfont\normalsize\bfseries\sffamily}
+% \titleformat*{\paragraph}{\normalfont\normalsize\bfseries\sffamily}
+% \titleformat*{\subparagraph}{\normalfont\normalsize\bfseries\sffamily}
+
+\titleformat{\section}[hang]{\normalfont\Large\bfseries\sffamily}{\thesection}{1em}{}{}
+\titleformat{\subsection}[hang]{\normalfont\large\bfseries\sffamily}{\thesubsection}{1em}{}{}
+\titleformat{\subsubsection}[hang]{\normalfont\normalsize\bfseries\sffamily}{\thesubsubsection}{1ex}{}{}
+
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries\sffamily}{\theparagraph}{1ex}{}{}
+\titleformat{\subparagraph}[hang]{\normalfont\normalsize\bfseries\sffamily}{\thesubparagraph}{1ex}{}{}
+
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\alph{subsubsection}}
