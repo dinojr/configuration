@@ -7,6 +7,10 @@
 
 \RequirePackage{xkeyval}
 
+\newif\ifcours
+\courstrue
+\DeclareOptionX{cours}[true]{\courstrue}
+
 \newif\ifDS
 \DeclareOptionX{DS}[false]{\DStrue}
 
@@ -442,6 +446,7 @@
     \ifDS   \@jour   \fi
     \ifDM \makepourle \fi
     \ifTP \@jour \fi
+    \ifcours \@jour \fi
   }
   
   \ifCls@mpsi@colonne
