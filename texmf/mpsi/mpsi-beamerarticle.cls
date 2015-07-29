@@ -211,12 +211,15 @@
 
 \PassOptionsToPackage{override,dvipsnames}{xcolor} % pour le chargement de xcolor par beamerarticle
 
-\RequirePackage[noamsthm]{beamerarticle}
-\RequirePackage{beamerthemempsi}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Environnements
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{configuration-base.tex}
+\input{configuration-sections.tex} % à inclure avant beamerarticle, conflit avec titlesec sinon
+
+\RequirePackage[noamsthm]{beamerarticle}
+\RequirePackage{beamerthemempsi}
 
 \RequirePackage{ntheorem}
 \RequirePackage{xcolor}
@@ -309,8 +312,6 @@
 \renewenvironment{columns}{\relax}{\relax}
 \renewenvironment{column}[1]{\begin{minipage}{#1}}{\end{minipage}}
 
-\input{configuration-base.tex}
-\input{configuration-sections.tex}
 \ifeleves
 % On ne veut pas les titres de section dans les notes aux élèves
 \renewcommand\section[1]{\empty}
