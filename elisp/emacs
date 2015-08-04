@@ -86,6 +86,7 @@
 (load "JCdesktop")
 ;; (load "JCwww.el")
 (load "JCregexps.el")
+(load "JCcalfw.el")
 ;; (load "JCcalc.el")
 ;; (load "JCasymptote.el")
 
