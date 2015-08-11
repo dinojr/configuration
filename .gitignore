@@ -3,5 +3,3 @@ auto/
 **/*.log
 **/*#*
 gnuslog.el
-/elisp/DEADJOE
-/elisp/emacs_test
