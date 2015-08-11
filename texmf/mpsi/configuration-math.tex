@@ -1,0 +1,34 @@
+% Author: Julien Cubizolles
+% Public domain
+
+\makeatletter
+
+\def\cste{\mathrm{cste}}
+
+\protected\def\ProdVec{%
+  \@ifnextchar*{\ProdVec@i}{\ProdVec@ii}}
+\def\ProdVec@i*#1#2{%
+  #1 \wedge #2}
+\def\ProdVec@ii#1#2{%
+  \vv{#1} \wedge \vv{#2}}
+\protected\def\ProdScal{%
+  \@ifnextchar*{\ProdScal@i}{\ProdScal@ii}}
+\def\ProdScal@i*#1#2{%
+  #1 \cdot #2}
+\def\ProdScal@ii#1#2{%
+  \vv{#1} \cdot \vv{#2}}
+
+\DeclarePairedDelimiter\Norme{\lVert}{\rVert}
+
+\protected\def\vvEx{\vv{e_x}}
+\protected\def\vvEy{\vv{e_y}}
+\protected\def\vvEz{\vv{e_z}}
+\protected\def\vvExPrime{\vv{e_x'}}
+\protected\def\vvEyPrime{\vv{e_y'}}
+\protected\def\vvEzPrime{\vv{e_z'}}
+\protected\def\vvEr{\vv{e_r}}
+\protected\def\vvErho{\vv{e_\rho}}
+\protected\def\vvEtheta{\vv{e_\theta}}
+\protected\def\vvEphi{\vv{e_\phi}}
+
+\makeatother

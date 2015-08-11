@@ -571,6 +571,12 @@ DEADLINE:%^t" :clock-resume t)
 
 (setq org-use-speed-commands t)
 
+(setq org-latex-listings 'minted)
+(setq org-latex-minted-options
+      '(("frame" "lines")
+	("fontsize" "\\scriptsize")
+	("linenos" "")))
+
 ;; Raccourcis
 (global-set-key (kbd "C-c C-g") (lambda () (interactive) (org-clock-in '(4))))
 (global-set-key (kbd "C-c C-h") 'org-clock-out)
@@ -578,3 +584,5 @@ DEADLINE:%^t" :clock-resume t)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
 (define-key global-map "\C-cc" 'org-capture)
+
+

@@ -43,6 +43,7 @@ path = wilk/.emacs_workgroups
 ## Data not to be synchronized
 # Directories
 ignore = Name {Library physics mathematics}
+ignore = Name {scientific american 1}
 ignore = Path wilk/enseignement/2004-2005
 ignore = Path wilk/enseignement/2005-2006
 ignore = Path wilk/enseignement/2006-2007

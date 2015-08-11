@@ -1,0 +1,79 @@
+% Author: Julien Cubizolles
+% Public domain
+
+\RequirePackage{pgfplots}
+
+\makeatletter
+
+\pgfplotsset{%
+  colormap = {tango}{color=(DarkSkyBlue) color=(LightPlum)}}
+
+\colorlet{ExtraTickColor}{DarkPlum}
+
+\pgfplotsset{extra tick style={color=ExtraTickColor}
+}
+
+\pgfplotscreateplotcyclelist{monochrome}{%
+        {black},%
+        {black,dashed},%
+        {black,dotted},%
+        {DarkGray},%
+        {DarkGray,dashed},%
+        {DarkGray,dotted},%             
+        {Gray,dashed},%
+        }
+
+\pgfplotscreateplotcyclelist{polychrome}{%
+        {SkyBlue},%
+        {Plum},%
+        {Chameleon},%
+        {SkyBlue,dashed},%
+        {Plum,dashed},%
+        {Chameleon,dashed},%
+        {SkyBlue,dotted},%
+        {Plum,dotted},%             
+        {Chameleon,dotted},%
+        }       
+
+\pgfplotsset{%
+  petit graphe/.style = {%
+    width = 7cm},
+  tres petit graphe/.style = {%
+    width = 6cm},
+}    
+
+\pgfplotsset{%
+  courbe coin/.style = {%
+    every axis y label/.append style=      
+      {at={(axis description cs:-0.1,.5)}},
+    every axis x label/.append style=
+       {at={(axis description cs:1,.1)}},
+    axis x line = bottom,
+    axis y line = left,
+    axis line style={-Latex[round]}
+       }
+}
+
+\pgfplotsset{%
+  courbe centre/.style = {%
+    every axis y label/.append style=      
+      {at={(axis description cs:0.1,1)}},
+    every axis x label/.append style=
+       {at={(axis description cs:1,.1)}},
+    axis lines=center,
+    axis line style={-Latex[round]}
+       }
+}
+
+\pgfplotsset{%
+  courbe boite/.style = {%
+    every axis y label/.append style=      
+      {at={(axis description cs:-0.1,.5)}},
+    every axis x label/.append style=
+       {at={(axis description cs:.5,-.1)}},
+    axis lines = box,
+       }
+}
+
+\makeatother
+

@@ -120,6 +120,16 @@ the variable `gnus-move-split-methods' for finding a default target."
     (let ((sender (jc-gnus-article-header-value "From")))
       (jc-process-sender sender) )))
 
+(defun jc-process-recipient (recipient)
+  (gnus-kill "To" recipient '(gnus-summary-mark-as-processable 1) t) )
+
+(defun jc-process-recipient-at-point ()
+  (interactive)
+  (save-window-excursion          ; better way 
+    (gnus-summary-select-article) ; to do this?
+    (let ((recipient (jc-gnus-article-header-value "To")))
+      (jc-process-sender recipient) )))
+
 
 
 ;; Cleanup all Gnus buffers on exit
