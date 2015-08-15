@@ -1,7 +1,28 @@
 % Author: Julien Cubizolles
 % Public domain
 
-\makeatletter
+\RequirePackage{tikz}
+
+\AtBeginDocument{%
+  \@ifpackageloaded{babel}{%
+    \let\xCJtikz@tikzpicture\tikzpicture
+    \def\tikzpicture{%
+      \iflanguage{french}{%
+        \shorthandoff{:;?!}}{}%
+      \xCJtikz@tikzpicture}%
+    \let\xCJtikz@tikzexternal@tikzpicture@replacement%
+        \tikzexternal@tikzpicture@replacement
+    \def\tikzexternal@tikzpicture@replacement{%
+      \iflanguage{french}{%
+        \shorthandoff{:;?!}}{}%
+      \xCJtikz@tikzexternal@tikzpicture@replacement}}{}}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{patterns}
+\usetikzlibrary{intersections}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+\usetikzlibrary{positioning}
 
 \usetikzlibrary{arrows.meta}
 \tikzset{>={Latex[round]}}
@@ -91,6 +112,3 @@ postaction={decorate}]
     rounded corners,
     draw,
 }}
-
-\makeatother
-

@@ -1,0 +1,14 @@
+# ~/.unison/JoseyWales.prf
+# Unison preferences
+label = PhotoStation
+#Roots of the synchronization
+root = /srv/multimedia/photos/
+root = ssh://JoseyWales//volume1/photo/
+
+log = true
+logfile = /home/wilk/.unison/unison.log
+
+## Include common settings for profiles no matter where they are
+## invoked (client or server)
+include common_PhotoStation
+

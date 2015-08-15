@@ -1,5 +1,6 @@
 \NeedsTeXFormat{LaTeX2e} 
 \ProvidesClass{mpsi_beamer}[2012/08/03 Classe perso mpsi pour beamer]
+
 \RequirePackage{etex}
 
 \RequirePackage{xkeyval}
@@ -12,7 +13,6 @@
 
 % pour un passage à LuaTeX, il faudra revoir les options concernant
 % l'encodage et le choix des polices
-
 % \DeclareOptionX*{\PassOptionsToClass{\CurrentOption}{beamer}}
 
 
@@ -23,13 +23,11 @@
   \PassOptionsToClass{handout}{beamer}
 \fi
 
-
-
 \LoadClass[utf8x,smaller,mathserif]{beamer}
 % utf8x plutôt que utf8 pour pouvoir taper du grec directement
 
 % À changer pour passer à luatex
-\RequirePackage[T1]{fontenc}
+% \RequirePackage[T1]{fontenc}
                           
 %% Attention, des conflits entre standalone et pstricks: standalone
 %% doit être chargé avant pstricks
@@ -37,38 +35,6 @@
 % Or name \end... illegal, see p.192 of the manual.)
 \RequirePackage{standalone}
 \RequirePackage{animate}
-
-\RequirePackage{graphicx}
-\DeclareGraphicsExtensions{.pdf,.png,.jpg,.gif}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%% Pstricks
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \ifPstricks
-% \RequirePackage{pstricks}
-% \RequirePackage{pstricks-add}
-% \RequirePackage{pst-plot,pst-grad,pst-node,multido,pst-coil,pst-eucl,pst-math}
-% \RequirePackage{auto-pst-pdf} % pour compiler avec pdflatex du code
-%                               % pstricks
-
-% % Workaround pour une incompatibilité entre psgraph et auto-pst-pdf
-% \RequirePackage{ifpdf}
-% \ifpdf
-%   \let\psgraph=\postscript
-%   \let\endpsgraph=\endpostscript
-% % \else
-% %   \PreviewEnvironment{psgraph}
-% \fi
-% \fi
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \RequirePackage{gensymb} % pour \micro, \mu
-\RequirePackage[greek,frenchb]{babel}
-
-
-
-\uselanguage{French}
-\languagepath{French}
 
 \RequirePackage{beamerthemempsi}
 
@@ -145,59 +111,25 @@
 
 \AtBeginDocument{
   \maketitle
-  
-  % \begin{frame}{}
-  %   \tableofcontents[pausesections,subsectionstyle=show/shaded/hide,subsubsectionstyle=hide/hide/hide]
-  % \end{frame}
 }
 
-\RequirePackage{fp} % pour des calculs
-
-%%%%%%%%%%%%%%%%%%%%
-%% Symboles%%%%%%%%%
+\RequirePackage[greek,frenchb]{babel}
+\uselanguage{French}
+\languagepath{French}
 \RequirePackage{skull}
-\RequirePackage{marvosym}
-%%%%%%%%%%%%%%%%%%%%
+\input{configuration-math.tex}
+% 
+\input{configuration-physique.tex}
 
-\RequirePackage{tikz,pgfplots}
+\input{configuration-couleurs.tex}
 
-\usetikzlibrary{calc}
-\usetikzlibrary{patterns}
-\usetikzlibrary{intersections}
-\usetikzlibrary{decorations.markings}
-\usetikzlibrary{arrows}
-\pgfplotsset{compat=newest}
-
-\RequirePackage[tight]{units}
-\RequirePackage[locale = FR]{siunitx}
-\sisetup{%
-  inter-unit-separator = \ensuremath{{} \cdot {}},
-  output-decimal-marker = {,},
-  exponent-product = \ensuremath{{} \cdot {}},
-  group-four-digits = false,
-  per-mode = reciprocal,
-  separate-uncertainty = true,
-  multi-part-units = single}
-
-
-\RequirePackage{numprint}
-\RequirePackage{icomma}
-\RequirePackage[version=3]{mhchem}
-
-\RequirePackage{xspace}
-
-\RequirePackage{booktabs}
-\RequirePackage{multirow}
-\RequirePackage{enumerate}
-
-\RequirePackage{esvect,esdiff}
-
-\RequirePackage{bookmark}
-
-\RequirePackage{mathtools}
-% pour DeclarePairedDelimiter et co.
+\input{configuration-tikz-base.tex}
+\input{configuration-tikz-pgfplots.tex}
 
 \input{shortcut}
 \input{chimie}
+
+\makeatother
+
 
 \endinput
