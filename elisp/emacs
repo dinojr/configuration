@@ -46,7 +46,7 @@
 		 ("begin" "$1" "$" "$$" "\\(" "\\["))))
  '(package-selected-packages
    (quote
-    (sx magit helm-company company-auctex company-math wiki-summary yasnippet workgroups2 workgroups window-number win-switch w3m twittering-mode tabbar switch-window smartparens session-manager rainbow-delimiters paredit oauth2 notify naquadah-theme memory-usage magit-filenotify helm gnuplot-mode gnuplot gh flyspell-lazy expand-region emms calfw-gcal calfw boxquote bitlbee bbdb2erc bbdb-vcard bbdb-ext bbdb- autopair auto-dictionary auctex ace-flyspell)))
+    (yasnippet yasnippet-bundle sx magit helm-company company-auctex company-math wiki-summary workgroups2 workgroups window-number win-switch w3m twittering-mode tabbar switch-window smartparens session-manager rainbow-delimiters paredit oauth2 notify naquadah-theme memory-usage magit-filenotify helm gnuplot-mode gnuplot gh flyspell-lazy expand-region emms calfw-gcal calfw boxquote bitlbee bbdb2erc bbdb-vcard bbdb-ext bbdb- autopair auto-dictionary auctex ace-flyspell)))
  '(reftex-toc-include-labels t)
  '(reftex-toc-split-windows-horizontally t))
 
@@ -69,6 +69,7 @@
 (load "JCdired.el")
 (load "JCyasnippet.el")
 ;; (load "JCdiary.el")
+(load "JCcalendrier.el")
 (load "JCregexps.el")
 (setq org-export-async-init-file "/home/wilk/configuration/elisp/org-export-async-init.el")
 ;; (load "JCorg-google.el")
