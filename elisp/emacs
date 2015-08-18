@@ -76,6 +76,7 @@
 ;; (load "JCcalfw.el")
 (load "JClatex.el")
 (load "JCgit.el")
+(load "JCbrowser.el")
 ;; (load "JCediff.el")
 ;; (load "JCbitlbee.el")
 (load "JCgnus.el")
