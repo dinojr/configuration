@@ -31,5 +31,5 @@
 (require 'french-holidays)
 (setq calendar-holidays holiday-french-holidays)
 
-
-
+(setq calendar-mark-holidays-flag t)
+(setq calendar-mark-diary-entries-flag t)

@@ -3,6 +3,7 @@
 (require 'calfw)
 (require 'calfw-org)
 (require 'calfw-ical)
+(require 'calfw-cal)
 (setq cfw:fchar-junction ?╋
       cfw:fchar-vertical-line ?┃
       cfw:fchar-horizontal-line ?━
