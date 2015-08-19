@@ -1,7 +1,6 @@
 ;; ~/.emacs.d/JCbrowser.el -*- mode: lisp-*-
 (require 'eww)
 
-
 (defun choose-browser (url &rest args)
   (interactive "sURL: ")
   (if (y-or-n-p "Use external browser? ")
