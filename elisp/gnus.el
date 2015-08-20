@@ -141,7 +141,6 @@
 	("gnus-warning" "duplicat\\(e\\|ion\\) of message" "duplicate")
 	(: spam-split 'spam-use-bogofilter)
 	;; all the rest
-	;; ,jc-gnus-catchall-group
 	"General"
 	))
 
