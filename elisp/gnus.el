@@ -104,6 +104,22 @@
       bbdb/gnus-split-myaddr-regexp gnus-ignored-from-addresses
       )
 
+;; SPAM
+(spam-initialize 'spam-use-move)
+
+(setq spam-use-bogofilter t)
+
+(require 'spam)
+
+(setq spam-mark-ham-unread-before-move-from-spam-group t)
+(setq spam-mark-only-unseen-as-spam t)
+;; (setq spam-autodetect-recheck-messages t)
+
+(setq spam-split-group "Junk") ;unqualified group name
+;; (setq spam-junk-mailgroups (quote ("nnml+local:junk" "nnimap+free:Junk" "nnimap+gmail:[Gmail]/Spam")))
+
+;; (setq  nnmail-split-lowercase-expanded t)
+
 ;; Splitting
 (setq nnmail-split-methods 'nnmail-split-fancy)
 
@@ -114,7 +130,17 @@
 		(car (bbdb/gnus-split-method))))
 	("gnus-warning" "duplicat\\(e\\|ion\\) of message" "duplicate")
 	;; all the rest
-	;; ,jc-gnus-catchall-group
+	"General"
+	))
+
+(setq nnimap-split-fancy
+      `(|
+	("from" ,gnus-ignored-from-addresses "sent-mail")
+	(: (lambda ()
+		(car (bbdb/gnus-split-method))))
+	("gnus-warning" "duplicat\\(e\\|ion\\) of message" "duplicate")
+	(: spam-split 'spam-use-bogofilter)
+	;; all the rest
 	"General"
 	))
 
@@ -125,7 +151,10 @@
 ;		(nnimap-authentificator "j.cubizolles")
 ;               (nnimap-authinfo-file "~/.authinfo")
                 (nnimap-stream ssl)
-		(nnir-search-engine imap))
+		(nnir-search-engine imap)
+		(nnimap-split-methods 'nnimap-split-fancy)
+		;; (nnimap-split-methods default)
+		(nnimap-inbox "INBOX"))
 	(nnimap "free"
 		(nnimap-address "imap.free.fr")
 		; Ne marche pas sans la ligne suivante
@@ -133,10 +162,9 @@
 ;		(nnimap-authinfo-file "~/.authinfo")
 ;		(nnimap-unsplittable-articles (%Deleted %Seen))
 		(nnir-search-engine imap)
-		;; (nnimap-split-methods 'nnimap-split-fancy)
-		(nnimap-split-methods default)
+		(nnimap-split-methods 'nnimap-split-fancy)
+		;; (nnimap-split-methods default)
 		(nnimap-inbox "INBOX")
-
 		)
 	;;(nntp "news.free.fr")
 	(nntp "news.gwene.org"
@@ -407,23 +435,6 @@
 ;; (oxy-unicode-threads)
 
 ;(setq gnus-ignoredfrom-addresses (quote ("Julien Cubizolles" "j.cubizolles@free.fr")))
-
-
-;; SPAM
-(setq spam-use-bogofilter t)
-
-(require 'spam)
-
-(spam-initialize 'spam-use-move)
-
-(setq spam-mark-ham-unread-before-move-from-spam-group t)
-(setq spam-mark-only-unseen-as-spam t)
-;; (setq spam-autodetect-recheck-messages t)
-
-(setq spam-split-group "Junk") ;unqualified group name
-(setq spam-junk-mailgroups (quote ("nnml+local:junk" "nnimap+free:Junk" "nnimap+gmail:[Gmail]/Spam")))
-
-(setq  nnmail-split-lowercase-expanded t)
 
 ;;Posting
 
