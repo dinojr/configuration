@@ -1,0 +1,1 @@
+/home/wilk/info/synology/synothumbs/synothumb-l.py
