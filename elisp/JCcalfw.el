@@ -15,11 +15,8 @@
 
 ;; (cfw:open-ical-calendar "https://www.google.com/calendar/ical/09qqpld5o29tddmmv92dse1tng%40group.calendar.google.com/public/basic.ics")
 
-(defun jc-change-agenda-files ()
-  (make-local-variable 'org-agenda-files)
-  (setq org-agenda-files '("~/org/orgfiles/planning.org")))
+(defun jc-cfw-open-planning-calendar ()
+  (interactive)
+  (let ((org-agenda-files '("~/org/orgfiles/planning.org")))
+  (cfw:open-org-calendar)))
 
-(jc-change-agenda-files)
-
-(advice-add 'cfw:open-org-calendar :before
-	      'jc-change-agenda-files)
