@@ -20,3 +20,5 @@
 ;; #+RESULTS:
 
 ;; (org-caldav-sync)
+
+(global-set-key [f5] 'org-caldav-sync)
