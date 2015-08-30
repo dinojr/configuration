@@ -99,9 +99,7 @@
 
 ;; Fichiers
 (setq org-directory "~/org/orgfiles/")
-(setq org-agenda-files (quote ("~/org/orgfiles/" "~/vuibert/")))
-
-
+(setq org-agenda-files "~/org/orgfiles/liste-agendas.org")
 
 ;; todo
 ;; (setq org-todo-keyword-faces 
