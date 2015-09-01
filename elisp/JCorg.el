@@ -455,69 +455,69 @@
 (setq org-export-in-background nil)
 
 
-(defun jc-org-publish-project-options (backend)
-  (setq org-publish-project-alist
-        `(("TeX"
-           :base-directory "./"
-           :publishing-directory "./"
-           :publishing-function org-beamer-publish-to-latex
-           :exclude ".*"
-           :latex-class "mpsi_beamer"
-           :include , (list (file-name-nondirectory buffer-file-name))
-           )
-          ("beamer"
-           :base-directory "./"
-           :publishing-directory "./"
-           :publishing-function org-beamer-publish-to-pdf
-           :exclude ".*"
-           :latex-class "mpsi_beamer"
-	   :include , (list (file-name-nondirectory buffer-file-name))
-           :completion-function jc-org-publish-rename-beamer-pdf)
-          ("notes-legacy"
-           :base-directory "./"
-           :publishing-directory "./"
-           :publishing-function org-beamer-publish-to-pdf
-           :exclude ".*"
-           :latex-class "mpsi_beamer"
-	   :include , (list (file-name-nondirectory buffer-file-name))
-           :latex-class-options "[NotesCours]"
-           :completion-function jc-org-publish-rename-notes-pdf
-           )
-          ("notes"
-           :base-directory "./"
-           :publishing-directory "./"
-           :preparation-function jc-org-latex-notes-preparation
-           :publishing-function org-beamer-publish-to-pdf
-           :exclude ".*"
-           :latex-class "mpsi-beamerarticle"
-	   :include , (list (file-name-nondirectory buffer-file-name))
-           :completion-function jc-org-publish-rename-notes-pdf
-           )
-          ("eleves-legacy"
-           :base-directory "./"
-           :publishing-directory "./"
-           :preparation-function jc-org-latex-notes-preparation
-           :publishing-function org-latex-publish-to-pdf
-           :exclude ".*"
-           :latex-class "mpsi-eleves"
-	   :include , (list (file-name-nondirectory buffer-file-name))	   
-           :select-tags ("eleves")
-           :headline-levels 5
-           :completion-function jc-org-publish-rename-eleves-pdf
-           )
-          ("eleves"
-           :base-directory "./"
-           :publishing-directory "./"
-           :preparation-function jc-org-latex-notes-preparation
-           :publishing-function org-beamer-publish-to-pdf
-           :exclude ".*"
-           :latex-class "mpsi-beamerarticle-eleves"
-	   :include , (list (file-name-nondirectory buffer-file-name))
-           :select-tags ("eleves")
-           :completion-function jc-org-publish-rename-eleves-pdf
-           )
-          ("cours" :components ("beamer" "notes"))))
-  )
+;; (defun jc-org-publish-project-options (backend)
+;;   (setq org-publish-project-alist
+;;         `(("TeX"
+;;            :base-directory "./"
+;;            :publishing-directory "./"
+;;            :publishing-function org-beamer-publish-to-latex
+;;            :exclude ".*"
+;;            :latex-class "mpsi_beamer"
+;;            :include , (list (file-name-nondirectory buffer-file-name))
+;;            )
+;;           ("beamer"
+;;            :base-directory "./"
+;;            :publishing-directory "./"
+;;            :publishing-function org-beamer-publish-to-pdf
+;;            :exclude ".*"
+;;            :latex-class "mpsi_beamer"
+;; 	   :include , (list (file-name-nondirectory buffer-file-name))
+;;            :completion-function jc-org-publish-rename-beamer-pdf)
+;;           ("notes-legacy"
+;;            :base-directory "./"
+;;            :publishing-directory "./"
+;;            :publishing-function org-beamer-publish-to-pdf
+;;            :exclude ".*"
+;;            :latex-class "mpsi_beamer"
+;; 	   :include , (list (file-name-nondirectory buffer-file-name))
+;;            :latex-class-options "[NotesCours]"
+;;            :completion-function jc-org-publish-rename-notes-pdf
+;;            )
+;;           ("notes"
+;;            :base-directory "./"
+;;            :publishing-directory "./"
+;;            :preparation-function jc-org-latex-notes-preparation
+;;            :publishing-function org-beamer-publish-to-pdf
+;;            :exclude ".*"
+;;            :latex-class "mpsi-beamerarticle"
+;; 	   :include , (list (file-name-nondirectory buffer-file-name))
+;;            :completion-function jc-org-publish-rename-notes-pdf
+;;            )
+;;           ("eleves-legacy"
+;;            :base-directory "./"
+;;            :publishing-directory "./"
+;;            :preparation-function jc-org-latex-notes-preparation
+;;            :publishing-function org-latex-publish-to-pdf
+;;            :exclude ".*"
+;;            :latex-class "mpsi-eleves"
+;; 	   :include , (list (file-name-nondirectory buffer-file-name))	   
+;;            :select-tags ("eleves")
+;;            :headline-levels 5
+;;            :completion-function jc-org-publish-rename-eleves-pdf
+;;            )
+;;           ("eleves"
+;;            :base-directory "./"
+;;            :publishing-directory "./"
+;;            :preparation-function jc-org-latex-notes-preparation
+;;            :publishing-function org-beamer-publish-to-pdf
+;;            :exclude ".*"
+;;            :latex-class "mpsi-beamerarticle-eleves"
+;; 	   :include , (list (file-name-nondirectory buffer-file-name))
+;;            :select-tags ("eleves")
+;;            :completion-function jc-org-publish-rename-eleves-pdf
+;;            )
+;;           ("cours" :components ("beamer" "notes"))))
+;;   )
 
 ;; (add-hook 'org-mode-hook 'jc-org-publish-project-options)
 ;; (add-hook 'org-export-before-processing-hook 'jc-org-publish-project-options)
