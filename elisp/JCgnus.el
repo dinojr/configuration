@@ -130,7 +130,19 @@ the variable `gnus-move-split-methods' for finding a default target."
     (let ((recipient (jc-gnus-article-header-value "To")))
       (jc-process-sender recipient) )))
 
-
+(defun jc-change-smtp-server (server)
+  (interactive "M")
+  (cond  ((string-equal server "free")
+	  (setq 
+	   smtpmail-smtp-server "smtp.free.fr"
+	   smtpmail-default-smtp-server "smtp.free.fr")
+	  )
+	 ((string-equal server "gmail")
+	  (setq 
+	   smtpmail-smtp-server "smtp.gmail.com"
+	   smtpmail-default-smtp-server "smtp.gmail.com")
+	   ))
+  )
 
 ;; Cleanup all Gnus buffers on exit
 
