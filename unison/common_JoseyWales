@@ -61,6 +61,7 @@ ignore = Path wilk/texmf/tex/latex/mpsi
 ignore = Name {.git}
 ignorenot = Path wilk/vuibert/vuibert-sup/.git
 ignore = Path wilk/News/namazu
+ignore = Path wilk/Mail/junk
 
 # Files
 ignore = Path wilk/.unison/default.prf
@@ -83,6 +84,7 @@ ignore = Name {,.}*{.toc}
 ignore = Name {mycor}{,.}*
 ignore = Name {.saves}{,.}*
 ignore = Name {session}{,.}*
+
 ## Miscellaneous options
 
 auto =true
