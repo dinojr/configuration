@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: trombi
+# key: 
+# --
+** Élève                                                              :drill:
+
+Céki
+
+
+[[file:$0_small.jpg]]
+
+
+*** Nom
+
+$1
