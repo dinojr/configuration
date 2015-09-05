@@ -102,19 +102,25 @@
 (setq org-agenda-files "~/org/orgfiles/liste-agendas.org")
 
 ;; todo
-;; (setq org-todo-keyword-faces 
-;; (quote (
-;;  ("TODO" :foreground "red1" :weight bold)
-;;  ("STARTED" :foreground "magenta" :weight bold)
-;;  ("DONE" :foreground "yellow green" :weight bold)
-;;  ("WAITING" :foreground "orange" :weight bold)
-;;  ("SOMEDAY" :foreground "plum" :weight bold)
-;;  ("CANCELLED" :foreground "yellow green" :weight bold)
-;;  ("BUG" :foreground "red1" :weight bold)
-;;  ("REPORTED" :foreground "slate blue" :weight bold)
-;;  ("FIXED" :foreground "yellow green" :weight bold)
-;;  ("WONTFIX" :foreground "yellow green" :weight bold)
-;; )))
+(setq org-todo-keyword-faces 
+(quote (
+ ("TODO" :foreground "red1" :weight bold)
+ ("STARTED" :foreground "magenta" :weight bold)
+ ("DONE" :foreground "yellow green" :weight bold)
+ ("WAITING" :foreground "orange" :weight bold)
+ ("SOMEDAY" :foreground "plum" :weight bold)
+ ("CANCELLED" :foreground "yellow green" :weight bold)
+ ("BUG" :foreground "red1" :weight bold)
+ ("REPORTED" :foreground "slate blue" :weight bold)
+ ("FIXED" :foreground "yellow green" :weight bold)
+ ("WONTFIX" :foreground "yellow green" :weight bold)
+)))
+
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "|" "DONE(d)")
+	(sequence "WAITING(w)" "|" "DONE(d)")
+	(sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f)")
+	(sequence "|" "CANCELED(c)")))
 
 ;Clocking
 ;;
@@ -334,9 +340,6 @@
 
 (require 'org-inlinetask)
 ;; C-c C-x t org-inline-task-insert-task
-
-;; Export/Publish
-(setq org-export-latex-listings t)
 
 (setq org-beamer-environments-extra
       '(("action" "k" "\\begin{actionenv}%a" "\\end{actionenv}") 
