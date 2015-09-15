@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: animate
+# key: animate_
+# --
+\begin{animateinline}[poster=first,controls,loop]{$1}%
+   \multiframe{$2}{icount=$3}{%
+      \begin{tikzpicture}[style courant]
+         \draw (\icount,\icount) -- ();
+      \end{tikzpicture}
+   $0
+   }
+\end{animateinline}
