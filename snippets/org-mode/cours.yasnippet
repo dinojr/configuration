@@ -13,7 +13,7 @@
 
 #+begin_src emacs-lisp :tangle yes :exports none
   (setq org-publish-project-alist
-        '(("TeX"
+        `(("TeX"
            :base-directory "./"
            :publishing-directory "./"
            :publishing-function org-beamer-publish-to-latex
