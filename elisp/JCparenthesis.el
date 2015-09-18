@@ -57,4 +57,12 @@
 ;; Vérifier que latex-mode est bien dans sp-navigate-consider-stringlike-sexp
 
 (sp-use-paredit-bindings)
+
+(setq sp-override-key-bindings
+      '(("M-<kp-2>" . sp-splice-sexp-killing-forward)
+	("M-<down>" . nil)
+	("M-<kp-8>" . sp-splice-sexp-killing-backward)
+	("M-<up>" . nil)))
+
+(sp--update-override-key-bindings)
 (smartparens-global-mode)
