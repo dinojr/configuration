@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: Squelette cours
-# key: cours
+# key: cours_
 # --
 #+TITLE: $1
 #+DATE: $2 2015
@@ -34,7 +34,7 @@
            :base-directory "./"
            :publishing-directory "./"
            :preparation-function jc-org-latex-notes-preparation
-           :publishing-function org-beamer-publish-to-latex
+           :publishing-function org-beamer-publish-to-pdf
            :exclude ".*"
            :latex-class "mpsi-beamerarticle"
            :include ,(list (file-name-nondirectory buffer-file-name))
