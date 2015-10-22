@@ -578,6 +578,13 @@ DEADLINE:%^t" :clock-resume t)
 	("fontsize" "\\scriptsize")
 	("linenos" "")))
 
+;; ;; Load the org-weather library
+;; (add-to-list 'load-path "~/info/emacs/org-weather")
+;; (require 'org-weather)
+;; ;; Set your location and refresh the data
+;; (setq org-weather-location "Orléans,FR")
+;; (org-weather-refresh)
+
 ;; Raccourcis
 (global-set-key (kbd "C-c C-g") (lambda () (interactive) (org-clock-in '(4))))
 (global-set-key (kbd "C-c C-h") 'org-clock-out)
