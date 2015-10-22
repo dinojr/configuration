@@ -12,6 +12,7 @@
 #+LATEX_HEADER_EXTRA: \standaloneconfig{mode=image}
 
 #+begin_src emacs-lisp :tangle yes :exports none
+  (setq org-export-in-background t)	    
   (setq org-publish-project-alist
         `(("TeX"
            :base-directory "./"
