@@ -8,7 +8,7 @@
 
 ;; (if gnus-batch-mode (setq gnus-plugged t) (setq gnus-plugged nil)) ;; pour ramasser le courrier en batch
 ;; (setq gnus-plugged nil)
-(setq gnus-agent-expqire-all nil)
+(setq gnus-agent-expire-all nil)
 (setq gnus-agent-expire-days 30)
 
 ;(add-hook 'gnus-exit-gnus-hook 'gnus-agent-expire)
