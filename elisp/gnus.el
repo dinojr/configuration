@@ -8,7 +8,7 @@
 
 ;; (if gnus-batch-mode (setq gnus-plugged t) (setq gnus-plugged nil)) ;; pour ramasser le courrier en batch
 ;; (setq gnus-plugged nil)
-(setq gnus-agent-expire-all nil)
+(setq gnus-agent-expqire-all nil)
 (setq gnus-agent-expire-days 30)
 
 ;(add-hook 'gnus-exit-gnus-hook 'gnus-agent-expire)
@@ -148,7 +148,18 @@
 	      (nnir-search-engine gmane))
 	(nntp "news.gmane.org"
 	      (nnir-search-engine gmane))
+	(nnimap "FreeOffline"
+		(nnimap-stream shell)
+		;; (nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/Maildir-free")
+		(nnimap-shell-program "/usr/lib/dovecot/imap -c ~/.dovecot-free")
+		)
+	;; (nnmaildir "FreeOffline" (directory "~/Maildir-free"))
+	;; (nnimap "GmailOffline"
+	;; 	(nnimap-stream shell)
+	;; 	(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/Maildir-gmail")
+	;; 	)
 	)
+      
 )
 
 (setq nnmail-split-fancy
@@ -183,7 +194,7 @@
       gnus-agent-go-online t
       )
 
-(setq gnus-agentized-servers '("nnimap:gmail" "nnimap:free" "nntp:news.gmane.org"))
+;; (setq gnus-agentized-servers '("nnimap:gmail" "nnimap:free" "nntp:news.gmane.org"))
 
 (defun jc-gnus-open-agentized-servers ()
   (interactive)
