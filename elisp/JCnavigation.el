@@ -107,13 +107,6 @@
 (set-charset-priority 'unicode)
 (setq default-process-coding-system '(utf-8-unix . utf-8-unix))
 
-;; Ace jump
-(require 'ace-jump-mode)
-
-;; expand-region
-(add-to-list 'load-path "/home/wilk/info/emacs/expand-region.el")
-(require 'expand-region)
-
 (require 'align)
 
 ;; Raccourcis
