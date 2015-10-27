@@ -192,7 +192,7 @@
       gnus-agent-go-online t
       )
 
-;; (setq gnus-agentized-servers '("nnimap:gmail" "nnimap:free" "nntp:news.gmane.org"))
+(setq gnus-agentized-servers '("nnimap:gmail" "nnimap:free" "nntp:news.gmane.org"))
 
 (defun jc-gnus-open-agentized-servers ()
   (interactive)
