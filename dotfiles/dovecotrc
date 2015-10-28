@@ -1,0 +1,4 @@
+protocols = imap
+mail_location = maildir:~/Maildir-test
+auth default {
+}
