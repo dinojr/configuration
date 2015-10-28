@@ -35,6 +35,7 @@ path = wilk/.config/terminator/config
 path = wilk/pim/passwds.revelation
 path = wilk/.bbdb
 path = wilk/.netrc
+path = wilk/.authinfo
 path = wilk/.asynk
 path = wilk/diary
 path = wilk/.emacs_workgroups
