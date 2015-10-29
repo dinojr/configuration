@@ -153,7 +153,7 @@
 	;; 	(nnimap-stream shell)
 	;; 	(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/Maildir-gmail")
 	;; 	)
-		(nnimap "FreeOffline"
+	(nnimap "IMAPOffline"
 		(nnimap-stream shell)
 		(nnimap-shell-program "/usr/lib/dovecot/imap -c /home/wilk/.dovecotrc"))
 	)
