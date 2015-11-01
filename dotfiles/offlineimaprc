@@ -1,0 +1,107 @@
+[general]
+accounts = FreeOffline,GmailOffline
+maxsyncaccounts = 4
+
+[Account FreeOffline]
+localrepository = FreeLocal
+remoterepository = FreeRemote
+autorefresh = 1
+synclabels = yes
+maxage = 365
+
+[Repository FreeLocal]
+type = Maildir
+localfolders = ~/Maildir/Free/
+# preauthtunnel = /usr/lib/dovecot/imap -o mail_location=maildir:$HOME/Maildir/Free:LAYOUT=fs
+# preauthtunnel = /usr/lib/dovecot/imap -c $HOME/.dovecotrc
+
+[Repository FreeRemote]
+type = IMAP
+remotehost = imap.free.fr
+remoteuser = j.cubizolles
+# folderfilter = lambda foldername: foldername not in ['anciens']
+folderfilter = lambda foldername: foldername not in ['anciens']
+realdelete = yes
+holdconnectionopen = true
+keepalive = 60
+
+[Account GmailOffline]
+localrepository = GmailLocal
+remoterepository = GmailRemote
+autorefresh = 1
+synclabels = yes
+maxage = 365
+
+[Repository GmailLocal]
+type = Maildir
+localfolders = ~/Maildir/Gmail/
+# preauthtunnel = /usr/lib/dovecot/imap /usr/lib/dovecot/imap -o mail_location=maildir:$HOME/Maildir/Gmail:LAYOUT=fs
+# preauthtunnel = /usr/lib/dovecot/imap -c $HOME/.dovecotrc
+
+[Repository GmailRemote]
+type = Gmail
+remoteuser = j.cubizolles@gmail.com
+folderfilter = lambda foldername: foldername in ['General']
+realdelete = yes
+holdconnectionopen = true
+keepalive = 60
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+
+# [general]
+# accounts = Free
+# maxsyncaccounts = 2
+# #pythonfile = ~/.offlineimap.py
+
+# # [Account Gmail]
+# # localrepository = LocalGmail
+# # remoterepository = RemoteGmail
+# # autorefresh=1
+# # synclabels = yes
+# # maxage = 365
+
+# # [Repository LocalGmail]
+# # type = Maildir
+# # localfolders = ~/Maildir-gmail
+# # preauthtunnel = /usr/lib/dovecot/imap -o mail_location=maildir:$HOME/Maildir-gmail
+
+# # [Repository RemoteGmail]
+# # type = Gmail
+# # remoteuser = j.cubizolles@gmail.com
+# # #remotepasseval = get_password_emacs("imap.gmail.com", "j.cubizolles@gmail.com", "993")
+# # remotepasseval = "password"
+# # realdelete = no
+
+# # folderfilter = lambda foldername: foldername not in ['[Gmail]/Spam', '[Gmail]/All Mail', '[Gmail]/Starred', '[Gmail]/Important']
+
+# # folderfilter = lambda folder: folder in ['General']
+
+# # holdconnectionopen = true
+# # keepalive = 60
+# # sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+
+# [Account Free]
+# localrepository = LocalFree
+# remoterepository = RemoteFree
+# autorefresh=1
+# maxage = 365
+
+# [Repository LocalFree]
+# type = Maildir
+# localfolders = ~/Maildir/Free
+# preauthtunnel = /usr/lib/dovecot/imap -c ~/.dovecotrc 
+# # preauthtunnel = /usr/lib/dovecot/imap -o mail_location=maildir:$HOME/Maildir-free
+# sep = .
+
+# [Repository RemoteFree]
+# type = IMAP
+# folderfilter = lambda folder: folder not in ['anciens']
+# remotehost = imap.free.fr
+# remoteuser = j.cubizolles
+# #remotepasseval = get_password_emacs("imap.free.fr", "j.cubizolles@free.fr", "993")
+# # remotepasseval = "password"
+# realdelete = no
+# holdconnectionopen = true
+# keepalive = 60
+# sslcacertfile = /etc/ssl/certs/ca-certificates.crt

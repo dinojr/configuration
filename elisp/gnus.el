@@ -148,7 +148,16 @@
 	      (nnir-search-engine gmane))
 	(nntp "news.gmane.org"
 	      (nnir-search-engine gmane))
+	;; (nnmaildir "FreeOffline" (directory "~/Maildir-free"))
+	;; (nnimap "GmailOffline"
+	;; 	(nnimap-stream shell)
+	;; 	(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/Maildir-gmail")
+	;; 	)
+	(nnimap "IMAPOffline"
+		(nnimap-stream shell)
+		(nnimap-shell-program "/usr/lib/dovecot/imap -c /home/wilk/.dovecotrc"))
 	)
+
 )
 
 (setq nnmail-split-fancy

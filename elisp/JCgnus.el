@@ -11,12 +11,12 @@
 
 (add-hook 'gnus-message-setup-hook 'turn-on-auto-fill)
 
-(eval-after-load 'gnus 
-  (lambda ()
-    (add-hook 'gnus-agent-plugged-hook 'jc-gnus-open-agentized-servers)
-    ;; (add-hook 'gnus-agent-plugged-hook 'jc-nuke-newsletter-group)
-    )
-  )
+;; (eval-after-load 'gnus 
+;;   (lambda ()
+;;     (add-hook 'gnus-agent-plugged-hook 'jc-gnus-open-agentized-servers)
+;;     ;; (add-hook 'gnus-agent-plugged-hook 'jc-nuke-newsletter-group)
+;;     )
+;;   )
 
 ;; Pour ne pas indenter les Topics par mégarde
 (eval-after-load "gnus-topic"
