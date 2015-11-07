@@ -1,6 +1,7 @@
 [general]
 accounts = FreeOffline,GmailOffline
 maxsyncaccounts = 4
+#pythonfile = .offlineimap.py
 
 [Account FreeOffline]
 localrepository = FreeLocal
