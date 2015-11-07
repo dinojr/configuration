@@ -144,6 +144,7 @@
     ;; (require 'autopair-latex)
     (add-hook 'org-mode-hook 'LaTeX-math-mode)
     (setq TeX-insert-braces nil)
+    (setq LaTeX-fill-break-at-separators '(\\\( \\\[))
     ))
 
 
