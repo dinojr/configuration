@@ -11,7 +11,7 @@
 # configured here named ".notmuch".
 #
 [database]
-path=/home/wilk/email
+path=/home/wilk/email/
 
 # User configuration
 #
@@ -50,7 +50,7 @@ other_email=j.cubizolles@gmail.com;
 [new]
 # tags=unread;inbox;
 tags=
-ignore=
+ignore= News
 
 # Search configuration
 #
