@@ -91,7 +91,10 @@
 (setq nnimap-authinfo-file "~/.authinfo")
 
 (setq gnus-select-method 
-	'(nnml "local"))
+      '(nnml "Local"
+	     (nnml-directory "~/email/Local")
+	     (nnml-active-file "~/email/Local/active")
+	     (nnml-get-new-mail nil)))
 
 ; Pour ne pas télécharger les pièces jointes par défaut
 ;(setq nnimap-fetch-partial-articles "text/")
@@ -165,6 +168,11 @@
 		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Gmail:LAYOUT=fs")
 		(nnimap-split-methods default)
 		(nnimap-inbox "INBOX"))
+	(nnfolder "archive"
+	  (nnfolder-directory "~/email/Local/archive")
+	  (nnfolder-active-file "~/email/Local/archive/active")
+	  (nnfolder-get-new-mail nil)
+	  (nnfolder-inhibit-expiry t))
 	)
 
 )
