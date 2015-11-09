@@ -153,9 +153,18 @@
 	;; 	(nnimap-stream shell)
 	;; 	(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/Maildir-gmail")
 	;; 	)
-	(nnimap "IMAPOffline"
+	(nnimap "FreeOffline"
 		(nnimap-stream shell)
-		(nnimap-shell-program "/usr/lib/dovecot/imap -c /home/wilk/.dovecotrc"))
+		;; (nnimap-shell-program "/usr/lib/dovecot/imap -c /home/wilk/.dovecotrc-free")
+		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Free:LAYOUT=fs")
+		(nnimap-split-methods default)
+		(nnimap-inbox "INBOX"))
+	(nnimap "GmailOffline"
+		(nnimap-stream shell)
+		;; (nnimap-shell-program "/usr/lib/dovecot/imap -c /home/wilk/.dovecotrc-gmail")
+		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Gmail:LAYOUT=fs")
+		(nnimap-split-methods default)
+		(nnimap-inbox "INBOX"))
 	)
 
 )

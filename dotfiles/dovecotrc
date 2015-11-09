@@ -1,4 +1,0 @@
-protocols = imap
-mail_location = maildir:~/email/Maildir:LAYOUT=fs
-auth default {
-}
