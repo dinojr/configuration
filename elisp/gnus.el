@@ -122,27 +122,27 @@
 
 (setq gnus-secondary-select-methods
       '(
-	(nnimap "gmail"
-                (nnimap-address "imap.gmail.com")
-;		(nnimap-authentificator "j.cubizolles")
-;               (nnimap-authinfo-file "~/.authinfo")
-                (nnimap-stream ssl)
-		(nnir-search-engine imap)
-		;; (nnimap-split-methods nnimap-split-fancy)
-		(nnimap-inbox "INBOX")
-		(nnimap-split-methods default)
-		)
-	(nnimap "free"
-		(nnimap-address "imap.free.fr")
-		; Ne marche pas sans la ligne suivante
-;		(nnimap-authentificator "j.cubizolles")
-;		(nnimap-authinfo-file "~/.authinfo")
-;		(nnimap-unsplittable-articles (%Deleted %Seen))
-		(nnir-search-engine imap)
-		(nnimap-inbox "INBOX")
-		;; (nnimap-split-methods nnimap-split-fancy)
-		(nnimap-split-methods default)
-		)
+;; 	(nnimap "gmail"
+;;                 (nnimap-address "imap.gmail.com")
+;; ;		(nnimap-authentificator "j.cubizolles")
+;; ;               (nnimap-authinfo-file "~/.authinfo")
+;;                 (nnimap-stream ssl)
+;; 		(nnir-search-engine imap)
+;; 		;; (nnimap-split-methods nnimap-split-fancy)
+;; 		(nnimap-inbox "INBOX")
+;; 		(nnimap-split-methods default)
+;; 		)
+;; 	(nnimap "free"
+;; 		(nnimap-address "imap.free.fr")
+;; 		; Ne marche pas sans la ligne suivante
+;; ;		(nnimap-authentificator "j.cubizolles")
+;; ;		(nnimap-authinfo-file "~/.authinfo")
+;; ;		(nnimap-unsplittable-articles (%Deleted %Seen))
+;; 		(nnir-search-engine imap)
+;; 		(nnimap-inbox "INBOX")
+;; 		;; (nnimap-split-methods nnimap-split-fancy)
+;; 		(nnimap-split-methods default)
+;; 		)
 	;;(nntp "news.free.fr")
 	(nntp "news.gwene.org"
 	      (nnir-search-engine gmane))
@@ -192,7 +192,8 @@
       gnus-agent-go-online t
       )
 
-(setq gnus-agentized-servers '("nnimap:gmail" "nnimap:free" "nntp:news.gmane.org"))
+;; (setq gnus-agentized-servers '("nnimap:gmail" "nnimap:free" "nntp:news.gmane.org"))
+(setq gnus-agentized-servers '("nntp:news.gmane.org"))
 
 (defun jc-gnus-open-agentized-servers ()
   (interactive)
