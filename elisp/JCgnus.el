@@ -6,6 +6,9 @@
 
 (require 'gnus)
 (require 'gnus-load)
+
+(setq gnus-directory "~/email/News/")
+(setq nnml-directory "~/email/Mail/")
 (setq user-full-name "Julien Cubizolles")
 (setq user-mail-address "j.cubizolles@free.fr")
 
