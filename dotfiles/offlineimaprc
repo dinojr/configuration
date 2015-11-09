@@ -1,3 +1,4 @@
+# -*- mode: conf-*-
 [general]
 accounts = FreeOffline,GmailOffline
 maxsyncaccounts = 4
