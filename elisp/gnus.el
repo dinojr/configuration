@@ -1,6 +1,7 @@
 ;; ~/.gnus.el
 (require 'gnus)
 ;; (require 'gnuslog)
+(require 'nnir)
 
 (setq auth-source-debug t)
 (setq debug-on-error t)
@@ -44,7 +45,7 @@
 
 ;; (gnus-registry-initialize)
 
-(require 'nnir)
+
 
 ; Pour ne pas passer au message suivant avec SPACE
 (setq gnus-summary-stop-at-end-of-message t)
@@ -269,8 +270,6 @@
 
 ;; Check des nouveaux articles toutes les 5 minutes pour les groupes de niveau inférieur à 3 (le Topic Loisirs est à 5 par exemple)
 ;; (gnus-demon-add-handler 'gnus-group-get-new-news 5 3)
-
-(add-to-list 'load-path "~/.emacs.d/Aadis-Emacs-Setup")
 
 (setq gnus-notifications-minimum-level 1)
 (add-hook 'gnus-after-getting-new-news-hook 'gnus-notifications)
