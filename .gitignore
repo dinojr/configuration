@@ -4,3 +4,4 @@ auto/
 **/*#*
 gnuslog.el
 /.emacs.desktop
+/elisp/JCparadox.el

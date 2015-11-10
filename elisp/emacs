@@ -46,7 +46,8 @@
 		 ("begin" "$1" "$" "$$" "\\(" "\\["))))
  '(package-selected-packages
    (quote
-    (notmuch yasnippet yasnippet-bundle sx magit helm-company company-auctex company-math wiki-summary workgroups2 workgroups window-number win-switch w3m twittering-mode tabbar switch-window smartparens session-manager rainbow-delimiters paredit oauth2 notify naquadah-theme memory-usage magit-filenotify helm gnuplot-mode gnuplot gh flyspell-lazy expand-region emms calfw-gcal calfw boxquote bitlbee bbdb2erc bbdb-vcard bbdb-ext bbdb- autopair auto-dictionary auctex ace-flyspell)))
+    (paradox notmuch yasnippet yasnippet-bundle sx magit helm-company company-auctex company-math wiki-summary workgroups2 workgroups window-number win-switch w3m twittering-mode tabbar switch-window smartparens session-manager rainbow-delimiters paredit oauth2 notify naquadah-theme memory-usage magit-filenotify helm gnuplot-mode gnuplot gh flyspell-lazy expand-region emms calfw-gcal calfw boxquote bitlbee bbdb2erc bbdb-vcard bbdb-ext bbdb- autopair auto-dictionary auctex ace-flyspell)))
+ '(paradox-github-token t)
  '(reftex-toc-include-labels t)
  '(reftex-toc-split-windows-horizontally t))
 
@@ -56,6 +57,7 @@
 (add-to-list 'load-path "~/configuration/elisp/")
 
 (load "general_stuff.el")
+(load "JCparadox.el")
 (load "JClpr.el")
 (load "JCnavigation.el")
 (load "JCparenthesis.el")
