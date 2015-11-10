@@ -2,8 +2,7 @@
 #Directories
 path = wilk/enseignement
 path = wilk/texmf
-path = wilk/Mail
-path = wilk/News
+path = wilk/email
 path = wilk/bin
 path = wilk/org
 path = wilk/.emacs.d
