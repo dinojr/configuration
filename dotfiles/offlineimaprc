@@ -12,9 +12,9 @@ synclabels = yes
 maxage = 365
 
 [Repository FreeLocal]
-type = Maildir
-#preauthtunnel = /usr/lib/dovecot/imap -o mail_location=maildir:$HOME/Maildir/Free:LAYOUT=fs
-localfolders = ~/email/Maildir/Free
+type = IMAP
+preauthtunnel = /usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Free:LAYOUT=fs
+#localfolders = ~/email/Maildir/Free
 
 # preauthtunnel = /usr/lib/dovecot/imap -c $HOME/.dovecotrc
 
@@ -36,9 +36,9 @@ synclabels = yes
 maxage = 365
 
 [Repository GmailLocal]
-type = Maildir
-localfolders = ~/email/Maildir/Gmail
-# preauthtunnel = /usr/lib/dovecot/imap /usr/lib/dovecot/imap -o mail_location=maildir:$HOME/Maildir/Gmail:LAYOUT=fs
+type = IMAP
+#localfolders = ~/email/Maildir/Gmail
+preauthtunnel = /usr/lib/dovecot/imap /usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Gmail:LAYOUT=fs
 # preauthtunnel = /usr/lib/dovecot/imap -c $HOME/.dovecotrc
 
 [Repository GmailRemote]
