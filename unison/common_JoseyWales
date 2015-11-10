@@ -61,6 +61,7 @@ ignore = Path wilk/enseignement/DVDUPS
 ignore = Path wilk/.emacs.d/url
 ignore = Path wilk/info/emacs/asymptote
 ignore = Path wilk/texmf/tex/latex/mpsi
+ignore = Path wilk/email/Maildir
 ignore = Name {.git}
 ignorenot = Path wilk/vuibert/vuibert-sup/.git
 ignore = Path wilk/News/namazu
