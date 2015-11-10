@@ -95,7 +95,10 @@
       '(nnml "Local"
 	     (nnml-directory "~/email/Local")
 	     (nnml-active-file "~/email/Local/active")
-	     (nnml-get-new-mail nil)))
+	     (nnml-get-new-mail nil)
+	     (nnir-search-engine notmuch)
+	     )
+      )
 
 ; Pour ne pas télécharger les pièces jointes par défaut
 ;(setq nnimap-fetch-partial-articles "text/")
