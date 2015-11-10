@@ -172,14 +172,26 @@
 		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Gmail:LAYOUT=fs")
 		(nnimap-split-methods default)
 		(nnimap-inbox "INBOX"))
-	(nnfolder "archive"
-	  (nnfolder-directory "~/email/Local/archive")
-	  (nnfolder-active-file "~/email/Local/archive/active")
-	  (nnfolder-get-new-mail nil)
-	  (nnfolder-inhibit-expiry t))
+	;; (nnfolder "archive"
+	;; 	(nnfolder-inhibit-expiry t)
+	;; 	(nnfolder-directory "~/email/Local/archive")
+	;; 	(nnfolder-active-file "~/email/Local/archive/active")
+	;; 	(nnfolder-get-new-mail nil)
+	;; 	(nnfolder-inhibit-expiry t)
+	;; 	(nnir-search-engine notmuch))
 	)
-
 )
+
+(setq gnus-update-message-archive-method t)
+(setq gnus-message-archive-method
+      '(nnfolder "archive"
+                 (nnfolder-inhibit-expiry t)
+                 (nnfolder-active-file "~/email/Local/archive/active")
+                 (nnfolder-directory "~/email/Local/archive/")
+		 (nnfolder-get-new-mail nil)
+		 (nnir-search-engine notmuch)))
+     
+
 
 (setq nnmail-split-fancy
       '(|
