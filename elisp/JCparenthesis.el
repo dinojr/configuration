@@ -52,6 +52,7 @@
   ;; (sp-local-pair "\\]" "\\[")
   ;; (sp-local-tag "\\b" "\\begin{_}" "\\end{_}")
   ;; (sp-local-tag "$" "\\(" "\\)") ;; ne marche pas
+    (sp-local-pair "\\left|" "\\right|")
   )
 
 ;; Vérifier que latex-mode est bien dans sp-navigate-consider-stringlike-sexp
