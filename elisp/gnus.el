@@ -91,13 +91,16 @@
 
 (setq nnimap-authinfo-file "~/.authinfo")
 
+;; (setq nnir-notmuch-remove-prefix (regexp-opt '("/home/wilk/email/Local/" "/home/wilk/email/Local/archive/" "/home/wilk/email/Maildir/Free" "/home/wilk/email/Maildir/Free"))) ;; ne marche pas
+(setq nnir-notmuch-remove-prefix "/home/wilk/email/Local/") ;; marche
+;; (setq nnir-notmuch-remove-prefix "/home/wilk/email/Maildir/Free/") ;; ne marche pas
+
 (setq gnus-select-method 
       '(nnml "Local"
 	     (nnml-directory "~/email/Local")
 	     (nnml-active-file "~/email/Local/active")
 	     (nnml-get-new-mail nil)
 	     (nnir-search-engine notmuch)
-	     (nnir-notmuch-remove-prefix "/home/wilk/email/Local/")
 	     )
       )
 
@@ -199,7 +202,7 @@
                  (nnfolder-directory "~/email/Local/archive/")
 		 (nnfolder-get-new-mail nil)
 		 (nnir-search-engine notmuch)
-		 (nnir-notmuch-remove-prefix "/home/wilk/email/Local/archive/")
+		 ;; (nnir-notmuch-remove-prefix "/home/wilk/email/Local/archive/")
 		 ))
      
 
