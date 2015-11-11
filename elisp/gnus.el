@@ -286,12 +286,14 @@
 ;; Check des nouveaux articles toutes les 5 minutes pour les groupes de niveau inférieur à 3 (le Topic Loisirs est à 5 par exemple)
 ;; (gnus-demon-add-handler 'gnus-group-get-new-news 5 3)
 
-(setq gnus-notifications-minimum-level 1)
+(gnus-demon-add-handler 'gnus-demon-scan-news 5 t)
+(setq gnus-notifications-minimum-level 3)
 (add-hook 'gnus-after-getting-new-news-hook 'gnus-notifications)
 
 ;; (require 'gnus-desktop-notify)
 ;; (gnus-desktop-notify-mode)
-(gnus-demon-add-rescan)
+;; (gnus-demon-add-rescan)
+
 ;; Pour ne notifier que les arrivées dans certains groupes, à customiser avec G c
 ;; (setq gnus-desktop-notify-groups 'gnus-desktop-notify-explicit)
 
