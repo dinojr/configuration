@@ -97,6 +97,7 @@
 	     (nnml-active-file "~/email/Local/active")
 	     (nnml-get-new-mail nil)
 	     (nnir-search-engine notmuch)
+	     (nnir-notmuch-remove-prefix "/home/wilk/email/Local/")
 	     )
       )
 
@@ -165,13 +166,21 @@
 		;; (nnimap-shell-program "/usr/lib/dovecot/imap -c /home/wilk/.dovecotrc-free")
 		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Free:LAYOUT=fs")
 		(nnimap-split-methods default)
-		(nnimap-inbox "INBOX"))
+		(nnimap-inbox "INBOX")
+		(nnir-search-engine imap)
+		;; (nnir-search-engine notmuch)
+		;; (nnir-notmuch-remove-prefix "/home/wilk/email/Maildir/Free/")
+		)
 	(nnimap "GmailOffline"
 		(nnimap-stream shell)
 		;; (nnimap-shell-program "/usr/lib/dovecot/imap -c /home/wilk/.dovecotrc-gmail")
 		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Gmail:LAYOUT=fs")
 		(nnimap-split-methods default)
-		(nnimap-inbox "INBOX"))
+		(nnimap-inbox "INBOX")
+		(nnir-search-engine imap)
+		;; (nnir-search-engine notmuch)
+		;; (nnir-notmuch-remove-prefix "/home/wilk/email/Maildir/Gmail/")
+		)
 	;; (nnfolder "archive"
 	;; 	(nnfolder-inhibit-expiry t)
 	;; 	(nnfolder-directory "~/email/Local/archive")
@@ -189,7 +198,9 @@
                  (nnfolder-active-file "~/email/Local/archive/active")
                  (nnfolder-directory "~/email/Local/archive/")
 		 (nnfolder-get-new-mail nil)
-		 (nnir-search-engine notmuch)))
+		 (nnir-search-engine notmuch)
+		 (nnir-notmuch-remove-prefix "/home/wilk/email/Local/archive/")
+		 ))
      
 
 
@@ -287,7 +298,7 @@
 ;; (gnus-demon-add-handler 'gnus-group-get-new-news 5 3)
 
 (gnus-demon-add-handler 'gnus-demon-scan-news 5 t)
-(setq gnus-notifications-minimum-level 3)
+(setq gnus-notifications-minimum-level 2)
 (add-hook 'gnus-after-getting-new-news-hook 'gnus-notifications)
 
 ;; (require 'gnus-desktop-notify)
