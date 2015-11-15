@@ -14,6 +14,9 @@
 
 (add-hook 'gnus-message-setup-hook 'turn-on-auto-fill)
 
+(require 'offlineimap)
+(add-hook 'gnus-before-startup-hook 'offlineimap)
+
 ;; (eval-after-load 'gnus 
 ;;   (lambda ()
 ;;     (add-hook 'gnus-agent-plugged-hook 'jc-gnus-open-agentized-servers)

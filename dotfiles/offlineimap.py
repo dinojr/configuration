@@ -1,10 +1,10 @@
-# import offlineimap.imaputil as IU
-# if not hasattr(IU, 'monkeypatchdone'):
-#     IU.flagmap += [('gnus-expire','E'),
-#                    ('gnus-dormant', 'Q'),
-#                    ('gnus-save', 'V'),
-#                    ('gnus-forward', 'W')]
-#     IU.monkeypatchdone = True
+import offlineimap.imaputil as IU
+if not hasattr(IU, 'monkeypatchdone'):
+    IU.flagmap += [('gnus-expire','E'),
+                   ('gnus-dormant', 'Q'),
+                   ('gnus-save', 'V'),
+                   ('gnus-forward', 'W')]
+    IU.monkeypatchdone = True
 
 
 

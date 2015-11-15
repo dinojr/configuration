@@ -2,7 +2,8 @@
 [general]
 accounts = FreeOffline,GmailOffline
 maxsyncaccounts = 4
-#pythonfile = .offlineimap.py
+pythonfile = ~/.offlineimap.py
+# ui=Blinkenlights
 
 [Account FreeOffline]
 localrepository = FreeLocal
