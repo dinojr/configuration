@@ -87,7 +87,7 @@
 ;; (setq gnus-fetch-old-headers 'some)
 
 ;; (setq gnus-group-line-format "%M%S%p%P%5y/%t:%B%(%G%)%O\n")
-(setq gnus-group-line-format "%M%S%p%P%5y:%B%(%G%)%O\n")
+(setq gnus-group-line-format "%M%S%p%P%5y|%2-i:%m%B%(%G%)%O\n")
 
 (setq nnimap-authinfo-file "~/.authinfo")
 
