@@ -204,8 +204,6 @@
 		 (nnir-search-engine notmuch)
 		 ;; (nnir-notmuch-remove-prefix "/home/wilk/email/Local/archive/")
 		 ))
-     
-
 
 (setq nnmail-split-fancy
       '(|
@@ -304,6 +302,9 @@
 (setq gnus-notifications-minimum-level 2)
 (add-hook 'gnus-after-getting-new-news-hook 'gnus-notifications)
 
+
+(setq gnus-notifications-use-gravatar nil)
+(setq gnus-notifications-use-google-contacts nil)
 ;; (require 'gnus-desktop-notify)
 ;; (gnus-desktop-notify-mode)
 ;; (gnus-demon-add-rescan)
