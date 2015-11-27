@@ -1,11 +1,10 @@
 ;; ~/emacs.d/JCorg.el -*- mode: lisp-*-
 
 
-(add-to-list 'load-path "~/info/emacs/org-mode/lisp")
-(add-to-list 'load-path "~/info/emacs/org-mode/contrib/lisp")
-
-(require 'cl)
+;; (add-to-list 'load-path "~/info/emacs/org-mode/lisp")
+;; (add-to-list 'load-path "~/info/emacs/org-mode/contrib/lisp")
 (require 'org)
+(require 'cl)
 
 (setq org-export-backends '(ascii html icalendar latex beamer odt))
 (eval-after-load "ox"
