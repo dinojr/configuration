@@ -76,7 +76,7 @@
 
 ;;rubber comme compilateur
 (add-hook 'LaTeX-mode-hook (lambda()
-  (setq TeX-command-default "rubber")
+  ;; (setq TeX-command-default "rubber")
   ;; (add-to-list 'LaTeX-indent-environment-list '("code") )
 ;;   (add-to-list 'LaTeX-indent-environment-list '("tikzpicture"))
 ;;   (add-to-list 'LaTeX-indent-environment-list '("pspicture"))
