@@ -57,7 +57,7 @@
 (add-to-list 'load-path "~/configuration/elisp/")
 
 (load "general_stuff.el")
-(load "JCparadox.el")
+;; (load "JCparadox.el")
 (load "JClpr.el")
 (load "JCnavigation.el")
 (load "JCparenthesis.el")
