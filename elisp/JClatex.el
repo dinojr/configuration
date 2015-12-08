@@ -18,6 +18,8 @@
       (add-hook 'kill-buffer-hook 'TeX-clean nil t)
       ;gestion de la table matière et autre...
       (reftex-mode 1)
+      ; synctex pour la synchro entre pdf et tex
+      (TeX-source-correlate-mode 1)
       ;; Corrrection à la volée syntaxique
       (flyspell-mode 1)
       ;; dictionnaire évitant les erreurs d'accents
