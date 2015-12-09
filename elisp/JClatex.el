@@ -1,13 +1,14 @@
 ;; ~/.emacs.d/JClatex.el -*- mode: lisp-*-
 
-(add-to-list 'load-path "~/info/emacs/auctex")
-(setq TeX-data-directory "~/info/emacs/auctex/")
-(add-to-list 'load-path "~/info/emacs/auctex/")
-(add-to-list 'load-path "~/info/emacs/auctex/preview/")
+;; (add-to-list 'load-path "~/info/emacs/auctex")
+;; (setq TeX-data-directory "~/info/emacs/auctex/")
+;; (add-to-list 'load-path "~/info/emacs/auctex/")
+;; (add-to-list 'load-path "~/info/emacs/auctex/preview/")
 
-(require 'package)
-(package-initialize)
 (require 'tex)
+
+(add-hook 'LaTeX-mode-hook #'latex-extra-mode)
+(setq  latex/next-error-skip-confirmation t)
 
 (setq TeX-clean-confirm nil)
 (setq TeX-auto-save t)
@@ -194,14 +195,18 @@
 ;; RefTex end
 ;;--------------------
 
-(eval-after-load 'latex '(add-hook 'TeX-after-compilation-finished-functions 'TeX-revert-document-buffer))
+;; (eval-after-load 'latex '(add-hook 'TeX-after-compilation-finished-functions 'TeX-revert-document-buffer))
+
+(eval-after-load 'latex '(add-hook 'TeX-after-TeX-LaTeX-command-finished-hook 'TeX-revert-document-buffer))
+
 
 (require 'notifications)
 (defun jc-notify-TeX-run-finish (file)
   "Display a notification when a TeX run is finished."
   (notifications-notify :title "AUCTeX"
                         :body (format "Finished: %s\n%s" (file-name-nondirectory file) (current-message))))
-(add-hook 'TeX-after-compilation-finished-functions #'jc-notify-TeX-run-finish)
+;; (add-hook 'TeX-after-compilation-finished-functions #'jc-notify-TeX-run-finish)
+(add-hook 'TeX-after-TeX-LaTeX-command-finished-hook #'jc-notify-TeX-run-finish)
 
 
 (add-to-list 'auto-mode-alist '( "\\.tikz\\'" . tex-mode))
