@@ -138,10 +138,11 @@
 
 (eval-after-load "latex"
   '(progn
-    (add-to-list 'TeX-view-program-list
-			  '("jcEvince" ("evince" " %o")))
-    (add-to-list 'TeX-view-program-selection
-		 '(output-pdf "jcEvince"))
+    (setq TeX-view-program-selection
+      '(((output-dvi style-pstricks) "dvips and gv")
+         (output-dvi "xdvi")
+         (output-pdf "PDF Tools")
+         (output-html-open "xdg-open")))
     (customize-set-variable 'LaTeX-math-abbrev-prefix (kbd "ù"))
     ;; (require 'autopair-latex)
     (add-hook 'org-mode-hook 'LaTeX-math-mode)
