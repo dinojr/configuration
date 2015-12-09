@@ -27,58 +27,28 @@
       ;; dictionnaire évitant les erreurs d'accents
       (ispell-change-dictionary "francais")
       (TeX-fold-mode 1)
-      (TeX-PDF-mode)
       ;; crochets automatiques pour exposants et indices
       (setq TeX-electric-sub-and-superscript t)
 )))
-
-(add-hook 'LaTeX-mode-hook #'latex-extra-mode)
 
 (setq LaTeX-section-hook
       '(LaTeX-section-title
 	LaTeX-section-section
 	LaTeX-section-label))
 
-(setq TeX-view-format "pdf")
+;; (setq TeX-view-format "pdf")
 
-(setq TeX-command-list
-      (quote
-       (("TeX" "%(PDF)%(tex) %`%S%(PDFout)%(mode)%' %t" TeX-run-TeX nil
-	 (plain-tex-mode texinfo-mode ams-tex-mode)
-	 :help "Run plain TeX")
-	("LaTeX" "%`%l%(mode)%' %t" TeX-run-TeX nil
-	 (latex-mode doctex-mode)
-	 :help "Run LaTeX")
-	("Makeinfo" "makeinfo %t" TeX-run-compile nil
-	 (texinfo-mode)
-	 :help "Run Makeinfo with Info output")
-	("Makeinfo HTML" "makeinfo --html %t" TeX-run-compile nil
-	 (texinfo-mode)
-	 :help "Run Makeinfo with HTML output")
-	("AmSTeX" "%(PDF)amstex %`%S%(PDFout)%(mode)%' %t" TeX-run-TeX nil
-	 (ams-tex-mode)
-	 :help "Run AMSTeX")
-	("ConTeXt" "texexec --once --texutil %(execopts)%t" TeX-run-TeX nil
-	 (context-mode)
-	 :help "Run ConTeXt once")
-	("ConTeXt Full" "texexec %(execopts)%t" TeX-run-TeX nil
-	 (context-mode)
-	 :help "Run ConTeXt until completion")
-	("BibTeX" "bibtex %s" TeX-run-BibTeX nil t :help "Run BibTeX")
-	("View" "%V" TeX-run-discard t t :help "Run Viewer")
-	("Print" "%p" TeX-run-command t t :help "Print the file")
-	("Queue" "%q" TeX-run-background nil t :help "View the printer queue" :visible TeX-queue-command)
-	("File" "%(o?)dvips %d -o %f " TeX-run-command t t :help "Generate PostScript file")
-	("Index" "makeindex %s" TeX-run-command nil t :help "Create index file")
-	("Check" "lacheck %s" TeX-run-compile nil
-	 (latex-mode)
-	 :help "Check LaTeX file for correctness")
-	("Spell" "(TeX-ispell-document \"\")" TeX-run-function nil t :help "Spell-check the document")
-	("Clean" "TeX-clean" TeX-run-function nil t :help "Delete generated intermediate files")
-	("Clean All" "(TeX-clean t)" TeX-run-function nil t :help "Delete generated intermediate and output files")
-	("rubber" "rubber --cache --inplace --maxerr -1 --short --force --warn all --pdf %t" TeX-run-command nil t :help "Run rubber with pdflatex directly")
-	("rubberps" "rubber --cache --inplace --maxerr -1 --short --force --warn all --ps --pdf %t" TeX-run-command nil t :help "Run rubber with latex->dvips->ps2pdf")
-	("pdflatex-vuibert" "pdflatex -fmt ../../../vuistand-fmt.fmt %t" TeX-run-command nil t :help "Run pdflatex with custom format file"))))
+(add-to-list 'TeX-command-list
+	     '("rubber" "rubber --cache --inplace --maxerr -1 --short --force --warn all --pdf %t" TeX-run-command nil t :help "Run rubber with pdflatex directly")
+	     )
+
+(add-to-list 'TeX-command-list
+	      '("rubberps" "rubber --cache --inplace --maxerr -1 --short --force --warn all --ps --pdf %t" TeX-run-command nil t :help "Run rubber with latex->dvips->ps2pdf")
+	     )
+
+(add-to-list 'TeX-command-list
+	     '("pdflatex-vuibert" "pdflatex -fmt ../../../vuistand-fmt.fmt %t" TeX-run-command nil t :help "Run pdflatex with custom format file"))
+
 
 ;;rubber comme compilateur
 (add-hook 'LaTeX-mode-hook (lambda()
