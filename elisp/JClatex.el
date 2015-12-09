@@ -190,6 +190,8 @@
 ;; RefTex end
 ;;--------------------
 
+(eval-after-load 'latex '(add-hook 'TeX-after-compilation-finished-functions 'TeX-revert-document-buffer))
+
 
 (add-to-list 'auto-mode-alist '( "\\.tikz\\'" . tex-mode))
 (setq TeX-fold-env-spec-list '(("[comment]" ("comment"))
