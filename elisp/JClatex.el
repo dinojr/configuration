@@ -196,6 +196,13 @@
 
 (eval-after-load 'latex '(add-hook 'TeX-after-compilation-finished-functions 'TeX-revert-document-buffer))
 
+(require 'notifications)
+(defun jc-notify-TeX-run-finish (file)
+  "Display a notification when a TeX run is finished."
+  (notifications-notify :title "AUCTeX"
+                        :body (format "Finished: %s\n%s" (file-name-nondirectory file) (current-message))))
+(add-hook 'TeX-after-compilation-finished-functions #'jc-notify-TeX-run-finish)
+
 
 (add-to-list 'auto-mode-alist '( "\\.tikz\\'" . tex-mode))
 (setq TeX-fold-env-spec-list '(("[comment]" ("comment"))
