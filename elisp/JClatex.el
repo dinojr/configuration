@@ -22,6 +22,8 @@
       (reftex-mode 1)
       ; synctex pour la synchro entre pdf et tex
       (TeX-source-correlate-mode 1)
+      ; PDFmode
+      (TeX-PDF-mode)
       ;; Corrrection à la volée syntaxique
       (flyspell-mode 1)
       ;; dictionnaire évitant les erreurs d'accents
@@ -194,7 +196,7 @@
 ;; (add-hook 'LaTeX-mode-hook
 ;;      	  (lambda () (set (make-variable-buffer-local 'TeX-electric-math)
 ;;      			  (cons "\\(" "\\)"))))
-(add-hook 'LaTeX-mode-hook 'TeX-global-PDF-mode)
+;; (add-hook 'LaTeX-mode-hook 'TeX-global-PDF-mode)
 
 ;; Raccourcis
 (define-key key-translation-map (kbd "²") (kbd "\\"))
