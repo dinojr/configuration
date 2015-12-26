@@ -5,3 +5,4 @@ auto/
 gnuslog.el
 /.emacs.desktop
 /elisp/JCparadox.el
+/elisp/paradox-token

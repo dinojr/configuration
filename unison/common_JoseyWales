@@ -22,6 +22,7 @@ path = wilk/.local/share/gnome-shell/extensions/
 
 #Files
 path = wilk/.unison/common_JoseyWales
+path = wilk/configuration/elisp/paradox-token
 path = wilk/.emacs
 path = wilk/.emacs.bmk
 path = wilk/.gnus.el
