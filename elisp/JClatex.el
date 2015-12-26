@@ -40,8 +40,6 @@
 	LaTeX-section-section
 	LaTeX-section-label))
 
-;; (setq TeX-view-format "pdf")
-
 (add-to-list 'TeX-command-list
 	     '("rubber" "rubber --cache --inplace --maxerr -1 --short --force --warn all --pdf %t" TeX-run-command nil t :help "Run rubber with pdflatex directly")
 	     )
