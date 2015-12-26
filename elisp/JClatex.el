@@ -15,7 +15,7 @@
 (setq TeX-clean-confirm nil)
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
-(setq-default TeX-master nil)
+(setq-default TeX-master t)
 (add-hook 'LaTeX-mode-hook
   (function
     (lambda ()
