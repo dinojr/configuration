@@ -5,6 +5,8 @@
 ;; (add-to-list 'load-path "~/info/emacs/auctex/")
 ;; (add-to-list 'load-path "~/info/emacs/auctex/preview/")
 
+(require 'package)
+(package-initialize)
 (require 'tex)
 
 (add-hook 'LaTeX-mode-hook #'latex-extra-mode)
