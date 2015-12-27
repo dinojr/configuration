@@ -440,20 +440,43 @@
 
 ;; Apparence
 
+(defface gnus-summary-markup-face
+  '((((class color)
+      (background dark))
+     (:inherit default))
+    (((class color)
+      (background light))
+     (:inherit default))
+    (t
+     (:inherigt default)))
+  "face used for dummy summary line format markup"
+  :group 'gnus-group)
+
+(copy-face 'gnus-summary-markup-face 'gnus-face-8)
+(setq gnus-face-8 'gnus-face-8)
+
 (copy-face 'font-lock-variable-name-face 'gnus-face-6)
 (setq gnus-face-6 'gnus-face-6)
-(copy-face 'font-lock-constant-face 'gnus-face-7)
+
+;; (copy-face 'font-lock-constant-face 'gnus-face-7)
+;; (setq gnus-face-7 'gnus-face-7)
+;; (copy-face 'gnus-face-7 'gnus-summary-normal-unread)
+(copy-face 'gnus-summary-normal-unread 'gnus-face-7)
 (setq gnus-face-7 'gnus-face-7)
-(copy-face 'gnus-face-7 'gnus-summary-normal-unread)
-(copy-face 'font-lock-constant-face 'gnus-face-8)
-;(set-face-foreground 'gnus-face-8 "gray50")
+
+;; (copy-face 'font-lock-constant-face 'gnus-face-8)
+;; ;(set-face-foreground 'gnus-face-8 "gray50")
+;; (setq gnus-face-8 'gnus-face-8)
+(copy-face 'gnus-summary-markup-face 'gnus-face-8)
 (setq gnus-face-8 'gnus-face-8)
+
 (copy-face 'font-lock-constant-face 'gnus-face-9)
 ;(set-face-foreground 'gnus-face-9 "gray70")
 (setq gnus-face-9 'gnus-face-9)
+
 (setq gnus-summary-make-false-root 'dummy)
 (setq gnus-summary-make-false-root-always nil)
-(set-face-attribute 'gnus-header-subject nil :bold t :foreground  "orange2")
+;; (set-face-attribute 'gnus-header-subject nil :bold t :foreground  "orange2")
 (defun oxy-unicode-threads () 
   (interactive)
   (setq gnus-summary-dummy-line-format "        %8{│%}    %8{│%}%O   %(%8{│%}                       %7{│%}%) %6{□%}  %S\n"
