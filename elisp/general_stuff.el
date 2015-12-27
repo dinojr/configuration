@@ -7,6 +7,8 @@
 ;; Theme, dans melpa maintenant
 ;; (add-to-list 'load-path "/home/wilk/.emacs.d/naquadah-theme")
 ;; (require 'naquadah-theme)
+
+(add-to-list 'load-path "/home/wilk/.emacs.d/dracula-theme")
 (require 'dracula-theme)
 
 
