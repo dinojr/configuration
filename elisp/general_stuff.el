@@ -6,7 +6,8 @@
 
 ;; Theme, dans melpa maintenant
 ;; (add-to-list 'load-path "/home/wilk/.emacs.d/naquadah-theme")
-(require 'naquadah-theme)
+;; (require 'naquadah-theme)
+(require 'dracula-theme)
 
 
 ;; Transient-mark-mode
