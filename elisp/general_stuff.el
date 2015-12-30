@@ -8,7 +8,8 @@
 ;; (add-to-list 'load-path "/home/wilk/.emacs.d/naquadah-theme")
 ;; (require 'naquadah-theme)
 
-(add-to-list 'load-path "/home/wilk/.emacs.d/dracula-theme")
+;; From dinojr/github
+(add-to-list 'load-path "/home/wilk/.emacs.d/dracula-theme/emacs/")
 (require 'dracula-theme)
 
 
