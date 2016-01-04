@@ -52,7 +52,7 @@
 	     '("pdflatex-vuibert" "pdflatex -fmt ../../../vuistand-fmt.fmt %t" TeX-run-command nil t :help "Run pdflatex with custom format file"))
 
 (add-to-list 'TeX-command-list
-	     '("Evince" "evince %o" TeX-run-command nil t :help "View with Evince"))
+	     '("Evince" "evince %o" TeX-run-discard nil t :help "View with Evince"))
 
 ;;rubber comme compilateur
 (add-hook 'LaTeX-mode-hook (lambda()
