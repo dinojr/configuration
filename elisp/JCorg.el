@@ -566,6 +566,7 @@
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
+(global-set-key "\C-c'" 'org-edit-special)
 (define-key global-map "\C-cc" 'org-capture)
 
 (define-key org-mode-map "\C-ct" (lambda () (interactive) (org-end-of-meta-data)))
