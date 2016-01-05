@@ -568,4 +568,4 @@
 (global-set-key "\C-cb" 'org-iswitchb)
 (define-key global-map "\C-cc" 'org-capture)
 
-
+(define-key org-mode-map "\C-ct" (lambda () (interactive) (org-end-of-meta-data)))
