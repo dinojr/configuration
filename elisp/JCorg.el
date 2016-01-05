@@ -526,45 +526,20 @@
 ;; (add-hook 'org-export-before-processing-hook 'jc-org-publish-project-options)
 
 ;; Capture
-(setq org-capture-templates (quote (("t" "todo" entry (file+headline "~/org/orgfiles/refile.org" "Tâches") 
-  "* TODO  %? %^G     
-DEADLINE:%^t" :clock-resume t)
-                                    
-				    ("c" "Contacts" entry (file "~/org/orgfiles/contacts.org")
-				     "* %(org-contacts-template-name)
-:PROPERTIES:
-:EMAIL: %(org-contacts-template-email)
-:END:")
-				    ("n" "note" entry (file+headline "~/org/orgfiles/refile.org" "Notes")
-  "* %?
-  %^C" :clock-resume t)
-                                    ("a" "courses" checkitem (file+headline "~/org/orgfiles/maison.org" "Courses")
-  "%?
-  %^C" 
-  )
-				    ("e" "À écouter" item (file+headline "~/org/orgfiles/loisirs.org" "À écouter")
-  "%?
-  %^C"
-  )
-				    ("l" "À lire" item (file+headline "~/org/orgfiles/loisirs.org" "À lire")
-  "%?
-  %^C"
-  )
-				    ("s" "CDs à acheter" checkitem (file+headline "~/org/orgfiles/loisirs.org" "CDs à acheter")
-  "%?
-  %^C"
-  )
-				    ("m" "maintenance" entry (file+datetree "~/org/orgfiles/info.org")
-  "* %?"
-  )
-				    ("b" "bios" item (file+headline "~/org/orgfiles/lycee.org" "Bios")
-  "%?
-  %^C"
-  )
-				    ("T" "test" item (file+headline "~/org/orgfiles/test.org" "Test")
-  " [ ] %?"
-  )
-)))
+(setq org-capture-templates
+      (quote (
+	      ("t" "todo" entry (fileheadline "~/org/orgfiles/refile.org" "Tâches") "* TODO  %? %^G\n DEADLINE: %^t" :clock-resume t :kill-buffer t)
+	      ("c" "Contacts" entry (file "~/org/orgfiles/contacts.org") "* %(org-contacts-template-name)\n :PROPERTIES: :EMAIL: %(org-contacts-template-email)\n :END:")
+	      ("n" "note" entry (fileheadline "~/org/orgfiles/refile.org" "Notes") "* %?\n %^C" :clock-resume t)
+	      ("a" "courses" checkitem (fileheadline "~/org/orgfiles/maison.org" "Courses") "%? %^C")
+	      ("e" "À écouter" item (fileheadline "~/org/orgfiles/loisirs.org" "À écouter") "%?\n %^C")
+	      ("l" "À lire" item (fileheadline "~/org/orgfiles/loisirs.org" "À lire") "%?\n %^C")
+	      ("s" "CDs à acheter" checkitem (fileheadline "~/org/orgfiles/loisirs.org" "CDs à acheter") "%?\n %^C")
+	      ("m" "maintenance" entry (filedatetree "~/org/orgfiles/info.org") "* %?")
+	      ("b" "bios" item (fileheadline "~/org/orgfiles/lycee.org" "Bios") "%?\n %^C")
+	      ("T" "test" item (fileheadline "~/org/orgfiles/test.org" "Test") " [ ] %?"
+	       ))))
+
 
 
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
