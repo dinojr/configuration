@@ -412,13 +412,14 @@
 
 (defun jc-org-publish-rename-pdf (suffix)
     "Rename file.pdf to file-suffix.pdf when buffer is visiting file.org"
-  (let*   ((file-base-name (remove-org-suffix (buffer-file-name)))
-  (file-pdf-name (concat file-base-name ".pdf"))
-  (file-suffix-pdf-name (concat file-base-name "-" suffix  ".pdf")))
-  (if (file-exists-p file-pdf-name)
-      (rename-file file-pdf-name file-suffix-pdf-name 1))
+    (let*   ((file-base-name (remove-org-suffix (buffer-file-name)))
+	     (file-pdf-name (concat file-base-name ".pdf"))
+	     (file-suffix-pdf-name (concat file-base-name "-" suffix  ".pdf")))
+      (if (file-exists-p file-pdf-name)
+	(rename-file file-pdf-name file-suffix-pdf-name 1)
+	)
+      )
     )
-  )
 
 (defun jc-org-publish-rename (suffix version)
     "Rename file.suffix to file-version.suffix when buffer is visiting file.org"
