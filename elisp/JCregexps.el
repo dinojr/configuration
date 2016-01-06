@@ -13,7 +13,7 @@
   (save-excursion
     (let ((deactivate-mark nil))
       (goto-char (min Begin End))
-      (while (re-search-forward from nil t)
+      (while (re-search-forward from End t)
 	(replace-match to nil nil)))))
 
 (defun jc-dollar-to-paren (Begin End)
