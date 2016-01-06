@@ -80,12 +80,19 @@
     (jc-unit-to-si Begin End))
   )
 
+(defun jc-add-and-configure-entry ()
   (interactive)
-  (lambda ()
-    (jc-alert-or-to-stars)
-    (jc-dollar-to-paren)
-    (jc-item-to-plus))
+  (save-excursion
+    (org-beamer-select-environment)
+    (org-set-tags-command)
+    (condition-case nil
+        (while t
+          (call-interactively 'org-set-property))
+      (quit nil))
     )
+  )
+
+
 (define-prefix-command 'jc-regexps)
 (global-set-key (kbd "C-!") 'jc-regexps)
 (define-key jc-regexps (kbd "a") 'jc-alert-or-emph-to-stars)
