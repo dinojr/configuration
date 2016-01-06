@@ -425,8 +425,10 @@
     (let*   ((file-base-name (remove-org-suffix (buffer-file-name)))
 	     (file-suffix-name (concat file-base-name "." suffix))
 	     (file-version-suffix-name (concat file-base-name "-" version  "." suffix)))
-    (if (file-exists-p file-suffix-name)
-	(rename-file file-suffix-name file-version-suffix-name t))
+    (when (file-exists-p file-suffix-name)
+	(rename-file file-suffix-name file-version-suffix-name t)
+	(if (equal suffix "pdf")
+	    (org-open-file file-version-suffix-name)))
     )
     )
 
