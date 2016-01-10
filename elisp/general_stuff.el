@@ -22,11 +22,11 @@
 
 (eval-after-load "info"
   '(progn
-    (add-to-list 'Info-directory-list "~/info/emacs/auctex/doc/")
-    (add-to-list 'Info-directory-list "~/info/emacs/bbdb/doc/")
+    ;; (add-to-list 'Info-directory-list "~/info/emacs/auctex/doc/")
+    ;; (add-to-list 'Info-directory-list "~/info/emacs/bbdb/doc/")
     (add-to-list 'Info-directory-list "~/info/emacs/gnus/texi/")
-    (add-to-list 'Info-directory-list "/usr/local/share/info/")
-    (add-to-list 'Info-directory-list "~/info/emacs/org-mode/doc/")
+    ;; (add-to-list 'Info-directory-list "/usr/local/share/info/")
+    ;; (add-to-list 'Info-directory-list "~/info/emacs/org-mode/doc/")
     )
   )
 
