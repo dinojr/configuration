@@ -31,6 +31,8 @@
       (define-key gnus-topic-mode-map "\C-i" nil)))
 
 
+(add-hook 'gnus-summary-exit-hook 'gnus-summary-bubble-group)
+
 (defun jc-jump-to-gnus ()
   (interactive)
   ;; (if (not (string= (wg-name (wg-current-workgroup 1)) "gnus")) 
