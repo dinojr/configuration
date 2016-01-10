@@ -119,7 +119,8 @@
       '((sequence "TODO(t)" "|" "DONE(d)")
 	(sequence "WAITING(w)" "|" "DONE(d)")
 	(sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f)")
-	(sequence "|" "CANCELED(c)")))
+	(sequence "|" "CANCELED(c)")
+	(sequence "SOMEDAY(s)" "|" "CANCELED(c)" "DONE(d)")))
 
 ;Clocking
 ;;
@@ -411,21 +412,24 @@
 
 (defun jc-org-publish-rename-pdf (suffix)
     "Rename file.pdf to file-suffix.pdf when buffer is visiting file.org"
-  (let*   ((file-base-name (remove-org-suffix (buffer-file-name)))
-  (file-pdf-name (concat file-base-name ".pdf"))
-  (file-suffix-pdf-name (concat file-base-name "-" suffix  ".pdf")))
-  (if (file-exists-p file-pdf-name)
-      (rename-file file-pdf-name file-suffix-pdf-name 1))
+    (let*   ((file-base-name (remove-org-suffix (buffer-file-name)))
+	     (file-pdf-name (concat file-base-name ".pdf"))
+	     (file-suffix-pdf-name (concat file-base-name "-" suffix  ".pdf")))
+      (if (file-exists-p file-pdf-name)
+	(rename-file file-pdf-name file-suffix-pdf-name 1)
+	)
+      )
     )
-  )
 
 (defun jc-org-publish-rename (suffix version)
     "Rename file.suffix to file-version.suffix when buffer is visiting file.org"
     (let*   ((file-base-name (remove-org-suffix (buffer-file-name)))
 	     (file-suffix-name (concat file-base-name "." suffix))
 	     (file-version-suffix-name (concat file-base-name "-" version  "." suffix)))
-    (if (file-exists-p file-suffix-name)
-	(rename-file file-suffix-name file-version-suffix-name t))
+    (when (file-exists-p file-suffix-name)
+	(rename-file file-suffix-name file-version-suffix-name t)
+	(if (equal suffix "pdf")
+	    (org-open-file file-version-suffix-name)))
     )
     )
 
@@ -525,45 +529,20 @@
 ;; (add-hook 'org-export-before-processing-hook 'jc-org-publish-project-options)
 
 ;; Capture
-(setq org-capture-templates (quote (("t" "todo" entry (file+headline "~/org/orgfiles/refile.org" "Tâches") 
-  "* TODO  %? %^G     
-DEADLINE:%^t" :clock-resume t)
-                                    
-				    ("c" "Contacts" entry (file "~/org/orgfiles/contacts.org")
-				     "* %(org-contacts-template-name)
-:PROPERTIES:
-:EMAIL: %(org-contacts-template-email)
-:END:")
-				    ("n" "note" entry (file+headline "~/org/orgfiles/refile.org" "Notes")
-  "* %?
-  %^C" :clock-resume t)
-                                    ("a" "courses" checkitem (file+headline "~/org/orgfiles/maison.org" "Courses")
-  "%?
-  %^C" 
-  )
-				    ("e" "À écouter" item (file+headline "~/org/orgfiles/loisirs.org" "À écouter")
-  "%?
-  %^C"
-  )
-				    ("l" "À lire" item (file+headline "~/org/orgfiles/loisirs.org" "À lire")
-  "%?
-  %^C"
-  )
-				    ("s" "CDs à acheter" checkitem (file+headline "~/org/orgfiles/loisirs.org" "CDs à acheter")
-  "%?
-  %^C"
-  )
-				    ("m" "maintenance" entry (file+datetree "~/org/orgfiles/info.org")
-  "* %?"
-  )
-				    ("b" "bios" item (file+headline "~/org/orgfiles/lycee.org" "Bios")
-  "%?
-  %^C"
-  )
-				    ("T" "test" item (file+headline "~/org/orgfiles/test.org" "Test")
-  " [ ] %?"
-  )
-)))
+(setq org-capture-templates
+      (quote (
+	      ("t" "todo" entry (file+headline "~/org/orgfiles/refile.org" "Tâches") "* TODO  %? %^G\n DEADLINE: %^t" :clock-resume t :kill-buffer t)
+	      ("c" "Contacts" entry (file "~/org/orgfiles/contacts.org") "* %(org-contacts-template-name)\n :PROPERTIES: :EMAIL: %(org-contacts-template-email)\n :END:")
+	      ("n" "note" entry (file+headline "~/org/orgfiles/refile.org" "Notes") "* %?\n %^C" :clock-resume t)
+	      ("a" "courses" checkitem (file+headline "~/org/orgfiles/maison.org" "Courses") "%? %^C")
+	      ("e" "À écouter" item (file+headline "~/org/orgfiles/loisirs.org" "À écouter") "%?\n %^C")
+	      ("l" "À lire" item (file+headline "~/org/orgfiles/loisirs.org" "À lire") "%?\n %^C")
+	      ("s" "CDs à acheter" checkitem (file+headline "~/org/orgfiles/loisirs.org" "CDs à acheter") "%?\n %^C")
+	      ("m" "maintenance" entry (filedatetree "~/org/orgfiles/info.org") "* %?")
+	      ("b" "bios" item (file+headline "~/org/orgfiles/lycee.org" "Bios") "%?\n %^C")
+	      ("T" "test" item (file+headline "~/org/orgfiles/test.org" "Test") " [ ] %?"
+	       ))))
+
 
 
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
@@ -590,6 +569,7 @@ DEADLINE:%^t" :clock-resume t)
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
+(global-set-key "\C-c'" 'org-edit-special)
 (define-key global-map "\C-cc" 'org-capture)
 
-
+(define-key org-mode-map "\C-ct" (lambda () (interactive) (org-end-of-meta-data)))

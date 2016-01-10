@@ -14,6 +14,17 @@
   (let ((fill-column (point-max)))
     (fill-paragraph nil)))
 
+(defun unfill-region (beg end)
+      "Unfill the region, joining text paragraphs into a single
+    logical line.  This is useful, e.g., for use with
+    `visual-line-mode'."
+      (interactive "*r")
+      (let ((fill-column (point-max)))
+        (fill-region beg end)))
+
+ ;; Handy key definition
+
+
 ;; (defun jc-indent-and-insert-tab ()
 ;;   (interactive)
 ;;   (beginning-of-line-text)
@@ -113,6 +124,7 @@
 (global-set-key "\C-a" 'My-smart-home)
 (global-set-key "\C-e" 'My-smart-end)
 (define-key global-map "\M-Q" 'unfill-paragraph)
+(define-key global-map "\C-\M-Q" 'unfill-region)
 (define-key global-map (kbd "C-c j") 'ace-jump-mode)
 (global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key (kbd "C-&") 'align-current)

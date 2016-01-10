@@ -1,7 +1,9 @@
 ;;~/.emacs -*- mode: lisp-*-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Packages ;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "~/configuration/elisp/")
 (require 'package)
+(load "JCparadox.el") ;;setting of paradox-github-token
 (setq package-archives '(("ELPA" . "http://tromey.com/elpa/")
 			 ("melpa" . "http://melpa.milkbox.net/packages/")
 			 ("gnu" . "http://elpa.gnu.org/packages/")
@@ -59,10 +61,8 @@
 ;;--------------------
 ;; Customize end
 ;;--------------------
-(add-to-list 'load-path "~/configuration/elisp/")
 
 (load "general_stuff.el")
-(load "JCparadox.el")
 (load "JClpr.el")
 (load "JCnavigation.el")
 (load "JCparenthesis.el")

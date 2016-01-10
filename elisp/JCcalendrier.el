@@ -1,8 +1,10 @@
 ;; ~/.emacs.d/JCcalendrier.el -*- mode: lisp-*-
 
  (add-hook 'calendar-load-hook
-              (lambda ()
-                (calendar-set-date-style 'european)))
+              ;; (lambda ()
+	   ;;   (calendar-set-date-style 'european))
+	   'european-calendar
+	      )
 
 (setq calendar-week-start-day 1
       calendar-day-name-array ["Dimanche" "Lundi" "Mardi" "Mercredi"

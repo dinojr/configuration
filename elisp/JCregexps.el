@@ -1,12 +1,20 @@
 ;; ~/.emacs.d/JCregexps.el -*- mode: lisp-*-
 
+;; (defun jc-replace-regexp-in-region (Begin End from to)
+;;   "Replace from by to in the selected region"
+;;   (interactive "r")
+;;   (let ((deactivate-mark nil))
+;;     (query-replace-regexp from to nil Begin End)
+;;     ;; (setq deactivate-mark nil)
+;;     ))
+
 (defun jc-replace-regexp-in-region (Begin End from to)
-  "Replace from by to in the selected region"
-  ;; (interactive "r")
+  (interactive "r")
   (save-excursion
-    (let (deactivate-mark)
-      (query-replace-regexp from to nil Begin End)))
-  )
+    (let ((deactivate-mark nil))
+      (goto-char (min Begin End))
+      (while (re-search-forward from End t)
+	(replace-match to nil nil)))))
 
 (defun jc-dollar-to-paren (Begin End)
   "Replace $toto$ by \\(toto\\) in selected region"
@@ -63,15 +71,31 @@
   (jc-replace-regexp-in-region Begin End "\\\\only<\\(.*?\\)>{\\([ \n \t [:ascii:] [:nonascii:]]*\\)}" "* \?\n\t:PROPERTIES:\n\t:BEAMER_env: action\n\t:BEAMER_ACT: only@\\1\n\t:END:\n\n\t\\2")
   )
 
-(defun jc-do-all-regexps ()
+(defun jc-do-all-regexps (Begin End)
+  (interactive "r")
+  (let ((deactivate-mark nil))
+    (jc-alert-or-emph-to-stars Begin End)
+    (jc-dollar-to-paren Begin End)
+    (jc-item-to-plus Begin End)
+    (jc-unit-to-si Begin End))
+  )
+
+(defun jc-add-and-configure-entry ()
   (interactive)
-  (lambda ()
-    (jc-alert-or-to-stars)
-    (jc-dollar-to-paren)
-    (jc-item-to-plus))
+  (save-excursion
+    (org-beamer-select-environment)
+    (org-set-tags-command)
+    (condition-case nil
+        (while t
+          (call-interactively 'org-set-property))
+      (quit nil))
     )
+  )
+
+
 (define-prefix-command 'jc-regexps)
-(global-set-key (kbd "C-!") 'jc-regexps)
+;; (global-set-key (kbd "C-!") 'jc-regexps)
+(define-key org-mode-map (kbd "C-!") 'jc-regexps)
 (define-key jc-regexps (kbd "a") 'jc-alert-or-emph-to-stars)
 (define-key jc-regexps (kbd "d") 'jc-dollar-to-paren)
 (define-key jc-regexps (kbd "b") 'jc-block-to-heading)
@@ -79,6 +103,12 @@
 (define-key jc-regexps (kbd "o") 'jc-only-to-heading)
 (define-key jc-regexps (kbd "i") 'jc-item-to-plus)
 (define-key jc-regexps (kbd "s") 'jc-unit-to-si)
+(define-key jc-regexps (kbd "r") 'jc-do-all-regexps)
+
+(define-key jc-regexps (kbd "n") 'jc-add-and-configure-entry)
+
+
+
 
 
 ;; Replacement without prompt
