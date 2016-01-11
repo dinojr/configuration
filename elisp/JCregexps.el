@@ -31,9 +31,10 @@
 (defun jc-unit-to-si (Begin End)
   "Replace \\unit[1234]{unite} by \\SI{1234}{\\unite}"
   (interactive "r")
-  (jc-replace-regexp-in-region Begin End "\\\\unit\\[\\([[:ascii:]]+?\\)\\]{\\([[:ascii:]]+?\\)}" "\\\\SI{\\1}{\\\\\\2\\?}")
+  ;; (jc-replace-regexp-in-region Begin End "\\\\unit\\[\\([[:ascii:]]+?\\)\\]{\\([[:ascii:]]+?\\)}" "\\\\SI{\\1}{\\\\\2\\?}")
+  (let (deactivate-mark)
+    (query-replace-regexp "\\\\unit\\[\\([[:ascii:]]+?\\)\\]{\\([[:ascii:]]+?\\)}" "\\\\SI{\\1}{\\\\\\2\\?}" nil Begin End))
   )
-
 
 (defun jc-alert-or-emph-to-stars (Begin End)
   "Replace \\alert{toto} or \\emph{toto} by *toto*"
