@@ -573,3 +573,4 @@
 (define-key global-map "\C-cc" 'org-capture)
 
 (define-key org-mode-map "\C-ct" (lambda () (interactive) (org-end-of-meta-data)))
+;; (define-key org-mode-map [(control return)] 'org-insert-heading-respect-content)
