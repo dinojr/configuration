@@ -100,6 +100,7 @@
 (load "JCregexps.el")
 (load "JCcalfw.el")
 (load "JCcalc.el")
+(load "JCemms.el")
 ;; (load "JCasymptote.el")
 
 
