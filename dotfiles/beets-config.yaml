@@ -1,0 +1,36 @@
+#~/.config/beets/config.yaml
+directory: /var/lib/mpd/music/NAS/Synology/
+
+library: /var/lib/mpd/music/NAS/Synology/ADMINISTRATION/musiclibrary.blb
+
+# plugins: fetchart mpdstats import smartplaylist mpdupdate
+plugins: fetchart duplicates mpdupdate
+
+import:
+    write: yes
+    copy: no
+    move: no
+    resume: ask
+    ignore: .@eaDir
+
+match:
+    max_rec:
+        missing_tracks: none
+
+duplicates:
+    album: yes
+    merge: yes
+
+paths:
+    default: $albumartist/$album%aunique{}/$track $title
+    singleton: Non-Album/$artist/$title
+    comp: Compilations/$album%aunique{}/$track $title
+
+mpd:
+    host: localhost
+    port: 6600
+
+fetchart:
+    auto: yes
+    
+
