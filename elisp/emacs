@@ -42,7 +42,8 @@
  '(font-latex-quotes (quote french))
  '(helm-external-programs-associations
    (quote
-    (("zip" . "file-roller")
+    (("agr" . "xmgrace")
+     ("zip" . "file-roller")
      ("pdf" . "evince")
      ("ods" . "libreoffice"))))
  '(org-archive-save-context-info (quote (itags ltags)))
