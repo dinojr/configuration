@@ -121,7 +121,7 @@
 (setq spam-use-bogofilter t)
 
 (setq spam-mark-ham-unread-before-move-from-spam-group t)
-(setq spam-mark-only-unseen-as-spam t)
+(setq spam-mark-only-unseen-as-spam nil)
 ;; (setq spam-autodetect-recheck-messages t)
 
 (setq spam-split-group "Junk") ;unqualified group name
