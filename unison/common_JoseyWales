@@ -59,6 +59,7 @@ ignore = Path wilk/enseignement/homepage
 ignore = Path wilk/enseignement/logiciels/maple
 ignore = Path wilk/enseignement/UPS2006
 ignore = Path wilk/enseignement/DVDUPS
+ignore = Path /home/wilk/enseignement/UPS-2015
 ignore = Path wilk/.emacs.d/url
 ignore = Path wilk/info/emacs/asymptote
 ignore = Path wilk/texmf/tex/latex/mpsi
