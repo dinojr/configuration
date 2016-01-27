@@ -1,17 +1,20 @@
 #~/.config/beets/config.yaml
-directory: /var/lib/mpd/music/NAS/Synology/
+directory: /var/lib/mpd/music/NAS/Synology/BEETS/
 
-library: /var/lib/mpd/music/NAS/Synology/ADMINISTRATION/musiclibrary.blb
+library: /var/lib/mpd/music/NAS/Synology/BEETS/ADMINISTRATION/musiclibrary.blb
+
+ignore: .@eaDir BEETS .* *~
 
 # plugins: fetchart mpdstats import smartplaylist mpdupdate
-plugins: fetchart duplicates mpdupdate
+plugins: fetchart duplicates missing mpdupdate
 
 import:
     write: yes
     copy: no
-    move: no
+    move: yes
     resume: ask
-    ignore: .@eaDir
+    #none_rec_action: skip
+    log: /var/lib/mpd/music/NAS/Synology/BEETS/ADMINISTRATION/beets-import-fail
 
 match:
     max_rec:
@@ -20,11 +23,14 @@ match:
 duplicates:
     album: yes
     merge: yes
+    delete: yes
 
 paths:
-    default: $albumartist/$album%aunique{}/$track $title
+    #default: $albumartist/$album%aunique{}/$track $title
+    default: $albumartist/$album/$track $title
     singleton: Non-Album/$artist/$title
-    comp: Compilations/$album%aunique{}/$track $title
+    #comp: Compilations/$album%aunique{}/$track $title
+    comp: Compilations/$album/$track $title
 
 mpd:
     host: localhost
@@ -32,5 +38,16 @@ mpd:
 
 fetchart:
     auto: yes
-    
 
+
+missing:
+    #format: $albumartist - $album - $title
+    #format: $albumartist - $album
+    count: yes
+    total: no
+
+match:
+    preferred:
+        #countries: ['US', 'GB|UK']
+        media: ['CD', 'Digital Media|File']
+        original_year: yes
