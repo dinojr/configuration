@@ -1,5 +1,5 @@
 ;;~/.emacs -*- mode: lisp-*-
-
+;; (setq org-export-async-debug t)
 ;; si org est installé avec melpa
 ;; (require 'package)
 ;; (package-initialize)
@@ -10,6 +10,8 @@
 
 (require 'org)
 (require 'ox)
+(require 'ox-beamer)
+
 (add-to-list 'load-path "~/configuration/elisp/")
 (load "JCorg.el")
 (load "JClatex.el")
