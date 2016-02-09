@@ -1,15 +1,13 @@
 ;; ~/emacs.d/JCorg.el -*- mode: lisp-*-
 
 ;; Uncomment to load from git
-;; (add-to-list 'load-path "~/info/emacs/org-mode/lisp")
-;; (add-to-list 'load-path "~/info/emacs/org-mode/contrib/lisp")
-;; (eval-after-load "info"
-;;   '(progn
-;;     (add-to-list 'Info-directory-list "~/info/emacs/org-mode/doc/")
-;;     )
-;;   )
-
-
+(add-to-list 'load-path "~/info/emacs/org-mode/lisp")
+(add-to-list 'load-path "~/info/emacs/org-mode/contrib/lisp")
+(eval-after-load "info"
+  '(progn
+    (add-to-list 'Info-directory-list "~/info/emacs/org-mode/doc/")
+    )
+  )
 
 (require 'org)
 (require 'cl)
