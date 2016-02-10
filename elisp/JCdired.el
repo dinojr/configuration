@@ -1,7 +1,5 @@
 ;; ~/emacs.d/JCdired.el -*- mode: lisp-*-
 
-(add-to-list 'load-path "/home/wilk/.emacs.d/dired-toggle-sudo/")
-
 (require 'dired)
 (require 'dired-aux)
 

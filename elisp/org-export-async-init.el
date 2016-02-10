@@ -5,8 +5,8 @@
 ;; (package-initialize)
 
 ;; si org est installé avec git
-(add-to-list 'load-path (expand-file-name "~/info/emacs/org-mode/lisp"))
-(add-to-list 'load-path (expand-file-name  "~/info/emacs/org-mode/contrib/lisp"))
+(add-to-list 'load-path "~/git-repositories/org-mode/lisp")
+(add-to-list 'load-path "~/git-repositories/org-mode/contrib/lisp")
 
 (require 'org)
 (require 'ox)

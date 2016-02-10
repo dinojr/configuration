@@ -1,11 +1,11 @@
 ;; ~/emacs.d/JCorg.el -*- mode: lisp-*-
 
 ;; Uncomment to load from git
-(add-to-list 'load-path "~/info/emacs/org-mode/lisp")
-(add-to-list 'load-path "~/info/emacs/org-mode/contrib/lisp")
+(add-to-list 'load-path "~/git-repositories/org-mode/lisp")
+(add-to-list 'load-path "~/git-repositories/org-mode/contrib/lisp")
 (eval-after-load "info"
   '(progn
-    (add-to-list 'Info-directory-list "~/info/emacs/org-mode/doc/")
+    (add-to-list 'Info-directory-list "~/git-repositories/org-mode/doc/")
     )
   )
 
@@ -562,6 +562,39 @@
 	("fontsize" "\\scriptsize")
 	("linenos" "")))
 
+
+(defun org-repair-export-blocks ()
+  "Repair export blocks and INCLUDE keywords in current buffer."
+  (interactive)
+  (when (eq major-mode 'org-mode)
+    (let ((case-fold-search t)
+	  (back-end-re (regexp-opt
+			'("HTML" "ASCII" "LATEX" "ODT" "MARKDOWN" "MD" "ORG"
+			  "MAN" "BEAMER" "TEXINFO" "GROFF" "KOMA-LETTER")
+			t)))
+      (org-with-wide-buffer
+       (goto-char (point-min))
+       (let ((block-re (concat "^[ \t]*#\\+BEGIN_" back-end-re)))
+	 (save-excursion
+	   (while (re-search-forward block-re nil t)
+	     (let ((element (save-match-data (org-element-at-point))))
+	       (when (eq (org-element-type element) 'special-block)
+		 (save-excursion
+		   (goto-char (org-element-property :end element))
+		   (save-match-data (search-backward "_"))
+		   (forward-char)
+		   (insert "EXPORT")
+		   (delete-region (point) (line-end-position)))
+		 (replace-match "EXPORT \\1" nil nil nil 1))))))
+       (let ((include-re
+	      (format "^[ \t]*#\\+INCLUDE: .*?%s[ \t]*$" back-end-re)))
+	 (while (re-search-forward include-re nil t)
+	   (let ((element (save-match-data (org-element-at-point))))
+	     (when (and (eq (org-element-type element) 'keyword)
+			(string= (org-element-property :key element) 
+				 "INCLUDE"))
+	       (replace-match "EXPORT \\1" nil nil nil 1)))))))))
+
 ;; ;; Load the org-weather library
 ;; (add-to-list 'load-path "~/info/emacs/org-weather")
 ;; (require 'org-weather)
@@ -580,3 +613,5 @@
 
 (define-key org-mode-map "\C-ct" (lambda () (interactive) (org-end-of-meta-data)))
 ;; (define-key org-mode-map [(control return)] 'org-insert-heading-respect-content)
+
+
