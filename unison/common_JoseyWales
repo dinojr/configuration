@@ -1,6 +1,7 @@
 # ~/.unison/common_JoseyWales
 #Directories
 path = wilk/enseignement
+path = wilk/git-repositories
 path = wilk/texmf
 path = wilk/email
 path = wilk/bin
