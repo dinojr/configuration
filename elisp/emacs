@@ -93,7 +93,7 @@
 (load "JCnotmuch.el")
 (load "JCbrowser.el")
 (load "JCbbdb.el")
-(load "JCnamazu.el")
+;; (load "JCnamazu.el")
 (load "JCmingus.el")
 ;; (load "JCworkgroup.el")
 ;; (load "JCworkgroups2.el")
