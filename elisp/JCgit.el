@@ -14,3 +14,14 @@
 (magit-add-section-hook 'magit-status-sections-hook
 			'magit-insert-unpulled-module-commits
 			'magit-insert-unpushed-to-pushremote)
+
+(defun jc-display-git-status ()
+  (interactive)
+  (select-frame (make-frame))
+  (magit-status-internal "/home/wilk/configuration/")
+  (delete-other-windows)
+  (magit-status-internal "/home/wilk/git-repositories/")
+  (magit-status-internal "/home/wilk/texmf/tex/latex/mpsi")
+  )
+
+(global-set-key [f6] 'jc-display-git-status)
