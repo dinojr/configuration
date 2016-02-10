@@ -11,4 +11,6 @@
 
 ;; n'affiche pas les commits en avance par rapport à upstream
 (setq magit-status-sections-hook (delete 'magit-insert-unpushed-to-upstream magit-status-sections-hook))
-(add-to-list 'magit-status-sections-hook 'magit-insert-unpushed-to-pushremote)
+(magit-add-section-hook 'magit-status-sections-hook
+			'magit-insert-unpulled-module-commits
+			'magit-insert-unpushed-to-pushremote)
