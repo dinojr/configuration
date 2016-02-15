@@ -22,6 +22,9 @@
 
 (require 'offlineimap)
 (add-hook 'gnus-before-startup-hook 'offlineimap)
+(add-hook 'offlineimap-event-hooks (lambda (msg-type &optional action)
+                                     (if (equal "finished\n" msg-type)
+                                         (gnus-group-get-new-news)))) 
 
 ;; (eval-after-load 'gnus 
 ;;   (lambda ()
