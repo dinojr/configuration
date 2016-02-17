@@ -6,7 +6,7 @@ library: /var/lib/mpd/music/NAS/Synology/BEETS/ADMINISTRATION/musiclibrary.blb
 ignore: .@eaDir BEETS .* *~
 
 # plugins: fetchart mpdstats import smartplaylist mpdupdate
-plugins: fetchart duplicates missing mpdupdate
+plugins: fetchart duplicates missing mpdupdate permissions fromfilename
 
 import:
     write: yes
@@ -15,6 +15,8 @@ import:
     resume: ask
     #none_rec_action: skip
     log: /var/lib/mpd/music/NAS/Synology/BEETS/ADMINISTRATION/beets-import-fail
+    fromfilename: yes
+    
 
 match:
     max_rec:
@@ -51,3 +53,7 @@ match:
         #countries: ['US', 'GB|UK']
         media: ['CD', 'Digital Media|File']
         original_year: yes
+
+permissions:
+    file: 644
+    dir: 755
