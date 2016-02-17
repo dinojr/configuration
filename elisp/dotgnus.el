@@ -297,8 +297,8 @@
 
 ;; Check des nouveaux articles toutes les 5 minutes pour les groupes de niveau inférieur à 3 (le Topic Loisirs est à 5 par exemple)
 ;; (gnus-demon-add-handler 'gnus-group-get-new-news 5 3)
-
-(gnus-demon-add-handler 'gnus-demon-scan-news 5 t)
+(setq gnus-demon-timestep 1)
+(gnus-demon-add-handler 'gnus-demon-scan-news 300 10)
 (setq gnus-notifications-minimum-level 2)
 (add-hook 'gnus-after-getting-new-news-hook 'gnus-notifications)
 
