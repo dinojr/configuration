@@ -25,7 +25,7 @@ match:
 duplicates:
     album: yes
     merge: yes
-    delete: yes
+    # delete: yes
 
 paths:
     #default: $albumartist/$album%aunique{}/$track $title
