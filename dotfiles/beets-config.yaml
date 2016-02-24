@@ -16,6 +16,7 @@ import:
     #none_rec_action: skip
     log: /var/lib/mpd/music/NAS/Synology/BEETS/ADMINISTRATION/beets-import-fail
     fromfilename: yes
+    permissions: yes
     
 
 match:
