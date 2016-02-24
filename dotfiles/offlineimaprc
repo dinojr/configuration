@@ -11,6 +11,7 @@ remoterepository = FreeRemote
 autorefresh = 1
 synclabels = yes
 maxage = 365
+postsynchook = notmuch new
 
 [Repository FreeLocal]
 type = IMAP
