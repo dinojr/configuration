@@ -1,5 +1,5 @@
 #!/bin/sh
-MUSICDIR="/srv/multimedia/musique/"
+MUSICDIR="/srv/multimedia/musique/BEETS/"
 # fetch new art
 # beet fetchart
 
