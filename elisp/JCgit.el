@@ -12,10 +12,10 @@
 ;; (require 'magit-gh-pulls) pb de dépendances avec  eieio-1.3, à réinstaller plus tard
 
 ;; n'affiche pas les commits en avance par rapport à upstream
-(setq magit-status-sections-hook (delete 'magit-insert-unpushed-to-upstream magit-status-sections-hook))
-(magit-add-section-hook 'magit-status-sections-hook
-			'magit-insert-unpulled-module-commits
-			'magit-insert-unpushed-to-pushremote)
+;; (setq magit-status-sections-hook (delete 'magit-insert-unpushed-to-upstream magit-status-sections-hook))
+;; (magit-add-section-hook 'magit-status-sections-hook
+;; 			'magit-insert-unpulled-module-commits
+;; 			'magit-insert-unpushed-to-pushremote)
 
 (defun jc-display-git-status ()
   (interactive)
