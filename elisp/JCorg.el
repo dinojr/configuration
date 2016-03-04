@@ -611,7 +611,29 @@
 (global-set-key "\C-c'" 'org-edit-special)
 (define-key global-map "\C-cc" 'org-capture)
 
-(define-key org-mode-map "\C-ct" (lambda () (interactive) (org-end-of-meta-data)))
+(defun jc-current-line-empty-p ()
+  (interactive)
+  (save-excursion
+    (beginning-of-line)
+    (looking-at "[[:space:]]*$")))
+
+(define-key org-mode-map "\C-ct" (lambda ()
+				   (interactive)
+				   (org-end-of-meta-data)
+				   (if (not (jc-current-line-empty-p))
+				       (open-line 1)
+				     )))
+
+(define-key org-mode-map "\C-cy" (lambda ()
+				   (interactive)
+				   (org-beginning-of-line)
+				   (org-yank)
+				   (unfill-paragraph)
+				   (mark-paragraph)
+				   ))
+
+
+
 ;; (define-key org-mode-map [(control return)] 'org-insert-heading-respect-content)
 
 
