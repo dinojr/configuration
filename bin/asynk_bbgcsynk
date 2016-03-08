@@ -1,4 +1,4 @@
 #!/bin/bash
-python /home/wilk/info/emacs/ASynK/asynk.py --op sync --name bbgcsynk
+python /home/wilk/git-repositories/ASynK/asynk.py --op sync --name bbgcsynk
 #/home/wilk/info/emacs/ASynK-bbbd-phones/asynk.py --op sync --name bbgcsynk
 
