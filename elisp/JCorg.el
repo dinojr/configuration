@@ -546,8 +546,9 @@
 	      ("s" "CDs à acheter" checkitem (file+headline "~/org/orgfiles/loisirs.org" "CDs à acheter") "%?\n %^C")
 	      ("m" "maintenance" entry (filedatetree "~/org/orgfiles/info.org") "* %?")
 	      ("b" "bios" item (file+headline "~/org/orgfiles/lycee.org" "Bios") "%?\n %^C")
-	      ("T" "test" item (file+headline "~/org/orgfiles/test.org" "Test") " [ ] %?"
-	       ))))
+	      ("T" "test" item (file+headline "~/org/orgfiles/test.org" "Test") " [ ] %?")
+	      ("p" "password" entry (file "~/org/orgfiles/pw.gpg") "* %^{Title}\n  %^{URL}p %^{USERNAME}p %^{PASSWORD}p")
+	      )))
 
 
 
@@ -601,6 +602,11 @@
 ;; ;; Set your location and refresh the data
 ;; (setq org-weather-location "Orléans,FR")
 ;; (org-weather-refresh)
+
+;; Org-passwords
+(require 'org-passwords)
+(setq org-passwords-file "~/org/orgfiles/pw.gpg")
+(setq org-passwords-random-words-dictionnary "/etc/dictionaries-common/words")
 
 ;; Raccourcis
 (global-set-key (kbd "C-c C-g") (lambda () (interactive) (org-clock-in '(4))))
