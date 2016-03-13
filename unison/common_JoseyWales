@@ -89,7 +89,8 @@ ignore = Name {,.}*{.dvi}
 ignore = Name {,.}*{.out}
 ignore = Name {,.}*{.thm}
 ignore = Name {,.}*{.toc}
-
+ignore = Name {.emacs.desktop.lock}
+ignore = Name {.emacs.desktop}
 ignore = Name {mycor}{,.}*
 ignore = Name {.saves}{,.}*
 ignore = Name {session}{,.}*
