@@ -608,6 +608,12 @@
 (setq org-passwords-file "~/org/orgfiles/pw.gpg")
 (setq org-passwords-random-words-dictionnary "/etc/dictionaries-common/words")
 
+;; org-ref
+(require 'org-ref)
+(require 'org-ref-pdf)
+(setq org-ref-pdf-directory "~/enseignement/papiers")
+(setq org-ref-bibtex-files "~/enseignement/papiers/bibliography.bib")
+
 ;; Raccourcis
 (global-set-key (kbd "C-c C-g") (lambda () (interactive) (org-clock-in '(4))))
 (global-set-key (kbd "C-c C-h") 'org-clock-out)
