@@ -543,6 +543,7 @@
 	      ("a" "courses" checkitem (file+headline "~/org/orgfiles/maison.org" "Courses") "%? %^C")
 	      ("e" "À écouter" item (file+headline "~/org/orgfiles/loisirs.org" "À écouter") "%?\n %^C")
 	      ("l" "À lire" item (file+headline "~/org/orgfiles/loisirs.org" "À lire") "%?\n %^C")
+	      ("v" "À voir" item (file+headline "~/org/orgfiles/loisirs.org" "À voir") "%?\n %u\n %^C")
 	      ("s" "CDs à acheter" checkitem (file+headline "~/org/orgfiles/loisirs.org" "CDs à acheter") "%?\n %^C")
 	      ("m" "maintenance" entry (filedatetree "~/org/orgfiles/info.org") "* %?")
 	      ("b" "bios" item (file+headline "~/org/orgfiles/lycee.org" "Bios") "%?\n %^C")
