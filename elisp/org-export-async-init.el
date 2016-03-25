@@ -8,6 +8,9 @@
 (add-to-list 'load-path "~/git-repositories/org-mode/lisp")
 (add-to-list 'load-path "~/git-repositories/org-mode/contrib/lisp")
 
+(require 'package) ;; org-ref is loaded through melpa
+(package-initialize)
+
 (require 'org)
 (require 'ox)
 (require 'ox-beamer)
