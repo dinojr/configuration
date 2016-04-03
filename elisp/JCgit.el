@@ -15,7 +15,8 @@
 (setq magit-status-sections-hook (delete 'magit-insert-unpushed-to-upstream magit-status-sections-hook))
 (magit-add-section-hook 'magit-status-sections-hook
 			'magit-insert-modules-unpulled-from-upstream
-			'magit-insert-unpushed-to-pushremote)
+			'magit-insert-unpushed-to-pushremote
+			'magit-insert-modules-unpushed-to-pushremote)
 
 (defun jc-display-git-status ()
   (interactive)
