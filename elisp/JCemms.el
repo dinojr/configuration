@@ -36,6 +36,8 @@
  ("cover_med.jpg" "cover_med.jpeg" "cover_med.png" "cover_med.gif" "cover_med.bmp")
  ("cover_large.jpg" "cover_large.jpeg" "cover_large.png" "cover_large.gif" "cover_large.bmp")))
 
+(setq emms-random-playlist t)
+
 ;; (emms-browser)
 
 (global-set-key (kbd "<XF86AudioPlay>") 'emms-pause)
