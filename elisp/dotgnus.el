@@ -11,8 +11,7 @@
 ;; (setq gnus-plugged nil)
 (setq gnus-agent-expire-all nil)
 (setq gnus-agent-expire-days 30)
-
-;(add-hook 'gnus-exit-gnus-hook 'gnus-agent-expire)
+(add-hook 'gnus-exit-gnus-hook 'gnus-agent-expire)
 
 ; Pour ne pas utiliser le .newsrc : double emploi avec .newsrc.eld
 (setq gnus-save-newsrc-file nil)
