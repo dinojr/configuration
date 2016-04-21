@@ -2,6 +2,10 @@
 
 (require 'emms-setup)
 (require 'emms-browser)
+
+(setq emms-source-file-directory-tree-function 'emms-source-file-directory-tree-find)
+;; (setq emms-source-file-default-directory "/var/lib/mpd/music/NAS/Synology/BEETS/")
+
 (emms-standard)
 (emms-default-players)
 (emms-cache 1)
@@ -9,11 +13,13 @@
 (require 'emms-info-libtag)
 (setq emms-info-functions '(emms-info-libtag))
 
-;; (setq emms-source-file-directory-tree-function 'emms-source-file-directory-tree-find)
+(require 'emms-player-mpd)
+(setq emms-player-mpd-music-directory "/var/lib/mpd/music/")
+(add-to-list 'emms-info-functions 'emms-info-mpd)
+(add-to-list 'emms-player-list 'emms-player-mpd)
+;; (emms-player-mpd-update-all)
+(emms-cache-set-from-mpd-all)
 
-;; (require 'emms-player-mpd)
-;; (add-to-list 'emms-info-functions 'emms-info-mpd)
-;; (add-to-list 'emms-player-list 'emms-player-mpd)
 ;; (emms-player-set emms-player-mpd 'regex
 ;;                  "\\.ogg\\|\\.mp3\\|\\.wma\\|\\.ogm\\|\\.asf\\|\\.mkv\\|http://\\|mms://\\|\\.rmvb\\|\\.flac\\|\\.vob\\|\\.m4a\\|\\.ape\\|\\.mpc\\|\\.MP3\\|\\.OGG\\|\\.FLAC")
 
@@ -25,12 +31,12 @@
 ;;     (emms-player-set emms-player-mpd
 ;; 		     'regex
 ;; 		     emms-player-mpd-supported-regexp)
-;; (setq emms-player-mpd-music-directory "/var/lib/mpd/music/")
 
-(setq emms-source-file-default-directory "/var/lib/mpd/music/NAS/Synology/BEETS/")
 
-;; (emms-cache-set-from-mpd-all)
-;; (emms-player-mpd-update-all)
+
+
+
+
 ;; (emms-player-mpd-update-all-reset-cache)
 (setq emms-browser--covers-filename '(("cover_small.jpg" "cover_small.jpeg" "cover_small.png" "cover_small.gif" "cover_small.bmp")
  ("cover_med.jpg" "cover_med.jpeg" "cover_med.png" "cover_med.gif" "cover_med.bmp")
