@@ -1,7 +1,6 @@
 #~/.config/beets/config.yaml
 directory: /var/lib/mpd/music/NAS/Synology/BEETS/
-
-library: /var/lib/mpd/music/NAS/Synology/BEETS/ADMINISTRATION/musiclibrary.blb
+library: /var/lib/mpd/music/NAS/Synology/ADMINISTRATION/musiclibrary.blb
 
 ignore: .@eaDir BEETS .* *~
 
@@ -14,10 +13,9 @@ import:
     move: yes
     resume: ask
     #none_rec_action: skip
-    log: /var/lib/mpd/music/NAS/Synology/BEETS/ADMINISTRATION/beets-import-fail
+    log: /var/lib/mpd/music/NAS/Synology/ADMINISTRATION/beets-import-fail
     fromfilename: yes
     permissions: yes
-    
 
 match:
     max_rec:
@@ -42,7 +40,6 @@ mpd:
 fetchart:
     auto: yes
 
-
 missing:
     #format: $albumartist - $album - $title
     #format: $albumartist - $album
@@ -58,3 +55,4 @@ match:
 permissions:
     file: 644
     dir: 755
+    
