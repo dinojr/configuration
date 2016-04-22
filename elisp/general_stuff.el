@@ -55,5 +55,7 @@
 )
 (setq tabbar-use-images nil) 
 
+(setq visible-bell t)
+
 ;; Raccourcis
 (global-set-key [f2] 'calendar)
