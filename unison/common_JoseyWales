@@ -108,6 +108,7 @@ times = false
 sortbysize = true
 sortnewfirst = true
 maxthreads = 50
+watch=false
 
 #merge ou merge2 je sais plus = Name {,.}* -> emacs -q --eval '(ediff-merge-files-with-ancestor  "CURRENT1" "CURRENT2" "OLD" nil "NEW")'
 #merge = Name {,.}* -> emacsclient -c -l '~/.emacs.d/emacs_noninteractive.el' --eval '(ediff-merge-files "CURRENT1" "CURRENT2" nil "NEW")'
