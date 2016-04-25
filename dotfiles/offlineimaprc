@@ -30,6 +30,7 @@ folderfilter = lambda foldername: foldername not in ['anciens']
 realdelete = yes
 # holdconnectionopen = true
 # keepalive = 60
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 
 [Account GmailOffline]
 localrepository = GmailLocal
