@@ -95,6 +95,7 @@ ignore = Name {.emacs.desktop}
 ignore = Name {mycor}{,.}*
 ignore = Name {.saves}{,.}*
 ignore = Name {session}{,.}*
+ignore = Name {S.gpg-agent}
 
 ## Miscellaneous options
 
