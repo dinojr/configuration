@@ -1,0 +1,13 @@
+# ~/.unison/JoseyWales.prf
+# Unison preferences
+label = touco laptop
+#Roots of the synchronization
+root = /home/
+root = ssh://touco//home/
+
+log = true
+logfile = /home/wilk/.unison/unison.log
+
+## Include common settings for profiles no matter where they are
+## invoked (client or server)
+include common_JoseyWales
