@@ -13,10 +13,10 @@
 (require 'emms-info-libtag)
 (setq emms-info-functions '(emms-info-libtag))
 
-;; (require 'emms-player-mpd)
-;; (setq emms-player-mpd-music-directory "/var/lib/mpd/music/")
-;; (add-to-list 'emms-info-functions 'emms-info-mpd)
-;; (add-to-list 'emms-player-list 'emms-player-mpd)
+(require 'emms-player-mpd)
+(setq emms-player-mpd-music-directory "/var/lib/mpd/music/")
+(add-to-list 'emms-info-functions 'emms-info-mpd)
+(add-to-list 'emms-player-list 'emms-player-mpd)
 ;; (emms-player-mpd-update-all)
 ;; (emms-cache-set-from-mpd-all)
 
@@ -46,7 +46,7 @@
 
 ;; (emms-browser)
 
-(global-set-key (kbd "<XF86AudioPlay>") 'emms-pause)
-(global-set-key (kbd "<XF86AudioStop>") 'emms-stop)
-(global-set-key (kbd "<XF86AudioPrev>") 'emms-previous)
-(global-set-key (kbd "<XF86AudioNext>") 'emms-next)
+;; (global-set-key (kbd "<XF86AudioPlay>") 'emms-pause)
+;; (global-set-key (kbd "<XF86AudioStop>") 'emms-stop)
+;; (global-set-key (kbd "<XF86AudioPrev>") 'emms-previous)
+;; (global-set-key (kbd "<XF86AudioNext>") 'emms-next)
