@@ -54,7 +54,7 @@
 		 ("begin" "$1" "$" "$$" "\\(" "\\["))))
  '(package-selected-packages
    (quote
-    (gnorb easy-kill beacon emms-info-mediainfo emms-mode-line-cycle helm-emms ace-link rainbow-mode unison-mode latex-extra org-pdfview pdf-tools offlineimap markdown-mode org-caldav paradox spinner sx notmuch yasnippet yasnippet-bundle magit helm-company company-auctex company-math wiki-summary workgroups2 workgroups window-number win-switch w3m twittering-mode tabbar switch-window smartparens session-manager rainbow-delimiters paredit oauth2 notify naquadah-theme memory-usage magit-filenotify helm gnuplot-mode gnuplot gh flyspell-lazy expand-region emms calfw-gcal calfw boxquote bitlbee bbdb2erc bbdb-vcard bbdb-ext bbdb- autopair auto-dictionary auctex ace-flyspell)))
+    (org-pdfview gnorb easy-kill beacon emms-info-mediainfo emms-mode-line-cycle helm-emms ace-link rainbow-mode unison-mode latex-extra offlineimap markdown-mode org-caldav paradox spinner sx notmuch yasnippet yasnippet-bundle magit helm-company company-auctex company-math wiki-summary workgroups2 workgroups window-number win-switch w3m twittering-mode tabbar switch-window smartparens session-manager rainbow-delimiters paredit oauth2 notify naquadah-theme memory-usage magit-filenotify helm gnuplot-mode gnuplot gh flyspell-lazy expand-region emms calfw-gcal calfw boxquote bitlbee bbdb2erc bbdb-vcard bbdb-ext bbdb- autopair auto-dictionary auctex ace-flyspell)))
  '(paradox-automatically-star nil)
  '(paradox-github-token t)
  '(reftex-toc-include-labels t)
