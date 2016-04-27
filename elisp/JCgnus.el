@@ -189,3 +189,24 @@ the variable `gnus-move-split-methods' for finding a default target."
 	    (define-key message-mode-map "\C-c\C-f\C-g" 'message-goto-gcc)
 	    )
 	  )
+
+(defun jc-mark-my-unseen-articles ()
+  (interactive)
+  (save-excursion
+    (let ((articles gnus-newsgroup-unseen))
+      (while articles
+	(gnus-summary-select-article (pop articles))
+	(let ((sender (jc-gnus-article-header-value "From")))
+	  (if (string-match gnus-ignored-from-addresses sender)
+	      (gnus-summary-mark-as-dormant 1)))))))
+
+;; (add-hook 'gnus-prepare-group-hook 'jc-mark-my-unseen-articles)
+
+;; (add-hook 'gnus-select-group-hook
+;;    	   (lambda ()
+;;    	     (mapcar (lambda (header)
+;;    		       (mail-header-set-subject
+;;    			header
+;;    			(gnus-simplify-subject
+;;    			 (mail-header-subject header) 're-only)))
+;;    		     gnus-newsgroup-headers)))
