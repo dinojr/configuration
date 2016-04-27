@@ -64,6 +64,7 @@
 ;; Customize end
 ;;--------------------
 
+(load "JCgpg.el")
 (load "general_stuff.el")
 (load "JClpr.el")
 (load "JCnavigation.el")
@@ -105,6 +106,8 @@
 (load "JCcalc.el")
 (load "JCace-link.el")
 (load "JCemms.el")
+(load "JCpython.el")
+
 
 ;; (load "JCasymptote.el")
 
