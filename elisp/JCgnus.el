@@ -20,11 +20,14 @@
 
 (add-hook 'gnus-message-setup-hook 'turn-on-auto-fill)
 
-(require 'offlineimap)
-(add-hook 'gnus-before-startup-hook 'offlineimap)
-(add-hook 'offlineimap-event-hooks (lambda (msg-type &optional action)
-                                     (if (equal "finished\n" msg-type)
-                                         (gnus-group-get-new-news)))) 
+;; (require 'offlineimap)
+;; (add-hook 'gnus-before-startup-hook 'offlineimap)
+;; (add-hook 'offlineimap-event-hooks (lambda (msg-type &optional action)
+;;                                      (if (equal "finished\n" msg-type)
+;;                                          (gnus-group-get-new-news)))) 
+(global-set-key "\C-cg" '(lambda () (interactive)
+                           (async-shell-command "offlineimap")))
+
 
 ;; (eval-after-load 'gnus 
 ;;   (lambda ()
