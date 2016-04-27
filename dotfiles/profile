@@ -16,7 +16,7 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-PATH="/usr/local/texlive/2014/bin/x86_64-linux:/home/wilk/info/telephone/android-sdk-linux_x86/tools:$PATH"
+PATH="/usr/local/texlive/current/bin/x86_64-linux:$PATH"
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
