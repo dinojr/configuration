@@ -1,5 +1,5 @@
 eval `keychain --eval --agents ssh,gpg id_rsa 370D5DFF`
 #export SSH_ASKPASS=/usr/bin/pinentry
 #eval `keychain --quiet --eval --agents ssh id_rsa`
-#eval `source ~/.keychain/$HOSTNAME-sh`
-eval `source ~/.ssh/.keychain/$HOSTNAME-sh-gpg`
+eval `source ~/.keychain/$HOSTNAME-sh`
+eval `source ~/.keychain/$HOSTNAME-sh-gpg`
