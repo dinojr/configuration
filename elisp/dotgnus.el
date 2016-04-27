@@ -542,8 +542,8 @@
 (defun oxy-unicode-threads-heavy () 
   (interactive)
   (setq ;; gnus-summary-line-format "%8{%8d│%}%8{%4k│%}%O%9{%U%R%z%}%8{│%}%*%(%-23,23f%)%7{║%} %6{%B%} %s\n"
-        ;; gnus-summary-line-format "%8{%11&user-date;%}%9{│%}%8{%4k%}%9{│%}%O%9{%U%R%z%}%21=%9{│%}%*%(%-23,23f%)%9{║%} %6{%B%} %s\n"
-	gnus-summary-dummy-line-format "%11=%9{│%}%16=%9{│%}%21=%9{│%}%45=%9{║%}%46=%6{┏○%}%47=%S\n"
+        gnus-summary-line-format "%8{%11&user-date;%}%9{│%}%8{%4k%}%9{│%}%O%9{%U%R%z%}%21=%9{│%}%*%(%-23,23f%)%9{║%}%6{%B%} %s\n"
+	;; gnus-summary-dummy-line-format "%11=%9{│%}%16=%9{│%}%21=%9{│%}%45=%9{║%}%46=%6{┏○%}%47=%S\n"
 	gnus-summary-dummy-line-format "%11=%9{│%}%8{%16=%}%9{│%}%21=%9{│%}%8{%45=%}%9{║%}%46=%6{┏○%}%47=%S\n"
 	gnus-sum-thread-tree-indent " "
 	gnus-sum-thread-tree-root "┏● " 
