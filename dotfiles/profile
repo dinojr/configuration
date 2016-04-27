@@ -39,3 +39,8 @@ LS_COLORS='no=00:fi=00:di=36;01:ln=36:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:
 
 export LS_COLORS
 
+#eval `keychain --eval --agents ssh,gpg id_rsa DF1A7077 1BF1D719 7363FE09`
+#export SSH_ASKPASS=/usr/bin/pinentry
+eval `keychain --quiet --eval --agents ssh id_rsa`
+eval `source ~/.keychain/$HOSTNAME-sh`
+#eval `source ~/.ssh/.keychain/$HOSTNAME-sh-gpg`
