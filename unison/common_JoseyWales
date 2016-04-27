@@ -20,6 +20,7 @@ path = wilk/.Conky
 path = wilk/Links
 path = wilk/.local/share/gnome-shell/extensions/
 path = wilk/.local/share/applications/
+path = wilk/.org-timestamps/
 #path = wilk/.config
 
 #Files
@@ -42,7 +43,6 @@ path = wilk/.offlineimaprc
 path = wilk/.asynk
 path = wilk/diary
 path = wilk/.emacs_workgroups
-path = wilk/.org-timestamps
 #path = usr/local/texlive/2011/texmf.cnf
 #path = usr/local/texlive/2011/texmf/web2c/texmf.cnf
 
