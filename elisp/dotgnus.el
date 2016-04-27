@@ -439,6 +439,56 @@
 
 ;; Apparence
 
+  (when (char-displayable-p ?\u2691)
+    (setq gnus-ticked-mark ?⚑))
+
+  (when (char-displayable-p ?\u2690)
+    (setq gnus-dormant-mark ?⚐))
+
+  (when (char-displayable-p ?\u2709)
+    (setq gnus-unread-mark ?✉))
+
+  (when (char-displayable-p ?\u2717)
+    (setq gnus-del-mark ?✗))
+
+  (when (char-displayable-p ?\u2713)
+    (setq gnus-read-mark ?✓))
+
+  (setq gnus-ancient-mark ? )
+
+  (when (char-displayable-p ?\u2620)
+    (setq gnus-killed-mark ?☠))
+
+  (when (char-displayable-p ?\u2197)
+    (setq gnus-canceled-mark ?↗))
+
+  (when (char-displayable-p ?\u267B)
+    (setq gnus-expirable-mark ?♻))
+
+  (when (char-displayable-p ?\u21BA)
+    (setq gnus-replied-mark ?↺))
+
+  (when (char-displayable-p ?\u21AA)
+    (setq gnus-forwarded-mark ?↪))
+
+  (when (char-displayable-p ?\u260D)
+    (setq gnus-cached-mark ?☍))
+
+  (when (char-displayable-p ?\u2729)
+    (setq gnus-unseen-mark ?✩))
+
+  (when (char-displayable-p ?\u2699)
+    (setq gnus-process-mark ?⚙))
+
+  (when (char-displayable-p ?\u2605)
+    (setq gnus-recent-mark ?★))
+
+  (when (char-displayable-p ?\u2191)
+    (setq gnus-score-over-mark ?↑))
+
+  (when (char-displayable-p ?\u2193)
+    (setq gnus-score-below-mark ?↓))
+
 (defface gnus-summary-markup-face
   '((((class color)
       (background dark))
@@ -480,7 +530,7 @@
   (interactive)
   (setq gnus-summary-dummy-line-format "        %8{│%}    %8{│%}%O   %(%8{│%}                       %7{│%}%) %6{□%}  %S\n"
 	;; gnus-summary-line-format "%8{%8d│%}%8{%4k│%}%O%9{%U%R%z%}%8{│%}%*%(%-23,23f%)%7{│%} %6{%B%} %s\n"
-	gnus-summary-line-format "%8{%8&user-date;│%}%8{%4k│%}%O%9{%U%R%z%}%8{│%}%*%(%-23,23f%)%7{│%} %6{%B%} %s\n"
+	gnus-summary-line-format "%8{%8&user-date;%}%9{|}%8{%4k│%}%O%9{%U%R%z%}%8{│%}%*%(%-23,23f%)%7{│%} %6{%B%} %s\n"
 	gnus-sum-thread-tree-indent " "
 	gnus-sum-thread-tree-root "■ "
 	gnus-sum-thread-tree-false-root "□ "
@@ -492,8 +542,9 @@
 (defun oxy-unicode-threads-heavy () 
   (interactive)
   (setq ;; gnus-summary-line-format "%8{%8d│%}%8{%4k│%}%O%9{%U%R%z%}%8{│%}%*%(%-23,23f%)%7{║%} %6{%B%} %s\n"
-        gnus-summary-line-format "%8{%11&user-date;│%}%8{%4k│%}%O%9{%U%R%z%}%8{│%}%*%(%-23,23f%)%7{║%} %6{%B%} %s\n"
-	gnus-summary-dummy-line-format "           %8{│%}    %8{│%}%O   %(%8{│%}                       %7{║%}%) %6{┏○%}  %S\n"
+        ;; gnus-summary-line-format "%8{%11&user-date;%}%9{│%}%8{%4k%}%9{│%}%O%9{%U%R%z%}%21=%9{│%}%*%(%-23,23f%)%9{║%} %6{%B%} %s\n"
+	gnus-summary-dummy-line-format "%11=%9{│%}%16=%9{│%}%21=%9{│%}%45=%9{║%}%46=%6{┏○%}%47=%S\n"
+	gnus-summary-dummy-line-format "%11=%9{│%}%8{%16=%}%9{│%}%21=%9{│%}%8{%45=%}%9{║%}%46=%6{┏○%}%47=%S\n"
 	gnus-sum-thread-tree-indent " "
 	gnus-sum-thread-tree-root "┏● " 
 	gnus-sum-thread-tree-false-root " ○ "
