@@ -6,7 +6,7 @@
 
 (require 'printing)
 
-(setq printer-name "laserjet-syn")
+(setq printer-name "laserjet-lago")
 
 (setq lpr-command "lpr")
 
