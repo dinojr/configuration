@@ -1,0 +1,1 @@
+/home/wilk/info/mcomix/mcomixstarter.py
