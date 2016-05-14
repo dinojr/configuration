@@ -11,4 +11,4 @@
   (lambda ()
     (require 'helm-bibtex)
     (setq bibtex-completion-bibliography "~/enseignement/papiers/bibliography.bib")
-    (setq bibtex-completion-library-path "~/home/wilk/enseignement/papiers/")))
+    (setq bibtex-completion-library-path "~/enseignement/papiers/")))
