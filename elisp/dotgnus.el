@@ -169,8 +169,8 @@
 		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Free:LAYOUT=fs")
 		(nnimap-split-methods default)
 		(nnimap-inbox "INBOX")
-		(nnir-search-engine imap)
-		;; (nnir-search-engine notmuch)
+		;; (nnir-search-engine imap)
+		(nnir-search-engine notmuch)
 		;; (nnir-notmuch-remove-prefix "/home/wilk/email/Maildir/Free/")
 		)
 	(nnimap "GmailOffline"
@@ -179,8 +179,8 @@
 		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Gmail:LAYOUT=fs")
 		(nnimap-split-methods default)
 		(nnimap-inbox "INBOX")
-		(nnir-search-engine imap)
-		;; (nnir-search-engine notmuch)
+		;; (nnir-search-engine imap)
+		(nnir-search-engine notmuch)
 		;; (nnir-notmuch-remove-prefix "/home/wilk/email/Maildir/Gmail/")
 		)
 	;; (nnfolder "archive"
