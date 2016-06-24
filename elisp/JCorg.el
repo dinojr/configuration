@@ -440,24 +440,24 @@
     )
 
 
-(defun jc-org-publish-rename-notes-pdf ()
+(defun jc-org-publish-rename-notes-pdf (project-list)
   "Rename file.pdf to file-notes.pdf and file.tex to file-notes.tex when buffer is visiting file.org"
   (jc-org-publish-rename '"pdf" '"notes")
   (jc-org-publish-rename '"tex" '"notes"))
 
-(defun jc-org-publish-rename-eleves-pdf ()
+(defun jc-org-publish-rename-eleves-pdf (project-list)
   "Rename file.pdf to file-eleves.pdf and file.tex to file-eleves.tex when buffer is visiting file.org"
   ;; (jc-org-publish-rename-pdf '"eleves")
   (jc-org-publish-rename '"pdf" '"eleves")
   (jc-org-publish-rename '"tex" '"eleves")
   )
 
-(defun jc-org-publish-rename-beamer-pdf ()
+(defun jc-org-publish-rename-beamer-pdf (project-list)
   "Rename file.pdf to file-beamer.pdf and file.tex to file-beamer.tex when buffer is visiting file.org"
   (jc-org-publish-rename '"pdf" '"beamer")
   (jc-org-publish-rename '"tex" '"beamer"))
 
-(defun jc-org-latex-notes-preparation ()
+(defun jc-org-latex-notes-preparation (project-list)
   "Preparation functions to be run before actually pubishing"
   ;; (progn (setq org-latex-title-command "")
   ;;   (org-latex-publish-to-pdf))
