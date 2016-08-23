@@ -246,6 +246,7 @@
 	      ;; 	)
 	      ;;  ((org-agenda-filter-preset '("-girodet")))
 	      ;;  )
+	      ("O" "Tâches orphelines" alltodo "" ((org-agenda-todo-ignore-timestamp  (quote all))))
 	      ("wl" "Agenda et tâches au lycée"
 	       ((agenda "lycée"
 		((org-agenda-entry-types '(:timestamp))(org-agenda-ndays 2)))
@@ -293,9 +294,9 @@
               ;;                                                     (org-agenda-todo-ignore-with-date nil)
               ;;                                                     (org-agenda-todo-ignore-deadlines nil)
               ;;                                                     (org-agenda-todo-ignore-scheduled nil)))
-              ;; ("R" "Refile New Notes and Tasks" tags "LEVEL=2+REFILE" ((org-agenda-todo-ignore-with-date nil)
-              ;;                                                          (org-agenda-todo-ignore-deadlines nil)
-              ;;                                                          (org-agenda-todo-ignore-scheduled nil)))
+              ("R" "Refile New Notes and Tasks" tags "LEVEL=2+REFILE" ((org-agenda-todo-ignore-with-date nil)
+                                                                       (org-agenda-todo-ignore-deadlines nil)
+                                                                       (org-agenda-todo-ignore-scheduled nil)))
               ;; ("N" "Notes" tags "NOTE" nil)
               ;; ("n" "Next" tags "NEXT-WAITING-CANCELLED/!" nil)
               ;; ("P" "Projects" tags-todo "project-WAITING-CANCELLED/!-DONE" nil)
@@ -440,24 +441,24 @@
     )
 
 
-(defun jc-org-publish-rename-notes-pdf ()
+(defun jc-org-publish-rename-notes-pdf (project-list)
   "Rename file.pdf to file-notes.pdf and file.tex to file-notes.tex when buffer is visiting file.org"
   (jc-org-publish-rename '"pdf" '"notes")
   (jc-org-publish-rename '"tex" '"notes"))
 
-(defun jc-org-publish-rename-eleves-pdf ()
+(defun jc-org-publish-rename-eleves-pdf (project-list)
   "Rename file.pdf to file-eleves.pdf and file.tex to file-eleves.tex when buffer is visiting file.org"
   ;; (jc-org-publish-rename-pdf '"eleves")
   (jc-org-publish-rename '"pdf" '"eleves")
   (jc-org-publish-rename '"tex" '"eleves")
   )
 
-(defun jc-org-publish-rename-beamer-pdf ()
+(defun jc-org-publish-rename-beamer-pdf (project-list)
   "Rename file.pdf to file-beamer.pdf and file.tex to file-beamer.tex when buffer is visiting file.org"
   (jc-org-publish-rename '"pdf" '"beamer")
   (jc-org-publish-rename '"tex" '"beamer"))
 
-(defun jc-org-latex-notes-preparation ()
+(defun jc-org-latex-notes-preparation (project-list)
   "Preparation functions to be run before actually pubishing"
   ;; (progn (setq org-latex-title-command "")
   ;;   (org-latex-publish-to-pdf))
@@ -545,7 +546,8 @@
 	      ("l" "À lire" item (file+headline "~/org/orgfiles/loisirs.org" "À lire") "%?\n %^C")
 	      ("v" "À voir" item (file+headline "~/org/orgfiles/loisirs.org" "À voir") "%?\n %u\n %^C")
 	      ("s" "CDs à acheter" checkitem (file+headline "~/org/orgfiles/loisirs.org" "CDs à acheter") "%?\n %^C")
-	      ("m" "maintenance" entry (filedatetree "~/org/orgfiles/info.org") "* %?")
+	      ("m" "maintenance" entry (file+datetree "~/org/orgfiles/info.org") "* %?")
+	      ("S" "Santé" entry (file+datetree "~/org/orgfiles/sante.org") "* %?")
 	      ("b" "bios" item (file+headline "~/org/orgfiles/lycee.org" "Bios") "%?\n %^C")
 	      ("T" "test" item (file+headline "~/org/orgfiles/test.org" "Test") " [ ] %?")
 	      ("p" "password" entry (file "~/org/orgfiles/pw.gpg") "* %^{Title}\n  %^{URL}p %^{USERNAME}p %^{PASSWORD}p")
