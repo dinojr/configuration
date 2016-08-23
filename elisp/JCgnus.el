@@ -213,3 +213,8 @@ the variable `gnus-move-split-methods' for finding a default target."
 ;;    			(gnus-simplify-subject
 ;;    			 (mail-header-subject header) 're-only)))
 ;;    		     gnus-newsgroup-headers)))
+
+(defun jc-turn-off-backup ()
+            (set (make-local-variable 'backup-inhibited) t))
+
+(add-hook 'nnfolder-save-buffer-hook 'jc-turn-off-backup)
