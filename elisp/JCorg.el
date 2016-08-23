@@ -246,6 +246,7 @@
 	      ;; 	)
 	      ;;  ((org-agenda-filter-preset '("-girodet")))
 	      ;;  )
+	      ("O" "Tâches orphelines" alltodo "" ((org-agenda-todo-ignore-timestamp  (quote all))))
 	      ("wl" "Agenda et tâches au lycée"
 	       ((agenda "lycée"
 		((org-agenda-entry-types '(:timestamp))(org-agenda-ndays 2)))
@@ -293,9 +294,9 @@
               ;;                                                     (org-agenda-todo-ignore-with-date nil)
               ;;                                                     (org-agenda-todo-ignore-deadlines nil)
               ;;                                                     (org-agenda-todo-ignore-scheduled nil)))
-              ;; ("R" "Refile New Notes and Tasks" tags "LEVEL=2+REFILE" ((org-agenda-todo-ignore-with-date nil)
-              ;;                                                          (org-agenda-todo-ignore-deadlines nil)
-              ;;                                                          (org-agenda-todo-ignore-scheduled nil)))
+              ("R" "Refile New Notes and Tasks" tags "LEVEL=2+REFILE" ((org-agenda-todo-ignore-with-date nil)
+                                                                       (org-agenda-todo-ignore-deadlines nil)
+                                                                       (org-agenda-todo-ignore-scheduled nil)))
               ;; ("N" "Notes" tags "NOTE" nil)
               ;; ("n" "Next" tags "NEXT-WAITING-CANCELLED/!" nil)
               ;; ("P" "Projects" tags-todo "project-WAITING-CANCELLED/!-DONE" nil)
