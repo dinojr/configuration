@@ -617,6 +617,7 @@
 (setq org-ref-pdf-directory "~/enseignement/papiers")
 (setq org-ref-bibtex-files "~/enseignement/papiers/bibliography.bib")
 
+(require 'org-checklist) ; pour mettre à 0 les checkboxes quand une tâche est passée en DONE
 ;; Raccourcis
 (global-set-key (kbd "C-c C-g") (lambda () (interactive) (org-clock-in '(4))))
 (global-set-key (kbd "C-c C-h") 'org-clock-out)
