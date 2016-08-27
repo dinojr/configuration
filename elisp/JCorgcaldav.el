@@ -19,6 +19,12 @@
 ;; #+end_src
 ;; #+RESULTS:
 
-;; (org-caldav-sync)
+;; org-property-action -> delete globally ID property pour tout
+;; remettre à plat en cas de problème
+
+
+;; (load "/home/wilk/.emacs.d/elpa/org-caldav-20160614.1342/org-caldav.el")
+;; (load "/home/wilk/configuration/elisp/JCorgcaldav.el")
+
 
 (global-set-key [f5] 'org-caldav-sync)
