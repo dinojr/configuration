@@ -3,7 +3,7 @@
 (setq org-caldav-url "https://www.google.com/calendar/dav")
 (setq org-caldav-calendar-id "09qqpld5o29tddmmv92dse1tng@group.calendar.google.com")
 (setq org-caldav-inbox "~/org/org-caldav.org")
-(setq org-caldav-files '("~/org/orgfiles/planning.org" "~/org/orgfiles/lycee-15-16.org"))
+(setq org-caldav-files '("~/org/orgfiles/planning-16-17.org" "~/org/orgfiles/lycee-16-17.org"))
 (setq org-icalendar-timezone "Europe/Paris")
 (setq org-caldav-save-directory "~/org/") ; to ensure synchronization by unison
 ;; Fonction pour créer plein d'entrées 
