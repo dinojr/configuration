@@ -114,7 +114,7 @@
  ("DONE" :foreground "yellow green" :weight bold)
  ("WAITING" :foreground "orange" :weight bold)
  ("SOMEDAY" :foreground "plum" :weight bold)
- ("CANCELLED" :foreground "yellow green" :weight bold)
+ ("CANCELED" :foreground "yellow green" :weight bold)
  ("BUG" :foreground "red1" :weight bold)
  ("REPORTED" :foreground "slate blue" :weight bold)
  ("FIXED" :foreground "yellow green" :weight bold)
@@ -202,16 +202,16 @@
                             ("Caro" . ?c)
                             ("project" . ?P)
                             ("achat" . ?a)
-                            ("CANCELLED" . ?C))))
+                            ("CANCELED" . ?C))))
 
 (setq org-todo-state-tags-triggers
-      (quote (("CANCELLED" ("CANCELLED" . t))
+      (quote (("CANCELED" ("CANCELED" . t))
               ("WAITING" ("WAITING" . t) ("NEXT"))
 	      ("REPORTED" ("WAITING" . t) ("NEXT"))
               (done ("NEXT") ("WAITING"))
-              ("TODO" ("WAITING") ("CANCELLED") ("NEXT"))
+              ("TODO" ("WAITING") ("CANCELED") ("NEXT"))
               ("STARTED" ("WAITING"))
-              ("DONE" ("WAITING") ("CANCELLED") ("NEXT")))))
+              ("DONE" ("WAITING") ("CANCELED") ("NEXT")))))
 
 
 ;; Agenda views
@@ -285,7 +285,7 @@
 	      ;; ("D" "Done Tasks" todo "DONE" ((org-agenda-todo-ignore-scheduled nil)
               ;;                                      (org-agenda-todo-ignore-deadlines nil)
               ;;                                      (org-agenda-todo-ignore-with-date nil)))
-	      ;; ("K" "Cancelled Tasks" todo "CANCELLED" ((org-agenda-todo-ignore-scheduled nil)
+	      ;; ("K" "Canceled Tasks" todo "CANCELED" ((org-agenda-todo-ignore-scheduled nil)
               ;;                                      (org-agenda-todo-ignore-deadlines nil)
               ;;                                      (org-agenda-todo-ignore-with-date nil)))
 ; 	      ("O" "Tâches orphelines" alltodo "" ((org-agenda-todo-ignore-timestamp  (quote all))))
@@ -298,10 +298,10 @@
                                                                        (org-agenda-todo-ignore-deadlines nil)
                                                                        (org-agenda-todo-ignore-scheduled nil)))
               ;; ("N" "Notes" tags "NOTE" nil)
-              ;; ("n" "Next" tags "NEXT-WAITING-CANCELLED/!" nil)
-              ;; ("P" "Projects" tags-todo "project-WAITING-CANCELLED/!-DONE" nil)
+              ;; ("n" "Next" tags "NEXT-WAITING-CANCELED/!" nil)
+              ;; ("P" "Projects" tags-todo "project-WAITING-CANCELED/!-DONE" nil)
               ;; ("wc" "Temps de cerveau..." tags "LEVEL>2+lire|LEVEL>2+ecouter|LEVEL>=2+voir" nil)
-              ;; ("A" "Tasks to be Archived" tags "LEVEL=2/DONE|CANCELLED" nil)
+              ;; ("A" "Tasks to be Archived" tags "LEVEL=2/DONE|CANCELED" nil)
               ;; ("H" "Habits" tags "STYLE=\"habit\""
 	      ;;  ((org-agenda-todo-ignore-with-date nil)
 	      ;; 	(org-agenda-todo-ignore-scheduled nil)
@@ -310,7 +310,7 @@
 
 
 
-(setq org-stuck-projects (quote ("projet/!-DONE-CANCELLED" nil ("NEXT") "")))
+(setq org-stuck-projects (quote ("projet/!-DONE-CANCELED" nil ("NEXT") "")))
 
 ; Enable habit tracking (and a bunch of other modules)
 (setq org-modules (quote (org-habit org-gnus org-bbdb org-info)))
