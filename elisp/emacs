@@ -43,7 +43,8 @@
  '(font-latex-quotes (quote french))
  '(helm-external-programs-associations
    (quote
-    (("qti" . "qtiplot")
+    (("jpg" . "shotwell")
+     ("qti" . "qtiplot")
      ("agr" . "xmgrace")
      ("zip" . "file-roller")
      ("pdf" . "evince")
