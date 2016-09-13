@@ -11,4 +11,4 @@
 
 (setq pdf-view-midnight-colors '("#f8f8f2" . "#282a36"))
 
-(add-hook 'pdf-view-mode-hook 'pdf-view-midnight-minor-mode)
+(add-hook 'pdf-view-mode-hook 'turn-on-auto-revert-mode 'pdf-view-midnight-minor-mode)
