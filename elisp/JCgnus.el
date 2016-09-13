@@ -194,6 +194,14 @@ the variable `gnus-move-split-methods' for finding a default target."
 	    )
 	  )
 
+(add-hook 'gnus-summary-mode-hook
+	  (lambda ()
+	    (define-key gnus-summary-mode-map ":" 'bbdb-mua-edit-field-recipients)
+	    )
+	  )
+
+
+
 (defun jc-mark-my-unseen-articles ()
   (interactive)
   (save-excursion
