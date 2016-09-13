@@ -17,6 +17,7 @@
 (setq nnml-directory "~/email/Local/")
 (setq user-full-name "Julien Cubizolles")
 (setq user-mail-address "j.cubizolles@free.fr")
+(setq mail-default-reply-to user-mail-address)
 
 (add-hook 'gnus-message-setup-hook 'turn-on-auto-fill)
 
