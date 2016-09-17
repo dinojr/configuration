@@ -11,7 +11,7 @@
 #+LATEX_HEADER_EXTRA: \graphicspath{{/home/wilk/enseignement/schemas/$3/}}
 #+LATEX_HEADER_EXTRA: \standaloneconfig{mode=image}
 
-#+begin_src emacs-lisp :tangle yes :exports none
+#+begin_src emacs-lisp :results none :exports none
   (setq org-export-in-background t)	    
   (setq org-publish-project-alist
         `(("TeX"
@@ -29,7 +29,7 @@
            :exclude ".*"
            :latex-class "mpsi_beamer"
            :include ,(list (file-name-nondirectory buffer-file-name))
-           :completion-function jc-org-publish-rename-beamer-pdf
+           :completion-function (jc-org-publish-rename-beamer-pdf jc-notify-end-compilation-beamer)
 	   )
           ("notes"
            :base-directory "./"
@@ -39,7 +39,7 @@
            :exclude ".*"
            :latex-class "mpsi-beamerarticle"
            :include ,(list (file-name-nondirectory buffer-file-name))
-           :completion-function jc-org-publish-rename-notes-pdf
+           :completion-function (jc-org-publish-rename-notes-pdf jc-notify-end-compilation-notes)
            )
           ("eleves"
            :base-directory "./"
@@ -50,7 +50,7 @@
            :latex-class "mpsi-beamerarticle-eleves"
            :include ,(list (file-name-nondirectory buffer-file-name))
            :select-tags ("eleves")
-           :completion-function jc-org-publish-rename-eleves-pdf
+           :completion-function (jc-org-publish-rename-eleves-pdf jc-notify-end-compilation-eleves)
            )	   
           ("cours" :components ("beamer" "notes" "eleves"))))
 #+end_src
