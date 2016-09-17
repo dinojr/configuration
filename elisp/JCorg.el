@@ -668,7 +668,3 @@
 				   (unfill-paragraph)
 				   (mark-paragraph)
 				   ))
-
-
-
-(define-key org-mode-map [(control return)] 'org-insert-heading-respect-content)
