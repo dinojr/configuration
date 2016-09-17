@@ -14,6 +14,7 @@
 (require 'org)
 (require 'ox)
 (require 'ox-beamer)
+(require 'notifications)
 
 (add-to-list 'load-path "~/configuration/elisp/")
 (load "JCorg.el")

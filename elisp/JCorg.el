@@ -11,6 +11,7 @@
 
 (require 'org)
 (require 'cl)
+(require 'notifications)
 
 (setq org-export-backends '(ascii html icalendar latex beamer odt))
 (eval-after-load "ox"
@@ -463,8 +464,30 @@
   (setq org-latex-title-command "")
   )
 
-(setq org-export-in-background nil)
+(defun jc-notify-end-compilation-eleves (project-list)
+  (let* ((file-name (remove-org-suffix (file-name-nondirectory buffer-file-name))))
+      (notifications-notify
+       :title file-name
+       :body "élèves"
+       )
+      ))
 
+(defun jc-notify-end-compilation-notes (project-list)
+  (let* ((file-name (remove-org-suffix (file-name-nondirectory buffer-file-name))))
+      (notifications-notify
+       :title file-name
+       :body "notes"
+   )
+  ))
+
+(defun jc-notify-end-compilation-beamer (project-list)
+  (let* ((file-name (remove-org-suffix (file-name-nondirectory buffer-file-name))))
+      (notifications-notify
+       :title file-name
+       :body "beamer"
+   )
+  ))
+(setq org-export-in-background nil)
 
 ;; (defun jc-org-publish-project-options (backend)
 ;;   (setq org-publish-project-alist
@@ -649,5 +672,3 @@
 
 
 (define-key org-mode-map [(control return)] 'org-insert-heading-respect-content)
-
-
