@@ -22,7 +22,8 @@
 ;; org-property-action -> delete globally ID property pour tout
 ;; remettre à plat en cas de problème
 
-
+;; (add-to-list 'load-path "~/git-repositories/org-mode/lisp")
+;; (add-to-list 'load-path "~/git-repositories/org-mode/contrib/lisp")
 ;; (load "/home/wilk/.emacs.d/elpa/org-caldav-20160614.1342/org-caldav.el")
 ;; (load "/home/wilk/configuration/elisp/JCorgcaldav.el")
 
