@@ -33,6 +33,8 @@
       (TeX-fold-mode 1)
       ;; crochets automatiques pour exposants et indices
       (setq TeX-electric-sub-and-superscript t)
+      ;; 
+      (electric-indent-local-mode nil)
 )))
 
 (setq LaTeX-section-hook
@@ -199,6 +201,9 @@
 ;;      	  (lambda () (set (make-variable-buffer-local 'TeX-electric-math)
 ;;      			  (cons "\\(" "\\)"))))
 ;; (add-hook 'LaTeX-mode-hook 'TeX-global-PDF-mode)
+
+(add-to-list 'load-path "~/git-repositories/auc-tikz/")
+(load "auc-tikz-struct")
 
 ;; Raccourcis
 (define-key key-translation-map (kbd "²") (kbd "\\"))
