@@ -68,6 +68,7 @@
 
 (load "JCgpg.el")
 (load "general_stuff.el")
+(load "JCflycheck.el")
 (load "JClpr.el")
 (load "JCnavigation.el")
 (load "JCparenthesis.el")
