@@ -44,6 +44,17 @@
 
 (setq emms-random-playlist t)
 
+(require 'emms-mode-line-cycle)
+
+(emms-mode-line 1)
+(emms-playing-time 1)
+
+;; If you use this package like `emms-mode-line-icon', you need to load it.
+(require 'emms-mode-line-icon)
+(custom-set-variables '(emms-mode-line-cycle-use-icon-p t))
+
+(emms-mode-line-cycle 1)
+
 ;; (emms-browser)
 
 ;; (global-set-key (kbd "<XF86AudioPlay>") 'emms-pause)
