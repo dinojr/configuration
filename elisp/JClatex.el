@@ -202,8 +202,8 @@
 ;;      			  (cons "\\(" "\\)"))))
 ;; (add-hook 'LaTeX-mode-hook 'TeX-global-PDF-mode)
 
-(add-to-list 'load-path "~/git-repositories/auc-tikz/")
-(load "auc-tikz-struct")
+;; (add-to-list 'load-path "~/git-repositories/auc-tikz/")
+;; (load "auc-tikz-struct")
 
 ;; Raccourcis
 (define-key key-translation-map (kbd "²") (kbd "\\"))
