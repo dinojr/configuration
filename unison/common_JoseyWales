@@ -22,6 +22,7 @@ path = wilk/Links
 path = wilk/.local/share/gnome-shell/extensions/
 path = wilk/.local/share/applications/
 path = wilk/.org-timestamps/
+path = wilk/.cups/
 #path = wilk/.config
 
 #Files
