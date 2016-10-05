@@ -24,6 +24,7 @@ path = wilk/.local/share/applications/
 path = wilk/.org-timestamps/
 path = wilk/.cups/
 #path = wilk/.config
+path = wilk/.chktexrc
 
 #Files
 path = wilk/.unison/common_JoseyWales
