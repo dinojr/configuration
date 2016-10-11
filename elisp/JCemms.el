@@ -51,7 +51,7 @@
 
 ;; If you use this package like `emms-mode-line-icon', you need to load it.
 (require 'emms-mode-line-icon)
-(custom-set-variables '(emms-mode-line-cycle-use-icon-p t))
+(setq emms-mode-line-cycle-use-icon-p t)
 
 (emms-mode-line-cycle 1)
 
