@@ -302,6 +302,12 @@
               ("R" "Refile New Notes and Tasks" tags "LEVEL=2+REFILE" ((org-agenda-todo-ignore-with-date nil)
                                                                        (org-agenda-todo-ignore-deadlines nil)
                                                                        (org-agenda-todo-ignore-scheduled nil)))
+	      ("V" "Review projects" tags-todo "-CANCELLED/"
+	       ((org-agenda-overriding-header "Reviews Scheduled")
+		(org-agenda-skip-function 'org-review-agenda-skip)
+		(org-agenda-cmp-user-defined 'org-review-compare)
+		;; (org-agenda-sorting-strategy '(user-defined-down))
+		))
               ;; ("N" "Notes" tags "NOTE" nil)
               ;; ("n" "Next" tags "NEXT-WAITING-CANCELED/!" nil)
               ;; ("P" "Projects" tags-todo "project-WAITING-CANCELED/!-DONE" nil)
@@ -645,6 +651,10 @@
 (setq org-ref-bibtex-files "~/enseignement/papiers/bibliography.bib")
 
 (require 'org-checklist) ; pour mettre à 0 les checkboxes quand une tâche est passée en DONE
+
+(require 'org-review); pour mettre des review sur une tâche
+(setq org-review-delay "+3d")
+
 ;; Raccourcis
 (global-set-key (kbd "C-c C-g") (lambda () (interactive) (org-clock-in '(4))))
 (global-set-key (kbd "C-c C-h") 'org-clock-out)
@@ -674,3 +684,7 @@
 				   (unfill-paragraph)
 				   (mark-paragraph)
 				   ))
+(add-hook 'org-agenda-mode-hook
+          (lambda ()
+            (local-set-key (kbd "C-c C-r")
+                           'org-review-insert-last-review)))
