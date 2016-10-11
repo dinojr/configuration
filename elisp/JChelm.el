@@ -4,8 +4,20 @@
 ;; prefix "C-x c", which is inconvenient because you can
 ;; accidentially pressed "C-x C-c"
 (setq helm-command-prefix-key "C-c h")
-
+;; (package-initialize)
 (require 'helm-config)
+(helm-mode 1)
+(define-key global-map [remap find-file] 'helm-find-files)
+(define-key global-map [remap occur] 'helm-occur)
+(define-key global-map [remap list-buffers] 'helm-buffers-list)
+(define-key global-map [remap switch-to-buffer] 'helm-mini)
+(define-key global-map [remap dabbrev-expand] 'helm-dabbrev)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(unless (boundp 'completion-in-region-function)
+  (define-key lisp-interaction-mode-map [remap completion-at-point] 'helm-lisp-completion-at-point)
+  (define-key emacs-lisp-mode-map       [remap completion-at-point] 'helm-lisp-completion-at-point))
+
+(require 'popup)
 (require 'helm-eshell)
 (require 'helm-files)
 (require 'helm-grep)
@@ -17,23 +29,27 @@
       helm-ff-file-name-history-use-recentf t)
 
 (helm-autoresize-mode t)
-(global-set-key (kbd "M-x") 'helm-M-x)
-
-
-(global-set-key (kbd "C-x b") 'helm-mini)
-
 
 (setq helm-buffers-fuzzy-matching t
       helm-recentf-fuzzy-match    t)
 
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(setq helm-org-format-outline-path t)
 
-(global-set-key (kbd "C-c h o") 'helm-occur)
+;; (global-set-key (kbd "M-x") 'helm-M-x)
+
+
+;; (global-set-key (kbd "C-x b") 'helm-mini)
+
+
+
+;; (global-set-key (kbd "C-x C-f") 'helm-find-files)
+
+;; (global-set-key (kbd "C-c h o") 'helm-occur)
 
 (setq linum-relative-with-helm t)
 (helm-linum-relative-mode 1)
 
-(helm-mode 1)
+
 
 
 
