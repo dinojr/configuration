@@ -30,8 +30,14 @@
 
 (setq org-special-ctrl-a/e t)
 
-(setq org-startup-indented t)
-(setq org-hide-leading-stars t)
+;; (setq org-startup-indented t)
+;; (setq org-hide-leading-stars t)
+
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)(org-indent-mode 1)))
+
+
+
 (setq org-enforce-todo-dependencies t)
 
 (setq org-default-notes-file (concat org-directory "/notes.org"))
