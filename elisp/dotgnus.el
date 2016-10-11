@@ -489,6 +489,8 @@
   (when (char-displayable-p ?\u2193)
     (setq gnus-score-below-mark ?↓))
 
+(setq gnus-auto-expirable-marks '(9760 10007 67 89 77)) ; killed, del, catchup, low score, duplicate
+
 (defface gnus-summary-markup-face
   '((((class color)
       (background dark))
