@@ -52,7 +52,7 @@
 (setq linum-relative-with-helm t)
 (helm-linum-relative-mode 1)
 
-
+(setq helm-org-show-filename t)
 
 
 
