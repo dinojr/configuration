@@ -3,7 +3,9 @@
 ;; must set before helm-config,  otherwise helm use default
 ;; prefix "C-x c", which is inconvenient because you can
 ;; accidentially pressed "C-x C-c"
-(setq helm-command-prefix-key "C-c h")
+(global-set-key (kbd "C-c h") 'helm-command-prefix)
+(global-unset-key (kbd "C-x c"))
+
 ;; (package-initialize)
 (require 'helm-config)
 (helm-mode 1)
@@ -12,6 +14,7 @@
 (define-key global-map [remap list-buffers] 'helm-buffers-list)
 (define-key global-map [remap switch-to-buffer] 'helm-mini)
 (define-key global-map [remap dabbrev-expand] 'helm-dabbrev)
+(define-key global-map [remap bookmark-jump] 'helm-filtered-bookmarks)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (unless (boundp 'completion-in-region-function)
   (define-key lisp-interaction-mode-map [remap completion-at-point] 'helm-lisp-completion-at-point)
