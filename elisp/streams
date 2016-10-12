@@ -44,4 +44,6 @@
  ("TSF Jazz" "http://broadcast.infomaniak.net/tsfjazz-high.mp3.m3u" 1 streamlist)
  ("Oüi FM Radio" "http://broadcast.infomaniak.ch/ouifm-high.mp3.m3u" 1 streamlist)
  ("Oüi FM Rock indé" "http://ouifm5.ice.infomaniak.ch/ouifm5.aac" 1 url)
+ ("Oüi FM Classic Rock" "http://ouifm5.ice.infomaniak.ch/ouifm3.aac" 1 url)
+ ("Oüi FM Alternatif" "http://ouifm5.ice.infomaniak.ch/ouifm2.aac" 1 url)
  )
