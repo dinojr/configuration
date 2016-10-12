@@ -55,6 +55,32 @@
 
 (emms-mode-line-cycle 1)
 
+
+(defun jc-emms-info-track-description (track)
+  "Return a description of the current track."
+  (let ((artist (emms-track-get track 'info-artist))
+        (title (emms-track-get track 'info-title))
+	(album (emms-track-get track 'info-album))
+	)
+    (cond
+     ((and artist title album)
+      (concat artist " | " album " | " title))
+     ((and artist title)
+      (concat artist " | " title))
+     (title
+      (title))
+     (t
+      (emms-track-simple-description track)))
+    ;; (format "%10s|%s|%s"
+    ;;         (or artist
+    ;;             "")
+    ;; 	    (or album
+    ;;             "")
+    ;;         title)
+    ))
+(setq emms-track-description-function 'jc-emms-info-track-description)
+(eval-after-load 'helm-emms (setq helm-emms-use-track-description-function t))
+
 ;; (emms-browser)
 
 ;; (global-set-key (kbd "<XF86AudioPlay>") 'emms-pause)
