@@ -386,7 +386,9 @@ Silent
     \addlinespace \cr \fill \frontmatter
     \toprule \midrule \bottomrule
 
-    \ie \no \og \fg \pause \titlepage \flushleft 
+    \cleardoublepage
+
+    \ie \no \og \fg \pause \titlepage \flushleft \withsections
 
     \ieme \ier \iere \nd
 }[
