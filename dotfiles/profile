@@ -35,6 +35,15 @@ alias unrar='nice -n 15 unrar'
 alias advi='nice -n 10 /usr/bin/advi'
 #alias emacs='emacs-snapshot-gtk --fullheight'
 
-LS_COLORS='no=00:fi=00:di=36;01:ln=36:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:ex=01;32:*.cmd=01;32:*.exe=01;32:*.com=01;32:*.btm=01;32:*.bat=01;32:'
+#LS_COLORS='no=00:fi=00:di=36;01:ln=36:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:ex=01;32:*.cmd=01;32:*.exe=01;32:*.com=01;32:*.btm=01;32:*.bat=01;32:'
+#export LS_COLORS
 
-export LS_COLORS
+export EDITOR="emacsclient -t"
+export VISUAL="emacsclient -c"
+
+#eval `keychain --eval --agents ssh,gpg id_rsa 370D5DFF`
+eval `keychain --eval --agents ssh,gpg id_rsa 14498E3961F5B64FA7154EAD2A11A5D0370D5DFF` 
+#export SSH_ASKPASS=/usr/bin/pinentry
+#eval `keychain --quiet --eval --agents ssh id_rsa`
+#eval `source ~/.keychain/$HOSTNAME-sh`
+#eval `source ~/.keychain/$HOSTNAME-sh-gpg`
