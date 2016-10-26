@@ -25,6 +25,7 @@ path = wilk/.org-timestamps/
 path = wilk/.cups/
 #path = wilk/.config
 path = wilk/.chktexrc
+path = wilk/.config/systemd/user
 
 #Files
 path = wilk/.unison/common_JoseyWales

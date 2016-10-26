@@ -1,3 +1,6 @@
+export EDITOR=emacsclient -t
+export VISUAL=emacsclient -c
+
 eval `keychain --eval --agents ssh,gpg id_rsa 370D5DFF`
 #export SSH_ASKPASS=/usr/bin/pinentry
 #eval `keychain --quiet --eval --agents ssh id_rsa`
