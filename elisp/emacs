@@ -67,6 +67,7 @@
 ;;--------------------
 
 (load "JCgpg.el")
+(load "JCkeychain.el")
 (load "general_stuff.el")
 (load "JCflycheck.el")
 (load "JClpr.el")
