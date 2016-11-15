@@ -153,7 +153,7 @@
 ;; 		;; (nnimap-split-methods nnimap-split-fancy)
 ;; 		(nnimap-split-methods default)
 ;; 		)
-	;;(nntp "news.free.fr")
+	(nntp "news.free.fr")
 	(nntp "news.gwene.org"
 	      (nnir-search-engine gmane))
 	(nntp "news.gmane.org"
@@ -371,7 +371,7 @@
 ;; Posting charsets, 
 
 ;; (setq message-default-charset 'iso-8859-1) ;; Not sure if this is used
-(setq mm-coding-system-priorities '(utf-8 iso-8859-1))
+;; (setq mm-coding-system-priorities '(utf-8 iso-8859-1))
 
 (add-to-list 'gnus-newsgroup-variables 'mm-coding-system-priorities)
 (setq gnus-parameters
