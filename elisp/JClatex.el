@@ -167,6 +167,8 @@
   '(progn (setq reftex-insert-label-flags '("sft" t)))
   )
 
+(setq reftex-label-alist '(AMSTeX))
+
 ;;--------------------
 ;; RefTex end
 ;;--------------------
