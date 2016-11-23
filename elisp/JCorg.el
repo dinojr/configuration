@@ -130,7 +130,7 @@
 
 (setq org-todo-keywords
       '((sequence "TODO(t)" "STARTED(s!)" "WAITING(w@/!)" "|" "DONE(d!)" "CANCELED(c@)")
-	(sequence "BUG(b)" "REPORT(r@)" "KNOWNCAUSE(k@)" "|" "FIXED(f!)")
+	(sequence "BUG(b!)" "REPORT(r@)" "KNOWNCAUSE(k@)" "|" "FIXED(f!)")
 	(sequence "SOMEDAY(S)" "|" "CANCELED(c@)" "DONE(d!)")))
 
 ;Clocking
