@@ -1,3 +1,12 @@
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+MANPATH="/usr/local/texlive/current/texmf/doc/man:$MANPATH"
+INFOPATH="/usr/local/texlive/current/texmf/doc/info:$INFOPATH"
+
+PATH="/usr/local/texlive/current/bin/x86_64-linux:$PATH"
+
 export "EDITOR=emacsclient -t"
 export "VISUAL=emacsclient -c"
 
