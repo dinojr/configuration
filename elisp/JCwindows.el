@@ -17,3 +17,10 @@
 
 (setq aw-keys '(?q ?s ?d ?f ?g ?h ?j ?k ?l))
 (setq aw-dispatch-always t)
+
+ (defun jc-run-command-other-frame (command)
+   "Run COMMAND in a new frame."
+   (interactive "CC-x 5 M-x ")
+   (select-frame (new-frame))
+   (call-interactively command))
+(global-set-key "\C-x5\M-x" 'jc-run-command-other-frame)
