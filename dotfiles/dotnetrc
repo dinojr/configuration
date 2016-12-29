@@ -1,0 +1,4 @@
+machine gc_bbgcsynk
+	login j.cubizolles
+	password ~/.asynk/gmail-contacts.json
+
