@@ -1,4 +1,15 @@
 machine gc_bbgcsynk
 	login j.cubizolles
 	password ~/.asynk/gmail-contacts.json
-
+machine imap.free.fr
+ 	login j.cubizolles
+ 	password WjlKLi6
+machine imap.gmail.com
+ 	login j.cubizolles@gmail.com
+ 	password zAVev1
+machine ftpperso.free.fr
+	login mpsi2llg
+	password lkb13704
+machine ftpperso.free.fr
+	login j.cubizolles
+	password WjlKLi6
