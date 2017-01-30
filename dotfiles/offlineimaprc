@@ -37,7 +37,8 @@ localrepository = GmailLocal
 remoterepository = GmailRemote
 autorefresh = 1
 quit = 10
-synclabels = yes
+synclabels = no
+status_backend = plain
 #maxage = 365
 
 [Repository GmailLocal]
