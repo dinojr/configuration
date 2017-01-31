@@ -10,9 +10,10 @@ localrepository = FreeLocal
 remoterepository = FreeRemote
 autorefresh = 1
 quick = 10
-synclabels = yes
+synclabels = no
 #maxage = 365
 postsynchook = /home/wilk/configuration/dotfiles/post-sync-hook.sh
+status_backend = sqlite
 
 [Repository FreeLocal]
 type = IMAP
@@ -38,7 +39,7 @@ remoterepository = GmailRemote
 autorefresh = 1
 quit = 10
 synclabels = no
-status_backend = plain
+status_backend = sqlite
 #maxage = 365
 
 [Repository GmailLocal]
