@@ -24,3 +24,10 @@
    (select-frame (new-frame))
    (call-interactively command))
 (global-set-key "\C-x5\M-x" 'jc-run-command-other-frame)
+
+ (defun jc-run-command-other-window (command)
+   "Run COMMAND in a new frame."
+   (interactive "CC-x 4 M-x ")
+   (select-window (split-window-below))
+   (call-interactively command))
+(global-set-key "\C-x4\M-x" 'jc-run-command-other-window)

@@ -9,6 +9,7 @@
 ;; (require 'naquadah-theme)
 
 ;; From dinojr/github
+
 (add-to-list 'load-path "/home/wilk/git-repositories/dracula-emacs/")
 (require 'dracula-theme)
 
