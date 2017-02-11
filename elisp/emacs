@@ -81,7 +81,7 @@
 (load "JCcompany.el")
 (load "JCorg.el")
 (load "JChelm.el")
-(load "JCspaceline.el")
+;; (load "JCspaceline.el")
 (load "JCdired.el")
 (load "JCyasnippet.el")
 ;; (load "JCdiary.el")
