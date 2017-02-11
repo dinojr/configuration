@@ -90,7 +90,8 @@
    (screen . nil)
    (sh . t)
    (sql . nil)
-   (sqlite . t)))
+   (sqlite . t)
+   (lilypond . t)))
 ;; ou
 ;; (require 'ob-calc)
 
