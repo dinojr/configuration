@@ -5,7 +5,7 @@ library: /var/lib/mpd/music/NAS/Synology/ADMINISTRATION/musiclibrary.blb
 ignore: .@eaDir BEETS .* *~
 
 # plugins: fetchart mpdstats import smartplaylist mpdupdate
-plugins: fetchart duplicates missing permissions fromfilename embedart mpdupdate 
+plugins: fetchart duplicates missing permissions fromfilename embedart mpdupdate convert
 
 import:
     write: yes
@@ -39,7 +39,8 @@ mpd:
 
 fetchart:
     auto: yes
-
+    maxwidth: 900
+    
 missing:
     #format: $albumartist - $album - $title
     #format: $albumartist - $album
@@ -60,3 +61,12 @@ embedart:
     auto: yes
     ifempty: yes
     maxwidth: 100
+
+convert:
+    copy_album_art: yes
+    embed: yes
+    never_convert_lossy_files: no
+    album_art_maxwidth: 100
+    dest: "/media/wilk/SPORT PLUS/Music"
+    command: ffmpeg -i $source -y -vn -aq 4 $dest
+    extension: mp3
