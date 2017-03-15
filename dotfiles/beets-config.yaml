@@ -68,5 +68,13 @@ convert:
     never_convert_lossy_files: no
     album_art_maxwidth: 100
     dest: "/media/wilk/SPORT PLUS/Music"
-    command: ffmpeg -i $source -y -vn -aq 4 $dest
-    extension: mp3
+    format: mp3
+    formats:
+        mp3:
+           command: ffmpeg -i $source -y -vn -aq 5 $dest
+           extension: mp3
+        aac:
+           # command: ffmpeg -i $source -y -vn -acodec libfaac -aq 100 $dest
+           command: ffmpeg -i $source -c:a aac -b:a 128k $dest
+           extension: aac
+
