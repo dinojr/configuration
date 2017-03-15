@@ -58,7 +58,7 @@ permissions:
     dir: 755
 
 embedart:
-    auto: yes
+    auto: no
     ifempty: yes
     maxwidth: 100
 
