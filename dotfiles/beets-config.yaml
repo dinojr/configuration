@@ -78,3 +78,12 @@ convert:
            command: ffmpeg -i $source -c:a aac -b:a 128k $dest
            extension: aac
 
+alternatives:
+  sportplus:
+    directory: "/media/wilk/SPORT PLUS/Music/"
+    paths:
+      default: $albumartist/$album/$title
+    formats: mp3
+    query: "onplayer:true"
+    removable: true
+    
