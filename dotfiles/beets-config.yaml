@@ -63,7 +63,7 @@ embedart:
     maxwidth: 100
 
 convert:
-    copy_album_art: yes
+    copy_album_art: no
     embed: yes
     never_convert_lossy_files: no
     album_art_maxwidth: 100
