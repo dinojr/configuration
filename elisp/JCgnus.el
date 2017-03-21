@@ -200,6 +200,12 @@ the variable `gnus-move-split-methods' for finding a default target."
 	    )
 	  )
 
+(defun jc-gnus-summary-mark-ham (n)
+  "Mark N articles forward as ham.
+If N is negative, mark backward instead.  The difference between N and
+the actual number of articles marked is returned."
+  (interactive "p")
+  (gnus-summary-mark-forward n gnus-ham-mark))
 
 
 (defun jc-mark-my-unseen-articles ()
