@@ -6,6 +6,7 @@ ignore: .@eaDir BEETS .* *~
 
 # plugins: fetchart mpdstats import smartplaylist mpdupdate
 plugins: fetchart duplicates missing permissions fromfilename embedart mpdupdate convert alternatives mbsync
+# plugins: embedart
 
 import:
     write: yes
@@ -58,7 +59,7 @@ permissions:
     dir: 755
 
 embedart:
-    auto: no
+    auto: yes
     ifempty: yes
     maxwidth: 100
 
