@@ -232,4 +232,9 @@ the actual number of articles marked is returned."
 (defun jc-turn-off-backup ()
             (set (make-local-variable 'backup-inhibited) t))
 
+;; Fix for bug https://debbugs.gnu.org/cgi/bugreport.cgi?bug=25702
+(with-eval-after-load 'message
+  (setq message-bogus-system-names
+        (regexp-opt '("lago" "touco"))))
+
 (add-hook 'nnfolder-save-buffer-hook 'jc-turn-off-backup)
