@@ -10,6 +10,7 @@ path = wilk/.emacs.d
 path = wilk/.bogofilter
 path = wilk/.local/share/applications
 path = wilk/Documents/girodet
+path = wilk/Documents/Hopital
 path = wilk/Documents/brissac
 path = wilk/Documents/mobillico
 path = wilk/Documents/Maif
