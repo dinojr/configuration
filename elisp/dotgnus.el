@@ -203,13 +203,12 @@
 		 (nnir-search-engine notmuch)
 		 ;; (nnir-notmuch-remove-prefix "/home/wilk/email/Local/archive/")
 		 ))
-
 (setq nnmail-split-fancy
       '(|
 	;; ("from" ,gnus-ignored-from-addresses "sent-mail")
 	(: (lambda ()
 		(car (bbdb/gnus-split-method))))
-	(: spam-split 'spam-use-bogofilter)
+	(: spam-split 'spam-use-bbdb 'spam-use-bogofilter)
 	("gnus-warning" "duplicat\\(e\\|ion\\) of message" "duplicate")
 	;; all the rest
 	"General"
