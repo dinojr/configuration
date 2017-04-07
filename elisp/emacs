@@ -98,6 +98,7 @@
 ;; (load "JCediff.el")
 ;; (load "JCbitlbee.el")
 (load "JCgnus.el")
+(load "JCofflineimap.el")
 (load "JCnotmuch.el")
 (load "JCbrowser.el")
 (load "JCbbdb.el")
