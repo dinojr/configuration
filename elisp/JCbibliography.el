@@ -7,8 +7,7 @@
       org-ref-default-bibliography '("~/enseignement/papiers/bibliography.bib")
       org-ref-pdf-directory "~/enseignement/papiers/")
 
-(eval-after-load 'helm
-  (lambda ()
-    (require 'helm-bibtex)
-    (setq bibtex-completion-bibliography "~/enseignement/papiers/bibliography.bib")
-    (setq bibtex-completion-library-path "~/enseignement/papiers/")))
+(with-eval-after-load 'helm
+  (require 'helm-bibtex)
+  (setq bibtex-completion-bibliography "~/enseignement/papiers/bibliography.bib")
+  (setq bibtex-completion-library-path "~/enseignement/papiers/"))
