@@ -238,3 +238,4 @@ the actual number of articles marked is returned."
         (regexp-opt '("lago" "touco"))))
 
 (add-hook 'nnfolder-save-buffer-hook 'jc-turn-off-backup)
+  (define-key gnus-summary-mode-map (kbd "C-$") 'jc-gnus-summary-mark-ham)
