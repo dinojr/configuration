@@ -583,14 +583,8 @@
 (add-hook 'message-mode-hook
           (lambda ()
             (setq fill-column 72)
-            (turn-on-auto-fill)))
-
-(add-hook 'message-mode-hook
-          (lambda ()
-            ;; (speck-mode 1)
-	    (flyspell-mode 1)
-	    ;; (setq speck-filter-mode 'Email)
-	    ))
+            (turn-on-auto-fill)
+	    (flyspell-mode 1)))
 
 ; Pour choisir la langue de ispell
 (add-hook 'gnus-select-group-hook

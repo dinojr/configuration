@@ -63,8 +63,8 @@
     (find-file file)
     )
   )
-(eval-after-load "dired"
-  '(define-key dired-mode-map (kbd "<f1> o") 'jc-dired-find-file-latex))
+(with-eval-after-load 'dired
+  (define-key dired-mode-map (kbd "<f1> o") 'jc-dired-find-file-latex))
 
 
 (defun jc-jump-to-gnus ()

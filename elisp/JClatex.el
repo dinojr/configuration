@@ -116,9 +116,8 @@
       
 
 
-(eval-after-load "latex"
-  '(progn
-    (setq TeX-view-program-selection
+(with-eval-after-load 'latex
+  (setq TeX-view-program-selection
       '(((output-dvi style-pstricks) "dvips and gv")
          (output-dvi "xdvi")
          (output-pdf "PDF Tools")
@@ -128,7 +127,7 @@
     (add-hook 'org-mode-hook 'LaTeX-math-mode)
     (setq TeX-insert-braces nil)
     (setq LaTeX-fill-break-at-separators '(\\\( \\\[))
-    ))
+    )
 
 
 
@@ -150,32 +149,25 @@
 ;; (setq reftex-label-regexps '("\\\\label{\\(?1:[^}]*\\)}"
 ;; "\\[[^]]*\\<label[[:space:]]*=[[:space:]]*{?\\(?1:[^],}]+\\)}?"))
 
-;; Pour utiliser d'autres mots-clefs que label
-(eval-after-load 'reftex
-  '(progn (add-to-list 'reftex-label-regexps
-		 "\\[[^]]*\\<metalabel[[:space:]]*=[[:space:]]*{?\\(?1:[^],}]+\\)}?")
-	 (reftex-compile-variables))
+
+(with-eval-after-load 'reftex
+  ;; Pour utiliser d'autres mots-clefs que label
+  (add-to-list 'reftex-label-regexps
+	       "\\[[^]]*\\<metalabel[[:space:]]*=[[:space:]]*{?\\(?1:[^],}]+\\)}?")
+  (reftex-compile-variables)
+  ;; Permet d'ignorer les occurences de label dans le code tikz
+  (setq reftex-label-ignored-macros-and-environments '("tikzpicture" "pspicture" "pgfonlayer" "axis" "scope"))
+  ;; Je m'occupe de nommer mes labels
+  (setq reftex-insert-label-flags '("sft" t))
   )
-
-;; Permet d'ignorer les occurences de label dans le code tikz
- (eval-after-load 'reftex
-  '(progn (setq reftex-label-ignored-macros-and-environments '("tikzpicture" "pspicture" "pgfonlayer" "axis" "scope")))
-  )
-
-;; Je m'occupe de nommer mes labels
-(eval-after-load 'reftex
-  '(progn (setq reftex-insert-label-flags '("sft" t)))
-  )
-
-(setq reftex-label-alist '(AMSTeX))
-
+ 
 ;;--------------------
 ;; RefTex end
 ;;--------------------
 
 ;; (eval-after-load 'latex '(add-hook 'TeX-after-compilation-finished-functions 'TeX-revert-document-buffer))
 
-(eval-after-load 'latex '(add-hook 'TeX-after-TeX-LaTeX-command-finished-hook 'TeX-revert-document-buffer))
+(with-eval-after-load 'latex (add-hook 'TeX-after-TeX-LaTeX-command-finished-hook 'TeX-revert-document-buffer))
 
 
 (require 'notifications)

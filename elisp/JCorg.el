@@ -3,10 +3,8 @@
 ;; Uncomment to load from git
 (add-to-list 'load-path "~/git-repositories/org-mode/lisp")
 (add-to-list 'load-path "~/git-repositories/org-mode/contrib/lisp")
-(eval-after-load "info"
-  '(progn
-    (add-to-list 'Info-directory-list "~/git-repositories/org-mode/doc/")
-    )
+(with-eval-after-load 'info
+  (add-to-list 'Info-directory-list "~/git-repositories/org-mode/doc/")
   )
 
 (require 'org)
@@ -14,8 +12,8 @@
 (require 'notifications)
 
 (setq org-export-backends '(ascii html icalendar latex beamer odt))
-(eval-after-load "ox"
-  '(setq org-export-in-background t))
+(with-eval-after-load "ox"
+  (setq org-export-in-background t))
 
 
 (set-face-attribute 'org-level-1 nil :height 1.0)
@@ -371,8 +369,8 @@
 	("Theoreme" "T" "\\begin{Theoreme}%a%U" "\\end{Theoreme}")
 	("Exemple" "X" "\\begin{Exemple}%a%U" "\\end{Exemple}")))
 
-(eval-after-load 'ox-latex
-  '(progn (add-to-list 'org-latex-classes
+(with-eval-after-load 'ox-latex
+  (add-to-list 'org-latex-classes
 		       '("mpsi_beamer" "\\documentclass{mpsi_beamer}\n [NO-DEFAULT-PACKAGES]"
 			 ("\\section{%s}" . "\\section*{%s}")
 			 ("\\subsection{%s}" . "\\subsection*{%s}")
@@ -381,17 +379,17 @@
 			 ;; ("\\paragraph{%s}" . "\\paragraph*{%s}")
 			 ;; ("\\subparagraph{%s}" . "\\subparagraph*{%s}")
 			 ))
-	  (add-to-list 'org-latex-classes
+  (add-to-list 'org-latex-classes
 		       '("mpsi" "\\documentclass[cours,colonne]{mpsi}\n [NO-DEFAULT-PACKAGES]"
 			 ("\\section{%s}" . "\\section*{%s}")
 			 ("\\subsection{%s}" . "\\subsection*{%s}")
 			 ))
-	  (add-to-list 'org-latex-classes
+  (add-to-list 'org-latex-classes
 		       '("mpsi-beamerarticle" "\\documentclass{mpsi-beamerarticle}\n [NO-DEFAULT-PACKAGES]"
 			 ("\\section{%s}" . "\\section*{%s}")
 			 ("\\subsection{%s}" . "\\subsection*{%s}")
 			 ))
-	  (add-to-list 'org-latex-classes
+  (add-to-list 'org-latex-classes
 		       '("mpsi-beamerarticle-eleves" "\\documentclass[noVersion,eleves]{mpsi-beamerarticle}\n [NO-DEFAULT-PACKAGES]"
 			 ("\\section{%s}" . "\\section*{%s}")
 			 ("\\subsection{%s}" . "\\subsection*{%s}")
@@ -399,7 +397,7 @@
 			 ("\\paragraph{%s}" . "\\paragraph*{%s}")
 			 ("\\subparagraph{%s}" . "\\subparagraph*{%s}")
 			 ))
-	 ))
+  )
 (with-eval-after-load 'ox
   ;; (defun jc-org-latex-ignore-heading (headline backend info)
   ;;   "Strip headline from HEADLINE if it has tag ignoreheading for
