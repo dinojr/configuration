@@ -37,11 +37,6 @@
 ;;     )
 ;;   )
 
-;; Pour ne pas indenter les Topics par mégarde
-(eval-after-load "gnus-topic"
-   '(progn
-      (define-key gnus-topic-mode-map [tab] nil)
-      (define-key gnus-topic-mode-map "\C-i" nil)))
 
 
 (add-hook 'gnus-summary-exit-hook 'gnus-summary-bubble-group)
@@ -176,29 +171,6 @@ the variable `gnus-move-split-methods' for finding a default target."
 
 (add-hook 'kill-emacs-hook 'exit-gnus-on-exit)
 
-;; Raccourcis
-(global-set-key "\C-cm" 'gnus-group-mail)
-
-(eval-after-load 'gnus-load
-  (lambda ()
-    (define-key gnus-summary-mode-map (kbd "B a") 'jc-gnus-summary-copy-and-expire-article)
-    (define-key gnus-summary-mode-map (kbd "B M") 'jc-gnus-summary-move-and-mark-read-article)
-    (define-key gnus-summary-mode-map (kbd "M P A") 'jc-process-sender-at-point)
-    )
-  )
-
-(add-hook 'message-mode-hook
-	  (lambda ()
-	    (define-key message-mode-map [C-tab] 'bbdb-complete-mail)
-	    (define-key message-mode-map "\C-c\C-f\C-g" 'message-goto-gcc)
-	    )
-	  )
-
-(add-hook 'gnus-summary-mode-hook
-	  (lambda ()
-	    (define-key gnus-summary-mode-map ":" 'bbdb-mua-edit-field-recipients)
-	    )
-	  )
 
 (defun jc-gnus-summary-mark-ham (n)
   "Mark N articles forward as ham.
@@ -232,15 +204,44 @@ the actual number of articles marked is returned."
 (defun jc-turn-off-backup ()
             (set (make-local-variable 'backup-inhibited) t))
 
+(add-hook 'nnfolder-save-buffer-hook 'jc-turn-off-backup)
+
 ;; Fix for bug https://debbugs.gnu.org/cgi/bugreport.cgi?bug=25702
 (with-eval-after-load 'message
   (setq message-bogus-system-names
         (regexp-opt '("lago" "touco"))))
 
-(add-hook 'nnfolder-save-buffer-hook 'jc-turn-off-backup)
+;; Raccourcis
+(global-set-key "\C-cm" 'gnus-group-mail)
+
 (with-eval-after-load 'gnus-sum
   (define-key gnus-summary-mode-map (kbd "B a") 'jc-gnus-summary-copy-and-expire-article)
   (define-key gnus-summary-mode-map (kbd "B M") 'jc-gnus-summary-move-and-mark-read-article)
   (define-key gnus-summary-mode-map (kbd "M P A") 'jc-process-sender-at-point)
   (define-key gnus-summary-mode-map (kbd "C-$") 'jc-gnus-summary-mark-ham)
   (define-key gnus-summary-mode-map ":" 'bbdb-mua-edit-field-recipients)
+  )
+
+
+;; Pour ne pas indenter les Topics par mégarde
+(with-eval-after-load 'gnus-topic
+  (define-key gnus-topic-mode-map [tab] nil)
+  (define-key gnus-topic-mode-map "\C-i" nil))
+
+(with-eval-after-load 'message
+      (define-key message-mode-map [C-tab] 'bbdb-complete-mail)
+      (define-key message-mode-map "\C-c\C-f\C-g" 'message-goto-gcc)
+      )
+
+;; (add-hook 'message-mode-hook
+;; 	  (lambda ()
+;; 	    (define-key message-mode-map [C-tab] 'bbdb-complete-mail)
+;; 	    (define-key message-mode-map "\C-c\C-f\C-g" 'message-goto-gcc)
+;; 	    )
+;; 	  )
+
+;; (add-hook 'gnus-summary-mode-hook
+;; 	  (lambda ()
+;; 	    (define-key gnus-summary-mode-map ":" 'bbdb-mua-edit-field-recipients)
+;; 	    )
+;; 	  )
