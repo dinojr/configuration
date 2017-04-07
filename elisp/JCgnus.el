@@ -238,4 +238,9 @@ the actual number of articles marked is returned."
         (regexp-opt '("lago" "touco"))))
 
 (add-hook 'nnfolder-save-buffer-hook 'jc-turn-off-backup)
+(with-eval-after-load 'gnus-sum
+  (define-key gnus-summary-mode-map (kbd "B a") 'jc-gnus-summary-copy-and-expire-article)
+  (define-key gnus-summary-mode-map (kbd "B M") 'jc-gnus-summary-move-and-mark-read-article)
+  (define-key gnus-summary-mode-map (kbd "M P A") 'jc-process-sender-at-point)
   (define-key gnus-summary-mode-map (kbd "C-$") 'jc-gnus-summary-mark-ham)
+  (define-key gnus-summary-mode-map ":" 'bbdb-mua-edit-field-recipients)
