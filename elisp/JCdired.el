@@ -6,8 +6,8 @@
 (autoload 'dired-async-mode "dired-async.el" nil t)
 (dired-async-mode 1)
 
-(eval-after-load "dired"
-  '(define-key dired-mode-map "z" 'jc-dired-zip-files))
+(with-eval-after-load 'dired
+  (define-key dired-mode-map "z" 'jc-dired-zip-files))
 (defun jc-dired-zip-files (zip-file)
   "Create an archive containing the marked files."
   (interactive "Enter name of zip file: ")
@@ -63,12 +63,13 @@
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)
 
 ;; Raccourcis
-(eval-after-load "dired"
-  '(define-key dired-mode-map (kbd "<C-return>") 'jc-dired-open-file)
+(with-eval-after-load 'dired
+  (define-key dired-mode-map (kbd "<C-return>") 'jc-dired-open-file)
+  (define-key dired-mode-map (kbd "<f1> o") 'jc-dired-find-file-latex)
+  (define-key dired-mode-map (kbd "C-c C-s") 'dired-toggle-sudo)
   )
-(eval-after-load "dired"
-  '(define-key dired-mode-map (kbd "<f1> o") 'jc-dired-find-file-latex))
-(define-key dired-mode-map (kbd "C-c C-s") 'dired-toggle-sudo)
+
+
 
 ;; (defun jc-ido-dired-mode-hook ()
 ;;   (define-key dired-mode-map "$" 'jc-ido-bookmark-jump)
