@@ -7,8 +7,8 @@
 (ido-mode 1)
 (setq ido-use-filename-at-point 'guess)
 (setq ido-file-extensions-order '(".org" ".tex" ".emacs" ".el"))
-(eval-after-load "tramp"
-  '(add-to-list 'ido-work-directory-list-ignore-regexps tramp-file-name-regexp))
+(with-eval-after-load 'tramp
+  (add-to-list 'ido-work-directory-list-ignore-regexps tramp-file-name-regexp))
 
 (defun jc-ido-bookmark-jump ()
   "Jump to bookmark using ido"
