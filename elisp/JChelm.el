@@ -49,8 +49,63 @@
 
 ;; (global-set-key (kbd "C-c h o") 'helm-occur)
 
-(setq linum-relative-with-helm t)
-(helm-linum-relative-mode 1)
+;; (setq linum-relative-with-helm t)
+;; (helm-linum-relative-mode 1)
+
+(require 'ace-jump-helm-line)
+(define-key helm-map (kbd "C-'") 'ace-jump-helm-line)
+;; or if using key-chord-mode
+;; (eval-after-load "helm"
+;;  '(key-chord-define helm-map "jj" 'ace-jump-helm-line))
+(setq ace-jump-helm-line-style 'pre)
+(setq ace-jump-helm-line-background t)
+(setq ace-jump-helm-line-default-action 'select)
+(setq ace-jump-helm-line-select-key ?e) ;; this line is not needed
+;; Set the move-only and persistent keys
+(setq ace-jump-helm-line-move-only-key ?o)
+(setq ace-jump-helm-line-persistent-key ?p)
+;; enable idle execution for `helm-mini'
+(ace-jump-helm-line-idle-exec-add 'helm-mini)
+;; enable hints preview
+(ace-jump-helm-line-autoshow-mode +1)
+;; use `linum-mode' to show
+(setq ace-jump-helm-line-autoshow-mode-use-linum t)
+
+(require 'ace-window)
+
+(defun helm-buffer-ace-window (buffer)
+  "Use ‘ace-window’ to select a window to display BUFFER."
+  (ace-select-window)
+  (switch-to-buffer buffer))
+
+(defun helm-buffer-run-ace-window ()
+  (interactive)
+  (with-helm-alive-p
+    (helm-exit-and-execute-action 'helm-buffer-ace-window)))
+
+(define-key helm-buffer-map (kbd "C-c C-e") #'helm-buffer-run-ace-window)
+
+(add-to-list 'helm-type-buffer-actions
+             '("Switch to buffer in Ace window ‘C-c C-e'" . helm-buffer-ace-window)
+             :append)
+
+(defun helm-file-ace-window (file)
+  "Use ‘ace-window' to select a window to display FILE."
+  (ace-select-window)
+  (find-file file))
+
+(add-to-list 'helm-find-files-actions
+             '("Find File in Ace window" . helm-find-ace-window)
+             :append)
+
+(defun helm-file-run-ace-window ()
+  (interactive)
+  (with-helm-alive-p
+    (helm-exit-and-execute-action 'helm-file-ace-window)))
+
+;;; For `helm-find-files'
+(define-key helm-find-files-map (kbd "C-c C-e") #'helm-file-run-ace-window)
+
 
 (setq helm-org-show-filename t)
 
