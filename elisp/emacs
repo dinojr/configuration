@@ -115,6 +115,7 @@
 (load "JCemms.el")
 (load "JCpython.el")
 (load "JClilypond.el")
+(load "JCunison.el")
 
 
 ;; (load "JCasymptote.el")
