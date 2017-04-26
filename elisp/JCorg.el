@@ -647,6 +647,9 @@
 ;; org-ref
 (require 'org-ref)
 (require 'org-ref-pdf)
+(require 'org-ref-url-utils)
+(require 'org-ref-arxiv)
+
 (setq org-ref-pdf-directory "~/enseignement/papiers")
 (setq org-ref-bibtex-files "~/enseignement/papiers/bibliography.bib")
 
