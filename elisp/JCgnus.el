@@ -171,13 +171,17 @@ the variable `gnus-move-split-methods' for finding a default target."
 
 (add-hook 'kill-emacs-hook 'exit-gnus-on-exit)
 
+;; (add-to-list 'load-path "~/info/emacs/gnus/lisp")
+(add-to-list 'load-path "~/git-repositories/gnus-bogofilter/")
+(require 'gnus-bogofilter)
 
 (defun jc-gnus-summary-mark-ham (n)
   "Mark N articles forward as ham.
 If N is negative, mark backward instead.  The difference between N and
 the actual number of articles marked is returned."
   (interactive "p")
-  (gnus-summary-mark-forward n gnus-ham-mark))
+  (gnus-summary-mark-forward n gnus-ham-mark)
+  (bogofilter-register-ham))
 
 
 (defun jc-mark-my-unseen-articles ()
