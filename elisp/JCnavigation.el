@@ -125,6 +125,6 @@
 (global-set-key "\C-e" 'My-smart-end)
 (define-key global-map "\M-Q" 'unfill-paragraph)
 (define-key global-map "\C-\M-Q" 'unfill-region)
-(define-key global-map (kbd "C-c j") 'ace-jump-mode)
+;; (define-key global-map (kbd "C-c j") 'ace-jump-mode)
 (global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key (kbd "C-&") 'align-current)
