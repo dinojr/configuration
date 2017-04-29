@@ -113,6 +113,7 @@
 (load "JCcalc.el")
 (load "JCace-link.el")
 (load "JCemms.el")
+(load "JCavy.el")
 (load "JCpython.el")
 (load "JClilypond.el")
 (load "JCunison.el")
