@@ -580,7 +580,7 @@
 	      ("v" "À voir" item (file+headline "~/org/orgfiles/loisirs.org" "À voir") "%?\n %u\n %^C")
 	      ("s" "CDs à acheter" checkitem (file+headline "~/org/orgfiles/loisirs.org" "CDs à acheter") "%?\n %^C")
 	      ("m" "maintenance" entry (file+datetree "~/org/orgfiles/info.org") "* %?")
-	      ("S" "Santé" entry (file+datetree "~/org/orgfiles/sante.org") "* %?")
+	      ("S" "Santé" entry (file+datetree "~/org/orgfiles/sante.org" "Chronologie") "* %?")
 	      ("b" "bios" item (file+headline "~/org/orgfiles/lycee.org" "Bios") "%?\n %^C")
 	      ("T" "test" item (file+headline "~/org/orgfiles/test.org" "Test") " [ ] %?")
 	      ("p" "password" entry (file "~/org/orgfiles/pw.gpg") "* %^{Title}\n  %^{URL}p %^{USERNAME}p %^{PASSWORD}p")
