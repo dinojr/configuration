@@ -49,7 +49,7 @@ other_email=j.cubizolles@gmail.com;
 #
 [new]
 # tags=unread;inbox;
-tags=
+tags= new
 ignore= News
 
 # Search configuration
