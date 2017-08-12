@@ -86,7 +86,7 @@
    (python . t)
    (ruby . t)
    (screen . nil)
-   (sh . t)
+   (shell . t)
    (sql . nil)
    (sqlite . t)
    (lilypond . t)))
@@ -101,7 +101,7 @@
 ; Targets start with the file name - allows creating level 1 tasks
 (setq org-refile-use-outline-path (quote file))
 ; Targets complete in steps so we start with filename, TAB shows the next level of targets etc
-(setq org-outline-path-complete-in-steps t)
+(setq org-outline-path-complete-in-steps nil)
 ; Allow refile to create parent tasks with confirmation
 (setq org-refile-allow-creating-parent-nodes (quote confirm))
 
@@ -580,7 +580,7 @@
 	      ("v" "À voir" item (file+headline "~/org/orgfiles/loisirs.org" "À voir") "%?\n %u\n %^C")
 	      ("s" "CDs à acheter" checkitem (file+headline "~/org/orgfiles/loisirs.org" "CDs à acheter") "%?\n %^C")
 	      ("m" "maintenance" entry (file+datetree "~/org/orgfiles/info.org") "* %?")
-	      ("S" "Santé" entry (file+datetree "~/org/orgfiles/sante.org") "* %?")
+	      ("S" "Santé" entry (file+datetree "~/org/orgfiles/sante.org" "Chronologie") "* %?")
 	      ("b" "bios" item (file+headline "~/org/orgfiles/lycee.org" "Bios") "%?\n %^C")
 	      ("T" "test" item (file+headline "~/org/orgfiles/test.org" "Test") " [ ] %?")
 	      ("p" "password" entry (file "~/org/orgfiles/pw.gpg") "* %^{Title}\n  %^{URL}p %^{USERNAME}p %^{PASSWORD}p")
