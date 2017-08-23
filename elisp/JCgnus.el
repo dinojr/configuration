@@ -232,6 +232,7 @@ the actual number of articles marked is returned."
   (define-key gnus-topic-mode-map [tab] nil)
   (define-key gnus-topic-mode-map "\C-i" nil))
 
+(require 'message)
 (with-eval-after-load 'message
       (define-key message-mode-map [C-tab] 'bbdb-complete-mail)
       (define-key message-mode-map "\C-c\C-f\C-g" 'message-goto-gcc)
