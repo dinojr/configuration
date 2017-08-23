@@ -61,6 +61,9 @@
       '((ps-print-color-p 'black-white)))
 (setq org-agenda-include-diary t)
 
+(setq org-agenda-time-grid '((daily today)
+ (800 1000 1200 1400 1600 1800 2000)
+ "......" "----------------"))
 ;; Org-caldav
 ;; installé manuellement dans les répertoires de ~/info/emacs/org... à déplacer maintenant que org est avec melpa
 ;; (require 'org-caldav)
