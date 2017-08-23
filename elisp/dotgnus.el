@@ -183,6 +183,7 @@
 		(nnir-search-engine notmuch)
 		;; (nnir-notmuch-remove-prefix "/home/wilk/email/Maildir/Gmail/")
 		)
+	;; (nnnotmuch "")
 	;; (nnfolder "archive"
 	;; 	(nnfolder-inhibit-expiry t)
 	;; 	(nnfolder-directory "~/email/Local/archive")
