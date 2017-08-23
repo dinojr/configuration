@@ -255,6 +255,13 @@
 	      ;;  ((org-agenda-filter-preset '("-girodet")))
 	      ;;  )
 	      ("O" "Tâches orphelines" alltodo "" ((org-agenda-todo-ignore-timestamp  (quote all))))
+	      ("wt" "Boulot" tags-todo "enseignement"
+	       ((org-agenda-overriding-header "Boulot à programmer")
+		(org-agenda-todo-ignore-with-date nil)
+		)
+					;((org-agenda-filter-preset '("+lycée")))
+	       ;; ("~/tmp/lycee.pdf")
+	       )
 	      ("wl" "Agenda et tâches au lycée"
 	       ((agenda "lycée"
 		((org-agenda-entry-types '(:timestamp))(org-agenda-ndays 2)))
