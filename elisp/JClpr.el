@@ -1,12 +1,8 @@
 ;; ~/.emacs.d/JClpr.el -*- mode: lisp-*-
 
-
-;; file where things will be saved
-;; (setq bbdb-file "~/.emacs.d/bbdb")
-
 (require 'printing)
 
-(setq printer-name "laserjet-lago")
+(setq printer-name "laserjet-JoseyWales")
 
 (setq lpr-command "lpr")
 
