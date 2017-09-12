@@ -30,8 +30,33 @@
       (message "Couldn't get relevant infos for switching to Gnus."))))
 
 (add-hook 'gnus-group-mode-hook 'jc-notmuch-shortcut)
+
+(defun jc-notmuch-show-flag ()
+  "Switch the flagged tag for the current thread or region."
+  (interactive)
+  (let ((tag-changes (if (member "flagged" (notmuch-show-get-tags)) (list "-flagged") (list "+flagged"))))
+    (notmuch-show-tag tag-changes)))
+
+(defun jc-notmuch-search-flag  (&optional beg end)
+  "Switch the flagged tag for the current thread or region."
+  (interactive)
+  (let ((tag-changes (if (member "flagged" (notmuch-search-get-tags)) (list "-flagged") (list "+flagged"))))
+    (notmuch-search-tag tag-changes beg end)))
+
+(defun jc-notmuch-tree-flag ()
+  "Switch the flagged tag for the current thread or region."
+  (interactive)
+  (let ((tag-changes (if (member "flagged" (notmuch-tree-get-tags)) (list "-flagged") (list "+flagged"))))
+    (notmuch-tree-tag tag-changes)))
+
+(define-key notmuch-show-mode-map (kbd "SPC") 'notmuch-show-flag)
+(define-key notmuch-search-mode-map (kbd "SPC") 'notmuch-search-flag)
+(define-key notmuch-tree-mode-map (kbd "SPC") 'notmuch-tree-flag)
+
 (defun jc-notmuch-shortcut ()
   (define-key gnus-group-mode-map "Gg" 'notmuch-search)
   )
+
+
 
 (define-key notmuch-show-mode-map (kbd "C-c C-c") 'jc-notmuch-goto-message-in-gnus)
