@@ -7,6 +7,7 @@
 
 (require 'package)
 (package-initialize)
+(customize-save-variable 'TeX-engine 'luatex)
 (require 'tex)
 
 (add-hook 'LaTeX-mode-hook #'latex-extra-mode)
