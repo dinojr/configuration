@@ -1,4 +1,3 @@
-
 #Directories
 path = wilk/enseignement
 path = wilk/git-repositories
@@ -30,6 +29,7 @@ path = wilk/.cups/
 #path = wilk/.config
 path = wilk/.chktexrc
 path = wilk/.config/systemd/user
+path = wilk/.themes
 
 #Files
 path = wilk/.unison/common_JoseyWales
