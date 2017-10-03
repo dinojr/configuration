@@ -1,0 +1,29 @@
+# -*- mode: snippet -*-
+# name: groupplots
+# key: groupplot_
+# --
+\begin{groupplot}[group style={group size = 3 by 1,
+                  ylabels at = edge left,
+                  every plot/.style={
+		  xmin = \xmin,
+                  ymin = \ymin,
+                  xmax = \xmax,
+                  ymax = \ymax,
+                  domain = \xmin:\xmax,
+                  xlabel = $$1$,
+                  ylabel = $$2$,
+                  courbe boite,
+                  samples = 400,}
+                  }
+                  ]
+        \nextgroupplot
+        \addplot {$3};%
+        $4\addlegendentry{}
+        };
+\end{groupplot}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-PDF-from-DVI: nil
+%%% TeX-source-correlate-mode: nil
+%%% End:
