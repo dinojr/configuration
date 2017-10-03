@@ -57,6 +57,9 @@
 
 (setq visible-bell t)
 
+(require 'exec-path-from-shell)'
+(exec-path-from-shell-initialize)
+
 ;; Raccourcis
 (global-set-key [f2] 'calendar)
 (global-set-key "\M-." 'find-function-at-point)
