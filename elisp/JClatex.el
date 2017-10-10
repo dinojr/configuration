@@ -11,6 +11,7 @@
 (require 'tex)
 
 (add-hook 'LaTeX-mode-hook #'latex-extra-mode)
+(add-hook 'LaTeX-mode-hook '(lambda () (TeX-engine-set 'luatex)))
 (setq  latex/next-error-skip-confirmation t)
 
 (setq TeX-clean-confirm nil)
