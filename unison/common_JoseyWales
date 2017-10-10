@@ -124,7 +124,7 @@ watch=false
 #merge ou merge2 je sais plus = Name {,.}* -> emacs -q --eval '(ediff-merge-files-with-ancestor  "CURRENT1" "CURRENT2" "OLD" nil "NEW")'
 #merge = Name {,.}* -> emacsclient -c -l '~/.emacs.d/emacs_noninteractive.el' --eval '(ediff-merge-files "CURRENT1" "CURRENT2" nil "NEW")'
 #merge = Name {,.}* -> emacsclient -f wilk --eval '(ediff-merge-files "CURRENT1" "CURRENT2" nil "NEW")'
-merge = Name {*.tex,*.org,*.bib} -> emacs --eval '(ediff-merge-files "CURRENT1" "CURRENT2" nil "NEW")'
+merge = Name {*.tex,*.org,*.bib} -> emacsclient --eval '(ediff-merge-files "CURRENT1" "CURRENT2" nil "NEW")'
 #merge = Name {,.}* -> emacsclient -c --eval '(ediff-merge-files "CURRENT1" "CURRENT2" nil "NEW")'
 #merge = Name *.tex -> xxdiff CURRENT1 CURRENT2 --merge --merged-filename NEW --show-merged-pane --exit-with-merge-status --decision
 
