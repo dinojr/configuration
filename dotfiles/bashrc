@@ -120,3 +120,5 @@ INFOPATH="/usr/local/texlive/current/texmf/doc/info:$INFOPATH"
 
 export "EDITOR=emacsclient -t"
 export "VISUAL=emacsclient -c"
+
+eval `dircolors $HOME/.dir_colors/dircolors`

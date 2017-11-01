@@ -32,7 +32,7 @@ path = wilk/.cups/
 path = wilk/.chktexrc
 path = wilk/.config/systemd/user
 path = wilk/.themes
-
+path = wilk/.dir_colors
 #Files
 path = wilk/.unison/common_JoseyWales
 path = wilk/configuration/elisp/paradox-token
