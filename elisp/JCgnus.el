@@ -175,13 +175,12 @@ the variable `gnus-move-split-methods' for finding a default target."
 (add-to-list 'load-path "~/git-repositories/gnus-bogofilter/")
 (require 'gnus-bogofilter)
 
-(defun jc-gnus-summary-mark-ham (n)
-  "Mark N articles forward as ham.
-If N is negative, mark backward instead.  The difference between N and
-the actual number of articles marked is returned."
+(defun jc-gnus-summary-mark-ham ()
+  "Mark current article as ham "
   (interactive "p")
-  (gnus-summary-mark-forward n gnus-ham-mark)
-  (bogofilter-register-ham))
+  (bogofilter-register-ham)
+  (gnus-summary-mark-article nil gnus-ham-mark)
+  )
 
 
 (defun jc-mark-my-unseen-articles ()
