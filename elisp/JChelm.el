@@ -65,7 +65,7 @@
 (setq ace-jump-helm-line-move-only-key ?o)
 (setq ace-jump-helm-line-persistent-key ?p)
 ;; enable idle execution for `helm-mini'
-(ace-jump-helm-line-idle-exec-add 'helm-mini)
+;; (ace-jump-helm-line-idle-exec-add 'helm-mini)
 ;; enable hints preview
 (ace-jump-helm-line-autoshow-mode +1)
 ;; use `linum-mode' to show
