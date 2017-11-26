@@ -177,7 +177,7 @@ the variable `gnus-move-split-methods' for finding a default target."
 
 (defun jc-gnus-summary-mark-ham ()
   "Mark current article as ham "
-  (interactive "p")
+  (interactive)
   (bogofilter-register-ham)
   (gnus-summary-mark-article nil gnus-ham-mark)
   )
