@@ -1,0 +1,472 @@
+
+dotfiles/offlineimap.py,0
+
+dotfiles/post-sync-hook.sh,0
+
+bin/lm-sensors.mkdev.sh,0
+
+bin/rubber_png,0
+
+bin/asy_dir,0
+
+bin/uninstallTeXgraph,0
+
+bin/asy2pdf_dir,0
+
+bin/syn-photos-doublons.sh,0
+
+bin/start-NM.sh,0
+
+bin/texsudo,0
+
+bin/myrecode,0
+
+bin/xasy,212
+root = Tk()root18,399
+mag = 1.0mag19,411
+    mag = float(opts[0][1])mag23,493
+  app = xasyMainWin.xasyMainWin(root,args[0],mag)app32,717
+  app = xasyMainWin.xasyMainWin(root,magnification=mag)app34,773
+
+bin/jhbuild,347
+USE_CHECKOUT_SRC = TrueUSE_CHECKOUT_SRC7,64
+    pkgdatadir = Nonepkgdatadir11,162
+    datadir = Nonedatadir12,184
+    srcdir = os.path.abspath(os.path.join(os.path.dirname(jhbuild.__file__), '..'))srcdir14,222
+    pkgdatadir = "@pkgdatadir@"pkgdatadir16,312
+    datadir = "@datadir@"datadir17,344
+    srcdir = "@srcdir@"srcdir18,370
+
+bin/ImageJ,0
+
+bin/Updateblocklist.sh,0
+
+bin/mcomixstarter.py,0
+
+bin/asy2pdf-cmyk,0
+
+bin/nzbstatus.sh,62
+prntvalue () {prntvalue3,13
+prntnumber () {prntnumber6,69
+
+bin/asy2pdf,0
+
+bin/image_resize.sh,0
+
+bin/gnus-namazu-update.sh,0
+
+bin/color2gray,0
+
+bin/asyfinal,0
+
+bin/convert-cmyk-onlycyan,0
+
+bin/fetch-cover-art.sh,0
+
+bin/jc-emacs,0
+
+bin/asy2png,0
+
+bin/offlineimap-git,29
+oi = OfflineImap()oi25,924
+
+bin/newmusic-playlist.sh,0
+
+bin/org-mobile-pullpush.sh,0
+
+bin/gnus-agent-ok.sh,0
+
+bin/pygvuib.sh,0
+
+bin/clouds.pl,98
+sub IndicatesSuccess() {IndicatesSuccess76,3177
+sub GetRandomMirror() {GetRandomMirror85,3336
+
+bin/gnus-agent-fetch.sh,0
+
+bin/asynk_bbgcsynk,0
+
+bin/remove-spaces.sh,0
+
+bin/update-tlmgr,0
+
+bin/start-wifi.sh,0
+
+bin/xplanet-bg,0
+
+bin/asy2pdf-cmyk_dir,0
+
+bin/org-caldav-sync.sh,0
+
+bin/emacs-kill-server.sh,0
+
+bin/chroot_update,0
+
+bin/asy2cmyk-cyan,0
+
+bin/asy2png-darkduotone,0
+
+bin/corrige.sh,0
+
+bin/mytex,0
+
+bin/pdf_corrige,0
+
+bin/asy2jpg-cmyk,0
+
+bin/tex2word.py,576
+    paths = []paths27,895
+    prolog = next(os.path.join(p, 'bin', 'swipl.exe') for p in paths if os.path.exists(p))prolog31,1229
+    prolog = 'swipl'prolog33,1328
+class Packager:Packager35,1352
+    def __init__(self, basepath, packagename):__init__38,1434
+    def add(self, relpath):add47,1822
+    def close(self):close52,2005
+    def __del__(self):__del__56,2089
+def package(basepath, packagename):package59,2137
+def extract(path, packagename):extract71,2564
+def main(arg):main80,3018
+arg = 'sample.tex'arg112,4641
+    arg = sys.argv[1]arg114,4685
+
+bin/startconky,0
+
+bin/wake-lago,0
+
+bin/start-wifi.sh~,0
+
+bin/startTeXgraph,0
+
+bin/convert_identify_colorspace,0
+
+bin/wilkemacs,0
+
+bin/CmdTeXgraph,0
+
+snippets/latex-mode/crochets.tex,0
+
+elisp/JCorg.el,1428
+(defun jc/clock-in-to-started (kw)jc/clock-in-to-started156,5147
+(defun jc/remove-empty-drawer-on-clock-out ()jc/remove-empty-drawer-on-clock-out179,6228
+(defun bulk-cut ()bulk-cut354,14260
+(defun remove-org-suffix (name)remove-org-suffix435,17555
+(defun jc-org-publish-rename-pdf (suffix)jc-org-publish-rename-pdf441,17736
+(defun jc-org-publish-rename (suffix version)jc-org-publish-rename452,18157
+(defun jc-org-publish-rename-notes-pdf (project-list)jc-org-publish-rename-notes-pdf465,18685
+(defun jc-org-publish-rename-eleves-pdf (project-list)jc-org-publish-rename-eleves-pdf470,18927
+(defun jc-org-publish-rename-beamer-pdf (project-list)jc-org-publish-rename-beamer-pdf477,19220
+(defun jc-org-latex-notes-preparation (project-list)jc-org-latex-notes-preparation482,19467
+(defun jc-notify-end-compilation-eleves (project-list)jc-notify-end-compilation-eleves489,19704
+(defun jc-notify-end-compilation-notes (project-list)jc-notify-end-compilation-notes497,19938
+(defun jc-notify-end-compilation-beamer (project-list)jc-notify-end-compilation-beamer505,20160
+(defun org-repair-export-blocks ()org-repair-export-blocks616,25132
+(define-key global-map "\C-cc" 'org-capture)global-map681,27542
+(defun jc-current-line-empty-p ()jc-current-line-empty-p683,27588
+(define-key org-mode-map "\C-ct" (lambda ()org-mode-map689,27716
+(define-key org-mode-map "\C-cy" (lambda ()org-mode-map696,27893
+
+elisp/JCemms.el,156
+(defun jc-emms-info-track-description (track)jc-emms-info-track-description59,1884
+(defun jc-emms-set-frame-title (track)jc-emms-set-frame-title85,2666
+
+elisp/org-export-async-init.el,0
+
+elisp/JClatex.el,218
+(defun jc-revert-and-rubber ()jc-revert-and-rubber136,4435
+(defun jc-notify-TeX-run-finish (file)jc-notify-TeX-run-finish176,5825
+(define-key key-translation-map (kbd "²") (kbd "\\"))key-translation-map203,6881
+
+elisp/JCunison.el,0
+
+elisp/JCnotmuch.el,818
+(defun jc-notmuch-file-to-group (file)jc-notmuch-file-to-group5,85
+(defun jc-notmuch-goto-message-in-gnus ()jc-notmuch-goto-message-in-gnus18,641
+(defun jc-notmuch-show-flag ()jc-notmuch-show-flag34,1281
+(defun jc-notmuch-search-flag  (&optional beg end)jc-notmuch-search-flag40,1534
+(defun jc-notmuch-tree-flag ()jc-notmuch-tree-flag46,1819
+(define-key notmuch-show-mode-map (kbd "SPC") 'notmuch-show-flag)notmuch-show-mode-map52,2072
+(define-key notmuch-search-mode-map (kbd "SPC") 'notmuch-search-flag)notmuch-search-mode-map53,2138
+(define-key notmuch-tree-mode-map (kbd "SPC") 'notmuch-tree-flag)notmuch-tree-mode-map54,2208
+(defun jc-notmuch-shortcut ()jc-notmuch-shortcut56,2275
+(define-key notmuch-show-mode-map (kbd "C-c C-c") 'jc-notmuch-goto-message-in-gnus)notmuch-show-mode-map62,2368
+
+elisp/JCwindows.el,0
+
+elisp/dotgnus.el,770
+(defun jc-gnus-open-agentized-servers ()jc-gnus-open-agentized-servers242,8195
+(defun jc-nuke-newsletter-group ()jc-nuke-newsletter-group251,8397
+(define-key gnus-summary-mode-map [?K ?f]gnus-summary-mode-map414,13741
+(defun gnus-mime-view-part-via-find-file (&optional handle)gnus-mime-view-part-via-find-file417,13825
+(defun gnus-article-view-part-via-find-file (n)gnus-article-view-part-via-find-file432,14350
+(defface gnus-summary-markup-facegnus-summary-markup-face498,16075
+(defun oxy-unicode-threads () oxy-unicode-threads535,17278
+(defun oxy-unicode-threads-heavy () oxy-unicode-threads-heavy548,17975
+(defun wilk-gnus-browse-archived-at ()wilk-gnus-browse-archived-at725,23302
+(defun wilk-gnus-browse-gwene ()wilk-gnus-browse-gwene744,23861
+
+elisp/JCtramp.el,0
+
+elisp/JCgit.el,61
+(defun jc-display-git-status ()jc-display-git-status21,829
+
+elisp/emacs_server.el,141
+(defun client-save-kill-emacs(&optional display)client-save-kill-emacs5,87
+(defun modified-buffers-exist() modified-buffers-exist63,2222
+
+elisp/JCido.el,477
+(defun jc-ido-bookmark-jump ()jc-ido-bookmark-jump13,355
+(defun jc-ido-get-bookmark-dir ()jc-ido-get-bookmark-dir20,524
+(defun jc-ido-use-bookmark-dir ()jc-ido-use-bookmark-dir32,991
+(defadvice ido-find-file (after find-file-sudo activate)ido-find-file42,1266
+(defun root-file-warning () root-file-warning49,1508
+(defun ido-jc-keys ()ido-jc-keys68,2082
+(define-key ido-file-dir-completion-map (kbd "$") 'jc-ido-use-bookmark-dir)ido-file-dir-completion-map72,2206
+
+elisp/JCcompany.el,73
+(defun jc-company-latex-mode-setup ()jc-company-latex-mode-setup11,306
+
+elisp/test-orgcaldav.el,0
+
+elisp/JCyasnippet.el,0
+
+elisp/JCace-link.el,250
+(define-key org-mode-map (kbd "M-o") 'ace-link-org)org-mode-map5,72
+(define-key gnus-summary-mode-map (kbd "M-o") 'ace-link-gnus)gnus-summary-mode-map7,125
+(define-key gnus-article-mode-map (kbd "M-o") 'ace-link-gnus)gnus-article-mode-map8,187
+
+elisp/general_stuff.el,0
+
+elisp/JCmingus.el,0
+
+elisp/JCgpg.el,0
+
+elisp/JCspellcheck.el,109
+(define-key flyspell-mode-map (kbd "C-;") 'flyspell-correct-previous-word-generic)flyspell-mode-map39,1287
+
+elisp/JCorgcaldav.el,0
+
+elisp/JC-gnus-agent.el,0
+
+elisp/JCparenthesis.el,0
+
+elisp/JCspaceline.el,0
+
+elisp/JCcalc.el,0
+
+elisp/JCofflineimap.el,187
+(defun jc-ask-start-offlineimap ()jc-ask-start-offlineimap5,67
+(defun jc-ask-kill-offlineimap ()jc-ask-kill-offlineimap10,229
+(defun jc-kill-offlineimap ()jc-kill-offlineimap15,388
+
+elisp/JCcalendrier.el,138
+(defvar calendar-day-abbrev-arraycalendar-day-abbrev-array16,483
+(defvar calendar-month-abbrev-arraycalendar-month-abbrev-array18,564
+
+elisp/JCediff.el,0
+
+elisp/JCgnus.el,1071
+(defun jc-jump-to-gnus ()jc-jump-to-gnus44,1377
+(defun jc-gnus-summary-copy-and-expire-article (&optional n to-newsgroup select-method)jc-gnus-summary-copy-and-expire-article75,2383
+(defun jc-gnus-summary-move-and-mark-read-article (&optional n to-newsgroup select-method)jc-gnus-summary-move-and-mark-read-article93,3162
+(defun message-goto-gcc ()message-goto-gcc113,3950
+(defun jc-gnus-article-header-value (header) jc-gnus-article-header-value123,4118
+(defun jc-process-sender (sender)jc-process-sender129,4306
+(defun jc-process-sender-at-point ()jc-process-sender-at-point132,4411
+(defun jc-process-recipient (recipient)jc-process-recipient139,4656
+(defun jc-process-recipient-at-point ()jc-process-recipient-at-point142,4768
+(defun jc-change-smtp-server (server)jc-change-smtp-server149,5020
+(defun exit-gnus-on-exit ()exit-gnus-on-exit165,5406
+(defun jc-gnus-summary-mark-ham ()jc-gnus-summary-mark-ham178,5790
+(defun jc-mark-my-unseen-articles ()jc-mark-my-unseen-articles186,5956
+(defun jc-turn-off-backup ()jc-turn-off-backup207,6640
+
+elisp/emacs_noninteractive.el,1346
+(defun jc/clock-in-to-started (kw)jc/clock-in-to-started207,7459
+(defun jc/remove-empty-drawer-on-clock-out ()jc/remove-empty-drawer-on-clock-out230,8540
+(defun bulk-cut ()bulk-cut399,16327
+(defun remove-org-suffix (name)remove-org-suffix482,18965
+(defun jc-org-publish-rename-pdf (suffix)jc-org-publish-rename-pdf488,19146
+(defun jc-org-publish-rename (suffix version)jc-org-publish-rename498,19552
+(defun jc-org-publish-rename-notes-pdf ()jc-org-publish-rename-notes-pdf509,20005
+(defun jc-org-publish-rename-eleves-pdf ()jc-org-publish-rename-eleves-pdf513,20159
+(defun jc-org-publish-rename-beamer-pdf ()jc-org-publish-rename-beamer-pdf520,20414
+(defun jc-org-latex-notes-preparation ()jc-org-latex-notes-preparation524,20571
+(defun jc-org-publish-project-options (backend)jc-org-publish-project-options534,20834
+(defun message-goto-gcc ()message-goto-gcc634,24476
+(defun exit-gnus-on-exit ()exit-gnus-on-exit642,24658
+(define-key bbdb-mode-map "r" 'bbdb-merge-records)bbdb-mode-map707,26569
+(defvar calendar-day-abbrev-arraycalendar-day-abbrev-array746,27657
+(defvar calendar-month-abbrev-arraycalendar-month-abbrev-array748,27738
+(defun diary-relative (n day)diary-relative753,27858
+(defun diary-tomorrow ()diary-tomorrow759,28045
+(defun getcal (url)getcal765,28164
+(defun getcals ()getcals776,28638
+
+elisp/JCpython.el,0
+
+elisp/JClilypond.el,0
+
+elisp/JCworkgroups2.el,0
+
+elisp/JCbibliography.el,0
+
+elisp/JCkeychain.el,0
+
+elisp/JCbrowser.el,59
+(defun choose-browser (url &rest args)choose-browser4,61
+
+elisp/JCworkgroup.el,251
+(defun jc-switch-to-workgroup (workgroup)jc-switch-to-workgroup18,321
+(defun jc-jump-to-org-agenda ()jc-jump-to-org-agenda23,502
+(defun jc-dired-find-file-latex ()jc-dired-find-file-latex57,1799
+(defun jc-jump-to-gnus ()jc-jump-to-gnus70,2144
+
+elisp/JCpdftools.el,0
+
+elisp/emacs_interactive.el,4091
+(defun exchange-point-and-mark-no-activate ()exchange-point-and-mark-no-activate49,1356
+(define-key global-map [remap exchange-point-and-mark] 'exchange-point-and-mark-no-activate)global-map54,1550
+(defun unfill-paragraph ()unfill-paragraph69,2069
+(defun jc-indent-and-insert-tab ()jc-indent-and-insert-tab75,2249
+(defun jc-newline-and-indent (&optional arg)jc-newline-and-indent83,2404
+(defun My-smart-home ()My-smart-home146,4708
+(defun My-smart-end ()My-smart-end154,4968
+(defun end-of-line-text ()end-of-line-text163,5196
+(define-key key-translation-map (kbd "²") (kbd "\\"))key-translation-map212,6501
+(define-key global-map "\C-cc" 'org-capture)global-map230,7089
+(define-key global-map "\M-Q" 'unfill-paragraph)global-map252,8084
+(define-key gnus-summary-mode-map (kbd "B a")gnus-summary-mode-map266,8627
+(define-key gnus-summary-mode-map (kbd "B M")gnus-summary-mode-map269,8718
+(define-key global-map (kbd "C-c j") 'ace-jump-mode)global-map287,9093
+(defun wilk-space-for-delimiter (endp delimiter)wilk-space-for-delimiter319,10270
+(defun jc-flyspell-check-next-highlighted-word ()jc-flyspell-check-next-highlighted-word436,14291
+(defun jc-dired-zip-files (zip-file)jc-dired-zip-files459,14987
+(defun concat-string-list (list) concat-string-list485,15748
+(define-key dired-mode-map (kbd "C-c C-s") 'dired-toggle-sudo)dired-mode-map490,15967
+(defun jc-dired-find-file-latex ()jc-dired-find-file-latex497,16198
+(defun jc-ido-bookmark-jump ()jc-ido-bookmark-jump510,16559
+(defun jc-ido-get-bookmark-dir ()jc-ido-get-bookmark-dir517,16728
+(defun jc-ido-dired-mode-hook ()jc-ido-dired-mode-hook529,17195
+(defun jc-dired-open-file ()jc-dired-open-file536,17445
+(defun jc-ido-use-bookmark-dir ()jc-ido-use-bookmark-dir561,18202
+(defun ido-jc-keys ()ido-jc-keys573,18518
+(define-key ido-file-dir-completion-map (kbd "$") 'jc-ido-use-bookmark-dir)ido-file-dir-completion-map578,18643
+(defadvice ido-find-file (after find-file-sudo activate)ido-find-file580,18720
+(defun root-file-warning () root-file-warning587,18962
+(defun choose-browser (url &rest args)choose-browser614,19778
+(defun jc-revert-and-rubber ()jc-revert-and-rubber629,20157
+(defun jc-switch-to-workgroup (workgroup)jc-switch-to-workgroup885,28148
+(defun jc-jump-to-org-agenda ()jc-jump-to-org-agenda943,29701
+(defun jc-jump-to-gnus ()jc-jump-to-gnus1021,32275
+(defun jc-gnus-summary-copy-and-expire-article (&optional n to-newsgroup select-method)jc-gnus-summary-copy-and-expire-article1053,33344
+(defun jc-gnus-summary-move-and-mark-read-article (&optional n to-newsgroup select-method)jc-gnus-summary-move-and-mark-read-article1071,34123
+(defun jc-jump-to-mingus ()jc-jump-to-mingus1171,36865
+(defun i-wanna-be-social ()i-wanna-be-social1230,38917
+(defun bitlbee-identify ()bitlbee-identify1235,39057
+(defun jc-switch-to-bitlbee-workgroup ()jc-switch-to-bitlbee-workgroup1245,39427
+(defun jc-jump-to-bitlbee ()jc-jump-to-bitlbee1252,39627
+(defun mpd-erc-np ()mpd-erc-np1258,39734
+(defun remove-field-value (field value)remove-field-value1273,40085
+(defun remove-field (field)remove-field1287,40533
+(defun th-evince-sync (file linecol)th-evince-sync1312,41177
+(defun jc-alert-or-emph-to-stars ()jc-alert-or-emph-to-stars1337,41844
+(defun jc-item-to-plus ()jc-item-to-plus1343,42022
+(defun jc-block-to-heading ()jc-block-to-heading1349,42133
+(defun jc-block-to-consequence ()jc-block-to-consequence1355,42357
+(defun jc-dollar-to-paren ()jc-dollar-to-paren1361,42704
+(defun jc-only-to-heading ()jc-only-to-heading1367,42876
+(defun jc-do-all-regexps ()jc-do-all-regexps1378,43238
+(define-prefix-command 'jc-regexps)jc-regexps1385,43376
+(define-key jc-regexps (kbd "a") 'jc-alert-or-emph-to-stars)jc-regexps1387,43453
+(define-key jc-regexps (kbd "d") 'jc-dollar-to-paren)jc-regexps1388,43514
+(define-key jc-regexps (kbd "b") 'jc-block-to-heading)jc-regexps1389,43568
+(define-key jc-regexps (kbd "o") 'jc-only-to-heading)jc-regexps1390,43623
+(define-key jc-regexps (kbd "i") 'jc-item-to-plus)jc-regexps1391,43677
+
+elisp/JClpr.el,0
+
+elisp/french-holidays.el,65
+(defvar holiday-french-holidays nilholiday-french-holidays5,65
+
+elisp/JCbindings.el,0
+
+elisp/JChelm.el,1022
+(define-key global-map [remap find-file] 'helm-find-files)global-map12,341
+(define-key global-map [remap occur] 'helm-occur)global-map13,400
+(define-key global-map [remap list-buffers] 'helm-buffers-list)global-map14,450
+(define-key global-map [remap switch-to-buffer] 'helm-mini)global-map15,514
+(define-key global-map [remap dabbrev-expand] 'helm-dabbrev)global-map16,574
+(define-key global-map [remap bookmark-jump] 'helm-filtered-bookmarks)global-map17,635
+(define-key helm-map (kbd "C-'") 'ace-jump-helm-line)helm-map56,2011
+(defun helm-buffer-ace-window (buffer)helm-buffer-ace-window76,2757
+(defun helm-buffer-run-ace-window ()helm-buffer-run-ace-window81,2911
+(define-key helm-buffer-map (kbd "C-c C-e") #'helm-buffer-run-ace-window)helm-buffer-map86,3047
+(defun helm-file-ace-window (file)helm-file-ace-window92,3270
+(defun helm-file-run-ace-window ()helm-file-run-ace-window101,3533
+(define-key helm-find-files-map (kbd "C-c C-e") #'helm-file-run-ace-window)helm-find-files-map107,3691
+
+elisp/JCgnus-nnnotmuch.el,0
+
+elisp/JCregexps.el,1646
+(defun jc-replace-regexp-in-region (Begin End from to)jc-replace-regexp-in-region11,310
+(defun jc-dollar-to-paren (Begin End)jc-dollar-to-paren19,547
+(defun jc-alert-or-emph-to-stars (Begin End)jc-alert-or-emph-to-stars25,768
+(defun jc-unit-to-si (Begin End)jc-unit-to-si31,976
+(defun jc-alert-or-emph-to-stars (Begin End)jc-alert-or-emph-to-stars39,1366
+(defun jc-item-to-plus (Begin End)jc-item-to-plus45,1574
+(defun jc-block-to-heading (Begin End)jc-block-to-heading52,1880
+(defun jc-block-to-consequence (Begin End)jc-block-to-consequence58,2117
+(defun jc-only-to-heading (Begin End)jc-only-to-heading64,2494
+(defun jc-do-all-regexps (Begin End)jc-do-all-regexps75,2886
+(defun jc-add-and-configure-entry ()jc-add-and-configure-entry84,3119
+(define-prefix-command 'jc-regexps)jc-regexps97,3374
+(define-key org-mode-map (kbd "C-!") 'jc-regexps)org-mode-map99,3454
+(define-key LaTeX-mode-map (kbd "C-!") 'jc-regexps)LaTeX-mode-map100,3504
+(define-key jc-regexps (kbd "a") 'jc-alert-or-emph-to-stars)jc-regexps101,3556
+(define-key jc-regexps (kbd "d") 'jc-dollar-to-paren)jc-regexps102,3617
+(define-key jc-regexps (kbd "b") 'jc-block-to-heading)jc-regexps103,3671
+(define-key jc-regexps (kbd "k") 'jc-block-to-consequence)jc-regexps104,3726
+(define-key jc-regexps (kbd "o") 'jc-only-to-heading)jc-regexps105,3785
+(define-key jc-regexps (kbd "i") 'jc-item-to-plus)jc-regexps106,3839
+(define-key jc-regexps (kbd "s") 'jc-unit-to-si)jc-regexps107,3890
+(define-key jc-regexps (kbd "r") 'jc-do-all-regexps)jc-regexps108,3939
+(define-key jc-regexps (kbd "n") 'jc-add-and-configure-entry)jc-regexps110,3993
+
+elisp/JC-org-super-agenda.el,0
+
+elisp/JCnamazu.el,0
+
+elisp/JCbbdb.el,72
+(define-key bbdb-mode-map "r" 'bbdb-merge-records)bbdb-mode-map27,554
+
+elisp/JCdired.el,248
+(defun jc-dired-zip-files (zip-file)jc-dired-zip-files11,240
+(defun concat-string-list (list) concat-string-list37,1001
+(defun jc-dired-find-file-latex ()jc-dired-find-file-latex43,1221
+(defun jc-dired-open-file ()jc-dired-open-file55,1520
+
+elisp/JCanzu.el,0
+
+elisp/JCavy.el,0
+
+elisp/JCcalfw.el,51
+(defun jc-open-calendar ()jc-open-calendar21,766
+
+elisp/JCnavigation.el,714
+(defun exchange-point-and-mark-no-activate ()exchange-point-and-mark-no-activate4,128
+(define-key global-map [remap exchange-point-and-mark] 'exchange-point-and-mark-no-activate)global-map9,322
+(defun unfill-paragraph ()unfill-paragraph11,416
+(defun unfill-region (beg end)unfill-region17,596
+(defun jc-math-mode-indent ()jc-math-mode-indent36,1070
+(defun jc-newline-and-indent (&optional arg)jc-newline-and-indent50,1319
+(defun My-smart-home ()My-smart-home70,1815
+(defun My-smart-end ()My-smart-end78,2075
+(defun end-of-line-text ()end-of-line-text87,2303
+(define-key global-map "\M-Q" 'unfill-paragraph)global-map126,3466
+(define-key global-map "\C-\M-Q" 'unfill-region)global-map127,3515
+
+elisp/JCflycheck.el,0
+
+elisp/JCparadox.el,0
+
+elisp/JCdesktop.el,0
