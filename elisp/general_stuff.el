@@ -1,7 +1,7 @@
 ;; ~/.emacs.d/general_stuff.el -*- mode: lisp-*-
 
 ;; Default font
-(set-face-attribute 'default nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant 'normal :weight 'normal :height 100 :width 'normal :foundry "unknown" :family "DejaVu Sans Mono")
+(set-face-attribute 'default nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant 'normal :weight 'normal :height 110 :width 'normal :foundry "unknown" :family "DejaVu Sans Mono")
 
 
 ;; Theme, dans melpa maintenant
@@ -56,6 +56,9 @@
 (setq tabbar-use-images nil) 
 
 (setq visible-bell t)
+
+(require 'exec-path-from-shell)'
+(exec-path-from-shell-initialize)
 
 ;; Raccourcis
 (global-set-key [f2] 'calendar)

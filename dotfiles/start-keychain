@@ -1,0 +1,3 @@
+#export SSH_ASKPASS=/usr/lib/openssh/gnome-ssh-askpass
+eval `keychain --eval --agents ssh,gpg id_rsa 14498E3961F5B64FA7154EAD2A11A5D0370D5DFF`
+ 

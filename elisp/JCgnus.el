@@ -7,7 +7,7 @@
 ;;     )
 ;;   )
 
-;; (add-to-list 'load-path "~/info/emacs/gnus/lisp")
+(add-to-list 'load-path "~/git-repositories/emacs/lisp/gnus")
 (add-to-list 'load-path "~/.emacs.d/gnus-bogofilter")
 
 (require 'gnus)
@@ -175,13 +175,12 @@ the variable `gnus-move-split-methods' for finding a default target."
 (add-to-list 'load-path "~/git-repositories/gnus-bogofilter/")
 (require 'gnus-bogofilter)
 
-(defun jc-gnus-summary-mark-ham (n)
-  "Mark N articles forward as ham.
-If N is negative, mark backward instead.  The difference between N and
-the actual number of articles marked is returned."
-  (interactive "p")
-  (gnus-summary-mark-forward n gnus-ham-mark)
-  (bogofilter-register-ham))
+(defun jc-gnus-summary-mark-ham ()
+  "Mark current article as ham "
+  (interactive)
+  (bogofilter-register-ham)
+  (gnus-summary-mark-article nil gnus-ham-mark)
+  )
 
 
 (defun jc-mark-my-unseen-articles ()

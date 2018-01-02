@@ -7,9 +7,11 @@
 
 (require 'package)
 (package-initialize)
+(customize-save-variable 'TeX-engine 'luatex)
 (require 'tex)
 
 (add-hook 'LaTeX-mode-hook #'latex-extra-mode)
+(add-hook 'LaTeX-mode-hook '(lambda () (TeX-engine-set 'luatex)))
 (setq  latex/next-error-skip-confirmation t)
 
 (setq TeX-clean-confirm nil)
@@ -167,7 +169,7 @@
 
 ;; (eval-after-load 'latex '(add-hook 'TeX-after-compilation-finished-functions 'TeX-revert-document-buffer))
 
-(with-eval-after-load 'latex (add-hook 'TeX-after-TeX-LaTeX-command-finished-hook 'TeX-revert-document-buffer))
+(with-eval-after-load 'latex (add-hook 'TeX-after-compilation-finished-functions 'TeX-revert-document-buffer))
 
 
 (require 'notifications)
@@ -175,9 +177,7 @@
   "Display a notification when a TeX run is finished."
   (notifications-notify :title "AUCTeX"
                         :body (format "Finished: %s\n%s" (file-name-nondirectory file) (current-message))))
-;; (add-hook 'TeX-after-compilation-finished-functions #'jc-notify-TeX-run-finish)
-(add-hook 'TeX-after-TeX-LaTeX-command-finished-hook #'jc-notify-TeX-run-finish)
-
+(add-hook 'TeX-after-compilation-finished-functions #'jc-notify-TeX-run-finish)
 
 (add-to-list 'auto-mode-alist '( "\\.tikz\\'" . tex-mode))
 (setq TeX-fold-env-spec-list '(("[comment]" ("comment"))

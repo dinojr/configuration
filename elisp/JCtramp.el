@@ -7,3 +7,4 @@
     (add-to-list 'tramp-default-proxies-alist
 		 '(".*" "\\`.+\\'" "/ssh:%h:")))
 
+(setq ange-ftp-try-passive-mode t) ;; needed to connect to ftpperso.free.fr

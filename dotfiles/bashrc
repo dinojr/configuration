@@ -118,7 +118,7 @@ fi
 MANPATH="/usr/local/texlive/current/texmf/doc/man:$MANPATH"
 INFOPATH="/usr/local/texlive/current/texmf/doc/info:$INFOPATH"
 
-PATH="/usr/local/texlive/current/bin/x86_64-linux:$PATH"
-
 export "EDITOR=emacsclient -t"
 export "VISUAL=emacsclient -c"
+
+eval `dircolors $HOME/.dir_colors/dircolors`

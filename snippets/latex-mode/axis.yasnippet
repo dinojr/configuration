@@ -1,30 +1,31 @@
 # -*- mode: snippet -*-
 # name: axis
-# key: axis
+# key: axis_
 # --
 \pgfplotsset{legend style={at={(axis description cs:.05,.95)},anchor=north west}}
 \pgfmathsetmacro{\xmin}{${1:0}}
 \pgfmathsetmacro{\ymin}{${2:0}}
 \pgfmathsetmacro{\xmax}{${3:5}}
 \pgfmathsetmacro{\ymax}{${4:5}}
-\begin{axis}[
-		 name = ,
-		 at = {(0,0)},
-		 anchor = south west,
-                 xlabel = ${5:$x$},
-                 ylabel = ${6:$y$},
-                 xtick = {\empty},
-                 ytick = {,,...,},
-                 extra x ticks = ,
-                 extra x tick labels = ,
-                 extra y ticks = ,
-                 extra y tick labels = ,
-		 xmin = \xmin,
-		 ymin = \ymin,
-		 xmax = \xmax,
-		 ymax = \ymax,
-                 domain = \xmin:\xmax,
-		 samples = 200
+\begin{axis}[    cycle list name=polychrome,
+		 courbe boite,
+		 %name = ,
+		 %at = {(0,0)},
+		 %anchor = south west,
+                 %xlabel = ${5:$x$},
+                 %ylabel = ${6:$y$},
+                 %xtick = {\empty},
+                 %ytick = {,,...,},
+                 %extra x ticks = ,
+                 %extra x tick labels = ,
+                 %extra y ticks = ,
+                 %extra y tick labels = ,
+		 %xmin = \xmin,
+		 %ymin = \ymin,
+		 %xmax = \xmax,
+		 %ymax = \ymax,
+                 %domain = \xmin:\xmax,
+		 %samples = 200
                  ]
       \addplot gnuplot { $7};%
       \draw[coordonnees] (axis cs:) -- (axis cs:);

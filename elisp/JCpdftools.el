@@ -7,7 +7,7 @@
   (add-to-list 'org-file-apps '("\\.pdf::\\([[:digit:]]+\\)\\'" . (lambda (file link) (org-pdfview-open file))))
   )
 			      
-(setq revert-without-query (quote (".*.pdf")))
+;; (setq revert-without-query (quote (".*.pdf")))
 
 (setq pdf-view-midnight-colors '("#f8f8f2" . "#282a36"))
 

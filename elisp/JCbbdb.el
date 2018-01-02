@@ -3,10 +3,11 @@
 
 ;; file where things will be saved
 ;; (setq bbdb-file "~/.emacs.d/bbdb")
-
+(add-to-list 'load-path "~/git-repositories/bbdb/lisp")
 (require 'bbdb)
 
-(add-to-list 'load-path "/home/wilk/.emacs.d/bbdb-vcard")
+(add-to-list 'load-path "~/.emacs.d/bbdb-vcard")
+
 
 (bbdb-initialize 'gnus 'message)
 (bbdb-mua-auto-update-init 'gnus 'message)

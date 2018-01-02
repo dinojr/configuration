@@ -19,3 +19,5 @@
 (add-to-list 'load-path "~/configuration/elisp/")
 (load "JCorg.el")
 (load "JClatex.el")
+(load "JCtramp.el")
+
