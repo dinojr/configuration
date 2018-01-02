@@ -701,8 +701,6 @@
 				   (mark-paragraph)
 				   ))
 
-(org-defkey org-mode-map "\C-c\C-w" 'helm-org-agenda-files-headings)
-
 (add-hook 'org-agenda-mode-hook
           (lambda ()
             (local-set-key (kbd "C-c C-r")

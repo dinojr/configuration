@@ -95,8 +95,8 @@
 (load "JCanzu.el") ; à charger *avant* spaceline
 ;; (load "JCido.el")
 (load "JCcompany.el")
+(load "JCivy.el")
 (load "JCorg.el")
-(load "JChelm.el")
 ;; (load "JCspaceline.el")
 (load "JCdired.el")
 (load "JCyasnippet.el")

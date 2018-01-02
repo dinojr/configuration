@@ -35,5 +35,6 @@
 (global-set-key "\C-cd" 'ispell-change-dictionary)
 ;; (global-set-key (kbd "M-<f8>") 'jc-flyspell-check-next-highlighted-word)
 
-(require 'flyspell-correct-helm)
+(require 'flyspell-correct-ivy)
 (define-key flyspell-mode-map (kbd "C-;") 'flyspell-correct-previous-word-generic)
+
