@@ -1,6 +1,8 @@
 ;;~/.emacs.d/JCivy.el -*- mode: lisp; lexical-binding: t -*-
+(require 'ivy)
+(require 'swiper)
+(require 'counsel)
 
-(ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
 (setq ivy-re-builders-alist '((swiper . ivy--regex-plus)
@@ -43,9 +45,10 @@
 (ivy-add-actions
  'counsel-find-file
  `(("c" ,(given-file #'copy-file "Copy") "copy")
-   ("d" ,(reloading #'confirm-delete-file) "remove")
-   ("m" ,(reloading (given-file #'rename-file "Move")) "move")))
+   ("d" ,(reloading #'confirm-delete-file) "delete")
+   ("m" ,(reloading (given-file #'rename-file "Rename")) "rename")))
 
+(ivy-mode 1)
 ;; (use-package ivy :ensure t
 ;;   :diminish ivy-mode
 ;;   :init (setq projectile-completion-system 'ivy)
