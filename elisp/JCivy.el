@@ -3,6 +3,12 @@
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
+(setq ivy-re-builders-alist '((swiper . ivy--regex-plus)
+                (counsel-ag . ivy--regex-plus)
+                (counsel-grep-or-swiper . ivy--regex-plus)
+		(counsel-M-x . ivy--regex-plus)
+                (t . ivy--regex-fuzzy)))
+
 (global-set-key "\C-s" 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 (global-set-key (kbd "<f6>") 'ivy-resume)
