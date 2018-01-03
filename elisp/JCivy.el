@@ -40,11 +40,11 @@
 (defun confirm-delete-file (x)
   (dired-delete-file x 'confirm-each-subdirectory))
 
- (ivy-add-actions
-   'counsel-find-file
-   `(("c" ,(given-file #'copy-file "Copy") "copy")
-     ("d" ,(reloading #'confirm-delete-file) "remove")
-     ("m" ,(reloading (given-file #'rename-file "Move")) "move")))
+(ivy-add-actions
+ 'counsel-find-file
+ `(("c" ,(given-file #'copy-file "Copy") "copy")
+   ("d" ,(reloading #'confirm-delete-file) "remove")
+   ("m" ,(reloading (given-file #'rename-file "Move")) "move")))
 
 ;; (use-package ivy :ensure t
 ;;   :diminish ivy-mode
