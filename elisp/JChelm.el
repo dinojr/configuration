@@ -109,6 +109,7 @@
 
 (setq helm-org-show-filename t)
 
+(helm-flx-mode +1)
 
-
-
+(eval-after-load 'flycheck
+  '(define-key flycheck-mode-map (kbd "C-c ! h") 'helm-flycheck))
