@@ -1,7 +1,5 @@
 ;; ~/.emacs.d/JCparenthesis.el -*- mode: lisp-*-
 
-(show-paren-mode)
-
 ;; Rainbow-delimiters
 (require 'rainbow-delimiters)
 (add-hook 'LaTeX-mode-hook 'rainbow-delimiters-mode)
@@ -57,7 +55,7 @@
 
 ;; Vérifier que latex-mode est bien dans sp-navigate-consider-stringlike-sexp
 
-(sp-use-paredit-bindings)
+(sp-use-smartparens-bindings)
 
 (setq sp-override-key-bindings
       '(("M-<kp-2>" . sp-splice-sexp-killing-forward)
@@ -67,3 +65,4 @@
 
 (sp--update-override-key-bindings)
 (smartparens-global-mode)
+(show-smartparens-global-mode t)
