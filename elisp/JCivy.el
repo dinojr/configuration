@@ -9,6 +9,7 @@
                 (counsel-ag . ivy--regex-plus)
                 (counsel-grep-or-swiper . ivy--regex-plus)
 		(counsel-M-x . ivy--regex-plus)
+		(counsel-linux-app . ivy--regex-plus)
                 (t . ivy--regex-fuzzy)))
 
 (global-set-key "\C-s" 'swiper)
