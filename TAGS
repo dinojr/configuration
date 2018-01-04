@@ -165,9 +165,11 @@ elisp/JCorg.el,1428
 (define-key org-mode-map "\C-ct" (lambda ()org-mode-map689,27716
 (define-key org-mode-map "\C-cy" (lambda ()org-mode-map696,27893
 
+elisp/JCmovie.el,0
+
 elisp/JCemms.el,156
 (defun jc-emms-info-track-description (track)jc-emms-info-track-description59,1884
-(defun jc-emms-set-frame-title (track)jc-emms-set-frame-title85,2666
+(defun jc-emms-set-frame-title (track)jc-emms-set-frame-title83,2580
 
 elisp/org-export-async-init.el,0
 
@@ -175,6 +177,12 @@ elisp/JClatex.el,218
 (defun jc-revert-and-rubber ()jc-revert-and-rubber136,4435
 (defun jc-notify-TeX-run-finish (file)jc-notify-TeX-run-finish176,5825
 (define-key key-translation-map (kbd "²") (kbd "\\"))key-translation-map203,6881
+
+elisp/JCivy.el,277
+(define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)minibuffer-local-map27,1117
+(defun reloading (cmd)reloading29,1192
+(defun given-file (cmd prompt) ; needs lexical-bindinggiven-file33,1283
+(defun confirm-delete-file (x)confirm-delete-file40,1547
 
 elisp/JCunison.el,0
 
@@ -222,8 +230,8 @@ elisp/JCido.el,477
 (defun ido-jc-keys ()ido-jc-keys68,2082
 (define-key ido-file-dir-completion-map (kbd "$") 'jc-ido-use-bookmark-dir)ido-file-dir-completion-map72,2206
 
-elisp/JCcompany.el,73
-(defun jc-company-latex-mode-setup ()jc-company-latex-mode-setup11,306
+elisp/JCcompany.el,72
+(defun jc-company-latex-mode-setup ()jc-company-latex-mode-setup7,155
 
 elisp/test-orgcaldav.el,0
 
@@ -241,7 +249,7 @@ elisp/JCmingus.el,0
 elisp/JCgpg.el,0
 
 elisp/JCspellcheck.el,109
-(define-key flyspell-mode-map (kbd "C-;") 'flyspell-correct-previous-word-generic)flyspell-mode-map39,1287
+(define-key flyspell-mode-map (kbd "C-;") 'flyspell-correct-previous-word-generic)flyspell-mode-map39,1286
 
 elisp/JCorgcaldav.el,0
 
