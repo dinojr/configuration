@@ -19,6 +19,8 @@ bin/start-NM.sh,0
 
 bin/texsudo,0
 
+bin/org-mobile-sync/conky-mobile.sh,0
+
 bin/myrecode,0
 
 bin/xasy,212
@@ -179,10 +181,10 @@ elisp/JClatex.el,218
 (define-key key-translation-map (kbd "²") (kbd "\\"))key-translation-map203,6881
 
 elisp/JCivy.el,277
-(define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)minibuffer-local-map27,1117
-(defun reloading (cmd)reloading29,1192
-(defun given-file (cmd prompt) ; needs lexical-bindinggiven-file33,1283
-(defun confirm-delete-file (x)confirm-delete-file40,1547
+(define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)minibuffer-local-map30,1196
+(defun reloading (cmd)reloading32,1271
+(defun given-file (cmd prompt) ; needs lexical-bindinggiven-file36,1362
+(defun confirm-delete-file (x)confirm-delete-file43,1626
 
 elisp/JCunison.el,0
 
@@ -201,16 +203,16 @@ elisp/JCnotmuch.el,818
 elisp/JCwindows.el,0
 
 elisp/dotgnus.el,770
-(defun jc-gnus-open-agentized-servers ()jc-gnus-open-agentized-servers242,8195
-(defun jc-nuke-newsletter-group ()jc-nuke-newsletter-group251,8397
-(define-key gnus-summary-mode-map [?K ?f]gnus-summary-mode-map414,13741
-(defun gnus-mime-view-part-via-find-file (&optional handle)gnus-mime-view-part-via-find-file417,13825
-(defun gnus-article-view-part-via-find-file (n)gnus-article-view-part-via-find-file432,14350
-(defface gnus-summary-markup-facegnus-summary-markup-face498,16075
-(defun oxy-unicode-threads () oxy-unicode-threads535,17278
-(defun oxy-unicode-threads-heavy () oxy-unicode-threads-heavy548,17975
-(defun wilk-gnus-browse-archived-at ()wilk-gnus-browse-archived-at725,23302
-(defun wilk-gnus-browse-gwene ()wilk-gnus-browse-gwene744,23861
+(defun jc-gnus-open-agentized-servers ()jc-gnus-open-agentized-servers242,8213
+(defun jc-nuke-newsletter-group ()jc-nuke-newsletter-group251,8415
+(define-key gnus-summary-mode-map [?K ?f]gnus-summary-mode-map414,13759
+(defun gnus-mime-view-part-via-find-file (&optional handle)gnus-mime-view-part-via-find-file417,13843
+(defun gnus-article-view-part-via-find-file (n)gnus-article-view-part-via-find-file432,14368
+(defface gnus-summary-markup-facegnus-summary-markup-face498,16093
+(defun oxy-unicode-threads () oxy-unicode-threads535,17296
+(defun oxy-unicode-threads-heavy () oxy-unicode-threads-heavy548,17993
+(defun wilk-gnus-browse-archived-at ()wilk-gnus-browse-archived-at725,23320
+(defun wilk-gnus-browse-gwene ()wilk-gnus-browse-gwene744,23879
 
 elisp/JCtramp.el,0
 
