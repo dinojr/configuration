@@ -96,7 +96,7 @@
   (find-file file))
 
 (add-to-list 'helm-find-files-actions
-             '("Find File in Ace window" . helm-find-ace-window)
+             '("Find File in Ace window ‘C-c C-e'" . helm-file-ace-window)
              :append)
 
 (defun helm-file-run-ace-window ()
