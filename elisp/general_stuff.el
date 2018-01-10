@@ -33,27 +33,29 @@
 ;; boxquote
 (require 'boxquote)
 
+(menu-bar-mode -1)
+
 ;; Tabbar
-(require 'tabbar)
-(tabbar-mode 1)
-(set-face-attribute
- 'tabbar-default nil :background "gray10" :box nil
- :height 100
- ;:foundry "bitstream" :family "Bitstream Vera Sans"
-)
-(set-face-attribute
- 'tabbar-unselected nil :background "gray10" :foreground "gray50" :box nil
-)
-(set-face-attribute
- 'tabbar-selected nil :background "gray30" :foreground "white" :box nil
-)
-(set-face-attribute
- 'tabbar-button nil :box nil :foreground "white"
-)
-(set-face-attribute
- 'tabbar-separator nil :height 0.7
-)
-(setq tabbar-use-images nil) 
+;; (require 'tabbar)
+;; (tabbar-mode 0)
+;; (set-face-attribute
+;;  'tabbar-default nil :background "gray10" :box nil
+;;  :height 100
+;;  ;:foundry "bitstream" :family "Bitstream Vera Sans"
+;; )
+;; (set-face-attribute
+;;  'tabbar-unselected nil :background "gray10" :foreground "gray50" :box nil
+;; )
+;; (set-face-attribute
+;;  'tabbar-selected nil :background "gray30" :foreground "white" :box nil
+;; )
+;; (set-face-attribute
+;;  'tabbar-button nil :box nil :foreground "white"
+;; )
+;; (set-face-attribute
+;;  'tabbar-separator nil :height 0.7
+;; )
+;; (setq tabbar-use-images nil) 
 
 (setq visible-bell t)
 
