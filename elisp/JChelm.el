@@ -15,7 +15,7 @@
 (define-key global-map [remap switch-to-buffer] 'helm-mini)
 (define-key global-map [remap dabbrev-expand] 'helm-dabbrev)
 (define-key global-map [remap bookmark-jump] 'helm-filtered-bookmarks)
-(define-key global-map [remap isearch-forward] 'swiper-helm)
+;; (define-key global-map [remap isearch-forward] 'swiper-helm)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (unless (boundp 'completion-in-region-function)
   (define-key lisp-interaction-mode-map [remap completion-at-point] 'helm-lisp-completion-at-point)
