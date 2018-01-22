@@ -1,6 +1,11 @@
 ;; ~/.emacs.d/JCorgcaldav.el -*- mode: lisp-*-
-(require 'org-caldav)
+(require 'package) ;; org-caldav is loaded through melpa
+(package-initialize)
 
+(add-to-list 'load-path "~/git-repositories/org-mode/lisp") ;; running org-mode from git
+(add-to-list 'load-path "~/git-repositories/org-mode/contrib/lisp")
+(require 'org)
+(require 'org-caldav)
 
 (setq org-caldav-url 'google)
 
