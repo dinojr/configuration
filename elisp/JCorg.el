@@ -686,6 +686,22 @@
     (beginning-of-line)
     (looking-at "[[:space:]]*$")))
 
+(defun kolourpaint-open (path)
+  "Open the path in kolourpaint"
+  (interactive)
+  (unless (f-ext-p path "png") (error "Must be an png file."))
+  ;; (unless (file-exists-p path)
+  ;;   (with-temp-file path
+  ;;     (insert template-svg)))
+  (shell-command (format "kolourpaint %s &" path)))
+
+(org-link-set-parameters
+ "file"
+ :follow (lambda (path)
+    	   (let ((actions '(("find-file" . find-file)
+    			    ("edit in kolourpaint" . kolourpaint-open))))
+    	     (funcall (cdr (assoc (completing-read "Action: " actions) actions)) path))))
+
 (define-key org-mode-map "\C-ct" (lambda ()
 				   (interactive)
 				   (org-end-of-meta-data)
