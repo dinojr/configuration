@@ -7,7 +7,7 @@
 (global-set-key (kbd "C-c i") 'avy-goto-line)
 
 (require 'ace-isearch)
-(global-ace-isearch-mode 1)
+(global-ace-isearch-mode 0)
 
 (custom-set-variables
  '(ace-isearch-input-length 5)
