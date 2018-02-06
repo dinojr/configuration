@@ -299,7 +299,7 @@
 (setq gnus-demon-timestep 1)
 (gnus-demon-add-handler 'gnus-demon-scan-news 300 10)
 (setq gnus-notifications-minimum-level 2)
-(add-hook 'gnus-after-getting-new-news-hook 'gnus-notifications)
+;; (add-hook 'gnus-after-getting-new-news-hook 'gnus-notifications)
 
 
 (setq gnus-notifications-use-gravatar nil)
