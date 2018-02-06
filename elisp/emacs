@@ -39,45 +39,44 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(TeX-engine (quote luatex))
+ '(TeX-engine 'luatex)
+ '(ace-isearch-function 'avy-goto-word-1)
+ '(ace-isearch-input-length 5)
+ '(ace-isearch-jump-delay 0.25)
+ '(ace-isearch-use-jump 'printing-char)
  '(beacon-color "#ff79c6")
  '(canlock-password "5052bb55e61c64dae5204c0ccac4d417b05d8cf8")
- '(font-latex-fontify-sectioning (quote color))
- '(font-latex-quotes (quote french))
+ '(font-latex-fontify-sectioning 'color)
+ '(font-latex-quotes 'french)
  '(helm-external-programs-associations
-   (quote
-    (("xlsx" . "libreoffice")
+   '(("xlsx" . "libreoffice")
      ("jpg" . "shotwell")
      ("qti" . "qtiplot")
      ("agr" . "xmgrace")
      ("zip" . "file-roller")
      ("pdf" . "evince")
-     ("ods" . "libreoffice"))))
+     ("ods" . "libreoffice")))
  '(notmuch-saved-searches
-   (quote
-    ((:name "inbox" :query "tag:inbox" :key "i")
+   '((:name "inbox" :query "tag:inbox" :key "i")
      (:name "unread" :query "tag:unread" :key "u")
      (:name "flagged" :query "tag:flagged" :key "f")
      (:name "sent" :query "tag:sent" :key "t")
      (:name "drafts" :query "tag:draft" :key "d")
      (:name "all mail" :query "*" :key "a")
-     (:name "pending-tagging" :query "(not path:News/agent/nntp/**) and (not folder:Maildir/Free/Commercial) and (not folder:\"Mail/Free/Réseaux Sociaux\") and not folder:Local/junk and (not path:Maildir/Gmail/Categories/**) and date:30days.. and (not from:ebay) and (not from:Facebook) and tag:new" :key "g" :search-type tree))))
- '(org-archive-save-context-info (quote (itags ltags)))
+     (:name "pending-tagging" :query "(not path:News/agent/nntp/**) and (not folder:Maildir/Free/Commercial) and (not folder:\"Mail/Free/Réseaux Sociaux\") and not folder:Local/junk and (not path:Maildir/Gmail/Categories/**) and date:30days.. and (not from:ebay) and (not from:Facebook) and tag:new" :key "g" :search-type tree)))
+ '(org-archive-save-context-info '(itags ltags))
  '(org-format-latex-options
-   (quote
-    (:foreground default :background default :scale 2.0 :html-foreground "Black" :html-background "Transparent" :html-scale 1.0 :matchers
-		 ("begin" "$1" "$" "$$" "\\(" "\\["))))
+   '(:foreground default :background default :scale 2.0 :html-foreground "Black" :html-background "Transparent" :html-scale 1.0 :matchers
+		 ("begin" "$1" "$" "$$" "\\(" "\\[")))
  '(package-selected-packages
-   (quote
-    (ace-isearch yasnippet-snippets helm-descbinds helm-describe-modes helm-ext helm-swoop helm-ag helm-flx helm-flycheck swiper-helm counsel-etags counsel-gtags all-the-icons-gnus all-the-icons-ivy counsel counsel-bbdb counsel-ebdb counsel-notmuch counsel-tramp ivy-dired-history ivy-bibtex lispy magithub exec-path-from-shell emacs-xkcd gnus-alias helm-notmuch use-package use-package-chords csv-mode wttrin org-download org-pdfview auctex-latexmk ace-jump-helm-line unison flymake-yaml yaml-mode helm-bbdb cdlatex keychain-environment anzu aok org-review auto-overlays linum-relative flycheck flyspell-correct-helm helm-bind-key bind-key free-keys org-easy-img-insert ace-window spaceline sx gnorb easy-kill beacon emms-info-mediainfo emms-mode-line-cycle helm-emms ace-link rainbow-mode unison-mode latex-extra offlineimap markdown-mode org-caldav paradox spinner notmuch yasnippet yasnippet-bundle magit helm-company company-auctex company-math wiki-summary w3m twittering-mode tabbar session-manager rainbow-delimiters oauth2 notify magit-filenotify helm gnuplot-mode gnuplot gh flyspell-lazy expand-region emms calfw-gcal calfw boxquote bitlbee bbdb2erc bbdb-vcard bbdb-ext bbdb- auto-dictionary auctex ace-flyspell)))
+   '(info-colors ace-isearch yasnippet-snippets helm-descbinds helm-describe-modes helm-ext helm-swoop helm-ag helm-flx helm-flycheck swiper-helm counsel-etags counsel-gtags all-the-icons-gnus all-the-icons-ivy counsel counsel-bbdb counsel-ebdb counsel-notmuch counsel-tramp ivy-dired-history ivy-bibtex lispy magithub exec-path-from-shell emacs-xkcd gnus-alias helm-notmuch use-package use-package-chords csv-mode wttrin org-download org-pdfview auctex-latexmk ace-jump-helm-line unison flymake-yaml yaml-mode helm-bbdb cdlatex keychain-environment anzu aok org-review auto-overlays linum-relative flycheck flyspell-correct-helm helm-bind-key bind-key free-keys org-easy-img-insert ace-window spaceline sx gnorb easy-kill beacon emms-info-mediainfo emms-mode-line-cycle helm-emms ace-link rainbow-mode unison-mode latex-extra offlineimap markdown-mode org-caldav paradox spinner notmuch yasnippet yasnippet-bundle magit helm-company company-auctex company-math wiki-summary w3m twittering-mode tabbar session-manager rainbow-delimiters oauth2 notify magit-filenotify helm gnuplot-mode gnuplot gh flyspell-lazy expand-region emms calfw-gcal calfw boxquote bitlbee bbdb2erc bbdb-vcard bbdb-ext bbdb- auto-dictionary auctex ace-flyspell))
  '(paradox-automatically-star nil)
  '(paradox-github-token t)
  '(reftex-toc-include-labels t)
  '(reftex-toc-split-windows-horizontally t)
  '(safe-local-variable-values
-   (quote
-    ((TeX-PDF-from-DVI . t)
-     (org-download-image-dir . "./Resources/")))))
+   '((TeX-PDF-from-DVI . t)
+     (org-download-image-dir . "./Resources/"))))
 
 ;;--------------------
 ;; Customize end
