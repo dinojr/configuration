@@ -15,6 +15,8 @@
 (define-key global-map [remap switch-to-buffer] 'helm-mini)
 (define-key global-map [remap dabbrev-expand] 'helm-dabbrev)
 (define-key global-map [remap bookmark-jump] 'helm-filtered-bookmarks)
+(define-key isearch-mode-map [remap isearch-occur] 'helm-occur-from-isearch)
+
 ;; (define-key global-map [remap isearch-forward] 'swiper-helm)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (unless (boundp 'completion-in-region-function)
@@ -116,7 +118,3 @@
   '(define-key flycheck-mode-map (kbd "C-c ! h") 'helm-flycheck))
 
 (setq helm-grep-ag-command "rg --color=always --smart-case --no-heading --line-number %s %s %s")
-
-
-(add-to-list 'load-path "~/git-repositories/helm-swoop/")
-(require 'helm-swoop)
