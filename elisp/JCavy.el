@@ -7,12 +7,13 @@
 (global-set-key (kbd "C-c i") 'avy-goto-line)
 
 (require 'ace-isearch)
-(global-ace-isearch-mode 0)
+(global-ace-isearch-mode 1)
 
-(custom-set-variables
- '(ace-isearch-input-length 5)
- '(ace-isearch-jump-delay 0.25)
- '(ace-isearch-function 'avy-goto-word-1)
- '(ace-isearch-use-jump 'printing-char))
+(setq 
+ ace-isearch-input-length 5
+ ace-isearch-jump-delay .5
+ ace-isearch-function 'avy-goto-word-1
+ ace-isearch-use-jump 'printing-char
+ ace-isearch-function-from-isearch 'ace-isearch-helm-swoop-from-isearch)
  
 (define-key isearch-mode-map (kbd "C-'") 'ace-isearch-jump-during-isearch)
