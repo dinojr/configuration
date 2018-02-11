@@ -116,3 +116,7 @@
   '(define-key flycheck-mode-map (kbd "C-c ! h") 'helm-flycheck))
 
 (setq helm-grep-ag-command "rg --color=always --smart-case --no-heading --line-number %s %s %s")
+
+
+(add-to-list 'load-path "~/git-repositories/helm-swoop/")
+(require 'helm-swoop)
