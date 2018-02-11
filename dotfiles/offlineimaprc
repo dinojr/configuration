@@ -10,7 +10,7 @@ localrepository = FreeLocal
 remoterepository = FreeRemote
 autorefresh = 1
 quick = 10
-synclabels = no
+synclabels = yes
 #maxage = 365
 
 [Repository FreeLocal]
@@ -36,14 +36,14 @@ localrepository = GmailLocal
 remoterepository = GmailRemote
 autorefresh = 1
 quit = 10
-synclabels = no
+synclabels = yes
 #maxage = 365
 postsynchook = /home/wilk/configuration/dotfiles/post-sync-hook.sh
 
 [Repository GmailLocal]
 type = IMAP
 #localfolders = ~/email/Maildir/Gmail
-preauthtunnel = /usr/lib/dovecot/imap /usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Gmail:LAYOUT=fs
+preauthtunnel = /usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Gmail:LAYOUT=fs
 # preauthtunnel = /usr/lib/dovecot/imap -c $HOME/.dovecotrc
 
 [Repository GmailRemote]
