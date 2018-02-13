@@ -85,7 +85,7 @@
 ;; (setq gnus-large-newsgroup 200)
 ;; (setq gnus-fetch-old-headers 'some)
 
-;; (setq gnus-group-line-format "%M%S%p%P%5y/%t:%B%(%G%)%O\n")
+
 (setq gnus-group-line-format "%M%S%p%P%5y|%2-i:%m%B%(%G%)%O\n")
 
 (setq nnimap-authinfo-file "~/.authinfo")
@@ -158,7 +158,7 @@
 	      (nnir-search-engine gmane))
 	(nntp "news.gmane.org"
 	      (nnir-search-engine gmane))
-	;; (nnmaildir "FreeOffline" (directory "~/Maildir-free"))
+	;; (nnmaildir "FreeOffline" (directory "~/email/Maildir/Free/"))
 	;; (nnimap "GmailOffline"
 	;; 	(nnimap-stream shell)
 	;; 	(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/Maildir-gmail")
@@ -191,8 +191,7 @@
 	;; 	(nnfolder-get-new-mail nil)
 	;; 	(nnfolder-inhibit-expiry t)
 	;; 	(nnir-search-engine notmuch))
-	)
-)
+	))
 
 (setq gnus-update-message-archive-method t)
 (setq gnus-message-archive-method
