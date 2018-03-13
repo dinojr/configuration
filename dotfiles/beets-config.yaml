@@ -65,11 +65,11 @@ embedart:
 
 convert:
     copy_album_art: no
-    embed: yes
+    embed: no
     never_convert_lossy_files: no
-    album_art_maxwidth: 100
+    album_art_maxwidth: 20
     dest: "/media/wilk/SPORT PLUS/Music"
-    format: mp3
+    format: ogg
     formats:
         mp3:
            command: ffmpeg -i $source -y -vn -aq 5 $dest
@@ -78,13 +78,14 @@ convert:
            # command: ffmpeg -i $source -y -vn -acodec libfaac -aq 100 $dest
            command: ffmpeg -i $source -c:a aac -b:a 128k $dest
            extension: aac
-
+        
+          
 alternatives:
-  sportplus:
-    directory: "/media/wilk/SPORT PLUS/Music/"
+  Xduoo64:
+    directory: "/media/wilk/XDUOO64/MUSIC64/"
     paths:
       default: $albumartist/$album/$title
-    formats: mp3
-    query: "onplayer:true"
+    formats: ogg
+    query: "xduoo64:true"
     removable: true
     
