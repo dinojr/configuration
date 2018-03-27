@@ -78,14 +78,20 @@ convert:
            # command: ffmpeg -i $source -y -vn -acodec libfaac -aq 100 $dest
            command: ffmpeg -i $source -c:a aac -b:a 128k $dest
            extension: aac
-        
           
 alternatives:
   Xduoo64:
     directory: "/media/wilk/XDUOO64/MUSIC64/"
     paths:
-      default: $albumartist/$album/$title
-    formats: ogg
+      default: $albumartist/$album/$track-$title
+    formats: ogg mp3
     query: "xduoo64:true"
     removable: true
-    
+  Xduoo32:
+    directory: "/media/wilk/XDUOO32/MUSIC32/"
+    paths:
+      default: $albumartist/$album/$track-$title
+    formats: ogg mp3
+    query: "xduoo32:true"
+    removable: true
+
