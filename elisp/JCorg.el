@@ -430,7 +430,7 @@
   (add-to-list 'org-export-filter-headline-functions
 	       'jc-org-latex-ignore-heading))
 
-
+(setq org-export-allow-bind-keywords t)
 
 (defun remove-org-suffix (name)
   "Remove the .org from a file name"
@@ -456,8 +456,9 @@
 	     (file-version-suffix-name (concat file-base-name "-" version  "." suffix)))
     (when (file-exists-p file-suffix-name)
 	(rename-file file-suffix-name file-version-suffix-name t)
-	(if (equal suffix "pdf")
-	    (org-open-file file-version-suffix-name)))
+	;; (if (equal suffix "pdf")
+	;;     (org-open-file file-version-suffix-name))
+	)
     )
     )
 
