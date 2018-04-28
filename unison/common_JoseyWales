@@ -34,6 +34,8 @@ path = wilk/.chktexrc
 path = wilk/.config/systemd/user
 path = wilk/.themes
 path = wilk/.dir_colors
+path = wilk/git-repositories/www-dev
+
 #Files
 path = wilk/.unison/common_JoseyWales
 path = wilk/configuration/elisp/paradox-token
