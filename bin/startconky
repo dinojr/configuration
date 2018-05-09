@@ -1,6 +1,7 @@
 #!/bin/bash
 conky -c $HOME/.Conky/secondconkyrc -d;
 conky -c $HOME/.Conky/conkyrc -d;
+conky -c $HOME/.Conky/conkympd -d;
 
 
 # La suite ne marchera pas tant que le plugin dbus de compiz ne marchera pas
