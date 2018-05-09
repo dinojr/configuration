@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DATE=`date +%A-%d-%m-%y-%T`
+DATE=`date +%d-%m-%y-%A-%T`
 PASSWORD="eigen4copies"
 DIR="$HOME/enseignement/2017-2018/notes/cc-backups"
 FILE=$DIR/cc-$DATE.sql
