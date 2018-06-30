@@ -10,9 +10,10 @@
 
 ;; From dinojr/github
 
-(add-to-list 'load-path "/home/wilk/git-repositories/dracula-emacs/")
-(require 'dracula-theme)
-
+;; (add-to-list 'load-path "/home/wilk/git-repositories/dracula-emacs/")
+(add-to-list 'custom-theme-load-path "/home/wilk/git-repositories/dracula-emacs/")
+;; (require 'dracula-theme)
+(load-theme 'dracula t)
 
 ;; Transient-mark-mode
 (setq transient-mark-mode t)
