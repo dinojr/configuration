@@ -5,9 +5,8 @@
 
 (setq magit-last-seen-setup-instructions "1.4.0")
 (require 'magit)
-(setq magit-repository-directories '("/home/wilk/configuration/"
-				    "/home/wilk/git-repositories/"
-				    "/home/wilk/texmf/tex/latex/mpsi/"))
+(setq magit-repository-directories '(("/home/wilk/" . 1)
+				    ("/home/wilk/texmf/tex/latex/mpsi/" . 0)))
 ;; (require 'magithub)
 ;; (require 'magit-gh-pulls) pb de dépendances avec  eieio-1.3, à réinstaller plus tard
 
