@@ -615,14 +615,21 @@
 
 
 ; Pour le courrier : smtp gmail
-;; (setq message-send-mail-function 'smtpmail-send-it
-;;       send-mail-function 'smtpmail-send-it
-;;       smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
-;;       smtpmail-auth-credentials '(("smtp.gmail.com" 587 "j.cubizolles@gmail.com" nil))
-;;       smtpmail-default-smtp-server "smtp.gmail.com"
-;;       smtpmail-smtp-server "smtp.gmail.com"
-;;       smtpmail-smtp-service 587
-;;       smtpmail-local-domain nil)
+(require 'smtpmail-async)
+(setq message-send-mail-function ;; 'smtpmail-send-it
+	'async-smtpmail-send-it
+      send-mail-function 'smtpmail-send-it
+      smtpmail-starttls-credentials '(("smtp.free.fr" 587 nil nil))
+      smtpmail-auth-credentials '(("smtp.free.fr" 587 "j.cubizolles" nil))
+      ;; smtpmail-default-smtp-server "smtp.gmail.com"
+      ;; smtpmail-stream-type 'ssl
+      ;; smtpmail-stream-type 'starttls
+      smtpmail-stream-type nil
+      smtpmail-default-smtp-server "smtp.free.fr"
+      smtpmail-smtp-server "smtp.free.fr"
+      smtpmail-smtp-service 587
+      smtpmail-smtp-user "j.cubizolles"
+      smtpmail-local-domain nil)
 
 ; smtp free/sfr/orange...
 (setq message-send-mail-function 'smtpmail-send-it
