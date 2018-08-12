@@ -1,4 +1,4 @@
-#-*- mode: unison; -*-
+*#-*- mode: unison; -*-
 
 #Directories
 path = wilk/enseignement
@@ -49,8 +49,9 @@ path = wilk/.newsrc-dribble
 path = wilk/.config/terminator/config
 path = wilk/pim/passwds.revelation
 path = wilk/.bbdb
-path = wilk/.netrc
 path = wilk/.authinfo.gpg
+path = wilk/configuration/dotnetrc
+path = wilk/.netrc
 path = wilk/.dovecotrc
 path = wilk/.offlineimaprc
 path = wilk/.asynk
