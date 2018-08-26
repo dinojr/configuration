@@ -18,7 +18,7 @@
 (define-key isearch-mode-map [remap isearch-occur] 'helm-occur-from-isearch)
 (define-key isearch-mode-map (kbd "M-s O") 'helm-multi-occur-from-isearch)
 
-
+(setq helm-follow-mode-persistent t)
 ;; (define-key global-map [remap isearch-forward] 'swiper-helm)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (unless (boundp 'completion-in-region-function)
