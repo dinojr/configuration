@@ -13,12 +13,13 @@
 ;; Il faut aussi, dans "Tableau de bord", activer l'API CalDAV
 (setq org-caldav-oauth2-client-id "760965627563-fsbk1a5kddifiv5clrncuahdcc1n6tlc.apps.googleusercontent.com")
 (setq org-caldav-oauth2-client-secret "6eJFJObg_C4v7K4_dfEQCnDS")
-(setq org-caldav-calendar-id "09qqpld5o29tddmmv92dse1tng@group.calendar.google.com")
+;; (setq org-caldav-calendar-id "09qqpld5o29tddmmv92dse1tng@group.calendar.google.com")
+(setq org-caldav-calendar-id "mfuh5b8oh2oqd9ilu89hsap6fk@group.calendar.google.com")
 
 (setq plstore-cache-passphrase-for-symmetric-encryption t)
 
 (setq org-caldav-inbox "~/org/org-caldav.org")
-(setq org-caldav-files '("~/org/orgfiles/planning-17-18.org" "~/org/orgfiles/lycee-17-18.org"))
+(setq org-caldav-files '("~/org/orgfiles/planning-18-19.org" "~/org/orgfiles/lycee-18-19.org"))
 (setq org-icalendar-timezone "Europe/Paris")
 (setq org-caldav-save-directory "~/org/") ; to ensure synchronization by unison
 
