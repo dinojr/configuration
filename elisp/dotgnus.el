@@ -631,23 +631,6 @@
       smtpmail-smtp-user "j.cubizolles"
       smtpmail-local-domain nil)
 
-; smtp free/sfr/orange...
-(setq message-send-mail-function 'smtpmail-send-it
-      send-mail-function 'smtpmail-send-it
-      smtpmail-smtp-server "smtp.free.fr"
-      ;; smtpmail-smtp-server "smtp.gmail.com"
-      ;; smtpmail-smtp-server "smtp.orange.fr"
-      smtpmail-local-domain nil)
-
-(setq smtpmail-default-smtp-server "smtp.free.fr")
-;; (setq smtpmail-default-smtp-server "smtp.orange.fr")
-; (setq smtpmail-default-smtp-server "smtp.sfr.fr")
-;; (setq smtpmail-default-smtp-server "smtp.gmail.com")
-;; (setq smtpmail-local-domain nil)
-;; (setq send-mail-function 'smtpmail-send-it)
-;; (setq message-send-mail-function 'smtpmail-send-it)
-; Pour les news
-;; (setq gnus-post-method '(nntp "news.gmane.org"))
 (setq gnus-gcc-mark-as-read t)
 
 (setq gnus-message-archive-group 
