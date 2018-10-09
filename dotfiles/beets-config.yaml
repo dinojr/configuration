@@ -94,7 +94,14 @@ alternatives:
     formats: ogg mp3
     query: "xduoo32:true"
     removable: true
-
+  SportPlus:
+    directory: "/media/wilk/SPORT PLUS/Music/"
+    paths:
+      default: $albumartist/$album/$track-$title
+    formats: mp3
+    query: "sportplus:true"
+    removable: true
+    
 album_fields:
   albumformat: |
     formatList = set()
