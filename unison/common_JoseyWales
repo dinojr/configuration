@@ -89,6 +89,7 @@ ignorenot = Path wilk/vuibert/vuibert-sup/.git
 ignore = Path wilk/News/namazu
 ignore = Path wilk/Mail/junk
 ignore = Name {.notmuch}
+ignore = Name {vuibert-sup}
 
 # Files
 ignore = Path wilk/.unison/default.prf
