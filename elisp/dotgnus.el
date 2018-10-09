@@ -616,8 +616,8 @@
 
 ; Pour le courrier : smtp gmail
 (require 'smtpmail-async)
-(setq message-send-mail-function ;; 'smtpmail-send-it
-	'async-smtpmail-send-it
+(setq message-send-mail-function 'smtpmail-send-it
+	;; 'async-smtpmail-send-it
       send-mail-function 'smtpmail-send-it
       smtpmail-starttls-credentials '(("smtp.free.fr" 587 nil nil))
       smtpmail-auth-credentials '(("smtp.free.fr" 587 "j.cubizolles" nil))
