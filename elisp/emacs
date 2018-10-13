@@ -133,6 +133,7 @@
 (load "JCpython.el")
 (load "JClilypond.el")
 (load "JCunison.el")
+(load "JCeshell.el")
 (load "JCminions-moody.el")
 
 ;; (load "JCasymptote.el")
