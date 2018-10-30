@@ -6,7 +6,8 @@
 (setq magit-last-seen-setup-instructions "1.4.0")
 (require 'magit)
 (setq magit-repository-directories '(("/home/wilk/" . 1)
-				    ("/home/wilk/texmf/tex/latex/mpsi/" . 0)))
+				     ("/home/wilk/texmf/tex/latex/mpsi/" . 0)
+                                     ("/home/wilk/vuibert/vuibert-sup/" . 0)))
 ;; (require 'magithub)
 ;; (require 'magit-gh-pulls) pb de dépendances avec  eieio-1.3, à réinstaller plus tard
 
@@ -24,6 +25,7 @@
   (delete-other-windows)
   (magit-status-internal "/home/wilk/git-repositories/")
   (magit-status-internal "/home/wilk/texmf/tex/latex/mpsi")
+  (magit-status-internal "/home/wilk/vuibert/vuibert-sup/.")
   )
 
 (global-set-key [f6] 'jc-display-git-status)
