@@ -1,0 +1,114 @@
+#~/.config/beets/config.yaml
+directory: /var/lib/mpd/music/NAS/Synology/BEETS/
+# library: /var/lib/mpd/music/NAS/Synology/ADMINISTRATION/musiclibrary.blb
+library: /home/wilk/configuration/beets/musiclibrary.blb
+
+ignore: .@eaDir BEETS .* *~
+
+# plugins: fetchart mpdstats import smartplaylist mpdupdate
+plugins: fetchart duplicates missing permissions fromfilename embedart mpdupdate convert alternatives mbsync inline info
+# plugins: embedart
+
+import:
+    write: yes
+    copy: no
+    move: yes
+    resume: ask
+    #none_rec_action: skip
+    log: /var/lib/mpd/music/NAS/Synology/ADMINISTRATION/beets-import-fail
+    fromfilename: yes
+    permissions: yes
+
+match:
+    max_rec:
+        missing_tracks: none
+
+duplicates:
+    album: yes
+    merge: yes
+    # delete: yes
+
+paths:
+    #default: $albumartist/$album%aunique{}/$track $title
+    default: $albumartist/$album/$track $title
+    singleton: Non-Album/$artist/$title
+    #comp: Compilations/$album%aunique{}/$track $title
+    comp: Compilations/$album/$track $title
+
+mpd:
+    host: localhost
+    port: 6600
+
+fetchart:
+    auto: yes
+    maxwidth: 900
+    
+missing:
+    #format: $albumartist - $album - $title
+    #format: $albumartist - $album
+    count: yes
+    total: no
+
+match:
+    preferred:
+        #countries: ['US', 'GB|UK']
+        media: ['CD', 'Digital Media|File']
+        original_year: yes
+
+permissions:
+    file: 644
+    dir: 755
+
+embedart:
+    auto: yes
+    ifempty: yes
+    maxwidth: 100
+
+convert:
+    copy_album_art: no
+    embed: no
+    never_convert_lossy_files: no
+    album_art_maxwidth: 20
+    dest: "/media/wilk/SPORT PLUS/Music"
+    format: ogg
+    formats:
+        mp3:
+           command: ffmpeg -i $source -y -vn -aq 5 $dest
+           extension: mp3
+        aac:
+           # command: ffmpeg -i $source -y -vn -acodec libfaac -aq 100 $dest
+           command: ffmpeg -i $source -c:a aac -b:a 128k $dest
+           extension: aac
+          
+alternatives:
+  Xduoo64:
+    directory: "/media/wilk/XDUOO64/MUSIC64/"
+    paths:
+      default: $albumartist/$album/$track-$title
+    formats: ogg mp3
+    query: "xduoo64:true"
+    removable: true
+  Xduoo32:
+    directory: "/media/wilk/XDUOO32/MUSIC32/"
+    paths:
+      default: $albumartist/$album/$track-$title
+    formats: ogg mp3
+    query: "xduoo32:true"
+    removable: true
+  SportPlus:
+    directory: "/media/wilk/SPORT PLUS/Music/"
+    paths:
+      default: $albumartist/$album/$track-$title
+    formats: mp3
+    query: "sportplus:true"
+    removable: true
+    
+album_fields:
+  albumformat: |
+    formatList = set()
+    for item in items:
+      formatList.add(str(item.format))
+    formatList=str(list(formatList)).translate(None,' \'[]') #for python2
+    return formatList
+  # albumxduoo32: xduoo32
+  # albumxduoo64: xduoo64

@@ -1,5 +1,5 @@
 #!/bin/bash
-DIR=/srv/multimedia/musique/ADMINISTRATION/
+DIR=/home/wilk/configuration/beets
 #export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.6/dist-packages/
 FILE=beets-lossy.txt
 date > $DIR/$FILE

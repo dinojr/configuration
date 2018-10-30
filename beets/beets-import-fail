@@ -1,0 +1,623 @@
+import started Tue Feb 16 16:15:50 2016
+import started Tue Feb 16 16:35:29 2016
+asis /srv/multimedia/musique/queen/-- Live Albums --/(1979) Live Killers/CD 2
+skip /srv/multimedia/musique/queen/-- Live Albums --/(1986) Live Magic
+skip /srv/multimedia/musique/queen/-- Live Albums --/(1992) Live at Wembley '86/CD 2
+skip /srv/multimedia/musique/queen/-- Live Albums --/(2004) Queen on Fire - Live at the Bowl/CD 2
+skip /srv/multimedia/musique/queen/-- Live Albums --/(2007) Queen Rock Montreal/CD 2
+import started Tue Feb 16 17:02:50 2016
+skip /srv/multimedia/musique/queen/-- Live Albums --/live at the bowl/CD 2
+skip /srv/multimedia/musique/queen/-- Live Albums --/live at wembley '86/CD 2
+skip /srv/multimedia/musique/queen/-- Live Albums --/live magic
+skip /srv/multimedia/musique/queen/-- Live Albums --/wueen rock montreal/CD 2
+import started Tue Feb 16 17:06:35 2016
+duplicate-keep /srv/multimedia/musique/queen/live at the bowl/CD 2
+skip /srv/multimedia/musique/queen/live at wembley '86/CD 2
+skip /srv/multimedia/musique/queen/queen rock montreal/CD 2
+import started Tue Feb 16 17:44:11 2016
+skip /srv/multimedia/musique/queen/live at wembley '86/CD 2
+import started Tue Feb 16 17:46:02 2016
+skip /srv/multimedia/musique/The Doors/an american prayer
+skip /srv/multimedia/musique/The Doors/full circle
+skip /srv/multimedia/musique/The Doors/morrison hotel
+skip /srv/multimedia/musique/The Doors/strange days
+skip /srv/multimedia/musique/The Doors/the doors
+skip /srv/multimedia/musique/The Doors/the soft parade
+skip /srv/multimedia/musique/The Doors/waiting for the sun
+import started Tue Feb 16 17:52:22 2016
+skip /srv/multimedia/musique/A Silver Mt. Zion/Born Into Trouble As The Sparks Fly Upwa
+import started Tue Feb 16 18:02:07 2016
+skip /srv/multimedia/musique/A Silver Mt. Zion/Born Into Trouble As The Sparks Fly Upwa
+import started Tue Feb 16 18:02:58 2016
+duplicate-replace /srv/multimedia/musique/Mano Negra/Puta's Fever
+import started Tue Feb 16 18:06:15 2016
+skip /srv/multimedia/musique/JJ72/OTHER SONGS
+import started Tue Feb 16 18:08:47 2016
+import started Tue Feb 16 19:33:58 2016
+skip /srv/multimedia/musique/queen/queen rock montreal/CD 2
+import started Tue Feb 16 19:34:27 2016
+skip /srv/multimedia/musique/queen/live at wembley '86/CD 2
+skip /srv/multimedia/musique/queen/queen rock montreal/CD 2
+import started Tue Feb 16 19:37:54 2016
+import started Tue Feb 16 19:40:10 2016
+skip /srv/multimedia/musique/The Doors/an american prayer
+skip /srv/multimedia/musique/The Doors/full circle
+skip /srv/multimedia/musique/The Doors/morrison hotel
+skip /srv/multimedia/musique/The Doors/strange days
+skip /srv/multimedia/musique/The Doors/the doors
+skip /srv/multimedia/musique/The Doors/the soft parade
+skip /srv/multimedia/musique/The Doors/waiting for the sun
+import started Tue Feb 16 19:41:17 2016
+skip /srv/multimedia/musique/Kate Bush/(1990) - This Woman's Work, Vol. 1
+skip /srv/multimedia/musique/Kate Bush/(1990) - This Woman's Work, Vol. 2
+import started Tue Feb 16 19:44:51 2016
+import started Tue Feb 16 19:48:59 2016
+import started Tue Feb 16 19:51:39 2016
+import started Tue Feb 16 19:54:36 2016
+skip /srv/multimedia/musique/2 many DJ's/Inconnu
+skip /srv/multimedia/musique/2 many DJ's/The Ultimate Hang The DJ Part
+skip /srv/multimedia/musique/A Silver Mt. Zion/Born Into Trouble As The Sparks Fly Upwa
+skip /srv/multimedia/musique/an horse/An Horse - Rearrange Beds (2009) [VIPER666]
+skip /srv/multimedia/musique/antony_and_the_johnsons
+skip /srv/multimedia/musique/Artiste inconnu/Filastrocche, Canzoncine e ninne nanne
+skip /srv/multimedia/musique/Big Black/Live Albums/[1987] Sound of Impact
+duplicate-keep /srv/multimedia/musique/Björk/Vespertine
+skip /srv/multimedia/musique/bombay bicycle club/A Different Kind Of Fix
+skip /srv/multimedia/musique/britney_spears/unknown
+duplicate-keep /srv/multimedia/musique/Built to Spill/You In Reverse
+skip /srv/multimedia/musique/cage the elephant/[Alt. Rock] Cage the Elephant  2007-2013 (By Jamal The Moroccan)/Covers
+skip /srv/multimedia/musique/cage the elephant/[Alt. Rock] Cage the Elephant  2007-2013 (By Jamal The Moroccan)/Live/2010 -  Live at Grimey's
+skip /srv/multimedia/musique/Dvorak__Anton/Symphonie_N__9__Du_Nouveau_Monde_
+skip /srv/multimedia/musique/Ella_Fitzgerald/Purely...
+skip /srv/multimedia/musique/franz_ferdinand/oldies/better_on_holiday_bbc_air_in_scotland_session_9-8-03.mp3
+duplicate-keep /srv/multimedia/musique/Frightened Rabbit/It's Christmas So We'll Stop. (CDS)
+duplicate-keep /srv/multimedia/musique/Frightened Rabbit/Sing the Greys
+duplicate-keep /srv/multimedia/musique/Frightened Rabbit/The Midnight Organ Fight
+duplicate-keep /srv/multimedia/musique/Ghinzu/Blow
+duplicate-keep /srv/multimedia/musique/iron maiden/Iron Maiden Discography/2002 - eddies archive/2002 - Best of the B'sides/CD1; /srv/multimedia/musique/iron maiden/Iron Maiden Discography/2002 - eddies archive/2002 - Best of the B'sides/CD2
+duplicate-skip /srv/multimedia/musique/j_mascis_plus_the_fog/free_so_free
+duplicate-keep /srv/multimedia/musique/Jeff Buckley/Grace (Legacy Edition) CD 2
+duplicate-keep /srv/multimedia/musique/JJ72/OTHER SONGS/Coming Home.mp3
+duplicate-keep /srv/multimedia/musique/JJ72/OTHER SONGS/October Swimmer (Acoustic).mp3
+asis /srv/multimedia/musique/JJ72/OTHER SONGS/Someday (Acoustic).mp3
+duplicate-keep /srv/multimedia/musique/Johnny Cash/Ride This Train
+skip /srv/multimedia/musique/joseph_arthur/live_new_morning
+skip /srv/multimedia/musique/Joseph_Arthur/Live at Cafe de la Danse - CD1; /srv/multimedia/musique/Joseph_Arthur/Live at Cafe de la Danse - CD2
+duplicate-keep /srv/multimedia/musique/Kate Bush/(1990) - This Woman's Work, Vol. 2
+duplicate-keep /srv/multimedia/musique/Kings of Leon/Youth and Young Manhood Adv.
+skip /srv/multimedia/musique/lastfm
+skip /srv/multimedia/musique/le tigre/2002 - Live at Sweden
+skip /srv/multimedia/musique/Le Tigre/2002-04-27 in Umeå
+skip /srv/multimedia/musique/moby/go_mix/go_mix-02-go__analog_mix_.mp3; /srv/multimedia/musique/moby/go_mix/go_mix-04-go__night_time_mix_.mp3; /srv/multimedia/musique/moby/go_mix/go_mix-05-go__original_mix_.mp3; /srv/multimedia/musique/moby/go_mix/go_mix-06-go__low_spirit_mix_.mp3; /srv/multimedia/musique/moby/go_mix/go_mix-07-go__rainforest_mix_.mp3; /srv/multimedia/musique/moby/go_mix/go_mix-09-go__voodoo_child_mix_.mp3; /srv/multimedia/musique/moby/go_mix/go_mix-10-go__barracuda_mix_.mp3; /srv/multimedia/musique/moby/go_mix/go_mix-11-go__arpathoski_mix_.mp3; /srv/multimedia/musique/moby/go_mix/go_mix-14-go__amphetamix_.mp3
+duplicate-keep /srv/multimedia/musique/Moby/Ambient
+skip /srv/multimedia/musique/Nano/Accordéologie
+duplicate-keep /srv/multimedia/musique/Noir Désir/En route pour la joie
+skip /srv/multimedia/musique/P.J. Harvey/Rock En Seine 2003
+skip /srv/multimedia/musique/pj_harvey/Rock_en_seine_2003
+duplicate-keep /srv/multimedia/musique/queen/live at wembley '86/CD 2
+duplicate-keep /srv/multimedia/musique/Regina Spektor/Regina Spektor - What We Saw From the Cheap Seats (2012)
+skip /srv/multimedia/musique/rilo_kiley/the_execution_of_all_things
+skip /srv/multimedia/musique/ripped
+duplicate-keep /srv/multimedia/musique/rise against/2006 - Rise Against - The Sufferer and The Witness
+duplicate-keep /srv/multimedia/musique/rise against/2008 - Rise Against - Re-Education (Through Labor) Promo
+skip /srv/multimedia/musique/sansartiste/disque_inconnu
+skip /srv/multimedia/musique/scan_problems
+skip /srv/multimedia/musique/streamripper/Goodbye Girl Friday
+skip /srv/multimedia/musique/streamripper/Helene Renaut
+skip /srv/multimedia/musique/streamripper/incomplete
+duplicate-skip /srv/multimedia/musique/streamripper/Iron And Wine
+duplicate-skip /srv/multimedia/musique/streamripper/Kaiser Chiefs
+skip /srv/multimedia/musique/streamripper/Misc-
+skip /srv/multimedia/musique/streamripper/Tiles, The
+skip /srv/multimedia/musique/streamripper/Yo La Tengo
+duplicate-keep /srv/multimedia/musique/Tegan and Sara/So Jealous (Japan)
+duplicate-keep /srv/multimedia/musique/terranova/peace_is_tough
+skip /srv/multimedia/musique/The Clash/The Vanilla Tapes
+skip /srv/multimedia/musique/The Horrors/Shadazz _ Radiation
+skip /srv/multimedia/musique/These New Puritans/[unknown]
+skip /srv/multimedia/musique/Various Artists/Shadazz _ Radiation
+skip /srv/multimedia/musique/Wild_Dawn/Bloody_Jane_s_Shore
+import started Wed Feb 17 01:14:03 2016
+skip /srv/multimedia/musique/2 many DJ's/Inconnu
+import started Wed Feb 17 01:18:16 2016
+duplicate-skip /srv/multimedia/musique/antony_and_the_johnsons
+skip /srv/multimedia/musique/Artiste inconnu/Filastrocche, Canzoncine e ninne nanne
+duplicate-keep /srv/multimedia/musique/Big Black/Live Albums/[1987] Sound of Impact
+duplicate-keep /srv/multimedia/musique/bombay bicycle club/A Different Kind Of Fix
+asis /srv/multimedia/musique/cage the elephant/[Alt. Rock] Cage the Elephant  2007-2013 (By Jamal The Moroccan)/Covers/Cage the Elephant - All Apologies [Nirvana cover].mp3
+asis /srv/multimedia/musique/cage the elephant/[Alt. Rock] Cage the Elephant  2007-2013 (By Jamal The Moroccan)/Covers/Cage The Elephant - Doctor Doctor Doctor Help Me  Help Me Help Me [live].mp3
+asis /srv/multimedia/musique/cage the elephant/[Alt. Rock] Cage the Elephant  2007-2013 (By Jamal The Moroccan)/Covers/Cage the Elephant - Psycho Killer [Talking Heads Cover].mp3
+duplicate-skip /srv/multimedia/musique/cage the elephant/[Alt. Rock] Cage the Elephant  2007-2013 (By Jamal The Moroccan)/Covers/Greeze - Shake me Down [Cage The Elephant cover].mp3
+asis /srv/multimedia/musique/cage the elephant/[Alt. Rock] Cage the Elephant  2007-2013 (By Jamal The Moroccan)/Covers/Rolling In The Deep [Adele Cover].mp3
+duplicate-skip /srv/multimedia/musique/cage the elephant/[Alt. Rock] Cage the Elephant  2007-2013 (By Jamal The Moroccan)/Covers/The Winter Brave - Cigarette Daydreams [Cage The Elephant cover].mp3
+asis /srv/multimedia/musique/cage the elephant/[Alt. Rock] Cage the Elephant  2007-2013 (By Jamal The Moroccan)/Live/2010 -  Live at Grimey's
+skip /srv/multimedia/musique/Ella_Fitzgerald/Purely...
+skip /srv/multimedia/musique/franz_ferdinand/oldies
+skip /srv/multimedia/musique/joseph_arthur/live_new_morning
+skip /srv/multimedia/musique/Joseph_Arthur/Live at Cafe de la Danse - CD1; /srv/multimedia/musique/Joseph_Arthur/Live at Cafe de la Danse - CD2
+skip /srv/multimedia/musique/lastfm
+skip /srv/multimedia/musique/le tigre/2002 - Live at Sweden
+skip /srv/multimedia/musique/Le Tigre/2002-04-27 in Umeå
+duplicate-keep /srv/multimedia/musique/moby/go_mix
+skip /srv/multimedia/musique/Nano/Accordéologie
+skip /srv/multimedia/musique/P.J. Harvey/Rock En Seine 2003
+skip /srv/multimedia/musique/pj_harvey/Rock_en_seine_2003
+skip /srv/multimedia/musique/rilo_kiley/the_execution_of_all_things
+skip /srv/multimedia/musique/sansartiste/disque_inconnu
+skip /srv/multimedia/musique/scan_problems
+skip /srv/multimedia/musique/streamripper/Goodbye Girl Friday
+skip /srv/multimedia/musique/streamripper/Helene Renaut
+skip /srv/multimedia/musique/streamripper/incomplete/ - .aac
+skip /srv/multimedia/musique/streamripper/incomplete/ - .mp3
+duplicate-keep /srv/multimedia/musique/streamripper/incomplete/Beirut - Mimizan.aac
+duplicate-skip /srv/multimedia/musique/streamripper/incomplete/Handsome Furs - All We Want, Baby, Is Everything.mp3
+duplicate-skip /srv/multimedia/musique/streamripper/incomplete/Prodigy - Smack my Bitch Up.mp3
+duplicate-skip /srv/multimedia/musique/streamripper/incomplete/Sun Kil Moon - Trucker's Atlas.aac
+skip /srv/multimedia/musique/streamripper/Misc-
+skip /srv/multimedia/musique/streamripper/Tiles, The
+skip /srv/multimedia/musique/The Clash/The Vanilla Tapes
+skip /srv/multimedia/musique/The Horrors/Shadazz _ Radiation
+skip /srv/multimedia/musique/Various Artists/Shadazz _ Radiation
+skip /srv/multimedia/musique/Wild_Dawn/Bloody_Jane_s_Shore
+import started Wed Feb 17 02:03:15 2016
+import started Wed Feb 17 11:11:21 2016
+import started Wed Feb 17 12:27:26 2016
+import started Wed Feb 17 20:50:39 2016
+duplicate-keep /srv/multimedia/musique/BEETS/Cursive/Happy Hollow
+import started Thu Feb 25 11:18:36 2016
+duplicate-keep /srv/multimedia/musique/BEETS/PJ Harvey/Rid of Me 6
+duplicate-keep /srv/multimedia/musique/BEETS/PJ Harvey/Rid of Me 7
+import started Fri Feb 26 09:33:02 2016
+duplicate-keep /srv/multimedia/musique/BEETS/PJ Harvey/Rid of Me
+duplicate-keep /srv/multimedia/musique/BEETS/PJ Harvey/Stories From the City, Stories From the Sea [314-548-144-2]
+duplicate-keep /srv/multimedia/musique/BEETS/PJ Harvey/Stories From the City, Stories From the Sea [548 144-2]
+duplicate-keep /srv/multimedia/musique/BEETS/PJ Harvey/To Bring You My Love []
+duplicate-keep /srv/multimedia/musique/BEETS/PJ Harvey/To Bring You My Love [Island]
+import started Wed Mar  2 14:51:54 2016
+import started Thu Mar  3 11:35:45 2016
+import started Thu Mar  3 11:39:02 2016
+import started Thu Mar  3 12:07:19 2016
+import started Thu Mar  3 12:12:08 2016
+import started Fri Mar  4 16:14:18 2016
+duplicate-keep /srv/multimedia/musique/BEETS/PJ Harvey & John Parish/A Woman a Man Walked By [1796236]
+duplicate-keep /srv/multimedia/musique/BEETS/PJ Harvey & John Parish/A Woman a Man Walked By [2700699]
+import started Wed Mar  9 10:19:06 2016
+duplicate-keep /srv/multimedia/musique/The Clash/The Vanilla Tapes
+import started Wed Mar  9 10:34:44 2016
+import started Wed Mar  9 10:34:57 2016
+import started Wed Mar  9 10:37:29 2016
+import started Wed Mar  9 10:41:32 2016
+import started Tue Apr 12 18:52:22 2016
+duplicate-skip /media/freebox/Téléchargements/Kings of Leon - Studio Album Discography (2003 - 2013) mp3 Soup/2003 - Youth & Young Manhood
+duplicate-skip /media/freebox/Téléchargements/Kings of Leon - Studio Album Discography (2003 - 2013) mp3 Soup/2004 - Aha Shake Heartbreak
+duplicate-skip /media/freebox/Téléchargements/Kings of Leon - Studio Album Discography (2003 - 2013) mp3 Soup/2007 - Because of the Times
+duplicate-skip /media/freebox/Téléchargements/Kings of Leon - Studio Album Discography (2003 - 2013) mp3 Soup/2008 - Only by the Night
+import started Tue Apr 19 14:39:30 2016
+import started Tue Apr 19 18:16:19 2016
+duplicate-skip /srv/multimedia/musique/BEETS/PJ Harvey/The Hope Six Demolition Project
+import started Tue Apr 19 18:18:26 2016
+duplicate-keep /srv/multimedia/musique/BEETS/PJ Harvey/The Hope Six Demolition Project
+import started Tue Apr 19 18:30:58 2016
+duplicate-keep /srv/multimedia/musique/BEETS/PJ Harvey/The Hope Six Demolition Project
+import started Tue Apr 19 18:42:33 2016
+import started Tue Apr 19 18:49:18 2016
+import started Tue Apr 19 18:53:49 2016
+import started Tue Apr 19 21:43:31 2016
+import started Wed Apr 20 09:24:26 2016
+import started Wed Apr 20 10:24:21 2016
+import started Wed Apr 20 10:25:23 2016
+duplicate-skip /srv/multimedia/musique/BEETS/Sebadoh/Rocking the Forest
+import started Wed Apr 20 17:25:08 2016
+import started Wed Apr 20 17:31:17 2016
+duplicate-replace /srv/multimedia/musique/BEETS/PJ Harvey/Is This Desire_
+duplicate-skip /srv/multimedia/musique/BEETS/PJ Harvey/Let England Shake
+import started Wed Apr 20 17:33:49 2016
+duplicate-replace /srv/multimedia/musique/BEETS/PJ Harvey/Is This Desire_
+duplicate-replace /srv/multimedia/musique/BEETS/PJ Harvey/Let England Shake
+duplicate-replace /srv/multimedia/musique/BEETS/PJ Harvey/Rid of Me
+import started Wed Apr 20 18:01:44 2016
+import started Wed Apr 20 18:07:06 2016
+duplicate-replace /srv/multimedia/musique/BEETS/Built to Spill/There Is No Enemy
+import started Wed Apr 20 18:10:07 2016
+duplicate-replace /srv/multimedia/musique/BEETS/Built to Spill/There Is No Enemy
+import started Wed Apr 20 18:15:48 2016
+duplicate-replace /srv/multimedia/musique/BEETS/Built to Spill/There Is No Enemy
+import started Wed Apr 20 18:27:23 2016
+import started Wed Apr 20 18:34:43 2016
+import started Wed Apr 20 18:52:57 2016
+import started Wed Apr 20 18:56:34 2016
+import started Wed Apr 20 19:02:45 2016
+import started Wed Apr 20 21:53:51 2016
+duplicate-replace /media/freebox/Téléchargements/PJ Harvey (8 studio albums) [lossless]/(1993) PJ Harvey - Ride of Me [VinylRip 24-96]
+duplicate-replace /media/freebox/Téléchargements/PJ Harvey (8 studio albums) [lossless]/(1995) PJ Harvey - To Bring You My Love [VinylRip 24-96]
+duplicate-replace /media/freebox/Téléchargements/PJ Harvey (8 studio albums) [lossless]/(2000) PJ Harvey - Stories From the City, Stories From the Sea [VinylRip 24-96]
+duplicate-replace /media/freebox/Téléchargements/PJ Harvey (8 studio albums) [lossless]/(2004) PJ Harvey - Uh Huh Her
+duplicate-replace /media/freebox/Téléchargements/PJ Harvey (8 studio albums) [lossless]/(2007) PJ Harvey - White Chalk [VinylRip 24-96]
+import started Wed Apr 20 22:26:44 2016
+skip /media/freebox/Téléchargements/PJ Harvey (8 studio albums) [lossless]/(1993) PJ Harvey - Ride of Me [VinylRip 24-96]
+skip /media/freebox/Téléchargements/PJ Harvey (8 studio albums) [lossless]/(1995) PJ Harvey - To Bring You My Love [VinylRip 24-96]
+skip /media/freebox/Téléchargements/PJ Harvey (8 studio albums) [lossless]/(1998) PJ Harvey - Is This Desire [VinylRip 24-96]
+skip /media/freebox/Téléchargements/PJ Harvey (8 studio albums) [lossless]/(2000) PJ Harvey - Stories From the City, Stories From the Sea [VinylRip 24-96]
+duplicate-replace /media/freebox/Téléchargements/PJ Harvey (8 studio albums) [lossless]/(2004) PJ Harvey - Uh Huh Her
+duplicate-replace /media/freebox/Téléchargements/PJ Harvey (8 studio albums) [lossless]/(2007) PJ Harvey - White Chalk [VinylRip 24-96]
+import started Wed Apr 20 22:41:19 2016
+import started Wed Apr 20 22:41:37 2016
+duplicate-skip /media/freebox/Téléchargements/PJ Harvey (8 studio albums) [lossless]/(1993) PJ Harvey - Ride of Me [VinylRip 24-96]
+import started Wed Apr 20 22:43:38 2016
+duplicate-replace /media/freebox/Téléchargements/PJ Harvey (8 studio albums) [lossless]/(1995) PJ Harvey - To Bring You My Love [VinylRip 24-96]
+import started Thu Apr 21 09:24:26 2016
+import started Thu Apr 21 09:28:35 2016
+import started Thu Apr 21 09:34:01 2016
+import started Thu Apr 21 09:38:23 2016
+import started Thu Apr 21 09:42:45 2016
+import started Thu Apr 21 09:52:50 2016
+import started Thu Apr 21 09:56:30 2016
+import started Thu Apr 21 10:02:22 2016
+import started Thu Apr 21 10:14:23 2016
+import started Thu Apr 21 11:17:53 2016
+import started Thu Apr 21 11:25:48 2016
+import started Thu Apr 21 11:35:53 2016
+import started Thu Apr 21 11:37:20 2016
+import started Thu Apr 21 11:39:17 2016
+import started Thu Apr 21 11:40:33 2016
+import started Thu Apr 21 12:01:38 2016
+import started Thu Apr 21 12:03:06 2016
+import started Thu Apr 21 12:05:04 2016
+import started Thu Apr 21 12:33:58 2016
+import started Thu Apr 21 12:40:12 2016
+import started Thu Apr 21 12:42:42 2016
+import started Thu Apr 21 12:47:14 2016
+import started Thu Apr 21 12:48:45 2016
+import started Thu Apr 21 12:50:32 2016
+import started Thu Apr 21 12:51:30 2016
+import started Thu Apr 21 12:52:24 2016
+import started Thu Apr 21 12:53:46 2016
+import started Thu Apr 21 12:55:31 2016
+import started Thu Apr 21 12:56:29 2016
+import started Thu Apr 21 12:59:41 2016
+import started Thu Apr 21 13:00:57 2016
+import started Thu Apr 21 13:02:52 2016
+import started Thu Apr 21 13:04:19 2016
+import started Thu Apr 21 13:05:38 2016
+import started Thu Apr 21 13:07:38 2016
+import started Thu Apr 21 13:09:25 2016
+import started Thu Apr 21 13:11:14 2016
+import started Thu Apr 21 13:12:28 2016
+import started Thu Apr 21 13:13:43 2016
+import started Thu Apr 21 13:15:18 2016
+import started Thu Apr 21 13:21:19 2016
+import started Thu Apr 21 13:23:31 2016
+import started Thu Apr 21 13:25:56 2016
+import started Thu Apr 21 13:27:27 2016
+import started Thu Apr 21 13:29:22 2016
+import started Thu Apr 21 13:37:32 2016
+import started Thu Apr 21 13:38:55 2016
+import started Thu Apr 21 13:40:02 2016
+import started Thu Apr 21 13:42:14 2016
+import started Thu Apr 21 13:44:03 2016
+import started Thu Apr 21 13:45:36 2016
+import started Thu Apr 21 13:47:45 2016
+import started Thu Apr 21 13:50:15 2016
+import started Thu Apr 21 13:51:55 2016
+import started Thu Apr 21 13:53:13 2016
+import started Thu Apr 21 13:56:21 2016
+import started Thu Apr 21 13:58:58 2016
+import started Thu Apr 21 14:01:26 2016
+import started Thu Apr 21 14:02:51 2016
+import started Thu Apr 21 14:12:01 2016
+import started Thu Apr 21 15:38:26 2016
+import started Thu Apr 21 15:41:12 2016
+import started Thu Apr 21 15:41:25 2016
+import started Thu Apr 21 15:47:31 2016
+import started Thu Apr 21 16:24:03 2016
+import started Fri Apr 22 11:19:12 2016
+import started Fri Apr 22 11:21:36 2016
+import started Fri Apr 22 11:39:50 2016
+import started Fri Apr 22 11:42:10 2016
+import started Fri Apr 22 11:44:44 2016
+import started Fri Apr 22 13:17:46 2016
+import started Fri Apr 22 13:20:50 2016
+import started Fri Apr 22 13:22:56 2016
+import started Fri Apr 22 13:24:55 2016
+import started Fri Apr 22 15:24:28 2016
+import started Fri Apr 22 15:26:02 2016
+import started Fri Apr 22 15:27:57 2016
+import started Fri Apr 22 15:31:16 2016
+import started Fri Apr 22 15:32:56 2016
+import started Fri Apr 22 17:01:58 2016
+import started Fri Apr 22 17:03:40 2016
+import started Fri Apr 22 17:05:08 2016
+import started Fri Apr 22 17:07:19 2016
+import started Fri Apr 22 17:09:39 2016
+import started Fri Apr 22 17:10:58 2016
+import started Fri Apr 22 17:12:55 2016
+import started Fri Apr 22 17:13:25 2016
+import started Fri Apr 22 17:18:13 2016
+import started Fri Apr 22 17:19:47 2016
+import started Fri Apr 22 17:21:41 2016
+import started Fri Apr 22 17:22:55 2016
+import started Fri Apr 22 17:24:01 2016
+import started Fri Apr 22 17:25:16 2016
+import started Fri Apr 22 17:27:10 2016
+import started Fri Apr 22 17:28:36 2016
+import started Fri Apr 22 17:29:53 2016
+skip /media/freebox/Téléchargements/SCHUBERT/Schubert - Symphonies nos. 3 & 8, Wanderer-Fantasie (Berezovskiy, Masur - NYP) [flac]/01-04 Symphony no. 3 in D major, D 200
+skip /media/freebox/Téléchargements/SCHUBERT/Schubert - Symphonies nos. 3 & 8, Wanderer-Fantasie (Berezovskiy, Masur - NYP) [flac]/05 Fantasy in C major 'Wanderer-Fantasie', D 760
+import started Fri Apr 22 17:33:04 2016
+import started Fri Apr 22 17:34:58 2016
+import started Fri Apr 22 17:38:15 2016
+import started Fri Apr 22 17:48:18 2016
+import started Fri Apr 22 17:51:38 2016
+import started Fri Apr 22 18:14:38 2016
+import started Fri Apr 22 18:20:40 2016
+import started Fri Apr 22 18:27:13 2016
+import started Fri Apr 22 18:32:11 2016
+import started Fri Apr 22 18:34:29 2016
+import started Fri Apr 22 18:50:25 2016
+import started Fri Apr 22 18:54:03 2016
+import started Fri Apr 22 18:58:56 2016
+import started Fri Apr 22 19:43:44 2016
+import started Fri Apr 22 19:44:47 2016
+import started Fri Apr 22 20:06:52 2016
+import started Fri Apr 22 21:03:14 2016
+import started Fri Apr 22 21:05:21 2016
+import started Fri Apr 22 21:06:35 2016
+import started Fri Apr 22 21:08:08 2016
+import started Fri Apr 22 21:11:04 2016
+import started Fri Apr 22 21:14:18 2016
+import started Fri Apr 22 21:16:12 2016
+import started Fri Apr 22 21:17:25 2016
+import started Sat Apr 23 08:32:33 2016
+import started Sat Apr 23 08:39:17 2016
+import started Sat Apr 23 08:43:14 2016
+import started Wed May  4 17:44:56 2016
+import started Wed May  4 20:14:18 2016
+import started Sun May 22 13:33:50 2016
+import started Tue May 24 11:57:59 2016
+import started Sun Jun 26 21:32:48 2016
+import started Thu Jun 30 18:56:57 2016
+import started Thu Jul 21 12:09:18 2016
+import started Tue Aug 23 15:01:28 2016
+duplicate-replace /srv/multimedia/musique/QUEUE/Dinosaur Jr./Give a Glimpse of What Yer Not
+import started Tue Sep 13 17:43:53 2016
+import started Tue Sep 13 17:48:11 2016
+import started Tue Sep 13 17:54:17 2016
+import started Tue Oct  4 23:39:27 2016
+duplicate-replace /srv/multimedia/musique/QUEUE/Dinosaur Jr./Fossils
+import started Tue Oct  4 23:43:49 2016
+import started Wed Oct  5 09:48:53 2016
+duplicate-replace /srv/multimedia/musique/QUEUE/Dinosaur Jr./Where You Been
+import started Wed Oct  5 10:18:38 2016
+duplicate-replace /srv/multimedia/musique/QUEUE/Dinosaur Jr./Whatever’s Cool With Me
+import started Wed Oct  5 10:30:32 2016
+duplicate-replace /srv/multimedia/musique/QUEUE/Dinosaur Jr./You’re Living All Over Me
+import started Wed Oct  5 10:39:19 2016
+duplicate-replace /srv/multimedia/musique/QUEUE/Dinosaur Jr./In Session
+import started Wed Oct  5 11:00:36 2016
+duplicate-replace /srv/multimedia/musique/QUEUE/Dinosaur Jr./Without a Sound
+import started Wed Oct  5 11:09:53 2016
+duplicate-replace /srv/multimedia/musique/QUEUE/Dinosaur Jr./Green Mind
+import started Wed Oct  5 11:19:37 2016
+duplicate-replace /srv/multimedia/musique/QUEUE/Dinosaur Jr./Dinosaur
+import started Wed Oct  5 12:26:35 2016
+import started Wed Oct  5 12:27:04 2016
+duplicate-replace /srv/multimedia/musique/QUEUE/Dinosaur Jr./Hand It Over
+import started Wed Oct  5 12:33:58 2016
+duplicate-keep /srv/multimedia/musique/QUEUE/Dinosaur Jr./Take a Run at the Sun
+import started Fri Nov 11 20:50:58 2016
+import started Tue Nov 15 15:29:58 2016
+import started Tue Nov 15 17:14:19 2016
+import started Tue Nov 15 17:26:14 2016
+import started Tue Nov 15 17:45:25 2016
+duplicate-replace /srv/multimedia/musique/QUEUE/My Bloody Valentine/Loveless
+import started Tue Nov 15 18:52:23 2016
+import started Tue Nov 15 18:52:29 2016
+import started Sat Nov 26 15:17:03 2016
+import started Sat Nov 26 18:54:39 2016
+import started Sat Nov 26 18:57:09 2016
+import started Sun Nov 27 10:47:14 2016
+import started Tue Nov 29 17:53:03 2016
+import started Tue Nov 29 18:05:23 2016
+import started Tue Nov 29 18:23:27 2016
+duplicate-keep /srv/multimedia/musique/QUEUE/Violent Femmes/Violent Femmes
+import started Sat Dec  3 17:13:33 2016
+import started Sun Dec 11 16:43:38 2016
+import started Sun Dec 11 16:52:01 2016
+import started Wed Dec 14 14:17:23 2016
+import started Sun Dec 18 09:24:13 2016
+import started Tue Dec 20 11:28:08 2016
+import started Thu Dec 22 17:26:28 2016
+import started Wed Dec 28 17:47:47 2016
+skip /srv/multimedia/musique/QUEUE/Artiste inconnu/Titre inconnu
+duplicate-replace /srv/multimedia/musique/QUEUE/Bon Iver/22, a Million
+import started Wed Dec 28 18:36:31 2016
+import started Wed Dec 28 19:17:29 2016
+duplicate-replace /srv/multimedia/musique/QUEUE/Built to Spill/Perfect From Now On
+import started Wed Dec 28 19:56:13 2016
+import started Wed Dec 28 22:53:12 2016
+import started Thu Dec 29 11:58:31 2016
+import started Thu Dec 29 18:29:48 2016
+import started Tue Jan  3 13:53:30 2017
+import started Wed Feb  8 18:45:23 2017
+import started Wed Feb  8 18:59:34 2017
+import started Wed Feb  8 19:09:30 2017
+import started Fri Feb 10 10:24:34 2017
+duplicate-replace /srv/multimedia/musique/QUEUE/Bon Iver/Bon Iver, Bon Iver
+duplicate-replace /srv/multimedia/musique/QUEUE/Bon Iver/For Emma, Forever Ago
+duplicate-replace /srv/multimedia/musique/QUEUE/Midlake/The Courage of Others
+duplicate-replace /srv/multimedia/musique/QUEUE/Midlake/The Trials of Van Occupanther
+import started Fri Feb 10 15:01:13 2017
+import started Wed Mar 15 22:12:30 2017
+import started Wed Mar 15 22:12:54 2017
+duplicate-replace /srv/multimedia/musique/BEETS/16 Horsepower/Low Estate
+import started Wed Mar 15 22:41:08 2017
+duplicate-replace /srv/multimedia/musique/BEETS/Blackalicious/NIA
+import started Sat Mar 18 17:48:22 2017
+duplicate-replace /srv/multimedia/musique/QUEUE/Artiste inconnu/Titre inconnu
+import started Sun Mar 19 09:09:04 2017
+import started Sun Mar 19 09:15:20 2017
+duplicate-replace /srv/multimedia/musique/QUEUE/Artiste inconnu/Titre inconnu
+import started Wed Mar 22 10:01:28 2017
+duplicate-replace /media/freebox/Téléchargements/16 Horsepower Discography 1995-2011 (15 Releases)/16 Horsepower - 1998 - Low Estate
+import started Wed Mar 22 10:07:41 2017
+duplicate-replace /home/wilk/tmp/Beirut - Mimizan.mp3
+duplicate-skip /home/wilk/tmp/dj_shadow-the_mountain_will_fall
+import started Sun Apr 30 17:40:50 2017
+import started Sat May  6 19:10:28 2017
+import started Sat May  6 19:14:13 2017
+import started Tue May  9 10:14:48 2017
+duplicate-keep /srv/multimedia/musique/QUEUE
+import started Tue May  9 10:46:35 2017
+duplicate-replace /srv/multimedia/musique/QUEUE/Elliott Smith/Either-Or
+duplicate-replace /srv/multimedia/musique/QUEUE/Elliott Smith/Elliott Smith
+duplicate-replace /srv/multimedia/musique/QUEUE/Elliott Smith/Roman Candle
+import started Tue May  9 11:29:26 2017
+import started Sun Jun  4 10:56:53 2017
+import started Sun Jun  4 10:59:41 2017
+import started Sun Jun  4 11:02:29 2017
+import started Tue Jun 13 15:30:03 2017
+import started Tue Jun 13 16:25:40 2017
+import started Tue Jun 13 21:32:31 2017
+import started Tue Jun 13 21:34:20 2017
+duplicate-skip /srv/multimedia/musique/QUEUE/Prophets Of Rage - The Party's Over (2016)
+import started Wed Jun 14 20:27:28 2017
+import started Sun Jul  2 11:09:08 2017
+import started Fri Jul  7 09:28:27 2017
+duplicate-skip /srv/multimedia/musique/QUEUE/Prophets Of Rage - The Party's Over (2016)
+import started Fri Jul  7 10:57:08 2017
+import started Fri Jul  7 10:59:01 2017
+import started Fri Jul  7 10:59:28 2017
+duplicate-skip /srv/multimedia/musique/QUEUE/DJ Shadow/Endtroducing.....
+import started Fri Jul  7 11:00:52 2017
+duplicate-replace /srv/multimedia/musique/QUEUE/DJ Shadow/Deluxe
+import started Fri Jul  7 12:34:44 2017
+import started Fri Jul  7 12:37:51 2017
+import started Fri Jul  7 12:40:40 2017
+import started Wed Aug 30 16:21:26 2017
+import started Wed Aug 30 16:30:26 2017
+import started Wed Aug 30 16:45:41 2017
+duplicate-skip /srv/multimedia/musique/QUEUE/Les Ogres de Barback/Pitt Ocha au Pays des Mille Collines
+import started Wed Aug 30 16:58:50 2017
+duplicate-skip /srv/multimedia/musique/QUEUE/Artiste inconnu/Titre inconnu
+import started Sat Sep  9 13:58:24 2017
+import started Sat Sep  9 14:28:09 2017
+import started Sun Sep 17 17:47:03 2017
+import started Tue Sep 26 09:50:24 2017
+import started Sun Oct  1 18:41:28 2017
+duplicate-skip /media/wilk/KINGSTON/BNQT/Volume 1
+import started Sun Oct  1 18:42:23 2017
+import started Sun Oct  1 18:47:08 2017
+import started Sun Oct  8 14:05:42 2017
+import started Sun Oct  8 19:50:01 2017
+import started Sun Oct  8 19:51:32 2017
+import started Wed Oct 18 17:06:21 2017
+import started Tue Oct 31 17:15:23 2017
+import started Thu Nov  2 09:03:04 2017
+import started Thu Nov  2 09:05:56 2017
+import started Thu Nov  2 09:10:04 2017
+import started Thu Nov  2 09:10:25 2017
+import started Thu Nov  2 09:13:52 2017
+import started Thu Nov  2 10:37:43 2017
+import started Thu Nov  2 10:40:48 2017
+import started Thu Nov  2 10:50:10 2017
+import started Thu Nov  2 10:52:19 2017
+import started Thu Nov  2 11:02:09 2017
+skip /srv/multimedia/musique/QUEUE/Sigur Rós/Ágætis byrjun
+import started Thu Nov  2 11:20:54 2017
+import started Thu Nov  2 11:27:50 2017
+import started Thu Nov  2 11:56:05 2017
+import started Thu Nov  2 14:55:07 2017
+import started Thu Nov  2 15:09:43 2017
+duplicate-replace /srv/multimedia/musique/QUEUE/Sigur Rós/Ágaetis byrjun
+import started Fri Nov  3 00:52:25 2017
+duplicate-replace /srv/multimedia/musique/QUEUE/Sigur Rós/Með suð í eyrum við spilum endalaust
+import started Wed Nov 29 20:45:28 2017
+duplicate-skip /srv/multimedia/musique/QUEUE/Les Ogres de Barback/Pitt Ocha au Pays des Mille Collines
+import started Wed Nov 29 20:49:44 2017
+import started Wed Jan 10 20:42:55 2018
+import started Sat Jan 20 19:02:33 2018
+import started Sun Jan 21 09:41:37 2018
+duplicate-replace /srv/multimedia/musique/QUEUE/Pavement/Crooked Rain, Crooked Rain L.A.’s Desert Origins (disc 1); /srv/multimedia/musique/QUEUE/Pavement/Crooked Rain, Crooked Rain L.A.’s Desert Origins (disc 2)
+import started Sun Jan 21 20:37:57 2018
+duplicate-skip /srv/multimedia/musique/QUEUE/Grandaddy/Sumday/01-Sumday-Now It's On.flac; /srv/multimedia/musique/QUEUE/Grandaddy/Sumday/02-Sumday-I'm on Standby.flac; /srv/multimedia/musique/QUEUE/Grandaddy/Sumday/03-Sumday-The Go in the Go-For-It.flac; /srv/multimedia/musique/QUEUE/Grandaddy/Sumday/04-Sumday-The Group Who Couldn't Say.flac; /srv/multimedia/musique/QUEUE/Grandaddy/Sumday/05-Sumday-Lost on Yer Merry Way.flac; /srv/multimedia/musique/QUEUE/Grandaddy/Sumday/06-Sumday-El Caminos in the West.flac; /srv/multimedia/musique/QUEUE/Grandaddy/Sumday/07-Sumday-Yeah Is What We Had.flac; /srv/multimedia/musique/QUEUE/Grandaddy/Sumday/08-Sumday-Saddest Vacant Lot in All the World.flac; /srv/multimedia/musique/QUEUE/Grandaddy/Sumday/09-Sumday-Stray Dog and the Chocolate Shake.flac; /srv/multimedia/musique/QUEUE/Grandaddy/Sumday/10-Sumday-O.K. With My Decay.flac; /srv/multimedia/musique/QUEUE/Grandaddy/Sumday/11-Sumday-The Warming Sun.flac; /srv/multimedia/musique/QUEUE/Grandaddy/Sumday/12-Sumday-The Final Push to the Sum.flac
+import started Sun Jan 21 20:40:47 2018
+duplicate-skip /srv/multimedia/musique/QUEUE/Grandaddy/Sumday
+skip /srv/multimedia/musique/QUEUE/Grandaddy/Sumday disc 2
+import started Sun Jan 21 20:43:52 2018
+duplicate-replace /srv/multimedia/musique/QUEUE/Grandaddy/Sumday
+import started Sun Jan 21 21:48:55 2018
+duplicate-replace /home/wilk/Bureau/Grandaddy...Under the Western Freeway(1998)[FLAC]
+import started Sun Jan 21 21:56:10 2018
+duplicate-replace /srv/multimedia/musique/QUEUE/Grandaddy/The Sophtware Slump
+import started Sun Jan 21 21:57:40 2018
+import started Sun Jan 21 21:57:48 2018
+import started Tue Jan 23 12:33:30 2018
+duplicate-replace /srv/multimedia/musique/QUEUE/Foals; /srv/multimedia/musique/QUEUE/Foals/Total Life Forever disc 1; /srv/multimedia/musique/QUEUE/Foals/Total Life Forever disc 2
+import started Tue Jan 23 16:12:18 2018
+duplicate-skip /srv/multimedia/musique/BEETS/Foals/Antidotes
+import started Tue Jan 23 16:13:29 2018
+duplicate-replace /srv/multimedia/musique/QUEUE/Foals/Holy Fire
+import started Tue Jan 23 16:35:42 2018
+duplicate-skip /srv/multimedia/musique/QUEUE/Foals/Antidotes
+skip /srv/multimedia/musique/QUEUE/Foals/Antidotes (disc 2)
+import started Tue Jan 23 16:36:36 2018
+duplicate-replace /srv/multimedia/musique/QUEUE/Foals/Antidotes disc 1; /srv/multimedia/musique/QUEUE/Foals/Antidotes disc 2
+import started Tue Jan 23 22:24:03 2018
+import started Wed Jan 24 11:08:57 2018
+import started Wed Feb 21 16:26:26 2018
+import started Wed Feb 21 16:31:22 2018
+import started Wed Feb 21 17:31:09 2018
+import started Sun Feb 25 18:04:19 2018
+duplicate-replace /srv/multimedia/musique/QUEUE/Aldebert/Enfantillages
+import started Thu Mar  1 20:34:07 2018
+import started Thu Mar  1 20:35:01 2018
+import started Fri Mar  2 08:22:04 2018
+import started Fri Mar  2 08:23:45 2018
+duplicate-replace /media/freebox/Téléchargements/Dinosaur Jr.~Farm (Limited Edition) [FLAC]-2009
+import started Sat Mar  3 12:43:38 2018
+import started Sat Mar  3 12:47:10 2018
+duplicate-replace /srv/multimedia/musique/QUEUE/Red Hot Chili Peppers/Mother’s Milk
+import started Sat Mar  3 14:50:27 2018
+import started Sat Mar  3 15:05:19 2018
+import started Sun Mar  4 11:14:28 2018
+import started Sun Mar  4 11:26:49 2018
+duplicate-replace /srv/multimedia/musique/QUEUE/Grandaddy/Just Like the Fambly Cat
+import started Tue Mar 20 17:37:01 2018
+import started Tue Mar 20 17:46:40 2018
+duplicate-replace /srv/multimedia/musique/QUEUE/1984
+import started Tue Mar 20 17:53:33 2018
+import started Tue Mar 20 17:54:53 2018
+import started Tue Mar 20 22:31:40 2018
+import started Wed Mar 28 22:20:53 2018
+import started Wed Apr 11 17:37:14 2018
+import started Wed Apr 11 17:41:13 2018
+import started Wed Apr 11 17:49:36 2018
+import started Wed Apr 11 17:52:51 2018
+duplicate-keep /media/freebox/Téléchargements/Oasis – Definitely Maybe (20th Anniversary Special Edition 2014) NLToppers/cd; /media/freebox/Téléchargements/Oasis – Definitely Maybe (20th Anniversary Special Edition 2014) NLToppers/cd/CD1; /media/freebox/Téléchargements/Oasis – Definitely Maybe (20th Anniversary Special Edition 2014) NLToppers/cd/CD2; /media/freebox/Téléchargements/Oasis – Definitely Maybe (20th Anniversary Special Edition 2014) NLToppers/cd/CD3
+import started Tue Apr 17 14:16:15 2018
+import started Thu Apr 26 17:04:12 2018
+import started Sun Jun  3 15:24:45 2018
+import started Wed Jun  6 10:30:50 2018
+import started Wed Jun  6 13:11:19 2018
+duplicate-replace /srv/multimedia/musique/BEETS/Moaning/Moaning
+import started Sun Jun 17 09:37:17 2018
+import started Sat Jun 30 12:41:14 2018
+duplicate-replace /srv/multimedia/musique/QUEUE/Gamaliel Audrey Cantika/Gamaliel Audrey Cantika
+import started Tue Aug 14 16:00:23 2018
+duplicate-replace /srv/multimedia/musique/QUEUE/Dinosaur Jr./Bug
+import started Wed Oct 10 19:26:07 2018
+import started Wed Oct 10 19:32:10 2018
+duplicate-keep /srv/multimedia/musique/QUEUE/Jimi Hendrix/The Ultimate Experience
+import started Wed Oct 10 19:36:05 2018
+duplicate-replace /srv/multimedia/musique/QUEUE/Jimi Hendrix/The Ultimate Experience
+import started Tue Oct 16 12:52:56 2018
+duplicate-replace /srv/multimedia/musique/QUEUE/Dinosaur Jr./Dinosaur
+import started Tue Oct 16 13:50:58 2018
+import started Mon Oct 22 21:31:28 2018
+import started Mon Oct 22 21:35:27 2018
+import started Mon Oct 22 21:42:19 2018
+import started Tue Oct 30 12:59:33 2018
+import started Tue Oct 30 13:05:03 2018
+import started Tue Oct 30 13:20:46 2018
+skip /srv/multimedia/musique/QUEUE/Francine Raymond/Francine Raymond
+import started Tue Oct 30 13:21:42 2018

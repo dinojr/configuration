@@ -1,0 +1,773 @@
+#+TITLE: BEET
+#+SETUPFILE: /home/wilk/git-repositories/org-html-themes/setup/theme-readtheorg-local.setup
+#+LANGUAGE: fr
+#+begin_src emacs-lisp :exports none
+  (setq org-export-in-background t)
+  (setq org-publish-project-alist
+             '(("Beets-data"
+                 :base-directory "/srv/multimedia/musique/ADMINISTRATION/"
+                 :base-extension "org"
+                 :publishing-directory "/ftp:j.cubizolles@ftpperso.free.fr:"
+                 :publishing-function org-html-publish-to-html
+                 :headline-levels 3
+                 :section-numbers nil
+                 :with-toc t
+                 )
+                 ("css"
+                 :base-directory "~/git-repositories/org-html-themes/"
+                 ;; :base-extension "css"
+                 :publishing-directory "/ftp:mpsi2llg@ftpperso.free.fr:styles/"
+                 :publishing-function org-publish-attachment
+                 ;; :exclude "PrivatePage.org"   ;; regexp
+                 :headline-levels 3
+                 :section-numbers nil
+                 :with-toc t
+                 ;; :html-head "<link rel=\"stylesheet\"
+                 ;;         href=\"../other/mystyle.css\" type=\"text/css\"/>"
+                 ;; :html-preamble t
+                 )
+                ("website" :components ("Beets-data"))))
+#+end_src
+
+#+RESULTS:
+| Beets-data | :base-directory | /srv/multimedia/musique/ADMINISTRATION/ | :base-extension       | org                                    | :publishing-directory | /ftp:j.cubizolles@ftpperso.free.fr: | :publishing-function | org-html-publish-to-html | :headline-levels |   3 | :section-numbers | nil | :with-toc | t |
+| css        | :base-directory | ~/git-repositories/org-html-themes/     | :publishing-directory | /ftp:mpsi2llg@ftpperso.free.fr:styles/ | :publishing-function  | org-publish-attachment              | :headline-levels     |                        3 | :section-numbers | nil | :with-toc        | t   |           |   |
+| website    | :components     | (Beets-data)                            |                       |                                        |                       |                                     |                      |                          |                  |     |                  |     |           |   |
+
+* À ripper
++ A Tribe Called Quest - Beats, Rhymes and Life
+* Whishlist
++ 16 HorsePower
+  + Low Estate
++ A Tribe Called Quest
+  + We Got it from Here...
++ Violent Femmes
+  + 3
+  + Violent Femmes
+* Missing
++ - : -8
++ 2 Many DJ’s - As Heard on Radio Soulwax, Part 1: 49
++ 2 Unlimited - Hits Unlimited: 15
++ The Afghan Whigs - Big Top Halloween: 1
++ All Girl Summer Fun Band - All Girl Summer Fun Band: 12
++ An Horse - Rearrange Beds: 1
++ Audioslave - Audioslave: 13
++ Devendra Banhart - Oh Me Oh My... The Way the Day Goes by the Sun Is Setting Dogs Are Dreaming Lovesongs of the Christmas Spirit: 1
++ The Beach Boys - Smiley Smile / Wild Honey: 11
++ The Besnard Lakes - The Besnard Lakes Are the Dark Horse: 1
++ The Besnard Lakes - The Besnard Lakes Are the Roaring Night: 1
++ Björk - Vespertine: -1
++ Bloc Party - A Weekend in the City: 4
++ Bombay Bicycle Club - A Different Kind of Fix: -1
++ The Boo Radleys - Kingsize: -1
++ Bright Eyes - A Collection of Songs Written and Recorded 1995–1997: 1
++ Kate Bush - This Woman's Work: -3
++ Kate Bush - This Woman's Work: Anthology 1978–1990: 73
++ Cage The Elephant - Live at Grimey's: -1
++ Johnny Cash - Ride This Train: -2
++ DJ Casper - Cha Cha Slide: 1
++ Cat Power - The Greatest: 4
++ Nick Cave & The Bad Seeds - Abattoir Blues / The Lyre of Orpheus: -1
++ Nick Cave & The Bad Seeds - Murder Ballads: 5
++ The Clash - London Calling: -21
++ The Cure - Greatest Hits: 18
++ Kimya Dawson - Remember That I Love You: 11
++ Dead Can Dance - Within the Realm of a Dying Sun: 6
++ Death Cab for Cutie - Codes and Keys: 1
++ Death Cab for Cutie - Kintsugi: 1
++ Death Cab for Cutie - Narrow Stairs: 1
++ Death Cab for Cutie - Something About Airplanes: 1
++ Death Cab for Cutie - The Photo Album: 1
++ Death Cab for Cutie - We Have the Facts and We're Voting Yes: 1
++ Death Cab for Cutie - We Laugh Indoors: 1
++ Death Cab for Cutie - You Can Play These Songs With Chords: 1
++ Default - The Fallout: 10
++ Delta Spirit - Ode to Sunshine: 9
++ Dinosaur Jr. - Fossils: 7
++ Dinosaur Jr. - Where You Been: 1
++ Dinosaur Jr. - You’re Living All Over Me: 1
++ dios (malos) - dios (malos): 11
++ Antonín Dvořák - Symphonie No. 9 "Du Nouveau Monde" (Orchestre Symphonique de Radio Télé Luxembourg feat. conductor: Rudolf Albert): 5
++ Editors - In This Light and on This Evening: 5
++ EELS - The Cautionary Tales of Mark Oliver Everett: -1
++ Elf Power - Back to the Web: 11
++ The Faint - Fasciinatiion: 5
++ Fleet Foxes - Fleet Foxes: -5
++ Foals - Antidotes: -6
++ Franz Ferdinand - Darts of Pleasure: 1
++ Frightened Rabbit - It's Christmas So We'll Stop: -3
++ Frightened Rabbit - Sing the Greys: -1
++ Frightened Rabbit - The Midnight Organ Fight: -1
++ Fugazi - Repeater: 10
++ Fugazi - Stage Dive Masters: 4
++ Ghinzu - Blow: -1
++ Glass Waves - One Day We Will All Float Away: 9
++ Godspeed You! Black Emperor - F♯ A♯ ∞: -3
++ Grandaddy - Sumday: -9
++ Adam Green - Garfield: 9
++ Handsome Furs - Face Control: 1
++ Hot Hot Heat - Elevator: 1
++ Iron & Wine - The Sea & the Rhythm: 4
++ Iron Maiden - Eddie’s Archive: 28
++ Iron Maiden - Edward the Great: 1
++ Iron Maiden - Rock in Rio: 1
++ Kaiser Chiefs - Employment: -7
++ Kings of Leon - Holy Roller Novocaine: 3
++ The Maccabees - Wall of Arms: 9
++ Metric - Synthetica: 1
++ Midlake - The Courage of Others: -1
++ Miossec - 1964: 1
++ Moby - Rare: The Collected B-Sides: 1989-1993: 5
++ Modest Mouse - Building Nothing out of Something: 4
++ Modest Mouse - Everywhere and His Nasty Parlour Tricks: 1
++ Modest Mouse - Good News For People Who Love Bad News: 3
++ Modest Mouse - Sad Sappy Sucker: 1
++ Modest Mouse - The Fruit That Ate Itself: 1
++ Modest Mouse - The Lonesome Crowded West: 1
++ Modest Mouse - The Moon & Antarctica: 3
++ Modest Mouse - This Is a Long Drive for Someone With Nothing to Think About: 3
++ Modest Mouse - We Were Dead Before the Ship Even Sank: 2
++ Nirvana - All Apologies: 2
++ Noir Désir - En route pour la joie: -11
++ OutKast - Aquemini: 4
++ OutKast - Southernplayalisticadillacmuzik: 5
++ The Phenomenal Handclap Band - The Phenomenal Handclap Band: 11
++ Pink Floyd - The Piper at the Gates of Dawn: -11
++ Pink Floyd - Ummagumma: 4
++ Pixies - Death to the Pixies: -21
++ Pulp - This Is Hardcore: 11
++ Queen - Live Killers: 9
++ Queen - Rock Montreal: 13
++ Lou Reed - Berlin: 1
++ Damien Rice - 9: 9
++ Rilo Kiley - Rilo Kiley: -9
++ Rise Against - Appeal to Reason: -1
++ Rise Against - The Sufferer & the Witness: -1
++ Rise Against - The Unraveling: -16
++ Rise Against - This Is Noise: -7
++ Sigur Rós - Von: 1
++ Sky Larkin - Fossil, I: 1
++ Slint - Spiderland: 1
++ The Smashing Pumpkins - Machina II/The Friends & Enemies of Modern Music: 1
++ Sonic Youth - A Thousand Leaves: 1
++ Sonic Youth - Screaming Fields of Sonic Love: 3
++ Sonic Youth - Sister: 1
++ Britney Spears - In the Zone: 6
++ Regina Spektor - What We Saw From the Cheap Seats: -1
++ Stars - Set Yourself on Fire: 12
++ Sufjan Stevens - Illinois: 1
++ Sun Kil Moon - Benji: -5
++ Swell - Room to Think: 4
++ Tegan and Sara - Bridge School Benefit: 6
++ Tegan and Sara - So Jealous: -1
++ Terranova - Peace Is Tough: -1
++ Le Tigre - This Island Remixes: 1
++ Tricky - Knowle West Boy: 1
++ Tricky with DJ Muggs & Damon "Grease" Blackman - Juxtapose: -2
++ TV on the Radio - OK Calculator: 1
++ Usher - Confessions: 16
++ Various Artists - Arts & Crafts: Adventures in Advertising: 11
++ The Velvet Teen - Out of the Fierce Parade: 14
++ Rufus Wainwright - Want: 26
++ We Are Scientists - Barbara: 1
++ Wilco - Summerteeth: 1
++ Yo La Tengo - Nuclear War: 3
++ Yo La Tengo - Prisoners of Love: A Smattering of Scintillating Senescent Songs 1985-2003: 14
+* Ogg
++ Amanda Palmer - Amanda Palmer Goes Down Under
++ Amanda Palmer & The Grand Theft Orchestra - Theatre Is Evil
++ Antonín Dvořák - Symphonie No. 9 "Du Nouveau Monde" (Orchestre Symphonique de Radio Télé Luxembourg feat. conductor: Rudolf Albert)
++ Antony and the Johnsons - I Am a Bird Now
++ Arcade Fire - Funeral
++ Arcade Fire - Neon Bible
++ Arctic Monkeys - Favourite Worst Nightmare
++ Arctic Monkeys - Whatever People Say I Am, That’s What I’m Not
++ Basehead - Not in Kansas Anymore
++ Beastie Boys - Ill Communication
++ Beastie Boys - Licensed to Ill
++ Beastie Boys - Paul’s Boutique
++ Belle and Sebastian - Belle and Sebastian Write About Love
++ Belle and Sebastian - Dear Catastrophe Waitress
++ Belle and Sebastian - If You’re Feeling Sinister
++ Belle and Sebastian - Storytelling
++ Belle and Sebastian - Tigermilk
++ Ben Harper & The Innocent Criminals - Burn to Shine
++ Ben Harper - Welcome to the Cruel World
++ Björk - Debut
++ Björk - Selmasongs
++ Blackalicious - NIA
++ Bloc Party - Intimacy
++ Bloc Party - Silent Alarm
++ Blonde Redhead - 23
++ Blonde Redhead - Fake Can Be Just as Good
++ Blonde Redhead - In an Expression of the Inexpressible
++ Blonde Redhead - La mia vita violenta
++ Bon Iver - Bon Iver, Bon Iver
++ Bran Van 3000 - Discosis
++ Bran Van 3000 - Glee
++ Bright Eyes - Cassadaga
++ Bright Eyes - Digital Ash in a Digital Urn
++ Bright Eyes - Fevers and Mirrors
++ Bright Eyes - Letting Off the Happiness
++ Bright Eyes - Motion Sickness: Live Recordings
++ Bright Eyes - The People’s Key
++ Built to Spill - Ancient Melodies of the Future
++ Built to Spill - The Normal Years
++ Built to Spill - Ultimate Alternative Wavers
++ Built to Spill - You in Reverse
++ Bush - Deconstructed
++ Cat Power - The Greatest
++ Clinic - Internal Wrangler
++ CocoRosie - La maison de mon rêve
++ CocoRosie - Noah’s Ark
++ Craig Armstrong - As If to Nothing
++ Craig Armstrong - The Space Between Us
++ Cursive - Happy Hollow
++ Cursive - The Ugly Organ
++ Dave Matthews Band - Before These Crowded Streets
++ Day One - Ordinary Man
++ Dead Can Dance - The Serpent’s Egg
++ Death Cab for Cutie - Something About Airplanes
++ Death Cab for Cutie - The Photo Album
++ Death From Above 1979 - You’re a Woman, I’m a Machine
++ Deep Purple - Deep Purple in Rock
++ Desaparecidos - Read Music/Speak Spanish
++ Diabologum - #3 (Ce n'est pas perdu pour tout le monde...)
++ Dinosaur Jr. - Farm
++ Dinosaur Jr. - Take a Run at the Sun
++ DJ Krush - Kakusei
++ DJ Krush - Zen
++ DJ Shadow - Endtroducing.....
++ DJ Shadow - The Private Press
++ Earthling - Radar
++ Editors - In This Light and on This Evening
++ Electric Six - Fire
++ Fishbone - The Reality of My Surroundings
++ Fleet Foxes - Fleet Foxes
++ Fleet Foxes - Helplessness Blues
++ Foals - Antidotes
++ Foals - Total Life Forever
++ Goldfrapp - Black Cherry
++ Goldfrapp - Felt Mountain
++ Gossip - Standing in the Way of Control
++ Grandaddy - Just Like the Fambly Cat
++ Grandaddy - Sumday
++ Grandaddy - The Sophtware Slump
++ Grinderman - Grinderman 2
++ GusGus - This Is Normal
++ Interpol - Antics
++ Interpol - Interpol
++ Interpol - Turn On the Bright Lights
++ Iron & Wine - Kiss Each Other Clean
++ Iron & Wine - Our Endless Numbered Days
++ Iron & Wine - The Creek Drank the Cradle
++ Jack the Ripper - Ladies First
++ James - Laid
++ James - Millionaires
++ James - Whiplash
++ Jeff Buckley - Grace
++ Johnny Cash - Hymns by Johnny Cash
++ Johnny Cash - Orange Blossom Special
++ Johnny Cash - Ride This Train
++ Johnny Cash - The Fabulous Johnny Cash
++ Joseph Arthur - Our Shadows Will Remain
++ Kings of Convenience - Quiet Is the New Loud
++ Kings of Convenience - Riot on an Empty Street
++ LCD Soundsystem - Sound of Silver
++ Les Négresses Vertes - Mlah
++ Liz Phair - Exile in Guyville
++ Lords of Acid - Greatest T*ts
++ Louise Attaque - Louise attaque
++ Mano Negra - King of Bongo
++ Mano Negra - Puta's Fever
++ Massive Attack - 100th Window
++ Massive Attack - Blue Lines
++ Massive Attack - Mezzanine
++ Massive Attack - Protection
++ Merz - Loveheart
++ Merz - Merz
++ Merz - Moi et mon camion
++ Metric - Live It Out
++ MGMT - Oracular Spectacular
++ Midlake - The Courage of Others
++ Miles Davis - Ascenseur pour l'échafaud
++ Moby - Play
++ Modest Mouse - Everywhere and His Nasty Parlour Tricks
++ Modest Mouse - The Lonesome Crowded West
++ Modest Mouse - The Moon & Antarctica
++ Modest Mouse - We Were Dead Before the Ship Even Sank
++ Moloko - Do You Like My Tight Sweater?
++ Moloko - I Am Not a Doctor
++ Moloko - Statues
++ Moloko - Things to Make and Do
++ Morcheeba - Big Calm
++ Morcheeba - Charango
++ Morrissey - Viva Hate
++ Morrissey - You Are the Quarry
++ My Life Story - Mornington Crescent
++ Neutral Milk Hotel - In the Aeroplane Over the Sea
++ Nick Cave & The Bad Seeds - Henry’s Dream
++ Nick Cave & The Bad Seeds - Live Seeds
++ Nick Cave & The Bad Seeds - Murder Ballads
++ Nick Cave & The Bad Seeds - Nocturama
++ Nick Cave & The Bad Seeds - No More Shall We Part
++ Nick Cave & The Bad Seeds - The Boatman’s Call
++ Nirvana - Nevermind
++ Noir Désir - Du ciment sous les plaines
++ Ozark Henry - This Last Warm Solitude
++ Pavement - Crooked Rain, Crooked Rain: L.A.’s Desert Origins
++ Pegboy - Strong Reaction / Three-Chord Monte
++ Pixies - Death to the Pixies
++ Placebo - Black Market Music
++ Placebo - Placebo
++ Placebo - Sleeping With Ghosts
++ Placebo - Without You I’m Nothing
++ Portishead - Dummy
++ Radiohead - Amnesiac
++ Radiohead - Kid A
++ Radiohead - OK Computer
++ Radiohead - Pablo Honey
++ Radiohead - The Bends
++ Rage Against the Machine - Evil Empire
++ Rage Against the Machine - Rage Against the Machine
++ Red Hot Chili Peppers - Mother’s Milk
++ Rufus Wainwright - Want
++ Rufus Wainwright - Want One
++ Rufus Wainwright - Want Two
++ RZA - Ghost Dog: The Way of the Samurai
++ Sebadoh - Bakesale
++ Sebadoh - The Sebadoh
++ Sigur Rós - Ágætis byrjun
++ Sigur Rós - Með suð í eyrum við spilum endalaust
++ Sonic Youth - Daydream Nation
++ Sonic Youth - Rather Ripped
++ Sonic Youth - Screaming Fields of Sonic Love
++ Sonic Youth - Washing Machine
++ Soul Coughing - Ruby Vroom
++ Soundgarden - Badmotorfinger
++ Sporto Kantès - Act. 1
++ St. Germain - Tourist
++ Sufjan Stevens - Illinois
++ Sufjan Stevens - Michigan
++ Sugar - File Under: Easy Listening
++ Swell - 41
++ Terranova - Peace Is Tough
++ The Auteurs - After Murder Park
++ The Boo Radleys - Kingsize
++ The Boo Radleys - Wake Up!
++ The Coral - Magic and Medicine
++ The Coral - Nightfreak and the Sons of Becker
++ The Coral - The Coral
++ The Cure - Greatest Hits
++ The Decemberists - Picaresque
++ The Divine Comedy - Absent Friends
++ The Divine Comedy - A Short Album About Love
++ The Divine Comedy - Bang Goes the Knighthood
++ The Divine Comedy - Casanova
++ The Divine Comedy - Liberation
++ The Divine Comedy - Promenade
++ The Divine Comedy - Regeneration
++ The Doors - L.A. Woman
++ The Faint - Media
++ The Jon Spencer Blues Explosion - Plastic Fang
++ The Killers - Hot Fuss
++ The Killers - Sam’s Town
++ The Last Shadow Puppets - The Age of the Understatement
++ The National - Alligator
++ The National - Boxer
++ The National - High Violet
++ The Notwist - Neon Golden
++ The Prodigy - The Fat of the Land
++ The Shins - Oh, Inverted World
++ The Smiths - Best... I
++ The Smiths - ...Best II
++ The Smiths - Hatful of Hollow
++ The Smiths - Louder Than Bombs
++ The Smiths - Meat Is Murder
++ The Smiths - “Rank”
++ The Smiths - Strangeways, Here We Come
++ The Smiths - The Queen Is Dead
++ The Smiths - The Smiths
++ The Smiths - The World Won’t Listen
++ The Standard - Albatross
++ The Standard - Wire Post to Wire
++ The Streets - Original Pirate Material
++ The Velvet Underground - The Velvet Underground & Nico
++ The Velvet Underground - White Light/White Heat
++ The Vines - Highly Evolved
++ The xx - xx
++ Thom Yorke - The Eraser
++ Tilly and the Wall - Bottoms of Barrels
++ Tindersticks - Can Our Love…
++ Tindersticks - Curtains
++ Tindersticks - Don't Even Go There
++ Tindersticks - Tindersticks [II]
++ Tindersticks - Trouble Every Day
++ Tindersticks - Waiting for the Moon
++ Tricky - Blowback
++ Tricky - Maxinquaye
++ Tricky - Vulnerable
++ Tricky with DJ Muggs & Damon "Grease" Blackman - Juxtapose
++ TV on the Radio - Dear Science
++ TV on the Radio - Desperate Youth, Blood Thirsty Babes
++ Various Artists - Jackie Brown
++ Various Artists - Turntables on the Hudson, Volume 1
++ We Are Scientists - With Love and Squalor
++ Yeah Yeah Yeahs - Fever to Tell
++ Yeah Yeah Yeahs - Show Your Bones
++ Yo La Tengo - Prisoners of Love
++ Yo La Tengo - Prisoners of Love: A Smattering of Scintillating Senescent Songs 1985-2003
+
+* Import Fail
+** Asis
++ /srv/multimedia/musique/cage the elephant/[Alt. Rock] Cage the Elephant  2007-2013 (By Jamal The Moroccan)/Covers/Cage the Elephant - All Apologies [Nirvana cover].mp3
++ /srv/multimedia/musique/cage the elephant/[Alt. Rock] Cage the Elephant  2007-2013 (By Jamal The Moroccan)/Covers/Cage The Elephant - Doctor Doctor Doctor Help Me  Help Me Help Me [live].mp3
++ /srv/multimedia/musique/cage the elephant/[Alt. Rock] Cage the Elephant  2007-2013 (By Jamal The Moroccan)/Covers/Cage the Elephant - Psycho Killer [Talking Heads Cover].mp3
++ /srv/multimedia/musique/cage the elephant/[Alt. Rock] Cage the Elephant  2007-2013 (By Jamal The Moroccan)/Covers/Rolling In The Deep [Adele Cover].mp3
++ /srv/multimedia/musique/cage the elephant/[Alt. Rock] Cage the Elephant  2007-2013 (By Jamal The Moroccan)/Live/2010 -  Live at Grimey's
++ /srv/multimedia/musique/JJ72/OTHER SONGS/Someday (Acoustic).mp3
++ /srv/multimedia/musique/queen/-- Live Albums --/(1979) Live Killers/CD 2
+** Duplicate-keep
++ /srv/multimedia/musique/Amanda_Palmer/Amanda Palmer Goes Down Under
++ /srv/multimedia/musique/Amanda_Palmer/Amanda Palmer - Theatre Is Evil (2012) [Mp3][www.lokotorrents.com]
++ /srv/multimedia/musique/antony_and_the_johnsons/antony_and_the_johnsons
++ /srv/multimedia/musique/Basehead/Not_In_Kansas_Anymore
++ /srv/multimedia/musique/BEETS/Cursive/Happy Hollow
++ /srv/multimedia/musique/BEETS/Dinosaur Jr_/Beyond
++ /srv/multimedia/musique/BEETS/Dinosaur Jr_/Bug
++ /srv/multimedia/musique/BEETS/Dinosaur Jr_/Dinosaur
++ /srv/multimedia/musique/BEETS/Dinosaur Jr_/Farm
++ /srv/multimedia/musique/BEETS/Dinosaur Jr_/Fossils 37
++ /srv/multimedia/musique/BEETS/Dinosaur Jr_/Green Mind
++ /srv/multimedia/musique/BEETS/Dinosaur Jr_/Hand It Over
++ /srv/multimedia/musique/BEETS/Dinosaur Jr_/I Bet on Sky
++ /srv/multimedia/musique/BEETS/Dinosaur Jr_/In Session 48
++ /srv/multimedia/musique/BEETS/Dinosaur Jr_/Take a Run at the Sun 39
++ /srv/multimedia/musique/BEETS/Dinosaur Jr_/Whatever’s Cool With Me
++ /srv/multimedia/musique/BEETS/Dinosaur Jr_/Where You Been 50
++ /srv/multimedia/musique/BEETS/Dinosaur Jr_/Without a Sound
++ /srv/multimedia/musique/BEETS/Dinosaur Jr_/You’re Living All Over Me
++ /srv/multimedia/musique/BEETS/Dinosaur Jr_/You’re Living All Over Me 40
++ /srv/multimedia/musique/BEETS/Dinosaur Jr_/You’re Living All Over Me 52
++ /srv/multimedia/musique/BEETS/Dinosaur Jr_/You’re Living All Over Me 55
++ /srv/multimedia/musique/BEETS/Dinosaur Jr_/You’re Living All Over Me 56
++ /srv/multimedia/musique/BEETS/PJ Harvey & John Parish/A Woman a Man Walked By [1796236]
++ /srv/multimedia/musique/BEETS/PJ Harvey & John Parish/A Woman a Man Walked By [2700699]
++ /srv/multimedia/musique/BEETS/PJ Harvey/Rid of Me
++ /srv/multimedia/musique/BEETS/PJ Harvey/Rid of Me 47
++ /srv/multimedia/musique/BEETS/PJ Harvey/Rid of Me 6
++ /srv/multimedia/musique/BEETS/PJ Harvey/Rid of Me 7
++ /srv/multimedia/musique/BEETS/PJ Harvey/Stories From the City, Stories From the Sea [314-548-144-2]
++ /srv/multimedia/musique/BEETS/PJ Harvey/Stories From the City, Stories From the Sea [548 144-2]
++ /srv/multimedia/musique/BEETS/PJ Harvey/The Hope Six Demolition Project
++ /srv/multimedia/musique/BEETS/PJ Harvey/To Bring You My Love []
++ /srv/multimedia/musique/BEETS/PJ Harvey/To Bring You My Love [Island]
++ /srv/multimedia/musique/BEETS/PJ Harvey/Uh Huh Her 50
++ /srv/multimedia/musique/BEETS/Pretty Girls Make Graves/Good Health [2002]
++ /srv/multimedia/musique/Big Black/Live Albums/[1987] Sound of Impact
++ /srv/multimedia/musique/Björk/Selmasongs 103
++ /srv/multimedia/musique/Björk/Vespertine
++ /srv/multimedia/musique/bloc_party/a_weekend_in_the_city
++ /srv/multimedia/musique/bloc_party/silent_alarm
++ /srv/multimedia/musique/Blonde_Redhead/In_an_Expression_of_the_Inexpressible
++ /srv/multimedia/musique/bombay bicycle club/A Different Kind Of Fix
++ /srv/multimedia/musique/bright_eyes/lifted_or_the_story_is_in_the_soil_keep_your_ear_to_the_ground
++ /srv/multimedia/musique/Buffy The Vampire Slayer/Once More, With Feeling
++ /srv/multimedia/musique/Built to Spill/You In Reverse
++ /srv/multimedia/musique/Cake/Prolonging The Magic
++ /srv/multimedia/musique/Clinic/Do It! 187
++ /srv/multimedia/musique/Cursive/Domestica
++ /srv/multimedia/musique/Cursive/Domestica 205
++ /srv/multimedia/musique/Cursive/Happy Hollow
++ /srv/multimedia/musique/Cursive/Happy Hollow 206
++ /srv/multimedia/musique/cursive/semantics_of_song
++ /srv/multimedia/musique/Cursive/Such Blinding Stars For Starving Eyes
++ /srv/multimedia/musique/Cursive/Such Blinding Stars for Starving Eyes 209
++ /srv/multimedia/musique/Cursive/The Difference Between Houses and Homes (Lost Songs and Loose Ends 1995-2001)
++ /srv/multimedia/musique/Cursive/The Difference Between Houses and Homes (Lost Songs and Loose Ends 1995-2001) 210
++ /srv/multimedia/musique/Cursive/The Storms of Early Summer_ Semantics of Song 202
++ /srv/multimedia/musique/Cursive/The Ugly Organ 212
++ /srv/multimedia/musique/Death_Cab_for_Cutie/Something_About_Airplanes
++ /srv/multimedia/musique/death_cab_for_cutie/stability
++ /srv/multimedia/musique/devendra_banhart/cripple_crow
++ /srv/multimedia/musique/devendra_banhart/golden_apples_of_the_sun
++ /srv/multimedia/musique/Diabologum/_3__Ce_n_est_pas_perdu_pour_tout_le_monde_
++ /srv/multimedia/musique/Dinosaur Jr_/Fossils 264
++ /srv/multimedia/musique/Dinosaur_Jr./Hand_It_Over
++ /srv/multimedia/musique/Dinosaur_Jr./In_Session
++ /srv/multimedia/musique/Dinosaur Jr_/Take a Run at the Sun 268
++ /srv/multimedia/musique/Dinosaur_Jr./Where_You_Been_
++ /srv/multimedia/musique/Dinosaur_Jr./You_re_Living_All_Over_Me
++ /srv/multimedia/musique/DJ_Shadow/The_Private_Press
++ /srv/multimedia/musique/EELS/The_Cautionary_tales_of_Mark_Oliver_Everett
++ /srv/multimedia/musique/Emily Haines/Cut In Half And Double
++ /srv/multimedia/musique/Fleet Foxes/Fleet Foxes (bonus disc)
++ /srv/multimedia/musique/Foals/Antidotes (Bonus CD)
++ /srv/multimedia/musique/Foals/Total Life Forever (bonus disc)
++ /srv/multimedia/musique/Frightened Rabbit/It's Christmas So We'll Stop. (CDS)
++ /srv/multimedia/musique/Frightened Rabbit/Sing the Greys
++ /srv/multimedia/musique/Frightened Rabbit/The Midnight Organ Fight
++ /srv/multimedia/musique/Ghinzu/Blow
++ /srv/multimedia/musique/godspeed you black emperor/[1997] F♯A♯∞/Vinyl Release
++ /srv/multimedia/musique/Grandaddy/Just Like the Fambly Cat 368
++ /srv/multimedia/musique/Grandaddy/Sumday 372
++ /srv/multimedia/musique/Grandaddy/Sumday__bonus_disc_
++ /srv/multimedia/musique/Grandaddy/The_Sophtware_Slump
++ /srv/multimedia/musique/Grandaddy/Under The Western Freeway
++ /srv/multimedia/musique/Interpol/Our Love to Admire 397
++ /srv/multimedia/musique/Iron Maiden/Ed Hunter 423
++ /srv/multimedia/musique/iron maiden/Iron Maiden Discography/2002 - eddies archive/2002 - Best of the B'sides/CD1; /srv/multimedia/musique/iron maiden/Iron Maiden Discography/2002 - eddies archive/2002 - Best of the B'sides/CD2
++ /srv/multimedia/musique/Jeff Buckley/Grace Legacy Edition CD1
++ /srv/multimedia/musique/Jeff Buckley/Grace (Legacy Edition) CD 2
++ /srv/multimedia/musique/Jimi Hendrix/Volume 1
++ /srv/multimedia/musique/JJ72/OTHER SONGS/Coming Home.mp3
++ /srv/multimedia/musique/JJ72/OTHER SONGS/October Swimmer (Acoustic).mp3
++ /srv/multimedia/musique/Joe Strummer & The Mescaleros/Global a Go-Go 462
++ /srv/multimedia/musique/Johnny Cash/Hymns By Johnny Cash (Extended Edition)
++ /srv/multimedia/musique/Johnny Cash/Ride This Train
++ /srv/multimedia/musique/Kaiser Chiefs/Employment (Bonus CD)
++ /srv/multimedia/musique/Kate Bush/(1990) - This Woman's Work, Vol. 2
++ /srv/multimedia/musique/Kings of Leon/Kings of Leon
++ /srv/multimedia/musique/Kings of Leon/Youth and Young Manhood Adv.
++ /srv/multimedia/musique/Le Tigre/Le Tigre
++ /srv/multimedia/musique/liz_phair/whip_smart
++ /srv/multimedia/musique/Massive_Attack/Protection
++ /srv/multimedia/musique/Merz/loveheart
++ /srv/multimedia/musique/Midlake/The Courage of Others
++ /srv/multimedia/musique/Moby/Ambient
++ /srv/multimedia/musique/moby/go_mix
++ /srv/multimedia/musique/Moloko/All Back to the Mine 587
++ /srv/multimedia/musique/My_Bloody_Valentine/Loveless
++ /srv/multimedia/musique/nick_cave_and_the_bad_seeds/abattoir_blues
++ /srv/multimedia/musique/Nick Cave and the Bad Seeds/Live Seeds
++ /srv/multimedia/musique/Nick Cave and the Bad Seeds/Murder Ballads
++ /srv/multimedia/musique/nick_cave_and_the_bad_seeds/the_lyre_of_orpheus
++ /srv/multimedia/musique/Noir Désir/En route pour la joie
++ /srv/multimedia/musique/outkast/the_love_below
++ /srv/multimedia/musique/Pavement/Brighten the Corners
++ /srv/multimedia/musique/Pavement/Slanted and Enchanted
++ /srv/multimedia/musique/Pink Floyd - Discography [EAC - FLAC] (oan)/Pink Floyd - The Piper At The Gates Of Dawn 40th [Disc 1] 2007 [EAC - FLAC] (oan); /srv/multimedia/musique/Pink Floyd - Discography [EAC - FLAC] (oan)/Pink Floyd - The Piper At The Gates Of Dawn 40th [Disc 2] 2007 [EAC - FLAC] (oan); /srv/multimedia/musique/Pink Floyd - Discography [EAC - FLAC] (oan)/Pink Floyd - The Piper At The Gates Of Dawn 40th [Disc 3] 2007 [EAC - FLAC] (oan)
++ /srv/multimedia/musique/Pixies/Death_to_the_Pixies__bonus_disc_
++ /srv/multimedia/musique/Pretty Girls Make Graves/Good Health
++ /srv/multimedia/musique/queen/live at the bowl/CD 2
++ /srv/multimedia/musique/queen/live at wembley '86/CD 2
++ /srv/multimedia/musique/QUEUE/Dinosaur Jr./Take a Run at the Sun
++ /srv/multimedia/musique/QUEUE/Violent Femmes/Violent Femmes
++ /srv/multimedia/musique/Regina Spektor/Regina Spektor - What We Saw From the Cheap Seats (2012)
++ /srv/multimedia/musique/rilo_kiley/intial_friend_second_pressing
++ /srv/multimedia/musique/rise against/2001 - Rise Against - The Unraveling (2005 Remaster)
++ /srv/multimedia/musique/rise against/2006 - Rise Against - The Sufferer and The Witness
++ /srv/multimedia/musique/rise against/2008 - Rise Against - Re-Education (Through Labor) Promo
++ /srv/multimedia/musique/rise against/2008 - Rise Against - This Is Noise
++ /srv/multimedia/musique/shout_out_louds/howl_howl_gaff_gaff
++ /srv/multimedia/musique/Soap&Skin/Lovetune for Vacuum 785
++ /srv/multimedia/musique/streamripper/incomplete/Beirut - Mimizan.aac
++ /srv/multimedia/musique/sun_kil_moon/Sun Kil Moon - Benji (Deluxe) (2014) [FLAC]/Disc 02
++ /srv/multimedia/musique/Tegan and Sara/It's Not Fun, Don't Do It 826
++ /srv/multimedia/musique/Tegan and Sara/So Jealous (Japan)
++ /srv/multimedia/musique/terranova/peace_is_tough
++ /srv/multimedia/musique/The Afghan Whigs/Now We Can Begin CD1
++ /srv/multimedia/musique/The_Boo_Radleys/Kingsize
++ /srv/multimedia/musique/The Clash/Sandinista! Disc 2
++ /srv/multimedia/musique/The Clash/The Vanilla Tapes
++ /srv/multimedia/musique/The_Divine_Comedy/A_Short_Album_About_Love
++ /srv/multimedia/musique/The Dø/A Mouthful 875
++ /srv/multimedia/musique/the_faint/danse_macabre
++ /srv/multimedia/musique/The Killers/Sam’s Town 892
++ /srv/multimedia/musique/The_Smiths/Best...I
++ /srv/multimedia/musique/The_Standard/Albatross
++ /srv/multimedia/musique/Tricky_with_DJ_Muggs_and_Grease; /srv/multimedia/musique/Tricky_with_DJ_Muggs_and_Grease/Juxtapose_-_CD2
++ /srv/multimedia/musique/we_are_scientists/crap_attack
+** Duplicate-replace
++ /media/freebox/Téléchargements/PJ Harvey (8 studio albums) [lossless]/(1993) PJ Harvey - Ride of Me [VinylRip 24-96]
++ /media/freebox/Téléchargements/PJ Harvey (8 studio albums) [lossless]/(1995) PJ Harvey - To Bring You My Love [VinylRip 24-96]
++ /media/freebox/Téléchargements/PJ Harvey (8 studio albums) [lossless]/(2000) PJ Harvey - Stories From the City, Stories From the Sea [VinylRip 24-96]
++ /media/freebox/Téléchargements/PJ Harvey (8 studio albums) [lossless]/(2004) PJ Harvey - Uh Huh Her
++ /media/freebox/Téléchargements/PJ Harvey (8 studio albums) [lossless]/(2007) PJ Harvey - White Chalk [VinylRip 24-96]
++ /srv/multimedia/musique/Arctic_Monkeys/AM
++ /srv/multimedia/musique/BEETS/Built to Spill/There Is No Enemy
++ /srv/multimedia/musique/BEETS/Dinosaur Jr_/Fossils
++ /srv/multimedia/musique/BEETS/PJ Harvey/Is This Desire_
++ /srv/multimedia/musique/BEETS/PJ Harvey/Let England Shake
++ /srv/multimedia/musique/BEETS/PJ Harvey/Rid of Me
++ /srv/multimedia/musique/Guns N’ Roses/Use Your Illusion I
++ /srv/multimedia/musique/Guns N’ Roses/Use Your Illusion II
++ /srv/multimedia/musique/Jonsì and Alex/Jonsi and Alex - Riceboy Sleeps (2009)
++ /srv/multimedia/musique/Jonsì/Jonsi - Go Do  -Advance
++ /srv/multimedia/musique/Mano Negra/Puta's Fever
++ /srv/multimedia/musique/QUEUE/Bon Iver/22, a Million
++ /srv/multimedia/musique/QUEUE/Built to Spill/Perfect From Now On
++ /srv/multimedia/musique/QUEUE/Dinosaur Jr./Dinosaur
++ /srv/multimedia/musique/QUEUE/Dinosaur Jr./Fossils
++ /srv/multimedia/musique/QUEUE/Dinosaur Jr./Give a Glimpse of What Yer Not
++ /srv/multimedia/musique/QUEUE/Dinosaur Jr./Green Mind
++ /srv/multimedia/musique/QUEUE/Dinosaur Jr./Hand It Over
++ /srv/multimedia/musique/QUEUE/Dinosaur Jr./In Session
++ /srv/multimedia/musique/QUEUE/Dinosaur Jr./Whatever’s Cool With Me
++ /srv/multimedia/musique/QUEUE/Dinosaur Jr./Where You Been
++ /srv/multimedia/musique/QUEUE/Dinosaur Jr./Without a Sound
++ /srv/multimedia/musique/QUEUE/Dinosaur Jr./You’re Living All Over Me
++ /srv/multimedia/musique/QUEUE/My Bloody Valentine/Loveless
+** Duplicate-skip
++ /media/freebox/Téléchargements/Kings of Leon - Studio Album Discography (2003 - 2013) mp3 Soup/2003 - Youth & Young Manhood
++ /media/freebox/Téléchargements/Kings of Leon - Studio Album Discography (2003 - 2013) mp3 Soup/2004 - Aha Shake Heartbreak
++ /media/freebox/Téléchargements/Kings of Leon - Studio Album Discography (2003 - 2013) mp3 Soup/2007 - Because of the Times
++ /media/freebox/Téléchargements/Kings of Leon - Studio Album Discography (2003 - 2013) mp3 Soup/2008 - Only by the Night
++ /media/freebox/Téléchargements/PJ Harvey (8 studio albums) [lossless]/(1993) PJ Harvey - Ride of Me [VinylRip 24-96]
++ /srv/multimedia/musique/antony_and_the_johnsons
++ /srv/multimedia/musique/BEETS/Dinosaur Jr_/Beyond
++ /srv/multimedia/musique/BEETS/Dinosaur Jr_/Bug
++ /srv/multimedia/musique/BEETS/Dinosaur Jr_/Dinosaur
++ /srv/multimedia/musique/BEETS/Dinosaur Jr_/Farm
++ /srv/multimedia/musique/BEETS/Dinosaur Jr_/You’re Living All Over Me 40
++ /srv/multimedia/musique/BEETS/PJ Harvey/Let England Shake
++ /srv/multimedia/musique/BEETS/PJ Harvey/The Hope Six Demolition Project
++ /srv/multimedia/musique/BEETS/Sebadoh/Rocking the Forest
++ /srv/multimedia/musique/BEETS/Wild Dawn/Pay Your Dues
++ /srv/multimedia/musique/cage the elephant/[Alt. Rock] Cage the Elephant  2007-2013 (By Jamal The Moroccan)/Covers/Greeze - Shake me Down [Cage The Elephant cover].mp3
++ /srv/multimedia/musique/cage the elephant/[Alt. Rock] Cage the Elephant  2007-2013 (By Jamal The Moroccan)/Covers/The Winter Brave - Cigarette Daydreams [Cage The Elephant cover].mp3
++ /srv/multimedia/musique/j_mascis_plus_the_fog/free_so_free
++ /srv/multimedia/musique/streamripper/incomplete/Handsome Furs - All We Want, Baby, Is Everything.mp3
++ /srv/multimedia/musique/streamripper/incomplete/Prodigy - Smack my Bitch Up.mp3
++ /srv/multimedia/musique/streamripper/incomplete/Sun Kil Moon - Trucker's Atlas.aac
++ /srv/multimedia/musique/streamripper/Iron And Wine
++ /srv/multimedia/musique/streamripper/Kaiser Chiefs
+** Skip
++ /media/freebox/Téléchargements/PJ Harvey (8 studio albums) [lossless]/(1993) PJ Harvey - Ride of Me [VinylRip 24-96]
++ /media/freebox/Téléchargements/PJ Harvey (8 studio albums) [lossless]/(1995) PJ Harvey - To Bring You My Love [VinylRip 24-96]
++ /media/freebox/Téléchargements/PJ Harvey (8 studio albums) [lossless]/(1998) PJ Harvey - Is This Desire [VinylRip 24-96]
++ /media/freebox/Téléchargements/PJ Harvey (8 studio albums) [lossless]/(2000) PJ Harvey - Stories From the City, Stories From the Sea [VinylRip 24-96]
++ /media/freebox/Téléchargements/SCHUBERT/Schubert - Symphonies nos. 3 & 8, Wanderer-Fantasie (Berezovskiy, Masur - NYP) [flac]/01-04 Symphony no. 3 in D major, D 200
++ /media/freebox/Téléchargements/SCHUBERT/Schubert - Symphonies nos. 3 & 8, Wanderer-Fantasie (Berezovskiy, Masur - NYP) [flac]/05 Fantasy in C major 'Wanderer-Fantasie', D 760
++ /srv/multimedia/musique/2 many DJ's/Inconnu
++ /srv/multimedia/musique/2 many DJ's/The Ultimate Hang The DJ Part
++ /srv/multimedia/musique/2 unlimited
++ /srv/multimedia/musique/an horse/An Horse - Rearrange Beds (2009) [VIPER666]
++ /srv/multimedia/musique/antony_and_the_johnsons
++ /srv/multimedia/musique/Artiste inconnu/Filastrocche, Canzoncine e ninne nanne
++ /srv/multimedia/musique/A Silver Mt. Zion/Born Into Trouble As The Sparks Fly Upwa
++ /srv/multimedia/musique/A Silver Mt. Zion/He Has Left Us Alone But Shafts Of Light
++ /srv/multimedia/musique/A Silver Mt. Zion/Horses In The Sky
++ /srv/multimedia/musique/A Silver Mt. Zion/Pretty Little Lightning Paw
++ /srv/multimedia/musique/A Silver Mt. Zion/This is Our Punk-rock
++ /srv/multimedia/musique/Big Black/Live Albums/[1987] Sound of Impact
++ /srv/multimedia/musique/bombay bicycle club/A Different Kind Of Fix
++ /srv/multimedia/musique/britney_spears/unknown
++ /srv/multimedia/musique/cage the elephant/[Alt. Rock] Cage the Elephant  2007-2013 (By Jamal The Moroccan)/Covers
++ /srv/multimedia/musique/cage the elephant/[Alt. Rock] Cage the Elephant  2007-2013 (By Jamal The Moroccan)/Live/2010 -  Live at Grimey's
++ /srv/multimedia/musique/DJ Casper/Album inconnu
++ /srv/multimedia/musique/Dvorak__Anton/Symphonie_N__9__Du_Nouveau_Monde_
++ /srv/multimedia/musique/Ella_Fitzgerald/Purely...
++ /srv/multimedia/musique/folk_implosion/kids_ost
++ /srv/multimedia/musique/franz_ferdinand/oldies
++ /srv/multimedia/musique/franz_ferdinand/oldies/better_on_holiday_bbc_air_in_scotland_session_9-8-03.mp3
++ /srv/multimedia/musique/iron maiden/Iron Maiden Discography/1986 - Somewhere In Time
++ /srv/multimedia/musique/iron maiden/Iron Maiden Discography/2002 - eddies archive/2002 - BBC Archives/CD1; /srv/multimedia/musique/iron maiden/Iron Maiden Discography/2002 - eddies archive/2002 - BBC Archives/CD2
++ /srv/multimedia/musique/iron maiden/Iron Maiden Discography/2002 - eddies archive/2002 -  Beast over Hammersmith/CD1; /srv/multimedia/musique/iron maiden/Iron Maiden Discography/2002 - eddies archive/2002 -  Beast over Hammersmith/CD2
++ /srv/multimedia/musique/iron maiden/Iron Maiden Discography/2002 - eddies archive/2002 - Best of the B'sides/CD1; /srv/multimedia/musique/iron maiden/Iron Maiden Discography/2002 - eddies archive/2002 - Best of the B'sides/CD2
++ /srv/multimedia/musique/JJ72/OTHER SONGS
++ /srv/multimedia/musique/Joseph_Arthur/Live at Cafe de la Danse - CD1; /srv/multimedia/musique/Joseph_Arthur/Live at Cafe de la Danse - CD2
++ /srv/multimedia/musique/joseph_arthur/live_new_morning
++ /srv/multimedia/musique/Kate Bush/(1990) - This Woman's Work, Vol. 1
++ /srv/multimedia/musique/Kate Bush/(1990) - This Woman's Work, Vol. 2
++ /srv/multimedia/musique/Kings of Leon/Kings of Leon EP
++ /srv/multimedia/musique/Kings of Leon/Youth and Young Manhood Adv.
++ /srv/multimedia/musique/lastfm
++ /srv/multimedia/musique/Le Tigre/2002-04-27 in Umeå
++ /srv/multimedia/musique/le tigre/2002 - Live at Sweden
++ /srv/multimedia/musique/martina_topleybird/quixotic
++ /srv/multimedia/musique/massive_attack/no_protection_massive_attack_vs_mad_professor
++ /srv/multimedia/musique/Moby/Ambient
++ /srv/multimedia/musique/moby/go_mix
++ /srv/multimedia/musique/moby/go_mix/go_mix-02-go__analog_mix_.mp3; /srv/multimedia/musique/moby/go_mix/go_mix-04-go__night_time_mix_.mp3; /srv/multimedia/musique/moby/go_mix/go_mix-05-go__original_mix_.mp3; /srv/multimedia/musique/moby/go_mix/go_mix-06-go__low_spirit_mix_.mp3; /srv/multimedia/musique/moby/go_mix/go_mix-07-go__rainforest_mix_.mp3; /srv/multimedia/musique/moby/go_mix/go_mix-09-go__voodoo_child_mix_.mp3; /srv/multimedia/musique/moby/go_mix/go_mix-10-go__barracuda_mix_.mp3; /srv/multimedia/musique/moby/go_mix/go_mix-11-go__arpathoski_mix_.mp3; /srv/multimedia/musique/moby/go_mix/go_mix-14-go__amphetamix_.mp3
++ /srv/multimedia/musique/moby/rare_b_sides
++ /srv/multimedia/musique/Nano/Accordéologie
++ /srv/multimedia/musique/outkast/southernplayalisticadillacmuzik
++ /srv/multimedia/musique/pj_harvey/Rock_en_seine_2003
++ /srv/multimedia/musique/P.J. Harvey/Rock En Seine 2003
++ /srv/multimedia/musique/queen/-- Compilations --/(1981) Greatest Hits
++ /srv/multimedia/musique/queen/-- Compilations --/(1989) At the Beeb
++ /srv/multimedia/musique/queen/-- Compilations --/(1991) Greatest Hits II
++ /srv/multimedia/musique/queen/-- Compilations --/(1997) Queen Rocks
++ /srv/multimedia/musique/queen/-- Compilations --/(1999) Greatest Hits III
++ /srv/multimedia/musique/queen/-- Live Albums --/(1979) Live Killers/CD 1
++ /srv/multimedia/musique/queen/-- Live Albums --/(1979) Live Killers/CD 2
++ /srv/multimedia/musique/queen/-- Live Albums --/(1986) Live Magic
++ /srv/multimedia/musique/queen/-- Live Albums --/(1992) Live at Wembley '86/CD 1
++ /srv/multimedia/musique/queen/-- Live Albums --/(1992) Live at Wembley '86/CD 2
++ /srv/multimedia/musique/queen/-- Live Albums --/(2004) Queen on Fire - Live at the Bowl/CD 1
++ /srv/multimedia/musique/queen/-- Live Albums --/(2004) Queen on Fire - Live at the Bowl/CD 2
++ /srv/multimedia/musique/queen/-- Live Albums --/(2007) Queen Rock Montreal/CD 1
++ /srv/multimedia/musique/queen/-- Live Albums --/(2007) Queen Rock Montreal/CD 2
++ /srv/multimedia/musique/queen/-- Live Albums --/live at the bowl/CD 2
++ /srv/multimedia/musique/queen/-- Live Albums --/live at wembley '86/CD 2
++ /srv/multimedia/musique/queen/-- Live Albums --/live magic
++ /srv/multimedia/musique/queen/-- Live Albums --/wueen rock montreal/CD 2
++ /srv/multimedia/musique/queen/live at wembley '86/CD 2
++ /srv/multimedia/musique/queen/queen rock montreal/CD 2
++ /srv/multimedia/musique/queen/-- Studio Albums --/(1973) Queen
++ /srv/multimedia/musique/queen/-- Studio Albums --/(1974-1) Queen II
++ /srv/multimedia/musique/queen/-- Studio Albums --/(1974-2) Sheer Heart Attack
++ /srv/multimedia/musique/queen/-- Studio Albums --/(1975) A Night at the Opera
++ /srv/multimedia/musique/queen/-- Studio Albums --/(1976) A Day at the Races
++ /srv/multimedia/musique/queen/-- Studio Albums --/(1977) News of the World
++ /srv/multimedia/musique/queen/-- Studio Albums --/(1978) Jazz
++ /srv/multimedia/musique/queen/-- Studio Albums --/(1980-1) The Game
++ /srv/multimedia/musique/queen/-- Studio Albums --/(1980-2) Flash Gordon
++ /srv/multimedia/musique/queen/-- Studio Albums --/(1982) Hot Space
++ /srv/multimedia/musique/queen/-- Studio Albums --/(1984) The Works
++ /srv/multimedia/musique/queen/-- Studio Albums --/(1986) A Kind of Magic
++ /srv/multimedia/musique/queen/-- Studio Albums --/(1989) The Miracle
++ /srv/multimedia/musique/queen/-- Studio Albums --/(1991) Innuendo
++ /srv/multimedia/musique/queen/-- Studio Albums --/(1995) Made in Heaven
++ /srv/multimedia/musique/QUEUE/Artiste inconnu/Titre inconnu
++ /srv/multimedia/musique/Radiohead/OK_Computer
++ /srv/multimedia/musique/rilo_kiley/the_execution_of_all_things
++ /srv/multimedia/musique/ripped
++ /srv/multimedia/musique/rise against/2008 - Rise Against - Re-Education (Through Labor) Promo
++ /srv/multimedia/musique/sansartiste/disque_inconnu
++ /srv/multimedia/musique/scan_problems
++ /srv/multimedia/musique/Sky Larkin/Album inconnu
++ /srv/multimedia/musique/streamripper/All Girl Summer Fun Band
++ /srv/multimedia/musique/streamripper/Delta Spirit
++ /srv/multimedia/musique/streamripper/Dios Malos
++ /srv/multimedia/musique/streamripper/Elf Power
++ /srv/multimedia/musique/streamripper/Glass Waves
++ /srv/multimedia/musique/streamripper/Goodbye Girl Friday
++ /srv/multimedia/musique/streamripper/Helene Renaut
++ /srv/multimedia/musique/streamripper/incomplete
++ /srv/multimedia/musique/streamripper/incomplete/ - .aac
++ /srv/multimedia/musique/streamripper/incomplete/ - .mp3
++ /srv/multimedia/musique/streamripper/Iron And Wine
++ /srv/multimedia/musique/streamripper/Kaiser Chiefs
++ /srv/multimedia/musique/streamripper/Misc-
++ /srv/multimedia/musique/streamripper/Phenomenal Handclap Band
++ /srv/multimedia/musique/streamripper/Stars
++ /srv/multimedia/musique/streamripper/Tiles, The
++ /srv/multimedia/musique/streamripper/Velvet Teen
++ /srv/multimedia/musique/streamripper/Yo La Tengo
++ /srv/multimedia/musique/the beach boys/Smiley Smile
++ /srv/multimedia/musique/The Clash/The Vanilla Tapes
++ /srv/multimedia/musique/The Doors/1967 - Strange Days
++ /srv/multimedia/musique/The Doors/1967 - The Doors
++ /srv/multimedia/musique/The Doors/1968 - Waiting For The Sun
++ /srv/multimedia/musique/The Doors/1969 - The Soft Parade
++ /srv/multimedia/musique/The Doors/1970 - Morrison Hotel
++ /srv/multimedia/musique/The Doors/1971 - Other Voices
++ /srv/multimedia/musique/The Doors/1972 - Full Circle
++ /srv/multimedia/musique/The Doors/1978 - An American Prayer
++ /srv/multimedia/musique/The Doors/an american prayer
++ /srv/multimedia/musique/The Doors/full circle
++ /srv/multimedia/musique/The Doors/morrison hotel
++ /srv/multimedia/musique/The Doors/strange days
++ /srv/multimedia/musique/The Doors/the doors
++ /srv/multimedia/musique/The Doors/the soft parade
++ /srv/multimedia/musique/The Doors/waiting for the sun
++ /srv/multimedia/musique/The Horrors/Shadazz _ Radiation
++ /srv/multimedia/musique/the joy formidable/The Joy Formidable - Wolf's Law [ChattChitto RG]/Wolf's Law
++ /srv/multimedia/musique/the maccabees/Wall Of Arms
++ /srv/multimedia/musique/These New Puritans/[unknown]
++ /srv/multimedia/musique/usher
++ /srv/multimedia/musique/various_artists
++ /srv/multimedia/musique/Various Artists/Shadazz _ Radiation
++ /srv/multimedia/musique/Wild_Dawn/Bloody_Jane_s_Shore
