@@ -102,13 +102,15 @@ alternatives:
     formats: mp3
     query: "sportplus:true"
     removable: true
-    
+  # albumxduoo32: xduoo32
+  # albumxduoo64: xduoo64
+  
 album_fields:
   albumformat: |
     formatList = set()
     for item in items:
       formatList.add(str(item.format))
-    formatList=str(list(formatList)).translate(None,' \'[]') #for python2
+    # formatList=str(list(formatList)).translate(None,' \'[]') #for python2
+    formatList=str(list(formatList)).translate({ord(c): None for c in ' \'[]'} ) #for python3
     return formatList
-  # albumxduoo32: xduoo32
-  # albumxduoo64: xduoo64
+
