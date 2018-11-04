@@ -1,12 +1,12 @@
 #!/bin/sh
 MUSICDIR="/srv/multimedia/musique/BEETS/"
 # fetch new art
-# beet fetchart
+# beet fetchart
 
 # resize covers
 # find "$MUSICDIR" -iname "cover.jpg" |
 # find . -type f -iname 'cover.jpg' -exec bash -c '
-find $MUSICDIR -type f -iname 'cover.*' -exec bash -c '
+find $MUSICDIR -type f -regex '.*cover.\(jpg\|png\)' -exec bash -c '
   for file do
     echo $file
     #EXTENSION="${file##*.}"
