@@ -1,9 +1,8 @@
 ;; ~/.emacs.d/JCmingus.el -*- mode: lisp-*-
 
-(add-to-list 'load-path "/home/wilk/.emacs.d/mingus/")
-
 (require 'mingus)
 (require 'mingus-stays-home)
+
 (autoload 'mingus "mingus-stays-home" t nil)
 
 (setq mingus-stream-alist
@@ -27,7 +26,40 @@
 	  ("mailhot" . "http://www.rtl.fr/podcast/a-la-bonne-heure-regis-mailhot.xml")))
   )
 
-
+(add-to-list 'global-mode-string mingus-mode-line-object t)
+(setq mingus-mode-line-string-max 100)
 ;; Raccourcis
 
 (global-set-key "\C-cq" 'mingus-query)
+(add-to-list 'helm-completing-read-handlers-alist '(mingus-query . nil))
+
+;; (require 'emms-mode-line-cycle)
+
+;; (emms-mode-line 1)
+;; (emms-playing-time 1)
+
+;; ;; If you use this package like `emms-mode-line-icon', you need to load it.
+;; (require 'emms-mode-line-icon)
+;; (setq emms-mode-line-cycle-use-icon-p t)
+
+;; (emms-mode-line-cycle 1)
+
+(setq mingus-mode-always-modeline nil
+      mingus-mode-line-show-status t
+      mingus-mode-line-show-volume nil
+      mingus-mode-line-show-elapsed-time nil
+      mingus-mode-line-show-consume-and-single-status nil)
+
+(defun jc-mingus-set-frame-title ()
+  (interactive)
+  (setq frame-title-format (mingus-make-mode-line-string))
+  (setq icon-title-format (mingus-make-mode-line-string))
+  )
+
+(run-with-timer 0 10 'jc-mingus-set-frame-title)
+
+(setq mingus-mode-line-separator
+        (if 'display-graphic-p
+             " 🎸 "
+          " + "))
+
