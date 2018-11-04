@@ -1,7 +1,7 @@
 #~/.config/beets/config.yaml
 directory: /var/lib/mpd/music/NAS/Synology/BEETS/
 # library: /var/lib/mpd/music/NAS/Synology/ADMINISTRATION/musiclibrary.blb
-library: /home/wilk/configuration/beets/musiclibrary.blb
+library: /home/wilk/beets-files/musiclibrary.blb
 
 ignore: .@eaDir BEETS .* *~
 
