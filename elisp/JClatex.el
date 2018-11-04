@@ -5,8 +5,8 @@
 ;; (add-to-list 'load-path "~/info/emacs/auctex/")
 ;; (add-to-list 'load-path "~/info/emacs/auctex/preview/")
 
-(require 'package)
-(package-initialize)
+;; (require 'package)
+;; (package-initialize)
 (customize-save-variable 'TeX-engine 'luatex)
 (require 'tex)
 
