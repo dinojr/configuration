@@ -87,6 +87,7 @@ ignore = Path wilk/texmf/tex/latex/mpsi
 ignore = Path wilk/email/Maildir
 ignore = Name {.git}
 ignorenot = Path wilk/vuibert/vuibert-sup/.git
+ignorenot = Path wilk/enseignement/2018-2019/CCAO/.git
 ignore = Path wilk/News/namazu
 ignore = Path wilk/Mail/junk
 ignore = Name {.notmuch}
