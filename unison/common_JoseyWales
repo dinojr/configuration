@@ -115,7 +115,7 @@ ignore = Name {mycor}{,.}*
 ignore = Name {.saves}{,.}*
 ignore = Name {session}{,.}*
 ignore = Name {S.gpg-agent}
-
+ignore = Name image-dired
 ## Miscellaneous options
 
 auto =true
