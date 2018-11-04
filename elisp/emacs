@@ -121,7 +121,7 @@
 (load "JCbrowser.el")
 (load "JCbbdb.el")
 ;; (load "JCnamazu.el")
-;; (load "JCmingus.el")
+(load "JCmingus.el")
 ;; (load "JCworkgroup.el")
 ;; (load "JCworkgroups2.el")
 (load "JCdesktop")
@@ -130,14 +130,12 @@
 (load "JCcalfw.el")
 (load "JCcalc.el")
 (load "JCace-link.el")
-(load "JCemms.el")
+;; (load "JCemms.el")
 (load "JCavy.el")
 (load "JCpython.el")
-(load "JClilypond.el")
+;; (load "JClilypond.el")
 (load "JCunison.el")
 (load "JCeshell.el")
-(load "JCminions-moody.el")
-
 ;; (load "JCasymptote.el")
 
 
