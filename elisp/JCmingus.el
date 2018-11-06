@@ -56,7 +56,7 @@
   (setq icon-title-format (mingus-make-mode-line-string))
   )
 
-(run-with-timer 0 10 'jc-mingus-set-frame-title)
+(add-hook 'mingus-playlist-hooks '(lambda () run-with-timer 0 10 'jc-mingus-set-frame-title))
 
 (setq mingus-mode-line-separator
         (if 'display-graphic-p
