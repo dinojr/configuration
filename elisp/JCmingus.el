@@ -31,7 +31,7 @@
 ;; Raccourcis
 
 (global-set-key "\C-cq" 'mingus-query)
-(add-to-list 'helm-completing-read-handlers-alist '(mingus-query . nil))
+(eval-after-load 'helm '(add-to-list 'helm-completing-read-handlers-alist '(mingus-query . nil)))
 
 ;; (require 'emms-mode-line-cycle)
 
