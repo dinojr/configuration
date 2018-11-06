@@ -48,10 +48,10 @@
       mingus-mode-line-show-status t
       mingus-mode-line-show-volume nil
       mingus-mode-line-show-elapsed-time nil
+      mingus-mode-line-show-random-and-repeat-status t
       mingus-mode-line-show-consume-and-single-status nil)
 
 (defun jc-mingus-set-frame-title ()
-  (interactive)
   (setq frame-title-format (mingus-make-mode-line-string))
   (setq icon-title-format (mingus-make-mode-line-string))
   )
