@@ -18,6 +18,8 @@
 (setq aw-keys '(?q ?s ?d ?f ?g ?h ?j ?k ?l))
 (setq aw-dispatch-always t)
 
+(eyebrowse-mode t)
+
  (defun jc-run-command-other-frame (command)
    "Run COMMAND in a new frame."
    (interactive "CC-x 5 M-x ")
