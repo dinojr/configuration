@@ -31,6 +31,4 @@
     (jc-do-package-management t)
     ))
 
-(add-hook 'server-after-make-frame-hook 'jc-ask-package-management)
-
 ;; emacsclient -c -F '((minibuffer . only)(name . "Packages")(height . 2))' -e '(jc-ask-package-management)'
