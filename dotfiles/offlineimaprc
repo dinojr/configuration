@@ -8,7 +8,7 @@ pythonfile = ~/.offlineimap.py
 [Account FreeOffline]
 localrepository = FreeLocal
 remoterepository = FreeRemote
-autorefresh = 1
+autorefresh = 3
 quick = 10
 synclabels = yes
 #maxage = 365
@@ -34,8 +34,8 @@ sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 [Account GmailOffline]
 localrepository = GmailLocal
 remoterepository = GmailRemote
-autorefresh = 1
-quit = 10
+autorefresh =3
+quick = 10
 synclabels = yes
 #maxage = 365
 postsynchook = /home/wilk/configuration/dotfiles/post-sync-hook.sh
