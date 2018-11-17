@@ -66,29 +66,9 @@
 ;; Customize end
 ;;--------------------
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Packages ;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/configuration/elisp/")
-(require 'package)
-(load "JCparadox.el") ;;setting of paradox-github-token
-(setq package-archives '(("ELPA" . "http://tromey.com/elpa/")
-			 ("melpa" . "https://melpa.org/packages/")
-			 ("gnu" . "http://elpa.gnu.org/packages/")
-			 ("org" . "http://orgmode.org/elpa/")
-			 ;; ("marmalade" . "https://marmalade-repo.org/packages/")
-			  ;; ("sunrise" . "http://joseito.republika.pl/sunrise-commander/")
-			 ))
-(package-initialize)
 
-
-(byte-recompile-directory (expand-file-name "~/.emacs.d/elpa/"))
-(byte-recompile-directory (expand-file-name "~/git-repositories/"))
-
-
-
-;; Packages end ;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
+(load "JCpackages.el")
 (load "JCgpg.el")
 (load "JCkeychain.el")
 (load "general_stuff.el")
