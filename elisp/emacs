@@ -52,7 +52,7 @@
    '(:foreground default :background default :scale 2.0 :html-foreground "Black" :html-background "Transparent" :html-scale 1.0 :matchers
 		 ("begin" "$1" "$" "$$" "\\(" "\\[")))
  '(package-selected-packages
-   '(highlight-indent-guides eyebrowse yasnippet-snippets yaml-mode xpm wttrin workgroups2 workgroups worf window-number win-switch wiki-summary w3m use-package unison-mode unison twittering-mode tabbar sx switch-window swiper-helm spaceline smartparens smart-mode-line session-manager rainbow-mode rainbow-delimiters pyvenv pinentry paredit paradox org-review org-ref org-pdfview org-easy-img-insert org-download org-caldav offlineimap oauth2 notify naquadah-theme moody minions mingus memory-usage major-mode-icons magithub magit-filenotify lispy linum-relative latex-extra keychain-environment ivy-todo ivy-rich ivy-mpdel ivy-dired-history ivy-bibtex helm-swoop helm-notmuch helm-flycheck helm-flx helm-ext helm-emms helm-describe-modes helm-descbinds helm-company helm-bind-key helm-bbdb helm-ag google-maps gnuplot-mode gnuplot gh free-keys font-lock+ flyspell-lazy flyspell-correct-ivy flyspell-correct-helm flymake-yaml expand-region exec-path-from-shell eww-lnum emms-mode-line-cycle emms-info-mediainfo easy-kill dired-toggle-sudo counsel-tramp counsel-notmuch counsel-gtags counsel-etags counsel-bbdb company-math company-auctex calfw-gcal calfw boxquote bitlbee beacon bbdb2erc bbdb-vcard bbdb-ext bbdb- autopair auto-dictionary auctex-latexmk anzu all-the-icons-ivy all-the-icons-gnus all-the-icons-dired ace-jump-mode ace-jump-helm-line ace-flyspell))
+   '(highlight-indent-guides eyebrowse yasnippet-snippets yaml-mode xpm wttrin worf w3m use-package unison-mode unison twittering-mode tabbar sx swiper-helm spaceline smartparens smart-mode-line rainbow-mode rainbow-delimiters pyvenv pinentry paredit paradox org-review org-ref org-pdfview org-easy-img-insert org-download org-caldav offlineimap oauth2 notify moody minions mingus memory-usage major-mode-icons magithub magit-filenotify lispy linum-relative latex-extra keychain-environment ivy-todo ivy-rich ivy-mpdel ivy-dired-history ivy-bibtex helm-notmuch helm-flycheck helm-flx helm-ext helm-emms helm-describe-modes helm-descbinds helm-company helm-bind-key helm-bbdb helm-ag google-maps gnuplot-mode gnuplot gh free-keys font-lock+ flyspell-lazy flyspell-correct-ivy flyspell-correct-helm flymake-yaml expand-region exec-path-from-shell eww-lnum emms-mode-line-cycle emms-info-mediainfo easy-kill dired-toggle-sudo counsel-tramp counsel-notmuch counsel-gtags counsel-etags counsel-bbdb company-math company-auctex calfw-gcal calfw boxquote bitlbee beacon bbdb2erc bbdb-vcard bbdb-ext bbdb- autopair auto-dictionary auctex-latexmk anzu all-the-icons-ivy all-the-icons-gnus all-the-icons-dired ace-jump-mode ace-jump-helm-line ace-flyspell multi-line zenburn-theme wajig use-package-chords org-notebook md4rd helm-eww guru-mode google-this gnus-alias emacs-xkcd diminish csv-mode counsel-ebdb company-php cdlatex calfw-org calfw-ical calfw-cal auto-yasnippet auto-overlays anaphora ace-link ace-isearch))
  '(paradox-automatically-star nil)
  '(paradox-github-token t)
  '(reftex-toc-include-labels t)
@@ -74,10 +74,12 @@
 			 ("melpa" . "https://melpa.org/packages/")
 			 ("gnu" . "http://elpa.gnu.org/packages/")
 			 ("org" . "http://orgmode.org/elpa/")
-			 ("marmalade" . "https://marmalade-repo.org/packages/")
+			 ;; ("marmalade" . "https://marmalade-repo.org/packages/")
 			  ;; ("sunrise" . "http://joseito.republika.pl/sunrise-commander/")
 			 ))
 (package-initialize)
+
+
 (byte-recompile-directory (expand-file-name "~/.emacs.d/elpa/"))
 (byte-recompile-directory (expand-file-name "~/git-repositories/"))
 
