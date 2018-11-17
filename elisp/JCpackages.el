@@ -16,17 +16,21 @@
 			  ;; ("sunrise" . "http://joseito.republika.pl/sunrise-commander/")
 			 ))
 
-(defun jc-do-package-management ()
-  (byte-recompile-directory (expand-file-name "~/.emacs.d/elpa/"))
-  (byte-recompile-directory (expand-file-name "~/git-repositories/"))
-  (paradox-upgrade-packages)
-  (package-autoremove)
-  (package-install-selected-packages))
+(setq paradox-execute-asynchronously t)
+
+(defun jc-do-package-management (&optional delete)
+  (and (byte-recompile-directory (expand-file-name "~/.emacs.d/elpa/"))
+       (byte-recompile-directory (expand-file-name "~/git-repositories/"))
+       (paradox-upgrade-packages)
+       (package-autoremove)
+       (package-install-selected-packages)
+       (if delete (delete-frame))))
 
 (defun jc-ask-package-management ()
   (when (y-or-n-p "Package-management")
-    (jc-do-package-management)
+    (jc-do-package-management t)
     ))
 
 (add-hook 'server-after-make-frame-hook 'jc-ask-package-management)
 
+;; emacsclient -c -F '((minibuffer . only)(name . "Packages")(height . 2))' -e '(jc-ask-package-management)'
