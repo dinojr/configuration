@@ -141,7 +141,7 @@
 ;; (load "JClilypond.el")
 (load "JCunison.el")
 (load "JCeshell.el")
-
+(load "JClispy.el")
 ;; (load "JCasymptote.el")
 
 
