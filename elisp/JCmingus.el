@@ -52,11 +52,23 @@
       mingus-mode-line-show-consume-and-single-status nil)
 
 (defun jc-mingus-set-frame-title ()
+  "Set frame-title-format and icon-title-format to
+mingus-make-mode-line-string"
   (setq frame-title-format (mingus-make-mode-line-string))
   (setq icon-title-format (mingus-make-mode-line-string))
   )
 
-(add-hook 'mingus-playlist-hooks '(lambda () run-with-timer 0 10 'jc-mingus-set-frame-title))
+(defun jc-run-mingus-frame-title-timer (&optional force)
+  "Start a timer running jc-mingus-set-frame-title every 10 second if
+it isn't already set  or if FORCE is supplied"
+  (interactive "P")
+  (if (or force (not (boundp 'jc-mingus-timer)))
+       (setq jc-mingus-timer (
+   			       run-with-timer 0 10 'jc-mingus-set-frame-title
+   			       ))
+    ))
+
+(add-hook 'mingus-playlist-hooks 'jc-run-mingus-frame-title-timer)
 
 (setq mingus-mode-line-separator
         (if 'display-graphic-p
