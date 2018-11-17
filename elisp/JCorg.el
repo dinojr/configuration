@@ -6,7 +6,7 @@
 (with-eval-after-load 'info
   (add-to-list 'Info-directory-list "~/git-repositories/org-mode/doc/")
   )
-(org-reload)
+
 (require 'org)
 (require 'cl)
 (require 'notifications)
