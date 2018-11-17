@@ -1,0 +1,10 @@
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+HOME=/home/wilk
+LOGNAME=wilk
+MAILTO=j.cubizolles@free.fr
+
+7	10	emacs.weekly	/home/wilk/bin/emacs-packages-maintenance.sh
+7	10	beets.weekly	/home/wilk/bin/beet-find-lossy.sh
+7	10	beets.weekly	/home/wilk/bin/beet-find-lossless.sh
+7	10	beets.weekly	/home/wilk/bin/fetch-cover-art.sh
