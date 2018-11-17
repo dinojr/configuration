@@ -8,7 +8,7 @@ MUSICDIR="/srv/multimedia/musique/BEETS/"
 # find . -type f -iname 'cover.jpg' -exec bash -c '
 find $MUSICDIR -type f -regex '.*cover.\(jpg\|png\)' -exec bash -c '
   for file do
-    echo $file
+    # echo $file
     #EXTENSION="${file##*.}"
     EXTENSION="png"
     FILENAME="${file%.*}"
