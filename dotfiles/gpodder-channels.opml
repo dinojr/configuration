@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml version="2.0">
+    <head>
+        <title>gPodder subscriptions</title>
+        <dateCreated>Tue, 30 Oct 2012 12:55:49 +0100</dateCreated>
+    </head>
+    <body>
+        <outline text="A la Bonne Heure ! : La chronique de Didier Porte" title="A la Bonne Heure ! : La chronique de Didier Porte" type="rss" xmlUrl="http://www.rtl.fr/podcast/a-la-bonne-heure-didier-porte.xml"/>
+        <outline text="A la Bonne Heure ! : La chronique de Régis Mailhot" title="A la Bonne Heure ! : La chronique de Régis Mailhot" type="rss" xmlUrl="http://www.rtl.fr/podcast/a-la-bonne-heure-regis-mailhot.xml"/>
+        <outline text="Downtown" title="Downtown" type="rss" xmlUrl="http://radiofrance-podcast.net/podcast09/rss_12057.xml"/>
+        <outline text="Europe1 - Nicolas Canteloup - Revue de presque" title="Europe1 - Nicolas Canteloup - Revue de presque" type="rss" xmlUrl="http://www.europe1.fr/podcasts/revue-de-presque.xml"/>
+        <outline text="La chronique de Daniel Morin" title="La chronique de Daniel Morin" type="rss" xmlUrl="http://radiofrance-podcast.net/podcast09/rss_10906.xml"/>
+        <outline text="La touche de Collin et Mauduit" title="La touche de Collin et Mauduit" type="rss" xmlUrl="http://radiofrance-podcast.net/podcast09/rss_12053.xml"/>
+        <outline text="La tête au carré" title="La tête au carré" type="rss" xmlUrl="http://radiofrance-podcast.net/podcast09/rss_10212.xml"/>
+        <outline text="Le billet de Sophia Aram" title="Le billet de Sophia Aram" type="rss" xmlUrl="http://radiofrance-podcast.net/podcast09/rss_11665.xml"/>
+        <outline text="Le masque et la plume" title="Le masque et la plume" type="rss" xmlUrl="http://radiofrance-podcast.net/podcast09/rss_14007.xml"/>
+        <outline text="Service public" title="Service public" type="rss" xmlUrl="http://radiofrance-podcast.net/podcast09/rss_10207.xml"/>
+        <outline text="Zapping des actualités" title="Zapping des actualités" type="rss" xmlUrl="http://radiofrance-podcast.net/podcast09/rss_11492.xml"/>
+    </body>
+</opml>
