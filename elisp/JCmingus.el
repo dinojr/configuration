@@ -16,7 +16,7 @@
 	      ("lemouv" . ""))))
 
 (setq mingus-podcast-alist
-  (quote (("canteloup" . "http://www.europe1.fr/podcasts/revue-de-presque.xml") 
+  (quote (("canteloup" . "http://cdn-europe1.new2.ladmedia.fr/var/exports/podcasts/sound/revue-de-presque.xml") 
 	  ("collin" . "http://radiofrance-podcast.net/podcast09/rss_12053.xml")
 	  ("morin" . "http://radiofrance-podcast.net/podcast09/rss_10906.xml")
 	  ("tete au carre" . "http://radiofrance-podcast.net/podcast09/rss_10212.xml")
