@@ -1,6 +1,7 @@
 #-*- mode: unison; -*-
 
 #Directories
+path = "wilk/Bibliothèque calibre/"
 path = wilk/enseignement
 path = wilk/git-repositories
 path = wilk/texmf
