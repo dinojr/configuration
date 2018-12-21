@@ -27,6 +27,7 @@
        (if delete (delete-frame))))
 
 (defun jc-ask-package-management ()
+  (interactive)
   (when (y-or-n-p "Package-management")
     (jc-do-package-management t)
     ))
