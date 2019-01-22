@@ -37,7 +37,15 @@
 (setq calendar-mark-diary-entries-flag t)
 
 ;; Display of week numbers
-(copy-face font-lock-constant-face 'calendar-iso-week-face)
+(if (daemonp)
+    (add-hook 'after-make-frame-functions (lambda (frame)
+                        (when (eq (length (frame-list)) 2)
+                            (progn
+                              (select-frame frame)
+			      (copy-face font-lock-constant-face 'calendar-iso-week-face)
+                              ))))
+  (copy-face font-lock-constant-face 'calendar-iso-week-face))
+
 (set-face-attribute 'calendar-iso-week-face nil
                     :height 0.7)
 (setq calendar-intermonth-text

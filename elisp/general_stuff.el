@@ -13,7 +13,16 @@
 ;; (add-to-list 'load-path "/home/wilk/git-repositories/dracula-emacs/")
 (add-to-list 'custom-theme-load-path "/home/wilk/git-repositories/dracula-emacs/")
 ;; (require 'dracula-theme)
-(load-theme 'dracula t)
+;; (load-theme 'dracula t)
+;; (load-theme 'zenburn t)
+
+(if (daemonp)
+    (add-hook 'after-make-frame-functions (lambda (frame)
+                        (when (eq (length (frame-list)) 2)
+                            (progn
+                              (select-frame frame)
+                              (load-theme 'dracula 1)))))
+  (load-theme 'dracula 1))
 
 ;; Transient-mark-mode
 (setq transient-mark-mode t)
