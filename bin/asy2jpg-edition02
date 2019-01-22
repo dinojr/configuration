@@ -1,0 +1,16 @@
+#!/bin/bash
+ASY=$1
+PDF=${1/.asy/.pdf}
+JPG=${1/.asy/.jpg}
+DIR="../../"
+if [ ! -f $JPG ]
+then
+    asy -f pdf -noV -noprc $1 -o $PDF
+    convert -density 300 $PDF $JPG
+    rm ${1/.asy/.pdf}
+fi
+if [ -f $JPG ]
+then
+    mv $JPG $DIR
+fi
+

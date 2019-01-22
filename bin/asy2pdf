@@ -1,4 +1,5 @@
 #!/bin/bash
 
-$HOME/bin/asy -f pdf -noV -noprc -glOptions=-indirect $1 -o ${1%asy}pdf
+# asy -f pdf -noV -noprc -glOptions=-indirect $1 -o ${1%asy}pdf
+asy -f pdf -noV -noprc $1 -o ${1%asy}pdf
 
