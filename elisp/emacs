@@ -91,7 +91,6 @@
 (load "JCdired.el")
 (load "JCyasnippet.el")
 ;; (load "JCdiary.el")
-(load "JCcalendrier.el")
 (load "JCregexps.el")
 (setq org-export-async-init-file "/home/wilk/configuration/elisp/org-export-async-init.el")
 ;; (load "JCorg-google.el")
@@ -125,6 +124,7 @@
 (load "JCunison.el")
 (load "JCeshell.el")
 (load "JClispy.el")
+(load "JCcalendrier.el")
 ;; (load "JCasymptote.el")
 
 
