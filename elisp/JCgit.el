@@ -18,6 +18,8 @@
 			'magit-insert-unpushed-to-pushremote
 			'magit-insert-modules-unpushed-to-pushremote)
 
+(require 'orgit)
+
 (defun jc-display-git-status ()
   (interactive)
   (select-frame (make-frame))
