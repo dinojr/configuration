@@ -15,7 +15,7 @@ import:
     move: yes
     resume: ask
     #none_rec_action: skip
-    log: /var/lib/mpd/music/NAS/Synology/ADMINISTRATION/beets-import-fail
+    log: /home/wilk/beets-files/beets-import-fail
     fromfilename: yes
     permissions: yes
 
