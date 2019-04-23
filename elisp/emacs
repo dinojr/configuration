@@ -32,7 +32,8 @@
  '(font-latex-fontify-sectioning 'color)
  '(font-latex-quotes 'french)
  '(helm-external-programs-associations
-   '(("mp4" . "mpv")
+   '(("mkv" . "mpv")
+     ("mp4" . "mpv")
      ("xls" . "libreoffice")
      ("xlsx" . "libreoffice")
      ("jpg" . "shotwell")
