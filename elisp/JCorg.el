@@ -510,7 +510,7 @@
        :body "beamer"
    )
   ))
-(setq org-export-in-background nil)
+
 
 ;; (defun jc-org-publish-project-options (backend)
 ;;   (setq org-publish-project-alist
