@@ -733,6 +733,25 @@
     			    ("edit in kolourpaint" . kolourpaint-open))))
     	     (funcall (cdr (assoc (completing-read "Action: " actions) actions)) path))))
 
+(eval-after-load 'ox '(require 'ox-koma-letter))
+(eval-after-load 'ox-koma-letter
+  '(progn
+     (add-to-list 'org-latex-classes
+                  '("my-letter"
+                    "\\documentclass\{scrlttr2\}
+     \\usepackage[frenchb]{babel}
+     \\LoadLetterOption{NF}
+\\RequirePackage{polyglossia}
+\\setdefaultlanguage{french}
+\\RequirePackage{fontspec}
+\\setmainfont{TeX Gyre Pagella}
+\\setsansfont{Libertinus Sans}
+\\defaultfontfeatures{ligatures = TeX}
+")
+		  )
+
+     (setq org-koma-letter-default-class "my-letter")))
+
 (define-key org-mode-map "\C-ct" (lambda ()
 				   (interactive)
 				   (org-end-of-meta-data)
