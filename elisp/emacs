@@ -126,6 +126,7 @@
 (load "JCunison.el")
 (load "JCeshell.el")
 (load "JClispy.el")
+(load "JCgnuplot.el")
 ;; (load "JCasymptote.el")
 
 
