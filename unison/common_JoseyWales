@@ -3,6 +3,7 @@
 #Directories
 path = wilk/Bibliothèque calibre/
 path = wilk/enseignement
+path = wilk/centrale-2020
 path = wilk/git-repositories
 path = wilk/texmf
 path = wilk/email

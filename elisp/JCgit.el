@@ -7,7 +7,8 @@
 (require 'magit)
 (setq magit-repository-directories '(("/home/wilk/" . 1)
 				     ("/home/wilk/texmf/tex/latex/mpsi/" . 0)
-                                     ("/home/wilk/vuibert/vuibert-sup/" . 0)))
+                                     ("/home/wilk/vuibert/vuibert-sup/" . 0)
+				     ("/home/wilk/centrale-2020/" . 0)))
 ;; (require 'magithub)
 ;; (require 'magit-gh-pulls) pb de dépendances avec  eieio-1.3, à réinstaller plus tard
 
@@ -27,6 +28,7 @@
   (delete-other-windows)
   (magit-status-internal "/home/wilk/git-repositories/")
   (magit-status-internal "/home/wilk/texmf/tex/latex/mpsi")
+  (magit-status-internal "/home/wilk/centrale-2020")
   (magit-status-internal "/home/wilk/vuibert/vuibert-sup/.")
   )
 
