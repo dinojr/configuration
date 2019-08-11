@@ -276,9 +276,17 @@
 	      ("wh" "Agenda et tâches pour la maison"
 	       ((agenda "girodet"
 		((org-agenda-entry-types '(:timestamp))))
-		(tags-todo "@girodet")
-		(tags "GIRODET"))
-	       ((org-agenda-filter-preset '("+GIRODET")))
+		(tags-todo "@girodet"))
+	       ;; ((org-agenda-filter-preset '("+GIRODET")))
+	       ;; ("~/tmp/girodet.pdf")
+	       )
+	      ("wp" "Agenda et tâches pour Paris"
+	       ((agenda "Paris"
+		((org-agenda-entry-types '(:timestamp))))
+		(tags-todo "@colombier")
+		(tags-todo "@versailles")
+		(tags-todo "@brissac"))
+	       ;; ((org-agenda-filter-preset '("+GIRODET")))
 	       ;; ("~/tmp/girodet.pdf")
 	       )
 	      ("wv" "Agenda et tâches pour le bouquin"
