@@ -102,6 +102,7 @@
 (load "JCcalfw.el")
 (load "JCorgcaldav.el")
 (load "JClatex.el")
+(load "JCConTeXt.el")
 (load "JCbibliography.el")
 (load "JCpdftools.el")
 (load "JCgit.el")
