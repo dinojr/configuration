@@ -3,6 +3,7 @@
 ;; Rainbow-delimiters
 (require 'rainbow-delimiters)
 (add-hook 'LaTeX-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'ConTeXt-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'emacs-lisp-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'lisp-mode-hook 'rainbow-delimiters-mode)
 
@@ -38,6 +39,7 @@
                  tex-mode
                  plain-tex-mode
                  latex-mode
+		 context-mode
 		 org-mode
                  )
   ;; math modes, yay.  The :actions are provided automatically if

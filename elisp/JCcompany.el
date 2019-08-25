@@ -14,4 +14,5 @@
                       company-backends)))
 
 (add-hook 'LaTeX-mode-hook 'jc-company-latex-mode-setup)
+(add-hook 'ConTeXt-mode-hook 'jc-company-latex-mode-setup)
 (add-hook 'org-mode-hook 'jc-company-latex-mode-setup)
