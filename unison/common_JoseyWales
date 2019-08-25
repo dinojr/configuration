@@ -10,6 +10,7 @@ path = wilk/email
 path = wilk/bin
 path = wilk/org
 path = wilk/.emacs.d
+path = wilk/.emacs.d-custom
 path = wilk/.bogofilter
 path = wilk/.local/share/applications
 path = wilk/Documents/girodet
