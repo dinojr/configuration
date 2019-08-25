@@ -67,3 +67,16 @@
 ;; Raccourcis
 (global-set-key [f2] 'calendar)
 (global-set-key "\M-." 'find-function-at-point)
+
+
+(setq highlight-indent-guides-auto-enabled t)
+(setq highlight-indent-guides-method 'column)
+(setq highlight-indent-guides-responsive 'top)
+(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+;; (setq oddface (color-desaturate-name "#a991f1" (* 75)))
+;; (setq evenface (color-desaturate-name "#a991f1" (* 80)))
+;; (setq charface (color-desaturate-name "#a991f1" (* 85)))
+;; (set-face-background 'highlight-indent-guides-odd-face oddface)
+;; (set-face-background 'highlight-indent-guides-even-face evenface)
+;; (set-face-foreground 'highlight-indent-guides-character-face charface)
+
