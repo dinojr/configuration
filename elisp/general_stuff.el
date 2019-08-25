@@ -80,3 +80,7 @@
 ;; (set-face-background 'highlight-indent-guides-even-face evenface)
 ;; (set-face-foreground 'highlight-indent-guides-character-face charface)
 
+(use-package all-the-icons
+  :config (add-hook 'dired-mode-hook 'all-the-icons-dired-mode))
+;; M-x all-the-icons-install-fonts
+
