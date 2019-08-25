@@ -35,8 +35,12 @@
       (TeX-fold-mode 1)
       ;; crochets automatiques pour exposants et indices
       (setq TeX-electric-sub-and-superscript t)
-      ;; 
+      ;;
+      ;; (setq TeX-electric-math '("$" . "$"))
+      (setq TeX-electric-math nil)
       (electric-indent-local-mode nil)
+      ;; pour que smartparens puisse jouer son rôle
+      (define-key LaTeX-mode-map (kbd "$") 'self-insert-command)
 )))
 
 (setq LaTeX-section-hook

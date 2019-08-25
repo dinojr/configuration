@@ -44,15 +44,15 @@
                  )
   ;; math modes, yay.  The :actions are provided automatically if
   ;; these pairs do not have global definition.
-  ;; (sp-local-pair "$" "$")
+  (sp-local-pair "$" "$" :actions '(wrap insert autoskip))
   ;; (sp-local-pair "\\[" "\\]")
-  ;; (sp-local-pair "\\left(" "\\right)")
-  ;; (sp-local-pair "\\left{" "\\right}")
-  ;; (sp-local-pair "\\left[" "\\right]")
+  (sp-local-pair "\\left(" "\\right)" :actions '(wrap insert))
+  (sp-local-pair "\\left{" "\\right}" :actions '(wrap insert))
+  (sp-local-pair "\\left[" "\\right]" :actions '(wrap insert))
   ;; (sp-local-pair "\\]" "\\[")
   ;; (sp-local-tag "\\b" "\\begin{_}" "\\end{_}")
-  ;; (sp-local-tag "$" "\\(" "\\)") ;; ne marche pas
-    (sp-local-pair "\\left|" "\\right|")
+  ;; (sp-local-pair "\\(" "\\)" :trigger-wrap "$" :actions '(wrap insert))
+  (sp-local-pair "\\left|" "\\right|" :actions '(wrap insert autoskip))
   )
 
 ;; Vérifier que latex-mode est bien dans sp-navigate-consider-stringlike-sexp
@@ -66,5 +66,5 @@
 	("M-<up>" . nil)))
 
 (sp--update-override-key-bindings)
-(smartparens-global-mode)
+(smartparens-global-mode t)
 (show-smartparens-global-mode t)
