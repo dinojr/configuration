@@ -9,4 +9,4 @@ gnuslog.el
 /bin/wake-lago
 /dotfiles/dotnetrc
 /dotfiles/authinfo
-flycheck.*elc$
+flycheck*.elc
