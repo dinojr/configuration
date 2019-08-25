@@ -62,11 +62,10 @@ mingus-make-mode-line-string"
   "Start a timer running jc-mingus-set-frame-title every 10 second if
 it isn't already set  or if FORCE is supplied"
   (interactive "P")
-  (if (or force (not (boundp 'jc-mingus-timer)))
-       (setq jc-mingus-timer (
-   			       run-with-timer 0 10 'jc-mingus-set-frame-title
-   			       ))
-    ))
+  (when (or force (not (boundp 'jc-mingus-timer)))
+      (setq jc-mingus-timer (when (process-live-p (get-process "mpd"))
+   			       (run-with-timer 0 10 'jc-mingus-set-frame-title)
+   			       ))))
 
 (add-hook 'mingus-playlist-hooks 'jc-run-mingus-frame-title-timer)
 
