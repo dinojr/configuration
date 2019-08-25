@@ -1,5 +1,7 @@
 ;; ~/.emacs.d/JCgit.el -*- mode: emacs-lisp-*-
 
+;; Mettre le .gpg en premier assure que ce sera crypté
+(setq auth-sources '("~/.authinfo.gpg" "~/.authinfo"  "~/.netrc"))
 
 ;; La ligne suivante corrige un bug de déclaration
 (setq magit-log-edit-confirm-cancellation t)
