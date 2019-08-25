@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCpackages.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCpackages.el -*- mode: emacs-lisp-*-
 (require 'package)
 (require 'paradox)
 (eval-after-load "paradox"

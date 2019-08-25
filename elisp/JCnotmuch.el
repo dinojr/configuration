@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCnotmuch.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCnotmuch.el -*- mode: emacs-lisp-*-
 (require 'notmuch)
 (require 'org-gnus)
 

@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCminions-moody.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCminions-moody.el -*- mode: emacs-lisp-*-
 (setq sml/theme 'dark)
 (smart-mode-line-enable)
 (use-package moody

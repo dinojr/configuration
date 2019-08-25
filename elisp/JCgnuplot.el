@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCgnuplot.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCgnuplot.el -*- mode: emacs-lisp-*-
 ;; https://github.com/bruceravel/gnuplot-mode/issues/31
 (use-package gnuplot
   :ensure

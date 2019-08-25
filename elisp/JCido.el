@@ -1,4 +1,4 @@
-;; ~/emacs.d/JCido.el -*- mode: lisp-*-
+;; ~/emacs.d/JCido.el -*- mode: emacs-lisp-*-
 (require 'ido)
 (require 'bookmark)
 

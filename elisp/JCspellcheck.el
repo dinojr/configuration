@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCspellcheck.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCspellcheck.el -*- mode: emacs-lisp-*-
 
 (setq flyspell-use-meta-tab nil)
 (setq ispell-program-name "aspell")

@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCavy.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCavy.el -*- mode: emacs-lisp-*-
 (require 'avy)
 (avy-setup-default)
 (global-set-key (kbd "C-c j") 'avy-goto-char)

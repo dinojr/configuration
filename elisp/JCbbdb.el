@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCbbdb.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCbbdb.el -*- mode: emacs-lisp-*-
 
 
 ;; file where things will be saved

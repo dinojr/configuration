@@ -1,4 +1,4 @@
-;;~/.emacs -*- mode: lisp-*-
+;;~/.emacs -*- mode: emacs-lisp-*-
 ;; (setq org-export-async-debug t)
 ;; si org est installé avec melpa
 ;; (require 'package)

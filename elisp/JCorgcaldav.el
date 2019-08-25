@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCorgcaldav.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCorgcaldav.el -*- mode: emacs-lisp-*-
 ;; (require 'package) ;; org-caldav is loaded through melpa
 ;; (package-initialize)
 

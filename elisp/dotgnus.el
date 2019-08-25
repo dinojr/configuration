@@ -1,4 +1,4 @@
-;; ~/.gnus.el -*- mode: lisp-*-
+;; ~/.gnus.el -*- mode: emacs-lisp-*-
 (require 'gnus)
 ;; (require 'gnuslog)
 (require 'nnir)

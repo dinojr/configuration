@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JClispy.el -*- mode: lisp-*-
+;; ~/.emacs.d/JClispy.el -*- mode: emacs-lisp-*-
 
 (require 'lispy)
 

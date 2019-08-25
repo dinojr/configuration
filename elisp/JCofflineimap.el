@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCofflineimap.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCofflineimap.el -*- mode: emacs-lisp-*-
 
 (require 'gnus)
 

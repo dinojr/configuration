@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JClpr.el -*- mode: lisp-*-
+;; ~/.emacs.d/JClpr.el -*- mode: emacs-lisp-*-
 
 (require 'printing)
 

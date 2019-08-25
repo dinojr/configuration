@@ -1,4 +1,4 @@
-;; ~/.emacs.d/general_stuff.el -*- mode: lisp-*-
+;; ~/.emacs.d/general_stuff.el -*- mode: emacs-lisp-*-
 
 ;; Default font
 (set-face-attribute 'default nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant 'normal :weight 'normal :height 110 :width 'normal :foundry "unknown" :family "DejaVu Sans Mono")

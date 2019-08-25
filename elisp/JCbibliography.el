@@ -1,4 +1,4 @@
-;;~/.emacs.d/JCbibliography.el -*- mode: lisp-*-
+;;~/.emacs.d/JCbibliography.el -*- mode: emacs-lisp-*-
 
 (setq reftex-default-bibliography '("~/enseignement/papiers/bibliography.bib"))
 

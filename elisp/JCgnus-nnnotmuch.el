@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCgnus-nnnnotmuch.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCgnus-nnnnotmuch.el -*- mode: emacs-lisp-*-
 (add-to-list 'load-path "~/git-repositories/nnnotmuch/")
 (require 'nnnotmuch)
 

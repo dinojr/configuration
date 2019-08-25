@@ -1,4 +1,4 @@
-;; ~/emacs.d/JCyasnippet.el -*- mode: lisp-*-
+;; ~/emacs.d/JCyasnippet.el -*- mode: emacs-lisp-*-
 
 (require 'yasnippet) ;; not yasnippet-bundle
 (yas-global-mode 1)

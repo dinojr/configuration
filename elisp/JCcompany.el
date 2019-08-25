@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCcompany.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCcompany.el -*- mode: emacs-lisp-*-
 
 (with-eval-after-load 'company
   (define-key company-mode-map (kbd "C-:") 'helm-company)

@@ -1,4 +1,5 @@
-;; ~/.emacs.d/JCgit.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCgit.el -*- mode: emacs-lisp-*-
+
 
 ;; La ligne suivante corrige un bug de déclaration
 (setq magit-log-edit-confirm-cancellation t)

@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCspaceline.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCspaceline.el -*- mode: emacs-lisp-*-
 
 (require 'spaceline-config)
 (setq powerline-default-separator 'wave)

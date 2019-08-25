@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCpython.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCpython.el -*- mode: emacs-lisp-*-
 
 
 (setq python-shell-interpreter "python3")

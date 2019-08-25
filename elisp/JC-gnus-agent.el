@@ -1,4 +1,4 @@
-;;~/.emacs.d/JC-gnus-agent.el -*- mode: lisp-*-
+;;~/.emacs.d/JC-gnus-agent.el -*- mode: emacs-lisp-*-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Packages ;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'package)

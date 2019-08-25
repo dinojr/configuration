@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCmovie.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCmovie.el -*- mode: emacs-lisp-*-
 
 (add-to-list 'load-path "/home/wilk/git-repositories/movie.el/")
 (add-to-list 'load-path "/home/wilk/git-repositories/pvr.el/")

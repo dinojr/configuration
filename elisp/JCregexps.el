@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCregexps.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCregexps.el -*- mode: emacs-lisp-*-
 
 ;; (defun jc-replace-regexp-in-region (Begin End from to)
 ;;   "Replace from by to in the selected region"

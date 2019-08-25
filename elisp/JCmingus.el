@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCmingus.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCmingus.el -*- mode: emacs-lisp-*-
 
 (require 'mingus)
 (require 'mingus-stays-home)

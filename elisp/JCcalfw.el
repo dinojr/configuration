@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCcalfw.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCcalfw.el -*- mode: emacs-lisp-*-
 (add-to-list 'load-path "~/git-repositories/emacs-calfw/")
 (require 'calfw)
 (require 'calfw-org)

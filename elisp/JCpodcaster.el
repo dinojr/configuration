@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCpodcaster.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCpodcaster.el -*- mode: emacs-lisp-*-
 
 (require 'podcaster)
 (setq podcaster-feeds-urls

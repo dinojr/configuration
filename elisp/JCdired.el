@@ -1,4 +1,4 @@
-;; ~/emacs.d/JCdired.el -*- mode: lisp-*-
+;; ~/emacs.d/JCdired.el -*- mode: emacs-lisp-*-
 
 (require 'dired)
 (require 'dired-aux)

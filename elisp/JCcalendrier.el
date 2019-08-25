@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCcalendrier.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCcalendrier.el -*- mode: emacs-lisp-*-
 
  (add-hook 'calendar-load-hook
               ;; (lambda ()

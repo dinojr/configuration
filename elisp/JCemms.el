@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCemms.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCemms.el -*- mode: emacs-lisp-*-
 (add-to-list 'load-path "~/git-repositories/emms/lisp/")
 (require 'emms-setup)
 (require 'emms-browser)

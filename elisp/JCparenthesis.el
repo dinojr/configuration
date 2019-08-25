@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCparenthesis.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCparenthesis.el -*- mode: emacs-lisp-*-
 
 ;; Rainbow-delimiters
 (require 'rainbow-delimiters)

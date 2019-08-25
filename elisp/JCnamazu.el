@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCnamazu.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCnamazu.el -*- mode: emacs-lisp-*-
 
 ;; Pour Namazu
 (add-to-list 'load-path "~/info/emacs/gnus/contrib")

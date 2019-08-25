@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCacelink.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCacelink.el -*- mode: emacs-lisp-*-
 
 (ace-link-setup-default)
 

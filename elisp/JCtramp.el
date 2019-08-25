@@ -1,4 +1,4 @@
-;; ~/emacs.d/JCtramp.el -*- mode: lisp-*-
+;; ~/emacs.d/JCtramp.el -*- mode: emacs-lisp-*-
 
 (require 'tramp)
 

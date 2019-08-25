@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JClatex.el -*- mode: lisp-*-
+;; ~/.emacs.d/JClatex.el -*- mode: emacs-lisp-*-
 
 ;; (add-to-list 'load-path "~/info/emacs/auctex")
 ;; (setq TeX-data-directory "~/info/emacs/auctex/")

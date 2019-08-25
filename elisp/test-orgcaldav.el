@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCorgcaldav-test.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCorgcaldav-test.el -*- mode: emacs-lisp-*-
 (require 'org-caldav)
 (setq org-caldav-url "https://www.google.com/calendar/dav")
 (setq org-caldav-calendar-id "4noetgnqqu1hq6gpam4pnpr7m8@group.calendar.google.com")

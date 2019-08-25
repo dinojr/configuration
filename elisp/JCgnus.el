@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCgnus.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCgnus.el -*- mode: emacs-lisp-*-
 
 ;; (setq load-path (cons (expand-file-name "/home/wilk/info/emacs/gnus/lisp") load-path))
 ;; (eval-after-load "info"

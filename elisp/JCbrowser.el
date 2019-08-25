@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCbrowser.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCbrowser.el -*- mode: emacs-lisp-*-
 (require 'eww)
 
 (use-package eww-lnum

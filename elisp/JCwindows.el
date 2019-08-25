@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCwindows.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCwindows.el -*- mode: emacs-lisp-*-
 
 ;; (require 'win-switch)
 ;; (win-switch-setup-keys-ijkl "\C-xo")

@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCpdftools.el -*- mode: lisp-*-
+;; ~/.emacs.d/JCpdftools.el -*- mode: emacs-lisp-*-
 
 (pdf-tools-install)
 (with-eval-after-load 'org
