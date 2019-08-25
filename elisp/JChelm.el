@@ -45,6 +45,9 @@
 
 (setq helm-org-format-outline-path t)
 
+(setq helm-mini-default-sources '(helm-source-buffers-list helm-source-bookmarks helm-source-recentf helm-source-buffer-not-found))
+
+
 ;; (global-set-key (kbd "M-x") 'helm-M-x)
 
 
