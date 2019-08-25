@@ -29,6 +29,8 @@
 (require 'helm-eshell)
 (require 'helm-files)
 (require 'helm-grep)
+(require 'helm-org-rifle)
+(setq helm-org-rifle-show-path t)
 
 (setq helm-split-window-in-side-p           t ; open helm buffer inside current window, not occupy whole other window
       helm-move-to-line-cycle-in-source     t ; move to end or beginning of source when reaching top or bottom of source.
