@@ -28,7 +28,7 @@
  '(beacon-color "#ff79c6")
  '(canlock-password "5052bb55e61c64dae5204c0ccac4d417b05d8cf8")
  '(custom-safe-themes
-   '("e23658d315acf2744418f199019b09d0522285c100f1772bdd948f3e5a287e61" "506a18c9dcffa6a7e70635a99e3b55c40595dc2561bced63a9023b2c148cc813" "218bc69ef19fd1f681cdded7b85924e41242fe87a6033df823499822f1397f1a" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" default))
+   '("43c808b039893c885bdeec885b4f7572141bd9392da7f0bd8d8346e02b2ec8da" "c0dc50b8b69b5fa91e65f5370b9605ced947db9d05e84552b4d31586e3874be8" "e23658d315acf2744418f199019b09d0522285c100f1772bdd948f3e5a287e61" "506a18c9dcffa6a7e70635a99e3b55c40595dc2561bced63a9023b2c148cc813" "218bc69ef19fd1f681cdded7b85924e41242fe87a6033df823499822f1397f1a" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" default))
  '(font-latex-fontify-sectioning 'color)
  '(font-latex-quotes 'french)
  '(helm-external-programs-associations
@@ -77,7 +77,6 @@
 (load "JCpackages.el")
 (load "JCgpg.el")
 (load "JCkeychain.el")
-(load "general_stuff.el")
 (load "JCflycheck.el")
 (load "JClpr.el")
 (load "JCnavigation.el")
@@ -132,7 +131,7 @@
 (load "JClispy.el")
 (load "JCgnuplot.el")
 ;; (load "JCasymptote.el")
-
+(load "general_stuff.el")
 
 
 ;;(load "~/.emacs.d/emacs_server.el")

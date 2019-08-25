@@ -3,17 +3,18 @@
 ;; Default font
 (set-face-attribute 'default nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant 'normal :weight 'normal :height 110 :width 'normal :foundry "unknown" :family "DejaVu Sans Mono")
 
-
-;; Theme, dans melpa maintenant
-;; (add-to-list 'load-path "/home/wilk/.emacs.d/naquadah-theme")
-;; (require 'naquadah-theme)
-
-;; From dinojr/github
-
-;; (add-to-list 'load-path "/home/wilk/git-repositories/dracula-emacs/")
 (add-to-list 'custom-theme-load-path "/home/wilk/git-repositories/dracula-emacs/")
-;; (require 'dracula-theme)
-(load-theme 'dracula t)
+
+(doom-themes-org-config)
+
+(if (daemonp)
+    (add-hook 'after-make-frame-functions (lambda (frame)
+                        (when (eq (length (frame-list)) 2)
+                            (progn
+                              (select-frame frame)
+                              (load-theme 'dracula t)))))
+  (load-theme 'dracula t))
+
 
 ;; Transient-mark-mode
 (setq transient-mark-mode t)
