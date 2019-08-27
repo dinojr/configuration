@@ -249,3 +249,5 @@ the variable `gnus-move-split-methods' for finding a default target."
 ;; 	    (define-key gnus-summary-mode-map ":" 'bbdb-mua-edit-field-recipients)
 ;; 	    )
 ;; 	  )
+
+;; message-mark-inserted-region
