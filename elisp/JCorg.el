@@ -342,7 +342,7 @@
 (setq org-stuck-projects (quote ("projet/!-DONE-CANCELED" nil ("NEXT") "")))
 
 ; Enable habit tracking (and a bunch of other modules)
-(setq org-modules (quote (org-habit org-gnus org-bbdb org-info)))
+(setq org-modules (quote (org-habit org-gnus org-bbdb org-info org-drill)))
 
 ; global STYLE property values for completion
 (setq org-global-properties (quote (("STYLE_ALL" . "habit"))))
