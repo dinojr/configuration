@@ -12,6 +12,7 @@ path = wilk/org
 path = wilk/.emacs.d
 path = wilk/.emacs.d-custom
 path = wilk/.bogofilter
+path = wilk/.mailcap
 path = wilk/.local/share/applications
 path = wilk/Documents/girodet
 path = wilk/Documents/versailles
