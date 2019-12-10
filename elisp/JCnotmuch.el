@@ -1,6 +1,5 @@
 ;; ~/.emacs.d/JCnotmuch.el -*- mode: emacs-lisp-*-
 (require 'notmuch)
-(require 'org-gnus)
 
 (defun jc-notmuch-file-to-group (file)
   (let ((group (directory-file-name (file-name-directory file))))

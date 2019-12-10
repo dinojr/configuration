@@ -17,9 +17,6 @@
 
 (setq bbdb-mua-update-interactive-p '(query . create))
 
-(require 'org-bbdb)
-
-
 (setq org-bbdb-anniversary-field 'birthday)
 
 ;; Raccourcis
