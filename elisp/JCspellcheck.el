@@ -36,4 +36,4 @@
 ;; (global-set-key (kbd "M-<f8>") 'jc-flyspell-check-next-highlighted-word)
 
 (require 'flyspell-correct-helm)
-(define-key flyspell-mode-map (kbd "C-;") 'flyspell-correct-previous-word-generic)
+(define-key flyspell-mode-map (kbd "C-;") 'flyspell-correct-previous)
