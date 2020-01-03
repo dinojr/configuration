@@ -32,7 +32,8 @@
  '(font-latex-fontify-sectioning 'color)
  '(font-latex-quotes 'french)
  '(helm-external-programs-associations
-   '(("odt" . "libreoffice")
+   '(("sciprj" . "scidavis")
+     ("odt" . "libreoffice")
      ("avi" . "mpv")
      ("jpg" . "eog")
      ("m4v" . "mpv")
