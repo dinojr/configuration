@@ -156,7 +156,7 @@
 	(nntp "news.free.fr")
 	(nntp "news.gwene.org"
 	      (nnir-search-engine gmane))
-	(nntp "news.gmane.org"
+	(nntp "news.gmane.io"
 	      (nnir-search-engine gmane))
 	;; (nnmaildir "FreeOffline" (directory "~/email/Maildir/Free/"))
 	;; (nnimap "GmailOffline"
@@ -236,7 +236,7 @@
       )
 
 ;; (setq gnus-agentized-servers '("nnimap:gmail" "nnimap:free" "nntp:news.gmane.org"))
-(setq gnus-agentized-servers '("nntp:news.gmane.org"))
+(setq gnus-agentized-servers '("nntp:news.gmane.io"))
 
 (defun jc-gnus-open-agentized-servers ()
   (interactive)
