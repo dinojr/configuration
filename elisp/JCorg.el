@@ -626,7 +626,7 @@
 
 ;; Allow to use a) instead of 1) in ordered lists
 (setq org-list-allow-alphabetical t)
-(org-element-update-syntax)
+;; (org-element-update-syntax)
 
 (defun org-repair-export-blocks ()
   "Repair export blocks and INCLUDE keywords in current buffer."

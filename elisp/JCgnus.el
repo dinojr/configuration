@@ -7,7 +7,7 @@
 ;;     )
 ;;   )
 
-(add-to-list 'load-path "~/git-repositories/emacs/lisp/gnus")
+;; (add-to-list 'load-path "~/git-repositories/emacs/lisp/gnus")
 (add-to-list 'load-path "~/.emacs.d/gnus-bogofilter")
 
 (require 'gnus)
@@ -87,8 +87,7 @@ the variable `gnus-move-split-methods' for finding a default target."
     	(let (gnus-newsgroup-processable)
     	  (command-execute 'gnus-summary-mark-as-expirable))
     	(gnus-summary-remove-process-mark article)))
-    )
-  )
+    ))
 
 (defun jc-gnus-summary-move-and-mark-read-article (&optional n to-newsgroup select-method)
   "Move the current article to some other group and mark it as read.
@@ -107,8 +106,7 @@ the variable `gnus-move-split-methods' for finding a default target."
       )
     (gnus-summary-move-article n to-newsgroup select-method)
     (gnus-summary-remove-process-mark article)
-    )
-  )
+    ))
 
 (defun message-goto-gcc ()
   "Move point to the Gcc header."

@@ -1,5 +1,6 @@
 ;; ~/.emacs.d/JCpackages.el -*- mode: emacs-lisp-*-
 (require 'package)
+(package-initialize)
 (require 'paradox)
 (eval-after-load "paradox"
   (progn
