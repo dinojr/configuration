@@ -225,6 +225,25 @@ the variable `gnus-move-split-methods' for finding a default target."
   (define-key gnus-summary-mode-map ":" 'bbdb-mua-edit-field-recipients)
   )
 
+(setq gnus-posting-styles
+      '((".*"
+	 (address "j.cubizolles@free.fr")
+	 (name "Julien Cubizolles")
+	 (x-identity "personnel"))
+       ((header "from" ".*@ac-paris.fr")
+	(address "julien.cubizolles@ac-paris.fr")
+	(signature-file "~/configuration/dotfiles/signature-pro.txt")
+	("X-Message-SMTP-Method" "smtp smtpbyod.ac-paris.fr 587 jcubizolles")
+	("Gcc" "nnimap+FreeOffline:ac-paris.fr")
+	(x-identity "professionnel")
+	)))
+;; Le défaut en premier
+;; Trier selon qu'on répond à des news ou pas
+;; une fonction pour changer message-citation-line-format et message-citation-line-function selon le posting style (français/anglais)
+;; attacher un logo LLG en fichier attaché ?
+
+(require 'gnus-identities)
+
 
 ;; Pour ne pas indenter les Topics par mégarde
 (with-eval-after-load 'gnus-topic
