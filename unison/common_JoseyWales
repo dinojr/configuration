@@ -104,6 +104,7 @@ ignore = Path wilk/Documents/scolaire
 ignore = Path wilk/musique
 ignore = Name {.notmuch}
 ignore = Name {vuibert-sup}
+ignore = Name {enregistrements-video}
 
 # Files
 ignore = Path wilk/.unison/default.prf
