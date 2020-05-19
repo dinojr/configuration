@@ -229,7 +229,8 @@ the variable `gnus-move-split-methods' for finding a default target."
       '((".*"
 	 (address "j.cubizolles@free.fr")
 	 (name "Julien Cubizolles")
-	 (x-identity "personnel"))
+	 (x-identity "personnel")
+	 (signature-file "~/configuration/dotfiles/signature-perso.txt"))
        ((header "from" ".*@ac-paris.fr")
 	(address "julien.cubizolles@ac-paris.fr")
 	(signature-file "~/configuration/dotfiles/signature-pro.txt")
