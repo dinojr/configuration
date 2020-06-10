@@ -4,4 +4,4 @@
 (require 'unison-mode)
 
 (setq unison-program "/home/wilk/bin/unison")
-(setq unison-args '("-batch" "JoseyWales"))
+(setq unison-args '("JoseyWales"))
