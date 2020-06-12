@@ -1,0 +1,21 @@
+# ~/.unison/.prf
+# Unison preferences
+label = USB DISK
+#Roots of the synchronization
+root = /media/wilk/KINGSTON/copies/
+root = /home/wilk/enseignement/2019-2020/copies-KINGSTON/
+
+auto =true
+confirmbigdeletes = true
+perms = -1
+owner = true
+group = true
+times = false
+#force = newer
+sortbysize = true
+sortnewfirst = true
+maxthreads = 50
+watch=false
+
+log = true
+logfile = /home/wilk/.unison/unison-copies.log
