@@ -9,7 +9,6 @@ fat=true
 ignorecase=false
 auto =true
 confirmbigdeletes = true
-perms = -1
 owner = true
 group = true
 times = false
