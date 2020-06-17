@@ -5,6 +5,8 @@ label = USB DISK
 root = /media/wilk/KINGSTON/copies/
 root = /home/wilk/enseignement/2019-2020/copies-KINGSTON/
 
+fat=true
+ignorecase=false
 auto =true
 confirmbigdeletes = true
 perms = -1
