@@ -136,7 +136,7 @@ ignore = Name image-dired
 
 auto =true
 confirmbigdeletes = true
-perms = -1
+perms = 0o1777
 owner = true
 group = true
 times = false
