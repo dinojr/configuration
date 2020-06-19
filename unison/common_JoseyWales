@@ -88,6 +88,7 @@ ignore = Path wilk/enseignement/logiciels/maple
 ignore = Path wilk/enseignement/UPS2006
 ignore = Path wilk/enseignement/DVDUPS
 ignore = Path wilk/enseignement/UPS-2015
+ignore = Path wilk/enseignement/manips
 ignore = Path wilk/git-repositories
 ignore = Path wilk/centrale-2020
 ignore = Path wilk/.emacs.d/url
