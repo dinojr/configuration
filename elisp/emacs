@@ -47,7 +47,6 @@
      ("xlsx" . "libreoffice")
      ("qti" . "qtiplot")
      ("zip" . "file-roller")
-     ("pdf" . "evince")
      ("ods" . "libreoffice")))
  '(helm-source-names-using-follow '("RG" "Occur"))
  '(notmuch-saved-searches
