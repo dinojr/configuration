@@ -1,7 +1,7 @@
 #-*- mode: unison; -*-
 
 #Directories
-path = wilk/Bibliothèque calibre/
+path = wilk/Bibliothèque calibre
 path = wilk/enseignement
 path = wilk/centrale-2020
 path = wilk/git-repositories
@@ -26,9 +26,10 @@ path = wilk/Documents/mobillico
 path = wilk/Documents/Famille
 path = wilk/Documents/randonnees
 path = wilk/Documents/Maif
-path = wilk/Documents/BulletinsSalaire/
-path = wilk/musique/
+path = wilk/Documents/BulletinsSalaire
+path = wilk/musique
 path = wilk/Finances
+path = wilk/info/science
 #path = wilk/info/emacs
 path = wilk/.Conky
 #path = usr/local/texlive/2012
