@@ -208,7 +208,7 @@
 	;; ("from" ,gnus-ignored-from-addresses "sent-mail")
 	(: (lambda ()
 	     (car (bbdb/gnus-split-method))))
-	("from" "<ne-pas-repondre@ent.iledefrance.fr>" "ENT")
+	(from  "ne-pas-repondre@ent.iledefrance.fr" "ENT")
 	(: spam-split 'spam-use-bbdb 'spam-use-bogofilter)
 	("gnus-warning" "duplicat\\(e\\|ion\\) of message" "duplicate")
 	;; all the rest
@@ -227,7 +227,7 @@
 ;; 	))
 
 (setq nnmail-split-methods 'nnmail-split-fancy)
-(setq nnimap-split-methods 'default)
+(setq nnimap-split-methods 'nnimap-split-fancy)
 
 (setq gnus-agent-synchronize-flags t
       gnus-agent-queue-mail t
