@@ -205,11 +205,13 @@
 
 ;; Raccourcis
 
+(require 'eri)
+
 (add-hook 'LaTeX-mode-hook
 	  (lambda () ;;(define-key LaTeX-mode-map (kbd  "<C-tab>")
 	    ;;'indent-relative)
 	    ;; (define-key LaTeX-mode-map (kbd  "<C-tab>") 'insert-tab)
-	    (define-key LaTeX-mode-map (kbd  "<C-tab>") 'indent-relative)
+	    (define-key LaTeX-mode-map (kbd  "<C-tab>") 'eri-indent)
 	    (define-key LaTeX-mode-map (kbd  "<C-return>") 'jc-newline-and-indent)
 	    (define-key LaTeX-mode-map (kbd  "<M-f7>") 'jc-revert-and-rubber)
 	    (define-key LaTeX-mode-map (kbd "²") (kbd "\\"))
