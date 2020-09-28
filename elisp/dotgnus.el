@@ -208,7 +208,7 @@
 	;; ("from" ,gnus-ignored-from-addresses "sent-mail")
 	(: (lambda ()
 	     (car (bbdb/gnus-split-method))))
-	(from  "ne-pas-repondre@ent.iledefrance.fr" "ENT")
+	(from  "ne-pas-repondre@ent.iledefrance.fr" "LLG")
 	(: spam-split 'spam-use-bbdb 'spam-use-bogofilter)
 	("gnus-warning" "duplicat\\(e\\|ion\\) of message" "duplicate")
 	;; all the rest
