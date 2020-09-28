@@ -444,6 +444,8 @@
   (add-to-list 'org-export-filter-headline-functions
 	       'jc-org-latex-ignore-heading))
 
+(setq org-latex-pdf-process '("latexmk -pdflua -shell-escape -bibtex -f %f"))
+
 (setq org-export-allow-bind-keywords t)
 
 (defun remove-org-suffix (name)
