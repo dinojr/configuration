@@ -7,7 +7,6 @@ path = wilk/centrale-2020
 path = wilk/git-repositories
 path = wilk/texmf
 path = wilk/email
-path = wilk/bin
 path = wilk/org
 path = wilk/.emacs.d
 path = wilk/.emacs.d-custom
