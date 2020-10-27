@@ -9,5 +9,5 @@
 
 (with-eval-after-load 'helm
   (require 'helm-bibtex)
-  (setq bibtex-completion-bibliography "~/enseignement/papiers/bibliography.bib")
+  (setq bibtex-completion-bibliography '("~/enseignement/papiers/bibliography.bib" "~/enseignement/doc_cours/attributions.bib"))
   (setq bibtex-completion-library-path "~/enseignement/papiers/"))
