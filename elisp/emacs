@@ -33,7 +33,8 @@
  '(font-latex-quotes 'french)
  '(helm-completion-style 'emacs)
  '(helm-external-programs-associations
-   '(("xopp" . "xournalpp")
+   '(("qti" . "scidavis")
+     ("xopp" . "xournalpp")
      ("agr" . "xmgrace")
      ("7z" . "file-roller")
      ("sciprj" . "scidavis")
@@ -45,7 +46,6 @@
      ("mp4" . "mpv")
      ("xls" . "libreoffice")
      ("xlsx" . "libreoffice")
-     ("qti" . "qtiplot")
      ("zip" . "file-roller")
      ("ods" . "libreoffice")))
  '(helm-source-names-using-follow '("RG" "Occur"))
