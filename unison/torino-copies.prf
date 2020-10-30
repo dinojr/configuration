@@ -1,0 +1,22 @@
+# ~/.unison/.prf
+# Unison preferences
+label = torino-copies
+#Roots of the synchronization
+root = /media/wilk/torino/copies/
+root = /home/wilk/enseignement/2020-2021/copies/
+
+fat=true
+ignorecase=false
+auto =true
+confirmbigdeletes = true
+owner = true
+group = true
+times = false
+#force = newer
+sortbysize = true
+sortnewfirst = true
+maxthreads = 50
+watch=false
+
+log = true
+logfile = /home/wilk/.unison/unison-copies.log
