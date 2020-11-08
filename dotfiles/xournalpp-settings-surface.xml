@@ -3,9 +3,9 @@
 <settings>
   <property name="pressureSensitivity" value="false"/>
   <property name="zoomGesturesEnabled" value="true"/>
-  <property name="selectedToolbar" value="Right hand Note Taking Copy"/>
-  <property name="lastSavePath" value="/media/wilk/torino/copies/DS/DS1"/>
-  <property name="lastOpenPath" value="/media/wilk/torino/copies/DS/DS1"/>
+  <property name="selectedToolbar" value="Floating Toolbox (experimental) Copy"/>
+  <property name="lastSavePath" value="/home/wilk/enseignement/2020-2021/TP/chimie/cinetique-spectro"/>
+  <property name="lastOpenPath" value="/media/wilk/torino/copies/DM/DM02"/>
   <property name="lastImagePath" value="file:///home/wilk/enseignement/2019-2020/devoirs/DS/DS07-energie-lorentz-redox/images"/>
   <property name="zoomStep" value="10.00000000"/>
   <property name="zoomStepScroll" value="2.00000000"/>
@@ -17,7 +17,7 @@
   <property name="showSidebar" value="false"/>
   <property name="sidebarWidth" value="50"/>
   <property name="sidebarOnRight" value="false"/>
-  <property name="scrollbarOnLeft" value="false"/>
+  <property name="scrollbarOnLeft" value="true"/>
   <property name="menubarVisible" value="true"/>
   <property name="numColumns" value="1"/>
   <property name="numRows" value="1"/>
@@ -181,6 +181,10 @@
       <attribute name="deviceClass" type="int" value="0"/>
       <attribute name="deviceSource" type="int" value="8"/>
     </data>
+    <data name="Wacom Intuos BT M Pen">
+      <attribute name="deviceClass" type="int" value="2"/>
+      <attribute name="deviceSource" type="int" value="1"/>
+    </data>
     <data name="Wacom Intuos BT M Pen cursor">
       <attribute name="deviceClass" type="int" value="0"/>
       <attribute name="deviceSource" type="int" value="3"/>
@@ -204,7 +208,7 @@
   </data>
   <data name="lastUsedPageBgColor"/>
   <data name="tools">
-    <attribute name="current" type="string" value="pen"/>
+    <attribute name="current" type="string" value="showFloatingToolbox"/>
     <data name="drawArrow">
       <attribute name="drawingType" type="string" value="default"/>
     </data>
@@ -239,8 +243,8 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="pen">
-      <attribute name="color" type="hex" value="ff0000"/>
-      <attribute name="drawingType" type="string" value="default"/>
+      <attribute name="color" type="hex" value="00ff00"/>
+      <attribute name="drawingType" type="string" value="line"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
       <attribute name="size" type="string" value="THIN"/>
