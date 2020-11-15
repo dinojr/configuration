@@ -12,6 +12,9 @@ confirmbigdeletes = true
 owner = true
 group = true
 times = false
+mountpoint = DS
+nodeletion = /home/wilk/enseignement/2020-2021/copies/
+
 #force = newer
 sortbysize = true
 sortnewfirst = true
