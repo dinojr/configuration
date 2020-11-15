@@ -70,6 +70,7 @@
 (global-set-key [f2] 'calendar)
 (global-set-key "\M-." 'find-function-at-point)
 
+(which-key-mode)
 
 (setq highlight-indent-guides-auto-enabled t)
 (setq highlight-indent-guides-method 'column)
