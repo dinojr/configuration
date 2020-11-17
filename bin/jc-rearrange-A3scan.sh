@@ -1,4 +1,5 @@
 #/bin/bash
+#A3 scans should be in the ordre 2 3 4 1, gives an A4 document in the right order
 PDF=$1
 NOM=${PDF/.pdf/-split.pdf}
 SPLIT="split.pdf"
@@ -15,8 +16,10 @@ pdftk A=$SPLIT cat Aeven output $THREEONE
 pdftk A=$TWOFOUR cat Aeven output $THREE
 pdftk A=$TWOFOUR cat Aodd output $FOUR
 pdftk A=$THREEONE cat Aodd output $TWO
-pdftk A=$THREEONE
-cat Aeven output $ONE
+pdftk A=$THREEONE cat Aeven output $ONE
 
 pdftk A=$ONE B=$TWO C=$THREE D=$FOUR shuffle A B C D output $NOM
 
+for i in $SPLIT $TWOFOUR $THREEONE $FOUR $THREE $TWO $ONE
+	do rm $i
+done
