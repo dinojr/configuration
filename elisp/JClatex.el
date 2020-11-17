@@ -48,19 +48,9 @@
 	LaTeX-section-section
 	LaTeX-section-label))
 
-(add-to-list 'TeX-command-list
-	     '("rubber" "rubber --cache --inplace --maxerr -1 --short --force --warn all --pdf %t" TeX-run-command nil t :help "Run rubber with pdflatex directly")
-	     )
 
 (add-to-list 'TeX-command-list
-	      '("rubberps" "rubber --cache --inplace --maxerr -1 --short --force --warn all --ps --pdf %t" TeX-run-command nil t :help "Run rubber with latex->dvips->ps2pdf")
-	     )
-
-(add-to-list 'TeX-command-list
-	     '("pdflatex-vuibert" "pdflatex -fmt ../../../vuistand-fmt.fmt %t" TeX-run-command nil t :help "Run pdflatex with custom format file"))
-
-(add-to-list 'TeX-command-list
-	     '("Evince" "evince %o" TeX-run-discard nil t :help "View with Evince"))
+	     '("lualatex-shell-escape" "lualatex %t" TeX-run-TeX nil t :help "Run lualatex with --shell-escape"))
 
 ;;rubber comme compilateur
 (add-hook 'LaTeX-mode-hook (lambda()
