@@ -3,10 +3,10 @@
 <settings>
   <property name="pressureSensitivity" value="false"/>
   <property name="zoomGesturesEnabled" value="true"/>
-  <property name="selectedToolbar" value="Floating Toolbox (experimental) Copy"/>
-  <property name="lastSavePath" value="/home/wilk/enseignement/2020-2021/TP/chimie/cinetique-spectro"/>
-  <property name="lastOpenPath" value="/media/wilk/torino/copies/DM/DM02"/>
-  <property name="lastImagePath" value="file:///home/wilk/enseignement/2019-2020/devoirs/DS/DS07-energie-lorentz-redox/images"/>
+  <property name="selectedToolbar" value="Right hand Note Taking Copy"/>
+  <property name="lastSavePath" value="/home/wilk/enseignement/2020-2021/devoirs/DS/DS02-ondes-mecaQ/schemas"/>
+  <property name="lastOpenPath" value="/media/wilk/torino/copies/DM/DM03"/>
+  <property name="lastImagePath" value="/home/wilk/enseignement/2020-2021/devoirs/DS/DS02-ondes-mecaQ/images"/>
   <property name="zoomStep" value="10.00000000"/>
   <property name="zoomStepScroll" value="2.00000000"/>
   <property name="displayDpi" value="72"/>
@@ -55,7 +55,7 @@
   <property name="drawDirModsRadius" value="50"/>
   <property name="snapRotation" value="true"/>
   <property name="snapRotationTolerance" value="0.20000000"/>
-  <property name="snapGrid" value="false"/>
+  <property name="snapGrid" value="true"/>
   <property name="snapGridTolerance" value="0.25000000"/>
   <property name="snapGridSize" value="14.17000000"/>
   <property name="touchWorkaround" value="false"/>
@@ -91,7 +91,7 @@
   <property name="latexSettings.autoCheckDependencies" value="true"/>
   <property name="latexSettings.globalTemplatePath" value="/usr/bin/../share/xournalpp/resources/default_template.tex"/>
   <property name="latexSettings.genCmd" value="pdflatex -interaction=nonstopmode '{}'"/>
-  <property name="font" font="Ubuntu Mono" size="0.00000000"/>
+  <property name="font" font="Sans" size="1.00000000"/>
   <data name="buttonConfig">
     <data name="default">
       <attribute name="color" type="hex" value="fff57900"/>
@@ -128,6 +128,10 @@
     <data name="Atmel Atmel maXTouch Digitizer">
       <attribute name="deviceClass" type="int" value="4"/>
       <attribute name="deviceSource" type="int" value="5"/>
+    </data>
+    <data name="BT5.0 Mouse">
+      <attribute name="deviceClass" type="int" value="1"/>
+      <attribute name="deviceSource" type="int" value="0"/>
     </data>
     <data name="Logitech Wireless Keyboard PID:0068">
       <attribute name="deviceClass" type="int" value="1"/>
@@ -206,9 +210,20 @@
       <attribute name="deviceSource" type="int" value="5"/>
     </data>
   </data>
-  <data name="lastUsedPageBgColor"/>
+  <data name="lastUsedPageBgColor">
+    <attribute name="color00" type="hex" value="fffafaf9"/>
+    <attribute name="color01" type="hex" value="ffffffff"/>
+    <attribute name="color02" type="hex" value="ffffffff"/>
+    <attribute name="color03" type="hex" value="ffffffff"/>
+    <attribute name="color04" type="hex" value="ffffffff"/>
+    <attribute name="color05" type="hex" value="ffffffff"/>
+    <attribute name="color06" type="hex" value="ffffffff"/>
+    <attribute name="color07" type="hex" value="ffffffff"/>
+    <attribute name="color08" type="hex" value="ffffffff"/>
+    <attribute name="count" type="int" value="9"/>
+  </data>
   <data name="tools">
-    <attribute name="current" type="string" value="showFloatingToolbox"/>
+    <attribute name="current" type="string" value="pen"/>
     <data name="drawArrow">
       <attribute name="drawingType" type="string" value="default"/>
     </data>
@@ -226,7 +241,7 @@
     </data>
     <data name="eraser">
       <attribute name="drawingType" type="string" value="default"/>
-      <attribute name="size" type="string" value="THIN"/>
+      <attribute name="size" type="string" value="VERY_BIG"/>
       <attribute name="type" type="string" value="deleteStroke"/>
     </data>
     <data name="hand">
@@ -243,8 +258,8 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="pen">
-      <attribute name="color" type="hex" value="00ff00"/>
-      <attribute name="drawingType" type="string" value="line"/>
+      <attribute name="color" type="hex" value="ff0000"/>
+      <attribute name="drawingType" type="string" value="strokeRecognizer"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
       <attribute name="size" type="string" value="THIN"/>
