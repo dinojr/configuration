@@ -61,6 +61,26 @@
 
 (helm-linum-relative-mode 1)
 
+(require 'eyebrowse)
+
+(defun helm-file-eyebrowse (file)
+  "Use ‘eyebrowse' to create a new workspace and display FILE."
+  (eyebrowse-create-named-window-config)
+  (find-file file))
+
+(add-to-list 'helm-find-files-actions
+             '("Find File in new workspace ‘C-c ,'" . helm-file-eyebrowse)
+             :append)
+
+(defun helm-file-run-eyebrowse ()
+  (interactive)
+  (with-helm-alive-p
+    (helm-exit-and-execute-action 'helm-file-eyebrowse)))
+
+;;; For `helm-find-files'
+(define-key helm-find-files-map (kbd "C-c ,") #'helm-file-run-eyebrowse)
+
+
 (require 'ace-window)
 
 (defun helm-buffer-ace-window (buffer)
