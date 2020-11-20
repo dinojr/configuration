@@ -80,8 +80,28 @@
 ;;; For `helm-find-files'
 (define-key helm-find-files-map (kbd "C-c ,") #'helm-file-run-eyebrowse)
 
+(defun helm-buffer-eyebrowse (buffer)
+  "Use ‘eyebrowse’ to select open a buffer in a new workspace."
+  (eyebrowse-create-named-window-config)
+  (switch-to-buffer buffer))
+
+(defun helm-buffer-run-eyebrowse ()
+  (interactive)
+  (with-helm-alive-p
+    (helm-exit-and-execute-action 'helm-buffer-eyebrowse)))
+
+(define-key helm-buffer-map (kbd "C-c ;") #'helm-buffer-run-eyebrowse)
+
+(add-to-list 'helm-type-buffer-actions
+             '("Switch to buffer in a new workspace ‘C-c ;'" . helm-buffer-eyebrowse)
+             :append)
 
 (require 'ace-window)
+
+(defun helm-file-ace-window (file)
+  "Use ‘ace-window' to select a window to display FILE."
+  (ace-select-window)
+  (find-file file))
 
 (defun helm-buffer-ace-window (buffer)
   "Use ‘ace-window’ to select a window to display BUFFER."
