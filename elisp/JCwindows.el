@@ -19,7 +19,7 @@
 (setq aw-dispatch-always t)
 
 (setq eyebrowse-new-workspace t)
-
+(global-set-key (kbd "C-c C-w ;") 'eyebrowse-create-named-window-config)
 (eyebrowse-mode t)
 
  (defun jc-run-command-other-frame (command)
