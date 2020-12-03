@@ -291,7 +291,7 @@
   <data name="touch">
     <attribute name="cmdDisable" type="string" value=""/>
     <attribute name="cmdEnable" type="string" value=""/>
-    <attribute name="disableTouch" type="boolean" value="true"/>
+    <attribute name="disableTouch" type="boolean" value="false"/>
     <attribute name="method" type="string" value="auto"/>
     <attribute name="timeout" type="int" value="1000"/>
   </data>
