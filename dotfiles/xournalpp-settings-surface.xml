@@ -89,7 +89,7 @@
   <property name="inputSystemDrawOutsideWindow" value="false"/>
   <property name="preferredLocale" value=""/>
   <property name="latexSettings.autoCheckDependencies" value="true"/>
-  <property name="latexSettings.globalTemplatePath" value="/usr/bin/../share/xournalpp/resources/default_template.tex"/>
+  <property name="latexSettings.globalTemplatePath" value="/usr/share/xournalpp/resources/default_template.tex"/>
   <property name="latexSettings.genCmd" value="pdflatex -interaction=nonstopmode '{}'"/>
   <property name="font" font="Sans" size="1.00000000"/>
   <data name="buttonConfig">
