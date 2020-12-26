@@ -34,7 +34,7 @@
 
 (setq org-special-ctrl-a/e t)
 
-;; (setq org-startup-indented t)
+(setq org-startup-indented t)
 (setq org-hide-leading-stars t)
 
 ;; (add-to-list 'load-path "~/git-repositories/org-bullets")
