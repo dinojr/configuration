@@ -65,7 +65,7 @@
   <!--The count of rendered PDF pages which will be cached.-->
   <!--Config for new pages-->
   <property name="pdfPageCacheSize" value="10"/>
-  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSize=false&#10;copyLastPageSettings=true&#10;size=841,000000x595,000000&#10;backgroundType=plain&#10;backgroundColor=#ff1c1d25&#10;"/>
+  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSize=false&#10;copyLastPageSettings=false&#10;size=595,000000x841,000000&#10;backgroundType=lined&#10;backgroundColor=#ffeeeeec&#10;"/>
   <property name="sizeUnit" value="cm"/>
   <property name="audioFolder" value=""/>
   <property name="audioInputDevice" value="-1"/>
@@ -94,7 +94,7 @@
   <property name="font" font="Sans" size="1.00000000"/>
   <data name="buttonConfig">
     <data name="default">
-      <attribute name="color" type="hex" value="fff57900"/>
+      <attribute name="color" type="hex" value="ffef2929"/>
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="size" type="string" value="thin"/>
       <attribute name="tool" type="string" value="pen"/>
@@ -106,7 +106,7 @@
     </data>
     <data name="middle">
       <attribute name="eraserMode" type="string" value="none"/>
-      <attribute name="size" type="string" value="none"/>
+      <attribute name="size" type="string" value="medium"/>
       <attribute name="tool" type="string" value="eraser"/>
     </data>
     <data name="right">
@@ -209,6 +209,10 @@
       <attribute name="deviceClass" type="int" value="4"/>
       <attribute name="deviceSource" type="int" value="5"/>
     </data>
+    <data name="Wayland Wheel Scrolling">
+      <attribute name="deviceClass" type="int" value="1"/>
+      <attribute name="deviceSource" type="int" value="0"/>
+    </data>
   </data>
   <data name="lastUsedPageBgColor">
     <attribute name="color00" type="hex" value="fffafaf9"/>
@@ -241,13 +245,13 @@
     </data>
     <data name="eraser">
       <attribute name="drawingType" type="string" value="default"/>
-      <attribute name="size" type="string" value="VERY_BIG"/>
+      <attribute name="size" type="string" value="MEDIUM"/>
       <attribute name="type" type="string" value="deleteStroke"/>
     </data>
     <data name="hand">
       <attribute name="drawingType" type="string" value="default"/>
     </data>
-    <data name="hilighter">
+    <data name="highlighter">
       <attribute name="color" type="hex" value="ffff00"/>
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
@@ -262,7 +266,7 @@
       <attribute name="drawingType" type="string" value="strokeRecognizer"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
-      <attribute name="size" type="string" value="THIN"/>
+      <attribute name="size" type="string" value="MEDIUM"/>
       <attribute name="style" type="string" value="plain"/>
     </data>
     <data name="playObject">
