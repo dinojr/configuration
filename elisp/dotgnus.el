@@ -132,27 +132,27 @@
 
 (setq gnus-secondary-select-methods
       '(
-;; 	(nnimap "gmail"
-;;                 (nnimap-address "imap.gmail.com")
-;; ;		(nnimap-authentificator "j.cubizolles")
-;; ;               (nnimap-authinfo-file "~/.authinfo")
-;;                 (nnimap-stream ssl)
-;; 		(nnir-search-engine imap)
-;; 		;; (nnimap-split-methods nnimap-split-fancy)
-;; 		(nnimap-inbox "INBOX")
-;; 		(nnimap-split-methods default)
-;; 		)
-;; 	(nnimap "free"
-;; 		(nnimap-address "imap.free.fr")
-;; 		; Ne marche pas sans la ligne suivante
-;; ;		(nnimap-authentificator "j.cubizolles")
-;; ;		(nnimap-authinfo-file "~/.authinfo")
-;; ;		(nnimap-unsplittable-articles (%Deleted %Seen))
-;; 		(nnir-search-engine imap)
-;; 		(nnimap-inbox "INBOX")
-;; 		;; (nnimap-split-methods nnimap-split-fancy)
-;; 		(nnimap-split-methods default)
-;; 		)
+	;; 	(nnimap "gmail"
+	;;                 (nnimap-address "imap.gmail.com")
+	;; ;		(nnimap-authentificator "j.cubizolles")
+	;; ;               (nnimap-authinfo-file "~/.authinfo")
+	;;                 (nnimap-stream ssl)
+	;; 		(nnir-search-engine imap)
+	;; 		;; (nnimap-split-methods nnimap-split-fancy)
+	;; 		(nnimap-inbox "INBOX")
+	;; 		(nnimap-split-methods default)
+	;; 		)
+	;; 	(nnimap "free"
+	;; 		(nnimap-address "imap.free.fr")
+	;; 		; Ne marche pas sans la ligne suivante
+	;; ;		(nnimap-authentificator "j.cubizolles")
+	;; ;		(nnimap-authinfo-file "~/.authinfo")
+	;; ;		(nnimap-unsplittable-articles (%Deleted %Seen))
+	;; 		(nnir-search-engine imap)
+	;; 		(nnimap-inbox "INBOX")
+	;; 		;; (nnimap-split-methods nnimap-split-fancy)
+	;; 		(nnimap-split-methods default)
+	;; 		)
 	(nntp "news.free.fr")
 	(nntp "news.gwene.org"
 	      (nnir-search-engine gmane))
@@ -183,6 +183,16 @@
 		(nnir-search-engine notmuch)
 		;; (nnir-notmuch-remove-prefix "/home/wilk/email/Maildir/Gmail/")
 		)
+	(nnimap "ENT"
+		(nnimap-stream shell)
+		;; (nnimap-shell-program "/usr/lib/dovecot/imap -c /home/wilk/.dovecotrc-free")
+		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/ENT:LAYOUT=fs")
+		(nnimap-split-methods default)
+		(nnimap-inbox "INBOX")
+		;; (nnir-search-engine imap)
+		(nnir-search-engine notmuch)
+		;; (nnir-notmuch-remove-prefix "/home/wilk/email/Maildir/Free/")
+		)	
 	;; (nnnotmuch "")
 	;; (nnfolder "archive"
 	;; 	(nnfolder-inhibit-expiry t)

@@ -1,6 +1,6 @@
 # -*- mode: conf-*-
 [general]
-accounts = FreeOffline,GmailOffline
+accounts = FreeOffline,GmailOffline,ENT
 maxsyncaccounts = 4
 pythonfile = ~/.offlineimap.py
 # ui=Blinkenlights
@@ -30,6 +30,33 @@ realdelete = yes
 # holdconnectionopen = true
 # keepalive = 60
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Account ENT]
+localrepository = ENTLocal
+remoterepository = ENTRemote
+autorefresh = 3
+quick = 10
+synclabels = yes
+#maxage = 365
+
+[Repository ENTLocal]
+type = IMAP
+preauthtunnel = /usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/ENT:LAYOUT=fs
+#localfolders = ~/email/Maildir/Free
+
+# preauthtunnel = /usr/lib/dovecot/imap -c $HOME/.dovecotrc
+
+[Repository ENTRemote]
+type = IMAP
+remotehost = mx.monlycee.net
+remoteuser = julien.cubizolles
+# folderfilter = lambda foldername: foldername not in ['anciens']
+# folderfilter = lambda foldername: foldername not in ['anciens','Emailed Contacts']
+realdelete = yes
+# holdconnectionopen = true
+# keepalive = 60
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
 
 [Account GmailOffline]
 localrepository = GmailLocal
