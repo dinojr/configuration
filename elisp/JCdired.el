@@ -32,6 +32,8 @@
   ;; (dired-mark-files-regexp (filename-to-regexp zip-file))
   )
 
+(setq dired-listing-switches "-alh")
+
 (add-hook 'dired-mode-hook 'turn-on-gnus-dired-mode)
 
 (defun concat-string-list (list) 
