@@ -119,6 +119,7 @@ ignore = Path wilk/enseignement/2019-2020/copies-KINGSTON
 # Files
 ignore = Path wilk/.unison/default.prf
 ignore = Path wilk/bin/asy
+ignore = Name {fiche_bilan_DS.fmt}
 ignore = Name {rubber.cache}
 ignore = Name {,.}*{.tex~}
 ignore = Name {DEADJOE}
