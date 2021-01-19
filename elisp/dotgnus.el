@@ -1,7 +1,7 @@
 ;; ~/.gnus.el -*- mode: emacs-lisp-*-
 (require 'gnus)
 ;; (require 'gnuslog)
-(require 'nnir)
+
 
 (setq auth-source-debug t)
 (setq debug-on-error t)
@@ -92,6 +92,7 @@
 
 ;; (setq nnir-notmuch-remove-prefix (regexp-opt '("/home/wilk/email/Local/" "/home/wilk/email/Local/archive/" "/home/wilk/email/Maildir/Free" "/home/wilk/email/Maildir/Free"))) ;; ne marche pas
 (setq nnir-notmuch-remove-prefix "/home/wilk/email/Local/") ;; marche
+;; (setq gnus-search-notmuch-remove-prefix "/home/wilk/email/Local/")
 ;; (setq nnir-notmuch-remove-prefix "/home/wilk/email/Maildir/Free/") ;; ne marche pas
 
 (setq gnus-select-method 
@@ -155,9 +156,9 @@
 	;; 		)
 	(nntp "news.free.fr")
 	(nntp "news.gwene.org"
-	      (nnir-search-engine gmane))
+	      (nnir-search-engine notmuch))
 	(nntp "news.gmane.io"
-	      (nnir-search-engine gmane))
+	      (nnir-search-engine notmuch))
 	;; (nnmaildir "FreeOffline" (directory "~/email/Maildir/Free/"))
 	;; (nnimap "GmailOffline"
 	;; 	(nnimap-stream shell)
