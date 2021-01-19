@@ -1,5 +1,7 @@
 #-*- mode: unison; -*-
 
+#Port number
+sshargs = -p 2040
 #Directories
 path = wilk/Bibliothèque calibre
 path = wilk/enseignement
