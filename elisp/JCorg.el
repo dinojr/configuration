@@ -180,7 +180,7 @@
 ;; Don't clock out when moving task to a done state
 (setq org-clock-out-when-done nil)
 ;; Save the running clock and all clock history when exiting Emacs, load it on startup
-(setq org-clock-persist (quote history))
+;; (setq org-clock-persist (quote history))
 ;; Disable auto clock resolution
 (setq org-clock-auto-clock-resolution nil)
 ;; Remove empty CLOCK drawers on clock out
@@ -190,7 +190,7 @@
     (beginning-of-line 0)
     (org-remove-empty-drawer-at "CLOCK" (point))))
 
-(add-hook 'org-clock-out-hook 'jc/remove-empty-drawer-on-clock-out 'append)
+;; (add-hook 'org-clock-out-hook 'jc/remove-empty-drawer-on-clock-out 'append)
 
 
 ;TAGS
