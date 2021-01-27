@@ -23,3 +23,6 @@ watch=false
 
 log = true
 logfile = /home/wilk/.unison/unison-copies.log
+
+ignore = Path {DM/DM02}
+ignore = Path {DM/DM03}
