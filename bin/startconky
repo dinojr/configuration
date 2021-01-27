@@ -1,7 +1,12 @@
 #!/bin/bash
 
 feh --bg-scale $(gsettings get org.gnome.desktop.background picture-uri |sed "s/'//g"|cut -b 8-)
-conky -c $HOME/.Conky/secondconkyrc-new -d;
-conky -c $HOME/.Conky/conkympd-new -d;
-conky -c $HOME/.Conky/conkyrc-new -d;
 
+if [ $XDG_SESSION_TYPE == "wayland" ]
+then suffix="Wayland"
+else suffix="Xorg"
+fi
+
+conky --pause=30 -c $HOME/.Conky/secondconkyrc-"$suffix" -d &
+conky --pause=30 -c $HOME/.Conky/conkympd-"$suffix" -d &
+conky --pause=30 -c $HOME/.Conky/conkyrc-"$suffix" -d &
