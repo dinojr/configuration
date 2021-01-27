@@ -6,8 +6,8 @@
   <property name="pressureMultiplier" value="1.00000000"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Right hand Note Taking Copy"/>
-  <property name="lastSavePath" value="/media/wilk/torino/copies/DS/ds03"/>
-  <property name="lastOpenPath" value="/media/wilk/torino/copies/DS/ds03"/>
+  <property name="lastSavePath" value="/media/wilk/torino/copies/DS/DS04"/>
+  <property name="lastOpenPath" value="/media/wilk/torino/copies/DS/DS04"/>
   <property name="lastImagePath" value="/home/wilk/enseignement/2020-2021/devoirs/DS/DS02-ondes-mecaQ/images"/>
   <property name="zoomStep" value="10.00000000"/>
   <property name="zoomStepScroll" value="2.00000000"/>
@@ -69,9 +69,12 @@
   <property name="touchZoomStartThreshold" value="0.00000000"/>
   <property name="pageRerenderThreshold" value="5.00000000"/>
   <!--The count of rendered PDF pages which will be cached.-->
-  <!--Config for new pages-->
   <property name="pdfPageCacheSize" value="10"/>
-  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSize=false&#10;copyLastPageSettings=false&#10;size=841,000000x595,000000&#10;backgroundType=plain&#10;backgroundColor=#ffffffff&#10;"/>
+  <property name="preloadPagesBefore" value="3"/>
+  <property name="preloadPagesAfter" value="5"/>
+  <!--Config for new pages-->
+  <property name="eagerPageCleanup" value="true"/>
+  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSize=false&#10;copyLastPageSettings=false&#10;size=595,000000x841,000000&#10;backgroundType=lined&#10;backgroundColor=#fffafaf9&#10;"/>
   <property name="sizeUnit" value="cm"/>
   <property name="audioFolder" value=""/>
   <property name="audioInputDevice" value="-1"/>
