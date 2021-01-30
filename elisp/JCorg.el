@@ -160,6 +160,8 @@
 ;; Save the running clock and all clock history when exiting Emacs, load it on startup
 (setq org-clock-persist t)
 
+(setq org-clock-idle-time 15)
+
 ;; Change task state to STARTED from TODO when clocking in
 (defun jc/clock-in-to-started (kw)
   "Switch task from TODO to STARTED when clocking in"
@@ -791,3 +793,5 @@
           (lambda ()
             (local-set-key (kbd "C-c C-r")
                            'org-review-insert-last-review)))
+
+(global-set-key (kbd "<f9>") 'org-agenda)
