@@ -244,6 +244,16 @@ the variable `gnus-move-split-methods' for finding a default target."
 	 ("X-Message-SMTP-Method" "smtp mx.monlycee.net 587 julien.cubizolles")
 	 ("Gcc" "nnimap+FreeOffline:ENT")
 	 (x-identity "ENT")
+	 )
+	((header "from" "reprollg")
+	 (address "julien.cubizolles@ac-paris.fr")
+	 (signature-file "~/configuration/dotfiles/signature-pro.txt")
+	 ("X-Message-SMTP-Method" "smtp smtpbyod.ac-paris.fr 587 jcubizolles")
+	 ("Gcc" "reprollg")
+	 ("to" "reprollg@gmail.com")
+	 ("Subject" "MPSI2 Physique Semaine")
+	 (x-identity "reprollg")
+	 (body "Bonjour,\nMerci d'imprimer le document ci-joint en :\n+ 44 exemplaires\n+ taille réelle\n+ agrafé\n+ recto\nCordialement,")
 	 )))
 ;; Le défaut en premier
 ;; Trier selon qu'on répond à des news ou pas
