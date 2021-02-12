@@ -18,6 +18,7 @@
 (setq aw-keys '(?q ?s ?d ?f ?g ?h ?j ?k ?l))
 (setq aw-dispatch-always t)
 
+(require 'eyebrowse)
 (setq eyebrowse-new-workspace t)
 (global-set-key (kbd "C-c C-w ;") 'eyebrowse-create-named-window-config)
 (eyebrowse-mode t)
