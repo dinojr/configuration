@@ -253,7 +253,7 @@ the variable `gnus-move-split-methods' for finding a default target."
 	 ("to" "reprollg@gmail.com")
 	 ("Subject" "MPSI2 Physique Semaine")
 	 (x-identity "reprollg")
-	 (body "Bonjour,\nMerci d'imprimer le document ci-joint en :\n+ 44 exemplaires\n+ taille réelle\n+ agrafé\n+ recto\nCordialement,")
+	 (body "Bonjour,\nMerci d'imprimer le document ci-joint en :\n+ 44 exemplaires\n+ taille réelle\n+ agrafé\n+ recto\n\nCordialement,")
 	 )))
 ;; Le défaut en premier
 ;; Trier selon qu'on répond à des news ou pas
