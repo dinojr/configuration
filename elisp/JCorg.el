@@ -152,14 +152,14 @@
 ;; Resume clocking tasks when emacs is restarted
 (org-clock-persistence-insinuate)
 ;; Yes it's long... but more is better ;)
-(setq org-clock-history-length 5)
+(setq org-clock-history-length 10)
 ;; Resume clocking task on clock-in if the clock is open
 (setq org-clock-in-resume t)
 ;; Do not prompt to resume an active clock
 ;(setq org-clock-persist-query-resume nil)
 ;; Save the running clock and all clock history when exiting Emacs, load it on startup
 (setq org-clock-persist t)
-
+(setq org-clock-x11idle-program-name "xprintidle")
 (setq org-clock-idle-time 15)
 
 ;; Change task state to STARTED from TODO when clocking in
