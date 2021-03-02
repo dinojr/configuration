@@ -23,31 +23,49 @@
 
 (define-key bbdb-mode-map "r" 'bbdb-merge-records)
 
-;; (defun remove-field-value (field value)
-;;   "From every record in the active bbdb database, remove the notes field whose
-;;   name is in passed in variable"
-;;   (message "Field: %s; Value: %s" field value)
-;;   (mapcar
-;;    (lambda (rec)
-;;      (let ((val (bbdb-record-note rec field)))
-;;        (if (string= value val)
-;; 	   (progn
-;; 	     (bbdb-record-set-note rec field nil)
-;; 	     (bbdb-change-record rec)
-;; 	     (bbdb-redisplay-record rec)))))
-;;    (bbdb-records)))
+(defun jc-gnus-remove-field-value (field value)
+  "From every record in the active bbdb database, remove the notes field whose
+  name is in passed in variable"
+  (message "Field: %s; Value: %s" field value)
+  (mapcar
+   (lambda (rec)
+     (let ((val (bbdb-record-field rec field)))
+       (if (string= value val)
+	   (progn
+	     (bbdb-record-set-field rec field nil)
+	     (bbdb-change-record rec)
+	     ;; (bbdb-redisplay-record rec)
+	     ))))
+   (bbdb-records)))
 
-;; (defun remove-field (field)
-;;   "From every record in the active bbdb database, remove the notes field whose
-;;   name is in passed in variable"
-;;   (message "Field: %s" field)
-;;   (mapcar
-;;    (lambda (rec)
-;;      (let ((val (bbdb-record-note rec field)))
-;; 	   (progn
-;; 	     (bbdb-record-set-note rec field nil)
-;; 	     (bbdb-change-record rec)
-;; 	     (bbdb-redisplay-record rec))))
-;;    (bbdb-records)))
+(defun jc-gnus-remove-regexp-field (field reg)
+  "From every record in the active bbdb database, remove the notes field whose
+  name is in passed in variable"
+  (message "Field: %s; Value: %s" field reg)
+  (mapcar
+   (lambda (rec)
+     (let ((val (bbdb-record-field rec field)))
+       (message "%s" val)
+       (if (not (equal nil val))
+	   (progn
+	     (bbdb-record-set-field rec field (replace-regexp-in-string reg "" val))
+	     (bbdb-change-record rec)
+	     ;; (bbdb-redisplay-record rec)
+	     ))))
+   (bbdb-records)))
 
-;(remove-field-value 'folder "default")
+(defun jc-gnus-remove-field (field)
+  "From every record in the active bbdb database, remove the notes field whose
+  name is in passed in variable"
+  (message "Field: %s" field)
+  (mapcar
+   (lambda (rec)
+     (let ((val (bbdb-record-note rec field)))
+       (progn
+	 (bbdb-record-set-note rec field nil)
+	 (bbdb-change-record rec)
+	 (bbdb-redisplay-record rec))))
+   (bbdb-records)))
+
+;; (jc-gnus-remove-field-value 'mail-alias "Importé le 18/02, myContacts")
+;; (jc-gnus-remove-regexp-field 'mail-alias "myContacts")
