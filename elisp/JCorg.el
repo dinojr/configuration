@@ -727,7 +727,7 @@
 (global-set-key (kbd "C-c C-h") 'org-clock-out)
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cb" 'org-iswitchb)
+(global-set-key "\C-cb" 'org-switchb)
 (global-set-key "\C-c'" 'org-edit-special)
 (define-key global-map "\C-cc" 'org-capture)
 
