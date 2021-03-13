@@ -18,16 +18,20 @@
 (setq aw-keys '(?q ?s ?d ?f ?g ?h ?j ?k ?l))
 (setq aw-dispatch-always t)
 
-(require 'eyebrowse)
+
+
+(customize-set-variable 'eyebrowse-keymap-prefix (kbd "C-c C-v"))
+(global-set-key (kbd "C-c C-v ;") 'eyebrowse-create-named-window-config)
 (setq eyebrowse-new-workspace t)
-(global-set-key (kbd "C-c C-w ;") 'eyebrowse-create-named-window-config)
 (eyebrowse-mode t)
 
- (defun jc-run-command-other-frame (command)
-   "Run COMMAND in a new frame."
-   (interactive "CC-x 5 M-x ")
-   (select-frame (make-frame))
-   (call-interactively command))
+
+
+(defun jc-run-command-other-frame (command)
+  "Run COMMAND in a new frame."
+  (interactive "CC-x 5 M-x ")
+  (select-frame (make-frame))
+  (call-interactively command))
 (global-set-key "\C-x5\M-x" 'jc-run-command-other-frame)
 
  (defun jc-run-command-other-window (command)
