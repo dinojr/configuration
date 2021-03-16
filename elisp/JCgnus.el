@@ -235,7 +235,7 @@ the variable `gnus-move-split-methods' for finding a default target."
 	 (address "julien.cubizolles@ac-paris.fr")
 	 (signature-file "~/configuration/dotfiles/signature-pro.txt")
 	 ("X-Message-SMTP-Method" "smtp smtpbyod.ac-paris.fr 587 jcubizolles")
-	 ("Gcc" "nnimap+FreeOffline:ac-paris.fr")
+	 ;; ("Gcc" "nnimap+FreeOffline:ac-paris.fr")
 	 (x-identity "professionnel")
 	 )
 	((header "from" ".*@monlycee.net")
