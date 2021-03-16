@@ -18,14 +18,10 @@
 (setq aw-keys '(?q ?s ?d ?f ?g ?h ?j ?k ?l))
 (setq aw-dispatch-always t)
 
-
-
-(customize-set-variable 'eyebrowse-keymap-prefix (kbd "C-c C-v"))
+(setq 'eyebrowse-keymap-prefix (kbd "C-c C-v"))
 (global-set-key (kbd "C-c C-v ;") 'eyebrowse-create-named-window-config)
 (setq eyebrowse-new-workspace t)
 (eyebrowse-mode t)
-
-
 
 (defun jc-run-command-other-frame (command)
   "Run COMMAND in a new frame."
