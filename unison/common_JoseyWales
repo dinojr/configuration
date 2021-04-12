@@ -77,6 +77,7 @@ path = wilk/org/org-caldav-.*\.el
 ## Data not to be synchronized
 # Directories
 ignore = Name {Library physics mathematics}
+ignore = Name {visioconf}
 ignore = Name {scientific american 1}
 ignore = Name {upsprive.prepas.org}
 ignore = Path wilk/enseignement/2004-2005
@@ -122,6 +123,8 @@ ignore = Path wilk/enseignement/2019-2020/copies-KINGSTON
 ignore = Path wilk/.unison/default.prf
 ignore = Path wilk/bin/asy
 ignore = Name {fiche_bilan_DS.fmt}
+ignore = Name {trombinoscope/*.JPG}
+ignore = Name {trombinoscope/*.jpg}
 ignore = Name {rubber.cache}
 ignore = Name {,.}*{.tex~}
 ignore = Name {DEADJOE}
