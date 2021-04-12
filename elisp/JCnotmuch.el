@@ -1,6 +1,6 @@
 ;; ~/.emacs.d/JCnotmuch.el -*- mode: emacs-lisp-*-
 (require 'notmuch)
-
+(setq mail-user-agent 'gnus-user-agent)
 (defun jc-notmuch-file-to-group (file)
   (let ((group (directory-file-name (file-name-directory file))))
     (if (string-match "Local" group)
