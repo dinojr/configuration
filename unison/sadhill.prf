@@ -1,0 +1,13 @@
+# ~/.unison/lago.prf
+# Unison preferences
+label = sadhill laptop
+#Roots of the synchronization
+root = /home/
+root = ssh://sadhill//home/
+
+log = true
+logfile = /home/wilk/.unison/unison.log
+
+## Include common settings for profiles no matter where they are
+## invoked (client or server)
+include common_JoseyWales
