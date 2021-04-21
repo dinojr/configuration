@@ -5,15 +5,15 @@
   <property name="minimumPressure" value="0.05000000"/>
   <property name="pressureMultiplier" value="1.00000000"/>
   <property name="zoomGesturesEnabled" value="true"/>
-  <property name="selectedToolbar" value="Floating Toolbox (experimental) Copy"/>
-  <property name="lastSavePath" value="/home/wilk/enseignement/2020-2021/visionconf"/>
-  <property name="lastOpenPath" value="/home/wilk/enseignement/2020-2021/visionconf"/>
+  <property name="selectedToolbar" value="Right hand Note Taking Copy"/>
+  <property name="lastSavePath" value="/media/wilk/torino/copies/DM/DM09"/>
+  <property name="lastOpenPath" value="/media/wilk/torino/copies/DM/DM09"/>
   <property name="lastImagePath" value="file:///home/wilk/enseignement/2019-2020/devoirs/DS/DS07-energie-lorentz-redox/images"/>
   <property name="zoomStep" value="10.00000000"/>
   <property name="zoomStepScroll" value="2.00000000"/>
   <property name="displayDpi" value="72"/>
-  <property name="mainWndWidth" value="1304"/>
-  <property name="mainWndHeight" value="959"/>
+  <property name="mainWndWidth" value="684"/>
+  <property name="mainWndHeight" value="707"/>
   <property name="maximized" value="true"/>
   <property name="showToolbar" value="true"/>
   <property name="showSidebar" value="false"/>
@@ -73,7 +73,7 @@
   <property name="preloadPagesAfter" value="5"/>
   <!--Config for new pages-->
   <property name="eagerPageCleanup" value="true"/>
-  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSize=false&#10;copyLastPageSettings=true&#10;size=841,000000x595,000000&#10;backgroundType=plain&#10;backgroundColor=#ff1c1d25&#10;"/>
+  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSize=true&#10;copyLastPageSettings=false&#10;size=841,000000x595,000000&#10;backgroundType=lined&#10;backgroundColor=#ffffffff&#10;"/>
   <property name="sizeUnit" value="cm"/>
   <property name="audioFolder" value=""/>
   <property name="audioInputDevice" value="-1"/>
@@ -105,7 +105,7 @@
   <property name="stabilizerCuspDetection" value="true"/>
   <property name="stabilizerFinalizeStroke" value="true"/>
   <property name="latexSettings.autoCheckDependencies" value="true"/>
-  <property name="latexSettings.globalTemplatePath" value="/usr/bin/../share/xournalpp/resources/default_template.tex"/>
+  <property name="latexSettings.globalTemplatePath" value="/usr/share/xournalpp/resources/default_template.tex"/>
   <property name="latexSettings.genCmd" value="pdflatex -interaction=nonstopmode '{}'"/>
   <property name="font" font="Ubuntu Mono" size="0.00000000"/>
   <data name="buttonConfig">
@@ -129,10 +129,10 @@
       <attribute name="tool" type="string" value="none"/>
     </data>
     <data name="stylus">
-      <attribute name="tool" type="string" value="hand"/>
+      <attribute name="tool" type="string" value="showFloatingToolbox"/>
     </data>
     <data name="stylus2">
-      <attribute name="tool" type="string" value="showFloatingToolbox"/>
+      <attribute name="tool" type="string" value="hand"/>
     </data>
     <data name="touch">
       <attribute name="device" type="string" value=""/>
@@ -259,11 +259,11 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="pen">
-      <attribute name="color" type="hex" value="ff8000"/>
+      <attribute name="color" type="hex" value="ff0000"/>
       <attribute name="drawingType" type="string" value="strokeRecognizer"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
-      <attribute name="size" type="string" value="THIN"/>
+      <attribute name="size" type="string" value="MEDIUM"/>
       <attribute name="style" type="string" value="plain"/>
     </data>
     <data name="playObject">
