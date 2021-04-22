@@ -65,6 +65,7 @@ path = wilk/configuration/dotfiles/dotnetrc
 path = wilk/.netrc
 path = wilk/.dovecotrc
 path = wilk/.offlineimaprc
+path = wilk/.offlineimap.py
 path = wilk/.asynk
 path = wilk/diary
 path = wilk/.emacs_workgroups
