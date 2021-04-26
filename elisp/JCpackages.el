@@ -8,13 +8,17 @@
     '(load "paradox-token"))
   )
 
-(setq package-archives '(("ELPA" . "http://tromey.com/elpa/")
-			 ("melpa" . "https://melpa.org/packages/")
-			 ("gnu" . "http://elpa.gnu.org/packages/")
-			 ("org" . "http://orgmode.org/elpa/")
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+			 ("gnu" . "https://elpa.gnu.org/packages/")
+			 ("org" . "https://orgmode.org/elpa/")
 			 ;; ("marmalade" . "https://marmalade-repo.org/packages/")
 			  ;; ("sunrise" . "http://joseito.republika.pl/sunrise-commander/")
 			 ))
+
+(setq package-archive-priorities
+      '(("melpa" . 20)
+        ("org" . 10)
+        ("gnu" . 0)))
 
 (setq paradox-execute-asynchronously t)
 
