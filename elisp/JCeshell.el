@@ -4,3 +4,10 @@
 
 (setq exec-path (append exec-path '("~/bin/" "/usr/local/texlive/current/bin/x86_64-linux/")))
 (setenv "PATH" (concat (getenv "PATH") ":~/bin/" ":/usr/local/texlive/current/bin/x86_64-linux/"))
+
+(use-package eshell-syntax-highlighting
+  :after esh-mode
+  :demand t ;; Install if not already installed.
+  :config
+  ;; Enable in all Eshell buffers.
+  (eshell-syntax-highlighting-global-mode +1))
