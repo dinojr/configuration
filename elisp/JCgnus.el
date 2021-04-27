@@ -118,6 +118,20 @@ the variable `gnus-move-split-methods' for finding a default target."
 
 (require 'gnus-msg)
 
+(defun jc-gnus-message (id)
+  "Compose a new message.
+Start Gnus if it's not already running.
+Change message identity to ID with gnus-identities-change."
+  (interactive
+   (list (completing-read  "Identity: " (gnus-identities-list) nil 1 )))
+  (if (or (not (fboundp 'gnus-alive-p))
+          (not (gnus-alive-p)))
+      (gnus))
+  (gnus-group-mail)
+  (gnus-identities-change id)
+  )
+
+
 
 
 (defun jc-gnus-article-header-value (header) 
@@ -215,7 +229,7 @@ the variable `gnus-move-split-methods' for finding a default target."
         (regexp-opt '("lago" "touco"))))
 
 ;; Raccourcis
-(global-set-key "\C-cm" 'gnus-group-mail)
+(global-set-key "\C-cm" 'jc-gnus-message)
 
 (with-eval-after-load 'gnus-sum
   (define-key gnus-summary-mode-map (kbd "B a") 'jc-gnus-summary-copy-and-expire-article)
