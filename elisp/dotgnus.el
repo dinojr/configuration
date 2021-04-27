@@ -672,56 +672,31 @@
 (gnus-add-configuration
  '(article
    (horizontal 1.0
-	       (vertical .33 (group 1.0))
+	       (vertical 45
+			 (group 1.0))
 	       (vertical 1.0
-			 (summary 1.0 point)
-			 (article .7 1.0)))))
-
+			 (summary 0.25 point)
+			 (article 1.0)))))
 (gnus-add-configuration
- '(message
+ '(summary
    (horizontal 1.0
-	       (vertical .33 (group 1.0))
+	       (vertical 45
+			 (group 1.0))
 	       (vertical 1.0
-			 (summary 1.0)
-			 (message .7 point)))))
-(gnus-add-configuration
- '(post
-   (horizontal 1.0
-	       (vertical .33 (group 1.0))
-	       (vertical 1.0
-			 (summary 1.0)
-			 (post .7 point)))))
-
-(gnus-add-configuration
- '(reply
-   (horizontal 1.0
-	       (vertical .33 (group 1.0))
-	       (vertical 1.0
-			 (summary 1.0)
-			 (message .7 point)))))
+			 (summary 1.0 point)))))
 
 (gnus-add-configuration
  '(reply-yank
    (horizontal 1.0
-	       (vertical .33 (group 1.0))
+	       (vertical 45
+			 (group 1.0))
 	       (vertical 1.0
-			 (summary 1.0)
-			 (message .7 point)))))
+			 (vertical 1.0
+				   (horizontal .3 (summary 1.0))
+				   (horizontal 1.0
+					       (message 1.0 point)
+					       (article .5)))))))
 
-(gnus-add-configuration
- '(forward
-   (horizontal 1.0
-	       (vertical .33 (group 1.0))
-	       (vertical 1.0
-			 (summary 1.0)
-			 (message .7 point)))))
-
-
-(gnus-add-configuration
- '(summary
-   (horizontal 1.0
-	       (vertical .33 (group 1.0))
-	       (vertical 1.0 (summary 1.0 point)))))
 
 (defun wilk-gnus-browse-archived-at ()
   "Browse \"Archived-at\" URL of the current article."
