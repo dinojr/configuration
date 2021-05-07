@@ -78,7 +78,7 @@ path = wilk/org/org-caldav-.*\.el
 ## Data not to be synchronized
 # Directories
 ignore = Name {Library physics mathematics}
-ignore = Name {visioconf}
+# ignore = Name {visioconf}
 ignore = Name {scientific american 1}
 ignore = Name {upsprive.prepas.org}
 ignore = Path wilk/enseignement/2004-2005
