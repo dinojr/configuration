@@ -105,6 +105,7 @@ ignore = Path wilk/centrale-2020
 ignore = Path wilk/.emacs.d/url
 ignore = Path wilk/.emacs.d/elpa
 ignore = Path wilk/info/emacs/asymptote
+ignore = Path wilk/info/science/arduino-1.8.13/
 ignore = Path wilk/texmf/tex/latex/mpsi
 ignore = Path wilk/email/Maildir
 ignore = Name {.git}
