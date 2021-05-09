@@ -159,7 +159,7 @@
 ;(setq org-clock-persist-query-resume nil)
 ;; Save the running clock and all clock history when exiting Emacs, load it on startup
 (setq org-clock-persist t)
-(setq org-clock-x11idle-program-name "xprintidle")
+(setq org-clock-x11idle-program-name "jc-wayland-idle-time")
 (setq org-clock-idle-time 15)
 
 ;; Change task state to STARTED from TODO when clocking in
