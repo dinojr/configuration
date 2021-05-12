@@ -1,11 +1,11 @@
 ;; ~/.emacs.d/JCpdftools.el -*- mode: emacs-lisp-*-
 
 (pdf-tools-install)
-(with-eval-after-load 'org
-  (require 'org-pdfview)
-  (add-to-list 'org-file-apps '("\\.pdf\\'" . (lambda (file link) (org-pdfview-open file))))
-  (add-to-list 'org-file-apps '("\\.pdf::\\([[:digit:]]+\\)\\'" . (lambda (file link) (org-pdfview-open file))))
-  )
+;; (with-eval-after-load 'org
+;;   (require 'org-pdfview)
+;;   (add-to-list 'org-file-apps '("\\.pdf\\'" . (lambda (file link) (org-pdfview-open file))))
+;;   (add-to-list 'org-file-apps '("\\.pdf::\\([[:digit:]]+\\)\\'" . (lambda (file link) (org-pdfview-open file))))
+;;   )
 			      
 ;; (setq revert-without-query (quote (".*.pdf")))
 
