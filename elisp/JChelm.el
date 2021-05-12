@@ -61,6 +61,8 @@
 
 (helm-linum-relative-mode 1)
 
+(setq helm-buffer-max-length nil)
+
 (require 'eyebrowse)
 
 (defun helm-file-eyebrowse (file)
