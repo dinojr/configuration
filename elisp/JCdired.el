@@ -3,8 +3,8 @@
 (require 'dired)
 (require 'dired-aux)
 
-;; (autoload 'dired-async-mode "dired-async.el" nil t)
-;; (dired-async-mode 1)
+(autoload 'dired-async-mode "dired-async.el" nil t)
+(dired-async-mode 1)
 
 (with-eval-after-load 'dired
   (define-key dired-mode-map "z" 'jc-dired-zip-files))
@@ -31,6 +31,8 @@
   ;; mark zip file
   ;; (dired-mark-files-regexp (filename-to-regexp zip-file))
   )
+
+(setq dired-dwim-target t)
 
 (setq dired-listing-switches "-alh")
 
