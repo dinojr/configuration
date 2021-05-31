@@ -2,7 +2,8 @@
 
 ;; Uncomment to load from git
 (add-to-list 'load-path "~/git-repositories/org-mode/lisp")
-(add-to-list 'load-path "~/git-repositories/org-mode/contrib/lisp")
+(add-to-list 'load-path "~/git-repositories/org-contrib/lisp")
+
 (with-eval-after-load 'info
   (add-to-list 'Info-directory-list "~/git-repositories/org-mode/doc/")
   )
