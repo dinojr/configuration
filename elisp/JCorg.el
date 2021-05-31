@@ -250,7 +250,7 @@
 ;; Remove completed items from search results
 (setq org-agenda-skip-timestamp-if-done t)
 ;; Always highlight the current agenda line
-(add-hook 'org-agenda-mode-hook '(lambda () (hl-line-mode 1)))
+(add-hook 'org-agenda-mode-hook '#(lambda () (hl-line-mode 1)))
 (setq org-agenda-ndays 2)
 (setq org-agenda-start-on-weekday nil)
 (setq org-agenda-sticky t)
@@ -359,7 +359,7 @@
 (setq org-global-properties (quote (("STYLE_ALL" . "habit"))))
 ; position the habit graph on the agenda to the right of the default
 (setq org-habit-graph-column 50)
-(run-at-time "08:00" 86400 '(lambda () (setq org-habit-show-habits t)))
+(run-at-time "08:00" 86400 '#(lambda () (setq org-habit-show-habits t)))
 
 ; Divers
 (setq org-special-ctrl-k t) 
