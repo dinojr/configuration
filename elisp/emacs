@@ -4,13 +4,8 @@
 (setq inhibit-startup-screen t)
 (global-font-lock-mode)
 
-=======
 ;; Custom file
 (load "~/.emacs.d/emacs-custom.el")
-
-;;--------------------
-;; Customize end
-;;--------------------
 
 (add-to-list 'load-path "~/configuration/elisp/")
 
