@@ -26,7 +26,7 @@
 ;; (add-hook 'offlineimap-event-hooks (lambda (msg-type &optional action)
 ;;                                      (if (equal "finished\n" msg-type)
 ;;                                          (gnus-group-get-new-news)))) 
-(global-set-key "\C-cg" '(lambda () (interactive)
+(global-set-key "\C-cg" #'(lambda () (interactive)
                            (async-shell-command "offlineimap")))
 
 
