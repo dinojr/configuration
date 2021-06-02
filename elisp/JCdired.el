@@ -20,7 +20,7 @@
              " "
              (concat-string-list 
               (mapcar
-               '#(lambda (filename)
+               #'(lambda (filename)
                   (file-name-nondirectory filename))
                (dired-get-marked-files))))))
 
