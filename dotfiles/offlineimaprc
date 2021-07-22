@@ -1,6 +1,6 @@
 # -*- mode: conf-*-
 [general]
-accounts = FreeOffline,GmailOffline,ENT
+accounts = FreeOffline,GmailOffline
 maxsyncaccounts = 4
 pythonfile = ~/.offlineimap.py
 # ui=Blinkenlights

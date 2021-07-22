@@ -197,9 +197,41 @@
 
 ;; (add-hook 'org-clock-out-hook 'jc/remove-empty-drawer-on-clock-out 'append)
 
+(defun jc-org-clock-remove-old-clock-entry (n)
+  "Remove clock drawers older than N weeks in current subtree."
+  (save-excursion
+    (org-back-to-heading t)
+    (org-map-tree
+     (lambda ()
+       (let ((drawer (org-clock-drawer-name))
+	     (case-fold-search t))
+	 (when drawer
+	   (let ((re org-clock-line-re)
+		 (end (save-excursion (re-search-forward org-clock-drawer-end-re (outline-next-heading) t))))
+	     (while (re-search-forward re end t)
+	       (beginning-of-line)
+	       ;; (kill-whole-line)
+	       ;; (let ((re org-ts-regexp-inactive)
+	       ;; 	     (end (save-excursion (end-of-line)))))
+	       (let ((re "^[ \t]*CLOCK:[ \t]*")
+		     (end (save-excursion (end-of-line))))
+		 (when (re-search-forward re end t)
+		   (print (plist-get (car (cdr (org-element-timestamp-parser))) :day-end))
+		   ;; (progn
+		   (looking-at org-ts-regexp-inactive)
+		   (print (time-to-number-of-days (org-time-since (match-string-no-properties 1))))
+		   (print (/ (time-to-number-of-days (org-time-since (match-string-no-properties 1))) 7) )
+		   (when (>= (/ (time-to-number-of-days (org-time-since (match-string-no-properties 1))) 7) (float n)) (kill-whole-line))
+		   ;; (org-time-since (match-string-no-properties 2))
+		   ;; (print (match-string-no-properties 2))
+		   ;; )
+		   ))))))
+       ;; (org-clock-remove-empty-clock-drawer)
+       ))))
 
-;TAGS
-; Tags with fast selection keys
+
+					;TAGS
+					; Tags with fast selection keys
 (setq org-tag-alist (quote ((:startgroup)
                             ("@enville" . ?v)
                             ("@lycée" . ?l)
@@ -218,7 +250,7 @@
                             ("lycée" . ?L)
                             ("ORG" . ?O)
                             ("loisirs" . ?f)
-;                            ("crypt" . ?c)
+					;                            ("crypt" . ?c)
                             ("Méliné" . ?b)
                             ("Caro" . ?c)
                             ("project" . ?P)
