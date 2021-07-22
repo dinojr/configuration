@@ -197,7 +197,7 @@
 
 ;; (add-hook 'org-clock-out-hook 'jc/remove-empty-drawer-on-clock-out 'append)
 
-(defun jc-org-clock-remove-old-clock-entry (n)
+(defun jc-org-clock-remove-old-clock-entries (n)
   "Remove clock drawers older than N weeks in current subtree."
   (save-excursion
     (org-back-to-heading t)
