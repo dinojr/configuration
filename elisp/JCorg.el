@@ -198,7 +198,9 @@
 ;; (add-hook 'org-clock-out-hook 'jc/remove-empty-drawer-on-clock-out 'append)
 
 (defun jc-org-clock-remove-old-clock-entries (n)
-  "Remove clock drawers older than N weeks in current subtree."
+  "Remove clock entries whose end is older than N weeks in current subtree.
+Skip over dangling clock entries."
+  (interactive "n:number of weeks")
   (save-excursion
     (org-back-to-heading t)
     (org-map-tree
@@ -207,27 +209,18 @@
 	     (case-fold-search t))
 	 (when drawer
 	   (let ((re org-clock-line-re)
-		 (end (save-excursion (re-search-forward org-clock-drawer-end-re (outline-next-heading) t))))
+		 (end (save-excursion (re-search-forward org-clock-drawer-end-re (save-excursion (org-end-of-subtree)) nil)))
+		 )
 	     (while (re-search-forward re end t)
-	       (beginning-of-line)
-	       ;; (kill-whole-line)
-	       ;; (let ((re org-ts-regexp-inactive)
-	       ;; 	     (end (save-excursion (end-of-line)))))
-	       (let ((re "^[ \t]*CLOCK:[ \t]*")
-		     (end (save-excursion (end-of-line))))
-		 (when (re-search-forward re end t)
-		   (print (plist-get (car (cdr (org-element-timestamp-parser))) :day-end))
-		   ;; (progn
-		   (looking-at org-ts-regexp-inactive)
-		   (print (time-to-number-of-days (org-time-since (match-string-no-properties 1))))
-		   (print (/ (time-to-number-of-days (org-time-since (match-string-no-properties 1))) 7) )
-		   (when (>= (/ (time-to-number-of-days (org-time-since (match-string-no-properties 1))) 7) (float n)) (kill-whole-line))
-		   ;; (org-time-since (match-string-no-properties 2))
-		   ;; (print (match-string-no-properties 2))
-		   ;; )
-		   ))))))
-       ;; (org-clock-remove-empty-clock-drawer)
-       ))))
+	       (skip-chars-forward " \t\r")
+	       (looking-at org-tr-regexp-both)
+
+	       (when (>= (/ (time-to-number-of-days (org-time-since (match-string-no-properties 2))) 7) (float n)) (kill-whole-line))
+
+	       ))))))
+    (org-clock-remove-empty-clock-drawer)
+    ))
+;; ))
 
 
 					;TAGS
