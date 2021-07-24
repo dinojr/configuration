@@ -200,12 +200,12 @@
 (defun jc-org-clock-remove-old-clock-entries (n)
   "Remove clock entries whose end is older than N weeks in current subtree.
 Skip over dangling clock entries."
-  (interactive "n:number of weeks")
+  (interactive "nnumber of weeks: ")
   (save-excursion
     (org-back-to-heading t)
     (org-map-tree
      (lambda ()
-       (let ((drawer (org-clock-drawer-name))
+       (let ((drawer (re-search-forward org-clock-drawer-start-re (save-excursion (org-end-of-subtree)) t))
 	     (case-fold-search t))
 	 (when drawer
 	   (let ((re org-clock-line-re)
@@ -214,14 +214,10 @@ Skip over dangling clock entries."
 	     (while (re-search-forward re end t)
 	       (skip-chars-forward " \t\r")
 	       (looking-at org-tr-regexp-both)
-
 	       (when (>= (/ (time-to-number-of-days (org-time-since (match-string-no-properties 2))) 7) (float n)) (kill-whole-line))
-
 	       ))))))
     (org-clock-remove-empty-clock-drawer)
     ))
-;; ))
-
 
 					;TAGS
 					; Tags with fast selection keys
