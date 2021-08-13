@@ -108,7 +108,7 @@
 ;(setq nnimap-fetch-partial-articles "text/")
 (setq nnimap-fetch-partial-articles nil)
 
-(setq gnus-ignored-from-addresses (regexp-opt '("j.cubizolles@free.fr" "j.cubizolles@gmail.com")))
+(setq gnus-ignored-from-addresses (regexp-opt '("j.cubizolles@free.fr" "j.cubizolles@gmail.com" "julien.cubizolles@ac-paris.fr")))
 
 (setq bbdb/gnus-split-nomatch-function nil
       bbdb/gnus-split-default-group nil
