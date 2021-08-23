@@ -37,8 +37,8 @@
 
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
-(setq org-insert-todo-heading-respect-content t)
-(setq org-insert-heading-respect-content t)
+;; (setq org-insert-todo-heading-respect-content t)
+;; (setq org-insert-heading-respect-content t)
 (setq org-src-fontify-natively t)
 
 (setq org-special-ctrl-a/e t)
