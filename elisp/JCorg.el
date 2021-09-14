@@ -90,6 +90,10 @@
 ;; (setq org-caldav-files (quote ("~/org/orgfiles/maison.org" "~/org/orgfiles/vuibert.org" "~/org/orgfiles/lycee.org" "~/org/orgfiles/science.org" "~/org/orgfiles/loisirs.org" "~/org/orgfiles/info.org" "~/org/orgfiles/famille.org")))
 ;; (setq org-icalendar-timezone "Europe/Paris")
 
+;; Export to ipynb notebooks
+(add-to-list 'load-path "~/git-repositories/ox-ipynb")
+(require 'ox-ipynb)
+
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((R . t)
@@ -104,6 +108,7 @@
    (ocaml . nil)
    (octave . t)
    (python . t)
+   (ipython . t)
    (ruby . t)
    (screen . nil)
    (shell . t)
