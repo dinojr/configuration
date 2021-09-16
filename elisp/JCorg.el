@@ -833,3 +833,5 @@ Skip over dangling clock entries."
                            'org-review-insert-last-review)))
 
 (global-set-key (kbd "<f9>") 'org-agenda)
+
+(require 'org-duration)

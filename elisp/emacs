@@ -68,7 +68,7 @@
 (load "JCgnuplot.el")
 (load "JCdumbjump.el")
 (load "JCbindings.el")
-(load "JCpocket.el")
+;; (load "JCpocket.el")
 ;; (load "JCasymptote.el")
 (load "general_stuff.el")
 
