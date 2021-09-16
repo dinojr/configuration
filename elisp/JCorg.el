@@ -637,7 +637,9 @@ Skip over dangling clock entries."
 ;; Capture
 (setq org-capture-templates
       (quote (
-	      ("t" "todo" entry (file+headline "~/org/orgfiles/refile.org" "Tâches") "* TODO  %? %^G\n DEADLINE: %^t" :clock-resume t :kill-buffer t)
+	      ("r" "refile")
+	      ("rt" "todo travail" entry (file+headline "~/org/orgfiles/refile.org" "Tâches travail") "* TODO  %? %^G\n DEADLINE: %^t" :clock-resume t :kill-buffer t)
+	      ("ri" "todo info" entry (file+headline "~/org/orgfiles/refile.org" "Tâches info") "* TODO  %? %^G\n DEADLINE: %^t" :clock-resume t :kill-buffer t)
 	      ("c" "Contacts" entry (file "~/org/orgfiles/contacts.org") "* %(org-contacts-template-name)\n :PROPERTIES: :EMAIL: %(org-contacts-template-email)\n :END:")
 	      ("n" "note" entry (file+headline "~/org/orgfiles/refile.org" "Notes") "* %?\n %^C" :clock-resume t)
 	      ("a" "courses" checkitem (file+headline "~/org/orgfiles/maison.org" "Courses") "%? %^C")
@@ -645,11 +647,11 @@ Skip over dangling clock entries."
 	      ("l" "À lire" item (file+headline "~/org/orgfiles/loisirs.org" "À lire") "%?\n %^C")
 	      ("v" "À voir" item (file+headline "~/org/orgfiles/loisirs.org" "À voir") "%?\n %u\n %^C")
 	      ("s" "CDs à acheter" checkitem (file+headline "~/org/orgfiles/loisirs.org" "CDs à acheter") "%?\n %^C")
-	      ("m" "maintenance info" entry (file+datetree "~/org/orgfiles/info.org") "* %?")
-	      ("M" "maintenance domestique" entry (file+datetree "~/org/orgfiles/maison.org") "* %?")
+	      ("m" "maintenance")
+	      ("mi" "maintenance info" entry (file+datetree "~/org/orgfiles/info.org") "* %?")
+	      ("md" "maintenance domestique" entry (file+datetree "~/org/orgfiles/maison.org") "* %?")
 	      ("S" "Santé" entry (file+datetree "~/org/orgfiles/sante.org" "Chronologie") "* %?")
 	      ("b" "bios" item (file+headline "~/org/orgfiles/lycee.org" "Bios") "%?\n %^C")
-	      ("T" "test" item (file+headline "~/org/orgfiles/test.org" "Test") " [ ] %?")
 	      ("p" "password" entry (file "~/org/orgfiles/pw.gpg") "* %^{Title}\n  %^{URL}p %^{USERNAME}p %^{PASSWORD}p")
 	      )))
 
