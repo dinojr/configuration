@@ -3,6 +3,10 @@
 ;; Default font
 (set-face-attribute 'default nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant 'normal :weight 'normal :height 110 :width 'normal :foundry "unknown" :family "DejaVu Sans Mono")
 
+;; (set-face-attribute 'default nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant 'normal :weight 'normal :height 110 :width 'normal :foundry "unknown" :family "Droid Sans Mono")
+(set-fontset-font "fontset-default" 'symbol "Noto Color Emoji")
+(set-fontset-font "fontset-default" 'symbol "Symbola" nil 'append)
+
 (add-to-list 'custom-theme-load-path "/home/wilk/git-repositories/dracula-emacs/")
 
 (doom-themes-org-config)
