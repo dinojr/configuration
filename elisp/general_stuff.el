@@ -88,8 +88,12 @@
 ;; (set-face-foreground 'highlight-indent-guides-character-face charface)
 
 (use-package all-the-icons
-  :config (add-hook 'dired-mode-hook 'all-the-icons-dired-mode))
+  :config (lambda ()
+	    (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
+	    (add-hook 'gnus-started-hook 'all-the-icons-gnus-setup))
+  :ensure t)
 ;; M-x all-the-icons-install-fonts
 
 (use-package beacon
   :config (beacon-mode 1))
+
