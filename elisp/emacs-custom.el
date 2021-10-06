@@ -57,7 +57,8 @@
  '(reftex-toc-include-labels t)
  '(reftex-toc-split-windows-horizontally t)
  '(safe-local-variable-values
-   '((org-confirm-babel-evaluate)
+   '((eval org-sbe "initialisation")
+     (org-confirm-babel-evaluate)
      (TeX-PDF-from-DVI . Dvips)
      (org-download-image-dir . "./Resources/"))))
 (custom-set-faces
