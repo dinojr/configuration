@@ -3,7 +3,7 @@
 #Port number
 sshargs = -p 2040
 #Directories
-path = wilk/Bibliothèque calibre
+
 path = wilk/enseignement
 path = wilk/centrale-2020
 path = wilk/git-repositories
@@ -85,6 +85,7 @@ ignore = Name {Library physics mathematics}
 # ignore = Name {visioconf}
 ignore = Name {scientific american 1}
 ignore = Name {upsprive.prepas.org}
+ignore = Name {Koyoharu Gotouge}
 ignore = Path wilk/enseignement/2004-2005
 ignore = Path wilk/enseignement/2005-2006
 ignore = Path wilk/enseignement/2006-2007
