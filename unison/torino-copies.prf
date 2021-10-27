@@ -3,7 +3,7 @@
 label = torino-copies
 #Roots of the synchronization
 root = /media/wilk/torino/copies/
-root = /home/wilk/enseignement/2020-2021/copies/
+root = /home/wilk/enseignement/2021-2022/copies/
 
 fat=true
 ignorecase=false
@@ -13,7 +13,7 @@ owner = true
 group = true
 times = false
 mountpoint = DS
-nodeletion = /home/wilk/enseignement/2020-2021/copies/
+nodeletion = /home/wilk/enseignement/2021-2022/copies/
 
 #force = newer
 sortbysize = true
@@ -23,6 +23,3 @@ watch=false
 
 log = true
 logfile = /home/wilk/.unison/unison-copies.log
-
-ignore = Path {DM/DM02}
-ignore = Path {DM/DM03}
