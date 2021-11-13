@@ -387,7 +387,8 @@ Skip over dangling clock entries."
 (setq org-stuck-projects (quote ("projet/!-DONE-CANCELED" nil ("NEXT") "")))
 
 ; Enable habit tracking (and a bunch of other modules)
-(setq org-modules (quote (ol-w3m ol-bbdb ol-bibtex ol-docview ol-gnus ol-info ol-irc ol-mhe ol-rmail ol-eww org-drill)))
+;; (setq org-modules (quote (ol-w3m ol-bbdb ol-bibtex ol-docview ol-gnus ol-info ol-irc ol-mhe ol-rmail ol-eww org-drill)))
+(setq org-modules (quote (ol-w3m ol-bbdb ol-bibtex ol-docview ol-gnus ol-info ol-irc ol-mhe ol-rmail ol-eww)))
 
 ; global STYLE property values for completion
 (setq org-global-properties (quote (("STYLE_ALL" . "habit"))))
