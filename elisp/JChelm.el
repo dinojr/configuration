@@ -138,6 +138,9 @@
 ;;; For `helm-find-files'
 (define-key helm-find-files-map (kbd "C-c C-e") #'helm-file-run-ace-window)
 
+(add-to-list 'helm-completing-read-handlers-alist '(write-file . helm-read-file-name-handler-1))
+(add-to-list 'helm-completing-read-handlers-alist '(basic-save-buffer . helm-read-file-name-handler-1))
+
 
 (setq helm-org-show-filename t)
 
