@@ -176,6 +176,8 @@
 
 (setq org-clock-idle-time 10)
 
+(setq org-clock-mode-line-total 'today)
+
 ;; Change task state to STARTED from TODO when clocking in
 (defun jc/clock-in-to-started (kw)
   "Switch task from TODO to STARTED when clocking in"
