@@ -28,7 +28,8 @@
 ;; If you are expereicing the laggy issue, especially while editing remote files
 ;; with tramp, please try `file-name' style.
 ;; Please refer to https://github.com/bbatsov/projectile/issues/657.
-(setq doom-modeline-buffer-file-name-style 'truncate-upto-project)
+;; (setq doom-modeline-buffer-file-name-style 'truncate-upto-project)
+(setq doom-modeline-buffer-file-name-style 'truncate-all)
 
 ;; Whether display icons in mode-line or not.
 ;; (setq doom-modeline-icon (display-graphic-p))
