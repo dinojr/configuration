@@ -88,6 +88,7 @@ ignore = Name {Library physics mathematics}
 ignore = Name {scientific american 1}
 ignore = Name {upsprive.prepas.org}
 ignore = Name {Koyoharu Gotouge}
+ignore = Name {recover-usb}
 ignore = Path wilk/enseignement/2004-2005
 ignore = Path wilk/enseignement/2005-2006
 ignore = Path wilk/enseignement/2006-2007
