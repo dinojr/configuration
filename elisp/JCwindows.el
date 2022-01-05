@@ -13,6 +13,7 @@
 ;; (setq switch-window-qwerty-shortcuts '("q" "s" "d" "f" "j" "k" "l" "m" "a" "z" "i" "o"))
 
 (require 'ace-window)
+(require 'transpose-frame)
 (global-set-key (kbd "C-x o") 'ace-window)
 
 (setq aw-keys '(?q ?s ?d ?f ?g ?h ?j ?k ?l))
