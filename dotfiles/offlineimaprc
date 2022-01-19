@@ -1,9 +1,36 @@
 # -*- mode: conf-*-
 [general]
-accounts = FreeOffline,GmailOffline,ENT
+accounts = FreeOffline,GmailOffline,ENT,Academie
 maxsyncaccounts = 4
 pythonfile = ~/.offlineimap.py
 # ui=Blinkenlights
+
+[Account Academie]
+localrepository = AcademieLocal
+remoterepository = AcademieRemote
+autorefresh = 3
+quick = 10
+synclabels = yes
+#maxage = 365
+postsynchook = /home/wilk/configuration/dotfiles/post-sync-hook.sh
+
+[Repository AcademieLocal]
+type = IMAP
+preauthtunnel = /usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Academie:LAYOUT=fs
+#localfolders = ~/email/Maildir/Academie
+
+# preauthtunnel = /usr/lib/dovecot/imap -c $HOME/.dovecotrc
+
+[Repository AcademieRemote]
+type = IMAP
+remotehost = mailin.ac-paris.fr
+remoteuser = jcubizolles
+# folderfilter = lambda foldername: foldername not in ['anciens']
+folderfilter = lambda foldername: foldername not in ['anciens','Emailed Contacts']
+realdelete = yes
+# holdconnectionopen = true
+# keepalive = 60
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 
 [Account FreeOffline]
 localrepository = FreeLocal
@@ -12,6 +39,7 @@ autorefresh = 3
 quick = 10
 synclabels = yes
 #maxage = 365
+postsynchook = /home/wilk/configuration/dotfiles/post-sync-hook.sh
 
 [Repository FreeLocal]
 type = IMAP

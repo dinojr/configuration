@@ -193,7 +193,17 @@
 		;; (nnir-search-engine imap)
 		(nnir-search-engine notmuch)
 		;; (nnir-notmuch-remove-prefix "/home/wilk/email/Maildir/Free/")
-		)	
+		)
+	(nnimap "Academie"
+		(nnimap-stream shell)
+		;; (nnimap-shell-program "/usr/lib/dovecot/imap -c /home/wilk/.dovecotrc-free")
+		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Academie:LAYOUT=fs")
+		(nnimap-split-methods default)
+		(nnimap-inbox "INBOX")
+		;; (nnir-search-engine imap)
+		(nnir-search-engine notmuch)
+		;; (nnir-notmuch-remove-prefix "/home/wilk/email/Maildir/Free/")
+		)		
 	;; (nnnotmuch "")
 	;; (nnfolder "archive"
 	;; 	(nnfolder-inhibit-expiry t)
