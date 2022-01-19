@@ -23,7 +23,6 @@
 
 (require 'org)
 
-(require 'cl)
 (require 'notifications)
 
 (setq org-export-backends '(ascii html icalendar latex beamer odt))
