@@ -268,6 +268,8 @@ Skip over dangling clock entries."
               ("DONE" ("WAITING") ("CANCELED") ("NEXT")))))
 
 
+(advice-add 'org-revert-all-org-buffers :after #'org-clock-load)
+
 ;; Agenda views
 
 ;; Toujours suivre le fichier
