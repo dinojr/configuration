@@ -836,4 +836,6 @@ Skip over dangling clock entries."
 
 (global-set-key (kbd "<f9>") 'org-agenda)
 
+(org-defkey org-mode-map "\C-c;" 'org-time-stamp-inactive)
+
 (require 'org-duration)
