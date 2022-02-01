@@ -164,6 +164,8 @@
 ;(setq org-remember-clock-out-on-exit nil)
 ;; Resume clocking tasks when emacs is restarted
 (org-clock-persistence-insinuate)
+(add-hook 'org-clock-in-hook 'org-clock-save)
+(add-hook 'org-clock-out-hook 'org-clock-save)
 ;; Yes it's long... but more is better ;)
 (setq org-clock-history-length 10)
 ;; Resume clocking task on clock-in if the clock is open
@@ -269,6 +271,7 @@ Skip over dangling clock entries."
 
 
 (advice-add 'org-revert-all-org-buffers :after #'org-clock-load)
+(advice-add 'org-save-all-org-buffers :after #'org-clock-save)
 
 ;; Agenda views
 
