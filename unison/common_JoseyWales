@@ -5,13 +5,13 @@ sshargs = -p 2040
 #Directories
 
 path = wilk/enseignement
+path = wilk/enseignement/manips/tipe
 path = wilk/centrale-2020
 path = wilk/git-repositories
 path = wilk/texmf
 path = wilk/email
 path = wilk/org
 path = wilk/.emacs.d/persist/
-path = wilk/.emacs.d/org-clock-save.el
 path = wilk/.emacs.d
 path = wilk/.emacs.d-custom
 path = wilk/.bogofilter
