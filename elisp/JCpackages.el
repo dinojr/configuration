@@ -10,7 +10,7 @@
 
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
 			 ("gnu" . "https://elpa.gnu.org/packages/")
-			 ("org" . "https://orgmode.org/elpa/")
+			 ;; ("org" . "https://orgmode.org/elpa/")
 			 ;; ("marmalade" . "https://marmalade-repo.org/packages/")
 			  ;; ("sunrise" . "http://joseito.republika.pl/sunrise-commander/")
 			 ))
