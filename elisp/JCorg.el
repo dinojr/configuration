@@ -1,7 +1,7 @@
 ;; ~/emacs.d/JCorg.el -*- mode: emacs-lisp-*-
 
 ;; Uncomment to load from git
-;; (add-to-list 'load-path "~/git-repositories/org-mode/lisp")
+(add-to-list 'load-path "~/git-repositories/org-mode/lisp")
 (add-to-list 'load-path "~/git-repositories/org-contrib/lisp")
 
 (with-eval-after-load 'info
