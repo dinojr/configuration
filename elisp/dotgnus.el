@@ -721,14 +721,6 @@
       (setq url (gnus-replace-in-string url "^<\\|>$" ""))
       (browse-url url))))
 
-
-
-
-(if (string-match "g\\(we\\|ma\\)ne" (buffer-name))
-  (local-set-key [(control return)] 'wilk-gnus-browse-archived-at)
-  (local-unset-key [(control return)]))
-
-
 (defun wilk-gnus-browse-gwene ()
 "Start a browser for current gwene article"
   (interactive)
@@ -741,9 +733,6 @@
 	(re-search-forward "^Archived-at: <\\(.*\\)>$")
 	(browse-url (match-string 1))
 	(gnus-summary-show-article)))))
-
-
-
 
 ;; Eric Fraga 
 ;; gnus-select-method '(nnnil "")
