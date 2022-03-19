@@ -1,5 +1,6 @@
 ;; ~/.gnus.el -*- mode: emacs-lisp-*-
 (require 'gnus)
+(require 'gnus-search)
 ;; (require 'gnuslog)
 
 
@@ -91,17 +92,25 @@
 (setq nnimap-authinfo-file "~/.authinfo")
 
 ;; (setq nnir-notmuch-remove-prefix (regexp-opt '("/home/wilk/email/Local/" "/home/wilk/email/Local/archive/" "/home/wilk/email/Maildir/Free" "/home/wilk/email/Maildir/Free"))) ;; ne marche pas
-(setq nnir-notmuch-remove-prefix "/home/wilk/email/Local/") ;; marche
+
 ;; (setq gnus-search-notmuch-remove-prefix "/home/wilk/email/Local/")
 ;; (setq nnir-notmuch-remove-prefix "/home/wilk/email/Maildir/Free/") ;; ne marche pas
 
-(setq gnus-select-method 
+(setq gnus-search-default-engines
+      '(;; (nnimap . gnus-search-notmuch)
+	(nnml . gnus-search-notmuch)
+	(nntp . gnus-search-notmuch)
+	(nnimap . gnus-search-imap)
+        (nnselect . gnus-search-nnselect)))
+
+(setq gnus-search-use-parsed-queries t)
+
+(setq gnus-select-method
       '(nnml "Local"
 	     (nnml-directory "~/email/Local")
 	     (nnml-active-file "~/email/Local/active")
 	     (nnml-get-new-mail nil)
-	     (nnir-search-engine notmuch)
-	     )
+	     (gnus-search-notmuch-remove-prefix "/home/wilk/email/Local/"))
       )
 
 ; Pour ne pas télécharger les pièces jointes par défaut
@@ -156,9 +165,11 @@
 	;; 		)
 	(nntp "news.free.fr")
 	(nntp "news.gwene.org"
-	      (nnir-search-engine notmuch))
+	      ;; (nnir-search-engine notmuch)
+	      )
 	(nntp "news.gmane.io"
-	      (nnir-search-engine notmuch))
+	      ;; (nnir-search-engine notmuch)
+	      )
 	;; (nnmaildir "FreeOffline" (directory "~/email/Maildir/Free/"))
 	;; (nnimap "GmailOffline"
 	;; 	(nnimap-stream shell)
@@ -170,9 +181,7 @@
 		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Free:LAYOUT=fs")
 		(nnimap-split-methods default)
 		(nnimap-inbox "INBOX")
-		;; (nnir-search-engine imap)
-		(nnir-search-engine notmuch)
-		;; (nnir-notmuch-remove-prefix "/home/wilk/email/Maildir/Free/")
+		(gnus-search-notmuch-remove-prefix "/home/wilk/email/Maildir/Free/")
 		)
 	(nnimap "GmailOffline"
 		(nnimap-stream shell)
@@ -180,9 +189,7 @@
 		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Gmail:LAYOUT=fs")
 		(nnimap-split-methods default)
 		(nnimap-inbox "INBOX")
-		;; (nnir-search-engine imap)
-		(nnir-search-engine notmuch)
-		;; (nnir-notmuch-remove-prefix "/home/wilk/email/Maildir/Gmail/")
+		(gnus-search-notmuch-remove-prefix "/home/wilk/email/Maildir/Gmail/")
 		)
 	(nnimap "ENT"
 		(nnimap-stream shell)
@@ -190,9 +197,7 @@
 		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/ENT:LAYOUT=fs")
 		(nnimap-split-methods default)
 		(nnimap-inbox "INBOX")
-		;; (nnir-search-engine imap)
-		(nnir-search-engine notmuch)
-		;; (nnir-notmuch-remove-prefix "/home/wilk/email/Maildir/Free/")
+		(gnus-search-notmuch-remove-prefix "/home/wilk/email/Maildir/ENT/")
 		)
 	(nnimap "Academie"
 		(nnimap-stream shell)
@@ -200,9 +205,7 @@
 		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Academie:LAYOUT=fs")
 		(nnimap-split-methods default)
 		(nnimap-inbox "INBOX")
-		;; (nnir-search-engine imap)
-		(nnir-search-engine notmuch)
-		;; (nnir-notmuch-remove-prefix "/home/wilk/email/Maildir/Free/")
+		(gnus-search-notmuch-remove-prefix "/home/wilk/email/Maildir/Academie/")
 		)		
 	;; (nnnotmuch "")
 	;; (nnfolder "archive"
@@ -211,7 +214,7 @@
 	;; 	(nnfolder-active-file "~/email/Local/archive/active")
 	;; 	(nnfolder-get-new-mail nil)
 	;; 	(nnfolder-inhibit-expiry t)
-	;; 	(nnir-search-engine notmuch))
+	;; 	(gnus-search-engine notmuch))
 	))
 
 (setq gnus-update-message-archive-method t)
@@ -221,7 +224,7 @@
                  (nnfolder-active-file "~/email/Local/archive/active")
                  (nnfolder-directory "~/email/Local/archive/")
 		 (nnfolder-get-new-mail nil)
-		 (nnir-search-engine notmuch)
+		 (gnus-search-engine notmuch)
 		 ;; (nnir-notmuch-remove-prefix "/home/wilk/email/Local/archive/")
 		 ))
 (setq nnmail-split-fancy
@@ -372,7 +375,7 @@
 (setq debug-on-error t)
 (setq imap-log t)
 
-(require 'nnir)
+;; (require 'nnir)
 ; pour faire des recherches sur gmane/imap...
 
 
