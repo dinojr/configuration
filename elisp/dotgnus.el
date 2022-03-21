@@ -97,10 +97,9 @@
 ;; (setq nnir-notmuch-remove-prefix "/home/wilk/email/Maildir/Free/") ;; ne marche pas
 
 (setq gnus-search-default-engines
-      '(;; (nnimap . gnus-search-notmuch)
-	(nnml . gnus-search-notmuch)
-	(nntp . gnus-search-notmuch)
+      '((nnml . gnus-search-notmuch)
 	(nnimap . gnus-search-imap)
+	(nndraft . gnus-search-notmuch)
         (nnselect . gnus-search-nnselect)))
 
 (setq gnus-search-use-parsed-queries t)
@@ -111,7 +110,7 @@
 	     (nnml-active-file "~/email/Local/active")
 	     (nnml-get-new-mail nil)
 	     (gnus-search-notmuch-remove-prefix "/home/wilk/email/Local/"))
-      )
+       )
 
 ; Pour ne pas télécharger les pièces jointes par défaut
 ;(setq nnimap-fetch-partial-articles "text/")
@@ -206,7 +205,7 @@
 		(nnimap-split-methods default)
 		(nnimap-inbox "INBOX")
 		(gnus-search-notmuch-remove-prefix "/home/wilk/email/Maildir/Academie/")
-		)		
+		)
 	;; (nnnotmuch "")
 	;; (nnfolder "archive"
 	;; 	(nnfolder-inhibit-expiry t)
@@ -225,7 +224,7 @@
                  (nnfolder-directory "~/email/Local/archive/")
 		 (nnfolder-get-new-mail nil)
 		 (gnus-search-engine notmuch)
-		 ;; (nnir-notmuch-remove-prefix "/home/wilk/email/Local/archive/")
+		 (nnir-notmuch-remove-prefix "/home/wilk/email/Local/archive/")
 		 ))
 (setq nnmail-split-fancy
       '(|
