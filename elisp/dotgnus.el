@@ -99,7 +99,9 @@
 (setq gnus-search-default-engines
       '((nnml . gnus-search-notmuch)
 	(nnimap . gnus-search-imap)
+	(nnfolder . gnus-search-notmuch)
 	(nndraft . gnus-search-notmuch)
+	(nnarchive . gnus-search-notmuch)
         (nnselect . gnus-search-nnselect)))
 
 (setq gnus-search-use-parsed-queries t)
@@ -180,7 +182,6 @@
 		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Free:LAYOUT=fs")
 		(nnimap-split-methods default)
 		(nnimap-inbox "INBOX")
-		(gnus-search-notmuch-remove-prefix "/home/wilk/email/Maildir/Free/")
 		)
 	(nnimap "GmailOffline"
 		(nnimap-stream shell)
@@ -188,7 +189,6 @@
 		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Gmail:LAYOUT=fs")
 		(nnimap-split-methods default)
 		(nnimap-inbox "INBOX")
-		(gnus-search-notmuch-remove-prefix "/home/wilk/email/Maildir/Gmail/")
 		)
 	(nnimap "ENT"
 		(nnimap-stream shell)
@@ -196,7 +196,6 @@
 		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/ENT:LAYOUT=fs")
 		(nnimap-split-methods default)
 		(nnimap-inbox "INBOX")
-		(gnus-search-notmuch-remove-prefix "/home/wilk/email/Maildir/ENT/")
 		)
 	(nnimap "Academie"
 		(nnimap-stream shell)
@@ -204,17 +203,14 @@
 		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Academie:LAYOUT=fs")
 		(nnimap-split-methods default)
 		(nnimap-inbox "INBOX")
-		(gnus-search-notmuch-remove-prefix "/home/wilk/email/Maildir/Academie/")
 		)
-	;; (nnnotmuch "")
-	;; (nnfolder "archive"
-	;; 	(nnfolder-inhibit-expiry t)
-	;; 	(nnfolder-directory "~/email/Local/archive")
-	;; 	(nnfolder-active-file "~/email/Local/archive/active")
-	;; 	(nnfolder-get-new-mail nil)
-	;; 	(nnfolder-inhibit-expiry t)
-	;; 	(gnus-search-engine notmuch))
-	))
+	(nnfolder "archive"
+		  (nnfolder-inhibit-expiry t)
+		  (nnfolder-directory "~/email/Local/archive")
+		  (nnfolder-active-file "~/email/Local/archive/active")
+		  (nnfolder-get-new-mail nil)
+		  (gnus-search-notmuch-remove-prefix "/home/wilk/email/Local/archive/")
+		  (nnfolder-inhibit-expiry t))))
 
 (setq gnus-update-message-archive-method t)
 (setq gnus-message-archive-method
@@ -223,8 +219,7 @@
                  (nnfolder-active-file "~/email/Local/archive/active")
                  (nnfolder-directory "~/email/Local/archive/")
 		 (nnfolder-get-new-mail nil)
-		 (gnus-search-engine notmuch)
-		 (nnir-notmuch-remove-prefix "/home/wilk/email/Local/archive/")
+		 (gnus-search-notmuch-remove-prefix "/home/wilk/email/Local/archive/")
 		 ))
 (setq nnmail-split-fancy
       '(|
