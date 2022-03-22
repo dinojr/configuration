@@ -1,5 +1,6 @@
 ;; ~/.gnus.el -*- mode: emacs-lisp-*-
 (require 'gnus)
+(require 'gnus-search)
 ;; (require 'gnuslog)
 
 
@@ -91,18 +92,27 @@
 (setq nnimap-authinfo-file "~/.authinfo")
 
 ;; (setq nnir-notmuch-remove-prefix (regexp-opt '("/home/wilk/email/Local/" "/home/wilk/email/Local/archive/" "/home/wilk/email/Maildir/Free" "/home/wilk/email/Maildir/Free"))) ;; ne marche pas
-(setq nnir-notmuch-remove-prefix "/home/wilk/email/Local/") ;; marche
+
 ;; (setq gnus-search-notmuch-remove-prefix "/home/wilk/email/Local/")
 ;; (setq nnir-notmuch-remove-prefix "/home/wilk/email/Maildir/Free/") ;; ne marche pas
 
-(setq gnus-select-method 
+(setq gnus-search-default-engines
+      '((nnml . gnus-search-notmuch)
+	(nnimap . gnus-search-imap)
+	(nnfolder . gnus-search-notmuch)
+	(nndraft . gnus-search-notmuch)
+	(nnarchive . gnus-search-notmuch)
+        (nnselect . gnus-search-nnselect)))
+
+(setq gnus-search-use-parsed-queries t)
+
+(setq gnus-select-method
       '(nnml "Local"
 	     (nnml-directory "~/email/Local")
 	     (nnml-active-file "~/email/Local/active")
 	     (nnml-get-new-mail nil)
-	     (nnir-search-engine notmuch)
-	     )
-      )
+	     (gnus-search-notmuch-remove-prefix "/home/wilk/email/Local/"))
+       )
 
 ; Pour ne pas télécharger les pièces jointes par défaut
 ;(setq nnimap-fetch-partial-articles "text/")
@@ -133,46 +143,15 @@
 
 (setq gnus-secondary-select-methods
       '(
-	;; 	(nnimap "gmail"
-	;;                 (nnimap-address "imap.gmail.com")
-	;; ;		(nnimap-authentificator "j.cubizolles")
-	;; ;               (nnimap-authinfo-file "~/.authinfo")
-	;;                 (nnimap-stream ssl)
-	;; 		(nnir-search-engine imap)
-	;; 		;; (nnimap-split-methods nnimap-split-fancy)
-	;; 		(nnimap-inbox "INBOX")
-	;; 		(nnimap-split-methods default)
-	;; 		)
-	;; 	(nnimap "free"
-	;; 		(nnimap-address "imap.free.fr")
-	;; 		; Ne marche pas sans la ligne suivante
-	;; ;		(nnimap-authentificator "j.cubizolles")
-	;; ;		(nnimap-authinfo-file "~/.authinfo")
-	;; ;		(nnimap-unsplittable-articles (%Deleted %Seen))
-	;; 		(nnir-search-engine imap)
-	;; 		(nnimap-inbox "INBOX")
-	;; 		;; (nnimap-split-methods nnimap-split-fancy)
-	;; 		(nnimap-split-methods default)
-	;; 		)
 	(nntp "news.free.fr")
-	(nntp "news.gwene.org"
-	      (nnir-search-engine notmuch))
-	(nntp "news.gmane.io"
-	      (nnir-search-engine notmuch))
-	;; (nnmaildir "FreeOffline" (directory "~/email/Maildir/Free/"))
-	;; (nnimap "GmailOffline"
-	;; 	(nnimap-stream shell)
-	;; 	(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/Maildir-gmail")
-	;; 	)
+	(nntp "news.gwene.org")
+	(nntp "news.gmane.io")
 	(nnimap "FreeOffline"
 		(nnimap-stream shell)
 		;; (nnimap-shell-program "/usr/lib/dovecot/imap -c /home/wilk/.dovecotrc-free")
 		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Free:LAYOUT=fs")
 		(nnimap-split-methods default)
 		(nnimap-inbox "INBOX")
-		;; (nnir-search-engine imap)
-		(nnir-search-engine notmuch)
-		;; (nnir-notmuch-remove-prefix "/home/wilk/email/Maildir/Free/")
 		)
 	(nnimap "GmailOffline"
 		(nnimap-stream shell)
@@ -180,9 +159,6 @@
 		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Gmail:LAYOUT=fs")
 		(nnimap-split-methods default)
 		(nnimap-inbox "INBOX")
-		;; (nnir-search-engine imap)
-		(nnir-search-engine notmuch)
-		;; (nnir-notmuch-remove-prefix "/home/wilk/email/Maildir/Gmail/")
 		)
 	(nnimap "ENT"
 		(nnimap-stream shell)
@@ -190,9 +166,6 @@
 		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/ENT:LAYOUT=fs")
 		(nnimap-split-methods default)
 		(nnimap-inbox "INBOX")
-		;; (nnir-search-engine imap)
-		(nnir-search-engine notmuch)
-		;; (nnir-notmuch-remove-prefix "/home/wilk/email/Maildir/Free/")
 		)
 	(nnimap "Academie"
 		(nnimap-stream shell)
@@ -200,19 +173,14 @@
 		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Academie:LAYOUT=fs")
 		(nnimap-split-methods default)
 		(nnimap-inbox "INBOX")
-		;; (nnir-search-engine imap)
-		(nnir-search-engine notmuch)
-		;; (nnir-notmuch-remove-prefix "/home/wilk/email/Maildir/Free/")
-		)		
-	;; (nnnotmuch "")
-	;; (nnfolder "archive"
-	;; 	(nnfolder-inhibit-expiry t)
-	;; 	(nnfolder-directory "~/email/Local/archive")
-	;; 	(nnfolder-active-file "~/email/Local/archive/active")
-	;; 	(nnfolder-get-new-mail nil)
-	;; 	(nnfolder-inhibit-expiry t)
-	;; 	(nnir-search-engine notmuch))
-	))
+		)
+	(nnfolder "archive"
+		  (nnfolder-inhibit-expiry t)
+		  (nnfolder-directory "~/email/Local/archive")
+		  (nnfolder-active-file "~/email/Local/archive/active")
+		  (nnfolder-get-new-mail nil)
+		  (gnus-search-notmuch-remove-prefix "/home/wilk/email/Local/archive/")
+		  (nnfolder-inhibit-expiry t))))
 
 (setq gnus-update-message-archive-method t)
 (setq gnus-message-archive-method
@@ -221,8 +189,7 @@
                  (nnfolder-active-file "~/email/Local/archive/active")
                  (nnfolder-directory "~/email/Local/archive/")
 		 (nnfolder-get-new-mail nil)
-		 (nnir-search-engine notmuch)
-		 ;; (nnir-notmuch-remove-prefix "/home/wilk/email/Local/archive/")
+		 (gnus-search-notmuch-remove-prefix "/home/wilk/email/Local/archive/")
 		 ))
 (setq nnmail-split-fancy
       '(|
@@ -372,7 +339,7 @@
 (setq debug-on-error t)
 (setq imap-log t)
 
-(require 'nnir)
+;; (require 'nnir)
 ; pour faire des recherches sur gmane/imap...
 
 
@@ -734,88 +701,3 @@
 	(browse-url (match-string 1))
 	(gnus-summary-show-article)))))
 
-;; Eric Fraga 
-;; gnus-select-method '(nnnil "")
-;; gnus-secondary-select-methods '((nnml "")
-;; 				(nnimap "ucl"
-;; 				   (nnimap-address "imap-server.ucl.ac.uk")
-;; 				   (nnimap-inbox "INBOX")
-;; 				   (nnimap-stream ssl)
-;;                                    (nnimap-unsplittable-articles '(%Deleted)))
-;; 			      (nnimap "google"
-;; 				      (nnimap-address "imap.gmail.com")
-;; 				      (nnimap-server-port 993)
-;; 				      (nnimap-stream ssl)))
-
-;; with associated entries in my .authinfo file for "ucl" and "google".
-;; Note that I only specify splitting for my UCL mailbox as I use google's
-;; own splitting methods on gmail.
-
-;; Then I have the following splitting settings (abridged but keeping some
-;; typical examples):
-
-;; nnimap-split-methods 'default
-;; nnmail-split-methods 'nnmail-split-fancy
-;; nnmail-split-fancy 
-;;       '(| (to ".*orgmode" "lists.org")
-;; 	  (to ".*@gnu[s]*.org" "lists.gnus")
-;; 	  (from ".*@quora.com" "social")
-;; 	  (from ".*@\\(academia.edu\\|linkedin.com\\)" "social")
-;; 	  ;; all the rest
-;; 	 "general"
-;; 	 )
-;; Fraga end
-
-
-;; (setq gnus-select-method
-;;       '(nntp "news.gmane.org"
-;;              (nntp-open-connection-function nntp-open-tls-stream)
-;;              (nntp-port-number 563)
-;;              (nntp-address "news.gmane.org"))
-;;       gnus-secondary-select-methods
-;;       '((nnimap "imap.pitt.edu"
-;;                 (nnimap-server-port 993)
-;;                 (nnimap-stream ssl)
-;;                 (nnir-search-engine imap))
-;;         (nnimap "imap.gmail.com"
-;;                 (nnimap-server-port 993)
-;;                 (nnimap-stream ssl)
-;;                 (nnir-search-engine imap)))
-;;       message-send-mail-function 'message-send-mail-with-sendmail
-;;       message-sendmail-envelope-from 'header
-;;       message-sendmail-f-is-evil nil
-;;       sendmail-program "~/bin/msmtp-stub"
-;;       user-mail-address "gardellawg@gmail.com"
-;;       user-full-name "William Gardella"
-;;       message-alternative-emails "pitt.edu"
-;;       gnus-posting-styles
-;;       '(("pitt.edu"
-;;          (address "wgg2@pitt.edu")
-;;          (organization "University of Pittsburgh School of Law"))
-;;         ("gmane.*"
-;;          (X-Archive "encrypt"))) 
-;;       tls-checktrust 'ask
-;;       tls-program '("gnutls-cli --x509cafile /etc/ssl/certs/ca-certificates.crt -p %p %h"
-;;                     "gnutls-cli --x509cafile /etc/ssl/certs/ca-certificates.crt -p %p %h --protocols ssl3"
-;;                     "openssl s_client -connect %h:%p -CAfile /etc/ssl/certs/ca-certificates.crt -no_ssl2 -ign_eof")
-;;       gnus-agent-synchronize-flags t
-;;       gnus-agent-queue-mail 'always
-;;       gnus-agent-prompt-send-queue t
-;;       gnus-asynchronous t
-;;       gnus-agent-go-online t
-;;       mm-text-html-renderer 'gnus-w3m
-;;       gnus-summary-line-format
-;;       (concat
-;;        "%0{%U%R%z%}"
-;;        "%4{%-20,20f%}" ;; name
-;;        "  "
-;;        "%3{│%}" "%1{%-20,25D%}" "%3{│%}" ;; date
-;;        "  "
-;;        "%1{%B%}"
-;;        "%s\n")
-;;       gnus-summary-display-arrow t
-;;       gnus-completing-read-function 'gnus-ido-completing-read
-;;       mail-user-agent 'gnus-user-agent
-;;       read-mail-command 'gnus
-;;       gnus-treat-display-smileys nil)
-;; (autoload 'sendmail-send-it "sendmail")
