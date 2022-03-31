@@ -1,6 +1,6 @@
 #!/bin/bash
 
-GRILLE_PDF="/home/wilk/enseignement/2020-2021/TP/grille-evaluation.pdf"
+GRILLE_PDF="/home/wilk/enseignement/TP/grille-evaluation.pdf"
 FICHIER=$1
 FICHIER_GRILLE=${FICHIER/.pdf/-grille.pdf}
 echo "fichier $FICHIER"
