@@ -174,23 +174,18 @@
 		(nnimap-split-methods default)
 		(nnimap-inbox "INBOX")
 		)
-	(nnfolder "archive"
-		  (nnfolder-inhibit-expiry t)
-		  (nnfolder-directory "~/email/Local/archive")
-		  (nnfolder-active-file "~/email/Local/archive/active")
-		  (nnfolder-get-new-mail nil)
-		  (gnus-search-notmuch-remove-prefix "/home/wilk/email/Local/archive/")
-		  (nnfolder-inhibit-expiry t))))
+	))
 
 (setq gnus-update-message-archive-method t)
 (setq gnus-message-archive-method
-      '(nnfolder "archive"
+      '(nnfolder "Archive"
                  (nnfolder-inhibit-expiry t)
-                 (nnfolder-active-file "~/email/Local/archive/active")
-                 (nnfolder-directory "~/email/Local/archive/")
+                 (nnfolder-active-file "~/email/Archive/active")
+                 (nnfolder-directory "~/email/Archive/")
 		 (nnfolder-get-new-mail nil)
-		 (gnus-search-notmuch-remove-prefix "/home/wilk/email/Local/archive/")
+		 (gnus-search-notmuch-remove-prefix "/home/wilk/email/Archive/")
 		 ))
+
 (setq nnmail-split-fancy
       '(|
 	;; ("from" ,gnus-ignored-from-addresses "sent-mail")
