@@ -3,4 +3,4 @@
 from idle_time import IdleMonitor
 
 monitor = IdleMonitor.get_monitor()
-print(f"{monitor.get_idle_time()}")
+print(f"{1000*monitor.get_idle_time():.0f}")
