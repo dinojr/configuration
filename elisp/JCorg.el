@@ -18,9 +18,6 @@
 	("wayland" "jc-wayland-idle-time")
       ))
 
-
-(setq org-x11idle-exists-p t)
-
 (require 'org)
 
 (require 'notifications)
