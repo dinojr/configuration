@@ -746,6 +746,7 @@ Skip over dangling clock entries."
 ;; (org-weather-refresh)
 
 ;; Org-passwords
+(add-to-list 'load-path "~/git-repositories/org-passwords.el/.")
 (require 'org-passwords)
 (setq org-passwords-file "~/org/orgfiles/pw.gpg")
 (setq org-passwords-random-words-dictionnary "/etc/dictionaries-common/words")
