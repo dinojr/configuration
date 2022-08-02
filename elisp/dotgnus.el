@@ -143,7 +143,7 @@
 
 (setq gnus-secondary-select-methods
       '(
-	(nntp "news.free.fr")
+	;; (nntp "news.free.fr")
 	(nntp "news.gwene.org")
 	(nntp "news.gmane.io")
 	(nnimap "FreeOffline"
