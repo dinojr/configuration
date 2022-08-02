@@ -59,7 +59,7 @@
 
 ;; (global-set-key (kbd "C-c h o") 'helm-occur)
 
-(helm-linum-relative-mode 1)
+;; (helm-linum-relative-mode 1)
 
 (setq helm-buffer-max-length nil)
 
