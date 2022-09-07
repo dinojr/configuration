@@ -647,6 +647,9 @@ Skip over dangling clock entries."
 ;; (add-hook 'org-mode-hook 'jc-org-publish-project-options)
 ;; (add-hook 'org-export-before-processing-hook 'jc-org-publish-project-options)
 
+(setq org-safe-remote-resources '("\\`https://fniessen\\.github\\.io/org-html-themes/org/theme-readtheorg\\.setup\\'"))
+
+
 ;; Capture
 (setq org-capture-templates
       (quote (
