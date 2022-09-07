@@ -90,6 +90,9 @@
 (add-to-list 'load-path "~/git-repositories/ox-ipynb")
 (require 'ox-ipynb)
 
+(add-to-list 'load-path "~/git-repositories/ob-ipython")
+(require 'ob-ipython)
+
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((R . t)
