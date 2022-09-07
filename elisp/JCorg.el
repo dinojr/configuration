@@ -861,8 +861,11 @@ checked."
 
 
 ;; Raccourcis
-(global-set-key (kbd "C-c C-g") (lambda () (interactive) (org-clock-in '(4))))
+;; (global-set-key (kbd "C-c C-g") (lambda () (interactive) (org-clock-in '(4))))
+
+(global-set-key (kbd "C-c C-g") #'org-mru-clock-in)
 (global-set-key (kbd "C-c C-h") 'org-clock-out)
+(global-set-key (kbd "C-c C-j") #'org-mru-clock-select-recent-task)
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-switchb)
