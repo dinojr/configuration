@@ -42,14 +42,6 @@
 (setq org-startup-indented t)
 (setq org-hide-leading-stars t)
 
-;; (add-to-list 'load-path "~/git-repositories/org-bullets")
-;; (require 'org-bullets)
-;; (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)(org-indent-mode 1)))
-
-(require 'org-superstar)
-(add-hook 'org-mode-hook (lambda () (org-superstar-mode 1) (org-indent-mode 1)))
-
-
 (setq org-enforce-todo-dependencies t)
 
 (setq org-default-notes-file (concat org-directory "/notes.org"))
