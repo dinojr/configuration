@@ -230,8 +230,14 @@ Skip over dangling clock entries."
     (org-clock-remove-empty-clock-drawer)
     ))
 
-					;TAGS
-					; Tags with fast selection keys
+(require 'org-mru-clock)
+(setq org-mru-clock-how-many 20)
+(setq org-mru-clock-completing-read #'helm--completing-read-default)
+(setq org-mru-clock-keep-formatting t)
+(setq org-mru-clock-files #'org-agenda-files)
+
+;TAGS 
+; Tags with fast selection keys
 (setq org-tag-alist (quote ((:startgroup)
                             ("@enville" . ?v)
                             ("@lycée" . ?l)
