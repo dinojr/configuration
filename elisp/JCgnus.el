@@ -267,7 +267,7 @@ Change message identity to ID with gnus-identities-change."
 	 ("to" "reprollg@gmail.com")
 	 ("Subject" "MPSI2 Physique Semaine")
 	 (x-identity "reprollg")
-	 (body "Bonjour,\nMerci d'imprimer le document ci-joint en :\n+ 44 exemplaires\n+ taille réelle\n+ agrafé\n+ recto\n\nCordialement,")
+	 (body "Bonjour,\nMerci d'imprimer le document ci-joint en :\n+ 48 exemplaires\n+ taille réelle\n+ agrafé\n+ recto\n\nCordialement,")
 	 )))
 ;; Le défaut en premier
 ;; Trier selon qu'on répond à des news ou pas
