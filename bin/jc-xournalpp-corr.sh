@@ -5,7 +5,7 @@ DIR="corr"
 XOPP_SUFFIX=".xopp"
 ACORRIGER="Reste à corriger: "
 [ ! -d $DIR ] && mkdir $DIR
-
+TOTAL=0
 for i in *.pdf
 do
     FILENAME=$i
@@ -20,6 +20,8 @@ do
 	 fi
     else echo -e "fichier \e[31m$FILENAME\e[0m à corriger"
 	 ACORRIGER+="\n\e[31m$FILENAME\e[0m"
+	 ((TOTAL+=1))
     fi
 done
 echo -e "$ACORRIGER"
+echo "total: $TOTAL"
