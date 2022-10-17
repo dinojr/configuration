@@ -19,7 +19,7 @@
 (setq plstore-cache-passphrase-for-symmetric-encryption t)
 
 (setq org-caldav-inbox "~/org/org-caldav.org")
-(setq org-caldav-files '("~/org/orgfiles/planning-22-23.org" "~/org/orgfiles/lycee-22-23.org"))
+(setq org-caldav-files '("~/org/orgfiles/planning-22-23.org" "~/org/orgfiles/lycee-22-23.org" "~/enseignement/2022-2023/LLG/egalite.org"))
 (setq org-icalendar-timezone "Europe/Paris")
 (setq org-caldav-save-directory "~/org/") ; to ensure synchronization by unison
 
