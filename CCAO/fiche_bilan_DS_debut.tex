@@ -1,0 +1,43 @@
+\documentclass[11pt,a4paper,landscape,twocolumn]{article}
+\RequirePackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{Libertinus Sans}
+\defaultfontfeatures{ligatures = TeX}
+\usepackage{siunitx}
+\sisetup{%
+  locale = FR}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+
+\usepackage[a4paper,margin=1cm,includeheadfoot,headsep=15pt]{geometry}
+\setlength{\headheight}{14pt}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[REO]{MPSI2 2021\textendash{}2022}
+\fancyhead[LEO]{\sc Louis-Le-Grand}
+
+\fancypagestyle{plain}{% copies "fancy" over "plain"
+}
+
+
+\begin{document}
+
+\begin{center}
+  \Large\bf
+  RemplacerTitreDevoir\\
+  % \vspace{1cm}
+  RemplacerNom: \boxed{\bf \num{RemplacerNote}/\num{20}}\\
+  Moyenne du devoir \num{RemplacerMoyenneDevoir}
+  \;
+  Médiane \num{RemplacerMedianeDevoir}
+  \;
+  Écart-type \num{RemplacerStdevDevoir}\\
+  \includegraphics[width=.8\linewidth]{RemplacerDistribDevoir}
+\end{center}
+
+\hrule

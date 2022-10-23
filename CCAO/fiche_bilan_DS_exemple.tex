@@ -1,0 +1,71 @@
+\documentclass[11pt,a4paper,landscape,twocolumn]{article}
+\RequirePackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{Libertinus Sans}
+\defaultfontfeatures{ligatures = TeX}
+\usepackage{siunitx}
+\sisetup{%
+  locale = FR}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+
+\usepackage[a4paper,margin=1cm,includeheadfoot,headsep=15pt]{geometry}
+\setlength{\headheight}{14pt}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[REO]{MPSI2 2022\textendash{}2023}
+\fancyhead[LEO]{\sc Louis-Le-Grand}
+
+\fancypagestyle{plain}{% copies "fancy" over "plain"
+}
+
+
+\begin{document}
+
+\begin{center}
+  \Large\bf
+  RemplacerTitreDevoir\\
+  \vspace{1cm}
+  RemplacerNom: \boxed{\bf \num{RemplacerNote}/\num{20}}\\
+  Moyenne du devoir \num{RemplacerMoyenneDevoir}
+  \;
+  Médiane \num{RemplacerMedianeDevoir}
+  \;
+  Écart-type \num{RemplacerStdevDevoir}\\
+  \includegraphics[width=15cm]{RemplacerDistribDevoir}
+\end{center}
+
+\begin{center}
+RemplacerPartie sur \num{RemplacerBaremePartie} points:
+\num{RemplacerPoints} / \num{RemplacerTotalBareme}
+\end{center}
+\setlength{\columnseprule}{0.01cm}
+
+\paragraph{Détail des points: }
+{\small
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+Question & points & max & moyenne classe\\
+\midrule
+
+\midrule Bilan & obtenus & tentés & efficacité\\
+Total & \num{RemplacerPoints} & \num{RemplacerTentes} & RemplacerEfficacite \%
+\end{tabular}	
+\end{center}
+}
+
+\paragraph{Histogramme des notes brutes (partie abordée):}
+
+\begin{center}
+   \includegraphics[width=15cm]{RemplacerNomHistogrammePartie}
+\end{center}
+\newpage
+
+
+\end{document}
