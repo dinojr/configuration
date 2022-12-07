@@ -7,7 +7,7 @@
 (set-fontset-font "fontset-default" 'symbol "Noto Color Emoji")
 (set-fontset-font "fontset-default" 'symbol "Symbola" nil 'append)
 
-(add-to-list 'custom-theme-load-path "/home/wilk/git-repositories/dracula-emacs/")
+(add-to-list 'custom-theme-load-path "/home/wilk/git-repositories/dracula/dracula-emacs/")
 
 (doom-themes-org-config)
 
