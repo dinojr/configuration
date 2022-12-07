@@ -10,6 +10,8 @@ import fnmatch
 import os.path
 from re import sub
 import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use('Gtk3Agg')
 import sqlite3
 
 import statistics as stat
@@ -42,7 +44,7 @@ dict_parties['Pb2'] = ['/home/wilk/enseignement/2022-2023/CCAO/DS01/Pb02.cor.csv
 # invisible qui met le bazar dans les noms de fichiers entre autres, et empêche leur
 # compilation par lualatex. Une solution crade consiste à mettre un premier nom bidon
 # LINCONNUANEPASENLEVER par exemple auquel on n'attribuera pas de notes
-liste_noms = list()
+liste_noms = list() #sera peuplé par les fichiers en cor.csv
 notes_globales_etudiants = dict()
 notes_devoir_etudiants = dict()
 RepertoireCommun = '/home/wilk/enseignement/2022-2023/CCAO/'
@@ -367,8 +369,8 @@ for partie in dict_parties:
     xa.set_tick_params()
     xa.set_tick_params(labelsize=4)
 
-    # plt.show()
-    plt.close()
+    plt.show()
+    # plt.close()
 
     # Enfin on génère les fichiers à inclure dans un .tex pour avoir
     # un joli résultat. Il faudra ensuite le compiler avec pdflatex
@@ -515,7 +517,7 @@ for nom in liste_noms:
     # On rentre la note à la place de REMPLACER_NOTE dans les fichiers .tex
     data = fichier_debut.read()
     data = data.replace("RemplacerTitreDevoir", Devoir_Titre)
-    data = data.replace("RemplacerNom", nom)
+    data = data.replace("RemplacerNom", sub("_"," ",nom))
     data = data.replace("RemplacerNote", note)
     data = data.replace("RemplacerMoyenneDevoir", moyenne_generale)
     data = data.replace("RemplacerMedianeDevoir", mediane_generale)
@@ -605,19 +607,25 @@ with open(patronymes_fichier, 'r', newline='', encoding='utf-8-sig') as patronym
     liste_patronymes = csv.reader(patronymes)
     for row in liste_patronymes:
         
-        pattern_bilan = "*"+str.lower(row[0])+"*.pdf"
+        pattern_bilan = "*"+str.lower(sub("[ \t]","_",row[0]))+"*.pdf"
         nom_bilan = find(pattern_bilan, Repertoire_bilans)
         pattern_correction = "*"+str.lower(row[0])+"*-corr.pdf"
         nom_correction = find(pattern_correction, Repertoire_corrections)
-
-        # print(nom_bilan[0] + nom_correction[0] + nom_final)
+        
         if nom_bilan and nom_correction:
             if os.path.isfile(nom_bilan[0]) and os.path.isfile(nom_correction[0]):
                 print("fichiers pdf présents pour " + nom_bilan[0])
                 nom_final = str.replace(nom_correction[0], '-corr.pdf', '-final.pdf')
                 commande_correction = "pdftk " + nom_bilan[0] + " " + nom_correction[0] + " cat output " + nom_final + " "
+                print("nom final",nom_final)
                 # print(commande_correction)
                 os.system(commande_correction)
+        else:
+            print(f'problème avec {row[0]}')
+            print(pattern_bilan)
+            print("nom bilan",nom_bilan[0])
+            print(pattern_correction)
+            print("nom correction",nom_correction[0])
 
 for nom in liste_noms:
     nom_fichier_bilan_nom_pdf = Devoir + "-" + nom.replace(' ', "") + ".pdf"
