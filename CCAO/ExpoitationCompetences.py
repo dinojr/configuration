@@ -17,7 +17,7 @@ import sqlite3
 import statistics as stat
  
 # Repertoire de base dans lequel seront générés les fichiers
-Repertoire = '/home/wilk/enseignement/2022-2023/CCAO/DS01/'
+Repertoire = '/home/wilk/enseignement/2022-2023/CCAO/DS02/'
 os.chdir(Repertoire)
 os.environ['PATH'] = '/usr/local/texlive/current/bin/x86_64-linux:' + os.environ['PATH']
 # blank_page = "/home/wilk/enseignement/2022-2023/CCAO/blank.pdf"
@@ -26,7 +26,7 @@ os.environ['PATH'] = '/usr/local/texlive/current/bin/x86_64-linux:' + os.environ
 patronymes_fichier = "/home/wilk/enseignement/2022-2023/CCAO/patronymes.txt"
 
 Repertoire_bilans = Repertoire
-Repertoire_corrections = "/media/wilk/torino/copies/DS/DS01/corr/"
+Repertoire_corrections = "/media/wilk/torino/copies/DS/DS02/corr/"
 
 fmt_file = "/home/wilk/enseignement/2022-2023/CCAO/fiche_bilan_DS.fmt"
 # produit par lualatex -ini --jobname="fiche_bilan_DS" "&lualatex" mylatexformat.ltx fiche_bilan_DS_exemple.tex
@@ -36,9 +36,10 @@ commande_pagination = "pdfjam "
 
 # On stocke dans chacune le fichier de corrections, le préfixe pour les fichiers, le coeff dans la note totale, le total max et le coeff seront calculés plus tard
 dict_parties = dict()
-Devoir = "DS01"
-dict_parties['Pb1'] = ['/home/wilk/enseignement/2022-2023/CCAO/DS01/Pb01.cor.csv', 'DS01-Pb1', "13"]
-dict_parties['Pb2'] = ['/home/wilk/enseignement/2022-2023/CCAO/DS01/Pb02.cor.csv', 'DS01-Pb2', "11"]
+Devoir = "DS02"
+dict_parties['Pb1'] = ['/home/wilk/enseignement/2022-2023/CCAO/DS02/Pb1.cor.csv', 'DS02-Pb1', "14"]
+dict_parties['Pb2'] = ['/home/wilk/enseignement/2022-2023/CCAO/DS02/Pb2.cor.csv', 'DS02-Pb2', "12"]
+dict_parties['Exo'] = ['/home/wilk/enseignement/2022-2023/CCAO/DS02/Exo.cor.csv', 'DS02-Exo', "12"]
 
 # ATTENTION le premier nom d'une liste importé par CCAO est préfixé par un caractère
 # invisible qui met le bazar dans les noms de fichiers entre autres, et empêche leur
@@ -48,7 +49,7 @@ liste_noms = list() #sera peuplé par les fichiers en cor.csv
 notes_globales_etudiants = dict()
 notes_devoir_etudiants = dict()
 RepertoireCommun = '/home/wilk/enseignement/2022-2023/CCAO/'
-Devoir_Titre = 'DS01 du 24/09'
+Devoir_Titre = 'DS02 du 19/11'
 
 fichier_csv = Repertoire + Devoir + ".csv"
 
