@@ -102,6 +102,13 @@ alternatives:
     formats: mp3
     query: "sportplus:true"
     removable: true
+  SansaClipp:
+    directory: "/media/wilk/SANSA CLIPP/Music/"
+    paths:
+      default: $albumartist/$album/$track-$title
+    formats: ogg mp3
+    query: "sansaclipp:true"
+    removable: true
   # albumxduoo32: xduoo32
   # albumxduoo64: xduoo64
   
