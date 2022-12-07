@@ -12,11 +12,7 @@
 (eval-after-load 'org
   '(org-load-modules-maybe t))
 
-(setq org-clock-x11idle-program-name
-      (pcase (getenv "XDG_SESSION_TYPE")
-	("x11" "xprintidle")
-	("wayland" "jc-wayland-idle-time")
-      ))
+(setq org-clock-x11idle-program-name "jc-idle-time")
 
 (require 'org)
 
