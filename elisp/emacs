@@ -10,6 +10,7 @@
 (add-to-list 'load-path "~/configuration/elisp/")
 
 (load "JCpackages.el")
+
 (load "JCgpg.el")
 (load "JCkeychain.el")
 (load "JCflycheck.el")
@@ -71,5 +72,5 @@
 ;; (load "JCpocket.el")
 ;; (load "JCasymptote.el")
 (load "general_stuff.el")
-
+(load "JCdashboard.el")
 (put 'list-timers 'disabled nil)
