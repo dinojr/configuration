@@ -10,9 +10,9 @@
 
 ;; (if gnus-batch-mode (setq gnus-plugged t) (setq gnus-plugged nil)) ;; pour ramasser le courrier en batch
 ;; (setq gnus-plugged nil)
-(setq gnus-agent-expire-all nil)
-(setq gnus-agent-expire-days 30)
-(add-hook 'gnus-exit-gnus-hook 'gnus-agent-expire)
+;; (setq gnus-agent-expire-all nil)
+;; (setq gnus-agent-expire-days 30)
+;; (add-hook 'gnus-exit-gnus-hook 'gnus-agent-expire)
 
 ; Pour ne pas utiliser le .newsrc : double emploi avec .newsrc.eld
 (setq gnus-save-newsrc-file nil)
@@ -212,24 +212,24 @@
 (setq nnmail-split-methods 'nnmail-split-fancy)
 (setq nnimap-split-methods 'nnimap-split-fancy)
 
-(setq gnus-agent-synchronize-flags t
-      gnus-agent-queue-mail t
-      gnus-agent-prompt-send-queue nil
-      gnus-asynchronous t
-      gnus-agent-go-online t
-      )
+;; (setq gnus-agent-synchronize-flags t
+;;       gnus-agent-queue-mail t
+;;       gnus-agent-prompt-send-queue nil
+;;       gnus-asynchronous t
+;;       gnus-agent-go-online t
+;;       )
 
 ;; (setq gnus-agentized-servers '("nnimap:gmail" "nnimap:free" "nntp:news.gmane.org"))
-(setq gnus-agentized-servers '("nntp:news.gmane.io"))
+;; (setq gnus-agentized-servers '("nntp:news.gmane.io"))
 
-(defun jc-gnus-open-agentized-servers ()
-  (interactive)
-  (let 
-  ((servers gnus-agentized-servers))
-    (while servers
-      (gnus-open-server (car servers))
-      (setq servers (cdr servers))))
-  )
+;; (defun jc-gnus-open-agentized-servers ()
+;;   (interactive)
+;;   (let 
+;;   ((servers gnus-agentized-servers))
+;;     (while servers
+;;       (gnus-open-server (car servers))
+;;       (setq servers (cdr servers))))
+;;   )
 
 (defun jc-nuke-newsletter-group ()
   (gnus-group-delete-articles "nnimap+free:newsletter" t))
