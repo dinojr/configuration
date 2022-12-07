@@ -247,12 +247,11 @@ decoder {
 # 	# mixer_control	"PCM"		# optional
 # 	# mixer_index	"0"		# optional
 # }
- 
 audio_output {
-	type	"pulse"
-	name	"MPD PulseAudio Stream"
-	server 	"localhost"
-	# sink	"alsa_output.usb-Burr-Brown_from_TI_USB_Audio_CODEC-00.analog-stereo"
+        type            "pipewire"
+        name            "PipeWire Sound Server"
+	device		"hw:2,0"	# optional
+ 	server 	"localhost"
 }
 
 #
