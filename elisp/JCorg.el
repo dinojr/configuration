@@ -223,7 +223,6 @@ Skip over dangling clock entries."
 
 (require 'org-mru-clock)
 (setq org-mru-clock-how-many 20)
-(setq org-mru-clock-completing-read #'helm--completing-read-default)
 (setq org-mru-clock-keep-formatting t)
 (setq org-mru-clock-files #'org-agenda-files)
 
@@ -918,8 +917,6 @@ checked."
 				   (unfill-paragraph)
 				   (mark-paragraph)
 				   ))
-
-(org-defkey org-mode-map "\C-c\C-w" 'helm-org-agenda-files-headings)
 
 (add-hook 'org-agenda-mode-hook
           (lambda ()

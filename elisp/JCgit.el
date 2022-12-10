@@ -8,7 +8,7 @@
 
 (setq magit-last-seen-setup-instructions "1.4.0")
 (require 'magit)
-(setq magit-repository-directories '(("/home/wilk/git-repositories" . 1)
+(setq magit-repository-directories '(("/home/wilk/git-repositories" . 2)
 				     ("/home/wilk/texmf/tex/latex/mpsi/" . 0)
 				     ("/home/wilk/configuration/" . 0)
                                      ("/home/wilk/vuibert/vuibert-sup/" . 0)

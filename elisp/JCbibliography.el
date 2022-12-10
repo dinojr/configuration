@@ -7,11 +7,9 @@
       org-ref-default-bibliography '("~/enseignement/papiers/bibliography.bib")
       org-ref-pdf-directory "~/enseignement/papiers/")
 
-(with-eval-after-load 'helm
-  (require 'helm-bibtex)
-  (setq bibtex-completion-bibliography '("~/enseignement/papiers/bibliography.bib" "~/enseignement/doc_cours/attributions.bib"))
-  (setq bibtex-completion-library-path "~/enseignement/papiers/"))
 
+(setq bibtex-completion-bibliography '("~/enseignement/papiers/bibliography.bib" "~/enseignement/doc_cours/attributions.bib"))
+(setq bibtex-completion-library-path "~/enseignement/papiers/")
 
 ;; Sci-hub
 (defun sci-hub-pdf-url (doi)
