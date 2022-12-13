@@ -126,6 +126,17 @@
     )
 
 
+(TeX-ispell-skip-setcar
+ `(("\\\\cite"            ispell-tex-arg-end)
+   ("\\\\nocite"          ispell-tex-arg-end)
+   ("\\\\includegraphics" ispell-tex-arg-end)
+   ("\\\\figScale"         ispell-tex-arg-end)
+   ("\\\\author"          ispell-tex-arg-end)
+   ("\\\\ref"             ispell-tex-arg-end)
+   ("\\\\eqref"             ispell-tex-arg-end)
+   ("\\\\label"           ispell-tex-arg-end)
+   ))
+
 
 (defun jc-revert-and-rubber ()
   (interactive)
