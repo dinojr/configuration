@@ -79,8 +79,7 @@
     ;;         title)
     ))
 (setq emms-track-description-function 'jc-emms-info-track-description)
-(with-eval-after-load 'helm-emms
-  (setq helm-emms-use-track-description-function t))
+
 
 (defun jc-emms-set-frame-title (track)
   (let* (;; (track (emms-playlist-selected-track))
@@ -89,7 +88,6 @@
     (setq icon-title-format (concat "%20b" song))
     )
   )
-
 
 (add-hook 'emms-track-updated-functions 'jc-emms-set-frame-title)
 

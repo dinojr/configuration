@@ -229,7 +229,7 @@ Change message identity to ID with gnus-identities-change."
         (regexp-opt '("lago" "touco"))))
 
 ;; Raccourcis
-(global-set-key "\C-cm" 'jc-gnus-message)
+(global-set-key "\C-xm" 'jc-gnus-message)
 
 (with-eval-after-load 'gnus-sum
   (define-key gnus-summary-mode-map (kbd "B a") 'jc-gnus-summary-copy-and-expire-article)
