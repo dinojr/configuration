@@ -27,18 +27,18 @@
 
 (setq magit-repolist-columns
       '(("Name" 25 magit-repolist-column-ident nil)
-       ("Version" 25 magit-repolist-column-version
-	((:sort magit-repolist-version<)))
-       ("U" 3 magit-repolist-column-flag
-	((:right-align t)
-	 (:sort <)))
-       ("B<U" 3 magit-repolist-column-unpulled-from-upstream
-	((:right-align t)
-	 (:sort <)))
-       ("B>P" 3 magit-repolist-column-unpushed-to-pushremote
-	((:right-align t)
-	 (:sort <)))
-       ("Path" 99 magit-repolist-column-path nil)))
+	("Version" 25 magit-repolist-column-version
+	 ((:sort magit-repolist-version<)))
+	("U" 3 magit-repolist-column-flag
+	 ((:right-align t)
+	  (:sort <)))
+	("B<U" 3 magit-repolist-column-unpulled-from-upstream
+	 ((:right-align t)
+	  (:sort  <)))
+	("B>P" 3 magit-repolist-column-unpushed-to-pushremote
+	 ((:right-align t)
+	  (:sort <)))
+	("Path" 99 magit-repolist-column-path nil)))
 
 (setq magit-repolist-column-flag-alist
       '((magit-unstaged-files . "U")

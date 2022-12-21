@@ -98,3 +98,5 @@
 (use-package beacon
   :config (beacon-mode 1))
 
+
+(display-battery-mode)

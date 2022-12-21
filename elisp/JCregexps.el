@@ -112,7 +112,7 @@
 (define-prefix-command 'jc-regexps)
 ;; (global-set-key (kbd "C-!") 'jc-regexps)
 (define-key org-mode-map (kbd "C-!") 'jc-regexps)
-(define-key LaTeX-mode-map (kbd "C-!") 'jc-regexps)
+;; (define-key LaTeX-mode-map (kbd "C-!") 'jc-regexps)
 (define-key jc-regexps (kbd "a") 'jc-alert-or-emph-to-stars)
 (define-key jc-regexps (kbd "d") 'jc-dollar-to-paren)
 (define-key jc-regexps (kbd "b") 'jc-block-to-heading)

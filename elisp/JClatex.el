@@ -32,7 +32,7 @@
       (flyspell-mode 1)
       ;; dictionnaire évitant les erreurs d'accents
       (ispell-change-dictionary "francais")
-      (TeX-fold-mode 1)
+      (TeX-fold-mode 0)
       ;; crochets automatiques pour exposants et indices
       (setq TeX-electric-sub-and-superscript t)
       ;;
@@ -192,7 +192,7 @@
 			       ("[exoGuide]" ("exoGuide"))
 			       ("[exoApp]" ("exoApp"))))
 
-(eval-after-load "tex-fold" '(add-hook 'find-file-hook 'TeX-fold-buffer t))
+;; (eval-after-load "tex-fold" '(add-hook 'find-file-hook 'TeX-fold-buffer t))
 
 (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
 

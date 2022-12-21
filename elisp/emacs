@@ -11,6 +11,9 @@
 
 (load "JCpackages.el")
 
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
+
 (load "JCgpg.el")
 (load "JCkeychain.el")
 (load "JCflycheck.el")
@@ -74,7 +77,11 @@
 (load "JCdashboard.el")
 (put 'list-timers 'disabled nil)
 
+
+
 (use-package wgrep)
+
+(use-package try)
 
 (use-package consult
   ;; Replace bindings. Lazily loaded due by `use-package'.
@@ -264,8 +271,9 @@
   ;;       orderless-component-separator #'orderless-escapable-split-on-space)
   (setq completion-styles '(orderless basic)
         completion-category-defaults nil
+	completion-caterory-overrides nil
         ;; completion-category-overrides '((file (styles partial-completion)))
-	completion-category-overrides '((file (styles . (partial-completion))))
+	;; completion-category-overrides '((file (styles . (partial-completion))))
 	))
 
 ;; Enable rich annotations using the Marginalia package
@@ -326,7 +334,9 @@
   :bind (("C-x C-d" . consult-dir)
          :map vertico-map
          ("C-x C-d" . consult-dir)
-         ("C-x C-j" . consult-dir-jump-file)))
+         ("C-x C-j" . consult-dir-jump-file))
+  :config
+  (setq consult-dir-sources '(consult-dir--source-recentf consult-dir--source-bookmark consult-dir--source-default consult-dir--source-project consult-dir--source-tramp-local)))
 
 
 
@@ -345,8 +355,8 @@
 	  dired-mode
 	  special-mode
 	  TeX-output-mode
-	  pdf-view-mode)
-	  )
+	  ;; pdf-view-mode
+	  ))
   (popper-mode +1)
   (popper-echo-mode +1))                ; For echo area hints
 
@@ -373,8 +383,8 @@
   ;; See also `corfu-excluded-modes'.
   :init
   (global-corfu-mode)
-  :config
-  (setq corfu-auto t)
+  ;; :config
+  ;; (setq corfu-auto t)
   )
 
 ;; A few more useful configurations...
@@ -396,8 +406,17 @@
     :config
   (add-to-list 'consult-buffer-sources 'consult-notmuch-buffer-source))
 
+(use-package fd-dired)
 
 ;; (use-package awesome-tab
 ;;   :load-path "/home/wilk/git-repositories/awesome-tab/"
 ;;   :config
 ;;   (awesome-tab-mode t))
+
+
+(use-package consult-flyspell
+  :config
+  ;; default settings
+  (setq consult-flyspell-select-function nil ;; voir https://gitlab.com/OlMon/consult-flyspell
+        consult-flyspell-set-point-after-word t
+        consult-flyspell-always-check-buffer nil))

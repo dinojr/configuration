@@ -19,6 +19,8 @@
 (setq user-mail-address "j.cubizolles@free.fr")
 (setq mail-default-reply-to user-mail-address)
 
+(setq gnus-completion-styles '(orderless basic))
+
 (add-hook 'gnus-message-setup-hook 'turn-on-auto-fill)
 
 ;; (require 'offlineimap)

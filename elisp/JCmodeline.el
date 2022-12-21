@@ -62,6 +62,8 @@
 ;; Whether display buffer encoding.
 (setq doom-modeline-buffer-encoding t)
 
+(setq display-battery-mode t)
+
 ;; Whether display indentation information.
 (setq doom-modeline-indent-info nil)
 
@@ -75,25 +77,25 @@
 (setq doom-modeline-persp-name nil)
 
 ;; Whether display icon for persp name. Nil to display a # sign. It respects `doom-modeline-icon'
-(setq doom-modeline-persp-name-icon nil)
+(setq doom-modeline-persp-icon nil)
 
 ;; Whether display `lsp' state or not. Non-nil to display in mode-line.
 (setq doom-modeline-lsp nil)
 
 ;; Whether display GitHub notifications or not. Requires `ghub` package.
-(setq doom-modeline-github t)
+;; (setq doom-modeline-github t)
 
 ;; The interval of checking GitHub.
-(setq doom-modeline-github-interval (* 30 60))
+;; (setq doom-modeline-github-interval (* 30 60))
 
 ;; Whether display mu4e notifications or not. Requires `mu4e-alert' package.
-(setq doom-modeline-mu4e nil)
+;; (setq doom-modeline-mu4e nil)
 
 ;; Whether display irc notifications or not. Requires `circe' package.
-(setq doom-modeline-irc nil)
+;; (setq doom-modeline-irc nil)
 
 ;; Function to stylize the irc buffer names.
-(setq doom-modeline-irc-stylize 'identity)
+;; (setq doom-modeline-irc-stylize 'identity)
 
 ;; Whether display environment version or not
 (setq doom-modeline-env-version t)
@@ -106,7 +108,7 @@
 (setq doom-modeline-env-enable-rust t)
 
 ;; Change the executables to use for the language version string
-(setq doom-modeline-env-python-executable "python") ; or `python-shell-interpreter'
+(setq doom-modeline-env-python-executable 'python-shell-interpreter) ; or `python-shell-interpreter'
 (setq doom-modeline-env-ruby-executable "ruby")
 (setq doom-modeline-env-perl-executable "perl")
 (setq doom-modeline-env-go-executable "go")
