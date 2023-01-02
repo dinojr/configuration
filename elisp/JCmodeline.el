@@ -121,3 +121,7 @@
 ;; Hooks that run before/after the modeline version string is updated
 (setq doom-modeline-before-update-env-hook nil)
 (setq doom-modeline-after-update-env-hook nil)
+
+(setq doom-modeline-gnus t)
+(setq doom-modeline-time nil)
+(setq ace-window-display-mode t)
