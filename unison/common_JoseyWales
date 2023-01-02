@@ -3,7 +3,7 @@
 #Port number
 sshargs = -p 2040
 #Directories
-
+path = wilk/Bibliothèque calibre/
 path = wilk/enseignement
 path = wilk/enseignement/manips/tipe
 path = wilk/centrale-2020
