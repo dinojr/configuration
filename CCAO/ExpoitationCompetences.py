@@ -37,9 +37,9 @@ commande_pagination = "pdfjam "
 # On stocke dans chacune le fichier de corrections, le préfixe pour les fichiers, le coeff dans la note totale, le total max et le coeff seront calculés plus tard
 dict_parties = dict()
 Devoir = "DS02"
-dict_parties['Pb1'] = ['/home/wilk/enseignement/2022-2023/CCAO/DS02/Pb1.cor.csv', 'DS02-Pb1', "14"]
-dict_parties['Pb2'] = ['/home/wilk/enseignement/2022-2023/CCAO/DS02/Pb2.cor.csv', 'DS02-Pb2', "12"]
-dict_parties['Exo'] = ['/home/wilk/enseignement/2022-2023/CCAO/DS02/Exo.cor.csv', 'DS02-Exo', "12"]
+dict_parties['Pb1'] = ['/home/wilk/enseignement/2022-2023/CCAO/DS02/Pb1.cor.csv', 'DS02-Pb1', "12"]
+dict_parties['Pb2'] = ['/home/wilk/enseignement/2022-2023/CCAO/DS02/Pb2.cor.csv', 'DS02-Pb2', "10"]
+dict_parties['Exo'] = ['/home/wilk/enseignement/2022-2023/CCAO/DS02/Exo.cor.csv', 'DS02-Exo', "6"]
 
 # ATTENTION le premier nom d'une liste importé par CCAO est préfixé par un caractère
 # invisible qui met le bazar dans les noms de fichiers entre autres, et empêche leur
@@ -370,7 +370,7 @@ for partie in dict_parties:
     xa.set_tick_params()
     xa.set_tick_params(labelsize=4)
 
-    plt.show()
+    # plt.show()
     # plt.close()
 
     # Enfin on génère les fichiers à inclure dans un .tex pour avoir
