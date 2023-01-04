@@ -6,16 +6,16 @@
   <property name="pressureMultiplier" value="1"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Right hand Note Taking Copy"/>
-  <property name="lastSavePath" value="/home/wilk/enseignement/2022-2023/devoirs/DS/DS02-ARQS-1erordre-equilibres"/>
-  <property name="lastOpenPath" value="/home/wilk/enseignement/2022-2023/devoirs/DS/DS02-ARQS-1erordre-equilibres"/>
+  <property name="lastSavePath" value="/media/wilk/torino/copies/DS/DS02"/>
+  <property name="lastOpenPath" value="/media/wilk/torino/copies/DS/DS02"/>
   <property name="lastImagePath" value="file:///home/wilk/enseignement/2019-2020/devoirs/DS/DS07-energie-lorentz-redox/images"/>
   <property name="edgePanSpeed" value="20"/>
   <property name="edgePanMaxMult" value="5"/>
   <property name="zoomStep" value="10"/>
   <property name="zoomStepScroll" value="2"/>
   <property name="displayDpi" value="72"/>
-  <property name="mainWndWidth" value="684"/>
-  <property name="mainWndHeight" value="707"/>
+  <property name="mainWndWidth" value="1920"/>
+  <property name="mainWndHeight" value="1019"/>
   <property name="maximized" value="true"/>
   <property name="showToolbar" value="true"/>
   <property name="showSidebar" value="false"/>
