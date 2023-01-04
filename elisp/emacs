@@ -350,7 +350,7 @@
           "\\*Async Shell Command\\*"
           help-mode
           compilation-mode
-	  dired-mode
+	  ;; dired-mode
 	  special-mode
 	  TeX-output-mode
 	  ;; pdf-view-mode
@@ -418,3 +418,100 @@
   (setq consult-flyspell-select-function nil ;; voir https://gitlab.com/OlMon/consult-flyspell
         consult-flyspell-set-point-after-word t
         consult-flyspell-always-check-buffer nil))
+
+;; (use-package emms
+;;   :config
+;;     (require 'emms-setup)
+;;     ;; (require 'emms-player-mpd)
+;;     (emms-all) ; don't change this to values you see on stackoverflow questions if you expect emms to work
+;;     ;; (setq emms-player-list '(emms-player-mpv))
+;;     ;; (add-to-list 'emms-info-functions 'emms-info-mpd)
+;;     ;; (add-to-list 'emms-player-list 'emms-player-mpv)
+;;     ;; Socket is not supported
+;;     ;; (setq emms-player-mpd-server-name "localhost")
+;;     ;; (setq emms-player-mpd-server-port "6600")
+;;     (setq emms-source-file-default-directory "/var/lib/mpd/music/NAS/Synology/BEETS/Nas/")
+;;     ;; (setq emms-player-mpd-music-directory "/var/lib/mpd/music/NAS/Synology/BEETS")
+;;     ;; (emms-player-mpd-connect)
+;;   )
+
+(use-package dabbrev
+  ;; Swap M-/ and C-M-/
+  :bind (("M-/" . dabbrev-completion)
+         ("C-M-/" . dabbrev-expand))
+  ;; Other useful Dabbrev configurations.
+  :custom
+  (dabbrev-ignored-buffer-regexps '("\\.\\(?:pdf\\|jpe?g\\|png\\)\\'")))
+
+;; Add extensions
+(use-package cape
+  ;; Bind dedicated completion commands
+  ;; Alternative prefix keys: C-c p, M-p, M-+, ...
+  :bind (("C-c p p" . completion-at-point) ;; capf
+         ("C-c p t" . complete-tag)        ;; etags
+         ("C-c p d" . cape-dabbrev)        ;; or dabbrev-completion
+         ("C-c p h" . cape-history)
+         ("C-c p f" . cape-file)
+         ("C-c p k" . cape-keyword)
+         ("C-c p s" . cape-symbol)
+         ("C-c p a" . cape-abbrev)
+         ("C-c p i" . cape-ispell)
+         ("C-c p l" . cape-line)
+         ("C-c p w" . cape-dict)
+         ("C-c p \\" . cape-tex)
+         ("C-c p _" . cape-tex)
+         ("C-c p ^" . cape-tex)
+         ("C-c p &" . cape-sgml)
+         ("C-c p r" . cape-rfc1345))
+  :init
+  ;; Add `completion-at-point-functions', used by `completion-at-point'.
+  (add-to-list 'completion-at-point-functions #'cape-dabbrev)
+  (add-to-list 'completion-at-point-functions #'cape-file)
+  ;;(add-to-list 'completion-at-point-functions #'cape-history)
+  ;;(add-to-list 'completion-at-point-functions #'cape-keyword)
+  ;;(add-to-list 'completion-at-point-functions #'cape-tex)
+  ;;(add-to-list 'completion-at-point-functions #'cape-sgml)
+  ;;(add-to-list 'completion-at-point-functions #'cape-rfc1345)
+  ;;(add-to-list 'completion-at-point-functions #'cape-abbrev)
+  ;;(add-to-list 'completion-at-point-functions #'cape-ispell)
+  ;;(add-to-list 'completion-at-point-functions #'cape-dict)
+  ;;(add-to-list 'completion-at-point-functions #'cape-symbol)
+  ;;(add-to-list 'completion-at-point-functions #'cape-line)
+  )
+
+;; (use-package mpdel-embark
+;;   :demand t
+;;   :after (embark mpdel)
+;;   :config
+;;   (progn
+;;     (mpdel-embark-setup)))
+
+;; Using quelpa:
+
+(use-package quelpa
+    :ensure quelpa-use-package)
+
+(quelpa
+ '(quelpa-use-package
+   :fetcher git
+   :url "https://github.com/quelpa/quelpa-use-package.git"))
+(require 'quelpa-use-package)
+
+(use-package empv
+  :ensure t
+  :quelpa (empv
+           :fetcher github
+           :repo "isamert/empv.el")
+  :config (empv-initialize-embark))
+
+(setq tab-bar-tab-hints t)
+
+(use-package poke-line
+    :config
+  (add-hook 'latex-mode-hook 'poke-line-mode)
+  (add-hook 'org-mode-hook 'poke-line-mode)
+  (add-hook 'lisp-mode-hook 'poke-line-mode)
+  (add-hook 'eww-mode-hook 'poke-line-mode)
+  (setq poke-line-bar-length 8)
+  (setq-default poke-line-pokemon "charmander"))
+(put 'dired-find-alternate-file 'disabled nil)
