@@ -1,6 +1,5 @@
 ;;~/.emacs -*- mode: lisp-*-
 
-
 (setq inhibit-startup-screen t)
 (global-font-lock-mode)
 
@@ -26,6 +25,7 @@
 (load "JCanzu.el") ; à charger *avant* spaceline
 ;; (load "JCido.el")
 ;; (load "JCcompany.el")
+(setq org-clock-x11idle-program-name "jc-idle-time")
 (load "JCorg.el")
 ;; (load "JCminions-moody.el")
 (load "JCmodeline.el")
@@ -76,8 +76,6 @@
 (load "general_stuff.el")
 (load "JCdashboard.el")
 (put 'list-timers 'disabled nil)
-
-
 
 (use-package wgrep)
 

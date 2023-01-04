@@ -12,8 +12,6 @@
 (eval-after-load 'org
   '(org-load-modules-maybe t))
 
-(setq org-clock-x11idle-program-name "jc-idle-time")
-
 (require 'org)
 
 (require 'notifications)
