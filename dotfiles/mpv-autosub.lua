@@ -14,8 +14,8 @@ local languages = {
 --          If subtitles are found for the first language,
 --          other languages will NOT be downloaded,
 --          so put your preferred language first:
-            { 'English', 'en', 'eng' },
-            { 'French', 'fr', 'fre' },
+	    { 'English', 'en', 'eng' },
+--          { 'French', 'fr', 'fre' },
 --          { 'Spanish', 'es', 'spa' },
 --          { 'French', 'fr', 'fre' },
 --          { 'German', 'de', 'ger' },

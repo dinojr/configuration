@@ -5,9 +5,9 @@
   <property name="minimumPressure" value="0.05"/>
   <property name="pressureMultiplier" value="1"/>
   <property name="zoomGesturesEnabled" value="true"/>
-  <property name="selectedToolbar" value="Correction"/>
-  <property name="lastSavePath" value="/home/wilk/enseignement/2022-2023/devoirs/DS/DS02-ARQS-1erordre-equilibres"/>
-  <property name="lastOpenPath" value="/home/wilk/enseignement/2022-2023/devoirs/DS/DS02-ARQS-1erordre-equilibres"/>
+  <property name="selectedToolbar" value="Tableau noir"/>
+  <property name="lastSavePath" value="/home/wilk/enseignement/IPHO"/>
+  <property name="lastOpenPath" value="/home/wilk/enseignement/modeles"/>
   <property name="lastImagePath" value="/home/wilk/enseignement/2021-2022/devoirs/DM/DM07-energetique-AB/python"/>
   <property name="edgePanSpeed" value="20"/>
   <property name="edgePanMaxMult" value="5"/>
@@ -82,7 +82,7 @@
   <property name="preloadPagesAfter" value="5"/>
   <property name="eagerPageCleanup" value="true"/>
   <!--Config for new pages-->
-  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSize=false&#10;copyLastPageSettings=false&#10;size=595.275591x841.889764&#10;backgroundType=lined&#10;backgroundColor=#fffafaf9&#10;"/>
+  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSize=true&#10;copyLastPageSettings=true&#10;size=841.889764x595.275591&#10;backgroundType=plain&#10;backgroundColor=#ff241f31&#10;"/>
   <property name="sizeUnit" value="cm"/>
   <property name="audioFolder" value=""/>
   <property name="audioInputDevice" value="-1"/>
