@@ -290,6 +290,8 @@ Change message identity to ID with gnus-identities-change."
       (define-key message-mode-map "\C-c\C-f\C-g" 'message-goto-gcc)
       )
 
+(setq mml-attach-file-at-the-end t)
+
 ;; (add-hook 'message-mode-hook
 ;; 	  (lambda ()
 ;; 	    (define-key message-mode-map [C-tab] 'bbdb-complete-mail)
