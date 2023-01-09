@@ -77,6 +77,8 @@
 (load "JCdashboard.el")
 (put 'list-timers 'disabled nil)
 
+(require 'helm) ;; pour avoir helm-for-files
+
 (use-package wgrep)
 
 (use-package try)
