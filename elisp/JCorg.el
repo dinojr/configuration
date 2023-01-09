@@ -759,8 +759,8 @@ Skip over dangling clock entries."
 
 ;; (require 'org-checklist) ; pour mettre à 0 les checkboxes quand une tâche est passée en DONE
 
-(require 'org-review); pour mettre des review sur une tâche
-(setq org-review-delay "+3d")
+;; (require 'org-review); pour mettre des review sur une tâche
+;; (setq org-review-delay "+3d")
 
 ;; Sci-hub
 (defun sci-hub-pdf-url (doi)
