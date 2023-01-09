@@ -109,9 +109,9 @@
 ;(add-hook 'text-mode-hook 'turn-on-auto-fill)
 
 ;; Affichage de l'heure
-(setq display-time-day-and-date 1)
-(setq display-time-24hr-format 1)
-(display-time)
+(setq display-time-day-and-date t)
+(setq display-time-24hr-format t)
+
 
 ;; Coding system
 (prefer-coding-system 'utf-8)
