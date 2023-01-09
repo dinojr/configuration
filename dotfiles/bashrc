@@ -134,10 +134,15 @@ export "VISUAL=emacsclient -c"
 # white="\[$(tput setaf 7)\]"
 
 # Dracula colors
-green="\033[38;2;80;250;123m"
-cyan="\033[38;2;139;233;253m"
-blue="\033[38;2;189;147;249m"
-magenta="\033[38;2;255;121;198m"
+# green="\033[38;2;80;250;123m"
+# cyan="\033[38;2;139;233;253m"
+# blue="\033[38;2;189;147;249m"
+# magenta="\033[38;2;255;121;198m"
+green="\e[38;2;80;250;123m"
+cyan="\e[38;2;139;233;253m"
+blue="\e[38;2;189;147;249m"
+magenta="\e[38;2;255;121;198m"
+
 # Title bar - "user@host: ~"
 title="\u@\h"
 
@@ -147,7 +152,8 @@ title="\u@\h"
 # }
 
 # Clear attributes
-clear_attributes="\[$(tput sgr0)\]"
+# clear_attributes="\[$(tput sgr0)\]"
+clear_attributes="$(tput sgr0)"
 
 # Custom bash prompt: see https://mjswensen.com/blog/git-status-prompt-options/
 
@@ -155,6 +161,4 @@ export GIT_PS1_SHOWSTASHSTATE=true
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWUPSTREAM="auto"
-export PS1="${magenta}${title}${green}➜ ${blue}\W${cyan}"'$(__git_ps1 " (%s)")'"${magenta}\$${clear_attributes} "
-
-
+export PS1="\[${magenta}\]\u@\h\[${green}\]➜ \[${blue}\]\W\[${cyan}\]"'$(__git_ps1 " (%s)")'"\[${magenta}\]\$ \[${clear_attributes}\]"
