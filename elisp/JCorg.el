@@ -73,8 +73,8 @@
 ;; (setq org-icalendar-timezone "Europe/Paris")
 
 ;; Export to ipynb notebooks
-;; (add-to-list 'load-path "~/git-repositories/ox-ipynb")
-;; (require 'ox-ipynb)
+(add-to-list 'load-path "~/git-repositories/ox-ipynb")
+(require 'ox-ipynb)
 
 (add-to-list 'load-path "~/git-repositories/ob-ipython")
 (require 'ob-ipython)
