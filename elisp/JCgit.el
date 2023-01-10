@@ -45,8 +45,6 @@
 	(magit-staged-files . "S")
 	(magit-untracked-files . "T")))
 
-(require 'orgit)
-
 (defun jc-display-git-status ()
   (interactive)
   (select-frame (make-frame))

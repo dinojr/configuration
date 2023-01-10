@@ -13,17 +13,10 @@
 ;; (setq switch-window-qwerty-shortcuts '("q" "s" "d" "f" "j" "k" "l" "m" "a" "z" "i" "o"))
 
 (require 'ace-window)
-(require 'transpose-frame)
 (global-set-key (kbd "C-x o") 'ace-window)
 
 (setq aw-keys '(?q ?s ?d ?f ?g ?h ?j ?k ?l))
 (setq aw-dispatch-always t)
-
-
-(setq eyebrowse-keymap-prefix (kbd "C-c C-v"))
-(global-set-key (kbd "C-c C-v ;") 'eyebrowse-create-named-window-config)
-(setq eyebrowse-new-workspace t)
-(eyebrowse-mode t)
 
 (defun jc-run-command-other-frame (command)
   "Run COMMAND in a new frame."

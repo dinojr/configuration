@@ -69,7 +69,6 @@
 (load "JCeshell.el")
 (load "JClispy.el")
 (load "JCgnuplot.el")
-(load "JCdumbjump.el")
 (load "JCbindings.el")
 ;; (load "JCpocket.el")
 ;; (load "JCasymptote.el")
@@ -198,18 +197,20 @@
   ;; (setq consult-project-function (lambda (_) (locate-dominating-file "." ".git")))
 )
 
-(use-package perspective
-  :custom
-  (persp-mode-prefix-key (kbd "C-z"))  ; pick your own prefix key here
-  :after (consult)
-  :config
-  (setq persp-state-default-file "/home/wilk/configuration/elisp/JC-perspective-state.el")
-  ;; (consult-customize consult--source-buffer :hidden t :default nil)
-  (add-to-list 'consult-buffer-sources persp-consult-source)
-  ;; (add-hook 'kill-emacs-hook 'persp-state-save)
-  :init
-  (persp-mode)
-  (persp-state-load "/home/wilk/configuration/elisp/JC-perspective-state.el"))
+
+;; Passer à persp-mode pour utiliser persp-def-auto-persp, regarder si ça marche avec doom-modeline
+;; (use-package perspective
+;;   :custom
+;;   (persp-mode-prefix-key (kbd "C-z"))  ; pick your own prefix key here
+;;   :after (consult)
+;;   :config
+;;   (setq persp-state-default-file "/home/wilk/configuration/elisp/JC-perspective-state.el")
+;;   ;; (consult-customize consult--source-buffer :hidden t :default nil)
+;;   (add-to-list 'consult-buffer-sources persp-consult-source)
+;;   ;; (add-hook 'kill-emacs-hook 'persp-state-save)
+;;   :init
+;;   (persp-mode)
+;;   (persp-state-load "/home/wilk/configuration/elisp/JC-perspective-state.el"))
 
 (use-package vertico
   :init
@@ -402,10 +403,6 @@
   ;; `completion-at-point' is often bound to M-TAB.
   (setq tab-always-indent 'complete))
 
-(use-package consult-notmuch
-    :config
-  (add-to-list 'consult-buffer-sources 'consult-notmuch-buffer-source))
-
 (use-package fd-dired)
 
 ;; (use-package awesome-tab
@@ -420,6 +417,11 @@
   (setq consult-flyspell-select-function nil ;; voir https://gitlab.com/OlMon/consult-flyspell
         consult-flyspell-set-point-after-word t
         consult-flyspell-always-check-buffer nil))
+
+(use-package consult-notmuch
+    :config
+  (add-to-list 'consult-buffer-sources 'consult-notmuch-buffer-source))
+
 
 ;; (use-package emms
 ;;   :config
@@ -500,11 +502,17 @@
 (require 'quelpa-use-package)
 
 (use-package empv
-  :ensure t
   :quelpa (empv
            :fetcher github
            :repo "isamert/empv.el")
   :config (empv-initialize-embark))
+
+(use-package consult-bibtex
+  :quelpa (consult-bibtetx
+           :fetcher github
+           :repo "mohkale/consult-bibtex")
+  :requires (consult embark)
+  :config  (add-to-list 'embark-keymap-alist '(bibtex-completion . consult-bibtex-embark-map)))
 
 (setq tab-bar-tab-hints t)
 

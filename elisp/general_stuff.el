@@ -9,8 +9,6 @@
 
 (add-to-list 'custom-theme-load-path "/home/wilk/git-repositories/dracula/dracula-emacs/")
 
-(doom-themes-org-config)
-
 (if (daemonp)
     (add-hook 'after-make-frame-functions (lambda (frame)
                         (when (eq (length (frame-list)) 2)
