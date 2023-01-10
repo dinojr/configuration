@@ -1,9 +1,10 @@
 ;; ~/.emacs.d/JCcalfw.el -*- mode: emacs-lisp-*-
-(add-to-list 'load-path "~/git-repositories/emacs-calfw/")
-(require 'calfw)
-(require 'calfw-org)
-(require 'calfw-ical)
-(require 'calfw-cal)
+;; (add-to-list 'load-path "~/git-repositories/emacs-calfw/")
+(use-package calfw)
+(use-package calfw-org)
+(use-package calfw-ical)
+(use-package calfw-gcal)
+(use-package calfw-cal)
 (setq cfw:fchar-junction ?╋
       cfw:fchar-vertical-line ?┃
       cfw:fchar-horizontal-line ?━
