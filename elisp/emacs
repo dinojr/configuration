@@ -516,7 +516,7 @@
            :fetcher github
            :repo "isamert/empv.el")
   :config (empv-initialize-embark)
-  (setq empv-mpv-args '("--no-terminal" "--idle" "--input-ipc-server=/tmp/empv-socket" "--audio-display=embedded-first")) )
+  (setq empv-mpv-args '("--no-terminal" "--idle" "--input-ipc-server=/tmp/empv-socket" "--audio-display=embedded-first")))
 
 (use-package consult-bibtex
   :quelpa (consult-bibtetx
