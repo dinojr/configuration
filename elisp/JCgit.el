@@ -18,11 +18,11 @@
 
 ;; n'affiche pas les commits en avance par rapport à upstream
 
-(remove-hook 'magit-status-sections-hook 'magit-insert-unpushed-to-upstream-or-recent)
+;; (remove-hook 'magit-status-sections-hook 'magit-insert-unpushed-to-upstream-or-recent)
 
 (magit-add-section-hook 'magit-status-sections-hook
-			'magit-insert-modules-unpulled-from-upstream
 			'magit-insert-unpushed-to-pushremote
+			'magit-insert-modules-unpulled-from-upstream
 			'magit-insert-modules-unpushed-to-pushremote)
 
 (setq magit-repolist-columns
