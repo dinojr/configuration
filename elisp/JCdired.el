@@ -2,7 +2,7 @@
 
 (require 'dired)
 (require 'dired-aux)
-
+(use-package async)
 (autoload 'dired-async-mode "dired-async.el" nil t)
 (dired-async-mode 1)
 
@@ -42,7 +42,7 @@
    "Return a string which is a concatenation of all elements of the list separated by spaces" 
     (mapconcat #'(lambda (obj) (format "%s" obj)) list " "))
 
-(require 'dired-toggle-sudo)
+(use-package dired-toggle-sudo)
 
 (defun jc-dired-find-file-latex ()
   "In Dired, visit this file or directory and switch to workgroup latex"

@@ -1,4 +1,4 @@
 ;; ~/.emacs.d/JCbindings.el -*- mode: emacs-lisp-*-
 
-(require 'free-keys)
-(require 'bind-key)
+(use-package free-keys)
+(use-package bind-key)

@@ -7,7 +7,11 @@
 
 ;; (require 'package)
 ;; (package-initialize)
+(use-package latex
+  :ensure auctex
+)
 (customize-save-variable 'TeX-engine 'luatex)
+
 (require 'tex)
 
 (add-hook 'LaTeX-mode-hook #'latex-extra-mode)
@@ -206,7 +210,7 @@
 
 ;; Raccourcis
 
-(require 'eri)
+(use-package eri)
 
 (add-hook 'LaTeX-mode-hook
 	  (lambda () ;;(define-key LaTeX-mode-map (kbd  "<C-tab>")

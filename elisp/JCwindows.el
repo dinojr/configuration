@@ -12,7 +12,7 @@
 ;; (setq switch-window-shortcut-style 'qwerty)
 ;; (setq switch-window-qwerty-shortcuts '("q" "s" "d" "f" "j" "k" "l" "m" "a" "z" "i" "o"))
 
-(require 'ace-window)
+(use-package ace-window)
 (global-set-key (kbd "C-x o") 'ace-window)
 
 (setq aw-keys '(?q ?s ?d ?f ?g ?h ?j ?k ?l))

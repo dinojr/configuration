@@ -1,6 +1,6 @@
 ;; ~/emacs.d/JCyasnippet.el -*- mode: emacs-lisp-*-
 
-(require 'yasnippet) ;; not yasnippet-bundle
+(use-package yasnippet) ;; not yasnippet-bundle
 (yas-global-mode 1)
 (setq yas-triggers-in-field t); Enable nested triggering of snippets
 (setq yas-indent-line nil)

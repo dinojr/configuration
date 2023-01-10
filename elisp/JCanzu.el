@@ -1,5 +1,5 @@
 ;; ~/.emacs.d/JCanzu.el -*- mode: emacs-lisp-*-
 
-(require 'anzu)
+(use-package anzu)
 (global-anzu-mode)
 

@@ -3,15 +3,26 @@
 (setq inhibit-startup-screen t)
 (global-font-lock-mode)
 
-;; Custom file
-(load "~/.emacs.d/emacs-custom.el")
-
 (add-to-list 'load-path "~/configuration/elisp/")
+
+(package-initialize)
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
+;; Using quelpa:
+(use-package quelpa
+    :ensure quelpa-use-package)
+
+(quelpa
+ '(quelpa-use-package
+   :fetcher git
+   :url "https://github.com/quelpa/quelpa-use-package.git"))
+(require 'quelpa-use-package)
+
 
 (load "JCpackages.el")
 
-(require 'use-package-ensure)
-(setq use-package-always-ensure t)
+;; Custom file
+(load "~/.emacs.d/emacs-custom.el")
 
 (load "JCgpg.el")
 (load "JCkeychain.el")
@@ -26,6 +37,7 @@
 ;; (load "JCido.el")
 ;; (load "JCcompany.el")
 (setq org-clock-x11idle-program-name "jc-idle-time")
+(load "JCpdftools.el")
 (load "JCorg.el")
 ;; (load "JCminions-moody.el")
 (use-package minions
@@ -51,7 +63,6 @@
 (load "JClatex.el")
 (load "JCConTeXt.el")
 (load "JCbibliography.el")
-(load "JCpdftools.el")
 (load "JCgit.el")
 ;; (load "JCediff.el")
 ;; (load "JCbitlbee.el")
@@ -76,7 +87,7 @@
 ;; (load "JClilypond.el")
 (load "JCunison.el")
 (load "JCeshell.el")
-(load "JClispy.el")
+;; (load "JClispy.el")
 (load "JCgnuplot.el")
 (load "JCbindings.el")
 ;; (load "JCpocket.el")
@@ -85,7 +96,7 @@
 (load "JCdashboard.el")
 (put 'list-timers 'disabled nil)
 
-(require 'helm) ;; pour avoir helm-for-files
+(use-package helm) ;; pour avoir helm-for-files
 
 (use-package wgrep)
 
@@ -207,7 +218,7 @@
 )
 
 (use-package persp-mode
-    :config (persp-mode))
+    :config (persp-mode t))
 ;; Passer à persp-mode pour utiliser persp-def-auto-persp, regarder si ça marche avec consult
 ;; (use-package perspective
 ;;   :custom
@@ -493,23 +504,13 @@
   ;;(add-to-list 'completion-at-point-functions #'cape-line)
   )
 
-;; (use-package mpdel-embark
-;;   :demand t
-;;   :after (embark mpdel)
-;;   :config
-;;   (progn
-;;     (mpdel-embark-setup)))
-
-;; Using quelpa:
-
-(use-package quelpa
-    :ensure quelpa-use-package)
-
-(quelpa
- '(quelpa-use-package
-   :fetcher git
-   :url "https://github.com/quelpa/quelpa-use-package.git"))
-(require 'quelpa-use-package)
+(use-package mpdel)
+(use-package mpdel-embark
+  :demand t
+  :after (embark mpdel)
+  :config
+  (progn
+    (mpdel-embark-setup)))
 
 (use-package empv
   :quelpa (empv
@@ -535,5 +536,6 @@
   (add-hook 'eww-mode-hook 'poke-line-mode)
   (setq poke-line-bar-length 8)
   (setq-default poke-line-pokemon "charmander"))
+
 (put 'dired-find-alternate-file 'disabled nil)
 

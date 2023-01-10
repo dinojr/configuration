@@ -1,7 +1,7 @@
 ;; ~/.emacs.d/JCparenthesis.el -*- mode: emacs-lisp-*-
 
 ;; Rainbow-delimiters
-(require 'rainbow-delimiters)
+(use-package rainbow-delimiters)
 (add-hook 'LaTeX-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'ConTeXt-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'emacs-lisp-mode-hook 'rainbow-delimiters-mode)
@@ -32,8 +32,9 @@
 ;; ;; À voir à l'usage
 ;; (setq sp-autoinsert-if-followed-by-same 0)
 ;; (require 'smartparens)
-(require 'smartparens-config)
-
+(use-package smartparens
+	    :config (require 'smartparens-config))
+;; (require 'smartparens-config)
 
 (sp-with-modes '(
                  tex-mode

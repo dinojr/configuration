@@ -4,7 +4,7 @@
 ;; file where things will be saved
 ;; (setq bbdb-file "~/.emacs.d/bbdb")
 (add-to-list 'load-path "~/git-repositories/bbdb/lisp")
-(require 'bbdb)
+(use-package bbdb)
 
 (add-to-list 'load-path "~/.emacs.d/bbdb-vcard")
 
@@ -69,3 +69,6 @@
 
 ;; (jc-gnus-remove-field-value 'mail-alias "Importé le 18/02, myContacts")
 ;; (jc-gnus-remove-regexp-field 'mail-alias "myContacts")
+
+(use-package bbdb-vcard
+  :defer t)

@@ -5,7 +5,9 @@
 ;; (setq exec-path (append exec-path '("~/bin/" "/usr/local/texlive/current/bin/x86_64-linux/")))
 ;; (setenv "PATH" (concat (getenv "PATH") ":~/bin/" ":/usr/local/texlive/current/bin/x86_64-linux/"))
 
-(exec-path-from-shell-initialize)
+
+(use-package exec-path-from-shell
+  :config (exec-path-from-shell-initialize))
 
 (use-package eshell-syntax-highlighting
   :after esh-mode

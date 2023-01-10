@@ -4,6 +4,7 @@
 (use-package dashboard
   :ensure t
   :config
-  (dashboard-setup-startup-hook))
+  (dashboard-setup-startup-hook)
+  (setq initial-buffer-choice (lambda () (get-buffer-create "*dashboard*"))))
 
-(setq initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))
+

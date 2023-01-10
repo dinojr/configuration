@@ -2,6 +2,7 @@
 
 (require 'gnus)
 
+(use-package offlineimap)
 (defun jc-ask-start-offlineimap ()
   (when (not (process-live-p (get-process "offlineimap")))
     (when (y-or-n-p "Start OfflineImap ? ")

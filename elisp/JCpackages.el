@@ -1,12 +1,5 @@
 ;; ~/.emacs.d/JCpackages.el -*- mode: emacs-lisp-*-
 (require 'package)
-(require 'paradox)
-(eval-after-load "paradox"
-  (progn
-    '(setq paradox-automatically-star nil)
-    '(setq paradox-github-token t)
-    '(load "paradox-token"))
-  )
 
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
 			 ("gnu" . "https://elpa.gnu.org/packages/")
@@ -14,6 +7,14 @@
 			 ;; ("marmalade" . "https://marmalade-repo.org/packages/")
 			  ;; ("sunrise" . "http://joseito.republika.pl/sunrise-commander/")
 			 ))
+
+(use-package paradox)
+(eval-after-load "paradox"
+  (progn
+    '(setq paradox-automatically-star nil)
+    '(setq paradox-github-token t)
+    '(load "paradox-token"))
+  )
 
 (setq package-archive-priorities
       '(("melpa" . 20)

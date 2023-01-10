@@ -1,5 +1,5 @@
 ;; ~/.emacs.d/JCavy.el -*- mode: emacs-lisp-*-
-(require 'avy)
+(use-package avy)
 (avy-setup-default)
 (global-set-key (kbd "C-: j") 'avy-goto-char)
 (global-set-key (kbd "C-: k") 'avy-goto-char-2)

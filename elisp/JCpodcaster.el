@@ -1,6 +1,6 @@
 ;; ~/.emacs.d/JCpodcaster.el -*- mode: emacs-lisp-*-
 
-(require 'podcaster)
+(use-package podcaster)
 (setq podcaster-feeds-urls
       '("http://radiofrance-podcast.net/podcast09/rss_10212.xml"
 	"http://radiofrance-podcast.net/podcast09/rss_14007.xml"

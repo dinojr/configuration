@@ -35,7 +35,7 @@
     )
   
 ;; boxquote
-(require 'boxquote)
+(use-package boxquote)
 
 (menu-bar-mode -1)
 
@@ -65,19 +65,21 @@
 
 (setq visible-bell t)
 
-(require 'exec-path-from-shell)'
-(exec-path-from-shell-initialize)
-
 ;; Raccourcis
 (global-set-key [f2] 'calendar)
 (global-set-key "\M-." 'find-function-at-point)
 
-(which-key-mode)
+(use-package which-key
+  :config (which-key-mode 1))
 
-(setq highlight-indent-guides-auto-enabled t)
-(setq highlight-indent-guides-method 'column)
-(setq highlight-indent-guides-responsive 'top)
-(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+(use-package highlight-indent-guides
+  :config
+  (setq highlight-indent-guides-auto-enabled t)
+  (setq highlight-indent-guides-method 'column)
+  (setq highlight-indent-guides-responsive 'top)
+  (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+  )
+
 ;; (setq oddface (color-desaturate-name "#a991f1" (* 75)))
 ;; (setq evenface (color-desaturate-name "#a991f1" (* 80)))
 ;; (setq charface (color-desaturate-name "#a991f1" (* 85)))
@@ -86,8 +88,11 @@
 ;; (set-face-foreground 'highlight-indent-guides-character-face charface)
 
 (use-package all-the-icons
+  :if (display-graphic-p)
   :ensure all-the-icons-completion
+  :ensure all-the-icons-dired
   ;; :ensure all-the-icons-gnus
+  :ensure all-the-icons-ibuffer
   :config (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
   ;; (add-hook 'gnus-before-startup-hook 'all-the-icons-gnus-setup)
   (all-the-icons-completion-mode)

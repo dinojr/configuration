@@ -74,10 +74,14 @@
 
 ;; Export to ipynb notebooks
 (add-to-list 'load-path "~/git-repositories/ox-ipynb")
+(use-package s)
+(use-package dash-functional)
+(use-package f)
+(use-package json)
 (require 'ox-ipynb)
 
-(add-to-list 'load-path "~/git-repositories/ob-ipython")
-(require 'ob-ipython)
+;; (add-to-list 'load-path "~/git-repositories/ob-ipython")
+(use-package ob-ipython)
 
 (org-babel-do-load-languages
  'org-babel-load-languages
@@ -219,7 +223,7 @@ Skip over dangling clock entries."
     (org-clock-remove-empty-clock-drawer)
     ))
 
-(require 'org-mru-clock)
+(use-package org-mru-clock)
 (setq org-mru-clock-how-many 20)
 (setq org-mru-clock-keep-formatting t)
 (setq org-mru-clock-files #'org-agenda-files)
@@ -749,7 +753,7 @@ Skip over dangling clock entries."
 (setq org-passwords-random-words-dictionnary "/etc/dictionaries-common/words")
 
 ;; org-ref
-(require 'org-ref)
+(use-package org-ref)
 (require 'org-ref-pdf)
 (require 'org-ref-url-utils)
 (require 'org-ref-arxiv)

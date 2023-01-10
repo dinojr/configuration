@@ -1,5 +1,5 @@
 ;; ~/.emacs.d/JCbrowser.el -*- mode: emacs-lisp-*-
-(require 'eww)
+(use-package eww)
 
 (use-package eww-lnum
   :after eww

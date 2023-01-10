@@ -7,8 +7,13 @@
 ;;     )
 ;;   )
 
-(add-to-list 'load-path "~/git-repositories/emacs/lisp/gnus")
-(add-to-list 'load-path "~/.emacs.d/gnus-bogofilter")
+;; (add-to-list 'load-path "~/git-repositories/emacs/lisp/gnus")
+;; (add-to-list 'load-path "~/.emacs.d/gnus-bogofilter")
+
+(use-package gnus-bogofilter
+  :quelpa (gnus-bogofilter
+           :fetcher github
+           :repo "tlikonen/gnus-bogofilter"))
 
 (require 'gnus)
 ;; (require 'gnus-load)
@@ -118,7 +123,7 @@ the variable `gnus-move-split-methods' for finding a default target."
   (push-mark)
   (message-position-on-field "Gcc" "Bcc" "Cc" "To"))
 
-(require 'gnus-msg)
+
 
 (defun jc-gnus-message (id)
   "Compose a new message.
@@ -188,6 +193,10 @@ Change message identity to ID with gnus-identities-change."
 (add-hook 'kill-emacs-hook 'exit-gnus-on-exit)
 
 ;; (add-to-list 'load-path "~/info/emacs/gnus/lisp")
+;; (use-package gnus-bogofilter
+;;   :quelpa (gnus-bogofilter
+;;            :fetcher github
+;;            :repo "tlikonen/gnus-bogofilter"))
 (add-to-list 'load-path "~/git-repositories/gnus-bogofilter/")
 (require 'gnus-bogofilter)
 

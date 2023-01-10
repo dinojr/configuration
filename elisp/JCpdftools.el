@@ -1,5 +1,5 @@
 ;; ~/.emacs.d/JCpdftools.el -*- mode: emacs-lisp-*-
-
+(use-package pdf-tools)
 (pdf-tools-install)
 ;; (with-eval-after-load 'org
 ;;   (require 'org-pdfview)

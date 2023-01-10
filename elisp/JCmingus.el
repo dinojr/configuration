@@ -1,6 +1,6 @@
 ;; ~/.emacs.d/JCmingus.el -*- mode: emacs-lisp-*-
 
-(require 'mingus)
+(use-package mingus)
 (require 'mingus-stays-home)
 
 (autoload 'mingus "mingus-stays-home" t nil)
