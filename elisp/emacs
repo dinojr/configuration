@@ -28,6 +28,15 @@
 (setq org-clock-x11idle-program-name "jc-idle-time")
 (load "JCorg.el")
 ;; (load "JCminions-moody.el")
+(use-package minions
+  :ensure t
+  :init (minions-mode)
+  :config
+  (setq
+   minions-mode-line-lighter "#"
+   minions-direct '(flycheck-mode
+		    ;; mingus-mode-line-objet
+		    )))
 (load "JCmodeline.el")
 ;; (load "JCspaceline.el")
 (load "JCdired.el")
@@ -197,8 +206,9 @@
   ;; (setq consult-project-function (lambda (_) (locate-dominating-file "." ".git")))
 )
 
-
-;; Passer à persp-mode pour utiliser persp-def-auto-persp, regarder si ça marche avec doom-modeline
+(use-package persp-mode
+    :config (persp-mode))
+;; Passer à persp-mode pour utiliser persp-def-auto-persp, regarder si ça marche avec consult
 ;; (use-package perspective
 ;;   :custom
 ;;   (persp-mode-prefix-key (kbd "C-z"))  ; pick your own prefix key here
@@ -525,3 +535,4 @@
   (setq poke-line-bar-length 8)
   (setq-default poke-line-pokemon "charmander"))
 (put 'dired-find-alternate-file 'disabled nil)
+

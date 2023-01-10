@@ -9,17 +9,6 @@
 
 (moody-replace-sml/mode-line-buffer-identification)
 
-(use-package minions
-  :ensure t
-  :init (minions-mode)
-  :config
-  (setq
-   minions-mode-line-lighter "#"
-   minions-direct '(flycheck-mode
-		    mingus-mode-line-objet)
-   ))
-
-
 ;; (require 'xpm) ;; for major-mode-icons
 ;; (use-package major-mode-icons
 ;;   :ensure t

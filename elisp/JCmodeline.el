@@ -76,10 +76,10 @@
   (setq doom-modeline-vcs-max-length 12)
   
   ;; Whether display perspective name or not. Non-nil to display in mode-line.
-  (setq doom-modeline-persp-name nil)
+  (setq doom-modeline-persp-name t)
   
   ;; Whether display icon for persp name. Nil to display a # sign. It respects `doom-modeline-icon'
-  (setq doom-modeline-persp-icon nil)
+  (setq doom-modeline-persp-icon t)
   
   ;; Whether display `lsp' state or not. Non-nil to display in mode-line.
   (setq doom-modeline-lsp nil)
