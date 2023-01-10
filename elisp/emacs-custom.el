@@ -4,7 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(LaTeX-math-abbrev-prefix [249])
- '(TeX-engine 'luatex t)
+ '(TeX-engine 'luatex)
  '(ace-isearch-function 'avy-goto-word-1)
  '(ace-isearch-input-length 5)
  '(ace-isearch-jump-delay 0.25)
