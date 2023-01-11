@@ -5,6 +5,8 @@
   :ensure t
   :config
   (dashboard-setup-startup-hook)
+  (setq dashboard-startup-banner 'logo)
   (setq initial-buffer-choice (lambda () (get-buffer-create "*dashboard*"))))
+
 
 
