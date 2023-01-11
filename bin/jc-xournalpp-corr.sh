@@ -6,12 +6,16 @@ XOPP_SUFFIX=".xopp"
 ACORRIGER="Reste à corriger: "
 [ ! -d $DIR ] && mkdir $DIR
 TOTAL=0
-for i in *.{pdf,PDF}
+
+for i in $(fdfind -t f -d 1 .*\(.pdf\|.PDF\) ./ )
 do
     FILENAME=$i
     FILENAME_BASE="${i/.pdf/}"
+    echo $FILENAME_BASE
     FILENAME_BASE="${FILENAME_BASE/.PDF/}"
+    echo $FILENAME_BASE
     XOPP_FILENAME="$FILENAME_BASE$XOPP_SUFFIX"
+    echo $XOPP_FILENAME
     if [ -f $XOPP_FILENAME ]
     then PDF_FILENAME="$DIR/$FILENAME_BASE-$PDF_SUFFIX"
 	 if [ ! -f "$PDF_FILENAME" ]
