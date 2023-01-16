@@ -247,10 +247,10 @@
 ;;   (persp-state-load "/home/wilk/configuration/elisp/JC-perspective-state.el"))
 
 (use-package vertico
-  :init
+    :init
   (vertico-mode)
   :bind ("M-R" . #'vertico-repeat)
-  :hook (minibuffer-setup . #'vertico-repeat-save)
+  :hook (minibuffer-setup . vertico-repeat-save)
   ;; Different scroll margin
   ;; (setq vertico-scroll-margin 0)
 
