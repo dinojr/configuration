@@ -88,12 +88,14 @@
 ;; (set-face-foreground 'highlight-indent-guides-character-face charface)
 
 (use-package all-the-icons
-  :if (display-graphic-p)
+  ;; :if (display-graphic-p)
   :ensure all-the-icons-completion
   :ensure all-the-icons-dired
   ;; :ensure all-the-icons-gnus
   :ensure all-the-icons-ibuffer
-  :config (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
+  :config
+  (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
+  (add-hook 'ibuffer-mode-hook 'all-the-icons-ibuffer-mode)
   ;; (add-hook 'gnus-before-startup-hook 'all-the-icons-gnus-setup)
   (all-the-icons-completion-mode)
   )
