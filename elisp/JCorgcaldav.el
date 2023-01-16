@@ -5,7 +5,8 @@
 (add-to-list 'load-path "~/git-repositories/org-mode/lisp") ;; running org-mode from git
 (add-to-list 'load-path "~/git-repositories/org-mode/contrib/lisp")
 (require 'org)
-(use-package org-caldav)
+(use-package org-caldav
+  :ensure oauth2)
 
 (setq org-caldav-url 'google)
 
