@@ -581,3 +581,4 @@
 	     (ibuffer-switch-to-saved-filter-groups "home"))
 	  ))
 (use-package expand-region)
+(use-package recursion-indicator)
