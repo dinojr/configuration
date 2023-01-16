@@ -231,20 +231,25 @@
 )
 
 (use-package persp-mode
-    :config (persp-mode t))
-;; Passer à persp-mode pour utiliser persp-def-auto-persp, regarder si ça marche avec consult
-;; (use-package perspective
-;;   :custom
-;;   (persp-mode-prefix-key (kbd "C-z"))  ; pick your own prefix key here
-;;   :after (consult)
-;;   :config
-;;   (setq persp-state-default-file "/home/wilk/configuration/elisp/JC-perspective-state.el")
-;;   ;; (consult-customize consult--source-buffer :hidden t :default nil)
-;;   (add-to-list 'consult-buffer-sources persp-consult-source)
-;;   ;; (add-hook 'kill-emacs-hook 'persp-state-save)
-;;   :init
-;;   (persp-mode)
-;;   (persp-state-load "/home/wilk/configuration/elisp/JC-perspective-state.el"))
+    :custom (persp-keymap-prefix (kbd "C-z"))
+    :after (consult)
+    :config
+    (defvar persp-consult-source
+    (list :name     "Perspective"
+          :narrow   ?s
+          :category 'buffer
+          :state    #'consult--buffer-state
+          :history  'buffer-name-history
+          :default  t
+          :items
+          #'(lambda () (consult--buffer-query :sort 'visibility
+                                              :predicate '(lambda (buf) (persp-contain-buffer-p buf))
+                                              :as #'buffer-name)))
+      )
+    (add-to-list 'consult-buffer-sources persp-consult-source)
+    (add-to-list 'ibuffer-maybe-show-predicates #'(lambda (buf) (not (persp-contain-buffer-p buf))))
+    (persp-mode)
+    )
 
 (use-package vertico
     :init
