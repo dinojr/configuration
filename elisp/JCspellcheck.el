@@ -1,11 +1,13 @@
 ;; ~/.emacs.d/JCspellcheck.el -*- mode: emacs-lisp-*-
 
 (use-package flyspell
+  :ensure flyspell-correct
   :init
   (flyspell-mode 1)
   :bind (("C-c d" . ispell-change-dictionary)
 	 :map flyspell-mode-map
-	 ("C-;" . flyspell-correct-previous))
+	 ("C-!" . flyspell-correct-previous)
+	 ("C-§" . flyspell-auto-correct-word))
   :config
   (setq ispell-program-name "aspell") ;; run flyspell with aspell, not ispell
   (setq flyspell-use-meta-tab nil)
