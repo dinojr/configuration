@@ -580,3 +580,4 @@
 	  #'(lambda ()
 	     (ibuffer-switch-to-saved-filter-groups "home"))
 	  ))
+(use-package expand-region)
