@@ -23,7 +23,5 @@
   (progn (let ((snippets-dir "~/.emacs.d/elpa/yasnippet-snippets-20220713.1234/")
 	       (snippets-package-file "~/.emacs.d/elpa/yasnippet-snippets-20220713.1234/yasnippet-snippets.el"))
 	   (add-to-list 'yas-snippet-dirs snippets-dir)
-	   (load-file snippets-package-file))
-	 ))
-
+	   (load-file snippets-package-file))))
 

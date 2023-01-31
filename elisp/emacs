@@ -587,3 +587,13 @@
 	  ))
 (use-package expand-region)
 (use-package recursion-indicator)
+
+(setq eudc-server-hotlist '(("localhost" . bbdb)))
+
+(add-hook 'message-mode-hook
+          (lambda ()
+            (setq-local completion-at-point-functions
+                        (delq 'message-completion-function
+                              completion-at-point-functions))
+            (add-to-list 'completion-at-point-functions
+                         #'eudc-capf-complete)))
