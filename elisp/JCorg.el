@@ -80,8 +80,9 @@
 (use-package json)
 (require 'ox-ipynb)
 
-;; (add-to-list 'load-path "~/git-repositories/ob-ipython")
-(use-package ob-ipython)
+(add-to-list 'load-path "~/git-repositories/ob-ipython")
+(require 'ob-ipython)
+;; (use-package ob-ipython)
 
 (org-babel-do-load-languages
  'org-babel-load-languages
