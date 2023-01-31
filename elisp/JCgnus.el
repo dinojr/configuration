@@ -45,6 +45,7 @@
 ;;   )
 
 
+(if (featurep 'async) (setq message-send-mail-function 'async-smtpmail-send-it))
 
 (add-hook 'gnus-summary-exit-hook 'gnus-summary-bubble-group)
 
