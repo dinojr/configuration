@@ -76,7 +76,7 @@
   :config
   (setq highlight-indent-guides-auto-enabled t)
   (setq highlight-indent-guides-method 'column)
-  (setq highlight-indent-guides-responsive 'top)
+  (setq highlight-indent-guides-responsive 'stack)
   (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
   )
 
