@@ -50,6 +50,7 @@
 ;; (load "JCido.el")
 ;; (load "JCcompany.el")
 (setq org-clock-x11idle-program-name "jc-idle-time")
+(setq org-clock-pgtkidle-program-name "jc-idle-time")
 (load "JCpdftools.el")
 (load "JCorg.el")
 ;; (load "JCminions-moody.el")
