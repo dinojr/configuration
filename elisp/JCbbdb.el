@@ -19,6 +19,8 @@
 
 (setq org-bbdb-anniversary-field 'birthday)
 
+(setq bbdb-completion-display-record nil)
+
 ;; Raccourcis
 
 (define-key bbdb-mode-map "r" 'bbdb-merge-records)
