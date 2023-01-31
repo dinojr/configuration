@@ -9,6 +9,7 @@
 ;; (package-initialize)
 (use-package latex
   :ensure auctex
+  :ensure latex-extra
 )
 (customize-save-variable 'TeX-engine 'luatex)
 
