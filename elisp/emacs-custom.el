@@ -35,13 +35,14 @@
  '(org-safe-remote-resources
    '("\\`https://fniessen\\.github\\.io/org-html-themes/org/theme-readtheorg\\.setup\\'"))
  '(package-selected-packages
-   '(poke-line consult-bibtex empv cape consult-notmuch consult-flyspell fd-dired corfu popper consult-dir embark-consult embark marginalia orderless vertico persp-mode consult try wgrep helm beacon all-the-icons-ibuffer all-the-icons-dired all-the-icons-completion highlight-indent-guides mpdel-embark mpdel offlineimap bbdb-vcard flycheck dashboard dired-toggle-sudo unison-mode pdf-tools auctex all-the-icons ob-ipython org-mru-clock which-key magit eww-lnum keychain-environment helm-core doom-modeline mingus org-review eri exec-path-from-shell gnus-bogofilter yasnippet gnuplot anzu bbdb eshell-syntax-highlighting quelpa-use-package org-ref org-caldav smartparens rainbow-delimiters minions unison free-keys paradox notmuch ace-window boxquote))
+   '(podcaster pocket-reader moody khardel vdirel org-super-agenda compat ox-pandoc transient yasnippet-snippets f vertico-repeat persp-mode recursion-indicator recursion-indicator-mode expand-region flyspell-correct oauth2 latex-extra lua-mode poke-line consult-bibtex empv cape consult-notmuch consult-flyspell fd-dired corfu popper consult-dir embark-consult embark marginalia orderless vertico consult try wgrep beacon all-the-icons-ibuffer all-the-icons-dired all-the-icons-completion highlight-indent-guides mpdel-embark mpdel offlineimap bbdb-vcard flycheck dashboard dired-toggle-sudo unison-mode pdf-tools auctex all-the-icons ob-ipython org-mru-clock which-key eww-lnum keychain-environment mingus eri exec-path-from-shell gnus-bogofilter yasnippet gnuplot anzu bbdb eshell-syntax-highlighting quelpa-use-package org-ref org-caldav rainbow-delimiters minions unison free-keys paradox notmuch ace-window boxquote))
  '(paradox-automatically-star nil)
  '(paradox-github-token t)
  '(reftex-toc-include-labels t)
  '(reftex-toc-split-windows-horizontally t)
  '(safe-local-variable-values
-   '((eval org-sbe "initialisation")
+   '((org-table-header-line-mode . t)
+     (eval org-sbe "initialisation")
      (org-confirm-babel-evaluate)
      (TeX-PDF-from-DVI . Dvips)
      (org-download-image-dir . "./Resources/")))
