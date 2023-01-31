@@ -546,7 +546,8 @@ directory."
   :quelpa (empv
            :fetcher github
            :repo "isamert/empv.el")
-  :config (empv-initialize-embark)
+  :after (embark)
+  :config (empv-embark-initialize-extra-actions)
   (setq empv-mpv-args '("--no-terminal" "--idle" "--input-ipc-server=/tmp/empv-socket" "--audio-display=embedded-first")))
 
 (use-package consult-bibtex
