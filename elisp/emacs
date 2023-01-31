@@ -330,6 +330,14 @@
   ;; enabled right away. Note that this forces loading the package.
   (marginalia-mode))
 
+(defun symlink-multiple (files)
+  "Prompt for a directory and symlink FILES into it.
+Asks for confirmation before overwriting existing files in the
+directory."
+  (let ((directory (read-directory-name "Make links in directory: ")))
+    (dolist (file files)
+      (make-symbolic-link file directory 1))))
+
 (defun find-file-in-bookmarked-directory (bookmark)
      "If BOOKMARK is a directory, run `find-file' from it."
      (interactive "sBookmarked directory: ")
@@ -348,7 +356,9 @@
    ("C-;" . embark-dwim)        ;; good alternative: M-.
    ("C-h B" . embark-bindings) ;; alternative for `describe-bindings'
    (:map embark-bookmark-map
-	 ("/" . #'find-file-in-bookmarked-directory)))
+	 ("/" . #'find-file-in-bookmarked-directory))
+   (:map embark-file-map
+	 ("L" . #'symlink-multiple)))
   :init
 
   ;; Optionally replace the key help with a completing-read interface
@@ -360,7 +370,8 @@
   (add-to-list 'display-buffer-alist
                '("\\`\\*Embark Collect \\(Live\\|Completions\\)\\*"
                  nil
-                 (window-parameters (mode-line-format . none)))))
+                 (window-parameters (mode-line-format . none))))
+  (add-to-list 'embark-multitarget-actions #'symlink-multiple))
 
 ;; Consult users will also want the embark-consult package.
 (use-package embark-consult
