@@ -608,3 +608,4 @@ directory."
             ;;                   completion-at-point-functions))
             (add-to-list 'completion-at-point-functions
                          #'eudc-capf-complete)))
+(use-package rainbow-mode)
