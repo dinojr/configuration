@@ -603,8 +603,8 @@ directory."
 
 (add-hook 'message-mode-hook
           (lambda ()
-            (setq-local completion-at-point-functions
-                        (delq 'message-completion-function
-                              completion-at-point-functions))
+            ;; (setq-local completion-at-point-functions
+            ;;             (delq 'message-completion-function
+            ;;                   completion-at-point-functions))
             (add-to-list 'completion-at-point-functions
                          #'eudc-capf-complete)))
