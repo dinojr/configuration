@@ -530,12 +530,19 @@
 ;; 	gnus-sum-thread-tree-vertical "│"
 ;; 	gnus-sum-thread-tree-single-leaf "└─▶ "))
 
-(defun oxy-unicode-threads-heavy () 
+(defun oxy-unicode-threads ()
+  "Colors for the summary lines.
+The colors (and such) are set in the dracula-theme.el
+with names like gnus-summary-normal-read.
+Some of them get somehow get as gnus-face-7 and so on.
+For the fields with %7 %8{│%}%O, %9,
+the faces are overridden with these numbered faces.
+For the other fields, the face is set according to the
+relevant named face (like gnus-summary-normal-read for a read message)"
   (interactive)
-  (setq ;; gnus-summary-line-format "%8{%8d│%}%8{%4k│%}%O%9{%U%R%z%}%8{│%}%*%(%-23,23f%)%7{║%} %6{%B%} %s\n"
-        gnus-summary-line-format "%8{%11&user-date;%}%9{│%}%8{%4k%}%9{│%}%O%9{%U%R%z%}%21=%9{│%}%*%(%-23,23f%)%9{│%B%} %s\n"
-	;; gnus-summary-dummy-line-format "%11=%9{│%}%16=%9{│%}%21=%9{│%}%45=%9{║%}%46=%6{┏○%}%47=%S\n"
-	gnus-summary-dummy-line-format "%11=%9{│%}%8{%16=%}%9{│%}%21=%9{│%}%8{%45=%}%9{│%}%46=%9{┌○%}%47=%7{%S%}\n"
+  (setq 
+        gnus-summary-line-format "%8{%11&user-date;%}%9{|%}%4k%9{|%}%O%9{%U%R%z%}%21=%9{|%}%*%(%-23,23f%)%9{|%B%} %s\n"
+	gnus-summary-dummy-line-format "%11=%9{|%}%8{%16=%}%9{|%}%21=%9{|%}%8{%45=%}%9{|%}%46=%9{┌○%}%47=%7{%S%}\n"
 	gnus-sum-thread-tree-indent " "
 	;; gnus-sum-thread-tree-root "┏● "
 	gnus-sum-thread-tree-root "┌● "
@@ -549,7 +556,7 @@
 	;; gnus-sum-thread-tree-single-leaf "┗━━❯ "
 	))
 
-(oxy-unicode-threads-heavy)
+(oxy-unicode-threads)
 
 (setq gnus-user-date-format-alist
       '(((gnus-seconds-today)
