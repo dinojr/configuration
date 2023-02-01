@@ -517,32 +517,37 @@
 (setq gnus-summary-make-false-root 'dummy)
 (setq gnus-summary-make-false-root-always nil)
 ;; (set-face-attribute 'gnus-header-subject nil :bold t :foreground  "orange2")
-(defun oxy-unicode-threads () 
-  (interactive)
-  (setq gnus-summary-dummy-line-format "        %8{│%}    %8{│%}%O   %(%8{│%}                       %7{│%}%) %6{□%}  %S\n"
-	;; gnus-summary-line-format "%8{%8d│%}%8{%4k│%}%O%9{%U%R%z%}%8{│%}%*%(%-23,23f%)%7{│%} %6{%B%} %s\n"
-	gnus-summary-line-format "%8{%8&user-date;%}%9{|}%8{%4k│%}%O%9{%U%R%z%}%8{│%}%*%(%-23,23f%)%7{│%} %6{%B%} %s\n"
-	gnus-sum-thread-tree-indent " "
-	gnus-sum-thread-tree-root "■ "
-	gnus-sum-thread-tree-false-root "□ "
-	gnus-sum-thread-tree-single-indent "▣ "
-	gnus-sum-thread-tree-leaf-with-other "├─▶ "
-	gnus-sum-thread-tree-vertical "│"
-	gnus-sum-thread-tree-single-leaf "└─▶ "))
+;; (defun oxy-unicode-threads () 
+;;   (interactive)
+;;   (setq gnus-summary-dummy-line-format "        %8{│%}    %8{│%}%O   %(%8{│%}                       %7{│%}%) %6{□%}  %S\n"
+;; 	;; gnus-summary-line-format "%8{%8d│%}%8{%4k│%}%O%9{%U%R%z%}%8{│%}%*%(%-23,23f%)%7{│%} %6{%B%} %s\n"
+;; 	gnus-summary-line-format "%8{%8&user-date;%}%9{|}%8{%4k│%}%O%9{%U%R%z%}%8{│%}%*%(%-23,23f%)%7{│%} %6{%B%} %s\n"
+;; 	gnus-sum-thread-tree-indent " "
+;; 	gnus-sum-thread-tree-root "■ "
+;; 	gnus-sum-thread-tree-false-root "□ "
+;; 	gnus-sum-thread-tree-single-indent "▣ "
+;; 	gnus-sum-thread-tree-leaf-with-other "├─▶ "
+;; 	gnus-sum-thread-tree-vertical "│"
+;; 	gnus-sum-thread-tree-single-leaf "└─▶ "))
 
 (defun oxy-unicode-threads-heavy () 
   (interactive)
   (setq ;; gnus-summary-line-format "%8{%8d│%}%8{%4k│%}%O%9{%U%R%z%}%8{│%}%*%(%-23,23f%)%7{║%} %6{%B%} %s\n"
-        gnus-summary-line-format "%8{%11&user-date;%}%9{│%}%8{%4k%}%9{│%}%O%9{%U%R%z%}%21=%9{│%}%*%(%-23,23f%)%9{║%}%6{%B%} %s\n"
+        gnus-summary-line-format "%8{%11&user-date;%}%9{│%}%8{%4k%}%9{│%}%O%9{%U%R%z%}%21=%9{│%}%*%(%-23,23f%)%9{│%B%} %s\n"
 	;; gnus-summary-dummy-line-format "%11=%9{│%}%16=%9{│%}%21=%9{│%}%45=%9{║%}%46=%6{┏○%}%47=%S\n"
-	gnus-summary-dummy-line-format "%11=%9{│%}%8{%16=%}%9{│%}%21=%9{│%}%8{%45=%}%9{║%}%46=%6{┏○%}%47=%S\n"
+	gnus-summary-dummy-line-format "%11=%9{│%}%8{%16=%}%9{│%}%21=%9{│%}%8{%45=%}%9{│%}%46=%9{┌○%}%47=%7{%S%}\n"
 	gnus-sum-thread-tree-indent " "
-	gnus-sum-thread-tree-root "┏● " 
-	gnus-sum-thread-tree-false-root " ○ "
-	gnus-sum-thread-tree-single-indent " ● "
-	gnus-sum-thread-tree-leaf-with-other "┣━━❯ " 
-	gnus-sum-thread-tree-vertical "┃"
-	gnus-sum-thread-tree-single-leaf "┗━━❯ "))
+	;; gnus-sum-thread-tree-root "┏● "
+	gnus-sum-thread-tree-root "┌● "
+	gnus-sum-thread-tree-false-root "○ "
+	gnus-sum-thread-tree-single-indent " "
+	gnus-sum-thread-tree-leaf-with-other "├─▶ "
+	gnus-sum-thread-tree-vertical "│"
+	gnus-sum-thread-tree-single-leaf "└─▶ "
+	;; gnus-sum-thread-tree-leaf-with-other "┣━━❯ "
+	;; gnus-sum-thread-tree-vertical "┃"
+	;; gnus-sum-thread-tree-single-leaf "┗━━❯ "
+	))
 
 (oxy-unicode-threads-heavy)
 

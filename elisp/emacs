@@ -80,7 +80,6 @@
 (load "JCgit.el")
 ;; (load "JCediff.el")
 ;; (load "JCbitlbee.el")
-(load "JCgnus.el")
 (load "JCofflineimap.el")
 (load "JCnotmuch.el")
 (load "JCbrowser.el")
@@ -107,6 +106,7 @@
 ;; (load "JCpocket.el")
 ;; (load "JCasymptote.el")
 (load "general_stuff.el")
+(load "JCgnus.el")
 (load "JCdashboard.el")
 (put 'list-timers 'disabled nil)
 
