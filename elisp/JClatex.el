@@ -55,7 +55,7 @@
 
 
 (add-to-list 'TeX-command-list
-	     '("lualatex-shell-escape" "lualatex %t" TeX-run-TeX nil t :help "Run lualatex with --shell-escape"))
+	     '("lualatex-shell-escape" "lualatex -shell-escape %t" TeX-run-TeX nil t :help "Run lualatex with -shell-escape"))
 
 ;;rubber comme compilateur
 (add-hook 'LaTeX-mode-hook (lambda()
