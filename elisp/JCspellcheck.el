@@ -11,7 +11,8 @@
   :config
   (setq ispell-program-name "aspell") ;; run flyspell with aspell, not ispell
   (setq flyspell-use-meta-tab nil)
-  :hook text-mode-hook ((lambda () (ispell-change-dictionary "francais")))
+  (add-hook 'text-mode-hook #'(lambda () (ispell-change-dictionary "francais")))
+  (add-hook 'ispell-change-dictionary-hook #'flyspell-buffer)
   )
 
 ;; (defun jc-flyspell-check-next-highlighted-word ()
