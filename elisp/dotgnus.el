@@ -488,31 +488,62 @@
       (background light))
      (:inherit default))
     (t
-     (:inherigt default)))
+     (:inherit default)(:strike-through nil)))
   "face used for dummy summary line format markup"
   :group 'gnus-group)
 
-(copy-face 'gnus-summary-markup-face 'gnus-face-8)
-(setq gnus-face-8 'gnus-face-8)
+(defface gnus-summary-timestamp-face
+  '((((class color)
+      (background dark))
+     (:inherit default))
+    (((class color)
+      (background light))
+     (:inherit default))
+    (t
+     (:inherit default)(:strike-through nil)))
+  "face used for timestamp in summary line "
+  :group 'gnus-group)
 
-(copy-face 'font-lock-variable-name-face 'gnus-face-6)
-(setq gnus-face-6 'gnus-face-6)
+;; (copy-face 'gnus-summary-timestamp-face 'gnus-face-5)
+;; (setq gnus-face-5 'gnus-face-5)
+(set-face-attribute 'gnus-summary-timestamp-face nil :strike-through nil)
+;; (copy-face 'gnus-summary-timestamp-face 'gnus-face-5)
+(setq gnus-face-5 'gnus-summary-timestamp-face)
+
+;; (setq gnus-face-5 'gnus-summary-timestamp-face)
+(set-face-attribute 'font-lock-variable-name-face nil :strike-through nil)
+;; (copy-face 'font-lock-variable-name-face 'gnus-face-6)
+(setq gnus-face-6 'font-lock-variable-name-face)
+
+;; (setq gnus-face-6 'gnus-face-6)
+(set-face-attribute 'gnus-summary-normal-unread nil :strike-through nil)
+;; (copy-face 'gnus-summary-normal-unread 'gnus-face-7)
+(setq gnus-face-7 'gnus-summary-normal-unread)
+
+;; (setq gnus-face-7 'gnus-face-7)
+(set-face-attribute 'gnus-summary-markup-face nil :strike-through nil)
+;; (copy-face 'gnus-summary-markup-face 'gnus-face-8)
+(setq gnus-face-8 'gnus-summary-markup-face)
+
+;; (setq gnus-face-8 'gnus-face-8)
+(set-face-attribute 'gnus-header-content nil :strike-through nil)
+;; (copy-face 'gnus-header-content 'gnus-face-9)
+(setq gnus-face-9 'gnus-header-content)
+
+;; (setq gnus-face-9 'gnus-face-9)
 
 ;; (copy-face 'font-lock-constant-face 'gnus-face-7)
 ;; (setq gnus-face-7 'gnus-face-7)
 ;; (copy-face 'gnus-face-7 'gnus-summary-normal-unread)
-(copy-face 'gnus-summary-normal-unread 'gnus-face-7)
-(setq gnus-face-7 'gnus-face-7)
 
 ;; (copy-face 'font-lock-constant-face 'gnus-face-8)
 ;; ;(set-face-foreground 'gnus-face-8 "gray50")
 ;; (setq gnus-face-8 'gnus-face-8)
-(copy-face 'gnus-summary-markup-face 'gnus-face-8)
-(setq gnus-face-8 'gnus-face-8)
+;; (copy-face 'gnus-summary-markup-face 'gnus-face-8)
+;; (setq gnus-face-8 'gnus-face-8)
 
-(copy-face 'font-lock-constant-face 'gnus-face-9)
 ;(set-face-foreground 'gnus-face-9 "gray70")
-(setq gnus-face-9 'gnus-face-9)
+;; (setq gnus-face-9 'gnus-face-9)
 
 (setq gnus-summary-make-false-root 'dummy)
 (setq gnus-summary-make-false-root-always nil)
@@ -541,20 +572,20 @@ For the other fields, the face is set according to the
 relevant named face (like gnus-summary-normal-read for a read message)"
   (interactive)
   (setq 
-        gnus-summary-line-format "%8{%11&user-date;%}%9{|%}%4k%9{|%}%O%9{%U%R%z%}%21=%9{|%}%*%(%-23,23f%)%9{|%B%} %s\n"
-	gnus-summary-dummy-line-format "%11=%9{|%}%8{%16=%}%9{|%}%21=%9{|%}%8{%45=%}%9{|%}%46=%9{┌○%}%47=%7{%S%}\n"
-	gnus-sum-thread-tree-indent " "
-	;; gnus-sum-thread-tree-root "┏● "
-	gnus-sum-thread-tree-root "┌● "
-	gnus-sum-thread-tree-false-root "○ "
-	gnus-sum-thread-tree-single-indent " "
-	gnus-sum-thread-tree-leaf-with-other "├─▶ "
-	gnus-sum-thread-tree-vertical "│"
-	gnus-sum-thread-tree-single-leaf "└─▶ "
-	;; gnus-sum-thread-tree-leaf-with-other "┣━━❯ "
-	;; gnus-sum-thread-tree-vertical "┃"
-	;; gnus-sum-thread-tree-single-leaf "┗━━❯ "
-	))
+   gnus-summary-line-format "%5{%11&user-date;%}%9{|%}%5{%4k%}%9{|%}%8{%O%U%R%z%}%21=%9{|%}%*%(%-23,23f%)%9{|%B%}%~(max-right 80)s\n"
+   gnus-summary-dummy-line-format "%11=%9{|%}%8{%16=%}%9{|%}%21=%9{|%}%8{%45=%}%9{|%}%46=%9{┌○%}%47=%7{%S%}\n"
+   gnus-sum-thread-tree-indent " "
+   ;; gnus-sum-thread-tree-root "┏● "
+   gnus-sum-thread-tree-root "┌● "
+   gnus-sum-thread-tree-false-root "○ "
+   gnus-sum-thread-tree-single-indent " "
+   gnus-sum-thread-tree-leaf-with-other "├─▶ "
+   gnus-sum-thread-tree-vertical "│"
+   gnus-sum-thread-tree-single-leaf "└─▶ "
+   ;; gnus-sum-thread-tree-leaf-with-other "┣━━❯ "
+   ;; gnus-sum-thread-tree-vertical "┃"
+   ;; gnus-sum-tfhread-tree-single-leaf "┗━━❯ "
+   ))
 
 (oxy-unicode-threads)
 
