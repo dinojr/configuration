@@ -18,12 +18,11 @@
 
 ;; n'affiche pas les commits en avance par rapport à upstream
 
-;; (remove-hook 'magit-status-sections-hook 'magit-insert-unpushed-to-upstream-or-recent)
+(remove-hook 'magit-status-sections-hook 'magit-insert-unpushed-to-upstream-or-recent)
+(remove-hook 'magit-status-sections-hook 'magit-insert-status-headers)
 
-(magit-add-section-hook 'magit-status-sections-hook
-			'magit-insert-unpushed-to-pushremote
-			'magit-insert-modules-unpulled-from-upstream
-			'magit-insert-modules-unpushed-to-pushremote)
+(magit-add-section-hook 'magit-status-sections-hook 'magit-insert-recent-commits)
+(magit-add-section-hook 'magit-status-sections-hook 'magit-insert-status-headers)
 
 (setq magit-repolist-columns
       '(("Name" 25 magit-repolist-column-ident nil)
