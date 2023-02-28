@@ -439,7 +439,7 @@
   (when (char-displayable-p ?\u2713)
     (setq gnus-read-mark ?✓))
 
-  (setq gnus-ancient-mark ? )
+  (setq gnus-ancient-mark ?O )
 
   (when (char-displayable-p ?\u2620)
     (setq gnus-killed-mark ?☠))
@@ -475,7 +475,7 @@
     (setq gnus-score-below-mark ?↓))
 
   (when (char-displayable-p ?\u1f44)
-    (setq gnus-ham-mark ?👍))
+    (setq gnus-ham-mark ?🖄))
 
 (setq gnus-parameter-ham-marks-alist '((".*" ((gnus-ham-mark)))))
 (setq gnus-auto-expirable-marks '(9760 10007 67 89 77)) ; killed, del, catchup, low score, duplicate
