@@ -644,10 +644,9 @@ relevant named face (like gnus-summary-normal-read for a read message)"
 
 (setq message-kill-buffer-on-exit t)
 
-
-; Pour le courrier : smtp gmail
-(require 'smtpmail-async)
-(setq smtpmail-starttls-credentials '(("smtp.free.fr" 587 nil nil))
+(setq message-send-mail-function 'smtpmail-send-it
+      send-mail-function 'smtpmail-send-it
+      smtpmail-starttls-credentials '(("smtp.free.fr" 587 nil nil))
       smtpmail-auth-credentials '(("smtp.free.fr" 587 "j.cubizolles" nil))
       ;; smtpmail-default-smtp-server "smtp.gmail.com"
       ;; smtpmail-stream-type 'ssl
