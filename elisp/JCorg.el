@@ -762,7 +762,7 @@ Skip over dangling clock entries."
 (setq org-ref-pdf-directory "~/enseignement/papiers")
 (setq org-ref-bibtex-files "~/enseignement/papiers/bibliography.bib")
 
-;; (require 'org-checklist) ; pour mettre à 0 les checkboxes quand une tâche est passée en DONE
+(require 'org-checklist) ; pour mettre à 0 les checkboxes quand une tâche est passée en DONE
 
 ; pour mettre des review sur une tâche
 (use-package org-review
