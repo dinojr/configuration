@@ -64,6 +64,8 @@
     (call-process "xdg-open" nil 0 nil file)
     (message "Opening %s done" file)))
 
+(setq dired-hide-details-hide-information-lines nil)
+(setq dired-hide-details-hide-symlink-targets nil)
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)
 
 ;; Raccourcis
