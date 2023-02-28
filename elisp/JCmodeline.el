@@ -125,5 +125,7 @@
   (setq doom-modeline-before-update-env-hook nil)
   (setq doom-modeline-after-update-env-hook nil)
   
-  (setq doom-modeline-gnus t)
+  ;; (setq doom-modeline-gnus-idle 1)
+  ;; (setq doom-modeline-gnus-timer 10)
+  ;; (setq doom-modeline-gnus t)
   (setq ace-window-display-mode t))
