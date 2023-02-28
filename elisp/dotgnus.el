@@ -281,7 +281,9 @@
 ;; (gnus-demon-add-handler 'gnus-group-get-new-news 5 3)
 ;; (setq gnus-demon-timestep 1)
 
-(gnus-demon-add-handler 'gnus-demon-scan-news 300 10)
+;; (gnus-demon-add-handler 'gnus-demon-scan-news 300 10)
+(gnus-demon-add-handler 'gnus-demon-scan-mail 5 .1)
+(gnus-demon-add-handler 'gnus-demon-scan-news 120 1)
 (setq gnus-notifications-minimum-level 2)
 (add-hook 'gnus-after-getting-new-news-hook 'gnus-notifications)
 (setq gnus-notifications-use-gravatar nil)
