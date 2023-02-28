@@ -44,11 +44,11 @@
 ;;     )
 ;;   )
 
-(if
-    (featurep 'async)
-    (progn
-      (setq message-send-mail-function 'async-smtpmail-send-it)
-      (setq send-mail-function 'async-smtpmail-send-it)))
+;; (if
+;;     (featurep 'async)
+;;     (progn
+;;       (setq message-send-mail-function 'async-smtpmail-send-it)
+;;       (setq send-mail-function 'async-smtpmail-send-it)))
 
 (add-hook 'gnus-summary-exit-hook 'gnus-summary-bubble-group)
 
@@ -141,9 +141,6 @@ Change message identity to ID with gnus-identities-change."
   (gnus-group-mail)
   (gnus-identities-change id)
   )
-
-
-
 
 (defun jc-gnus-article-header-value (header) 
   "Get the value of HEADER for the current article." 
