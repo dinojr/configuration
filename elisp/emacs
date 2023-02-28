@@ -614,3 +614,4 @@ directory."
 (setq native-comp-async-report-warnings-errors nil)
 
 (use-package rainbow-mode)
+(use-package chemtable)
