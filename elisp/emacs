@@ -568,7 +568,6 @@ directory."
   (setq poke-line-bar-length 8)
   (setq-default poke-line-pokemon "charmander"))
 
-(put 'dired-find-alternate-file 'disabled nil)
 
 (use-package ibuffer
     :after (persp-mode)
