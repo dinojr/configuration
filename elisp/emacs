@@ -351,7 +351,6 @@ directory."
 
 (use-package embark
   :ensure t
-
   :bind
   (("C-." . embark-act)         ;; pick some comfortable binding
    ("C-;" . embark-dwim)        ;; good alternative: M-.
@@ -361,12 +360,10 @@ directory."
    (:map embark-file-map
 	 ("L" . #'symlink-multiple)))
   :init
-
   ;; Optionally replace the key help with a completing-read interface
   (setq prefix-help-command #'embark-prefix-help-command)
 
   :config
-
   ;; Hide the mode line of the Embark live/completions buffers
   (add-to-list 'display-buffer-alist
                '("\\`\\*Embark Collect \\(Live\\|Completions\\)\\*"
@@ -380,7 +377,12 @@ directory."
   :hook
   (embark-collect-mode . consult-preview-at-point-mode))
 
-
+(use-package avy-embark-collect
+  :ensure t
+  :bind (:map embark-collect-mode-map
+              ("j" . avy-embark-collect-choose)
+	      ("k" . avy-embark-collect-act)))
+  
 (use-package consult-dir
   :ensure t
   :bind (("C-x C-d" . consult-dir)
@@ -616,4 +618,3 @@ directory."
 
 (use-package rainbow-mode)
 (use-package chemtable)
-
