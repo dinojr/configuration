@@ -547,12 +547,17 @@ directory."
   :config (empv-embark-initialize-extra-actions)
   (setq empv-mpv-args '("--no-terminal" "--idle" "--input-ipc-server=/tmp/empv-socket" "--audio-display=embedded-first")))
 
-(use-package consult-bibtex
-  :quelpa (consult-bibtex
-           :fetcher github
-           :repo "mohkale/consult-bibtex")
-  :requires (consult embark)
-  :config  (add-to-list 'embark-keymap-alist '(bibtex-completion . consult-bibtex-embark-map)))
+;; (use-package consult-bibtex
+;;   ;; :quelpa (consult-bibtex
+;;   ;;          :fetcher github
+;;   ;;          :repo "mohkale/consult-bibtex")
+;;   :requires (consult embark)
+;;   :config  (add-to-list 'embark-keymap-alist '(bibtex-completion . consult-bibtex-embark-map)))
+
+(add-to-list 'load-path "~/git-repositories/consult-bibtex/")
+(require 'consult-bibtex)
+(eval-after-load 'embark #'(add-to-list 'embark-keymap-alist '(bibtex-completion . consult-bibtex-embark-map)))
+
 
 (setq tab-bar-tab-hints t)
 
