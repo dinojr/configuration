@@ -543,9 +543,6 @@ directory."
     (mpdel-embark-setup)))
 
 (use-package empv
-  :quelpa (empv
-           :fetcher github
-           :repo "isamert/empv.el")
   :after (embark)
   :config (empv-embark-initialize-extra-actions)
   (setq empv-mpv-args '("--no-terminal" "--idle" "--input-ipc-server=/tmp/empv-socket" "--audio-display=embedded-first")))
