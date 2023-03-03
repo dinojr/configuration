@@ -6,7 +6,7 @@ library: /home/wilk/beets-files/musiclibrary.blb
 ignore: .@eaDir BEETS .* *~
 
 # plugins: fetchart mpdstats import smartplaylist mpdupdate
-plugins: fetchart duplicates missing permissions fromfilename embedart convert alternatives mbsync inline info smartplaylist mpdupdate follow
+plugins: fetchart duplicates missing permissions fromfilename embedart convert alternatives mbsync inline info smartplaylist mpdupdate follow playlist
 # plugins: embedart
 
 import:
@@ -132,4 +132,8 @@ follow:
   password: NiouzE4MyZoreye
   userid: gazn0wtj50hlieeu5d76rvrm2pavq3
   
-  
+playlist:
+  auto: no
+  relative_to: /var/lib/mpd/music/NAS/Synology/BEETS/
+  playlist_dir: ~/.config/mpd/playlists/
+  forward_slash: no
