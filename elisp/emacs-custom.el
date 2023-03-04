@@ -39,7 +39,7 @@
    '(magit-section org-ref-core biblio-core chemtable rainbow-mode latex-extra recursion-indicator expand-region yasnippet-snippets calfw-cal calfw-gcal calfw-ical calfw-org calfw poke-line consult-bibtex empv cape consult-notmuch consult-flyspell fd-dired corfu popper consult-dir embark marginalia orderless vertico persp-mode consult try wgrep helm beacon all-the-icons-ibuffer all-the-icons-dired all-the-icons-completion highlight-indent-guides mpdel-embark mpdel offlineimap bbdb-vcard flycheck dashboard dired-toggle-sudo unison-mode pdf-tools auctex all-the-icons ob-ipython org-mru-clock which-key magit eww-lnum keychain-environment helm-core doom-modeline mingus org-review eri exec-path-from-shell gnus-bogofilter yasnippet gnuplot anzu bbdb eshell-syntax-highlighting quelpa-use-package org-ref org-caldav smartparens rainbow-delimiters minions unison free-keys paradox notmuch ace-window boxquote))
  '(paradox-automatically-star nil)
  '(paradox-github-token t)
- '(reftex-toc-include-labels t t)
+ '(reftex-toc-include-labels t)
  '(reftex-toc-split-windows-horizontally t)
  '(safe-local-variable-values
    '((org-table-header-line-mode . t)
