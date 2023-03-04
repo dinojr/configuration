@@ -6,8 +6,8 @@
   <property name="pressureMultiplier" value="1"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Correction"/>
-  <property name="lastSavePath" value="/media/wilk/torino/copies/TP/TP-acquisition-video/grille"/>
-  <property name="lastOpenPath" value="/media/wilk/torino/copies/TP/TP-acquisition-video/grille"/>
+  <property name="lastSavePath" value="/media/wilk/torino/copies/DS/DS04"/>
+  <property name="lastOpenPath" value="/media/wilk/torino/copies/DS/DS04"/>
   <property name="lastImagePath" value="/home/wilk/enseignement/2022-2023/devoirs/DM/DM07-dynamique/python"/>
   <property name="edgePanSpeed" value="20"/>
   <property name="edgePanMaxMult" value="5"/>
@@ -86,7 +86,7 @@
   <property name="preloadPagesAfter" value="5"/>
   <property name="eagerPageCleanup" value="true"/>
   <!--Config for new pages-->
-  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSize=true&#10;copyLastPageSettings=true&#10;size=841.889764x595.275591&#10;backgroundType=plain&#10;backgroundColor=#ff241f31&#10;"/>
+  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSize=false&#10;copyLastPageSettings=false&#10;size=595.275591x841.889764&#10;backgroundType=lined&#10;backgroundColor=#fffafaf9&#10;"/>
   <property name="sizeUnit" value="cm"/>
   <property name="audioFolder" value=""/>
   <property name="audioInputDevice" value="-1"/>
@@ -264,6 +264,12 @@
       <attribute name="style" type="string" value="plain"/>
     </data>
     <data name="playObject">
+      <attribute name="drawingType" type="string" value="default"/>
+    </data>
+    <data name="selectMultiLayerRect">
+      <attribute name="drawingType" type="string" value="default"/>
+    </data>
+    <data name="selectMultiLayerRegion">
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="selectObject">
