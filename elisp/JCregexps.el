@@ -154,3 +154,7 @@
 ;;   (interactive "r")
 ;;   (test_gen begin end "\\\\\\(alert\\|emph\\){\\(.+?\\)}" "*\\2*")
 ;;   )
+
+
+;; Pour les playlist json de volumio
+;; "\"uri\":\"mnt/NAS/JoseyWales/\([^\"]*\)\""

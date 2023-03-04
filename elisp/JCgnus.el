@@ -8,12 +8,14 @@
 ;;   )
 
 ;; (add-to-list 'load-path "~/git-repositories/emacs/lisp/gnus")
-;; (add-to-list 'load-path "~/.emacs.d/gnus-bogofilter")
+(add-to-list 'load-path "~/git-repositories/gnus-bogofilter/")
+(require 'gnus-bogofilter)
 
-(use-package gnus-bogofilter
-  :quelpa (gnus-bogofilter
-           :fetcher github
-           :repo "tlikonen/gnus-bogofilter"))
+;; (use-package gnus-bogofilter
+;;   :quelpa (gnus-bogofilter
+;;            :fetcher github
+;;            :repo "tlikonen/gnus-bogofilter"))
+
 
 (require 'gnus)
 ;; (require 'gnus-load)
