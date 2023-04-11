@@ -118,8 +118,9 @@ fi
 MANPATH="/usr/local/texlive/current/texmf/doc/man:$MANPATH"
 INFOPATH="/usr/local/texlive/current/texmf/doc/info:$INFOPATH"
 
-export "EDITOR=emacsclient -t"
-export "VISUAL=emacsclient -c"
+export ALTERNATE_EDITOR="/home/wilk/git-repositories/emacs/src/emacs"
+export EDITOR="/home/wilk/git-repositories/emacs/lib-src/emacsclient -t"
+export VISUAL="/home/wilk/git-repositories/emacs/lib-src/emacsclient -c -a /home/wilk/git-repositories/emacs/src/emacs"
 
 # eval `dircolors $HOME/.dir_colors/dircolors`
 
