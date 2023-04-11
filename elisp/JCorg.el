@@ -12,6 +12,9 @@
 (eval-after-load 'org
   '(org-load-modules-maybe t))
 
+;;; work-around  for org-ctags obnoxious behavior
+(with-eval-after-load 'org-ctags (setq org-open-link-functions nil))
+
 (require 'org)
 
 (require 'notifications)
