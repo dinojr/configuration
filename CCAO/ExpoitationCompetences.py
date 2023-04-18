@@ -27,7 +27,7 @@ patronymes_fichier = "/home/wilk/enseignement/2022-2023/CCAO/patronymes.txt"
 
 Repertoire_bilans = Repertoire
 # Repertoire_corrections = "/media/wilk/torino/copies/DS/DS04/corr/"
-Repertoire_corrections = "/home/wilk/enseignement/2022-2023/copies/DS04/corr/"
+Repertoire_corrections = "/home/wilk/enseignement/2022-2023/copies/DS05/corr/"
 
 fmt_file = "/home/wilk/enseignement/2022-2023/CCAO/fiche_bilan_DS.fmt"
 # produit par lualatex -ini --jobname="fiche_bilan_DS" "&lualatex" mylatexformat.ltx fiche_bilan_DS_exemple.tex
@@ -37,9 +37,9 @@ commande_pagination = "pdfjam "
 
 # On stocke dans chacune le fichier de corrections, le préfixe pour les fichiers, le coeff dans la note totale, le total max et le coeff seront calculés plus tard
 dict_parties = dict()
-Devoir = "DS04"
-dict_parties['Pb1'] = ['/home/wilk/enseignement/2022-2023/CCAO/DS04/Pb1.cor.csv', 'DS04-Pb1', "12"]
-dict_parties['Pb2'] = ['/home/wilk/enseignement/2022-2023/CCAO/DS04/Pb2.cor.csv', 'DS04-Pb2', "13"]
+Devoir = "DS05"
+dict_parties['Pb1'] = ['/home/wilk/enseignement/2022-2023/CCAO/DS05/Pb1.cor.csv', 'DS05-Pb1', "12"]
+dict_parties['Pb2'] = ['/home/wilk/enseignement/2022-2023/CCAO/DS05/Pb2.cor.csv', 'DS05-Pb2', "13"]
 
 
 # ATTENTION le premier nom d'une liste importé par CCAO est préfixé par un caractère
@@ -50,7 +50,7 @@ liste_noms = list() #sera peuplé par les fichiers en cor.csv
 notes_globales_etudiants = dict()
 notes_devoir_etudiants = dict()
 RepertoireCommun = '/home/wilk/enseignement/2022-2023/CCAO/'
-Devoir_Titre = 'DS04 du 14/01'
+Devoir_Titre = 'DS05 du 11/02'
 
 fichier_csv = Repertoire + Devoir + ".csv"
 
