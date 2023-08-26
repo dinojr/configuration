@@ -42,7 +42,8 @@
     (setq doom-modeline-icon (display-graphic-p)))
   
   ;; Whether display the icon for major mode. It respects `doom-modeline-icon'.
-  (setq doom-modeline-major-mode-icon (featurep 'major-mode-icons))
+
+  (setq doom-modeline-major-mode-icon t)
   
   ;; Whether display color icons for `major-mode'. It respects
   ;; `doom-modeline-icon' and `all-the-icons-color-icons'.
