@@ -17,7 +17,7 @@ import sqlite3
 import statistics as stat
  
 # Repertoire de base dans lequel seront générés les fichiers
-Repertoire = '/home/wilk/enseignement/2022-2023/CCAO/DS04/'
+Repertoire = '/home/wilk/enseignement/2022-2023/CCAO/DS06/'
 os.chdir(Repertoire)
 os.environ['PATH'] = '/usr/local/texlive/current/bin/x86_64-linux:' + os.environ['PATH']
 # blank_page = "/home/wilk/enseignement/2022-2023/CCAO/blank.pdf"
@@ -38,9 +38,8 @@ commande_pagination = "pdfjam "
 # On stocke dans chacune le fichier de corrections, le préfixe pour les fichiers, le coeff dans la note totale, le total max et le coeff seront calculés plus tard
 dict_parties = dict()
 Devoir = "DS05"
-dict_parties['Pb1'] = ['/home/wilk/enseignement/2022-2023/CCAO/DS05/Pb1.cor.csv', 'DS05-Pb1', "12"]
-dict_parties['Pb2'] = ['/home/wilk/enseignement/2022-2023/CCAO/DS05/Pb2.cor.csv', 'DS05-Pb2', "13"]
-
+dict_parties['Pb1'] = ['/home/wilk/enseignement/2022-2023/CCAO/DS05/Pb1.cor.csv', 'DS05-Pb1', "15"]
+dict_parties['Pb2'] = ['/home/wilk/enseignement/2022-2023/CCAO/DS05/Pb2.cor.csv', 'DS05-Pb2', "18"]
 
 # ATTENTION le premier nom d'une liste importé par CCAO est préfixé par un caractère
 # invisible qui met le bazar dans les noms de fichiers entre autres, et empêche leur
