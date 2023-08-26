@@ -98,11 +98,13 @@
 
 (setq gnus-search-default-engines
       '((nnml . gnus-search-notmuch)
+	(nntp . gnus-search-notmuch)
 	(nnimap . gnus-search-imap)
 	(nnfolder . gnus-search-notmuch)
 	(nndraft . gnus-search-notmuch)
 	(nnarchive . gnus-search-notmuch)
-        (nnselect . gnus-search-nnselect)))
+        (nnselect . gnus-search-nnselect)
+	(nnmaildir . gnus-search-notmuch)))
 
 (setq gnus-search-use-parsed-queries t)
 
