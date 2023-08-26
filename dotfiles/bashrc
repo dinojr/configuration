@@ -163,3 +163,6 @@ export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWUPSTREAM="auto"
 export PS1="\[${magenta}\]\u@\h\[${green}\]➜ \[${blue}\]\W\[${cyan}\]"'$(__git_ps1 " (%s)")'"\[${magenta}\]\$ \[${clear_attributes}\]"
+
+# Created by `pipx` on 2023-07-24 16:40:38
+export PATH="$PATH:/home/wilk/.local/bin"
