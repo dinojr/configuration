@@ -1,0 +1,90 @@
+# Global configuration section
+#   Values here are used as defaults for any following Channel section that
+#   doesn't specify them.
+Expunge Both
+Create Both
+
+MaildirStore Academie-local
+Path ~/email/Maildir-mbsync/Academie/
+Trash Trash
+SubFolders Verbatim
+Inbox ~/email/Maildir-mbsync/Academie/Inbox
+
+IMAPStore Academie-remote
+SSLType IMAPS
+Host mailin.ac-paris.fr
+User jcubizolles
+# Fetch password from .authinfo.gpg:
+PassCmd "echo ${PASSWORD:-$(gpg --no-tty -qd ~/.authinfo.gpg | sed -n 's,^machine mailin.ac-paris.fr .*password \\([^ ]*\\).*,\\1,p')}"
+
+Channel Academie
+Far :Academie-remote:
+Near :Academie-local:
+Expunge Both
+Sync Pull Push
+Patterns *
+
+MaildirStore Gmail-local
+Path ~/email/Maildir-mbsync/Gmail/
+Trash Trash
+SubFolders Verbatim
+Inbox ~/email/Maildir-mbsync/Gmail/Inbox
+
+IMAPStore Gmail-remote
+SSLType IMAPS
+Host imap.gmail.com
+User j.cubizolles
+# Fetch password from .authinfo.gpg:
+PassCmd "echo ${PASSWORD:-$(gpg --no-tty -qd ~/.authinfo.gpg | sed -n 's,^machine imap.gmail.com .*password \\([^ ]*\\).*,\\1,p')}"
+
+Channel Gmail
+Far :Gmail-remote:
+Near :Gmail-local:
+Expunge Both
+Sync Pull Push
+Patterns *
+
+MaildirStore ENT-local
+Path ~/email/Maildir-mbsync/ENT/
+Trash Trash
+SubFolders Verbatim
+Inbox ~/email/Maildir-mbsync/ENT/Inbox
+
+IMAPStore ENT-remote
+SSLType IMAPS
+Host mx.monlycee.net
+User julien.cubizolles
+# Fetch password from .authinfo.gpg:
+PassCmd "echo ${PASSWORD:-$(gpg --no-tty -qd ~/.authinfo.gpg | sed -n 's,^machine mx.monlycee.net .*password \\([^ ]*\\).*,\\1,p')}"
+
+Channel ENT
+Far :ENT-remote:
+Near :ENT-local:
+Expunge Both
+Sync Pull Push
+Patterns *
+
+MaildirStore Free-local
+Path ~/email/Maildir-mbsync/Free/
+Trash Trash
+SubFolders Verbatim
+Inbox ~/email/Maildir-mbsync/Free/Inbox
+
+IMAPStore Free-remote
+SSLType IMAPS
+Host imap.free.fr
+User j.cubizolles
+# Fetch password from .authinfo.gpg:
+PassCmd "echo ${PASSWORD:-$(gpg --no-tty -qd ~/.authinfo.gpg | sed -n 's,^machine imap.free.fr .*password \\([^ ]*\\).*,\\1,p')}"
+
+Channel Free
+Far :Free-remote:
+Near :Free-local:
+Expunge Both
+Sync Pull Push
+Patterns *
+
+Group mailboxes
+Channels Academie Gmail Free
+#Channels Academie Gmail ENT Free
+
