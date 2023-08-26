@@ -8,7 +8,7 @@
   (add-to-list 'Info-directory-list "~/git-repositories/org-mode/doc/")
   )
 
-(setq org-modules (quote (ol-w3m ol-bbdb ol-bibtex ol-docview ol-gnus ol-info ol-irc ol-mhe ol-rmail ol-eww drill)))
+(setq org-modules (quote (ol-w3m ol-bbdb ol-bibtex ol-docview ol-gnus ol-info ol-irc ol-mhe ol-rmail ol-eww org-drill)))
 (eval-after-load 'org
   '(org-load-modules-maybe t))
 
