@@ -618,3 +618,6 @@ directory."
 
 (use-package rainbow-mode)
 (use-package chemtable)
+
+(use-package somafm
+  :ensure t)
