@@ -10,7 +10,7 @@
 ;; (setq revert-without-query (quote (".*.pdf")))
 
 (add-hook 'pdf-view-mode-hook 'turn-on-auto-revert-mode)
-(add-hook 'pdf-view-mode-hook 'pdf-view-themed-minor-mode)
+;; (add-hook 'pdf-view-mode-hook 'pdf-view-themed-minor-mode)
 
 (setq pdf-misc-print-programm-args `("-o landscape" "-o sides=two-sided-short-edge" "-o page-ranges=1-" "-P"  ,printer-name))
 
