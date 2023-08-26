@@ -99,10 +99,12 @@
 (setq gnus-search-default-engines
       '((nnml . gnus-search-notmuch)
 	(nnimap . gnus-search-imap)
+	(nnmaildir . gnus-search-notmuch)
 	(nnfolder . gnus-search-notmuch)
 	(nndraft . gnus-search-notmuch)
 	(nnarchive . gnus-search-notmuch)
-        (nnselect . gnus-search-nnselect)))
+        (nnselect . gnus-search-nnselect)
+	(nntp . gnus-search-notmuch)))
 
 (setq gnus-search-use-parsed-queries t)
 
@@ -111,8 +113,8 @@
 	     (nnml-directory "~/email/Local")
 	     (nnml-active-file "~/email/Local/active")
 	     (nnml-get-new-mail nil)
-	     (gnus-search-notmuch-remove-prefix "/home/wilk/email/Local/"))
-       )
+	     (gnus-search-engine gnus-search-notmuch
+				       (remove-prefix "/home/wilk/email/Local"))))
 
 ; Pour ne pas télécharger les pièces jointes par défaut
 ;(setq nnimap-fetch-partial-articles "text/")
@@ -146,34 +148,26 @@
 	;; (nntp "news.free.fr")
 	(nntp "news.gwene.org")
 	(nntp "news.gmane.io")
-	(nnimap "FreeOffline"
-		(nnimap-stream shell)
-		;; (nnimap-shell-program "/usr/lib/dovecot/imap -c /home/wilk/.dovecotrc-free")
-		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Free:LAYOUT=fs")
-		(nnimap-split-methods default)
-		(nnimap-inbox "INBOX")
-		)
-	(nnimap "GmailOffline"
-		(nnimap-stream shell)
-		;; (nnimap-shell-program "/usr/lib/dovecot/imap -c /home/wilk/.dovecotrc-gmail")
-		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Gmail:LAYOUT=fs")
-		(nnimap-split-methods default)
-		(nnimap-inbox "INBOX")
-		)
-	(nnimap "ENT"
-		(nnimap-stream shell)
-		;; (nnimap-shell-program "/usr/lib/dovecot/imap -c /home/wilk/.dovecotrc-free")
-		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/ENT:LAYOUT=fs")
-		(nnimap-split-methods default)
-		(nnimap-inbox "INBOX")
-		)
-	(nnimap "Academie"
-		(nnimap-stream shell)
-		;; (nnimap-shell-program "/usr/lib/dovecot/imap -c /home/wilk/.dovecotrc-free")
-		(nnimap-shell-program "/usr/lib/dovecot/imap -o mail_location=maildir:$HOME/email/Maildir/Academie:LAYOUT=fs")
-		(nnimap-split-methods default)
-		(nnimap-inbox "INBOX")
-		)
+	(nnmaildir "Free"
+		   (directory "/home/wilk/email/Maildir-mbsync/Free")
+		   (gnus-search-engine gnus-search-notmuch
+				       (remove-prefix "/home/wilk/email/Maildir-mbsync/Free"))
+		   )
+	(nnmaildir "Academie"
+		   (directory "/home/wilk/email/Maildir-mbsync/Academie")
+		   (gnus-search-engine gnus-search-notmuch
+				       (remove-prefix "/home/wilk/email/Maildir-mbsync/Academie"))
+		   )
+	(nnmaildir "Gmail"
+		   (directory "/home/wilk/email/Maildir-mbsync/Gmail")
+		   (gnus-search-engine gnus-search-notmuch
+				       (remove-prefix "/home/wilk/email/Maildir-mbsync/Gmail"))
+		   )
+	(nnmaildir "ENT"
+		   (directory "/home/wilk/email/Maildir-mbsync/ENT")
+		   (gnus-search-engine gnus-search-notmuch
+				       (remove-prefix "/home/wilk/email/Maildir-mbsync/ENT"))
+		   )
 	))
 
 (setq gnus-update-message-archive-method t)
