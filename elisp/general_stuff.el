@@ -87,19 +87,36 @@
 ;; (set-face-background 'highlight-indent-guides-even-face evenface)
 ;; (set-face-foreground 'highlight-indent-guides-character-face charface)
 
-(use-package all-the-icons
-  ;; :if (display-graphic-p)
-  :ensure all-the-icons-completion
-  :ensure all-the-icons-dired
-  ;; :ensure all-the-icons-gnus
-  :ensure all-the-icons-ibuffer
+;; (use-package all-the-icons
+;;   ;; :if (display-graphic-p)
+;;   :ensure all-the-icons-completion
+;;   :ensure all-the-icons-dired
+;;   ;; :ensure all-the-icons-gnus
+;;   :ensure all-the-icons-ibuffer
+;;   :config
+;;   (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
+;;   (add-hook 'ibuffer-mode-hook 'all-the-icons-ibuffer-mode)
+;;   ;; (add-hook 'gnus-before-startup-hook 'all-the-icons-gnus-setup)
+;;   (all-the-icons-completion-mode)
+;;   )
+;; ;; M-x all-the-icons-install-fonts
+
+(use-package nerd-icons
+  :custom
+  ;; The Nerd Font you want to use in GUI
+  ;; "Symbols Nerd Font Mono" is the default and is recommended
+  ;; but you can use any other Nerd Font if you want
+  (nerd-icons-font-family "Symbols Nerd Font Mono")
+  ;; M-x nerd-icons-install-font
+  :ensure nerd-icons-completion
+  :ensure nerd-icons-dired
+;;   ;; :ensure all-the-icons-gnus
+  :ensure nerd-icons-ibuffer
   :config
-  (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
-  (add-hook 'ibuffer-mode-hook 'all-the-icons-ibuffer-mode)
-  ;; (add-hook 'gnus-before-startup-hook 'all-the-icons-gnus-setup)
-  (all-the-icons-completion-mode)
-  )
-;; M-x all-the-icons-install-fonts
+  (add-hook 'dired-mode-hook #'nerd-icons-dired-mode)
+  (nerd-icons-completion-mode)
+  (add-hook 'ibuffer-mode-hook #'nerd-icons-ibuffer-mode)
+)
 
 (use-package beacon
   :config (beacon-mode 1))
