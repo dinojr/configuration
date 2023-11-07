@@ -80,7 +80,7 @@
 (load "JCgit.el")
 ;; (load "JCediff.el")
 ;; (load "JCbitlbee.el")
-(load "JCofflineimap.el")
+(load "JCmbsync.el")
 (load "JCnotmuch.el")
 (load "JCbrowser.el")
 (load "JCbbdb.el")

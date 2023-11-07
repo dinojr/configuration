@@ -30,14 +30,6 @@
 
 (add-hook 'gnus-message-setup-hook 'turn-on-auto-fill)
 
-;; (require 'offlineimap)
-;; (add-hook 'gnus-before-startup-hook 'offlineimap)
-;; (add-hook 'offlineimap-event-hooks (lambda (msg-type &optional action)
-;;                                      (if (equal "finished\n" msg-type)
-;;                                          (gnus-group-get-new-news)))) 
-(global-set-key "\C-cg" #'(lambda () (interactive)
-                           (async-shell-command "offlineimap")))
-
 
 ;; (eval-after-load 'gnus 
 ;;   (lambda ()
@@ -270,7 +262,7 @@ Change message identity to ID with gnus-identities-change."
 	((header "from" ".*@monlycee.net")
 	 (address "julien.cubizolles@monlycee.net")
 	 (signature-file "~/configuration/dotfiles/signature-pro.txt")
-	 ("X-Message-SMTP-Method" "smtp mx.monlycee.net 587 julien.cubizolles")
+	 ("X-Message-SMTP-Method" "smtp smtps.monlycee.net 465 julien.cubizolles")
 	 ("Gcc" "nnmaildir+ENT:mpsi2-organisation")
 	 (x-identity "ENT")
 	 )
@@ -282,7 +274,7 @@ Change message identity to ID with gnus-identities-change."
 	 ("to" "reprollg@gmail.com")
 	 ("Subject" "MPSI2 Physique Semaine")
 	 (x-identity "reprollg")
-	 (body "Bonjour,\nMerci d'imprimer le document ci-joint en :\n+ 48 exemplaires\n+ taille réelle\n+ agrafé\n+ recto\n\nCordialement,")
+	 (body "Bonjour,\nMerci d'imprimer le document ci-joint en :\n+ 49 exemplaires\n+ taille réelle\n+ agrafé\n+ recto\n\nCordialement,")
 	 )))
 ;; Le défaut en premier
 ;; Trier selon qu'on répond à des news ou pas

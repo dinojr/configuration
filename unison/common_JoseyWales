@@ -121,6 +121,7 @@ ignore = Path wilk/info/emacs/asymptote
 ignore = Path wilk/info/science/arduino-1.8.13/
 ignore = Path wilk/texmf/tex/latex/mpsi
 ignore = Path wilk/email/Maildir
+ignore = Path wilk/email/Maildir-Offlineimap
 ignore = Name {.git}
 ignorenot = Path wilk/vuibert/vuibert-sup/.git
 ignorenot = Path wilk/enseignement/2020-2021/CCAO/.git
