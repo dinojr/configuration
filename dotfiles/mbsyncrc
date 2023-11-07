@@ -52,10 +52,10 @@ Inbox ~/email/Maildir-mbsync/ENT/Inbox
 
 IMAPStore ENT-remote
 SSLType IMAPS
-Host mx.monlycee.net
+Host imaps.monlycee.net
 User julien.cubizolles
 # Fetch password from .authinfo.gpg:
-PassCmd "echo ${PASSWORD:-$(gpg --no-tty -qd ~/.authinfo.gpg | sed -n 's,^machine mx.monlycee.net .*password \\([^ ]*\\).*,\\1,p')}"
+PassCmd "echo ${PASSWORD:-$(gpg --no-tty -qd ~/.authinfo.gpg | sed -n 's,^machine imaps.monlycee.net .*password \\([^ ]*\\).*,\\1,p')}"
 
 Channel ENT
 Far :ENT-remote:
