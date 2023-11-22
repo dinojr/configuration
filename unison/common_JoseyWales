@@ -128,6 +128,7 @@ ignorenot = Path wilk/vuibert/vuibert-sup/.git
 ignorenot = Path wilk/enseignement/2020-2021/CCAO/.git
 ignore = Path wilk/News/namazu
 ignore = Path wilk/Mail/junk
+ignore = Path wilk/email/Local/junk
 ignore = Path wilk/Documents/scolaire
 ignore = Path wilk/musique
 ignore = Name {.notmuch}
