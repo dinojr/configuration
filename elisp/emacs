@@ -1,6 +1,8 @@
 ;;~/.emacs -*- mode: emacs-lisp-*-
 
+
 (setq inhibit-startup-screen t)
+(setq warning-minimum-level :error)
 (global-font-lock-mode)
 
 (add-to-list 'load-path "~/configuration/elisp/")
