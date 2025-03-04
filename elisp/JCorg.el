@@ -671,7 +671,15 @@ Skip over dangling clock entries."
 
 (setq org-use-speed-commands t)
 
-(setq org-latex-listings 'minted)
+(setq org-latex-src-block-backend 'minted)
+
+;; (setq org-latex-src-block-backend 'minted
+;;       org-latex-packages-alist '(("" "minted"))
+;;       ;; org-latex-pdf-process
+;;       ;; '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+;;       ;;   "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f")
+;;       )
+
 (setq org-latex-minted-options
       '(("frame" "lines")
 	("fontsize" "\\scriptsize")
