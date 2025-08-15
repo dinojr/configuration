@@ -5,18 +5,18 @@
   <property name="minimumPressure" value="0.05"/>
   <property name="pressureMultiplier" value="1"/>
   <property name="zoomGesturesEnabled" value="true"/>
-  <property name="selectedToolbar" value="Correction"/>
-  <property name="lastSavePath" value="/home/wilk/enseignement/2023-2024/copies/DM/DM01-optique"/>
-  <property name="lastOpenPath" value="/home/wilk/enseignement/2023-2024/copies/DM/DM01-optique"/>
-  <property name="lastImagePath" value="/tmp"/>
+  <property name="selectedToolbar" value="Tableau noir"/>
+  <property name="lastSavePath" value="/home/wilk/Documents/mobillico/2025/2eme-trimestre"/>
+  <property name="lastOpenPath" value="/home/wilk/Documents/mobillico/2025/2eme-trimestre"/>
+  <property name="lastImagePath" value="/home/wilk/enseignement/2024-2025/devoirs/DS/DS03-cinetique-2emeordre/schemas"/>
   <property name="edgePanSpeed" value="20"/>
   <property name="edgePanMaxMult" value="5"/>
   <property name="zoomStep" value="10"/>
   <property name="zoomStepScroll" value="2"/>
   <property name="displayDpi" value="72"/>
-  <property name="mainWndWidth" value="1002"/>
-  <property name="mainWndHeight" value="917"/>
-  <property name="maximized" value="false"/>
+  <property name="mainWndWidth" value="996"/>
+  <property name="mainWndHeight" value="935"/>
+  <property name="maximized" value="true"/>
   <property name="showToolbar" value="true"/>
   <property name="showSidebar" value="false"/>
   <property name="sidebarWidth" value="50"/>
@@ -48,14 +48,16 @@
   <property name="eraserVisibility" value="always"/>
   <!--The icon theme, allowed values are "iconsColor", "iconsLucide"-->
   <property name="iconTheme" value="iconsColor"/>
+  <!--Dark/light mode, allowed values are "useSystem", "forceLight", "forceDark"-->
+  <property name="themeVariant" value="useSystem"/>
   <property name="highlightPosition" value="false"/>
   <property name="cursorHighlightColor" value="2164260608"/>
   <property name="cursorHighlightBorderColor" value="2147483903"/>
   <property name="cursorHighlightRadius" value="30"/>
   <property name="cursorHighlightBorderWidth" value="0"/>
-  <property name="darkTheme" value="true"/>
   <property name="useStockIcons" value="true"/>
   <property name="disableScrollbarFadeout" value="true"/>
+  <property name="disableAudio" value="false"/>
   <!--Hides scroolbars in the main window, allowed values: "none", "horizontal", "vertical", "both"-->
   <property name="scrollbarHideType" value="horizontal"/>
   <property name="autoloadMostRecent" value="false"/>
@@ -243,8 +245,8 @@
     </data>
     <data name="eraser">
       <attribute name="drawingType" type="string" value="default"/>
-      <attribute name="size" type="string" value="THIN"/>
-      <attribute name="type" type="string" value="deleteStroke"/>
+      <attribute name="size" type="string" value="VERY_BIG"/>
+      <attribute name="type" type="string" value="whiteout"/>
     </data>
     <data name="hand">
       <attribute name="drawingType" type="string" value="default"/>
@@ -261,9 +263,9 @@
     </data>
     <data name="pen">
       <attribute name="color" type="hex" value="ff5555"/>
-      <attribute name="drawingType" type="string" value="strokeRecognizer"/>
-      <attribute name="fill" type="int" value="0"/>
-      <attribute name="fillAlpha" type="int" value="128"/>
+      <attribute name="drawingType" type="string" value="rectangle"/>
+      <attribute name="fill" type="int" value="1"/>
+      <attribute name="fillAlpha" type="int" value="255"/>
       <attribute name="size" type="string" value="BIG"/>
       <attribute name="style" type="string" value="plain"/>
     </data>
