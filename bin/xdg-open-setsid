@@ -1,0 +1,3 @@
+#!/bin/sh
+
+setsid -w xdg-open "$1"
