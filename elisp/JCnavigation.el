@@ -120,6 +120,10 @@
 
 (require 'align)
 
+(recentf-mode 1)
+(setq recentf-max-menu-items 25)
+(setq recentf-max-saved-items 25)
+
 ;; Raccourcis
 (global-set-key "\C-a" 'My-smart-home)
 (global-set-key "\C-e" 'My-smart-end)
