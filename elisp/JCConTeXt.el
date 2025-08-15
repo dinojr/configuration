@@ -1,7 +1,6 @@
 ;; ~/.emacs.d/JCConTeXt.el -*- mode: emacs-lisp-*-
 
 (setq ConTeXt-Mark-version "IV")
-(add-hook 'LaTeX-mode-hook #'latex-extra-mode)
 
 (add-hook 'LaTeX-mode-hook
   (function
