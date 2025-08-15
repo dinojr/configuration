@@ -108,6 +108,7 @@ ignore = Path wilk/enseignement/2019-2020
 ignore = Path wilk/enseignement/2020-2021
 ignore = Path wilk/enseignement/2021-2022
 ignore = Path wilk/enseignement/2022-2023
+ignore = Path wilk/enseignement/2023-2024
 ignore = Path wilk/enseignement/homepage
 ignore = Path wilk/enseignement/logiciels/maple
 ignore = Path wilk/enseignement/UPS2006
