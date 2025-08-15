@@ -107,6 +107,7 @@
   ;; "Symbols Nerd Font Mono" is the default and is recommended
   ;; but you can use any other Nerd Font if you want
   (nerd-icons-font-family "Symbols Nerd Font Mono")
+  
   ;; M-x nerd-icons-install-font
   :ensure nerd-icons-completion
   :ensure nerd-icons-dired

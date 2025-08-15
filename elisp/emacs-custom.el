@@ -12,7 +12,8 @@
  '(beacon-color "#ff79c6")
  '(canlock-password "5052bb55e61c64dae5204c0ccac4d417b05d8cf8")
  '(connection-local-criteria-alist
-   '(((:application tramp :protocol "flatpak")
+   '(((:application vc-git) vc-git-connection-default-profile)
+     ((:application tramp :protocol "flatpak")
       tramp-flatpak-connection-local-default-profile)
      ((:application tramp :protocol "kubernetes")
       tramp-kubernetes-connection-local-default-profile)
@@ -21,7 +22,8 @@
       tramp-connection-local-default-system-profile
       tramp-connection-local-default-shell-profile)))
  '(connection-local-profile-alist
-   '((tramp-flatpak-connection-local-default-profile
+   '((vc-git-connection-default-profile (vc-git--program-version))
+     (tramp-flatpak-connection-local-default-profile
       (tramp-remote-path "/app/bin" tramp-default-remote-path "/bin"
 			 "/usr/bin" "/sbin" "/usr/sbin"
 			 "/usr/local/bin" "/usr/local/sbin"
@@ -152,25 +154,27 @@
  '(org-safe-remote-resources
    '("\\`https://fniessen\\.github\\.io/org-html-themes/org/theme-readtheorg\\.setup\\'"))
  '(package-selected-packages
-   '(annotate dash avy-embark-collect avy-embark-consult ox-pandoc
-	      transient with-editor org-ref-core biblio-core
-	      rainbow-mode latex-extra expand-region
-	      yasnippet-snippets calfw-cal calfw-gcal calfw-ical
-	      calfw-org calfw poke-line consult-bibtex consult-notmuch
-	      fd-dired corfu popper consult-dir orderless vertico
-	      persp-mode try wgrep beacon all-the-icons-ibuffer
-	      all-the-icons-dired all-the-icons-completion
-	      highlight-indent-guides mpdel-embark mpdel offlineimap
-	      bbdb-vcard flycheck dired-toggle-sudo unison-mode
-	      pdf-tools auctex ob-ipython org-mru-clock which-key
-	      eww-lnum keychain-environment doom-modeline mingus
-	      org-review eri exec-path-from-shell gnus-bogofilter
-	      yasnippet gnuplot anzu bbdb quelpa-use-package
-	      org-caldav smartparens rainbow-delimiters minions unison
-	      free-keys paradox notmuch ace-window boxquote))
- '(paradox-automatically-star nil)
+   '(0blayout 2048-game ace-link ace-window activities
+	      all-the-icons-completion all-the-icons-dired
+	      all-the-icons-ibuffer annotate anzu auto-package-update
+	      avy-embark-collect bbdb-vcard beacon boxquote calfw
+	      calfw-cal calfw-gcal calfw-ical calfw-org calibre
+	      calibredb cape chemtable consult-bibtex consult-dir
+	      consult-flyspell consult-notmuch corfu dash-functional
+	      dired-toggle-sudo eri eshell-syntax-highlighting
+	      eww-lnum exec-path-from-shell expand-region fd-dired
+	      flyspell-correct free-keys gnuplot gnus-bogofilter
+	      highlight-indent-guides keychain-environment latex-extra
+	      mbsync mingus minions mpdel-embark nerd-icons-completion
+	      nerd-icons-dired nerd-icons-ibuffer nov-xwidget oauth2
+	      oauth2-auto offlineimap org-drill org-mru-clock
+	      org-review pass password-store pdf-tools persp-mode plz
+	      poke-line quelpa-use-package rainbow-delimiters
+	      rainbow-mode recursion-indicator smartparens somafm
+	      tree-sitter tree-sitter-langs try unison unison-mode
+	      use-package wgrep which-key yasnippet))
  '(paradox-github-token t)
- '(reftex-toc-include-labels t)
+ '(reftex-toc-include-labels t t)
  '(reftex-toc-split-windows-horizontally t)
  '(safe-local-variable-values
    '((org-table-header-line-mode . t) (eval org-sbe "initialisation")
