@@ -112,7 +112,7 @@
   (setq doom-modeline-env-enable-rust t)
   
   ;; Change the executables to use for the language version string
-  (setq doom-modeline-env-python-executable 'python-shell-interpreter) ; or `python-shell-interpreter'
+  (setq doom-modeline-env-python-executable "python") ; or `python-shell-interpreter'
   (setq doom-modeline-env-ruby-executable "ruby")
   (setq doom-modeline-env-perl-executable "perl")
   (setq doom-modeline-env-go-executable "go")
