@@ -13,3 +13,5 @@ flycheck*.elc
 dotfiles/obs-studio/logs/*
 dotfiles/obs-studio/profiler_data/*
 *.elc
+/bin/emacs
+/bin/emacsclient
