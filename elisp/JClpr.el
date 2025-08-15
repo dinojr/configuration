@@ -2,7 +2,7 @@
 
 (require 'printing)
 
-(setq printer-name "JoseyWales")
+(setq printer-name "LaserJet-2100")
 
 (setq lpr-command "lpr")
 
