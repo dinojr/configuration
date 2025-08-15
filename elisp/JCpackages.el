@@ -1,5 +1,7 @@
 ;; ~/.emacs.d/JCpackages.el -*- mode: emacs-lisp-*-
 (require 'package)
+(setq async-bytecomp-package-mode t)
+(setq package-menu-async t)
 
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
 			 ("gnu" . "https://elpa.gnu.org/packages/")
@@ -8,13 +10,6 @@
 			  ;; ("sunrise" . "http://joseito.republika.pl/sunrise-commander/")
 			 ))
 
-(use-package paradox)
-(eval-after-load "paradox"
-  (progn
-    '(setq paradox-automatically-star nil)
-    '(setq paradox-github-token t)
-    '(load "paradox-token"))
-  )
 
 (setq package-archive-priorities
       '(("melpa" . 20)
@@ -28,12 +23,9 @@
   (setq use-package-always-ensure t
         use-package-expand-minimally t))
 
-(setq paradox-execute-asynchronously t)
-
 (defun jc-do-package-management (&optional delete)
   (and (byte-recompile-directory (expand-file-name "~/.emacs.d/elpa/"))
        (byte-recompile-directory (expand-file-name "~/git-repositories/"))
-       (paradox-upgrade-packages)
        (package-autoremove)
        (package-install-selected-packages)
        (if delete (delete-frame))))
