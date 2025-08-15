@@ -1,4 +1,4 @@
-;; ~/.emacs.d/JCwindows.el -*- mode: emacs-lisp-*-
+;; ~/.emacs.d/JCwindows.el -*- mode: emacs-lisp; lexical-binding: t-*-
 
 ;; (require 'win-switch)
 ;; (win-switch-setup-keys-ijkl "\C-xo")
@@ -31,3 +31,4 @@
    (select-window (split-window-below))
    (call-interactively command))
 (global-set-key "\C-x4\M-x" 'jc-run-command-other-window)
+
