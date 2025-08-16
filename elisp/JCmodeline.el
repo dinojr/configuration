@@ -64,7 +64,8 @@
   
   ;; Whether display buffer encoding.
   (setq doom-modeline-buffer-encoding t)
-  
+
+  (setq doom-modeline-battery t)
   (setq display-battery-mode t)
   
   ;; Whether display indentation information.
