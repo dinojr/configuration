@@ -52,6 +52,7 @@ path = wilk/.config/systemd/user
 path = wilk/.themes
 path = wilk/.dir_colors
 path = wilk/git-repositories/www-dev
+path = wilk/.password-store
 
 #Files
 path = wilk/.unison/common_JoseyWales
