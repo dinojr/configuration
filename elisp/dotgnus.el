@@ -584,7 +584,7 @@ relevant named face (like gnus-summary-normal-read for a read message)"
    ))
 
 (oxy-unicode-threads)
-
+(setq gnus-use-cache nil) ;; pour éviter les erreurs de compte de mails dans les groupes
 (setq gnus-user-date-format-alist
       '(((gnus-seconds-today)
 	. "%H:%M")
