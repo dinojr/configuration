@@ -1,13 +1,15 @@
 # ~/.unison/JoseyWales.prf
 # Unison preferences
 label = synology NAS
+#Port number
+sshargs = -p 2040
 #Roots of the synchronization
 root = /home/
 root = ssh://JoseyWales//volume1/homes/
 
 log = true
-logfile = /home/wilk/.unison/unison.log
+logfile = /home/wilk/.unison/unison-JoseyWales.log
 
 ## Include common settings for profiles no matter where they are
 ## invoked (client or server)
-include common_JoseyWales
+include common
