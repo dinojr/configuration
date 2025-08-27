@@ -168,6 +168,8 @@ ignore = Name {.saves}{,.}*
 ignore = Name {session}{,.}*
 ignore = Name {S.gpg-agent}
 ignore = Name image-dired
+ignore = Name {.newsrc.eld}
+ignore = Path wilk/email/News/suppression
 ## Miscellaneous options
 
 auto =true

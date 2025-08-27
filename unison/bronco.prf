@@ -1,0 +1,14 @@
+# ~/.unison/lago.prf
+# Unison preferences
+label = bronco PC
+
+#Roots of the synchronization
+root = /home/
+root = ssh://bronco.local//home/
+
+log = true
+logfile = /home/wilk/.unison/unison-bronco.log
+
+## Include common settings for profiles no matter where they are
+## invoked (client or server)
+include common
