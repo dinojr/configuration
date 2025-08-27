@@ -58,10 +58,6 @@ path = wilk/configuration/elisp/paradox-token
 path = wilk/.emacs
 path = wilk/.emacs.bmk
 path = wilk/.gnus.el
-path = wilk/.newsrc.eld
-path = wilk/.gnus.registry.eioio
-path = wilk/.gnus.registry.eld
-path = wilk/.newsrc-dribble
 path = wilk/.config/terminator/config
 path = wilk/pim/passwds.revelation
 path = wilk/.bbdb
@@ -169,6 +165,7 @@ ignore = Name {session}{,.}*
 ignore = Name {S.gpg-agent}
 ignore = Name image-dired
 ignore = Name {.newsrc.eld}
+ignore = Name {.newsrc-dribble}
 ignore = Path wilk/email/News/suppression
 ## Miscellaneous options
 
